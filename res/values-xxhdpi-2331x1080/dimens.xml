@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bubble_type_short_video_offset_y">147.32999dip</dimen>
+    <dimen name="bubble_type_short_video_offset_y_virtual_key">142.66998dip</dimen>
+    <dimen name="bubble_type_sticker_offset_y">280.0dip</dimen>
+</resources>

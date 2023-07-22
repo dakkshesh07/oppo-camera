@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="44.0dip" android:width="360.0dip" />
+    <gradient android:startColor="@color/color_security_keyboard_bg_top_color" android:endColor="@color/color_security_keyboard_bg_middle_color" android:angle="270.0" android:type="linear" />
+</shape>

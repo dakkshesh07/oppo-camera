@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="color_internet_label_button_gap">6.0dip</dimen>
+    <dimen name="color_internet_label_button_height">31.0dip</dimen>
+    <dimen name="color_internet_label_button_paddingleft">10.0dip</dimen>
+    <dimen name="color_internet_label_paddingleft">16.0dip</dimen>
+    <dimen name="color_internet_lable_textsize">12.0sp</dimen>
+    <dimen name="panorama_arrow_margin_left">6.0dip</dimen>
+    <dimen name="color_search_linear_divider_width">1.0px</dimen>
+    <dimen name="control_panel_button_height">190.0dip</dimen>
+    <dimen name="control_panel_layout_height">100.0dip</dimen>
+    <dimen name="head_line_background_height">32.0dip</dimen>
+    <dimen name="head_line_background_padding">16.0dip</dimen>
+    <dimen name="head_line_background_radius">4.669983dip</dimen>
+    <dimen name="head_line_check_line_width">1.2999878dip</dimen>
+    <dimen name="head_line_height">46.0dip</dimen>
+    <dimen name="main_mode_bar_height">120.0dip</dimen>
+    <dimen name="menu_indicator_layout_height">22.0dip</dimen>
+    <dimen name="menu_indicator_layout_width">22.0dip</dimen>
+    <dimen name="menu_option_item_width">36.0dip</dimen>
+    <dimen name="menu_panel_layout_height">42.666656dip</dimen>
+    <dimen name="menu_panel_padding_left_right">6.0dip</dimen>
+    <dimen name="menu_rec_mode_padding_left">90.0dip</dimen>
+    <dimen name="menu_tool_item_size">36.0dip</dimen>
+    <dimen name="menu_tool_item_text_size">13.0dip</dimen>
+    <dimen name="panorama_front_guide_gap">22.0dip</dimen>
+    <dimen name="panorama_front_hint_offset">0.0dip</dimen>
+    <dimen name="panorama_rect_height">94.0dip</dimen>
+    <dimen name="panorama_rect_to_left">0.0dip</dimen>
+    <dimen name="panorama_rect_to_top">265.0dip</dimen>
+    <dimen name="panorama_rect_width">320.0dip</dimen>
+    <dimen name="panorama_view_gap">78.0dip</dimen>
+    <dimen name="sub_mode_bar_height">48.0dip</dimen>
+    <dimen name="thumbnail_width_nomal">44.0dip</dimen>
+    <dimen name="top_bar_layout_height">80.0dip</dimen>
+    <dimen name="video_bottom_cover_height">56.0dip</dimen>
+</resources>

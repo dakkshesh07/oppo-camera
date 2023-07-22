@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.preview.PreviewFrameLayout android:id="@id/frame_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/control_panel_layout" android:layout_below="@id/oppo_setting_bar" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.ui.preview.FaceView android:id="@id/face_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.oppo.camera.ui.preview.SuperTextFrameView android:id="@id/super_text_frame_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.oppo.camera.ui.preview.PreviewFrameLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.color.support.widget.slideselect.ColorSelectListView android:id="@id/list_view" android:background="@android:color/transparent" android:paddingTop="38.0dip" android:paddingBottom="38.0dip" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@android:color/transparent" android:divider="@null" android:dividerHeight="0.0px" android:hapticFeedbackEnabled="true" />
+</FrameLayout>

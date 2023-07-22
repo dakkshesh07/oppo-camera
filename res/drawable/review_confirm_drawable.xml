@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <bitmap android:src="@drawable/review_confirm_src" android:alpha="0.8" />
+    </item>
+    <item android:drawable="@drawable/review_confirm_src" />
+</selector>

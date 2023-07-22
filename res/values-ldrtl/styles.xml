@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.ColorSupport" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/oppo_textview_text_size</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="Widget.ColorSupport.EditText" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">@dimen/oppo_edittext_text_size</item>
+        <item name="android:minHeight">@dimen/oppo_edit_text_height_min</item>
+        <item name="android:editTextColor">@color/color_edit_text_color</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="Widget.ColorSupport.ExpandableListView" parent="@style/Widget.ColorSupport.ListView">
+        <item name="android:groupIndicator">@drawable/oppo_expander_group</item>
+        <item name="android:childDivider">@drawable/color_divider_horizontal_default</item>
+        <item name="android:indicatorStart">?android:expandableListPreferredItemIndicatorLeft</item>
+        <item name="android:indicatorEnd">?android:expandableListPreferredItemIndicatorRight</item>
+    </style>
+    <style name="Widget.ColorSupport.ProgressBar" parent="@style/Widget.ColorSupport">
+        <item name="android:maxWidth">48.0dip</item>
+        <item name="android:maxHeight">48.0dip</item>
+        <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:minWidth">48.0dip</item>
+        <item name="android:minHeight">48.0dip</item>
+        <item name="android:mirrorForRtl">true</item>
+    </style>
+    <style name="Widget.ColorSupport.SeekBar" parent="@style/Widget.ColorSupport">
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:focusable">true</item>
+        <item name="android:maxHeight">50.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@drawable/oppo_progress_horizontal</item>
+        <item name="android:progressDrawable">@drawable/oppo_progress_horizontal</item>
+        <item name="android:minHeight">50.0dip</item>
+        <item name="android:thumb">@drawable/oppo_seek_thumb</item>
+        <item name="android:thumbOffset">8.0dip</item>
+        <item name="android:mirrorForRtl">true</item>
+    </style>
+    <style name="Widget.ColorSupport.TextView" parent="@android:style/Widget.TextView">
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+    <style name="Widget.ColorSupport.Toolbar" parent="@android:style/Widget">
+        <item name="android:paddingLeft">@dimen/toolbar_normal_menu_padding_right</item>
+        <item name="android:paddingRight">@dimen/toolbar_normal_menu_padding_left</item>
+        <item name="android:minHeight">50.0dip</item>
+        <item name="minTitleTextSize">16.0dip</item>
+        <item name="supportButtonGravity">center_vertical</item>
+        <item name="supportCollapseContentDescription">@string/support_abc_toolbar_collapse_description</item>
+        <item name="supportCollapseIcon">?homeAsUpIndicator</item>
+        <item name="supportContentInsetEnd">15.0dip</item>
+        <item name="supportContentInsetStart">24.0dip</item>
+        <item name="supportMaxButtonHeight">50.0dip</item>
+        <item name="supportSubtitleTextAppearance">@style/TextAppearance.ColorSupport.AppCompatSupport.Toolbar.SubTitle</item>
+        <item name="supportTitleMarginBottom">1.0dip</item>
+        <item name="supportTitleMarginTop">4.0dip</item>
+        <item name="supportTitleMargins">0.0dip</item>
+        <item name="supportTitleTextAppearance">@style/TextAppearance.ColorSupport.AppCompatSupport.Toolbar.Title</item>
+    </style>
+    <style name="Widget.ColorSupport.Toolbar.Button.Navigation" parent="@style/Widget.AppCompatSupport.Toolbar.Button.Navigation">
+        <item name="android:paddingLeft">@dimen/color_action_bar_navigation_padding_end_material</item>
+        <item name="android:paddingRight">@dimen/color_action_bar_navigation_padding_start_material</item>
+    </style>
+</resources>

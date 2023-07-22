@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item camera:state_style_second="true">
+        <bitmap android:src="@drawable/menu_effect_anc" android:tint="#fffac000" />
+    </item>
+    <item android:drawable="@drawable/menu_effect_on_light" />
+</selector>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oppo="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/rl_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/color_btn_large" android:adjustViewBounds="true" android:maxWidth="@dimen/color_navigation_icon_size" android:maxHeight="@dimen/color_navigation_icon_size" android:layout_centerVertical="true" />
+        <TextView android:ellipsize="end" android:id="@id/normalLable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12345" android:maxLines="1" android:layout_centerVertical="true" android:layout_marginStart="@dimen/color_navigation_item_normalLable_margin_start" android:layout_toEndOf="@id/icon" />
+        <com.color.support.widget.ColorHintRedDot android:id="@id/tips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/color_navigation_icon_margin_top" style="?colorHintRedDotSmallStyle" />
+    </RelativeLayout>
+</LinearLayout>

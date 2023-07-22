@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/full_page_statement_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/statement_camera_icon" android:layout_width="@dimen/full_page_statement_icon_size" android:layout_height="@dimen/full_page_statement_icon_size" android:layout_marginTop="@dimen/full_page_statement_icon_margin_top" android:src="@drawable/ic_launcher_camera" />
+    <TextView android:textSize="@dimen/full_page_statement_name" android:textColor="@color/full_page_statement_text_color" android:gravity="center" android:id="@id/txt_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/full_page_statement_name_margin_top" android:text="@string/camera_app_name" android:lineSpacingMultiplier="1.1" android:fontFamily="sans-serif-medium" />
+    <TextView android:textSize="@dimen/subtitle_text_size" android:textColor="@color/statement_camera_summary_color" android:gravity="center" android:id="@id/statement_camera_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/detail_floating_layer_icon_offset" android:text="@string/color_runtime_camera_brief_introduction" android:lineSpacingMultiplier="1.2" android:fontFamily="sans-serif-regular" />
+</LinearLayout>

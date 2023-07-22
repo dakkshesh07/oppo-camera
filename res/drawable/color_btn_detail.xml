@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:tint="@color/color_btn_add_row_color" android:height="24.0dip" android:width="24.0dip" android:viewportWidth="72.0" android:viewportHeight="72.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="?colorTintControlNormal" android:pathData="M36,63C21.1,63 9,50.9 9,36S21.1,9 36,9s27,12.1 27,27S50.9,63 36,63zM36,60c13.3,0 24,-10.7 24,-24S49.3,12 36,12S12,22.7 12,36S22.7,60 36,60z" android:strokeAlpha="1.0" />
+    <path android:fillColor="?colorTintControlNormal" android:pathData="M36,32L36,32c1.1,0 2,0.9 2,2v14c0,1.1 -0.9,2 -2,2s-2,-0.9 -2,-2V34C34,32.9 34.9,32 36,32z" android:strokeAlpha="1.0" />
+    <path android:fillColor="?colorTintControlNormal" android:pathData="M36,25m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0" android:strokeAlpha="1.0" />
+</vector>

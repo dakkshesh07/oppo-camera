@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ai_scene_background" />
+    <corners android:radius="@dimen/ai_scene_background_radius" />
+    <padding android:top="@dimen/ai_scene_padding_top" android:bottom="@dimen/ai_scene_padding_bottom" />
+    <stroke android:width="@dimen/ai_scene_background_stroke_width" android:color="@color/ai_scene_background_stroke_color" />
+</shape>

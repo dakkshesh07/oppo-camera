@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="@dimen/stick_warning_dialog_padding_start" android:paddingEnd="@dimen/stick_warning_dialog_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:textColor="@color/permission_dialog_text_color" android:id="@id/sticker_check_box_never" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/privacy_policy_choice_label" />
+</LinearLayout>

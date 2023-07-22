@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menu_effect_filter_row_offset">2.0dip</dimen>
+    <dimen name="menu_effect_filter_text_updown_padding">3.5dip</dimen>
+</resources>

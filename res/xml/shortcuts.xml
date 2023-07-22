@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut android:icon="@drawable/shortcut_portrait" android:enabled="true" android:shortcutId="shortcut_portrait_static" android:shortcutShortLabel="@string/camera_shortcut_portrait" android:shortcutLongLabel="@string/camera_shortcut_portrait" android:shortcutDisabledMessage="@string/camera_shortcut_portrait">
+        <intent android:targetPackage="com.oppo.camera" android:action="com.oppo.camera.action.SHORTCUT_TYPE_MENU" android:targetClass="com.oppo.camera.Camera">
+            <extra android:name="mode" android:value="2" />
+            <extra android:name="rear" android:value="true" />
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_face_beauty" android:enabled="true" android:shortcutId="shortcut_face_beauty_static" android:shortcutShortLabel="@string/camera_shortcut_face_beauty" android:shortcutLongLabel="@string/camera_shortcut_face_beauty" android:shortcutDisabledMessage="@string/camera_shortcut_face_beauty">
+        <intent android:targetPackage="com.oppo.camera" android:action="com.oppo.camera.action.SHORTCUT_TYPE_MENU" android:targetClass="com.oppo.camera.Camera">
+            <extra android:name="mode" android:value="0" />
+            <extra android:name="front" android:value="true" />
+            <extra android:name="beauty" android:value="true" />
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+    <shortcut android:icon="@drawable/shortcut_common_video" android:enabled="true" android:shortcutId="shortcut_common_video_static" android:shortcutShortLabel="@string/camera_shortcut_common_video" android:shortcutLongLabel="@string/camera_shortcut_common_video" android:shortcutDisabledMessage="@string/camera_shortcut_common_video">
+        <intent android:targetPackage="com.oppo.camera" android:action="com.oppo.camera.action.SHORTCUT_TYPE_MENU" android:targetClass="com.oppo.camera.Camera">
+            <extra android:name="mode" android:value="6" />
+            <extra android:name="rear" android:value="true" />
+        </intent>
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

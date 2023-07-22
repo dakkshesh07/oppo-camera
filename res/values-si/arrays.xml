@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_lunar_mounth">
+        <item>正月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>冬月</item>
+        <item>腊月</item>
+    </string-array>
+    <string-array name="color_solor_mounth">
+        <item>ජනවාරි</item>
+        <item>පෙබරවාරි</item>
+        <item>මාර්තු</item>
+        <item>අප්‍රේල්</item>
+        <item>මැයි</item>
+        <item>ජූනි</item>
+        <item>ජූලි</item>
+        <item>අගෝස්තු</item>
+        <item>සැප්තැම්බර්</item>
+        <item>ඔක්තෝබර්</item>
+        <item>නොවැම්බර්</item>
+        <item>දෙසැම්බර්</item>
+    </string-array>
+    <string-array name="oppo_time_picker_ampm">
+        <item>පෙ.ව.</item>
+        <item>ප.ව.</item>
+    </string-array>
+</resources>

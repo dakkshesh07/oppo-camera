@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="OppoDialogTextAppearance.Title" parent="@style/OppoDialogTextAppearance">
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textSize">@dimen/oppo_dialog_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_alert_dialog_title_text_color</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+    <style name="TextAppearance.ColorSupport.List.Title" parent="@style/Base.TextAppearance.AppCompatSupport.Large">
+        <item name="android:textSize">@dimen/support_preference_title_size</item>
+        <item name="android:textColor">@color/color_preference_title_color</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+    <style name="TextAppearance.ColorSupport.Preference.Summary" parent="@style/TextAppearance.AppCompatSupport.Small">
+        <item name="android:textSize">@dimen/support_preference_summary_size</item>
+        <item name="android:textColor">@color/color_preference_secondary_text_color</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+    <style name="Widget.ColorSupport.List.Category.Title" parent="@style/Widget.ColorSupport.List.Category">
+        <item name="android:textSize">@dimen/oppo_preference_category_text_size</item>
+        <item name="android:textColor">@color/color_preference_secondary_text_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:id">@android:id/title</item>
+        <item name="android:paddingLeft">@dimen/oppo_preference_category_text_padding_left</item>
+        <item name="android:paddingTop">@dimen/oppo_common_category_text_padding_top</item>
+        <item name="android:paddingRight">@dimen/oppo_preference_category_text_padding_left</item>
+        <item name="android:paddingBottom">@dimen/oppo_common_category_text_padding_bottom</item>
+        <item name="android:minHeight">@dimen/oppo_preference_category_text_height</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="preferenceClassificationTextStyle">
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+</resources>

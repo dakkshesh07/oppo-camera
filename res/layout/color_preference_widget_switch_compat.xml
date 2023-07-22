@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.color.support.widget.ColorSwitch android:layout_gravity="end|center" android:id="@id/switchWidget" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/android_preference_switch_margin_left"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

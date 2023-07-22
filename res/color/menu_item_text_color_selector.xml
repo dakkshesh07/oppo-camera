@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item android:state_selected="true" android:color="?colorTintControlNormal" />
+    <item android:color="@color/menu_item_text_inverse" camera:state_inverse_color="true" />
+    <item android:color="@color/menu_item_text_color" />
+</selector>

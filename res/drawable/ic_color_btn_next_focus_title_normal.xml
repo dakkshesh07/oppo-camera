@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="18.0dip" android:width="18.0dip" android:autoMirrored="true" android:viewportWidth="54.0" android:viewportHeight="54.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/color_jump_preference_btn_next_bg_color" android:pathData="M27,27m-27,0a27,27 0,1 1,54 0a27,27 0,1 1,-54 0" android:fillType="evenOdd" />
+    <path android:fillColor="@color/color_jump_preference_btn_next_color" android:pathData="M32.5,27L21.2,15.7l2.8,-2.8l11.3,11.3l0.7,0.7c1.2,1.2 1.2,3.1 0,4.2l-12,12l-2.8,-2.8L32.5,27z" />
+</vector>

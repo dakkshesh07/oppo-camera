@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/privacy_check_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.PrivacyPolicyContentScrollView android:id="@id/content" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" app:max_height="@dimen/privacy_policy_text_max_height">
+        <TextView android:textSize="@dimen/privacy_text_size_smaller" android:textColor="@color/camera_grey_black" android:id="@id/privacy_policy_text" android:paddingLeft="@dimen/privacy_policy_padding_normal" android:paddingRight="@dimen/privacy_policy_padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.oppo.camera.PrivacyPolicyContentScrollView>
+    <com.oppo.camera.PrivacyPolicyContentScrollView android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/privacy_policy_padding_top" app:max_height="@dimen/privacy_policy_link_max_height">
+        <TextView android:textSize="@dimen/privacy_text_size_smallest" android:textColor="@color/camera_grey" android:id="@id/privacy_link" android:paddingLeft="@dimen/privacy_policy_padding_normal" android:paddingRight="@dimen/privacy_policy_padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.oppo.camera.PrivacyPolicyContentScrollView>
+</LinearLayout>

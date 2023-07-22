@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oppo="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:id="@id/main_layout" android:background="@drawable/color_preference_bg_selector" android:clipChildren="false" android:clipToPadding="false" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="@dimen/support_preference_min_height" android:layout_weight="1.0" android:paddingStart="@dimen/support_preference_titel_padding_start" android:paddingEnd="@dimen/support_preference_titel_padding_end">
+        <com.color.support.widget.ColorRoundImageView android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="no" oppo:colorType="round" style="@style/PreferenceIcon" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/PreferenceContent">
+            <TextView android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ColorPreferenceTitleStyle" />
+            <TextView android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/support_preference_margin_between_line" android:layout_below="@android:id/title" style="@style/ColorPreferenceSummaryStyle" />
+            <TextView android:id="@id/assignment" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/support_preference_margin_between_line" android:layout_below="@android:id/summary" android:forceDarkAllowed="false" style="@style/TextAppearance.ColorSupport.List.Assignment" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/switch_layout" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:paddingEnd="@dimen/support_preference_titel_padding_end">
+        <View android:background="@color/color_preference_switch_vertical_divider_color" android:layout_width="0.6700001dip" android:layout_height="22.0dip" android:layout_marginEnd="@dimen/support_preference_titel_padding_end" android:forceDarkAllowed="false" />
+        <com.color.support.widget.ColorSwitch android:id="@android:id/switch_widget" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

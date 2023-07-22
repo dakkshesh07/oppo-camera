@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListView android:id="@id/color_preference_listview" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:drawSelectorOnTop="false" android:cacheColorHint="@android:color/transparent" android:overScrollMode="always" android:requiresFadingEdge="none" style="@style/Widget.ColorSupport.ListView.Group" />
+    <color.support.design.widget.ColorAppBarLayout android:id="@id/abl" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="com.color.support.preference.SecondToolbarBehavior">
+        <color.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="@drawable/color_list_toolbar_bg" android:paddingTop="@dimen/toolbar_top_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/toolbar_min_height" app:colorLayoutScrollFlags="exitUntilCollapsed|scroll" app:supportTitleTextAppearance="@style/textAppearanceSecondTitle" />
+        <View android:layout_gravity="center_horizontal" android:id="@id/divider_line" android:background="?colorDividerBackgroundColor" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_divider_height" android:layout_marginLeft="@dimen/toolbar_horizontal_padding" android:layout_marginRight="@dimen/toolbar_horizontal_padding" android:alpha="0.0" android:forceDarkAllowed="false" />
+    </color.support.design.widget.ColorAppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

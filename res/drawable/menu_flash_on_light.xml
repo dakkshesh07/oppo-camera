@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="vector" android:height="@dimen/svg_icon_height" android:width="@dimen/svg_icon_height" android:viewportWidth="96.0" android:viewportHeight="96.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="path_width" android:pathData="M 37 24 L 25 48 L 49 48 L 37 72" android:strokeColor="?colorTintControlNormal" android:strokeWidth="@integer/svg_icon_strokeWidth_four" android:fillType="evenOdd" />
+</vector>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="vector" android:height="@dimen/svg_icon_height" android:width="@dimen/svg_icon_width" android:viewportWidth="96.0" android:viewportHeight="96.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="group">
+        <path android:name="path_width" android:pathData="M 36.426 58 L 36.426 57.036 L 42.539 39.747 L 44.509 39.747 L 50.633 57.036 L 50.633 58 M 38.686 50.965 L 48.044 50.965 M 58.006 57.993 L 58 38" android:strokeColor="@color/inverse_text_color" android:strokeWidth="@integer/svg_icon_strokeWidth_four" />
+    </group>
+</vector>

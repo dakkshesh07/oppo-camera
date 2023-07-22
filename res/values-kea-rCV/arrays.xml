@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_lunar_mounth">
+        <item>76907_正月</item>
+        <item>76907_二月</item>
+        <item>76907_三月</item>
+        <item>76907_四月</item>
+        <item>76907_五月</item>
+        <item>76907_六月</item>
+        <item>76907_七月</item>
+        <item>76907_八月</item>
+        <item>76907_九月</item>
+        <item>76907_十月</item>
+        <item>76907_冬月</item>
+        <item>76907_腊月</item>
+    </string-array>
+    <string-array name="color_solor_mounth">
+        <item>76906_January</item>
+        <item>76906_February</item>
+        <item>76906_March</item>
+        <item>76906_April</item>
+        <item>76906_May</item>
+        <item>76906_June</item>
+        <item>76906_July</item>
+        <item>76906_August</item>
+        <item>76906_September</item>
+        <item>76906_October</item>
+        <item>76906_November</item>
+        <item>76906_December</item>
+    </string-array>
+    <string-array name="oppo_time_picker_ampm">
+        <item>65366_AM</item>
+        <item>65366_PM</item>
+    </string-array>
+</resources>

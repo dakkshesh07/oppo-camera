@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/effects_menu_panel" android:layout_width="fill_parent" android:layout_height="@dimen/effects_menu_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.ui.menu.levelcontrol.ThreeDScrollBar android:id="@id/effect_scrollbar" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/effects_scroll_menu_height" android:layout_alignParentTop="true" />
+</RelativeLayout>

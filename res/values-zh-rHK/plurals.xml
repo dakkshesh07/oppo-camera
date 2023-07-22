@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="red_dot_with_number_description">
+        <item quantity="other">%d 個新通知</item>
+        <item quantity="one">%d 個新通知</item>
+    </plurals>
+    <plurals name="sticker_recycle_bin_title_has_selected">
+        <item quantity="other">已選擇 %1$d 張貼圖</item>
+        <item quantity="one">已選擇 %1$d 張貼圖</item>
+    </plurals>
+</resources>

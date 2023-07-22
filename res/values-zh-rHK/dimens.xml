@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="color_time_picker_date_width">@dimen/oppo_numberPicker_width_biggest</item>
+    <item type="dimen" name="oppo_datepicker_width_day">@dimen/oppo_numberpicker_width_big</item>
+    <item type="dimen" name="oppo_datepicker_width_month">@dimen/oppo_numberpicker_width_big</item>
+    <item type="dimen" name="oppo_datepicker_width_year">@dimen/oppo_numberPicker_width_bigger</item>
+</resources>

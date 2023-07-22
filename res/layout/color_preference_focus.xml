@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:id="@id/color_preference" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/support_preference_min_height" android:paddingStart="@dimen/support_preference_titel_padding_start" android:paddingEnd="@dimen/support_preference_titel_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oppo="http://schemas.android.com/apk/res-auto">
+    <com.color.support.widget.ColorRoundImageView android:layout_gravity="center" android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" oppo:colorType="round" style="@style/PreferenceIcon" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/PreferenceContent">
+        <TextView android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:forceDarkAllowed="false" style="@style/TextAppearance.ColorSupport.List.FocusTitle" />
+        <TextView android:typeface="normal" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/support_preference_margin_between_line" android:layout_below="@android:id/title" android:layout_alignStart="@android:id/title" style="@style/ColorPreferenceSummaryStyle" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@android:id/widget_frame" android:clipChildren="false" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

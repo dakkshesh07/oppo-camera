@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="camera_grey_black">@color/color_78_degree_gray</color>
+    <color name="color_black_line">@color/color_78_degree_gray</color>
+    <color name="color_list_selectableItem_background_color">@android:color/black</color>
+    <color name="common_bottom_guide_text_description_color">#8cffffff</color>
+    <color name="common_bottom_guide_text_title_color">#ffffffff</color>
+    <color name="full_page_statement_exit_text_color">#ffffffff</color>
+    <color name="full_page_statement_text_color">#ffffffff</color>
+    <color name="permission_dialog_text_color">@color/colorWhite</color>
+    <color name="setting_pref_rotate_btn_gray">@color/color_white_with_40_percent_transparency</color>
+    <color name="statement_camera_summary_color">#8cffffff</color>
+    <color name="video_view_line_bg_color">@color/color_white_with_20_percent_transparency</color>
+</resources>

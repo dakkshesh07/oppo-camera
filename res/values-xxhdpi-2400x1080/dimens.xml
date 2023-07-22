@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="control_panel_button_height">220.0dip</dimen>
+    <dimen name="control_panel_layout_height">248.0dip</dimen>
+    <dimen name="control_panel_margin_bottom">17.0dip</dimen>
+    <dimen name="control_panel_margin_bottom_virtual_key">17.0dip</dimen>
+    <dimen name="control_panel_third_video_margin_bottom">17.0dip</dimen>
+    <dimen name="control_panel_third_video_margin_bottom_virtual_key">17.0dip</dimen>
+    <dimen name="record_time_margin_bottom">199.32999dip</dimen>
+    <dimen name="record_time_margin_bottom_third_party">198.66998dip</dimen>
+    <dimen name="shutter_button_margin_bottom">96.0dip</dimen>
+    <dimen name="switch_camera_button_margin_bottom">105.0dip</dimen>
+    <dimen name="thumbnail_margin_bottom">109.0dip</dimen>
+</resources>

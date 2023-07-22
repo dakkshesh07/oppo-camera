@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:startColor="@color/beauty3d_scan_btn_color_end" android:endColor="@color/beauty3d_scan_btn_color_start" android:angle="0.0" />
+    <corners android:radius="@dimen/beauty3d_scan_btn_radius" />
+</shape>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.RotateImageView android:id="@id/enter_sticker_button" android:background="@drawable/enter_sticker_button_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sticker_menu_control_button" android:contentDescription="@string/camera_description_sticker_menu_popup"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

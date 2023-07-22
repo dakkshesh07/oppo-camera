@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/oppo_category_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/support_preference_category_layout_tv_title" android:textStyle="bold" android:textColor="@color/color_preference_title_color" android:id="@android:id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/support_preference_category_layout_title_margin_start" style="@style/preferenceClassificationTextStyle" />
+        <LinearLayout android:gravity="end|center" android:layout_gravity="end" android:paddingTop="@dimen/support_preference_category_layout_content_padding_top" android:paddingBottom="@dimen/support_preference_category_layout_content_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/support_preference_category_layout_content_padding_end">
+            <TextView android:textSize="@dimen/support_preference_category_layout_tv_edit" android:textStyle="bold" android:textColor="?colorPrimaryColor" android:gravity="center_vertical" android:id="@id/color_statusText1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:forceDarkAllowed="false" style="@style/preferenceClassificationTextStyle" />
+            <ImageView android:background="@drawable/ic_color_btn_next_focus_title_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/support_preference_category_layout_img_margin_start" android:forceDarkAllowed="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

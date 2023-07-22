@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/face_beauty_custom" android:layout_width="fill_parent" android:layout_height="@dimen/face_beauty_custom_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.ui.OppoNumAISeekBar android:id="@id/face_beauty_seekbar" android:paddingBottom="@dimen/face_beauty_seekbar_padding_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/face_beauty_custom_seekbar_height" android:layout_alignParentTop="true" android:paddingStart="@dimen/face_beauty_custom_seekbar_margin_left" android:paddingEnd="@dimen/face_beauty_custom_seekbar_margin_right" app:second_track_color="?colorTintControlNormal" app:thumb_text_color="@color/colorWhite" app:track_color="@color/face_beauty_seekbar_track_color" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/face_beauty_custom_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/face_beauty_custom_list_margin_top" android:layout_below="@id/face_beauty_seekbar">
+        <LinearLayout android:orientation="vertical" android:id="@id/face_beauty_none" android:layout_width="@dimen/face_beauty_item_width" android:layout_height="@dimen/face_beauty_item_height" android:layout_marginStart="@dimen/face_beauty_item_margin_left">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_face_beauty_custom_none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/face_beauty_item_image_margin_top" android:src="@drawable/face_beauty_menu_none_selector" />
+            <TextView android:textColor="@color/face_beauty_menu_text_color_selector" android:id="@id/tv_face_beauty_custom_none" android:text="@string/camera_face_beauty_menu_level_none" style="@style/FaceBeautyTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/face_beauty_reset" android:layout_width="@dimen/face_beauty_item_width" android:layout_height="@dimen/face_beauty_item_height" android:layout_marginStart="@dimen/face_beauty_item_space">
+            <ImageView android:layout_gravity="center" android:id="@id/iv_face_beauty_custom_reset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/face_beauty_item_image_margin_top" android:src="@drawable/face_beauty_menu_reset_selector" />
+            <TextView android:textColor="@color/face_beauty_reset_text_color_selector" android:id="@id/tv_face_beauty_custom_reset" android:text="@string/camera_face_beauty_menu_reset" style="@style/FaceBeautyTextStyle" />
+        </LinearLayout>
+        <com.oppo.camera.ui.PullRecyclerViewGroup android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/face_beauty_item_height" android:layout_marginStart="@dimen/face_beauty_item_space">
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/face_beauty_custom_recycler" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="@dimen/face_beauty_item_height" />
+        </com.oppo.camera.ui.PullRecyclerViewGroup>
+    </LinearLayout>
+</RelativeLayout>

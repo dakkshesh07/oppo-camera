@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/permission_dialog_text_size" android:textColor="@color/permission_dialog_text_color" android:id="@id/permission_dialog_name" android:paddingLeft="@dimen/privacy_policy_padding_normal" android:paddingRight="@dimen/privacy_policy_padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/permission_dialog_name_margin_bottom" android:fontFamily="sans-serif-medium" />
+    <TextView android:textSize="@dimen/permission_dialog_text_size" android:textColor="@color/permission_dialog_text_color" android:id="@id/permission_dialog_usage" android:paddingLeft="@dimen/privacy_policy_padding_normal" android:paddingRight="@dimen/privacy_policy_padding_normal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif" />
+</LinearLayout>

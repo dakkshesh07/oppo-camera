@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="red_dot_with_number_description">
+        <item quantity="other">%d نئے اعلانات</item>
+        <item quantity="one">%d نئی اطلاع</item>
+    </plurals>
+    <plurals name="sticker_recycle_bin_title_has_selected">
+        <item quantity="other">%1$d اسٹیکرز منتخب کئے</item>
+        <item quantity="one">%1$d اسٹیکر منتخب کیا</item>
+    </plurals>
+</resources>

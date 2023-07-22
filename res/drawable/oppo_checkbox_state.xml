@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:oppo="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="true" android:id="@id/part_normal" android:drawable="@drawable/color_btn_part_check_on_normal" oppo:oppo_state_allSelect="false" oppo:oppo_state_partSelect="true" />
+    <item android:state_enabled="false" android:drawable="@drawable/color_btn_part_check_on_disabled" oppo:oppo_state_allSelect="false" oppo:oppo_state_partSelect="true" />
+    <item android:state_enabled="true" android:id="@id/selected_normal" android:drawable="@drawable/color_btn_check_on_normal" oppo:oppo_state_allSelect="true" oppo:oppo_state_partSelect="false" />
+    <item android:state_enabled="false" android:drawable="@drawable/color_btn_check_on_disabled" oppo:oppo_state_allSelect="true" oppo:oppo_state_partSelect="false" />
+    <item android:state_enabled="true" android:id="@id/unselected_normal" android:drawable="@drawable/color_btn_check_off_normal" oppo:oppo_state_allSelect="false" oppo:oppo_state_partSelect="false" />
+    <item android:state_enabled="false" android:drawable="@drawable/color_btn_check_off_disabled" oppo:oppo_state_allSelect="false" oppo:oppo_state_partSelect="false" />
+</selector>

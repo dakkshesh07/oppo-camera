@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.preview.CameraTimeView android:orientation="horizontal" android:id="@id/video_record_time_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/blink_record_icon" android:src="@drawable/ic_recording_indicator" android:layout_marginEnd="@dimen/record_icon_margin_end" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/record_split_view" android:visibility="gone" android:src="@drawable/record_split_view" android:layout_marginHorizontal="@dimen/camera_time_split_view_horizontal_margin" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_hour_ten" android:visibility="gone" android:src="@drawable/ic_time_zero" android:layout_marginStart="@dimen/record_time_margin_start" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_hour_unit" android:visibility="gone" android:src="@drawable/ic_time_zero" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_colon" android:visibility="gone" android:src="@drawable/ic_time_maohao" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_minute_ten" android:src="@drawable/ic_time_zero" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_minute_unit" android:src="@drawable/ic_time_zero" style="@style/RecordTimeIconStyle" />
+    <ImageView android:src="@drawable/ic_time_maohao" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_second_ten" android:src="@drawable/ic_time_zero" style="@style/RecordTimeIconStyle" />
+    <ImageView android:id="@id/video_second_unit" android:src="@drawable/ic_time_zero" style="@style/RecordTimeIconStyle" />
+</com.oppo.camera.ui.preview.CameraTimeView>

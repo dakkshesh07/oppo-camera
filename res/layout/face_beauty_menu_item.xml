@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="@dimen/face_beauty_item_width" android:layout_height="@dimen/face_beauty_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center" android:id="@id/iv_face_beauty_custom_item" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/face_beauty_item_image_margin_top" />
+    <TextView android:id="@id/tv_face_beauty_custom_item" style="@style/FaceBeautyTextStyle" />
+</LinearLayout>

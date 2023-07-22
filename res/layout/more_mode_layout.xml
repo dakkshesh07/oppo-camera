@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center_horizontal" android:background="@color/more_mode_mask_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.ui.modepanel.NonFlingRecycleView android:id="@id/more_mode_view" android:scrollbars="none" android:saveEnabled="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:fadeScrollbars="false" android:overScrollMode="never" android:layout_marginStart="@dimen/more_layout_lr_padding" android:layout_marginEnd="@dimen/more_layout_lr_padding" />
+</LinearLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.color.support.widget.seekbar.ColorSeekBar android:layout_gravity="bottom|center" android:id="@id/color_seek_bar" android:layout_width="fill_parent" android:layout_height="@dimen/num_seekbar_height" app:colorSeekBarBackgroundColor="@color/face_beauty_seekbar_track_color" app:colorSeekBarProgressColor="?colorTintControlNormal" />
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/privacy_check_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.PrivacyPolicyContentScrollView android:id="@id/permission_dialog_scrollview" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:max_height="@dimen/privacy_policy_text_max_height">
+        <LinearLayout android:orientation="vertical" android:id="@id/permission_dialog_content" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/permission_dialog_text_size" android:textColor="@color/permission_dialog_text_color" android:id="@id/permission_dialog_description" android:paddingLeft="@dimen/privacy_policy_padding_normal" android:paddingRight="@dimen/privacy_policy_padding_normal" android:paddingBottom="@dimen/permission_dialog_description_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/camera_permission_dialog_multi_description" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </com.oppo.camera.PrivacyPolicyContentScrollView>
+</LinearLayout>

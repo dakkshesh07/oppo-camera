@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/menu_hdr_mode_auto_inverse" camera:state_inverse_color="true" />
+    <item android:drawable="@drawable/menu_hdr_mode_auto_dark" camera:state_inverse_color="false" />
+</selector>

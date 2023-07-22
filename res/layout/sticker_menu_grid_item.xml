@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.sticker.ui.StickerGridViewLayout android:id="@id/sticker_item_menu" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.sticker.ui.FooterGridView android:scrollbarThumbVertical="@drawable/oppo_scrollbar_handle_vertical_dark" android:id="@id/sticker_grid_view" android:paddingLeft="@dimen/sticker_gridview_padding_left" android:paddingTop="@dimen/sticker_gridview_padding_top" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/sticker_gridview_margin_bottom" android:listSelector="@android:color/transparent" android:horizontalSpacing="@dimen/sticker_gridview_horizontal_spacing" android:verticalSpacing="@dimen/sticker_gridview_vertical_spacing" android:stretchMode="none" android:columnWidth="@dimen/sticker_gridview_item_size" android:numColumns="6" android:layout_alignParentBottom="true" android:overScrollMode="never" />
+</com.oppo.camera.sticker.ui.StickerGridViewLayout>

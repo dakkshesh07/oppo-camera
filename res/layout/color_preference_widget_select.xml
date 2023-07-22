@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:paddingTop="@dimen/support_preference_widget_focus_jump_padding_top" android:paddingBottom="@dimen/support_preference_widget_focus_jump_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/support_preference_widget_focus_jump_margin_start"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:gravity="right" android:id="@id/color_statusText_select" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/color_preference_status_text_max_width" style="@style/PreferenceStatusText" />
+    </LinearLayout>
+    <ImageView android:id="@id/color_preference_widget_jump" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/support_preference_image_padding_start" android:src="@drawable/color_btn_select" android:importantForAccessibility="no" />
+</LinearLayout>

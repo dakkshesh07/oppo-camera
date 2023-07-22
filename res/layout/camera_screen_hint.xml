@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.CameraScreenHintView android:id="@id/camera_screen_hint_panel" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:horizontal_margin_top="@dimen/camera_hint_margin" app:vertical_margin_left_right="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.ui.RotateImageView android:id="@id/camera_screen_hint_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <com.oppo.camera.ui.menu.OppoTextView android:textSize="@dimen/camera_hint_text_size" android:textColor="@color/screen_hint_text_color" android:gravity="center" android:id="@id/camera_screen_hint_text" android:background="@drawable/screen_hint_textview_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="322.0dip" android:includeFontPadding="false" android:lineSpacingExtra="4.0dip" />
+</com.oppo.camera.ui.CameraScreenHintView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="oval"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="@dimen/enter_sticker_button_height" android:width="@dimen/enter_sticker_button_width" />
+    <solid android:color="@color/enter_sticker_button_bg" />
+    <stroke android:width="@dimen/enter_sticker_button_stroke_width" android:color="@color/enter_sticker_button_stroke" />
+</shape>

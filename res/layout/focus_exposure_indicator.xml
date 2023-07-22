@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/exposure_container" android:visibility="gone" android:layout_width="@dimen/focus_view_size" android:layout_height="@dimen/focus_view_size">
+        <com.oppo.camera.ui.RotateLottieAnimationView android:id="@id/exposure_animation_view" android:layout_width="@dimen/exposure_anim_view_size" android:layout_height="@dimen/exposure_anim_view_size" />
+    </LinearLayout>
+    <com.oppo.camera.ui.CommonComponent.SeekBar.ExposureControlSeekBar android:id="@id/exposure_indicator_rotate_layout" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/exporebar_height" />
+    <com.oppo.camera.ui.preview.FocusIndicatorRotateLayout android:id="@id/focus_indicator_rotate_layout" android:visibility="invisible" android:layout_width="@dimen/focus_view_size" android:layout_height="@dimen/focus_view_size" android:layout_centerInParent="true" />
+</merge>

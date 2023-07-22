@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rootView" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.color.support.view.ColorFullPageStatement android:id="@id/full_statement_page" android:layout_width="fill_parent" android:layout_height="fill_parent" app:bottomButtonText="@string/camera_dialog_net_location_positive" app:exitButtonText="@string/camera_dialog_net_location_negative" />
+</LinearLayout>

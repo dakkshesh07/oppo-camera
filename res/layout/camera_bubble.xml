@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@id/camera_bubble_panel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.ui.menu.OppoTextView android:textSize="@dimen/bubble_text_size" android:textColor="@color/bubble_text_color" android:layout_gravity="center_vertical" android:id="@id/camera_bubble_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/bubble_text_max_width" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/bubble_text_line_spacing" android:paddingStart="@dimen/bubble_padding_left" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/camera_bubble_close" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_tips_close" android:paddingEnd="@dimen/bubble_padding_right" android:layout_marginStart="@dimen/bubble_close_margin_left" />
+</LinearLayout>

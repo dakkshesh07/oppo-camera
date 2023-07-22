@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/oppo_category_root" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/oppo_category_top_divider" android:layout_width="fill_parent" android:layout_height="@dimen/support_preference_category_layout_divider_parent_height">
+        <View android:background="@color/color_preference_category_divider_color" android:layout_width="fill_parent" android:layout_height="@dimen/support_preference_category_layout_divider_height" android:layout_marginStart="@dimen/support_preference_category_layout_divider_margin_start" android:layout_marginEnd="@dimen/support_preference_category_layout_divider_margin_end" android:forceDarkAllowed="false" />
+    </LinearLayout>
+    <TextView android:textStyle="bold" android:layout_marginStart="@dimen/support_preference_category_layout_title_margin_start" android:layout_marginEnd="@dimen/support_preference_category_layout_title_margin_end" style="@style/Widget.ColorSupport.List.Category.Title" />
+</LinearLayout>

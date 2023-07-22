@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/blur_layout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.ui.OppoNumSeekBar android:id="@id/video_blur_seek_bar" android:layout_width="fill_parent" android:layout_height="@dimen/blur_menu_seekbar_height" android:layout_marginTop="@dimen/blur_seekbar_margin_top" android:paddingStart="@dimen/blur_seekbar_padding_start" android:paddingEnd="@dimen/blur_seekbar_padding_end" app:section_value="@integer/video_blur_default_value" app:thumb_text_always_in_center="true" app:thumb_text_color="@color/camera_white" app:thumb_text_padding_seek_bar="@dimen/blur_seekbar_thumb_text_padding_seek_bar" app:thumb_text_string="@string/blur_thumb_text" app:track_color="@color/face_beauty_seekbar_track_color" />
+</LinearLayout>

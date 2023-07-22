@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="panorama_rect_height">84.0dip</dimen>
+    <dimen name="bubble_type_short_video_offset_y">128.0dip</dimen>
+</resources>

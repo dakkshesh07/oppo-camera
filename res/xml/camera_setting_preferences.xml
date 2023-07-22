@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen android:title="@string/camera_setting_name" android:key="camera_setting_menu_root_preference"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto" xmlns:coloros="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.Preference android:layout="@layout/color_preference_header" android:selectable="false" />
+    <com.color.support.preference.ColorPreferenceCategory android:title="@string/camera_setting_common" android:key="pref_common_function" coloros:isFirstCategory="true">
+        <com.color.support.preference.ColorListPreference android:persistent="true" android:entries="@array/volume_key_function_names" android:title="@string/camera_volume_key_function_title" android:selectable="true" android:key="pref_volume_key_function_key" android:summary="@string/camera_volume_key_function_setting_summary" android:defaultValue="@string/camera_volume_key_function_default_value" android:dialogTitle="@string/camera_volume_key_function_title" android:entryValues="@array/volume_key_function_values" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_fingerprint_shutter_title" android:key="pref_camera_fingerprint_shutter_key" android:defaultValue="true" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_shutter_sound_title" android:key="pref_camera_sound_key" android:defaultValue="true" coloros:switchTextOn="@string/camera_tap_shutter_summary" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_location_title" android:key="pref_camera_recordlocation_key" android:summary="@string/camera_location_setting_summary" android:defaultValue="true" />
+        <com.color.support.preference.ColorJumpPreference android:persistent="false" android:title="@string/camera_setting_water_mark" android:selectable="true" android:key="pref_watermark_setting_key" />
+        <com.color.support.preference.ColorJumpPreference android:persistent="false" android:title="@string/camera_setting_build_image" android:selectable="true" android:key="pref_build_image_setting_key" android:summary="@string/camera_setting_build_image_desc" />
+        <com.color.support.preference.ColorJumpPreference android:persistent="false" android:title="@string/camera_setting_advanced_setting" android:selectable="true" android:key="pref_advance_setting_key" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:title="@string/camera_setting_photo" android:key="pref_capture_function" coloros:isFirstCategory="false">
+        <com.color.support.preference.ColorJumpPreference android:persistent="false" android:title="@string/camera_setting_auxiliary_shutter" android:selectable="true" android:key="pref_shutter_help_key" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_ai_scene_title" android:key="pref_ai_scene_key" android:defaultValue="true" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_face_rectify_title" android:key="pref_face_rectify_key" android:defaultValue="true" />
+        <com.color.support.preference.ColorJumpPreference android:persistent="false" android:title="@string/camera_slogan_title" android:selectable="true" android:key="pref_photo_slogan_key" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_ai_high_resolution_title" android:key="pref_super_clear_portrait" android:summary="@string/camera_ai_high_resolution_summary" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_professional_raw_title" android:key="pref_raw_key" android:defaultValue="false" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:title="@string/camera_setting_video" android:key="pref_video_function" coloros:isFirstCategory="false">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_setting_inertia_zoom" android:key="pref_inertial_zoom_key" android:summary="@string/camera_setting_inertia_zoom_content" android:defaultValue="true" />
+        <com.color.support.preference.ColorJumpPreference android:title="@string/camera_setting_video_ratio" android:key="pref_video_ratio_key" />
+        <com.color.support.preference.ColorListPreference android:persistent="true" android:entries="@array/setting_slow_video_resolution_names" android:title="@string/camera_setting_slow_video_ratio" android:key="pref_slow_video_size_key" android:defaultValue="@string/camera_slow_video_size_default" android:dialogTitle="@string/camera_setting_slow_video_ratio" android:entryValues="@array/setting_slow_video_resolution_values" />
+        <com.color.support.preference.ColorListPreference android:persistent="true" android:entries="@array/video_codec_names" android:title="@string/camera_setting_video_codec_title" android:key="pref_video_codec_key" android:defaultValue="@string/camera_video_codec_default_value" android:dialogTitle="@string/camera_setting_video_codec_title" android:entryValues="@array/video_codec_values" />
+        <com.color.support.preference.ColorJumpPreference android:title="@string/camera_video_sound_title" android:key="pref_video_sound_key" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_video_eis" android:key="pref_video_sell_eis" android:defaultValue="true" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_help_and_feedback_function" coloros:isFirstCategory="false">
+        <Preference android:persistent="false" android:layout="@layout/color_preference_yellow" android:title="@string/camera_setting_help_and_feedback" android:selectable="true" android:key="pref_help_and_feedback_key" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_restore_function" coloros:isFirstCategory="false">
+        <Preference android:persistent="false" android:layout="@layout/color_preference_yellow" android:title="@string/camera_setting_restore_default" android:selectable="true" android:key="pref_restore_key" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <Preference android:layout="@layout/color_preference_bottom_divider" android:selectable="false" android:key="pref_bottom_line" />
+</androidx.preference.PreferenceScreen>

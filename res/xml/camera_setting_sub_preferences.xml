@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen android:key="camera_setting_advance_root_preference"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto" xmlns:coloros="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.Preference android:layout="@layout/color_preference_header" android:selectable="false" />
+    <com.color.support.preference.ColorPreferenceCategory android:title="@string/camera_setting_reference_line" android:key="pref_build_image_setting_function" coloros:isFirstCategory="true">
+        <com.color.support.preference.ColorListPreference android:persistent="true" android:entries="@array/camera_setting_line_photo_names" android:title="@string/camera_setting_reference_line_photo" android:selectable="true" android:key="pref_camera_line_photo" android:defaultValue="@string/camera_setting_default_value" android:dialogTitle="@string/camera_setting_reference_line_photo" android:entryValues="@array/camera_setting_line_photo_values" />
+        <com.color.support.preference.ColorListPreference android:persistent="true" android:entries="@array/pre_camera_line_video_names" android:title="@string/camera_setting_reference_line_video" android:selectable="true" android:key="pref_camera_line_video" android:defaultValue="@string/camera_setting_default_value" android:dialogTitle="@string/camera_setting_reference_line_video" android:entryValues="@array/pre_camera_line_video_values" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_gradienter_setting_function">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_setting_gradienter" android:key="pref_assist_gradienter" android:summary="@string/camera_setting_gradienter_desc" android:defaultValue="false" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_shutter_setting_function" coloros:isFirstCategory="true">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_tap_shutter_title" android:key="pref_camera_tap_shutter_key" android:summary="@string/camera_tap_shutter_summary" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_gesture_shutter_title" android:key="pref_camera_gesture_shutter_key" android:summary="@string/camera_gesture_shutter_setting_summary" android:defaultValue="false" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_self_setting_function" coloros:isFirstCategory="true">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_countdown_effect_title" android:key="pref_camera_countdown_effect_key" android:defaultValue="true" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_selfie_mirror_title" android:key="pref_mirror_key" android:summary="@string/camera_mirror_setting_summary" android:defaultValue="@string/camera_mirror_default_value" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_lens_dirty_detection_function" coloros:isFirstCategory="false">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_setting_dirty_lens_detection" android:key="pref_lens_dirty_detection_key" android:summary="@string/camera_setting_dirty_lens_detection_summary" android:defaultValue="true" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_other_setting_function" coloros:isFirstCategory="false">
+        <com.color.support.preference.ColorJumpPreference android:title="@string/camera_codec_title" android:key="pref_camera_code_key" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_setting_camera_quick_launch_tittle" android:key="pref_camera_quick_launch_key" android:summary="@string/camera_interest_screen_snapshot_tip" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/quick_share_and_edit" android:key="pref_share_and_edit_key" android:summary="@string/quick_share_and_edit_tips" android:defaultValue="true" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_storage_title" android:key="pref_camera_storage_key" android:defaultValue="false" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_watermark_function" coloros:isFirstCategory="true">
+        <com.color.support.preference.ColorSwitchWithDividerPreference android:title="@string/camera_slogan_device" android:key="pref_watermark_device" coloros:defaultValue="@string/camera_slogan_default_value" />
+        <com.color.support.preference.ColorSwitchWithDividerPreference android:title="@string/camera_slogan_time" android:key="pref_watermark_time" coloros:defaultValue="@string/camera_slogan_default_value" />
+        <com.color.support.preference.ColorSwitchWithDividerPreference android:title="@string/camera_slogan_location" android:key="pref_watermark_location" android:summary="@string/camera_slogan_location_tip" coloros:defaultValue="@string/camera_slogan_default_value" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_video_sound_function" coloros:isFirstCategory="true">
+        <com.color.support.preference.ColorMarkPreference android:title="@string/camera_video_normal_sound" android:key="pref_video_sound_normal_key" coloros:defaultValue="@string/camera_slogan_default_value" />
+        <com.color.support.preference.ColorMarkPreference android:title="@string/camera_video_panorama_sound" android:key="pref_video_sound_panorama_key" android:summary="@string/camera_video_panorama_sound_description" coloros:defaultValue="@string/camera_setting_mode_on" />
+        <com.color.support.preference.ColorMarkPreference android:title="@string/camera_video_focusing_sound" android:key="pref_video_sound_focusing_key" android:summary="@string/camera_video_focusing_sound_description" coloros:defaultValue="@string/camera_slogan_default_value" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <com.color.support.preference.ColorPreferenceCategory android:key="pref_video_sound_noise_function">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/camera_video_dewind_noise_title" android:key="pref_video_noise_filter_key" android:defaultValue="true" />
+    </com.color.support.preference.ColorPreferenceCategory>
+    <Preference android:layout="@layout/color_preference_bottom_divider" android:selectable="false" android:key="pref_bottom_line" />
+</androidx.preference.PreferenceScreen>

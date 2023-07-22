@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:clipChildren="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@drawable/fake_thumbnail" android:layout_width="@dimen/thumbnail_width_nomal" android:layout_height="@dimen/thumbnail_width_nomal" android:layout_marginTop="@dimen/thumbnail_margin_top" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/thumbnail_margin_start" android:layout_alignParentStart="true" />
+    <ImageView android:layout_width="@dimen/shutter_button_size" android:layout_height="@dimen/shutter_button_size" android:layout_marginTop="@dimen/shutter_button_margin_top" android:src="@drawable/fake_shutter_button" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/switch_camera_button" android:layout_width="@dimen/thumbnail_width_nomal" android:layout_height="@dimen/thumbnail_width_nomal" android:layout_marginTop="@dimen/switch_camera_button_margin_top" android:src="@drawable/btn_switch_camera" android:layout_alignParentTop="true" android:layout_marginEnd="@dimen/control_button_margin_edge" android:layout_alignParentEnd="true" />
+</RelativeLayout>

@@ -1,0 +1,86 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: OppoCamera.apk
+compressionType: false
+doNotCompress:
+- classes.dex
+- resources.arsc
+- assets/9403-322-6dd69a7f2c6c8d1bbd304bd35a8a543b.lic
+- png
+- lib/arm64-v8a/lib2DSlender.so
+- lib/arm64-v8a/lib3DSlender.so
+- lib/arm64-v8a/libAPSClient-jni.so
+- lib/arm64-v8a/libFaceBeautyCap.so
+- lib/arm64-v8a/libFormatConverter.so
+- lib/arm64-v8a/libGradienterNativeLib.so
+- lib/arm64-v8a/libNvStreamingSdkCore.so
+- lib/arm64-v8a/libOPPORectify_FF.so
+- lib/arm64-v8a/libOppoFFDJni.so
+- lib/arm64-v8a/libOppoFaceBeautyJni.so
+- lib/arm64-v8a/libOppoFaceBeautyPreviewJni.so
+- lib/arm64-v8a/libOppoNativeBufferProducer.so
+- lib/arm64-v8a/libOppoRectifyJni_FF.so
+- lib/arm64-v8a/libOppoUpscaleJni.so
+- lib/arm64-v8a/libOppoWatermarkJni.so
+- lib/arm64-v8a/libOppoYuvProcessUtil.so
+- lib/arm64-v8a/libPolarrRender.so
+- lib/arm64-v8a/libPolarrRenderJNI.so
+- lib/arm64-v8a/libSingleBokeh.so
+- lib/arm64-v8a/libVDEyeEnhance.so
+- lib/arm64-v8a/libVDUpScale.so
+- lib/arm64-v8a/libXDocProcess.so
+- lib/arm64-v8a/libYTCommon.so
+- lib/arm64-v8a/libarcsoft_beautyshot.so
+- lib/arm64-v8a/libarcsoft_distortion_correction_6125.so
+- lib/arm64-v8a/libarcsoft_gpuvideobokeh_advanced.so
+- lib/arm64-v8a/libarcsoft_panorama_burstcapture.so
+- lib/arm64-v8a/libarcsoft_relighting_pro_image.so
+- lib/arm64-v8a/libarcsoft_scbokeh_video.so
+- lib/arm64-v8a/libarcsoft_singlecam_bokeh.so
+- lib/arm64-v8a/libarcsoft_wideselfie.so
+- lib/arm64-v8a/libc++_shared.so
+- lib/arm64-v8a/libcommon.so
+- lib/arm64-v8a/libjni_burstpmk.so
+- lib/arm64-v8a/libjni_wideselfie.so
+- lib/arm64-v8a/libmpbase.so
+- lib/arm64-v8a/libpreview_show.so
+- lib/arm64-v8a/libsingle_camera_bokeh_native.so
+- lib/arm64-v8a/libstface_fd_api.so
+- lib/arm64-v8a/libtouchless_a3d.so
+- lib/arm64-v8a/libtouchless_a3d_jni.so
+- ogg
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '28'
+  targetSdkVersion: '30'
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  LICENSE-junit.txt: '8'
+  junit/runner/logo.gif: '0'
+  junit/runner/smalllogo.gif: '0'
+  com/arcsoft/camera/burstpmk/YuvToRgb.rs: '8'
+  com/oppo/gallery3d/predecode/IPreDecode.aidl: '8'
+  google/protobuf/any.proto: '8'
+  google/protobuf/api.proto: '8'
+  google/protobuf/descriptor.proto: '8'
+  google/protobuf/duration.proto: '8'
+  google/protobuf/empty.proto: '8'
+  google/protobuf/field_mask.proto: '8'
+  google/protobuf/source_context.proto: '8'
+  google/protobuf/struct.proto: '8'
+  google/protobuf/timestamp.proto: '8'
+  google/protobuf/type.proto: '8'
+  google/protobuf/wrappers.proto: '8'
+  google/protobuf/compiler/plugin.proto: '8'
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: '8'
+usesFramework:
+  ids:
+  - 1
+  tag: '30'
+version: 2.7.0
+versionInfo:
+  versionCode: '40026'
+  versionName: 3.1.0

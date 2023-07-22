@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="control_panel_button_height">144.0dip</dimen>
+    <dimen name="control_panel_layout_height">208.0dip</dimen>
+    <dimen name="menu_panel_layout_height">72.0dip</dimen>
+    <dimen name="top_bar_layout_height">72.0dip</dimen>
+    <dimen name="control_panel_margin_bottom">3.0dip</dimen>
+    <dimen name="control_panel_margin_bottom_virtual_key">13.0dip</dimen>
+    <dimen name="ear_screen_menu_item_offset">12.0dip</dimen>
+    <dimen name="ear_screen_menu_offset">14.0dip</dimen>
+    <dimen name="record_time_margin_bottom">159.65dip</dimen>
+    <dimen name="record_time_margin_bottom_third_party">159.65dip</dimen>
+    <dimen name="third_video_preview_margin_top">44.0dip</dimen>
+</resources>

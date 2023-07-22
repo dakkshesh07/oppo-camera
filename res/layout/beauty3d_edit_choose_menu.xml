@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@drawable/beauty3d_edit_background" android:layout_width="@dimen/beauty3d_edit_choose_menu_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/beauty3d_edit" android:layout_toLeftOf="@id/line" />
+    <ImageView android:id="@id/line" android:layout_width="wrap_content" android:layout_height="@dimen/beauty3d_edit_choose_menu_diveline_width" android:layout_marginLeft="@dimen/beauty3d_edit_choose_menu_diveline_margin_left" android:layout_marginRight="@dimen/beauty3d_edit_choose_menu_diveline_margin_left" android:src="@drawable/beauty3d_diveline" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/beauty3d_delete" android:layout_toRightOf="@id/line" />
+</RelativeLayout>

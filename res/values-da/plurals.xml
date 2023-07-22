@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="sticker_recycle_bin_title_has_selected">
+        <item quantity="other">%1$d Mærkater valgt</item>
+        <item quantity="one">%1$d Mærkater valgt</item>
+    </plurals>
+</resources>

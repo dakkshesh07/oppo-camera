@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color_lunar_mounth">
+        <item>الشهر القمري الأول</item>
+        <item>الشهر القمري الثاني</item>
+        <item>الشهر القمري الثالث</item>
+        <item>الشهر القمري الرابع</item>
+        <item>الشهر القمري الخامس</item>
+        <item>الشهر القمري السادس</item>
+        <item>الشهر القمري السابع</item>
+        <item>الشهر القمري الثامن</item>
+        <item>الشهر القمري التاسع</item>
+        <item>الشهر القمري العاشر</item>
+        <item>الشهر القمري الحادي عشر</item>
+        <item>الشهر القمري الثاني عشر</item>
+    </string-array>
+    <string-array name="color_solor_mounth">
+        <item>يناير</item>
+        <item>فبراير</item>
+        <item>مارس</item>
+        <item>إبريل</item>
+        <item>مايو</item>
+        <item>يونيو</item>
+        <item>يوليو</item>
+        <item>أغسطس</item>
+        <item>سبتمبر</item>
+        <item>أكتوبر</item>
+        <item>نوفمبر</item>
+        <item>ديسمبر</item>
+    </string-array>
+    <string-array name="oppo_time_picker_ampm">
+        <item>ص</item>
+        <item>م</item>
+    </string-array>
+</resources>
