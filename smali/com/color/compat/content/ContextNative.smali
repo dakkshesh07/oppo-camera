@@ -91,7 +91,7 @@
     if-eqz v0, :cond_0
 
     .line 194
-    invoke-static {p0}, Lcom/color/inner/content/ContextWrapper;->createCredentialProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p0}, Landroid/content/ContextWrapper;->createCredentialProtectedStorageContext(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p0
 
@@ -152,7 +152,7 @@
     if-eqz v0, :cond_0
 
     .line 151
-    invoke-static {p0}, Lcom/color/inner/content/ContextWrapper;->getDisplay(Landroid/content/Context;)Landroid/view/Display;
+    invoke-static {p0}, Landroid/content/ContextWrapper;->getDisplay(Landroid/content/Context;)Landroid/view/Display;
 
     move-result-object p0
 
@@ -213,7 +213,7 @@
     if-eqz v0, :cond_0
 
     .line 225
-    invoke-static {p0, p1}, Lcom/color/inner/content/ContextWrapper;->getSharedPreferencesPath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0, p1}, Landroid/content/ContextWrapper;->getSharedPreferencesPath(Landroid/content/Context;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 
@@ -273,7 +273,7 @@
     if-eqz v0, :cond_0
 
     .line 130
-    invoke-static {p0, p1, p2, p3}, Lcom/color/inner/content/ContextWrapper;->startActivityAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
+    invoke-static {p0, p1, p2, p3}, Landroid/content/ContextWrapper;->startActivityAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
@@ -328,7 +328,7 @@
     if-eqz v0, :cond_0
 
     .line 98
-    invoke-static {p0, p1, p2}, Lcom/color/inner/content/ContextWrapper;->startActivityAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/UserHandle;)V
+    invoke-static {p0, p1, p2}, Landroid/content/ContextWrapper;->startActivityAsUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/UserHandle;)V
 
     goto :goto_0
 
