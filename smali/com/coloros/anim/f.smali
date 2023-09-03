@@ -225,7 +225,7 @@
     const-string p1, "Load anim composition done,setting result!!!"
 
     .line 84
-    invoke-static {p1}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 85
     invoke-direct {p0}, Lcom/coloros/anim/f;->a()V
@@ -490,7 +490,7 @@
     const-string v0, "EffectiveAnimationTask addListener listener.onResult"
 
     .line 95
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 96
     iget-object v0, p0, Lcom/coloros/anim/f;->e:Lcom/coloros/anim/e;

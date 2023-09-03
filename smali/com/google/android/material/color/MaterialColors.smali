@@ -38,7 +38,7 @@
     div-int/lit16 v0, v0, 0xff
 
     .line 154
-    invoke-static {p0, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p0, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result p0
 
@@ -105,7 +105,7 @@
     .locals 0
 
     .line 139
-    invoke-static {p1, p0}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {p1, p0}, Landroidx/core/graphics/c;->a(II)I
 
     move-result p0
 
@@ -129,7 +129,7 @@
     move-result p2
 
     .line 129
-    invoke-static {p1, p2}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p1, p2}, Landroidx/core/graphics/c;->b(II)I
 
     move-result p1
 

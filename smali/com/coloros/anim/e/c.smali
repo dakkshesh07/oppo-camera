@@ -1,904 +1,544 @@
 .class public Lcom/coloros/anim/e/c;
 .super Ljava/lang/Object;
-.source "AnimatableTransformParser.java"
+.source "Keyframe.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final a:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
+
+.field public final b:Landroid/view/animation/Interpolator;
+
+.field public final c:F
+
+.field public d:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
+
+.field public e:Ljava/lang/Float;
+
+.field public f:Landroid/graphics/PointF;
+
+.field public g:Landroid/graphics/PointF;
+
+.field private final h:Lcom/coloros/anim/a;
+
+.field private i:F
+
+.field private j:F
+
+.field private k:I
+
+.field private l:I
+
+.field private m:F
+
+.field private n:F
 
 
 # direct methods
-.method public static a(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/l;
-    .locals 28
-    .annotation system Ldalvik/annotation/Throws;
+.method public constructor <init>(Lcom/coloros/anim/a;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/animation/Interpolator;FLjava/lang/Float;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
         value = {
-            Ljava/io/IOException;
+            "(",
+            "Lcom/coloros/anim/a;",
+            "TT;TT;",
+            "Landroid/view/animation/Interpolator;",
+            "F",
+            "Ljava/lang/Float;",
+            ")V"
         }
     .end annotation
 
-    move-object/from16 v0, p0
+    .line 39
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object/from16 v8, p1
+    const/4 v0, 0x0
 
-    .line 36
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->peek()Landroid/util/JsonToken;
+    .line 27
+    iput-object v0, p0, Lcom/coloros/anim/e/c;->f:Landroid/graphics/PointF;
 
-    move-result-object v1
+    .line 28
+    iput-object v0, p0, Lcom/coloros/anim/e/c;->g:Landroid/graphics/PointF;
 
-    sget-object v2, Landroid/util/JsonToken;->BEGIN_OBJECT:Landroid/util/JsonToken;
+    const v0, -0x358c9d09
 
-    const/4 v10, 0x0
+    .line 29
+    iput v0, p0, Lcom/coloros/anim/e/c;->i:F
 
-    if-ne v1, v2, :cond_0
+    .line 30
+    iput v0, p0, Lcom/coloros/anim/e/c;->j:F
 
-    const/4 v11, 0x1
+    const v0, 0x2ec8fb09
+
+    .line 31
+    iput v0, p0, Lcom/coloros/anim/e/c;->k:I
+
+    .line 32
+    iput v0, p0, Lcom/coloros/anim/e/c;->l:I
+
+    const/4 v0, 0x1
+
+    .line 33
+    iput v0, p0, Lcom/coloros/anim/e/c;->m:F
+
+    .line 34
+    iput v0, p0, Lcom/coloros/anim/e/c;->n:F
+
+    .line 40
+    iput-object p1, p0, Lcom/coloros/anim/e/c;->h:Lcom/coloros/anim/a;
+
+    .line 41
+    iput-object p2, p0, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
+
+    .line 42
+    iput-object p3, p0, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
+
+    .line 43
+    iput-object p4, p0, Lcom/coloros/anim/e/c;->b:Landroid/view/animation/Interpolator;
+
+    .line 44
+    iput p5, p0, Lcom/coloros/anim/e/c;->c:F
+
+    .line 45
+    iput-object p6, p0, Lcom/coloros/anim/e/c;->e:Ljava/lang/Float;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+
+    .line 51
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 27
+    iput-object v0, p0, Lcom/coloros/anim/e/c;->f:Landroid/graphics/PointF;
+
+    .line 28
+    iput-object v0, p0, Lcom/coloros/anim/e/c;->g:Landroid/graphics/PointF;
+
+    const v1, -0x358c9d09
+
+    .line 29
+    iput v1, p0, Lcom/coloros/anim/e/c;->i:F
+
+    .line 30
+    iput v1, p0, Lcom/coloros/anim/e/c;->j:F
+
+    const v1, 0x2ec8fb09
+
+    .line 31
+    iput v1, p0, Lcom/coloros/anim/e/c;->k:I
+
+    .line 32
+    iput v1, p0, Lcom/coloros/anim/e/c;->l:I
+
+    const/4 v1, 0x1
+
+    .line 33
+    iput v1, p0, Lcom/coloros/anim/e/c;->m:F
+
+    .line 34
+    iput v1, p0, Lcom/coloros/anim/e/c;->n:F
+
+    .line 52
+    iput-object v0, p0, Lcom/coloros/anim/e/c;->h:Lcom/coloros/anim/a;
+
+    .line 53
+    iput-object p1, p0, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
+
+    .line 54
+    iput-object p1, p0, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
+
+    .line 55
+    iput-object v0, p0, Lcom/coloros/anim/e/c;->b:Landroid/view/animation/Interpolator;
+
+    .line 56
+    iput v1, p0, Lcom/coloros/anim/e/c;->c:F
+
+    const p1, 0x7f7fffff    # Float.MAX_VALUE
+
+    .line 57
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/coloros/anim/e/c;->e:Ljava/lang/Float;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(F)Z
+    .locals 1
+
+    .line 92
+    invoke-virtual {p0}, Lcom/coloros/anim/e/c;->c()F
+
+    move-result v0
+
+    cmpl-float v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/coloros/anim/e/c;->d()F
+
+    move-result v0
+
+    cmpg-float p1, p1, v0
+
+    if-gez p1, :cond_0
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    move v11, v10
+    const/4 p1, 0x0
 
     :goto_0
-    if-eqz v11, :cond_1
+    return p1
+.end method
 
-    .line 38
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->beginObject()V
+.method public c()F
+    .locals 3
 
-    :cond_1
-    const/4 v1, 0x0
+    .line 61
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->h:Lcom/coloros/anim/a;
 
-    const/4 v13, 0x0
+    if-nez v0, :cond_0
 
-    const/4 v14, 0x0
+    const/4 v0, 0x0
 
-    const/4 v15, 0x0
+    return v0
 
-    const/16 v16, 0x0
-
-    const/16 v17, 0x0
-
-    const/16 v23, 0x0
-
-    const/16 v24, 0x0
-
-    const/16 v25, 0x0
-
-    .line 40
-    :goto_1
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    .line 41
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v4
-
-    const/16 v5, 0x61
-
-    if-eq v4, v5, :cond_b
-
-    const/16 v5, 0xcaa
-
-    if-eq v4, v5, :cond_a
-
-    const/16 v5, 0xe48
-
-    if-eq v4, v5, :cond_9
-
-    const/16 v5, 0xe4e
-
-    if-eq v4, v5, :cond_8
-
-    const/16 v5, 0xe58
-
-    if-eq v4, v5, :cond_7
-
-    const/16 v5, 0xe5c
-
-    if-eq v4, v5, :cond_6
-
-    const/16 v5, 0x6f
-
-    if-eq v4, v5, :cond_5
-
-    const/16 v5, 0x70
-
-    if-eq v4, v5, :cond_4
-
-    const/16 v5, 0x72
-
-    if-eq v4, v5, :cond_3
-
-    const/16 v5, 0x73
-
-    if-eq v4, v5, :cond_2
-
-    goto/16 :goto_2
-
-    :cond_2
-    const-string v4, "s"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/4 v2, 0x2
-
-    goto :goto_3
-
-    :cond_3
-    const-string v4, "r"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/4 v2, 0x4
-
-    goto :goto_3
-
-    :cond_4
-    const-string v4, "p"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
+    .line 64
+    :cond_0
+    iget v1, p0, Lcom/coloros/anim/e/c;->m:F
 
     const/4 v2, 0x1
 
-    goto :goto_3
-
-    :cond_5
-    const-string v4, "o"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/4 v2, 0x5
-
-    goto :goto_3
-
-    :cond_6
-    const-string v4, "so"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/4 v2, 0x6
-
-    goto :goto_3
-
-    :cond_7
-    const-string v4, "sk"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/16 v2, 0x8
-
-    goto :goto_3
-
-    :cond_8
-    const-string v4, "sa"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/16 v2, 0x9
-
-    goto :goto_3
-
-    :cond_9
-    const-string v4, "rz"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/4 v2, 0x3
-
-    goto :goto_3
-
-    :cond_a
-    const-string v4, "eo"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    const/4 v2, 0x7
-
-    goto :goto_3
-
-    :cond_b
-    const-string v4, "a"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    move v2, v10
-
-    goto :goto_3
-
-    :cond_c
-    :goto_2
-    move v2, v3
-
-    :goto_3
-    packed-switch v2, :pswitch_data_0
-
-    .line 97
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->skipValue()V
-
-    goto/16 :goto_1
-
-    .line 94
-    :pswitch_0
-    invoke-static {v0, v8, v10}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;Z)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v2
-
-    move-object/from16 v17, v2
-
-    goto/16 :goto_1
-
-    .line 91
-    :pswitch_1
-    invoke-static {v0, v8, v10}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;Z)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v2
-
-    move-object/from16 v16, v2
-
-    goto/16 :goto_1
-
-    .line 88
-    :pswitch_2
-    invoke-static {v0, v8, v10}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;Z)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v2
-
-    move-object/from16 v25, v2
-
-    goto/16 :goto_1
-
-    .line 85
-    :pswitch_3
-    invoke-static {v0, v8, v10}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;Z)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v2
-
-    move-object/from16 v24, v2
-
-    goto/16 :goto_1
-
-    .line 82
-    :pswitch_4
-    invoke-static/range {p0 .. p1}, Lcom/coloros/anim/e/d;->b(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/d;
-
-    move-result-object v2
-
-    move-object/from16 v23, v2
-
-    goto/16 :goto_1
-
-    .line 74
-    :pswitch_5
-    invoke-static {v0, v8, v10}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;Z)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v18
-
-    .line 75
-    invoke-virtual/range {v18 .. v18}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_d
-
-    .line 76
-    invoke-virtual/range {v18 .. v18}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
-
-    move-result-object v7
-
-    new-instance v6, Lcom/coloros/anim/g/c;
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const/16 v19, 0x0
-
-    invoke-virtual/range {p1 .. p1}, Lcom/coloros/anim/a;->g()F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v20
-
-    move-object v1, v6
-
-    move-object/from16 v2, p1
-
-    move-object v9, v6
-
-    move/from16 v6, v19
-
-    move-object v12, v7
-
-    move-object/from16 v7, v20
-
-    invoke-direct/range {v1 .. v7}, Lcom/coloros/anim/g/c;-><init>(Lcom/coloros/anim/a;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/animation/Interpolator;FLjava/lang/Float;)V
-
-    invoke-interface {v12, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_4
-
-    .line 77
-    :cond_d
-    invoke-virtual/range {v18 .. v18}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/coloros/anim/g/c;
-
-    iget-object v1, v1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
-
-    if-nez v1, :cond_e
-
-    .line 78
-    invoke-virtual/range {v18 .. v18}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
-
-    move-result-object v9
-
-    new-instance v12, Lcom/coloros/anim/g/c;
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {p1 .. p1}, Lcom/coloros/anim/a;->g()F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v7
-
-    move-object v1, v12
-
-    move-object/from16 v2, p1
-
-    invoke-direct/range {v1 .. v7}, Lcom/coloros/anim/g/c;-><init>(Lcom/coloros/anim/a;Ljava/lang/Object;Ljava/lang/Object;Landroid/view/animation/Interpolator;FLjava/lang/Float;)V
-
-    invoke-interface {v9, v10, v12}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    :cond_e
-    :goto_4
-    move-object/from16 v1, v18
-
-    goto/16 :goto_1
-
-    :pswitch_6
-    const-string v2, "EffectiveAnimation doesn\'t support 3D layers."
-
-    .line 61
-    invoke-virtual {v8, v2}, Lcom/coloros/anim/a;->a(Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    .line 58
-    :pswitch_7
-    invoke-static/range {p0 .. p1}, Lcom/coloros/anim/e/d;->d(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/g;
-
-    move-result-object v2
-
-    move-object v15, v2
-
-    goto/16 :goto_1
-
-    .line 55
-    :pswitch_8
-    invoke-static/range {p0 .. p1}, Lcom/coloros/anim/e/a;->b(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/m;
-
-    move-result-object v2
-
-    move-object v14, v2
-
-    goto/16 :goto_1
-
-    .line 43
-    :pswitch_9
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->beginObject()V
-
-    .line 44
-    :goto_5
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_10
-
-    .line 45
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "k"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_f
-
-    .line 46
-    invoke-static/range {p0 .. p1}, Lcom/coloros/anim/e/a;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/e;
-
-    move-result-object v13
-
-    goto :goto_5
-
-    .line 48
-    :cond_f
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->skipValue()V
-
-    goto :goto_5
-
-    .line 51
-    :cond_10
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->endObject()V
-
-    goto/16 :goto_1
-
-    :cond_11
-    if-eqz v11, :cond_12
-
-    .line 101
-    invoke-virtual/range {p0 .. p0}, Landroid/util/JsonReader;->endObject()V
-
-    .line 104
-    :cond_12
-    invoke-static {v13}, Lcom/coloros/anim/e/c;->a(Lcom/coloros/anim/c/a/e;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_13
-
-    const/4 v13, 0x0
-
-    .line 107
-    :cond_13
-    invoke-static {v14}, Lcom/coloros/anim/e/c;->a(Lcom/coloros/anim/c/a/m;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_14
-
-    const/16 v20, 0x0
-
-    goto :goto_6
-
-    :cond_14
-    move-object/from16 v20, v14
-
-    .line 110
-    :goto_6
-    invoke-static {v1}, Lcom/coloros/anim/e/c;->a(Lcom/coloros/anim/c/a/b;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_15
-
-    const/16 v22, 0x0
-
-    goto :goto_7
-
-    :cond_15
-    move-object/from16 v22, v1
-
-    .line 113
-    :goto_7
-    invoke-static {v15}, Lcom/coloros/anim/e/c;->a(Lcom/coloros/anim/c/a/g;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_16
-
-    const/16 v21, 0x0
-
-    goto :goto_8
-
-    :cond_16
-    move-object/from16 v21, v15
-
-    .line 116
-    :goto_8
-    invoke-static/range {v16 .. v16}, Lcom/coloros/anim/e/c;->b(Lcom/coloros/anim/c/a/b;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_17
-
-    const/16 v26, 0x0
-
-    goto :goto_9
-
-    :cond_17
-    move-object/from16 v26, v16
-
-    .line 119
-    :goto_9
-    invoke-static/range {v17 .. v17}, Lcom/coloros/anim/e/c;->c(Lcom/coloros/anim/c/a/b;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_18
-
-    const/16 v27, 0x0
-
-    goto :goto_a
-
-    :cond_18
-    move-object/from16 v27, v17
-
-    .line 122
-    :goto_a
-    new-instance v0, Lcom/coloros/anim/c/a/l;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v19, v13
-
-    invoke-direct/range {v18 .. v27}, Lcom/coloros/anim/c/a/l;-><init>(Lcom/coloros/anim/c/a/e;Lcom/coloros/anim/c/a/m;Lcom/coloros/anim/c/a/g;Lcom/coloros/anim/c/a/b;Lcom/coloros/anim/c/a/d;Lcom/coloros/anim/c/a/b;Lcom/coloros/anim/c/a/b;Lcom/coloros/anim/c/a/b;Lcom/coloros/anim/c/a/b;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private static a(Lcom/coloros/anim/c/a/b;)Z
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    .line 136
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/b;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/coloros/anim/g/c;
-
-    iget-object p0, p0, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/Float;
-
-    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
-
-    move-result p0
-
-    const/4 v1, 0x0
-
-    cmpl-float p0, p0, v1
-
-    if-nez p0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
-.end method
-
-.method private static a(Lcom/coloros/anim/c/a/e;)Z
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    .line 126
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/e;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/e;->c()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/coloros/anim/g/c;
-
-    iget-object p0, p0, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
-
-    check-cast p0, Landroid/graphics/PointF;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v1}, Landroid/graphics/PointF;->equals(FF)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
-.end method
-
-.method private static a(Lcom/coloros/anim/c/a/g;)Z
-    .locals 2
-
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    .line 140
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/g;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/g;->c()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/coloros/anim/g/c;
-
-    iget-object p0, p0, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
-
-    check-cast p0, Lcom/coloros/anim/g/d;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-virtual {p0, v1, v1}, Lcom/coloros/anim/g/d;->b(FF)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
-.end method
-
-.method private static a(Lcom/coloros/anim/c/a/m;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/coloros/anim/c/a/m<",
-            "Landroid/graphics/PointF;",
-            "Landroid/graphics/PointF;",
-            ">;)Z"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    if-eqz p0, :cond_0
-
-    .line 130
-    instance-of v1, p0, Lcom/coloros/anim/c/a/i;
+    cmpl-float v1, v1, v2
 
     if-nez v1, :cond_1
 
+    .line 65
+    iget v1, p0, Lcom/coloros/anim/e/c;->c:F
+
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->f()F
+
+    move-result v0
+
+    sub-float/2addr v1, v0
+
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->h:Lcom/coloros/anim/a;
+
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->m()F
+
+    move-result v0
+
+    div-float/2addr v1, v0
+
+    iput v1, p0, Lcom/coloros/anim/e/c;->m:F
+
+    .line 67
+    :cond_1
+    iget v0, p0, Lcom/coloros/anim/e/c;->m:F
+
+    return v0
+.end method
+
+.method public d()F
+    .locals 3
+
+    .line 71
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->h:Lcom/coloros/anim/a;
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    .line 74
+    :cond_0
+    iget v0, p0, Lcom/coloros/anim/e/c;->n:F
+
+    const/4 v2, 0x1
+
+    cmpl-float v0, v0, v2
+
+    if-nez v0, :cond_2
+
+    .line 75
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->e:Ljava/lang/Float;
+
+    if-nez v0, :cond_1
+
+    .line 76
+    iput v1, p0, Lcom/coloros/anim/e/c;->n:F
+
+    goto :goto_0
+
+    .line 78
+    :cond_1
+    invoke-virtual {p0}, Lcom/coloros/anim/e/c;->c()F
+
+    move-result v0
+
+    .line 79
+    iget-object v1, p0, Lcom/coloros/anim/e/c;->e:Ljava/lang/Float;
+
+    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
+
+    move-result v1
+
+    iget v2, p0, Lcom/coloros/anim/e/c;->c:F
+
+    sub-float/2addr v1, v2
+
+    .line 80
+    iget-object v2, p0, Lcom/coloros/anim/e/c;->h:Lcom/coloros/anim/a;
+
+    invoke-virtual {v2}, Lcom/coloros/anim/a;->m()F
+
+    move-result v2
+
+    div-float/2addr v1, v2
+
+    add-float/2addr v0, v1
+
+    .line 81
+    iput v0, p0, Lcom/coloros/anim/e/c;->n:F
+
+    .line 84
+    :cond_2
+    :goto_0
+    iget v0, p0, Lcom/coloros/anim/e/c;->n:F
+
+    return v0
+.end method
+
+.method public e()Z
+    .locals 1
+
+    .line 88
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->b:Landroid/view/animation/Interpolator;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public f()F
+    .locals 2
+
+    .line 99
+    iget v0, p0, Lcom/coloros/anim/e/c;->i:F
+
+    const v1, -0x358c9d09
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    .line 100
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/e/c;->i:F
+
+    .line 102
+    :cond_0
+    iget v0, p0, Lcom/coloros/anim/e/c;->i:F
+
+    return v0
+.end method
+
+.method public g()F
+    .locals 2
+
+    .line 109
+    iget v0, p0, Lcom/coloros/anim/e/c;->j:F
+
+    const v1, -0x358c9d09
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    .line 110
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/e/c;->j:F
+
+    .line 112
+    :cond_0
+    iget v0, p0, Lcom/coloros/anim/e/c;->j:F
+
+    return v0
+.end method
+
+.method public h()I
+    .locals 2
+
+    .line 119
+    iget v0, p0, Lcom/coloros/anim/e/c;->k:I
+
+    const v1, 0x2ec8fb09
+
+    if-ne v0, v1, :cond_0
+
+    .line 120
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/e/c;->k:I
+
+    .line 122
+    :cond_0
+    iget v0, p0, Lcom/coloros/anim/e/c;->k:I
+
+    return v0
+.end method
+
+.method public i()I
+    .locals 2
+
+    .line 129
+    iget v0, p0, Lcom/coloros/anim/e/c;->l:I
+
+    const v1, 0x2ec8fb09
+
+    if-ne v0, v1, :cond_0
+
+    .line 130
+    iget-object v0, p0, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/e/c;->l:I
+
     .line 132
-    invoke-interface {p0}, Lcom/coloros/anim/c/a/m;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p0}, Lcom/coloros/anim/c/a/m;->c()Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/coloros/anim/g/c;
-
-    iget-object p0, p0, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
-
-    check-cast p0, Landroid/graphics/PointF;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, v1}, Landroid/graphics/PointF;->equals(FF)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
     :cond_0
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/coloros/anim/e/c;->l:I
 
-    :cond_1
     return v0
 .end method
 
-.method private static b(Lcom/coloros/anim/c/a/b;)Z
+.method public toString()Ljava/lang/String;
     .locals 2
 
-    const/4 v0, 0x0
+    .line 137
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-eqz p0, :cond_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 144
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/b;->b()Z
+    const-string v1, "Keyframe{startValue="
 
-    move-result v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v1, ", endValue="
 
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    iget-object v1, p0, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
 
-    check-cast p0, Lcom/coloros/anim/g/c;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    const-string v1, ", startFrame="
 
-    check-cast p0, Ljava/lang/Float;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
+    iget v1, p0, Lcom/coloros/anim/e/c;->c:F
 
-    move-result p0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, ", endFrame="
 
-    cmpl-float p0, p0, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez p0, :cond_1
+    iget-object v1, p0, Lcom/coloros/anim/e/c;->e:Ljava/lang/Float;
 
-    :cond_0
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    return v0
-.end method
+    const-string v1, ", interpolator="
 
-.method private static c(Lcom/coloros/anim/c/a/b;)Z
-    .locals 2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lcom/coloros/anim/e/c;->b:Landroid/view/animation/Interpolator;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 148
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/b;->b()Z
+    const/16 v1, 0x7d
 
-    move-result v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/coloros/anim/c/a/b;->c()Ljava/util/List;
+    move-result-object v0
 
-    move-result-object p0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lcom/coloros/anim/g/c;
-
-    iget-object p0, p0, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/Float;
-
-    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
-
-    move-result p0
-
-    const/4 v1, 0x0
-
-    cmpl-float p0, p0, v1
-
-    if-nez p0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :cond_1
-    return v0
+    return-object v0
 .end method

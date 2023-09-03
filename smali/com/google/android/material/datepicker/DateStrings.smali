@@ -13,7 +13,7 @@
     return-void
 .end method
 
-.method static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Landroidx/core/f/d;
+.method static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;)Landroidx/core/util/e;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -21,7 +21,7 @@
             "Ljava/lang/Long;",
             "Ljava/lang/Long;",
             ")",
-            "Landroidx/core/f/d<",
+            "Landroidx/core/util/e<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -31,14 +31,14 @@
     const/4 v0, 0x0
 
     .line 127
-    invoke-static {p0, p1, v0}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Landroidx/core/f/d;
+    invoke-static {p0, p1, v0}, Lcom/google/android/material/datepicker/DateStrings;->getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Landroidx/core/util/e;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Landroidx/core/f/d;
+.method static getDateRangeString(Ljava/lang/Long;Ljava/lang/Long;Ljava/text/SimpleDateFormat;)Landroidx/core/util/e;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -47,7 +47,7 @@
             "Ljava/lang/Long;",
             "Ljava/text/SimpleDateFormat;",
             ")",
-            "Landroidx/core/f/d<",
+            "Landroidx/core/util/e<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;"
@@ -61,7 +61,7 @@
     if-nez p1, :cond_0
 
     .line 149
-    invoke-static {v0, v0}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {v0, v0}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 
@@ -79,7 +79,7 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {v0, p0}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 
@@ -97,7 +97,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v0}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {p0, v0}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 
@@ -163,7 +163,7 @@
     move-result-object p0
 
     .line 165
-    invoke-static {p1, p0}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {p1, p0}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 
@@ -220,7 +220,7 @@
     move-result-object p1
 
     .line 169
-    invoke-static {p0, p1}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {p0, p1}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 
@@ -253,7 +253,7 @@
     move-result-object p1
 
     .line 172
-    invoke-static {p0, p1}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {p0, p1}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 
@@ -286,7 +286,7 @@
     move-result-object p1
 
     .line 176
-    invoke-static {p0, p1}, Landroidx/core/f/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/f/d;
+    invoke-static {p0, p1}, Landroidx/core/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Landroidx/core/util/e;
 
     move-result-object p0
 

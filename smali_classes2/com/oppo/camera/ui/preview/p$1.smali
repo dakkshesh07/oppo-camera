@@ -1,14 +1,14 @@
 .class Lcom/oppo/camera/ui/preview/p$1;
 .super Ljava/lang/Object;
-.source "VideoRecordingTimeUI.java"
+.source "NormalAISceneUI.java"
 
 # interfaces
-.implements Lcom/oppo/camera/ui/preview/CameraTimeView$a;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/p;->h()V
+    value = Lcom/oppo/camera/ui/preview/p;->k()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/p;)V
     .locals 0
 
-    .line 84
+    .line 100
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,40 +35,53 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 88
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/p;->a(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    .line 89
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/p;->a(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
 
-    move-result-object v0
+    .line 103
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
+    invoke-static {p1}, Lcom/oppo/camera/ui/preview/p;->a(Lcom/oppo/camera/ui/preview/p;)Landroid/widget/RelativeLayout;
 
-    invoke-static {v1}, Lcom/oppo/camera/ui/preview/p;->b(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+    move-result-object p1
 
-    move-result-object v1
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getBlinkRecordIconWidth()I
+    .line 104
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
 
-    move-result v1
+    invoke-static {p1}, Lcom/oppo/camera/ui/preview/p;->a(Lcom/oppo/camera/ui/preview/p;)Landroid/widget/RelativeLayout;
 
-    sub-int/2addr p1, v1
+    move-result-object p1
 
-    div-int/lit8 p1, p1, 0x2
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->setAlpha(F)V
+
+    .line 105
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p$1;->a:Lcom/oppo/camera/ui/preview/p;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/p;->a(Lcom/oppo/camera/ui/preview/p;I)V
 
     :cond_0
     return-void

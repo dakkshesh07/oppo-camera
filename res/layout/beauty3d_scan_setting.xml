@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/beauty3d_setting" android:background="@color/background_color" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/beauty3d_scan_setting_height"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/camera_text_size_big" android:textColor="@color/camera_white" android:id="@id/beauty3d_scan_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/beauty3d_padding" android:layout_marginTop="@dimen/beauty3d_scan_setting_tv_margin_top" android:text="@string/beauty3d_face_scan" android:layout_centerHorizontal="true" />
-</RelativeLayout>

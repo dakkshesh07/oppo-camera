@@ -45,7 +45,7 @@
 
     const v1, 0x1010091
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -83,7 +83,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->DialogPreference_android_dialogTitle:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -107,7 +107,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->DialogPreference_android_dialogMessage:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -118,7 +118,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->DialogPreference_android_dialogIcon:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -129,7 +129,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->DialogPreference_android_positiveButtonText:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -140,7 +140,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->DialogPreference_android_negativeButtonText:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -153,7 +153,7 @@
 
     const/4 p4, 0x0
 
-    invoke-static {p1, p2, p3, p4}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;III)I
+    invoke-static {p1, p2, p3, p4}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;III)I
 
     move-result p2
 

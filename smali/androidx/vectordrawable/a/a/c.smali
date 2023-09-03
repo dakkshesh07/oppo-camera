@@ -269,11 +269,11 @@
     .line 689
     iget-object v0, p0, Landroidx/vectordrawable/a/a/c;->d:Landroidx/vectordrawable/a/a/c$a;
 
-    new-instance v1, Landroidx/b/a;
+    new-instance v1, Landroidx/collection/ArrayMap;
 
-    invoke-direct {v1}, Landroidx/b/a;-><init>()V
+    invoke-direct {v1}, Landroidx/collection/ArrayMap;-><init>()V
 
-    iput-object v1, v0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/b/a;
+    iput-object v1, v0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/collection/ArrayMap;
 
     .line 691
     :cond_1
@@ -286,9 +286,9 @@
     .line 692
     iget-object v0, p0, Landroidx/vectordrawable/a/a/c;->d:Landroidx/vectordrawable/a/a/c$a;
 
-    iget-object v0, v0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/b/a;
+    iget-object v0, v0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p2, p1}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2, p1}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -758,7 +758,7 @@
     sget-object v0, Landroidx/vectordrawable/a/a/a;->e:[I
 
     .line 463
-    invoke-static {p1, p4, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p4, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

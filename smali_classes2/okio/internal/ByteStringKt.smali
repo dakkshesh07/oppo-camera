@@ -3,6 +3,11 @@
 .source "ByteString.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # static fields
 .field private static final HEX_DIGIT_CHARS:[C
 
@@ -72,7 +77,7 @@
 
     move/from16 v1, p1
 
-    .line 327
+    .line 328
     array-length v2, v0
 
     const/4 v4, 0x0
@@ -84,7 +89,7 @@
     :goto_0
     if-ge v4, v2, :cond_59
 
-    .line 358
+    .line 359
     aget-byte v7, v0, v4
 
     const/16 v8, 0x7f
@@ -170,14 +175,14 @@
 
     if-ge v4, v2, :cond_12
 
-    .line 367
+    .line 368
     aget-byte v7, v0, v4
 
     if-ltz v7, :cond_12
 
     add-int/lit8 v7, v4, 0x1
 
-    .line 368
+    .line 369
     aget-byte v4, v0, v4
 
     add-int/lit8 v18, v5, 0x1
@@ -267,11 +272,11 @@
     :cond_14
     return v16
 
-    .line 379
+    .line 380
     :cond_15
     aget-byte v7, v0, v4
 
-    .line 380
+    .line 381
     aget-byte v3, v0, v3
 
     and-int/lit16 v15, v3, 0xc0
@@ -389,13 +394,13 @@
     :cond_25
     return v16
 
-    .line 419
+    .line 420
     :cond_26
     aget-byte v7, v0, v4
 
     add-int/lit8 v15, v4, 0x1
 
-    .line 420
+    .line 421
     aget-byte v15, v0, v15
 
     and-int/lit16 v12, v15, 0xc0
@@ -419,7 +424,7 @@
     :cond_28
     return v16
 
-    .line 428
+    .line 429
     :cond_29
     aget-byte v3, v0, v3
 
@@ -565,13 +570,13 @@
     :cond_3c
     return v16
 
-    .line 475
+    .line 476
     :cond_3d
     aget-byte v7, v0, v4
 
     add-int/lit8 v12, v4, 0x1
 
-    .line 476
+    .line 477
     aget-byte v12, v0, v12
 
     and-int/lit16 v15, v12, 0xc0
@@ -598,7 +603,7 @@
     :cond_40
     add-int/lit8 v15, v4, 0x2
 
-    .line 484
+    .line 485
     aget-byte v15, v0, v15
 
     and-int/lit16 v9, v15, 0xc0
@@ -622,7 +627,7 @@
     :cond_42
     return v16
 
-    .line 492
+    .line 493
     :cond_43
     aget-byte v3, v0, v3
 
@@ -787,7 +792,7 @@
 
     const-string v0, "$this$commonBase64"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 49
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -810,7 +815,7 @@
 
     const-string v0, "$this$commonBase64Url"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 52
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -833,23 +838,23 @@
 
     const-string v0, "$this$commonCompareTo"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 233
+    .line 234
     invoke-virtual {p0}, Lokio/ByteString;->size()I
 
     move-result v0
 
-    .line 234
+    .line 235
     invoke-virtual {p1}, Lokio/ByteString;->size()I
 
     move-result v1
 
-    .line 236
+    .line 237
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v2
@@ -865,14 +870,14 @@
 
     if-ge v4, v2, :cond_2
 
-    .line 238
+    .line 239
     invoke-virtual {p0, v4}, Lokio/ByteString;->getByte(I)B
 
     move-result v7
 
     and-int/lit16 v7, v7, 0xff
 
-    .line 239
+    .line 240
     invoke-virtual {p1, v4}, Lokio/ByteString;->getByte(I)B
 
     move-result v8
@@ -918,16 +923,16 @@
 
     const-string v0, "$this$commonDecodeBase64"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 268
+    .line 269
     invoke-static {p0}, Lokio/-Base64;->decodeBase64ToArray(Ljava/lang/String;)[B
 
     move-result-object p0
 
     if-eqz p0, :cond_0
 
-    .line 269
+    .line 270
     new-instance v0, Lokio/ByteString;
 
     invoke-direct {v0, p0}, Lokio/ByteString;-><init>([B)V
@@ -946,9 +951,9 @@
 
     const-string v0, "$this$commonDecodeHex"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 274
+    .line 275
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -971,7 +976,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 276
+    .line 277
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -980,7 +985,7 @@
 
     new-array v0, v0, [B
 
-    .line 277
+    .line 278
     array-length v3, v0
 
     :goto_1
@@ -988,7 +993,7 @@
 
     mul-int/lit8 v4, v1, 0x2
 
-    .line 278
+    .line 279
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -1001,7 +1006,7 @@
 
     add-int/2addr v4, v2
 
-    .line 279
+    .line 280
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v4
@@ -1014,14 +1019,14 @@
 
     int-to-byte v4, v5
 
-    .line 280
+    .line 281
     aput-byte v4, v0, v1
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 282
+    .line 283
     :cond_1
     new-instance p0, Lokio/ByteString;
 
@@ -1029,7 +1034,7 @@
 
     return-object p0
 
-    .line 274
+    .line 275
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1063,9 +1068,9 @@
 
     const-string v0, "$this$commonEncodeUtf8"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 261
+    .line 262
     new-instance v0, Lokio/ByteString;
 
     invoke-static {p0}, Lokio/-Platform;->asUtf8ToByteArray(Ljava/lang/String;)[B
@@ -1074,7 +1079,7 @@
 
     invoke-direct {v0, v1}, Lokio/ByteString;-><init>([B)V
 
-    .line 262
+    .line 263
     invoke-virtual {v0, p0}, Lokio/ByteString;->setUtf8$okio(Ljava/lang/String;)V
 
     return-object v0
@@ -1085,11 +1090,11 @@
 
     const-string v0, "$this$commonEndsWith"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "suffix"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 180
     invoke-virtual {p0}, Lokio/ByteString;->size()I
@@ -1120,11 +1125,11 @@
 
     const-string v0, "$this$commonEndsWith"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "suffix"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 184
     invoke-virtual {p0}, Lokio/ByteString;->size()I
@@ -1151,7 +1156,7 @@
 
     const-string v0, "$this$commonEquals"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1211,7 +1216,7 @@
 
     const-string v0, "$this$commonGetByte"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 139
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1228,7 +1233,7 @@
 
     const-string v0, "$this$commonGetSize"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 142
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1245,7 +1250,7 @@
 
     const-string v0, "$this$commonHashCode"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 225
     invoke-virtual {p0}, Lokio/ByteString;->getHashCode$okio()I
@@ -1266,14 +1271,10 @@
 
     move-result v0
 
+    .line 228
     invoke-virtual {p0, v0}, Lokio/ByteString;->setHashCode$okio(I)V
 
-    .line 228
-    invoke-virtual {p0}, Lokio/ByteString;->getHashCode$okio()I
-
-    move-result p0
-
-    return p0
+    return v0
 .end method
 
 .method public static final commonHex(Lokio/ByteString;)Ljava/lang/String;
@@ -1281,7 +1282,7 @@
 
     const-string v0, "$this$commonHex"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 59
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1334,7 +1335,7 @@
 
     and-int/lit8 v4, v4, 0xf
 
-    .line 343
+    .line 344
     aget-char v4, v6, v4
 
     aput-char v4, v0, v5
@@ -1357,11 +1358,11 @@
 
     const-string v0, "$this$commonIndexOf"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 188
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1417,7 +1418,7 @@
 
     const-string v0, "$this$commonInternalArray"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 148
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1432,11 +1433,11 @@
 
     const-string v0, "$this$commonLastIndexOf"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 201
     invoke-virtual {p1}, Lokio/ByteString;->internalArray$okio()[B
@@ -1455,11 +1456,11 @@
 
     const-string v0, "$this$commonLastIndexOf"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 205
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1513,9 +1514,9 @@
 
     const-string v0, "data"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 251
+    .line 252
     array-length v0, p0
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -1524,7 +1525,7 @@
 
     const-string v0, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lokio/ByteString;
 
@@ -1538,11 +1539,11 @@
 
     const-string v0, "$this$commonRangeEquals"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 156
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -1561,11 +1562,11 @@
 
     const-string v0, "$this$commonRangeEquals"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-ltz p1, :cond_0
 
@@ -1616,11 +1617,11 @@
 
     const-string v0, "$this$commonStartsWith"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "prefix"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 172
     invoke-virtual {p1}, Lokio/ByteString;->size()I
@@ -1641,11 +1642,11 @@
 
     const-string v0, "$this$commonStartsWith"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "prefix"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 176
     array-length v0, p1
@@ -1664,7 +1665,7 @@
 
     const-string v0, "$this$commonSubstring"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1732,7 +1733,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, p1, p2}, Lc/a/e;->a([BII)[B
+    invoke-static {p0, p1, p2}, Lkotlin/collections/g;->a([BII)[B
 
     move-result-object p0
 
@@ -1818,7 +1819,7 @@
 
     const-string v0, "$this$commonToAsciiLowercase"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1867,7 +1868,7 @@
 
     const-string v4, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {p0, v4}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v4}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     add-int/lit8 v4, v0, 0x1
 
@@ -1930,7 +1931,7 @@
 
     const-string v0, "$this$commonToAsciiUppercase"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1979,7 +1980,7 @@
 
     const-string v4, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {p0, v4}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v4}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     add-int/lit8 v4, v0, 0x1
 
@@ -2042,7 +2043,7 @@
 
     const-string v0, "$this$commonToByteArray"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 145
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
@@ -2057,7 +2058,7 @@
 
     const-string v0, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -2067,9 +2068,9 @@
 
     const-string v0, "$this$commonToByteString"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 255
+    .line 256
     array-length v0, p0
 
     int-to-long v1, v0
@@ -2082,8 +2083,8 @@
 
     add-int/2addr p2, p1
 
-    .line 256
-    invoke-static {p0, p1, p2}, Lc/a/e;->a([BII)[B
+    .line 257
+    invoke-static {p0, p1, p2}, Lkotlin/collections/g;->a([BII)[B
 
     move-result-object p0
 
@@ -2101,9 +2102,9 @@
 
     move-object/from16 v1, p0
 
-    invoke-static {v1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 301
+    .line 302
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->getData$okio()[B
 
     move-result-object v0
@@ -2130,7 +2131,7 @@
 
     return-object v0
 
-    .line 303
+    .line 304
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->getData$okio()[B
 
@@ -2152,7 +2153,7 @@
 
     if-ne v0, v5, :cond_6
 
-    .line 305
+    .line 306
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->getData$okio()[B
 
     move-result-object v0
@@ -2161,7 +2162,7 @@
 
     if-gt v0, v4, :cond_2
 
-    .line 306
+    .line 307
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2184,7 +2185,7 @@
 
     goto :goto_3
 
-    .line 308
+    .line 309
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2204,7 +2205,7 @@
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 347
+    .line 348
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->getData$okio()[B
 
     move-result-object v5
@@ -2221,7 +2222,7 @@
     :goto_1
     if-eqz v2, :cond_5
 
-    .line 352
+    .line 353
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->getData$okio()[B
 
     move-result-object v2
@@ -2232,13 +2233,13 @@
 
     goto :goto_2
 
-    .line 355
+    .line 356
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->getData$okio()[B
 
     move-result-object v1
 
-    invoke-static {v1, v3, v4}, Lc/a/e;->a([BII)[B
+    invoke-static {v1, v3, v4}, Lkotlin/collections/g;->a([BII)[B
 
     move-result-object v1
 
@@ -2248,7 +2249,7 @@
 
     move-object v1, v2
 
-    .line 308
+    .line 309
     :goto_2
     invoke-virtual {v1}, Lokio/ByteString;->hex()Ljava/lang/String;
 
@@ -2265,7 +2266,7 @@
     :goto_3
     return-object v0
 
-    .line 347
+    .line 348
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2303,7 +2304,7 @@
 
     throw v1
 
-    .line 312
+    .line 313
     :cond_6
     invoke-virtual/range {p0 .. p0}, Lokio/ByteString;->utf8()Ljava/lang/String;
 
@@ -2311,14 +2312,14 @@
 
     if-eqz v2, :cond_8
 
-    .line 313
+    .line 314
     invoke-virtual {v2, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v9
 
     const-string v3, "(this as java.lang.Strin\u2026ing(startIndex, endIndex)"
 
-    invoke-static {v9, v3}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v3}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v12, 0x0
 
@@ -2330,8 +2331,8 @@
 
     const-string v11, "\\\\"
 
-    .line 314
-    invoke-static/range {v9 .. v14}, Lc/h/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    .line 315
+    invoke-static/range {v9 .. v14}, Lkotlin/text/n;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v15
 
@@ -2345,8 +2346,8 @@
 
     const-string v17, "\\n"
 
-    .line 315
-    invoke-static/range {v15 .. v20}, Lc/h/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    .line 316
+    invoke-static/range {v15 .. v20}, Lkotlin/text/n;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v9
 
@@ -2354,19 +2355,19 @@
 
     const-string v11, "\\r"
 
-    .line 316
-    invoke-static/range {v9 .. v14}, Lc/h/f;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    .line 317
+    invoke-static/range {v9 .. v14}, Lkotlin/text/n;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 317
+    .line 318
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-ge v0, v2, :cond_7
 
-    .line 318
+    .line 319
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2395,7 +2396,7 @@
 
     goto :goto_4
 
-    .line 320
+    .line 321
     :cond_7
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2416,13 +2417,13 @@
     :goto_4
     return-object v0
 
-    .line 313
+    .line 314
     :cond_8
-    new-instance v0, Lc/e;
+    new-instance v0, Lkotlin/TypeCastException;
 
     const-string v1, "null cannot be cast to non-null type java.lang.String"
 
-    invoke-direct {v0, v1}, Lc/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -2432,7 +2433,7 @@
 
     const-string v0, "$this$commonUtf8"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 39
     invoke-virtual {p0}, Lokio/ByteString;->getUtf8$okio()Ljava/lang/String;
@@ -2457,31 +2458,23 @@
     return-object v0
 .end method
 
-.method public static final commonWrite(Lokio/ByteString;Lokio/Buffer;)V
-    .locals 2
+.method public static final commonWrite(Lokio/ByteString;Lokio/Buffer;II)V
+    .locals 1
 
     const-string v0, "$this$commonWrite"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "buffer"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 287
-    invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
-
-    move-result-object v0
-
+    .line 288
     invoke-virtual {p0}, Lokio/ByteString;->getData$okio()[B
 
     move-result-object p0
 
-    array-length p0, p0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lokio/Buffer;->write([BII)Lokio/Buffer;
+    invoke-virtual {p1, p0, p2, p3}, Lokio/Buffer;->write([BII)Lokio/Buffer;
 
     return-void
 .end method
@@ -2539,7 +2532,7 @@
     :goto_3
     return p0
 
-    .line 295
+    .line 296
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

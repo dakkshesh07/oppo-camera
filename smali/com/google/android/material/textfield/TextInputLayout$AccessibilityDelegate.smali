@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;
-.super Landroidx/core/g/a;
+.super Landroidx/core/f/a;
 .source "TextInputLayout.java"
 
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 3924
-    invoke-direct {p0}, Landroidx/core/g/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/f/a;-><init>()V
 
     .line 3925
     iput-object p1, p0, Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;->layout:Lcom/google/android/material/textfield/TextInputLayout;
@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
     .locals 16
 
     move-object/from16 v0, p0
@@ -41,7 +41,7 @@
     move-object/from16 v1, p2
 
     .line 3931
-    invoke-super/range {p0 .. p2}, Landroidx/core/g/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+    invoke-super/range {p0 .. p2}, Landroidx/core/f/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
 
     .line 3932
     iget-object v2, v0, Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;->layout:Lcom/google/android/material/textfield/TextInputLayout;
@@ -229,7 +229,7 @@
     if-eqz v8, :cond_8
 
     .line 3950
-    invoke-virtual {v1, v2}, Landroidx/core/g/a/d;->c(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroidx/core/f/a/d;->c(Ljava/lang/CharSequence;)V
 
     goto :goto_6
 
@@ -242,7 +242,7 @@
     if-nez v4, :cond_9
 
     .line 3952
-    invoke-virtual {v1, v3}, Landroidx/core/g/a/d;->c(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3}, Landroidx/core/f/a/d;->c(Ljava/lang/CharSequence;)V
 
     .line 3955
     :cond_9
@@ -261,7 +261,7 @@
     if-lt v4, v10, :cond_a
 
     .line 3957
-    invoke-virtual {v1, v3}, Landroidx/core/g/a/d;->f(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3}, Landroidx/core/f/a/d;->f(Ljava/lang/CharSequence;)V
 
     goto :goto_7
 
@@ -285,7 +285,7 @@
 
     .line 3962
     :cond_b
-    invoke-virtual {v1, v3}, Landroidx/core/g/a/d;->c(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v3}, Landroidx/core/f/a/d;->c(Ljava/lang/CharSequence;)V
 
     :goto_7
     if-nez v8, :cond_c
@@ -294,7 +294,7 @@
 
     .line 3964
     :cond_c
-    invoke-virtual {v1, v13}, Landroidx/core/g/a/d;->m(Z)V
+    invoke-virtual {v1, v13}, Landroidx/core/f/a/d;->m(Z)V
 
     :cond_d
     if-eqz v2, :cond_e
@@ -313,7 +313,7 @@
 
     .line 3968
     :goto_8
-    invoke-virtual {v1, v6}, Landroidx/core/g/a/d;->b(I)V
+    invoke-virtual {v1, v6}, Landroidx/core/f/a/d;->b(I)V
 
     if-eqz v14, :cond_10
 
@@ -326,7 +326,7 @@
 
     .line 3972
     :goto_9
-    invoke-virtual {v1, v5}, Landroidx/core/g/a/d;->g(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v5}, Landroidx/core/f/a/d;->g(Ljava/lang/CharSequence;)V
 
     :cond_10
     return-void

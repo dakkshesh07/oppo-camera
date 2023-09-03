@@ -21,10 +21,19 @@
 .method public abstract getEnd()I
 .end method
 
+.method public abstract getOptions()Lcom/google/protobuf/DescriptorProtos$ExtensionRangeOptions;
+.end method
+
+.method public abstract getOptionsOrBuilder()Lcom/google/protobuf/DescriptorProtos$ExtensionRangeOptionsOrBuilder;
+.end method
+
 .method public abstract getStart()I
 .end method
 
 .method public abstract hasEnd()Z
+.end method
+
+.method public abstract hasOptions()Z
 .end method
 
 .method public abstract hasStart()Z

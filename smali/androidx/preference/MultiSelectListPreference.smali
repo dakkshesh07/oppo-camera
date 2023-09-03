@@ -28,6 +28,17 @@
 
 
 # direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 77
+    invoke-direct {p0, p1, v0}, Landroidx/preference/MultiSelectListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
@@ -36,7 +47,7 @@
 
     const v1, 0x1010091
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -81,7 +92,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->MultiSelectListPreference_android_entries:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -92,7 +103,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->MultiSelectListPreference_android_entryValues:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -231,6 +242,15 @@
 
     .line 148
     invoke-virtual {p0}, Landroidx/preference/MultiSelectListPreference;->i()V
+
+    return-void
+.end method
+
+.method public a([Ljava/lang/CharSequence;)V
+    .locals 0
+
+    .line 90
+    iput-object p1, p0, Landroidx/preference/MultiSelectListPreference;->a:[Ljava/lang/CharSequence;
 
     return-void
 .end method

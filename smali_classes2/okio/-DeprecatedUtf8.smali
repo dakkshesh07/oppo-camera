@@ -3,6 +3,11 @@
 .source "-DeprecatedUtf8.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # static fields
 .field public static final INSTANCE:Lokio/-DeprecatedUtf8;
 
@@ -37,7 +42,7 @@
 
     const-string v0, "string"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -58,7 +63,7 @@
 
     const-string v0, "string"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 35
     invoke-static {p1, p2, p3}, Lokio/Utf8;->size(Ljava/lang/String;II)J

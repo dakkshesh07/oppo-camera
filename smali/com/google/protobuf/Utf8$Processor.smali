@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 373
+    .line 380
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,7 +27,7 @@
 .method private static partialIsValidUtf8(Ljava/nio/ByteBuffer;II)I
     .locals 6
 
-    .line 543
+    .line 541
     invoke-static {p0, p1, p2}, Lcom/google/protobuf/Utf8;->access$200(Ljava/nio/ByteBuffer;II)I
 
     move-result v0
@@ -44,7 +44,7 @@
     :cond_0
     add-int/lit8 v0, p1, 0x1
 
-    .line 554
+    .line 552
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p1
@@ -68,7 +68,7 @@
 
     if-lt p1, v1, :cond_3
 
-    .line 566
+    .line 564
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p1
@@ -97,7 +97,7 @@
 
     sub-int/2addr p2, v0
 
-    .line 574
+    .line 572
     invoke-static {p0, p1, v0, p2}, Lcom/google/protobuf/Utf8;->access$300(Ljava/nio/ByteBuffer;III)I
 
     move-result p0
@@ -107,7 +107,7 @@
     :cond_5
     add-int/lit8 v4, v0, 0x1
 
-    .line 577
+    .line 575
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -127,7 +127,7 @@
 
     if-ge v0, v5, :cond_9
 
-    .line 584
+    .line 582
     :cond_7
     invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->get(I)B
 
@@ -155,7 +155,7 @@
 
     sub-int/2addr p2, v0
 
-    .line 592
+    .line 590
     invoke-static {p0, p1, v0, p2}, Lcom/google/protobuf/Utf8;->access$300(Ljava/nio/ByteBuffer;III)I
 
     move-result p0
@@ -165,7 +165,7 @@
     :cond_b
     add-int/lit8 v1, v0, 0x1
 
-    .line 596
+    .line 594
     invoke-virtual {p0, v0}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -184,7 +184,7 @@
 
     add-int/lit8 p1, v1, 0x1
 
-    .line 604
+    .line 602
     invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v0
@@ -193,7 +193,7 @@
 
     add-int/lit8 v0, p1, 0x1
 
-    .line 606
+    .line 604
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p1
@@ -212,25 +212,414 @@
 
 
 # virtual methods
+.method final decodeUtf8(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 626
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 627
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->arrayOffset()I
+
+    move-result v0
+
+    .line 628
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
+
+    move-result-object p1
+
+    add-int/2addr v0, p2
+
+    invoke-virtual {p0, p1, v0, p3}, Lcom/google/protobuf/Utf8$Processor;->decodeUtf8([BII)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 629
+    :cond_0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->isDirect()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 630
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/Utf8$Processor;->decodeUtf8Direct(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 632
+    :cond_1
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/Utf8$Processor;->decodeUtf8Default(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method abstract decodeUtf8([BII)Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+.end method
+
+.method final decodeUtf8Default(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
+    .locals 11
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    or-int v0, p2, p3
+
+    .line 646
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
+
+    move-result v1
+
+    sub-int/2addr v1, p2
+
+    sub-int/2addr v1, p3
+
+    or-int/2addr v0, v1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ltz v0, :cond_b
+
+    add-int v0, p2, p3
+
+    .line 656
+    new-array p3, p3, [C
+
+    move v3, v1
+
+    :goto_0
+    if-ge p2, v0, :cond_1
+
+    .line 662
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    .line 663
+    invoke-static {v4}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$400(B)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 p2, p2, 0x1
+
+    add-int/lit8 v5, v3, 0x1
+
+    .line 667
+    invoke-static {v4, p3, v3}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$500(B[CI)V
+
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    move v8, v3
+
+    :goto_2
+    if-ge p2, v0, :cond_a
+
+    add-int/lit8 v3, p2, 0x1
+
+    .line 671
+    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result p2
+
+    .line 672
+    invoke-static {p2}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$400(B)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    add-int/lit8 v4, v8, 0x1
+
+    .line 673
+    invoke-static {p2, p3, v8}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$500(B[CI)V
+
+    :goto_3
+    if-ge v3, v0, :cond_3
+
+    .line 677
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result p2
+
+    .line 678
+    invoke-static {p2}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$400(B)Z
+
+    move-result v5
+
+    if-nez v5, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    add-int/lit8 v3, v3, 0x1
+
+    add-int/lit8 v5, v4, 0x1
+
+    .line 682
+    invoke-static {p2, p3, v4}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$500(B[CI)V
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_3
+    :goto_4
+    move p2, v3
+
+    move v8, v4
+
+    goto :goto_2
+
+    .line 684
+    :cond_4
+    invoke-static {p2}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$600(B)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    if-ge v3, v0, :cond_5
+
+    add-int/lit8 v4, v3, 0x1
+
+    .line 689
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    add-int/lit8 v5, v8, 0x1
+
+    .line 688
+    invoke-static {p2, v3, p3, v8}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$700(BB[CI)V
+
+    move p2, v4
+
+    move v8, v5
+
+    goto :goto_2
+
+    .line 686
+    :cond_5
+    invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidUtf8()Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+
+    .line 690
+    :cond_6
+    invoke-static {p2}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$800(B)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_8
+
+    add-int/lit8 v4, v0, -0x1
+
+    if-ge v3, v4, :cond_7
+
+    add-int/lit8 v4, v3, 0x1
+
+    .line 696
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v3
+
+    add-int/lit8 v5, v4, 0x1
+
+    .line 697
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v4
+
+    add-int/lit8 v6, v8, 0x1
+
+    .line 694
+    invoke-static {p2, v3, v4, p3, v8}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$900(BBB[CI)V
+
+    move p2, v5
+
+    move v8, v6
+
+    goto :goto_2
+
+    .line 692
+    :cond_7
+    invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidUtf8()Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+
+    :cond_8
+    add-int/lit8 v4, v0, -0x2
+
+    if-ge v3, v4, :cond_9
+
+    add-int/lit8 v4, v3, 0x1
+
+    .line 706
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v5
+
+    add-int/lit8 v3, v4, 0x1
+
+    .line 707
+    invoke-virtual {p1, v4}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v6
+
+    add-int/lit8 v9, v3, 0x1
+
+    .line 708
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->get(I)B
+
+    move-result v7
+
+    add-int/lit8 v10, v8, 0x1
+
+    move v3, p2
+
+    move v4, v5
+
+    move v5, v6
+
+    move v6, v7
+
+    move-object v7, p3
+
+    .line 704
+    invoke-static/range {v3 .. v8}, Lcom/google/protobuf/Utf8$DecodeUtil;->access$1000(BBBB[CI)V
+
+    add-int/2addr v10, v2
+
+    move p2, v9
+
+    move v8, v10
+
+    goto/16 :goto_2
+
+    .line 702
+    :cond_9
+    invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidUtf8()Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+
+    .line 716
+    :cond_a
+    new-instance p1, Ljava/lang/String;
+
+    invoke-direct {p1, p3, v1, v8}, Ljava/lang/String;-><init>([CII)V
+
+    return-object p1
+
+    .line 647
+    :cond_b
+    new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    .line 648
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v3, v2
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    const/4 p2, 0x2
+
+    aput-object p1, v3, p2
+
+    const-string p1, "buffer limit=%d, index=%d, limit=%d"
+
+    invoke-static {p1, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method abstract decodeUtf8Direct(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+.end method
+
 .method abstract encodeUtf8(Ljava/lang/CharSequence;[BII)I
 .end method
 
 .method final encodeUtf8(Ljava/lang/CharSequence;Ljava/nio/ByteBuffer;)V
     .locals 4
 
-    .line 663
+    .line 769
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 664
+    .line 770
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
     move-result v0
 
-    .line 666
+    .line 771
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -251,12 +640,12 @@
 
     sub-int/2addr p1, v0
 
-    .line 667
+    .line 772
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     goto :goto_0
 
-    .line 668
+    .line 773
     :cond_0
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->isDirect()Z
 
@@ -264,12 +653,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 669
+    .line 774
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Utf8$Processor;->encodeUtf8Direct(Ljava/lang/CharSequence;Ljava/nio/ByteBuffer;)V
 
     goto :goto_0
 
-    .line 671
+    .line 776
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Utf8$Processor;->encodeUtf8Default(Ljava/lang/CharSequence;Ljava/nio/ByteBuffer;)V
 
@@ -280,12 +669,12 @@
 .method final encodeUtf8Default(Ljava/lang/CharSequence;Ljava/nio/ByteBuffer;)V
     .locals 7
 
-    .line 685
+    .line 788
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
-    .line 686
+    .line 789
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
@@ -297,7 +686,7 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 695
+    .line 798
     :try_start_0
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -309,7 +698,7 @@
 
     int-to-byte v4, v4
 
-    .line 696
+    .line 799
     invoke-virtual {p2, v3, v4}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     add-int/lit8 v2, v2, 0x1
@@ -321,7 +710,7 @@
 
     add-int v0, v1, v2
 
-    .line 700
+    .line 803
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     return-void
@@ -332,7 +721,7 @@
     :goto_1
     if-ge v2, v0, :cond_8
 
-    .line 706
+    .line 809
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v4
@@ -341,7 +730,7 @@
 
     int-to-byte v4, v4
 
-    .line 709
+    .line 812
     invoke-virtual {p2, v1, v4}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_3
@@ -361,7 +750,7 @@
 
     int-to-byte v6, v6
 
-    .line 714
+    .line 817
     :try_start_1
     invoke-virtual {p2, v1, v6}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
@@ -371,7 +760,7 @@
 
     int-to-byte v1, v1
 
-    .line 715
+    .line 818
     invoke-virtual {p2, v5, v1}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
     :try_end_1
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_0
@@ -401,7 +790,7 @@
 
     if-eq v5, v0, :cond_6
 
-    .line 730
+    .line 833
     :try_start_2
     invoke-interface {p1, v5}, Ljava/lang/CharSequence;->charAt(I)C
 
@@ -413,7 +802,7 @@
 
     if-eqz v6, :cond_5
 
-    .line 734
+    .line 837
     invoke-static {v4, v2}, Ljava/lang/Character;->toCodePoint(CC)I
 
     move-result v2
@@ -428,7 +817,7 @@
 
     int-to-byte v6, v6
 
-    .line 735
+    .line 838
     :try_start_3
     invoke-virtual {p2, v1, v6}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
     :try_end_3
@@ -444,7 +833,7 @@
 
     int-to-byte v6, v6
 
-    .line 736
+    .line 839
     :try_start_4
     invoke-virtual {p2, v4, v6}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
     :try_end_4
@@ -460,7 +849,7 @@
 
     int-to-byte v6, v6
 
-    .line 737
+    .line 840
     :try_start_5
     invoke-virtual {p2, v1, v6}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
@@ -470,7 +859,7 @@
 
     int-to-byte v1, v1
 
-    .line 738
+    .line 841
     invoke-virtual {p2, v4, v1}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
     :try_end_5
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_5 .. :try_end_5} :catch_1
@@ -497,7 +886,7 @@
 
     goto :goto_6
 
-    .line 731
+    .line 834
     :cond_6
     :goto_3
     :try_start_6
@@ -519,7 +908,7 @@
 
     int-to-byte v6, v6
 
-    .line 721
+    .line 824
     :try_start_7
     invoke-virtual {p2, v1, v6}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
     :try_end_7
@@ -535,7 +924,7 @@
 
     int-to-byte v6, v6
 
-    .line 722
+    .line 825
     :try_start_8
     invoke-virtual {p2, v5, v6}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
@@ -545,7 +934,7 @@
 
     int-to-byte v4, v4
 
-    .line 723
+    .line 826
     invoke-virtual {p2, v1, v4}, Ljava/nio/ByteBuffer;->put(IB)Ljava/nio/ByteBuffer;
 
     :goto_5
@@ -555,7 +944,7 @@
 
     goto/16 :goto_1
 
-    .line 743
+    .line 846
     :cond_8
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
     :try_end_8
@@ -563,7 +952,7 @@
 
     return-void
 
-    .line 749
+    .line 852
     :catch_3
     :goto_6
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->position()I
@@ -584,7 +973,7 @@
 
     add-int/2addr v0, p2
 
-    .line 750
+    .line 853
     new-instance p2, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -595,7 +984,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 751
+    .line 854
     invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result p1
@@ -643,7 +1032,7 @@
 
     const/4 v0, 0x0
 
-    .line 384
+    .line 390
     invoke-virtual {p0, v0, p1, p2, p3}, Lcom/google/protobuf/Utf8$Processor;->partialIsValidUtf8(I[BII)I
 
     move-result p1
@@ -739,7 +1128,7 @@
 
     add-int/lit8 p1, p3, 0x1
 
-    .line 471
+    .line 469
     invoke-virtual {p2, p3}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p3
@@ -764,14 +1153,14 @@
 
     add-int/lit8 p1, p3, 0x1
 
-    .line 480
+    .line 478
     invoke-virtual {p2, p3}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p3
 
     if-lt p1, p4, :cond_3
 
-    .line 482
+    .line 480
     invoke-static {v0, p3}, Lcom/google/protobuf/Utf8;->access$000(II)I
 
     move-result p1
@@ -804,7 +1193,7 @@
     :cond_6
     add-int/lit8 p1, p3, 0x1
 
-    .line 491
+    .line 489
     invoke-virtual {p2, p3}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p3
@@ -827,14 +1216,14 @@
 
     add-int/lit8 p1, p3, 0x1
 
-    .line 501
+    .line 499
     invoke-virtual {p2, p3}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v1
 
     if-lt p1, p4, :cond_a
 
-    .line 503
+    .line 501
     invoke-static {v0, v1}, Lcom/google/protobuf/Utf8;->access$000(II)I
 
     move-result p1
@@ -853,14 +1242,14 @@
 
     add-int/lit8 p3, p1, 0x1
 
-    .line 509
+    .line 507
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v4
 
     if-lt p3, p4, :cond_b
 
-    .line 511
+    .line 509
     invoke-static {v0, v1, v4}, Lcom/google/protobuf/Utf8;->access$100(III)I
 
     move-result p1
@@ -887,7 +1276,7 @@
 
     add-int/lit8 p3, p1, 0x1
 
-    .line 528
+    .line 526
     invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result p1
@@ -900,7 +1289,7 @@
     :cond_e
     move p1, p3
 
-    .line 535
+    .line 533
     :cond_f
     invoke-static {p2, p1, p4}, Lcom/google/protobuf/Utf8$Processor;->partialIsValidUtf8(Ljava/nio/ByteBuffer;II)I
 

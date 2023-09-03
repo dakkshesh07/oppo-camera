@@ -3,6 +3,11 @@
 .source "NavigationSubMenu.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/material/internal/NavigationMenu;Landroidx/appcompat/view/menu/j;)V
     .locals 0

@@ -1,76 +1,141 @@
 .class public Landroidx/appcompat/widget/ax;
-.super Landroid/content/res/Resources;
-.source "VectorEnabledTintResources.java"
+.super Ljava/lang/Object;
+.source "ViewUtils.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
 
 
 # static fields
-.field private static a:Z = false
-
-
-# instance fields
-.field private final b:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference<",
-            "Landroid/content/Context;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private static a:Ljava/lang/reflect/Method;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 0
+    .locals 5
 
-    return-void
-.end method
+    .line 42
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-.method public constructor <init>(Landroid/content/Context;Landroid/content/res/Resources;)V
-    .locals 2
+    const/16 v1, 0x12
 
-    .line 56
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+    if-lt v0, v1, :cond_0
+
+    .line 44
+    :try_start_0
+    const-class v0, Landroid/view/View;
+
+    const-string v1, "computeFitSystemWindows"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Landroid/graphics/Rect;
+
+    aput-object v4, v2, v3
+
+    const-class v3, Landroid/graphics/Rect;
+
+    const/4 v4, 0x1
+
+    aput-object v3, v2, v4
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    sput-object v0, Landroidx/appcompat/widget/ax;->a:Ljava/lang/reflect/Method;
 
-    move-result-object v1
+    .line 46
+    sget-object v0, Landroidx/appcompat/widget/ax;->a:Ljava/lang/reflect/Method;
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object p2
-
-    invoke-direct {p0, v0, v1, p2}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
-
-    .line 57
-    new-instance p2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Landroidx/appcompat/widget/ax;->b:Ljava/lang/ref/WeakReference;
-
-    return-void
-.end method
-
-.method public static a()Z
-    .locals 2
-
-    .line 42
-    invoke-static {}, Landroidx/appcompat/widget/ax;->b()Z
+    invoke-virtual {v0}, Ljava/lang/reflect/Method;->isAccessible()Z
 
     move-result v0
 
+    if-nez v0, :cond_0
+
+    .line 47
+    sget-object v0, Landroidx/appcompat/widget/ax;->a:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-string v0, "ViewUtils"
+
+    const-string v1, "Could not find method computeFitSystemWindows. Oh well."
+
+    .line 50
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 3
+
+    .line 66
+    sget-object v0, Landroidx/appcompat/widget/ax;->a:Ljava/lang/reflect/Method;
+
     if-eqz v0, :cond_0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v1, 0x2
 
-    const/16 v1, 0x14
+    .line 68
+    :try_start_0
+    new-array v1, v1, [Ljava/lang/Object;
 
-    if-gt v0, v1, :cond_0
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    const/4 p1, 0x1
+
+    aput-object p2, v1, p1
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    const-string p1, "ViewUtils"
+
+    const-string p2, "Could not invoke computeFitSystemWindows"
+
+    .line 70
+    invoke-static {p1, p2, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;)Z
+    .locals 1
+
+    .line 58
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
+
+    move-result p0
 
     const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
 
     goto :goto_0
 
@@ -81,63 +146,83 @@
     return v0
 .end method
 
-.method public static b()Z
-    .locals 1
+.method public static b(Landroid/view/View;)V
+    .locals 6
 
-    .line 96
-    sget-boolean v0, Landroidx/appcompat/widget/ax;->a:Z
+    const-string v0, "Could not invoke makeOptionalFitsSystemWindows"
 
-    return v0
-.end method
+    const-string v1, "ViewUtils"
 
+    .line 80
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
-# virtual methods
-.method final a(I)Landroid/graphics/drawable/Drawable;
-    .locals 0
+    const/16 v3, 0x10
 
-    .line 78
-    invoke-super {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    if-lt v2, v3, :cond_1
 
-    move-result-object p1
+    .line 84
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public getDrawable(I)Landroid/graphics/drawable/Drawable;
-    .locals 2
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    const-string v3, "makeOptionalFitsSystemWindows"
 
-    .line 68
-    iget-object v0, p0, Landroidx/appcompat/widget/ax;->b:Ljava/lang/ref/WeakReference;
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    new-array v5, v4, [Ljava/lang/Class;
 
-    move-result-object v0
+    invoke-virtual {v2, v3, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    check-cast v0, Landroid/content/Context;
+    move-result-object v2
 
-    if-eqz v0, :cond_0
+    .line 85
+    invoke-virtual {v2}, Ljava/lang/reflect/Method;->isAccessible()Z
 
-    .line 70
-    invoke-static {}, Landroidx/appcompat/widget/ai;->a()Landroidx/appcompat/widget/ai;
+    move-result v3
 
-    move-result-object v1
+    if-nez v3, :cond_0
 
-    invoke-virtual {v1, v0, p0, p1}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;Landroidx/appcompat/widget/ax;I)Landroid/graphics/drawable/Drawable;
+    const/4 v3, 0x1
 
-    move-result-object p1
+    .line 86
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    return-object p1
-
-    .line 72
+    .line 88
     :cond_0
-    invoke-super {p0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    new-array v3, v4, [Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-virtual {v2, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    goto :goto_0
+
+    :catch_0
+    move-exception p0
+
+    .line 94
+    invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p0
+
+    .line 92
+    invoke-static {v1, v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_0
+
+    :catch_2
+    const-string p0, "Could not find method makeOptionalFitsSystemWindows. Oh well..."
+
+    .line 90
+    invoke-static {v1, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

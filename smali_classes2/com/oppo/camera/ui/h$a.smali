@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oppo/camera/ui/h$a;
 .super Ljava/lang/Object;
-.source "OrientationAnimation.java"
+.source "CountDownUI.java"
 
 
 # annotations
@@ -15,11 +15,8 @@
 
 
 # virtual methods
-.method public abstract a(F)V
+.method public abstract a()V
 .end method
 
-.method public abstract a(I)V
-.end method
-
-.method public abstract a()Z
+.method public abstract a(Z)V
 .end method

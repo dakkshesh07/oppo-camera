@@ -189,14 +189,14 @@
     move v3, p3
 
     .line 160
-    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/as;
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/ar;
 
     move-result-object p2
 
     .line 169
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemIconTint:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -207,7 +207,7 @@
 
     sget v0, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemIconTint:I
 
-    invoke-virtual {p2, v0}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p2, v0}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -245,7 +245,7 @@
     move-result v0
 
     .line 177
-    invoke-virtual {p2, p3, v0}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, p3, v0}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result p3
 
@@ -255,7 +255,7 @@
     .line 180
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemTextAppearanceInactive:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -265,7 +265,7 @@
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemTextAppearanceInactive:I
 
     .line 182
-    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p3
 
@@ -276,7 +276,7 @@
     :cond_1
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemTextAppearanceActive:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -286,7 +286,7 @@
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemTextAppearanceActive:I
 
     .line 186
-    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p3
 
@@ -297,7 +297,7 @@
     :cond_2
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemTextColor:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -306,7 +306,7 @@
     .line 190
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemTextColor:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
 
@@ -334,13 +334,13 @@
 
     move-result-object p3
 
-    invoke-static {p0, p3}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p3}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 198
     :cond_5
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_elevation:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -350,21 +350,21 @@
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_elevation:I
 
     .line 200
-    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result p3
 
     int-to-float p3, p3
 
     .line 199
-    invoke-static {p0, p3}, Landroidx/core/g/w;->a(Landroid/view/View;F)V
+    invoke-static {p0, p3}, Landroidx/core/f/w;->a(Landroid/view/View;F)V
 
     .line 203
     :cond_6
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_backgroundTint:I
 
     .line 204
-    invoke-static {p1, p2, p3}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, p2, p3}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
 
@@ -385,7 +385,7 @@
     const/4 v0, -0x1
 
     .line 209
-    invoke-virtual {p2, p3, v0}, Landroidx/appcompat/widget/as;->c(II)I
+    invoke-virtual {p2, p3, v0}, Landroidx/appcompat/widget/ar;->c(II)I
 
     move-result p3
 
@@ -396,7 +396,7 @@
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemHorizontalTranslationEnabled:I
 
     .line 213
-    invoke-virtual {p2, p3, v7}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {p2, p3, v7}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result p3
 
@@ -406,7 +406,7 @@
     .line 215
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemBackground:I
 
-    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p3
 
@@ -424,7 +424,7 @@
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_itemRippleColor:I
 
     .line 220
-    invoke-static {p1, p2, p3}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, p2, p3}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
 
@@ -435,7 +435,7 @@
     :goto_1
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_menu:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -444,7 +444,7 @@
     .line 226
     sget p3, Lcom/google/android/material/R$styleable;->BottomNavigationView_menu:I
 
-    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p3, v8}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p3
 
@@ -452,7 +452,7 @@
 
     .line 228
     :cond_8
-    invoke-virtual {p2}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p2}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 230
     iget-object p2, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationView;->menuView:Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;
@@ -515,7 +515,7 @@
     sget v1, Lcom/google/android/material/R$color;->design_bottom_navigation_shadow_color:I
 
     .line 718
-    invoke-static {p1, v1}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result p1
 

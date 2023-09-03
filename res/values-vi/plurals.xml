@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="red_dot_with_number_description">
+    <plurals name="MT_Bin">
+        <item quantity="other">Xóa %1$d mục</item>
+        <item quantity="one">Xóa %1$d mục</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">Đã chọn %1$d</item>
+        <item quantity="one">Đã chọn %1$d</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
         <item quantity="other">%d thông báo mới</item>
         <item quantity="one">%d thông báo mới</item>
     </plurals>
-    <plurals name="sticker_recycle_bin_title_has_selected">
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
         <item quantity="other">Đã chọn %1$d nhãn dán</item>
-        <item quantity="one">Đã chọn %1$d nhãn dán</item>
+        <item quantity="one">Đã chọn %1$d hình dán</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
+        <item quantity="other">Đã chọn %1$d</item>
+        <item quantity="one">Đã chọn %1$d</item>
     </plurals>
 </resources>

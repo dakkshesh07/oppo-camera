@@ -28,6 +28,10 @@
 
 
 # instance fields
+.field private hasKey:Z
+
+.field private hasValue:Z
+
 .field private key:Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -56,7 +60,7 @@
 
 # direct methods
 .method private constructor <init>(Lcom/google/protobuf/MapEntry$Metadata;)V
-    .locals 2
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -66,11 +70,19 @@
     .end annotation
 
     .line 251
-    iget-object v0, p1, Lcom/google/protobuf/MapEntry$Metadata;->defaultKey:Ljava/lang/Object;
+    iget-object v2, p1, Lcom/google/protobuf/MapEntry$Metadata;->defaultKey:Ljava/lang/Object;
 
-    iget-object v1, p1, Lcom/google/protobuf/MapEntry$Metadata;->defaultValue:Ljava/lang/Object;
+    iget-object v3, p1, Lcom/google/protobuf/MapEntry$Metadata;->defaultValue:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;ZZ)V
 
     return-void
 .end method
@@ -78,19 +90,19 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/MapEntry$Metadata;Lcom/google/protobuf/MapEntry$1;)V
     .locals 0
 
-    .line 244
+    .line 243
     invoke-direct {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;)V
 
     return-void
 .end method
 
-.method private constructor <init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;)V
+.method private constructor <init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;ZZ)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/google/protobuf/MapEntry$Metadata<",
-            "TK;TV;>;TK;TV;)V"
+            "TK;TV;>;TK;TV;ZZ)V"
         }
     .end annotation
 
@@ -106,14 +118,20 @@
     .line 257
     iput-object p3, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
 
+    .line 258
+    iput-boolean p4, p0, Lcom/google/protobuf/MapEntry$Builder;->hasKey:Z
+
+    .line 259
+    iput-boolean p5, p0, Lcom/google/protobuf/MapEntry$Builder;->hasValue:Z
+
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;Lcom/google/protobuf/MapEntry$1;)V
+.method synthetic constructor <init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;ZZLcom/google/protobuf/MapEntry$1;)V
     .locals 0
 
-    .line 244
-    invoke-direct {p0, p1, p2, p3}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;)V
+    .line 243
+    invoke-direct/range {p0 .. p5}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;ZZ)V
 
     return-void
 .end method
@@ -121,7 +139,7 @@
 .method private checkFieldDescriptor(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
     .locals 3
 
-    .line 308
+    .line 314
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getContainingType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -134,7 +152,7 @@
 
     return-void
 
-    .line 309
+    .line 315
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -146,7 +164,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 310
+    .line 317
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getFullName()Ljava/lang/String;
 
     move-result-object p1
@@ -161,7 +179,7 @@
 
     iget-object p1, p1, Lcom/google/protobuf/MapEntry$Metadata;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 311
+    .line 319
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$Descriptor;->getFullName()Ljava/lang/String;
 
     move-result-object p1
@@ -192,7 +210,7 @@
         }
     .end annotation
 
-    .line 372
+    .line 377
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "There is no repeated field in a map entry message."
@@ -205,7 +223,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 244
+    .line 243
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/MapEntry$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object p1
@@ -223,12 +241,12 @@
         }
     .end annotation
 
-    .line 290
+    .line 296
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->buildPartial()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
 
-    .line 291
+    .line 297
     invoke-virtual {v0}, Lcom/google/protobuf/MapEntry;->isInitialized()Z
 
     move-result v1
@@ -237,7 +255,7 @@
 
     return-object v0
 
-    .line 292
+    .line 298
     :cond_0
     invoke-static {v0}, Lcom/google/protobuf/MapEntry$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
@@ -249,7 +267,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
@@ -260,7 +278,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
@@ -278,7 +296,7 @@
         }
     .end annotation
 
-    .line 299
+    .line 305
     new-instance v0, Lcom/google/protobuf/MapEntry;
 
     iget-object v1, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
@@ -297,7 +315,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->buildPartial()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
@@ -308,7 +326,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->buildPartial()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
@@ -328,10 +346,10 @@
         }
     .end annotation
 
-    .line 354
+    .line 361
     invoke-direct {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->checkFieldDescriptor(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 355
+    .line 362
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
     move-result p1
@@ -340,12 +358,12 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 356
+    .line 363
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clearKey()Lcom/google/protobuf/MapEntry$Builder;
 
     goto :goto_0
 
-    .line 358
+    .line 365
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clearValue()Lcom/google/protobuf/MapEntry$Builder;
 
@@ -356,7 +374,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 244
+    .line 243
     invoke-virtual {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object p1
@@ -374,12 +392,17 @@
         }
     .end annotation
 
-    .line 274
+    .line 277
     iget-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object v0, v0, Lcom/google/protobuf/MapEntry$Metadata;->defaultKey:Ljava/lang/Object;
 
     iput-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->key:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    .line 278
+    iput-boolean v0, p0, Lcom/google/protobuf/MapEntry$Builder;->hasKey:Z
 
     return-object p0
 .end method
@@ -394,12 +417,17 @@
         }
     .end annotation
 
-    .line 284
+    .line 289
     iget-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object v0, v0, Lcom/google/protobuf/MapEntry$Metadata;->defaultValue:Ljava/lang/Object;
 
     iput-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    .line 290
+    iput-boolean v0, p0, Lcom/google/protobuf/MapEntry$Builder;->hasValue:Z
 
     return-object p0
 .end method
@@ -407,7 +435,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clone()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v0
@@ -418,7 +446,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clone()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v0
@@ -427,7 +455,7 @@
 .end method
 
 .method public clone()Lcom/google/protobuf/MapEntry$Builder;
-    .locals 4
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -436,8 +464,8 @@
         }
     .end annotation
 
-    .line 439
-    new-instance v0, Lcom/google/protobuf/MapEntry$Builder;
+    .line 442
+    new-instance v6, Lcom/google/protobuf/MapEntry$Builder;
 
     iget-object v1, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
@@ -445,15 +473,21 @@
 
     iget-object v3, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-boolean v4, p0, Lcom/google/protobuf/MapEntry$Builder;->hasKey:Z
 
-    return-object v0
+    iget-boolean v5, p0, Lcom/google/protobuf/MapEntry$Builder;->hasValue:Z
+
+    move-object v0, v6
+
+    invoke-direct/range {v0 .. v5}, Lcom/google/protobuf/MapEntry$Builder;-><init>(Lcom/google/protobuf/MapEntry$Metadata;Ljava/lang/Object;Ljava/lang/Object;ZZ)V
+
+    return-object v6
 .end method
 
 .method public bridge synthetic clone()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clone()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v0
@@ -464,7 +498,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clone()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v0
@@ -480,7 +514,7 @@
         }
     .end annotation
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->clone()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v0
@@ -500,12 +534,12 @@
         }
     .end annotation
 
-    .line 394
+    .line 398
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    .line 395
+    .line 399
     iget-object v1, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object v1, v1, Lcom/google/protobuf/MapEntry$Metadata;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -532,14 +566,14 @@
 
     check-cast v2, Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 396
+    .line 400
     invoke-virtual {p0, v2}, Lcom/google/protobuf/MapEntry$Builder;->hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 397
+    .line 401
     invoke-virtual {p0, v2}, Lcom/google/protobuf/MapEntry$Builder;->getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
 
     move-result-object v3
@@ -548,7 +582,7 @@
 
     goto :goto_0
 
-    .line 400
+    .line 404
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -567,7 +601,7 @@
         }
     .end annotation
 
-    .line 384
+    .line 388
     new-instance v0, Lcom/google/protobuf/MapEntry;
 
     iget-object v1, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
@@ -588,7 +622,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
@@ -599,7 +633,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 244
+    .line 243
     invoke-virtual {p0}, Lcom/google/protobuf/MapEntry$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
@@ -610,7 +644,7 @@
 .method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 304
+    .line 310
     iget-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object v0, v0, Lcom/google/protobuf/MapEntry$Metadata;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -621,10 +655,10 @@
 .method public getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
     .locals 3
 
-    .line 411
+    .line 415
     invoke-direct {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->checkFieldDescriptor(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 412
+    .line 416
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
     move-result v0
@@ -644,7 +678,7 @@
 
     move-result-object v0
 
-    .line 414
+    .line 418
     :goto_0
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getType()Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
@@ -654,7 +688,7 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 415
+    .line 419
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getEnumType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object p1
@@ -681,7 +715,7 @@
         }
     .end annotation
 
-    .line 261
+    .line 263
     iget-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->key:Ljava/lang/Object;
 
     return-object v0
@@ -690,7 +724,7 @@
 .method public getRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;I)Ljava/lang/Object;
     .locals 0
 
-    .line 428
+    .line 431
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "There is no repeated field in a map entry message."
@@ -703,7 +737,7 @@
 .method public getRepeatedFieldCount(Lcom/google/protobuf/Descriptors$FieldDescriptor;)I
     .locals 1
 
-    .line 422
+    .line 426
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string v0, "There is no repeated field in a map entry message."
@@ -716,7 +750,7 @@
 .method public getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
     .locals 1
 
-    .line 434
+    .line 436
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -732,27 +766,42 @@
         }
     .end annotation
 
-    .line 265
+    .line 267
     iget-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
-    .locals 0
+    .locals 1
 
-    .line 405
+    .line 409
     invoke-direct {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->checkFieldDescriptor(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    const/4 p1, 0x1
+    .line 410
+    invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_0
+
+    iget-boolean p1, p0, Lcom/google/protobuf/MapEntry$Builder;->hasKey:Z
+
+    goto :goto_0
+
+    :cond_0
+    iget-boolean p1, p0, Lcom/google/protobuf/MapEntry$Builder;->hasValue:Z
+
+    :goto_0
     return p1
 .end method
 
 .method public isInitialized()Z
     .locals 2
 
-    .line 389
+    .line 393
     iget-object v0, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object v1, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
@@ -767,10 +816,10 @@
 .method public newBuilderForField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 3
 
-    .line 317
+    .line 325
     invoke-direct {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->checkFieldDescriptor(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 320
+    .line 329
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
     move-result v0
@@ -779,7 +828,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 321
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v0
@@ -788,7 +836,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 325
+    .line 332
     iget-object p1, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/protobuf/Message;
@@ -799,7 +847,7 @@
 
     return-object p1
 
-    .line 322
+    .line 330
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -811,7 +859,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 323
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getFullName()Ljava/lang/String;
 
     move-result-object p1
@@ -844,10 +891,10 @@
         }
     .end annotation
 
-    .line 331
+    .line 338
     invoke-direct {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->checkFieldDescriptor(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 332
+    .line 339
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
     move-result v0
@@ -856,12 +903,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 333
+    .line 340
     invoke-virtual {p0, p2}, Lcom/google/protobuf/MapEntry$Builder;->setKey(Ljava/lang/Object;)Lcom/google/protobuf/MapEntry$Builder;
 
     goto :goto_1
 
-    .line 335
+    .line 342
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getType()Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
@@ -871,7 +918,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 336
+    .line 343
     check-cast p2, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
 
     invoke-virtual {p2}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getNumber()I
@@ -884,7 +931,7 @@
 
     goto :goto_0
 
-    .line 337
+    .line 344
     :cond_1
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getType()Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
@@ -896,7 +943,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 338
+    .line 345
     iget-object p1, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object p1, p1, Lcom/google/protobuf/MapEntry$Metadata;->defaultValue:Ljava/lang/Object;
@@ -911,14 +958,14 @@
 
     if-nez p1, :cond_2
 
-    .line 343
+    .line 350
     iget-object p1, p0, Lcom/google/protobuf/MapEntry$Builder;->metadata:Lcom/google/protobuf/MapEntry$Metadata;
 
     iget-object p1, p1, Lcom/google/protobuf/MapEntry$Metadata;->defaultValue:Ljava/lang/Object;
 
     check-cast p1, Lcom/google/protobuf/Message;
 
-    .line 344
+    .line 351
     invoke-interface {p1}, Lcom/google/protobuf/Message;->toBuilder()Lcom/google/protobuf/Message$Builder;
 
     move-result-object p1
@@ -933,7 +980,7 @@
 
     move-result-object p2
 
-    .line 347
+    .line 354
     :cond_2
     :goto_0
     invoke-virtual {p0, p2}, Lcom/google/protobuf/MapEntry$Builder;->setValue(Ljava/lang/Object;)Lcom/google/protobuf/MapEntry$Builder;
@@ -945,7 +992,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 244
+    .line 243
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/MapEntry$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object p1
@@ -963,8 +1010,13 @@
         }
     .end annotation
 
-    .line 269
+    .line 271
     iput-object p1, p0, Lcom/google/protobuf/MapEntry$Builder;->key:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    .line 272
+    iput-boolean p1, p0, Lcom/google/protobuf/MapEntry$Builder;->hasKey:Z
 
     return-object p0
 .end method
@@ -983,7 +1035,7 @@
         }
     .end annotation
 
-    .line 366
+    .line 372
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "There is no repeated field in a map entry message."
@@ -996,7 +1048,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 244
+    .line 243
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/MapEntry$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object p1
@@ -1022,7 +1074,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 244
+    .line 243
     invoke-virtual {p0, p1}, Lcom/google/protobuf/MapEntry$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object p1
@@ -1040,8 +1092,13 @@
         }
     .end annotation
 
-    .line 279
+    .line 283
     iput-object p1, p0, Lcom/google/protobuf/MapEntry$Builder;->value:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    .line 284
+    iput-boolean p1, p0, Lcom/google/protobuf/MapEntry$Builder;->hasValue:Z
 
     return-object p0
 .end method

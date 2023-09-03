@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/OppoNumSeekBar;)V
     .locals 0
 
-    .line 366
+    .line 393
     iput-object p1, p0, Lcom/oppo/camera/ui/OppoNumSeekBar$2;->a:Lcom/oppo/camera/ui/OppoNumSeekBar;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -35,17 +35,17 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 380
+    .line 413
     iget-object p1, p0, Lcom/oppo/camera/ui/OppoNumSeekBar$2;->a:Lcom/oppo/camera/ui/OppoNumSeekBar;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->l:Z
+    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->z:Z
 
-    .line 381
-    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->B:Z
+    .line 414
+    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->y:Z
 
-    .line 382
+    .line 415
     invoke-virtual {p1}, Lcom/oppo/camera/ui/OppoNumSeekBar;->invalidate()V
 
     return-void
@@ -54,20 +54,20 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .line 369
+    .line 396
     iget-object p1, p0, Lcom/oppo/camera/ui/OppoNumSeekBar$2;->a:Lcom/oppo/camera/ui/OppoNumSeekBar;
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->l:Z
+    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->z:Z
 
-    .line 370
-    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->B:Z
+    .line 397
+    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->y:Z
 
-    .line 371
+    .line 398
     invoke-virtual {p1}, Lcom/oppo/camera/ui/OppoNumSeekBar;->invalidate()V
 
-    .line 373
+    .line 400
     iget-object p1, p0, Lcom/oppo/camera/ui/OppoNumSeekBar$2;->a:Lcom/oppo/camera/ui/OppoNumSeekBar;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/OppoNumSeekBar;->a(Lcom/oppo/camera/ui/OppoNumSeekBar;)Lcom/oppo/camera/ui/OppoNumSeekBar$a;
@@ -76,7 +76,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 374
+    .line 401
     iget-object p1, p0, Lcom/oppo/camera/ui/OppoNumSeekBar$2;->a:Lcom/oppo/camera/ui/OppoNumSeekBar;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/OppoNumSeekBar;->a(Lcom/oppo/camera/ui/OppoNumSeekBar;)Lcom/oppo/camera/ui/OppoNumSeekBar$a;
@@ -94,5 +94,21 @@
     invoke-interface {p1, v0, v1, v2}, Lcom/oppo/camera/ui/OppoNumSeekBar$a;->a(Lcom/oppo/camera/ui/OppoNumSeekBar;IZ)V
 
     :cond_0
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 407
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+
+    .line 408
+    iget-object p1, p0, Lcom/oppo/camera/ui/OppoNumSeekBar$2;->a:Lcom/oppo/camera/ui/OppoNumSeekBar;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lcom/oppo/camera/ui/OppoNumSeekBar;->z:Z
+
     return-void
 .end method

@@ -290,9 +290,9 @@
     iput-boolean v0, p0, Landroidx/fragment/app/FragmentState;->mHidden:Z
 
     .line 59
-    iget-object p1, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/e$b;
+    iget-object p1, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1}, Landroidx/lifecycle/e$b;->ordinal()I
+    invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
 
     move-result p1
 
@@ -425,7 +425,7 @@
     iput-boolean p2, p1, Landroidx/fragment/app/Fragment;->mHidden:Z
 
     .line 107
-    invoke-static {}, Landroidx/lifecycle/e$b;->values()[Landroidx/lifecycle/e$b;
+    invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object p2
 
@@ -433,7 +433,7 @@
 
     aget-object p2, p2, v0
 
-    iput-object p2, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/e$b;
+    iput-object p2, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
     .line 109
     sget-boolean p1, Landroidx/fragment/app/i;->b:Z

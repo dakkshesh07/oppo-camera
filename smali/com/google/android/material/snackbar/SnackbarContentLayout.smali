@@ -6,6 +6,11 @@
 .implements Lcom/google/android/material/snackbar/ContentViewCallback;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private actionView:Landroid/widget/Button;
 
@@ -72,24 +77,24 @@
     .locals 2
 
     .line 134
-    invoke-static {p0}, Landroidx/core/g/w;->w(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->w(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 137
-    invoke-static {p0}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result v0
 
     .line 139
-    invoke-static {p0}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v1
 
     .line 135
-    invoke-static {p0, v0, p1, v1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {p0, v0, p1, v1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     goto :goto_0
 

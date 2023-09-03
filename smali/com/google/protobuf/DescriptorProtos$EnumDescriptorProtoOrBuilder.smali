@@ -30,6 +30,58 @@
 .method public abstract getOptionsOrBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptionsOrBuilder;
 .end method
 
+.method public abstract getReservedName(I)Ljava/lang/String;
+.end method
+
+.method public abstract getReservedNameBytes(I)Lcom/google/protobuf/ByteString;
+.end method
+
+.method public abstract getReservedNameCount()I
+.end method
+
+.method public abstract getReservedNameList()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getReservedRange(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$EnumReservedRange;
+.end method
+
+.method public abstract getReservedRangeCount()I
+.end method
+
+.method public abstract getReservedRangeList()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$EnumReservedRange;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract getReservedRangeOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$EnumReservedRangeOrBuilder;
+.end method
+
+.method public abstract getReservedRangeOrBuilderList()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "+",
+            "Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$EnumReservedRangeOrBuilder;",
+            ">;"
+        }
+    .end annotation
+.end method
+
 .method public abstract getValue(I)Lcom/google/protobuf/DescriptorProtos$EnumValueDescriptorProto;
 .end method
 

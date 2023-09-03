@@ -115,15 +115,7 @@
 
 .field private package_:Ljava/lang/Object;
 
-.field private publicDependency_:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
 .field private serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
     .annotation system Ldalvik/annotation/Signature;
@@ -163,91 +155,75 @@
 
 .field private syntax_:Ljava/lang/Object;
 
-.field private weakDependency_:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Ljava/lang/Integer;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
 
 # direct methods
 .method private constructor <init>()V
     .locals 2
 
-    .line 2220
+    .line 2346
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
     const-string v0, ""
 
-    .line 2643
+    .line 2783
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2743
+    .line 2891
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2843
+    .line 2999
     sget-object v1, Lcom/google/protobuf/LazyStringArrayList;->EMPTY:Lcom/google/protobuf/LazyStringList;
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2972
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 3144
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3066
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 3251
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3168
+    .line 3366
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 3480
+    .line 3678
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 3720
+    .line 3918
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 3960
+    .line 4158
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    const/4 v1, 0x0
-
-    .line 4199
-    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
-
-    .line 4317
-    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
-
-    .line 4498
+    .line 4700
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 2221
+    .line 2347
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -256,7 +232,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/DescriptorProtos$1;)V
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;-><init>()V
 
     return-void
@@ -265,76 +241,68 @@
 .method private constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
     .locals 1
 
-    .line 2226
+    .line 2352
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     const-string p1, ""
 
-    .line 2643
+    .line 2783
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2743
+    .line 2891
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2843
+    .line 2999
     sget-object v0, Lcom/google/protobuf/LazyStringArrayList;->EMPTY:Lcom/google/protobuf/LazyStringList;
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2972
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 3144
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3066
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 3251
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3168
+    .line 3366
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 3480
+    .line 3678
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 3720
+    .line 3918
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 3960
+    .line 4158
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    const/4 v0, 0x0
-
-    .line 4199
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
-
-    .line 4317
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
-
-    .line 4498
+    .line 4700
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 2227
+    .line 2353
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -343,37 +311,35 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;Lcom/google/protobuf/DescriptorProtos$1;)V
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-direct {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
 .end method
 
 .method private ensureDependencyIsMutable()V
-    .locals 3
+    .locals 2
 
-    .line 2845
+    .line 3001
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/4 v1, 0x4
+    and-int/lit8 v0, v0, 0x4
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 2846
+    .line 3002
     new-instance v0, Lcom/google/protobuf/LazyStringArrayList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
+    iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    invoke-direct {v0, v2}, Lcom/google/protobuf/LazyStringArrayList;-><init>(Lcom/google/protobuf/LazyStringList;)V
+    invoke-direct {v0, v1}, Lcom/google/protobuf/LazyStringArrayList;-><init>(Lcom/google/protobuf/LazyStringList;)V
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2847
+    .line 3003
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -382,30 +348,28 @@
 .end method
 
 .method private ensureEnumTypeIsMutable()V
-    .locals 3
+    .locals 2
 
-    .line 3482
+    .line 3680
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x40
+    and-int/lit8 v0, v0, 0x40
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 3483
+    .line 3681
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
+    iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 3484
+    .line 3682
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit8 v0, v0, 0x40
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -414,30 +378,28 @@
 .end method
 
 .method private ensureExtensionIsMutable()V
-    .locals 3
+    .locals 2
 
-    .line 3962
+    .line 4160
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x100
+    and-int/lit16 v0, v0, 0x100
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 3963
+    .line 4161
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
+    iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 3964
+    .line 4162
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit16 v0, v0, 0x100
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -446,30 +408,28 @@
 .end method
 
 .method private ensureMessageTypeIsMutable()V
-    .locals 3
+    .locals 2
 
-    .line 3170
+    .line 3368
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x20
+    and-int/lit8 v0, v0, 0x20
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 3171
+    .line 3369
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
+    iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 3172
+    .line 3370
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit8 v0, v0, 0x20
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -478,30 +438,28 @@
 .end method
 
 .method private ensurePublicDependencyIsMutable()V
-    .locals 3
+    .locals 1
 
-    .line 2974
+    .line 3146
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x8
+    and-int/lit8 v0, v0, 0x8
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
+    .line 3147
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2975
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageV3;->mutableCopy(Lcom/google/protobuf/Internal$IntList;)Lcom/google/protobuf/Internal$IntList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    move-result-object v0
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
-
-    .line 2976
+    .line 3148
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -510,30 +468,28 @@
 .end method
 
 .method private ensureServiceIsMutable()V
-    .locals 3
+    .locals 2
 
-    .line 3722
+    .line 3920
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x80
+    and-int/lit16 v0, v0, 0x80
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 3723
+    .line 3921
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
+    iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 3724
+    .line 3922
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit16 v0, v0, 0x80
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -542,30 +498,28 @@
 .end method
 
 .method private ensureWeakDependencyIsMutable()V
-    .locals 3
+    .locals 1
 
-    .line 3068
+    .line 3253
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x10
+    and-int/lit8 v0, v0, 0x10
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
+    .line 3254
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3069
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageV3;->mutableCopy(Lcom/google/protobuf/Internal$IntList;)Lcom/google/protobuf/Internal$IntList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    move-result-object v0
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
-
-    .line 3070
+    .line 3255
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit8 v0, v0, 0x10
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -576,7 +530,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 2209
+    .line 2334
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$700()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -597,23 +551,21 @@
         }
     .end annotation
 
-    .line 3707
+    .line 3905
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 3708
+    .line 3906
     new-instance v0, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v3, 0x40
+    and-int/lit8 v2, v2, 0x40
 
-    and-int/2addr v2, v3
-
-    if-ne v2, v3, :cond_0
+    if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
@@ -622,13 +574,13 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3712
+    .line 3910
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 3713
+    .line 3911
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->isClean()Z
 
     move-result v4
@@ -639,10 +591,10 @@
 
     const/4 v0, 0x0
 
-    .line 3714
+    .line 3912
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 3716
+    .line 3914
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -662,23 +614,21 @@
         }
     .end annotation
 
-    .line 4187
+    .line 4385
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 4188
+    .line 4386
     new-instance v0, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v3, 0x100
+    and-int/lit16 v2, v2, 0x100
 
-    and-int/2addr v2, v3
-
-    if-ne v2, v3, :cond_0
+    if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
@@ -687,13 +637,13 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 4192
+    .line 4390
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 4193
+    .line 4391
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->isClean()Z
 
     move-result v4
@@ -704,10 +654,10 @@
 
     const/4 v0, 0x0
 
-    .line 4194
+    .line 4392
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 4196
+    .line 4394
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -727,23 +677,21 @@
         }
     .end annotation
 
-    .line 3467
+    .line 3665
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 3468
+    .line 3666
     new-instance v0, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v3, 0x20
+    and-int/lit8 v2, v2, 0x20
 
-    and-int/2addr v2, v3
-
-    if-ne v2, v3, :cond_0
+    if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
@@ -752,13 +700,13 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3472
+    .line 3670
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 3473
+    .line 3671
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->isClean()Z
 
     move-result v4
@@ -769,10 +717,10 @@
 
     const/4 v0, 0x0
 
-    .line 3474
+    .line 3672
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 3476
+    .line 3674
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -792,25 +740,25 @@
         }
     .end annotation
 
-    .line 4306
+    .line 4506
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4307
+    .line 4507
     new-instance v0, Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4309
+    .line 4509
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getOptions()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     move-result-object v1
 
-    .line 4310
+    .line 4510
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v2
 
-    .line 4311
+    .line 4511
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->isClean()Z
 
     move-result v3
@@ -821,10 +769,10 @@
 
     const/4 v0, 0x0
 
-    .line 4312
+    .line 4512
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    .line 4314
+    .line 4514
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -844,23 +792,21 @@
         }
     .end annotation
 
-    .line 3947
+    .line 4145
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 3948
+    .line 4146
     new-instance v0, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v3, 0x80
+    and-int/lit16 v2, v2, 0x80
 
-    and-int/2addr v2, v3
-
-    if-ne v2, v3, :cond_0
+    if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
@@ -869,13 +815,13 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 3952
+    .line 4150
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 3953
+    .line 4151
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->isClean()Z
 
     move-result v4
@@ -886,10 +832,10 @@
 
     const/4 v0, 0x0
 
-    .line 3954
+    .line 4152
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 3956
+    .line 4154
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -909,25 +855,25 @@
         }
     .end annotation
 
-    .line 4487
+    .line 4689
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4488
+    .line 4690
     new-instance v0, Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4490
+    .line 4692
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getSourceCodeInfo()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     move-result-object v1
 
-    .line 4491
+    .line 4693
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v2
 
-    .line 4492
+    .line 4694
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->isClean()Z
 
     move-result v3
@@ -938,10 +884,10 @@
 
     const/4 v0, 0x0
 
-    .line 4493
+    .line 4695
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 4495
+    .line 4697
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -951,27 +897,27 @@
 .method private maybeForceBuilderInitialization()V
     .locals 1
 
-    .line 2230
+    .line 2356
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v0, :cond_0
 
-    .line 2232
+    .line 2358
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2233
+    .line 2359
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2234
+    .line 2360
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2235
+    .line 2361
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2236
+    .line 2362
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getOptionsFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 2237
+    .line 2363
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getSourceCodeInfoFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     :cond_0
@@ -992,15 +938,15 @@
         }
     .end annotation
 
-    .line 2935
+    .line 3104
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureDependencyIsMutable()V
 
-    .line 2936
+    .line 3105
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 2938
+    .line 3107
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -1019,25 +965,25 @@
         }
     .end annotation
 
-    .line 3618
+    .line 3816
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3619
+    .line 3817
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3620
+    .line 3818
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 3622
+    .line 3820
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3624
+    .line 3822
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1058,25 +1004,25 @@
         }
     .end annotation
 
-    .line 4098
+    .line 4296
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4099
+    .line 4297
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4100
+    .line 4298
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 4102
+    .line 4300
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4104
+    .line 4302
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1097,25 +1043,25 @@
         }
     .end annotation
 
-    .line 3346
+    .line 3544
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3347
+    .line 3545
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3348
+    .line 3546
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 3350
+    .line 3548
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3352
+    .line 3550
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1136,15 +1082,15 @@
         }
     .end annotation
 
-    .line 3046
+    .line 3230
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensurePublicDependencyIsMutable()V
 
-    .line 3047
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 3231
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 3049
+    .line 3233
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -1163,25 +1109,25 @@
         }
     .end annotation
 
-    .line 3858
+    .line 4056
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3859
+    .line 4057
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3860
+    .line 4058
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 3862
+    .line 4060
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3864
+    .line 4062
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1202,15 +1148,15 @@
         }
     .end annotation
 
-    .line 3146
+    .line 3343
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureWeakDependencyIsMutable()V
 
-    .line 3147
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 3344
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 3149
+    .line 3346
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -1221,20 +1167,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 2921
+    .line 3088
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureDependencyIsMutable()V
 
-    .line 2922
+    .line 3089
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/LazyStringList;->add(Ljava/lang/Object;)Z
 
-    .line 2923
+    .line 3090
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2919
+    .line 3086
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1248,20 +1194,20 @@
 
     if-eqz p1, :cond_0
 
-    .line 2966
+    .line 3138
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureDependencyIsMutable()V
 
-    .line 2967
+    .line 3139
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/LazyStringList;->add(Lcom/google/protobuf/ByteString;)V
 
-    .line 2968
+    .line 3140
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2964
+    .line 3136
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1273,15 +1219,15 @@
 .method public addEnumType(ILcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3604
+    .line 3802
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3605
+    .line 3803
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3606
+    .line 3804
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
@@ -1290,12 +1236,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3607
+    .line 3805
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3609
+    .line 3807
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
 
@@ -1310,27 +1256,27 @@
 .method public addEnumType(ILcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3573
+    .line 3771
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 3577
+    .line 3775
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3578
+    .line 3776
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3579
+    .line 3777
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3575
+    .line 3773
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1338,7 +1284,7 @@
 
     throw p1
 
-    .line 3581
+    .line 3779
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1349,15 +1295,15 @@
 .method public addEnumType(Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3590
+    .line 3788
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3591
+    .line 3789
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3592
+    .line 3790
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
@@ -1366,12 +1312,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3593
+    .line 3791
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3595
+    .line 3793
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
 
@@ -1386,27 +1332,27 @@
 .method public addEnumType(Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3556
+    .line 3754
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 3560
+    .line 3758
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3561
+    .line 3759
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3562
+    .line 3760
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3558
+    .line 3756
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1414,7 +1360,7 @@
 
     throw p1
 
-    .line 3564
+    .line 3762
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1425,17 +1371,17 @@
 .method public addEnumTypeBuilder()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;
     .locals 2
 
-    .line 3686
+    .line 3884
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 3687
+    .line 3885
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
 
     move-result-object v1
 
-    .line 3686
+    .line 3884
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -1448,17 +1394,17 @@
 .method public addEnumTypeBuilder(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;
     .locals 2
 
-    .line 3694
+    .line 3892
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 3695
+    .line 3893
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
 
     move-result-object v1
 
-    .line 3694
+    .line 3892
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object p1
@@ -1471,15 +1417,15 @@
 .method public addExtension(ILcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4084
+    .line 4282
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4085
+    .line 4283
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4086
+    .line 4284
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
@@ -1488,12 +1434,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 4087
+    .line 4285
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4089
+    .line 4287
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
 
@@ -1508,27 +1454,27 @@
 .method public addExtension(ILcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4053
+    .line 4251
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 4057
+    .line 4255
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4058
+    .line 4256
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 4059
+    .line 4257
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4055
+    .line 4253
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1536,7 +1482,7 @@
 
     throw p1
 
-    .line 4061
+    .line 4259
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1547,15 +1493,15 @@
 .method public addExtension(Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4070
+    .line 4268
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4071
+    .line 4269
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4072
+    .line 4270
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
@@ -1564,12 +1510,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4073
+    .line 4271
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4075
+    .line 4273
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
 
@@ -1584,27 +1530,27 @@
 .method public addExtension(Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4036
+    .line 4234
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 4040
+    .line 4238
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4041
+    .line 4239
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4042
+    .line 4240
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4038
+    .line 4236
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1612,7 +1558,7 @@
 
     throw p1
 
-    .line 4044
+    .line 4242
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1623,17 +1569,17 @@
 .method public addExtensionBuilder()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;
     .locals 2
 
-    .line 4166
+    .line 4364
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 4167
+    .line 4365
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
 
     move-result-object v1
 
-    .line 4166
+    .line 4364
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -1646,17 +1592,17 @@
 .method public addExtensionBuilder(I)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;
     .locals 2
 
-    .line 4174
+    .line 4372
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 4175
+    .line 4373
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
 
     move-result-object v1
 
-    .line 4174
+    .line 4372
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object p1
@@ -1669,15 +1615,15 @@
 .method public addMessageType(ILcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3328
+    .line 3526
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3329
+    .line 3527
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3330
+    .line 3528
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
@@ -1686,12 +1632,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3331
+    .line 3529
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3333
+    .line 3531
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
 
@@ -1706,27 +1652,27 @@
 .method public addMessageType(ILcom/google/protobuf/DescriptorProtos$DescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3289
+    .line 3487
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 3293
+    .line 3491
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3294
+    .line 3492
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3295
+    .line 3493
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3291
+    .line 3489
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1734,7 +1680,7 @@
 
     throw p1
 
-    .line 3297
+    .line 3495
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1745,15 +1691,15 @@
 .method public addMessageType(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3310
+    .line 3508
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3311
+    .line 3509
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3312
+    .line 3510
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
@@ -1762,12 +1708,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3313
+    .line 3511
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3315
+    .line 3513
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
 
@@ -1782,27 +1728,27 @@
 .method public addMessageType(Lcom/google/protobuf/DescriptorProtos$DescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3268
+    .line 3466
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 3272
+    .line 3470
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3273
+    .line 3471
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3274
+    .line 3472
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3270
+    .line 3468
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1810,7 +1756,7 @@
 
     throw p1
 
-    .line 3276
+    .line 3474
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1821,17 +1767,17 @@
 .method public addMessageTypeBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;
     .locals 2
 
-    .line 3438
+    .line 3636
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 3439
+    .line 3637
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
 
     move-result-object v1
 
-    .line 3438
+    .line 3636
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -1844,17 +1790,17 @@
 .method public addMessageTypeBuilder(I)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;
     .locals 2
 
-    .line 3450
+    .line 3648
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 3451
+    .line 3649
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
 
     move-result-object v1
 
-    .line 3450
+    .line 3648
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object p1
@@ -1867,19 +1813,15 @@
 .method public addPublicDependency(I)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3032
+    .line 3214
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensurePublicDependencyIsMutable()V
 
-    .line 3033
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 3215
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$IntList;->addInt(I)V
 
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 3034
+    .line 3216
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -1888,7 +1830,7 @@
 .method public addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 2422
+    .line 2559
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -1901,7 +1843,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -1912,7 +1854,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -1923,15 +1865,15 @@
 .method public addService(ILcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3844
+    .line 4042
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3845
+    .line 4043
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3846
+    .line 4044
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
@@ -1940,12 +1882,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3847
+    .line 4045
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3849
+    .line 4047
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
 
@@ -1960,27 +1902,27 @@
 .method public addService(ILcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3813
+    .line 4011
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 3817
+    .line 4015
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3818
+    .line 4016
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3819
+    .line 4017
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3815
+    .line 4013
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1988,7 +1930,7 @@
 
     throw p1
 
-    .line 3821
+    .line 4019
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -1999,15 +1941,15 @@
 .method public addService(Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3830
+    .line 4028
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3831
+    .line 4029
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3832
+    .line 4030
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
@@ -2016,12 +1958,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3833
+    .line 4031
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3835
+    .line 4033
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
 
@@ -2036,27 +1978,27 @@
 .method public addService(Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3796
+    .line 3994
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 3800
+    .line 3998
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3801
+    .line 3999
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3802
+    .line 4000
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3798
+    .line 3996
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -2064,7 +2006,7 @@
 
     throw p1
 
-    .line 3804
+    .line 4002
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -2075,17 +2017,17 @@
 .method public addServiceBuilder()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;
     .locals 2
 
-    .line 3926
+    .line 4124
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 3927
+    .line 4125
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
 
     move-result-object v1
 
-    .line 3926
+    .line 4124
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -2098,17 +2040,17 @@
 .method public addServiceBuilder(I)Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;
     .locals 2
 
-    .line 3934
+    .line 4132
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 3935
+    .line 4133
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
 
     move-result-object v1
 
-    .line 3934
+    .line 4132
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object p1
@@ -2121,19 +2063,15 @@
 .method public addWeakDependency(I)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3131
+    .line 3326
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureWeakDependencyIsMutable()V
 
-    .line 3132
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 3327
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$IntList;->addInt(I)V
 
-    move-result-object p1
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 3133
+    .line 3328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -2142,12 +2080,12 @@
 .method public build()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
     .locals 2
 
-    .line 2303
+    .line 2433
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->buildPartial()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
 
-    .line 2304
+    .line 2434
     invoke-virtual {v0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->isInitialized()Z
 
     move-result v1
@@ -2156,7 +2094,7 @@
 
     return-object v0
 
-    .line 2305
+    .line 2435
     :cond_0
     invoke-static {v0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
@@ -2168,7 +2106,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -2179,7 +2117,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -2188,412 +2126,382 @@
 .end method
 
 .method public buildPartial()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
-    .locals 5
+    .locals 4
 
-    .line 2311
+    .line 2442
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/google/protobuf/DescriptorProtos$1;)V
 
-    .line 2312
+    .line 2443
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v2, v1, 0x1
 
-    const/4 v3, 0x1
+    if-eqz v2, :cond_0
 
-    if-ne v2, v3, :cond_0
+    const/4 v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    .line 2317
+    .line 2448
     :goto_0
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1202(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1202(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/lang/Object;)Ljava/lang/Object;
 
-    and-int/lit8 v2, v1, 0x2
+    and-int/lit8 v3, v1, 0x2
 
-    const/4 v4, 0x2
+    if-eqz v3, :cond_1
 
-    if-ne v2, v4, :cond_1
+    or-int/lit8 v2, v2, 0x2
 
-    or-int/lit8 v3, v3, 0x2
-
-    .line 2321
+    .line 2452
     :cond_1
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1302(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1302(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2322
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2453
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/4 v4, 0x4
+    and-int/lit8 v3, v3, 0x4
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_2
 
-    if-ne v2, v4, :cond_2
+    .line 2454
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2323
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
+    invoke-interface {v3}, Lcom/google/protobuf/LazyStringList;->getUnmodifiableView()Lcom/google/protobuf/LazyStringList;
 
-    invoke-interface {v2}, Lcom/google/protobuf/LazyStringList;->getUnmodifiableView()Lcom/google/protobuf/LazyStringList;
+    move-result-object v3
 
-    move-result-object v2
+    iput-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
+    .line 2455
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2324
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    and-int/lit8 v3, v3, -0x5
 
-    and-int/lit8 v2, v2, -0x5
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2326
+    .line 2457
     :cond_2
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1402(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/LazyStringList;)Lcom/google/protobuf/LazyStringList;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1402(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/LazyStringList;)Lcom/google/protobuf/LazyStringList;
 
-    .line 2327
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2458
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v4, 0x8
+    and-int/lit8 v3, v3, 0x8
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_3
 
-    if-ne v2, v4, :cond_3
+    .line 2459
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2328
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    invoke-interface {v3}, Lcom/google/protobuf/Internal$IntList;->makeImmutable()V
 
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    .line 2460
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    move-result-object v2
+    and-int/lit8 v3, v3, -0x9
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2329
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    and-int/lit8 v2, v2, -0x9
-
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2331
+    .line 2462
     :cond_3
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1502(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1502(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/Internal$IntList;)Lcom/google/protobuf/Internal$IntList;
 
-    .line 2332
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2463
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v4, 0x10
+    and-int/lit8 v3, v3, 0x10
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_4
 
-    if-ne v2, v4, :cond_4
+    .line 2464
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2333
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    invoke-interface {v3}, Lcom/google/protobuf/Internal$IntList;->makeImmutable()V
 
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    .line 2465
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    move-result-object v2
+    and-int/lit8 v3, v3, -0x11
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2334
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    and-int/lit8 v2, v2, -0x11
-
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2336
+    .line 2467
     :cond_4
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1602(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1602(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/Internal$IntList;)Lcom/google/protobuf/Internal$IntList;
 
-    .line 2337
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+    .line 2468
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v2, :cond_6
+    if-nez v3, :cond_6
 
-    .line 2338
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2469
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v4, 0x20
+    and-int/lit8 v3, v3, 0x20
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_5
 
-    if-ne v2, v4, :cond_5
+    .line 2470
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 2339
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    move-result-object v3
 
-    move-result-object v2
+    iput-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
+    .line 2471
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2340
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    and-int/lit8 v3, v3, -0x21
 
-    and-int/lit8 v2, v2, -0x21
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2342
+    .line 2473
     :cond_5
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1702(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1702(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_1
 
-    .line 2344
+    .line 2475
     :cond_6
-    invoke-virtual {v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1702(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1702(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
-    .line 2346
+    .line 2477
     :goto_1
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v2, :cond_8
+    if-nez v3, :cond_8
 
-    .line 2347
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2478
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v4, 0x40
+    and-int/lit8 v3, v3, 0x40
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_7
 
-    if-ne v2, v4, :cond_7
+    .line 2479
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 2348
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    move-result-object v3
 
-    move-result-object v2
+    iput-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
+    .line 2480
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2349
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    and-int/lit8 v3, v3, -0x41
 
-    and-int/lit8 v2, v2, -0x41
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2351
+    .line 2482
     :cond_7
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1802(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1802(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_2
 
-    .line 2353
+    .line 2484
     :cond_8
-    invoke-virtual {v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1802(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1802(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
-    .line 2355
+    .line 2486
     :goto_2
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v2, :cond_a
+    if-nez v3, :cond_a
 
-    .line 2356
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2487
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v4, 0x80
+    and-int/lit16 v3, v3, 0x80
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_9
 
-    if-ne v2, v4, :cond_9
+    .line 2488
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 2357
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    move-result-object v3
 
-    move-result-object v2
+    iput-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
+    .line 2489
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2358
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    and-int/lit16 v3, v3, -0x81
 
-    and-int/lit16 v2, v2, -0x81
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2360
+    .line 2491
     :cond_9
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1902(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1902(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_3
 
-    .line 2362
+    .line 2493
     :cond_a
-    invoke-virtual {v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1902(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1902(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
-    .line 2364
+    .line 2495
     :goto_3
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    if-nez v2, :cond_c
+    if-nez v3, :cond_c
 
-    .line 2365
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    .line 2496
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v4, 0x100
+    and-int/lit16 v3, v3, 0x100
 
-    and-int/2addr v2, v4
+    if-eqz v3, :cond_b
 
-    if-ne v2, v4, :cond_b
+    .line 2497
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 2366
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    move-result-object v3
 
-    move-result-object v2
+    iput-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
+    .line 2498
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2367
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
+    and-int/lit16 v3, v3, -0x101
 
-    and-int/lit16 v2, v2, -0x101
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    iput v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
-
-    .line 2369
+    .line 2500
     :cond_b
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2002(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2002(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_4
 
-    .line 2371
+    .line 2502
     :cond_c
-    invoke-virtual {v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
+    invoke-virtual {v3}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2002(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2002(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/util/List;)Ljava/util/List;
 
     :goto_4
-    and-int/lit16 v2, v1, 0x200
+    and-int/lit16 v3, v1, 0x200
 
-    const/16 v4, 0x200
+    if-eqz v3, :cond_e
 
-    if-ne v2, v4, :cond_d
+    .line 2505
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    or-int/lit8 v3, v3, 0x4
+    if-nez v3, :cond_d
 
-    .line 2376
-    :cond_d
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
+    .line 2506
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    if-nez v2, :cond_e
-
-    .line 2377
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
-
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2102(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileOptions;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2102(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     goto :goto_5
 
-    .line 2379
-    :cond_e
-    invoke-virtual {v2}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
+    .line 2508
+    :cond_d
+    invoke-virtual {v3}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/google/protobuf/DescriptorProtos$FileOptions;
+    check-cast v3, Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2102(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileOptions;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2102(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     :goto_5
-    and-int/lit16 v2, v1, 0x400
+    or-int/lit8 v2, v2, 0x4
 
-    const/16 v4, 0x400
+    :cond_e
+    and-int/lit16 v3, v1, 0x400
 
-    if-ne v2, v4, :cond_f
+    if-eqz v3, :cond_10
 
-    or-int/lit8 v3, v3, 0x8
+    .line 2513
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 2384
-    :cond_f
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
+    if-nez v3, :cond_f
 
-    if-nez v2, :cond_10
+    .line 2514
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 2385
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
-
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2202(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2202(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     goto :goto_6
 
-    .line 2387
-    :cond_10
-    invoke-virtual {v2}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
+    .line 2516
+    :cond_f
+    invoke-virtual {v3}, Lcom/google/protobuf/SingleFieldBuilderV3;->build()Lcom/google/protobuf/AbstractMessage;
 
-    move-result-object v2
+    move-result-object v3
 
-    check-cast v2, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
+    check-cast v3, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2202(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2202(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     :goto_6
-    const/16 v2, 0x800
+    or-int/lit8 v2, v2, 0x8
 
-    and-int/2addr v1, v2
+    :cond_10
+    and-int/lit16 v1, v1, 0x800
 
-    if-ne v1, v2, :cond_11
+    if-eqz v1, :cond_11
 
-    or-int/lit8 v3, v3, 0x10
+    or-int/lit8 v2, v2, 0x10
 
-    .line 2392
+    .line 2523
     :cond_11
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2302(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2393
-    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2402(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;I)I
+    .line 2524
+    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2402(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;I)I
 
-    .line 2394
+    .line 2525
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onBuilt()V
 
     return-object v0
@@ -2602,7 +2510,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->buildPartial()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -2613,7 +2521,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->buildPartial()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -2624,7 +2532,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -2635,84 +2543,84 @@
 .method public clear()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 3
 
-    .line 2241
+    .line 2368
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     const-string v0, ""
 
-    .line 2242
+    .line 2369
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2243
+    .line 2370
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x2
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2244
+    .line 2371
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2245
+    .line 2372
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x3
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2246
+    .line 2373
     sget-object v1, Lcom/google/protobuf/LazyStringArrayList;->EMPTY:Lcom/google/protobuf/LazyStringList;
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2247
+    .line 2374
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x5
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2248
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 2375
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2249
+    .line 2376
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x9
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2250
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 2377
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2251
+    .line 2378
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x11
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2252
+    .line 2379
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v1, :cond_0
 
-    .line 2253
+    .line 2380
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 2254
+    .line 2381
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x21
@@ -2721,24 +2629,24 @@
 
     goto :goto_0
 
-    .line 2256
+    .line 2383
     :cond_0
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
-    .line 2258
+    .line 2385
     :goto_0
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v1, :cond_1
 
-    .line 2259
+    .line 2386
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 2260
+    .line 2387
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x41
@@ -2747,24 +2655,24 @@
 
     goto :goto_1
 
-    .line 2262
+    .line 2389
     :cond_1
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
-    .line 2264
+    .line 2391
     :goto_1
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v1, :cond_2
 
-    .line 2265
+    .line 2392
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 2266
+    .line 2393
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v1, v1, -0x81
@@ -2773,24 +2681,24 @@
 
     goto :goto_2
 
-    .line 2268
+    .line 2395
     :cond_2
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
-    .line 2270
+    .line 2397
     :goto_2
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v1, :cond_3
 
-    .line 2271
+    .line 2398
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 2272
+    .line 2399
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v1, v1, -0x101
@@ -2799,11 +2707,11 @@
 
     goto :goto_3
 
-    .line 2274
+    .line 2401
     :cond_3
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
-    .line 2276
+    .line 2403
     :goto_3
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
@@ -2811,16 +2719,16 @@
 
     if-nez v1, :cond_4
 
-    .line 2277
+    .line 2404
     iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     goto :goto_4
 
-    .line 2279
+    .line 2406
     :cond_4
     invoke-virtual {v1}, Lcom/google/protobuf/SingleFieldBuilderV3;->clear()Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 2281
+    .line 2408
     :goto_4
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -2828,21 +2736,21 @@
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2282
+    .line 2409
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v1, :cond_5
 
-    .line 2283
+    .line 2410
     iput-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     goto :goto_5
 
-    .line 2285
+    .line 2412
     :cond_5
     invoke-virtual {v1}, Lcom/google/protobuf/SingleFieldBuilderV3;->clear()Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 2287
+    .line 2414
     :goto_5
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -2850,10 +2758,10 @@
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2288
+    .line 2415
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 2289
+    .line 2416
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x801
@@ -2866,7 +2774,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -2877,7 +2785,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -2888,7 +2796,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -2899,19 +2807,19 @@
 .method public clearDependency()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 2949
+    .line 3119
     sget-object v0, Lcom/google/protobuf/LazyStringArrayList;->EMPTY:Lcom/google/protobuf/LazyStringList;
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2950
+    .line 3120
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x5
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2951
+    .line 3121
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -2920,31 +2828,31 @@
 .method public clearEnumType()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3632
+    .line 3830
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3633
+    .line 3831
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 3634
+    .line 3832
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 3635
+    .line 3833
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3637
+    .line 3835
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
@@ -2955,31 +2863,31 @@
 .method public clearExtension()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4112
+    .line 4310
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4113
+    .line 4311
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 4114
+    .line 4312
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x101
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 4115
+    .line 4313
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4117
+    .line 4315
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
@@ -2990,7 +2898,7 @@
 .method public clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 2408
+    .line 2542
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -3003,7 +2911,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -3014,7 +2922,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -3025,31 +2933,31 @@
 .method public clearMessageType()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3364
+    .line 3562
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3365
+    .line 3563
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 3366
+    .line 3564
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 3367
+    .line 3565
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3369
+    .line 3567
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
@@ -3060,14 +2968,14 @@
 .method public clearName()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 2720
+    .line 2866
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x2
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2721
+    .line 2867
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -3078,7 +2986,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2722
+    .line 2868
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -3087,7 +2995,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -3098,7 +3006,7 @@
 .method public clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 2412
+    .line 2547
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -3111,7 +3019,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -3122,7 +3030,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -3133,26 +3041,26 @@
 .method public clearOptions()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4272
+    .line 4472
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 4273
+    .line 4473
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    .line 4274
+    .line 4474
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4276
+    .line 4476
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->clear()Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4278
+    .line 4478
     :goto_0
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -3166,14 +3074,14 @@
 .method public clearPackage()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 2820
+    .line 2974
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x3
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2821
+    .line 2975
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -3184,7 +3092,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2822
+    .line 2976
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -3193,21 +3101,21 @@
 .method public clearPublicDependency()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3060
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 3245
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3061
+    .line 3246
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x9
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 3062
+    .line 3247
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -3216,31 +3124,31 @@
 .method public clearService()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3872
+    .line 4070
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3873
+    .line 4071
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 3874
+    .line 4072
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x81
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 3875
+    .line 4073
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3877
+    .line 4075
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
@@ -3251,26 +3159,26 @@
 .method public clearSourceCodeInfo()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4432
+    .line 4634
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 4433
+    .line 4635
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 4434
+    .line 4636
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4436
+    .line 4638
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->clear()Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4438
+    .line 4640
     :goto_0
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -3284,14 +3192,14 @@
 .method public clearSyntax()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4580
+    .line 4788
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x801
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 4581
+    .line 4789
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -3302,7 +3210,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 4582
+    .line 4790
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -3311,21 +3219,21 @@
 .method public clearWeakDependency()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3161
-    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
+    .line 3359
+    invoke-static {}, Lcom/google/protobuf/GeneratedMessageV3;->emptyIntList()Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 3162
+    .line 3360
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x11
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 3163
+    .line 3361
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -3334,7 +3242,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -3345,7 +3253,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -3356,7 +3264,7 @@
 .method public clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 2399
+    .line 2531
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -3369,7 +3277,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -3380,7 +3288,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -3391,7 +3299,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -3407,7 +3315,7 @@
         }
     .end annotation
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object v0
@@ -3418,7 +3326,7 @@
 .method public getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
     .locals 1
 
-    .line 2299
+    .line 2428
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -3429,7 +3337,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -3440,7 +3348,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -3451,7 +3359,7 @@
 .method public getDependency(I)Ljava/lang/String;
     .locals 1
 
-    .line 2879
+    .line 3039
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/LazyStringList;->get(I)Ljava/lang/Object;
@@ -3466,7 +3374,7 @@
 .method public getDependencyBytes(I)Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 2890
+    .line 3052
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/LazyStringList;->getByteString(I)Lcom/google/protobuf/ByteString;
@@ -3479,7 +3387,7 @@
 .method public getDependencyCount()I
     .locals 1
 
-    .line 2869
+    .line 3027
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0}, Lcom/google/protobuf/LazyStringList;->size()I
@@ -3492,7 +3400,7 @@
 .method public getDependencyList()Lcom/google/protobuf/ProtocolStringList;
     .locals 1
 
-    .line 2859
+    .line 3016
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0}, Lcom/google/protobuf/LazyStringList;->getUnmodifiableView()Lcom/google/protobuf/LazyStringList;
@@ -3505,7 +3413,7 @@
 .method public bridge synthetic getDependencyList()Ljava/util/List;
     .locals 1
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getDependencyList()Lcom/google/protobuf/ProtocolStringList;
 
     move-result-object v0
@@ -3516,7 +3424,7 @@
 .method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 2295
+    .line 2423
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$700()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -3527,12 +3435,12 @@
 .method public getEnumType(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
     .locals 1
 
-    .line 3515
+    .line 3713
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3516
+    .line 3714
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3543,7 +3451,7 @@
 
     return-object p1
 
-    .line 3518
+    .line 3716
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessage(I)Lcom/google/protobuf/AbstractMessage;
 
@@ -3557,7 +3465,7 @@
 .method public getEnumTypeBuilder(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;
     .locals 1
 
-    .line 3659
+    .line 3857
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -3582,7 +3490,7 @@
         }
     .end annotation
 
-    .line 3702
+    .line 3900
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -3597,12 +3505,12 @@
 .method public getEnumTypeCount()I
     .locals 1
 
-    .line 3505
+    .line 3703
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3506
+    .line 3704
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -3611,7 +3519,7 @@
 
     return v0
 
-    .line 3508
+    .line 3706
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getCount()I
 
@@ -3631,12 +3539,12 @@
         }
     .end annotation
 
-    .line 3495
+    .line 3693
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3496
+    .line 3694
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -3645,7 +3553,7 @@
 
     return-object v0
 
-    .line 3498
+    .line 3696
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageList()Ljava/util/List;
 
@@ -3657,12 +3565,12 @@
 .method public getEnumTypeOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProtoOrBuilder;
     .locals 1
 
-    .line 3666
+    .line 3864
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3667
+    .line 3865
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3673,7 +3581,7 @@
 
     return-object p1
 
-    .line 3668
+    .line 3866
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilder(I)Lcom/google/protobuf/MessageOrBuilder;
 
@@ -3696,19 +3604,19 @@
         }
     .end annotation
 
-    .line 3676
+    .line 3874
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 3677
+    .line 3875
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 
-    .line 3679
+    .line 3877
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
@@ -3722,12 +3630,12 @@
 .method public getExtension(I)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
     .locals 1
 
-    .line 3995
+    .line 4193
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3996
+    .line 4194
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3738,7 +3646,7 @@
 
     return-object p1
 
-    .line 3998
+    .line 4196
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessage(I)Lcom/google/protobuf/AbstractMessage;
 
@@ -3752,7 +3660,7 @@
 .method public getExtensionBuilder(I)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;
     .locals 1
 
-    .line 4139
+    .line 4337
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -3777,7 +3685,7 @@
         }
     .end annotation
 
-    .line 4182
+    .line 4380
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -3792,12 +3700,12 @@
 .method public getExtensionCount()I
     .locals 1
 
-    .line 3985
+    .line 4183
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3986
+    .line 4184
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -3806,7 +3714,7 @@
 
     return v0
 
-    .line 3988
+    .line 4186
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getCount()I
 
@@ -3826,12 +3734,12 @@
         }
     .end annotation
 
-    .line 3975
+    .line 4173
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3976
+    .line 4174
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -3840,7 +3748,7 @@
 
     return-object v0
 
-    .line 3978
+    .line 4176
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageList()Ljava/util/List;
 
@@ -3852,12 +3760,12 @@
 .method public getExtensionOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProtoOrBuilder;
     .locals 1
 
-    .line 4146
+    .line 4344
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4147
+    .line 4345
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3868,7 +3776,7 @@
 
     return-object p1
 
-    .line 4148
+    .line 4346
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilder(I)Lcom/google/protobuf/MessageOrBuilder;
 
@@ -3891,19 +3799,19 @@
         }
     .end annotation
 
-    .line 4156
+    .line 4354
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 4157
+    .line 4355
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 
-    .line 4159
+    .line 4357
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
@@ -3917,12 +3825,12 @@
 .method public getMessageType(I)Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
     .locals 1
 
-    .line 3215
+    .line 3413
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3216
+    .line 3414
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3933,7 +3841,7 @@
 
     return-object p1
 
-    .line 3218
+    .line 3416
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessage(I)Lcom/google/protobuf/AbstractMessage;
 
@@ -3947,7 +3855,7 @@
 .method public getMessageTypeBuilder(I)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;
     .locals 1
 
-    .line 3399
+    .line 3597
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -3972,7 +3880,7 @@
         }
     .end annotation
 
-    .line 3462
+    .line 3660
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -3987,12 +3895,12 @@
 .method public getMessageTypeCount()I
     .locals 1
 
-    .line 3201
+    .line 3399
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3202
+    .line 3400
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -4001,7 +3909,7 @@
 
     return v0
 
-    .line 3204
+    .line 3402
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getCount()I
 
@@ -4021,12 +3929,12 @@
         }
     .end annotation
 
-    .line 3187
+    .line 3385
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3188
+    .line 3386
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -4035,7 +3943,7 @@
 
     return-object v0
 
-    .line 3190
+    .line 3388
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageList()Ljava/util/List;
 
@@ -4047,12 +3955,12 @@
 .method public getMessageTypeOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$DescriptorProtoOrBuilder;
     .locals 1
 
-    .line 3410
+    .line 3608
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3411
+    .line 3609
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4063,7 +3971,7 @@
 
     return-object p1
 
-    .line 3412
+    .line 3610
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilder(I)Lcom/google/protobuf/MessageOrBuilder;
 
@@ -4086,19 +3994,19 @@
         }
     .end annotation
 
-    .line 3424
+    .line 3622
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 3425
+    .line 3623
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 
-    .line 3427
+    .line 3625
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
@@ -4112,36 +4020,36 @@
 .method public getName()Ljava/lang/String;
     .locals 2
 
-    .line 2662
+    .line 2804
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2663
+    .line 2805
     instance-of v1, v0, Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 2664
+    .line 2806
     check-cast v0, Lcom/google/protobuf/ByteString;
 
-    .line 2666
+    .line 2808
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2667
+    .line 2809
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2668
+    .line 2810
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
     :cond_0
     return-object v1
 
-    .line 2672
+    .line 2814
     :cond_1
     check-cast v0, Ljava/lang/String;
 
@@ -4151,28 +4059,28 @@
 .method public getNameBytes()Lcom/google/protobuf/ByteString;
     .locals 2
 
-    .line 2684
+    .line 2827
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2685
+    .line 2828
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 2686
+    .line 2829
     check-cast v0, Ljava/lang/String;
 
-    .line 2687
+    .line 2830
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    .line 2689
+    .line 2832
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
     return-object v0
 
-    .line 2692
+    .line 2835
     :cond_0
     check-cast v0, Lcom/google/protobuf/ByteString;
 
@@ -4182,12 +4090,12 @@
 .method public getOptions()Lcom/google/protobuf/DescriptorProtos$FileOptions;
     .locals 1
 
-    .line 4212
+    .line 4412
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 4213
+    .line 4413
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     if-nez v0, :cond_0
@@ -4199,7 +4107,7 @@
     :cond_0
     return-object v0
 
-    .line 4215
+    .line 4415
     :cond_1
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessage()Lcom/google/protobuf/AbstractMessage;
 
@@ -4213,17 +4121,17 @@
 .method public getOptionsBuilder()Lcom/google/protobuf/DescriptorProtos$FileOptions$Builder;
     .locals 1
 
-    .line 4285
+    .line 4485
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit16 v0, v0, 0x200
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 4286
+    .line 4486
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 4287
+    .line 4487
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getOptionsFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     move-result-object v0
@@ -4240,12 +4148,12 @@
 .method public getOptionsOrBuilder()Lcom/google/protobuf/DescriptorProtos$FileOptionsOrBuilder;
     .locals 1
 
-    .line 4293
+    .line 4493
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 4294
+    .line 4494
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessageOrBuilder()Lcom/google/protobuf/MessageOrBuilder;
 
     move-result-object v0
@@ -4254,13 +4162,13 @@
 
     return-object v0
 
-    .line 4296
+    .line 4496
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     if-nez v0, :cond_1
 
-    .line 4297
+    .line 4497
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileOptions;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     move-result-object v0
@@ -4272,36 +4180,36 @@
 .method public getPackage()Ljava/lang/String;
     .locals 2
 
-    .line 2762
+    .line 2912
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2763
+    .line 2913
     instance-of v1, v0, Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 2764
+    .line 2914
     check-cast v0, Lcom/google/protobuf/ByteString;
 
-    .line 2766
+    .line 2916
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2767
+    .line 2917
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2768
+    .line 2918
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
     :cond_0
     return-object v1
 
-    .line 2772
+    .line 2922
     :cond_1
     check-cast v0, Ljava/lang/String;
 
@@ -4311,28 +4219,28 @@
 .method public getPackageBytes()Lcom/google/protobuf/ByteString;
     .locals 2
 
-    .line 2784
+    .line 2935
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2785
+    .line 2936
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 2786
+    .line 2937
     check-cast v0, Ljava/lang/String;
 
-    .line 2787
+    .line 2938
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    .line 2789
+    .line 2940
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
     return-object v0
 
-    .line 2792
+    .line 2943
     :cond_0
     check-cast v0, Lcom/google/protobuf/ByteString;
 
@@ -4342,16 +4250,10 @@
 .method public getPublicDependency(I)I
     .locals 1
 
-    .line 3008
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 3185
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$IntList;->getInt(I)I
 
     move-result p1
 
@@ -4361,10 +4263,10 @@
 .method public getPublicDependencyCount()I
     .locals 1
 
-    .line 2998
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 3173
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-interface {v0}, Lcom/google/protobuf/Internal$IntList;->size()I
 
     move-result v0
 
@@ -4382,25 +4284,38 @@
         }
     .end annotation
 
-    .line 2988
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 3161
+    iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
+    and-int/lit8 v0, v0, 0x8
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
+
+    .line 3162
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
+
+    :goto_0
     return-object v0
 .end method
 
 .method public getService(I)Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
     .locals 1
 
-    .line 3755
+    .line 3953
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3756
+    .line 3954
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4411,7 +4326,7 @@
 
     return-object p1
 
-    .line 3758
+    .line 3956
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessage(I)Lcom/google/protobuf/AbstractMessage;
 
@@ -4425,7 +4340,7 @@
 .method public getServiceBuilder(I)Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;
     .locals 1
 
-    .line 3899
+    .line 4097
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -4450,7 +4365,7 @@
         }
     .end annotation
 
-    .line 3942
+    .line 4140
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -4465,12 +4380,12 @@
 .method public getServiceCount()I
     .locals 1
 
-    .line 3745
+    .line 3943
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3746
+    .line 3944
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -4479,7 +4394,7 @@
 
     return v0
 
-    .line 3748
+    .line 3946
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getCount()I
 
@@ -4499,12 +4414,12 @@
         }
     .end annotation
 
-    .line 3735
+    .line 3933
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3736
+    .line 3934
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -4513,7 +4428,7 @@
 
     return-object v0
 
-    .line 3738
+    .line 3936
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageList()Ljava/util/List;
 
@@ -4525,12 +4440,12 @@
 .method public getServiceOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProtoOrBuilder;
     .locals 1
 
-    .line 3906
+    .line 4104
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3907
+    .line 4105
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4541,7 +4456,7 @@
 
     return-object p1
 
-    .line 3908
+    .line 4106
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilder(I)Lcom/google/protobuf/MessageOrBuilder;
 
@@ -4564,19 +4479,19 @@
         }
     .end annotation
 
-    .line 3916
+    .line 4114
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 3917
+    .line 4115
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 
-    .line 3919
+    .line 4117
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
@@ -4590,12 +4505,12 @@
 .method public getSourceCodeInfo()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
     .locals 1
 
-    .line 4344
+    .line 4546
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 4345
+    .line 4547
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     if-nez v0, :cond_0
@@ -4607,7 +4522,7 @@
     :cond_0
     return-object v0
 
-    .line 4347
+    .line 4549
     :cond_1
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessage()Lcom/google/protobuf/AbstractMessage;
 
@@ -4621,17 +4536,17 @@
 .method public getSourceCodeInfoBuilder()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Builder;
     .locals 1
 
-    .line 4452
+    .line 4654
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit16 v0, v0, 0x400
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 4453
+    .line 4655
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 4454
+    .line 4656
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getSourceCodeInfoFieldBuilder()Lcom/google/protobuf/SingleFieldBuilderV3;
 
     move-result-object v0
@@ -4648,12 +4563,12 @@
 .method public getSourceCodeInfoOrBuilder()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfoOrBuilder;
     .locals 1
 
-    .line 4467
+    .line 4669
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 4468
+    .line 4670
     invoke-virtual {v0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessageOrBuilder()Lcom/google/protobuf/MessageOrBuilder;
 
     move-result-object v0
@@ -4662,13 +4577,13 @@
 
     return-object v0
 
-    .line 4470
+    .line 4672
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     if-nez v0, :cond_1
 
-    .line 4471
+    .line 4673
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     move-result-object v0
@@ -4680,36 +4595,36 @@
 .method public getSyntax()Ljava/lang/String;
     .locals 2
 
-    .line 4519
+    .line 4723
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 4520
+    .line 4724
     instance-of v1, v0, Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 4521
+    .line 4725
     check-cast v0, Lcom/google/protobuf/ByteString;
 
-    .line 4523
+    .line 4727
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->toStringUtf8()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4524
+    .line 4728
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->isValidUtf8()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4525
+    .line 4729
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
     :cond_0
     return-object v1
 
-    .line 4529
+    .line 4733
     :cond_1
     check-cast v0, Ljava/lang/String;
 
@@ -4719,28 +4634,28 @@
 .method public getSyntaxBytes()Lcom/google/protobuf/ByteString;
     .locals 2
 
-    .line 4542
+    .line 4747
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 4543
+    .line 4748
     instance-of v1, v0, Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 4544
+    .line 4749
     check-cast v0, Ljava/lang/String;
 
-    .line 4545
+    .line 4750
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    .line 4547
+    .line 4752
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
     return-object v0
 
-    .line 4550
+    .line 4755
     :cond_0
     check-cast v0, Lcom/google/protobuf/ByteString;
 
@@ -4750,16 +4665,10 @@
 .method public getWeakDependency(I)I
     .locals 1
 
-    .line 3105
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 3295
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-interface {v0, p1}, Lcom/google/protobuf/Internal$IntList;->getInt(I)I
 
     move-result p1
 
@@ -4769,10 +4678,10 @@
 .method public getWeakDependencyCount()I
     .locals 1
 
-    .line 3094
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 3282
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-interface {v0}, Lcom/google/protobuf/Internal$IntList;->size()I
 
     move-result v0
 
@@ -4790,27 +4699,40 @@
         }
     .end annotation
 
-    .line 3083
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 3269
+    iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
+    and-int/lit8 v0, v0, 0x10
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
+
+    .line 3270
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
+
+    :goto_0
     return-object v0
 .end method
 
 .method public hasName()Z
     .locals 2
 
-    .line 2652
+    .line 2793
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     const/4 v1, 0x1
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
@@ -4822,16 +4744,14 @@
 .end method
 
 .method public hasOptions()Z
-    .locals 2
+    .locals 1
 
-    .line 4206
+    .line 4405
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x200
+    and-int/lit16 v0, v0, 0x200
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -4845,16 +4765,14 @@
 .end method
 
 .method public hasPackage()Z
-    .locals 2
+    .locals 1
 
-    .line 2752
+    .line 2901
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/4 v1, 0x2
+    and-int/lit8 v0, v0, 0x2
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -4868,16 +4786,14 @@
 .end method
 
 .method public hasSourceCodeInfo()Z
-    .locals 2
+    .locals 1
 
-    .line 4331
+    .line 4532
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x400
+    and-int/lit16 v0, v0, 0x400
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -4891,16 +4807,14 @@
 .end method
 
 .method public hasSyntax()Z
-    .locals 2
+    .locals 1
 
-    .line 4508
+    .line 4711
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    const/16 v1, 0x800
+    and-int/lit16 v0, v0, 0x800
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -4916,7 +4830,7 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 2214
+    .line 2340
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$800()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -4925,7 +4839,7 @@
 
     const-class v2, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
-    .line 2215
+    .line 2341
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -4940,7 +4854,7 @@
 
     move v1, v0
 
-    .line 2596
+    .line 2735
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeCount()I
 
@@ -4948,7 +4862,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 2597
+    .line 2736
     invoke-virtual {p0, v1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageType(I)Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
 
     move-result-object v2
@@ -4969,7 +4883,7 @@
     :cond_1
     move v1, v0
 
-    .line 2601
+    .line 2740
     :goto_1
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeCount()I
 
@@ -4977,7 +4891,7 @@
 
     if-ge v1, v2, :cond_3
 
-    .line 2602
+    .line 2741
     invoke-virtual {p0, v1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumType(I)Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
 
     move-result-object v2
@@ -4998,7 +4912,7 @@
     :cond_3
     move v1, v0
 
-    .line 2606
+    .line 2745
     :goto_2
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceCount()I
 
@@ -5006,7 +4920,7 @@
 
     if-ge v1, v2, :cond_5
 
-    .line 2607
+    .line 2746
     invoke-virtual {p0, v1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getService(I)Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
 
     move-result-object v2
@@ -5027,7 +4941,7 @@
     :cond_5
     move v1, v0
 
-    .line 2611
+    .line 2750
     :goto_3
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionCount()I
 
@@ -5035,7 +4949,7 @@
 
     if-ge v1, v2, :cond_7
 
-    .line 2612
+    .line 2751
     invoke-virtual {p0, v1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtension(I)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
 
     move-result-object v2
@@ -5053,7 +4967,7 @@
 
     goto :goto_3
 
-    .line 2616
+    .line 2755
     :cond_7
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->hasOptions()Z
 
@@ -5061,7 +4975,7 @@
 
     if-eqz v1, :cond_8
 
-    .line 2617
+    .line 2756
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getOptions()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     move-result-object v1
@@ -5088,7 +5002,7 @@
         }
     .end annotation
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -5099,7 +5013,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -5115,7 +5029,7 @@
         }
     .end annotation
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -5133,7 +5047,7 @@
 
     const/4 v0, 0x0
 
-    .line 2630
+    .line 2770
     :try_start_0
     sget-object v1, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->PARSER:Lcom/google/protobuf/Parser;
 
@@ -5148,7 +5062,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2636
+    .line 2776
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     :cond_0
@@ -5162,7 +5076,7 @@
     :catch_0
     move-exception p1
 
-    .line 2632
+    .line 2772
     :try_start_1
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -5172,7 +5086,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2633
+    .line 2773
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -5190,9 +5104,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2636
+    .line 2776
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
+    .line 2778
     :cond_1
     throw p1
 .end method
@@ -5200,7 +5115,7 @@
 .method public mergeFrom(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 3
 
-    .line 2434
+    .line 2572
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     move-result-object v0
@@ -5209,7 +5124,7 @@
 
     return-object p0
 
-    .line 2435
+    .line 2573
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->hasName()Z
 
@@ -5217,24 +5132,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 2436
+    .line 2574
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2437
+    .line 2575
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1200(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2438
+    .line 2576
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 2440
+    .line 2578
     :cond_1
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->hasPackage()Z
 
@@ -5242,24 +5157,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 2441
+    .line 2579
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2442
+    .line 2580
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1300(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2443
+    .line 2581
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 2445
+    .line 2583
     :cond_2
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1400(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/LazyStringList;
 
@@ -5271,7 +5186,7 @@
 
     if-nez v0, :cond_4
 
-    .line 2446
+    .line 2584
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0}, Lcom/google/protobuf/LazyStringList;->isEmpty()Z
@@ -5280,14 +5195,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 2447
+    .line 2585
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1400(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/LazyStringList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
-    .line 2448
+    .line 2586
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x5
@@ -5296,11 +5211,11 @@
 
     goto :goto_0
 
-    .line 2450
+    .line 2588
     :cond_3
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureDependencyIsMutable()V
 
-    .line 2451
+    .line 2589
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1400(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/LazyStringList;
@@ -5309,39 +5224,39 @@
 
     invoke-interface {v0, v1}, Lcom/google/protobuf/LazyStringList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2453
+    .line 2591
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 2455
+    .line 2593
     :cond_4
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1500(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1500(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v0}, Lcom/google/protobuf/Internal$IntList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 2456
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 2594
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v0}, Lcom/google/protobuf/Internal$IntList;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 2457
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1500(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
+    .line 2595
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1500(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2458
+    .line 2596
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x9
@@ -5350,52 +5265,52 @@
 
     goto :goto_1
 
-    .line 2460
+    .line 2598
     :cond_5
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensurePublicDependencyIsMutable()V
 
-    .line 2461
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 2599
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1500(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1500(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {v0, v1}, Lcom/google/protobuf/Internal$IntList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2463
+    .line 2601
     :goto_1
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 2465
+    .line 2603
     :cond_6
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1600(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1600(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v0}, Lcom/google/protobuf/Internal$IntList;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_8
 
-    .line 2466
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 2604
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    invoke-interface {v0}, Lcom/google/protobuf/Internal$IntList;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    .line 2467
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1600(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
+    .line 2605
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1600(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    .line 2468
+    .line 2606
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x11
@@ -5404,24 +5319,24 @@
 
     goto :goto_2
 
-    .line 2470
+    .line 2608
     :cond_7
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureWeakDependencyIsMutable()V
 
-    .line 2471
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 2609
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1600(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1600(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+    invoke-interface {v0, v1}, Lcom/google/protobuf/Internal$IntList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2473
+    .line 2611
     :goto_2
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 2475
+    .line 2613
     :cond_8
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -5429,7 +5344,7 @@
 
     if-nez v0, :cond_a
 
-    .line 2476
+    .line 2614
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1700(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
@@ -5440,7 +5355,7 @@
 
     if-nez v0, :cond_d
 
-    .line 2477
+    .line 2615
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -5449,14 +5364,14 @@
 
     if-eqz v0, :cond_9
 
-    .line 2478
+    .line 2616
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1700(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 2479
+    .line 2617
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x21
@@ -5465,11 +5380,11 @@
 
     goto :goto_3
 
-    .line 2481
+    .line 2619
     :cond_9
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 2482
+    .line 2620
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1700(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
@@ -5478,13 +5393,13 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 2484
+    .line 2622
     :goto_3
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_5
 
-    .line 2487
+    .line 2625
     :cond_a
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1700(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
@@ -5496,7 +5411,7 @@
 
     if-nez v0, :cond_d
 
-    .line 2488
+    .line 2626
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
@@ -5505,34 +5420,34 @@
 
     if-eqz v0, :cond_c
 
-    .line 2489
+    .line 2627
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 2490
+    .line 2628
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2491
+    .line 2629
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1700(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
-    .line 2492
+    .line 2630
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2493
+    .line 2631
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v0, :cond_b
 
-    .line 2495
+    .line 2633
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getMessageTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -5547,7 +5462,7 @@
 
     goto :goto_5
 
-    .line 2497
+    .line 2635
     :cond_c
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -5557,14 +5472,14 @@
 
     invoke-virtual {v0, v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2501
+    .line 2639
     :cond_d
     :goto_5
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_f
 
-    .line 2502
+    .line 2640
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1800(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
@@ -5575,7 +5490,7 @@
 
     if-nez v0, :cond_12
 
-    .line 2503
+    .line 2641
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -5584,14 +5499,14 @@
 
     if-eqz v0, :cond_e
 
-    .line 2504
+    .line 2642
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1800(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 2505
+    .line 2643
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x41
@@ -5600,11 +5515,11 @@
 
     goto :goto_6
 
-    .line 2507
+    .line 2645
     :cond_e
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 2508
+    .line 2646
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1800(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
@@ -5613,13 +5528,13 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 2510
+    .line 2648
     :goto_6
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_8
 
-    .line 2513
+    .line 2651
     :cond_f
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1800(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
@@ -5631,7 +5546,7 @@
 
     if-nez v0, :cond_12
 
-    .line 2514
+    .line 2652
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
@@ -5640,34 +5555,34 @@
 
     if-eqz v0, :cond_11
 
-    .line 2515
+    .line 2653
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 2516
+    .line 2654
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2517
+    .line 2655
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1800(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
-    .line 2518
+    .line 2656
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2519
+    .line 2657
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v0, :cond_10
 
-    .line 2521
+    .line 2659
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getEnumTypeFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -5682,7 +5597,7 @@
 
     goto :goto_8
 
-    .line 2523
+    .line 2661
     :cond_11
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -5692,14 +5607,14 @@
 
     invoke-virtual {v0, v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2527
+    .line 2665
     :cond_12
     :goto_8
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_14
 
-    .line 2528
+    .line 2666
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1900(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
@@ -5710,7 +5625,7 @@
 
     if-nez v0, :cond_17
 
-    .line 2529
+    .line 2667
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -5719,14 +5634,14 @@
 
     if-eqz v0, :cond_13
 
-    .line 2530
+    .line 2668
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1900(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 2531
+    .line 2669
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x81
@@ -5735,11 +5650,11 @@
 
     goto :goto_9
 
-    .line 2533
+    .line 2671
     :cond_13
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 2534
+    .line 2672
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1900(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
@@ -5748,13 +5663,13 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 2536
+    .line 2674
     :goto_9
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_b
 
-    .line 2539
+    .line 2677
     :cond_14
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1900(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
@@ -5766,7 +5681,7 @@
 
     if-nez v0, :cond_17
 
-    .line 2540
+    .line 2678
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
@@ -5775,34 +5690,34 @@
 
     if-eqz v0, :cond_16
 
-    .line 2541
+    .line 2679
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 2542
+    .line 2680
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2543
+    .line 2681
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$1900(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
-    .line 2544
+    .line 2682
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x81
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2545
+    .line 2683
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v0, :cond_15
 
-    .line 2547
+    .line 2685
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getServiceFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -5817,7 +5732,7 @@
 
     goto :goto_b
 
-    .line 2549
+    .line 2687
     :cond_16
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -5827,14 +5742,14 @@
 
     invoke-virtual {v0, v2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2553
+    .line 2691
     :cond_17
     :goto_b
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_19
 
-    .line 2554
+    .line 2692
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2000(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
@@ -5845,7 +5760,7 @@
 
     if-nez v0, :cond_1c
 
-    .line 2555
+    .line 2693
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -5854,14 +5769,14 @@
 
     if-eqz v0, :cond_18
 
-    .line 2556
+    .line 2694
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2000(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 2557
+    .line 2695
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x101
@@ -5870,11 +5785,11 @@
 
     goto :goto_c
 
-    .line 2559
+    .line 2697
     :cond_18
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 2560
+    .line 2698
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2000(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
@@ -5883,13 +5798,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 2562
+    .line 2700
     :goto_c
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_d
 
-    .line 2565
+    .line 2703
     :cond_19
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2000(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
@@ -5901,7 +5816,7 @@
 
     if-nez v0, :cond_1c
 
-    .line 2566
+    .line 2704
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
@@ -5910,34 +5825,34 @@
 
     if-eqz v0, :cond_1b
 
-    .line 2567
+    .line 2705
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
-    .line 2568
+    .line 2706
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2569
+    .line 2707
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2000(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
-    .line 2570
+    .line 2708
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     and-int/lit16 v0, v0, -0x101
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2571
+    .line 2709
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v0, :cond_1a
 
-    .line 2573
+    .line 2711
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->getExtensionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v1
@@ -5947,7 +5862,7 @@
 
     goto :goto_d
 
-    .line 2575
+    .line 2713
     :cond_1b
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -5957,7 +5872,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 2579
+    .line 2717
     :cond_1c
     :goto_d
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->hasOptions()Z
@@ -5966,14 +5881,14 @@
 
     if-eqz v0, :cond_1d
 
-    .line 2580
+    .line 2718
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getOptions()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeOptions(Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
-    .line 2582
+    .line 2720
     :cond_1d
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->hasSourceCodeInfo()Z
 
@@ -5981,14 +5896,14 @@
 
     if-eqz v0, :cond_1e
 
-    .line 2583
+    .line 2721
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->getSourceCodeInfo()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeSourceCodeInfo(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
-    .line 2585
+    .line 2723
     :cond_1e
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->hasSyntax()Z
 
@@ -5996,30 +5911,30 @@
 
     if-eqz v0, :cond_1f
 
-    .line 2586
+    .line 2724
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit16 v0, v0, 0x800
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2587
+    .line 2725
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->access$2300(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 2588
+    .line 2726
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
-    .line 2590
+    .line 2728
     :cond_1f
     iget-object p1, p1, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
-    .line 2591
+    .line 2729
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -6028,12 +5943,12 @@
 .method public mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 2425
+    .line 2563
     instance-of v0, p1, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     if-eqz v0, :cond_0
 
-    .line 2426
+    .line 2564
     check-cast p1, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
@@ -6042,7 +5957,7 @@
 
     return-object p1
 
-    .line 2428
+    .line 2566
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -6057,7 +5972,7 @@
         }
     .end annotation
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6068,7 +5983,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6084,7 +5999,7 @@
         }
     .end annotation
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6093,37 +6008,35 @@
 .end method
 
 .method public mergeOptions(Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
-    .locals 3
+    .locals 2
 
-    .line 4252
+    .line 4452
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
-
-    const/16 v1, 0x200
 
     if-nez v0, :cond_1
 
-    .line 4253
+    .line 4453
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    and-int/2addr v0, v1
+    and-int/lit16 v0, v0, 0x200
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     if-eqz v0, :cond_0
 
-    .line 4255
+    .line 4455
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileOptions;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eq v0, v2, :cond_0
+    if-eq v0, v1, :cond_0
 
-    .line 4256
+    .line 4456
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    .line 4257
+    .line 4457
     invoke-static {v0}, Lcom/google/protobuf/DescriptorProtos$FileOptions;->newBuilder(Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileOptions$Builder;
 
     move-result-object v0
@@ -6140,25 +6053,25 @@
 
     goto :goto_0
 
-    .line 4259
+    .line 4459
     :cond_0
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    .line 4261
+    .line 4461
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_1
 
-    .line 4263
+    .line 4463
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/SingleFieldBuilderV3;->mergeFrom(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4265
+    .line 4465
     :goto_1
     iget p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr p1, v1
+    or-int/lit16 p1, p1, 0x200
 
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -6166,37 +6079,35 @@
 .end method
 
 .method public mergeSourceCodeInfo(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
-    .locals 3
+    .locals 2
 
-    .line 4405
+    .line 4607
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
-
-    const/16 v1, 0x400
 
     if-nez v0, :cond_1
 
-    .line 4406
+    .line 4608
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    and-int/2addr v0, v1
+    and-int/lit16 v0, v0, 0x400
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     if-eqz v0, :cond_0
 
-    .line 4408
+    .line 4610
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eq v0, v2, :cond_0
+    if-eq v0, v1, :cond_0
 
-    .line 4409
+    .line 4611
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 4410
+    .line 4612
     invoke-static {v0}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;->newBuilder(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Builder;
 
     move-result-object v0
@@ -6213,25 +6124,25 @@
 
     goto :goto_0
 
-    .line 4412
+    .line 4614
     :cond_0
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 4414
+    .line 4616
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_1
 
-    .line 4416
+    .line 4618
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/SingleFieldBuilderV3;->mergeFrom(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4418
+    .line 4620
     :goto_1
     iget p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    or-int/2addr p1, v1
+    or-int/lit16 p1, p1, 0x400
 
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -6241,7 +6152,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6252,7 +6163,7 @@
 .method public final mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 4610
+    .line 4822
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -6265,7 +6176,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6276,7 +6187,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6287,25 +6198,25 @@
 .method public removeEnumType(I)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3645
+    .line 3843
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3646
+    .line 3844
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3647
+    .line 3845
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 3648
+    .line 3846
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3650
+    .line 3848
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->remove(I)V
 
@@ -6316,25 +6227,25 @@
 .method public removeExtension(I)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4125
+    .line 4323
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4126
+    .line 4324
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4127
+    .line 4325
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 4128
+    .line 4326
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4130
+    .line 4328
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->remove(I)V
 
@@ -6345,25 +6256,25 @@
 .method public removeMessageType(I)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3381
+    .line 3579
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3382
+    .line 3580
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3383
+    .line 3581
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 3384
+    .line 3582
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3386
+    .line 3584
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->remove(I)V
 
@@ -6374,25 +6285,25 @@
 .method public removeService(I)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3885
+    .line 4083
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3886
+    .line 4084
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3887
+    .line 4085
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 3888
+    .line 4086
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3890
+    .line 4088
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->remove(I)V
 
@@ -6405,20 +6316,20 @@
 
     if-eqz p2, :cond_0
 
-    .line 2904
+    .line 3069
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureDependencyIsMutable()V
 
-    .line 2905
+    .line 3070
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->dependency_:Lcom/google/protobuf/LazyStringList;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/LazyStringList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 2906
+    .line 3071
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2902
+    .line 3067
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6430,15 +6341,15 @@
 .method public setEnumType(ILcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3543
+    .line 3741
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3544
+    .line 3742
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3545
+    .line 3743
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
@@ -6447,12 +6358,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3546
+    .line 3744
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3548
+    .line 3746
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;
 
@@ -6467,27 +6378,27 @@
 .method public setEnumType(ILcom/google/protobuf/DescriptorProtos$EnumDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3526
+    .line 3724
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 3530
+    .line 3728
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureEnumTypeIsMutable()V
 
-    .line 3531
+    .line 3729
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->enumType_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3532
+    .line 3730
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3528
+    .line 3726
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6495,7 +6406,7 @@
 
     throw p1
 
-    .line 3534
+    .line 3732
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->setMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -6506,15 +6417,15 @@
 .method public setExtension(ILcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4023
+    .line 4221
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4024
+    .line 4222
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4025
+    .line 4223
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
@@ -6523,12 +6434,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 4026
+    .line 4224
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4028
+    .line 4226
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;
 
@@ -6543,27 +6454,27 @@
 .method public setExtension(ILcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4006
+    .line 4204
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extensionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 4010
+    .line 4208
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureExtensionIsMutable()V
 
-    .line 4011
+    .line 4209
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->extension_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 4012
+    .line 4210
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4008
+    .line 4206
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6571,7 +6482,7 @@
 
     throw p1
 
-    .line 4014
+    .line 4212
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->setMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -6582,7 +6493,7 @@
 .method public setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 2404
+    .line 2537
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -6595,7 +6506,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6606,7 +6517,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6617,15 +6528,15 @@
 .method public setMessageType(ILcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3251
+    .line 3449
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3252
+    .line 3450
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3253
+    .line 3451
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
@@ -6634,12 +6545,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3254
+    .line 3452
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3256
+    .line 3454
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$DescriptorProto;
 
@@ -6654,27 +6565,27 @@
 .method public setMessageType(ILcom/google/protobuf/DescriptorProtos$DescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3230
+    .line 3428
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageTypeBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 3234
+    .line 3432
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureMessageTypeIsMutable()V
 
-    .line 3235
+    .line 3433
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->messageType_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3236
+    .line 3434
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3232
+    .line 3430
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6682,7 +6593,7 @@
 
     throw p1
 
-    .line 3238
+    .line 3436
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->setMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -6695,22 +6606,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 2707
+    .line 2852
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2708
+    .line 2853
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2709
+    .line 2854
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2705
+    .line 2850
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6724,22 +6635,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 2737
+    .line 2885
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2738
+    .line 2886
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->name_:Ljava/lang/Object;
 
-    .line 2739
+    .line 2887
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2735
+    .line 2883
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6751,24 +6662,24 @@
 .method public setOptions(Lcom/google/protobuf/DescriptorProtos$FileOptions$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4239
+    .line 4439
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4240
+    .line 4440
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileOptions$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    .line 4241
+    .line 4441
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4243
+    .line 4443
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FileOptions$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
@@ -6776,7 +6687,7 @@
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/SingleFieldBuilderV3;->setMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4245
+    .line 4445
     :goto_0
     iget p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -6790,22 +6701,22 @@
 .method public setOptions(Lcom/google/protobuf/DescriptorProtos$FileOptions;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4222
+    .line 4422
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->optionsBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 4226
+    .line 4426
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->options_:Lcom/google/protobuf/DescriptorProtos$FileOptions;
 
-    .line 4227
+    .line 4427
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4224
+    .line 4424
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6813,11 +6724,11 @@
 
     throw p1
 
-    .line 4229
+    .line 4429
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/SingleFieldBuilderV3;->setMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4231
+    .line 4431
     :goto_0
     iget p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -6833,22 +6744,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 2807
+    .line 2960
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2808
+    .line 2961
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2809
+    .line 2962
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2805
+    .line 2958
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6862,22 +6773,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 2837
+    .line 2993
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 2838
+    .line 2994
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->package_:Ljava/lang/Object;
 
-    .line 2839
+    .line 2995
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 2835
+    .line 2991
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -6889,19 +6800,15 @@
 .method public setPublicDependency(II)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3019
+    .line 3199
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensurePublicDependencyIsMutable()V
 
-    .line 3020
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Ljava/util/List;
+    .line 3200
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->publicDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Internal$IntList;->setInt(II)I
 
-    move-result-object p2
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    .line 3021
+    .line 3201
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
@@ -6910,7 +6817,7 @@
 .method public setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 2417
+    .line 2553
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -6923,7 +6830,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6934,7 +6841,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -6945,15 +6852,15 @@
 .method public setService(ILcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3783
+    .line 3981
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 3784
+    .line 3982
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3785
+    .line 3983
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
@@ -6962,12 +6869,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3786
+    .line 3984
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3788
+    .line 3986
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto$Builder;->build()Lcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;
 
@@ -6982,27 +6889,27 @@
 .method public setService(ILcom/google/protobuf/DescriptorProtos$ServiceDescriptorProto;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3766
+    .line 3964
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->serviceBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 3770
+    .line 3968
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureServiceIsMutable()V
 
-    .line 3771
+    .line 3969
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->service_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 3772
+    .line 3970
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 3768
+    .line 3966
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -7010,7 +6917,7 @@
 
     throw p1
 
-    .line 3774
+    .line 3972
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->setMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -7021,24 +6928,24 @@
 .method public setSourceCodeInfo(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Builder;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4385
+    .line 4587
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 4386
+    .line 4588
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Builder;->build()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 4387
+    .line 4589
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4389
+    .line 4591
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo$Builder;->build()Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
@@ -7046,7 +6953,7 @@
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/SingleFieldBuilderV3;->setMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4391
+    .line 4593
     :goto_0
     iget p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -7060,22 +6967,22 @@
 .method public setSourceCodeInfo(Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 4361
+    .line 4563
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfoBuilder_:Lcom/google/protobuf/SingleFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 4365
+    .line 4567
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->sourceCodeInfo_:Lcom/google/protobuf/DescriptorProtos$SourceCodeInfo;
 
-    .line 4366
+    .line 4568
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 4363
+    .line 4565
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -7083,11 +6990,11 @@
 
     throw p1
 
-    .line 4368
+    .line 4570
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/SingleFieldBuilderV3;->setMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/SingleFieldBuilderV3;
 
-    .line 4370
+    .line 4572
     :goto_0
     iget p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
@@ -7103,22 +7010,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 4566
+    .line 4773
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit16 v0, v0, 0x800
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 4567
+    .line 4774
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 4568
+    .line 4775
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 4564
+    .line 4771
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -7132,22 +7039,22 @@
 
     if-eqz p1, :cond_0
 
-    .line 4598
+    .line 4808
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
     or-int/lit16 v0, v0, 0x800
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->bitField0_:I
 
-    .line 4599
+    .line 4809
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->syntax_:Ljava/lang/Object;
 
-    .line 4600
+    .line 4810
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0
 
-    .line 4596
+    .line 4806
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -7159,7 +7066,7 @@
 .method public final setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 0
 
-    .line 4605
+    .line 4816
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -7172,7 +7079,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -7183,7 +7090,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2203
+    .line 2328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
 
     move-result-object p1
@@ -7194,19 +7101,15 @@
 .method public setWeakDependency(II)Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;
     .locals 1
 
-    .line 3117
+    .line 3310
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->ensureWeakDependencyIsMutable()V
 
-    .line 3118
-    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Ljava/util/List;
+    .line 3311
+    iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->weakDependency_:Lcom/google/protobuf/Internal$IntList;
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Internal$IntList;->setInt(II)I
 
-    move-result-object p2
-
-    invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    .line 3119
+    .line 3312
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto$Builder;->onChanged()V
 
     return-object p0

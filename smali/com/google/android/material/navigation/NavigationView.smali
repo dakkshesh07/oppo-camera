@@ -148,14 +148,14 @@
     move v3, p3
 
     .line 134
-    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/as;
+    invoke-static/range {v0 .. v5}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/ar;
 
     move-result-object p2
 
     .line 141
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_android_background:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -164,11 +164,11 @@
     .line 142
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_android_background:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
-    invoke-static {p0, p3}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p3}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 147
     :cond_0
@@ -222,13 +222,13 @@
     invoke-virtual {v0, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->initializeElevationOverlay(Landroid/content/Context;)V
 
     .line 155
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 158
     :cond_3
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_elevation:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -237,7 +237,7 @@
     .line 159
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_elevation:I
 
-    invoke-virtual {p2, p3, v6}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, p3, v6}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result p3
 
@@ -249,7 +249,7 @@
     :cond_4
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_android_fitsSystemWindows:I
 
-    invoke-virtual {p2, p3, v6}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {p2, p3, v6}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result p3
 
@@ -258,7 +258,7 @@
     .line 163
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_android_maxWidth:I
 
-    invoke-virtual {p2, p3, v6}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, p3, v6}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result p3
 
@@ -267,7 +267,7 @@
     .line 166
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_itemIconTint:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
@@ -276,7 +276,7 @@
     .line 167
     sget p3, Lcom/google/android/material/R$styleable;->NavigationView_itemIconTint:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
 
@@ -294,7 +294,7 @@
     :goto_0
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemTextAppearance:I
 
-    invoke-virtual {p2, v0}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, v0}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v0
 
@@ -305,7 +305,7 @@
     .line 175
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemTextAppearance:I
 
-    invoke-virtual {p2, v0, v6}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, v0, v6}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v0
 
@@ -324,7 +324,7 @@
     :goto_1
     sget v3, Lcom/google/android/material/R$styleable;->NavigationView_itemIconSize:I
 
-    invoke-virtual {p2, v3}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, v3}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v3
 
@@ -333,7 +333,7 @@
     .line 180
     sget v3, Lcom/google/android/material/R$styleable;->NavigationView_itemIconSize:I
 
-    invoke-virtual {p2, v3, v6}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, v3, v6}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v3
 
@@ -345,7 +345,7 @@
     .line 184
     sget v4, Lcom/google/android/material/R$styleable;->NavigationView_itemTextColor:I
 
-    invoke-virtual {p2, v4}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, v4}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v4
 
@@ -354,7 +354,7 @@
     .line 185
     sget v3, Lcom/google/android/material/R$styleable;->NavigationView_itemTextColor:I
 
-    invoke-virtual {p2, v3}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p2, v3}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v3
 
@@ -374,21 +374,21 @@
     :cond_9
     sget v4, Lcom/google/android/material/R$styleable;->NavigationView_itemBackground:I
 
-    invoke-virtual {p2, v4}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p2, v4}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
     if-nez v4, :cond_a
 
     .line 196
-    invoke-direct {p0, p2}, Lcom/google/android/material/navigation/NavigationView;->hasShapeAppearance(Landroidx/appcompat/widget/as;)Z
+    invoke-direct {p0, p2}, Lcom/google/android/material/navigation/NavigationView;->hasShapeAppearance(Landroidx/appcompat/widget/ar;)Z
 
     move-result v5
 
     if-eqz v5, :cond_a
 
     .line 197
-    invoke-direct {p0, p2}, Lcom/google/android/material/navigation/NavigationView;->createDefaultItemBackground(Landroidx/appcompat/widget/as;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0, p2}, Lcom/google/android/material/navigation/NavigationView;->createDefaultItemBackground(Landroidx/appcompat/widget/ar;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -396,7 +396,7 @@
     :cond_a
     sget v5, Lcom/google/android/material/R$styleable;->NavigationView_itemHorizontalPadding:I
 
-    invoke-virtual {p2, v5}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, v5}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v5
 
@@ -406,7 +406,7 @@
     sget v5, Lcom/google/android/material/R$styleable;->NavigationView_itemHorizontalPadding:I
 
     .line 202
-    invoke-virtual {p2, v5, v6}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, v5, v6}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v5
 
@@ -420,14 +420,14 @@
     sget v5, Lcom/google/android/material/R$styleable;->NavigationView_itemIconPadding:I
 
     .line 206
-    invoke-virtual {p2, v5, v6}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p2, v5, v6}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v5
 
     .line 208
     sget v7, Lcom/google/android/material/R$styleable;->NavigationView_itemMaxLines:I
 
-    invoke-virtual {p2, v7, v1}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {p2, v7, v1}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v7
 
@@ -512,7 +512,7 @@
     .line 233
     sget p1, Lcom/google/android/material/R$styleable;->NavigationView_menu:I
 
-    invoke-virtual {p2, p1}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p1}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p1
 
@@ -521,7 +521,7 @@
     .line 234
     sget p1, Lcom/google/android/material/R$styleable;->NavigationView_menu:I
 
-    invoke-virtual {p2, p1, v6}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p1, v6}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p1
 
@@ -531,7 +531,7 @@
     :cond_d
     sget p1, Lcom/google/android/material/R$styleable;->NavigationView_headerLayout:I
 
-    invoke-virtual {p2, p1}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p2, p1}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p1
 
@@ -540,7 +540,7 @@
     .line 238
     sget p1, Lcom/google/android/material/R$styleable;->NavigationView_headerLayout:I
 
-    invoke-virtual {p2, p1, v6}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p1, v6}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p1
 
@@ -548,7 +548,7 @@
 
     .line 241
     :cond_e
-    invoke-virtual {p2}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p2}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 243
     invoke-direct {p0}, Lcom/google/android/material/navigation/NavigationView;->setupInsetScrimsListener()V
@@ -688,7 +688,7 @@
     return-object v3
 .end method
 
-.method private final createDefaultItemBackground(Landroidx/appcompat/widget/as;)Landroid/graphics/drawable/Drawable;
+.method private final createDefaultItemBackground(Landroidx/appcompat/widget/ar;)Landroid/graphics/drawable/Drawable;
     .locals 9
 
     .line 282
@@ -696,7 +696,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v0
 
@@ -704,7 +704,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeAppearanceOverlay:I
 
     .line 284
-    invoke-virtual {p1, v2, v1}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p1, v2, v1}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v2
 
@@ -736,7 +736,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeFillColor:I
 
     .line 291
-    invoke-static {v0, p1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
@@ -746,28 +746,28 @@
     .line 294
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeInsetStart:I
 
-    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v5
 
     .line 295
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeInsetTop:I
 
-    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v6
 
     .line 296
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeInsetEnd:I
 
-    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v7
 
     .line 297
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeInsetBottom:I
 
-    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p1, v0, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v8
 
@@ -807,13 +807,13 @@
     return-object v0
 .end method
 
-.method private hasShapeAppearance(Landroidx/appcompat/widget/as;)Z
+.method private hasShapeAppearance(Landroidx/appcompat/widget/ar;)Z
     .locals 1
 
     .line 255
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeAppearance:I
 
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v0
 
@@ -822,7 +822,7 @@
     sget v0, Lcom/google/android/material/R$styleable;->NavigationView_itemShapeAppearanceOverlay:I
 
     .line 256
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p1
 
@@ -1102,13 +1102,15 @@
     return-void
 .end method
 
-.method protected onInsetsChanged(Landroidx/core/g/ae;)V
+.method protected onInsetsChanged(Landroidx/core/f/ae;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 354
     iget-object v0, p0, Lcom/google/android/material/navigation/NavigationView;->presenter:Lcom/google/android/material/internal/NavigationMenuPresenter;
 
-    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->dispatchApplyWindowInsets(Landroidx/core/g/ae;)V
+    invoke-virtual {v0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter;->dispatchApplyWindowInsets(Landroidx/core/f/ae;)V
 
     return-void
 .end method
@@ -1338,7 +1340,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

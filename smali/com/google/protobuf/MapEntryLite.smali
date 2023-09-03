@@ -126,7 +126,7 @@
         }
     .end annotation
 
-    .line 117
+    .line 114
     iget-object v0, p0, Lcom/google/protobuf/MapEntryLite$Metadata;->keyType:Lcom/google/protobuf/WireFormat$FieldType;
 
     const/4 v1, 0x1
@@ -139,7 +139,7 @@
 
     const/4 v0, 0x2
 
-    .line 118
+    .line 115
     invoke-static {p0, v0, p2}, Lcom/google/protobuf/FieldSet;->computeElementSize(Lcom/google/protobuf/WireFormat$FieldType;ILjava/lang/Object;)I
 
     move-result p0
@@ -167,7 +167,7 @@
         }
     .end annotation
 
-    .line 106
+    .line 104
     new-instance v0, Lcom/google/protobuf/MapEntryLite;
 
     invoke-direct {v0, p0, p1, p2, p3}, Lcom/google/protobuf/MapEntryLite;-><init>(Lcom/google/protobuf/WireFormat$FieldType;Ljava/lang/Object;Lcom/google/protobuf/WireFormat$FieldType;Ljava/lang/Object;)V
@@ -394,14 +394,14 @@
         }
     .end annotation
 
-    .line 112
+    .line 109
     iget-object v0, p1, Lcom/google/protobuf/MapEntryLite$Metadata;->keyType:Lcom/google/protobuf/WireFormat$FieldType;
 
     const/4 v1, 0x1
 
     invoke-static {p0, v0, v1, p2}, Lcom/google/protobuf/FieldSet;->writeElement(Lcom/google/protobuf/CodedOutputStream;Lcom/google/protobuf/WireFormat$FieldType;ILjava/lang/Object;)V
 
-    .line 113
+    .line 110
     iget-object p1, p1, Lcom/google/protobuf/MapEntryLite$Metadata;->valueType:Lcom/google/protobuf/WireFormat$FieldType;
 
     const/4 p2, 0x2
@@ -453,6 +453,22 @@
 
     .line 88
     iget-object v0, p0, Lcom/google/protobuf/MapEntryLite;->key:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method getMetadata()Lcom/google/protobuf/MapEntryLite$Metadata;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/google/protobuf/MapEntryLite$Metadata<",
+            "TK;TV;>;"
+        }
+    .end annotation
+
+    .line 229
+    iget-object v0, p0, Lcom/google/protobuf/MapEntryLite;->metadata:Lcom/google/protobuf/MapEntryLite$Metadata;
 
     return-object v0
 .end method

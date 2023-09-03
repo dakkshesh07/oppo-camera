@@ -44,7 +44,7 @@
 
     const v1, 0x1010091
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -82,7 +82,7 @@
 
     sget v2, Landroidx/preference/R$styleable;->ListPreference_android_entries:I
 
-    invoke-static {v0, v1, v2}, Landroidx/core/content/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
+    invoke-static {v0, v1, v2}, Landroidx/core/a/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
 
     sget v2, Landroidx/preference/R$styleable;->ListPreference_android_entryValues:I
 
-    invoke-static {v0, v1, v2}, Landroidx/core/content/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
+    invoke-static {v0, v1, v2}, Landroidx/core/a/a/g;->d(Landroid/content/res/TypedArray;II)[Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -106,7 +106,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {v0, v1, v2, v3}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result v1
 
@@ -135,7 +135,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_summary:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 

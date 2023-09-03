@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)V
     .locals 0
 
-    .line 182
+    .line 185
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public a()V
     .locals 1
 
-    .line 185
+    .line 188
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
@@ -53,7 +53,7 @@
 .method public a(Lcom/oppo/camera/ui/menu/levelcontrol/g;)V
     .locals 1
 
-    .line 190
+    .line 193
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
@@ -62,7 +62,7 @@
 
     invoke-interface {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->a(Lcom/oppo/camera/ui/menu/levelcontrol/g;)V
 
-    .line 192
+    .line 195
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/g;
@@ -75,10 +75,10 @@
 
     if-nez p1, :cond_0
 
-    .line 193
+    .line 196
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/gl/l;
+    invoke-static {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/gl/m;
 
     move-result-object p1
 
@@ -86,7 +86,7 @@
 
     invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4$1;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;)V
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/l;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/m;->a(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void

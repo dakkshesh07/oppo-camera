@@ -40,8 +40,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/coloros/anim/a/b/a<",
-            "Lcom/coloros/anim/g/d;",
-            "Lcom/coloros/anim/g/d;",
+            "Lcom/coloros/anim/e/d;",
+            "Lcom/coloros/anim/e/d;",
             ">;"
         }
     .end annotation
@@ -97,7 +97,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/c/a/l;)V
+.method public constructor <init>(Lcom/coloros/anim/model/a/l;)V
     .locals 2
 
     .line 55
@@ -111,7 +111,7 @@
     iput-object v0, p0, Lcom/coloros/anim/a/b/o;->a:Landroid/graphics/Matrix;
 
     .line 56
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->a()Lcom/coloros/anim/c/a/e;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->a()Lcom/coloros/anim/model/a/e;
 
     move-result-object v0
 
@@ -124,11 +124,11 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->a()Lcom/coloros/anim/c/a/e;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->a()Lcom/coloros/anim/model/a/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/e;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/e;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -136,7 +136,7 @@
     iput-object v0, p0, Lcom/coloros/anim/a/b/o;->f:Lcom/coloros/anim/a/b/a;
 
     .line 57
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->b()Lcom/coloros/anim/c/a/m;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->b()Lcom/coloros/anim/model/a/m;
 
     move-result-object v0
 
@@ -147,11 +147,11 @@
     goto :goto_1
 
     :cond_1
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->b()Lcom/coloros/anim/c/a/m;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->b()Lcom/coloros/anim/model/a/m;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/coloros/anim/c/a/m;->a()Lcom/coloros/anim/a/b/a;
+    invoke-interface {v0}, Lcom/coloros/anim/model/a/m;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
     iput-object v0, p0, Lcom/coloros/anim/a/b/o;->g:Lcom/coloros/anim/a/b/a;
 
     .line 58
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->c()Lcom/coloros/anim/c/a/g;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->c()Lcom/coloros/anim/model/a/g;
 
     move-result-object v0
 
@@ -170,11 +170,11 @@
     goto :goto_2
 
     :cond_2
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->c()Lcom/coloros/anim/c/a/g;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->c()Lcom/coloros/anim/model/a/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/g;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/g;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
     iput-object v0, p0, Lcom/coloros/anim/a/b/o;->h:Lcom/coloros/anim/a/b/a;
 
     .line 59
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->d()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->d()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
@@ -193,11 +193,11 @@
     goto :goto_3
 
     :cond_3
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->d()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->d()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -205,7 +205,7 @@
     iput-object v0, p0, Lcom/coloros/anim/a/b/o;->i:Lcom/coloros/anim/a/b/a;
 
     .line 60
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->h()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->h()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
@@ -216,11 +216,11 @@
     goto :goto_4
 
     :cond_4
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->h()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->h()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -279,7 +279,7 @@
 
     .line 72
     :goto_5
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->i()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->i()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
@@ -290,11 +290,11 @@
     goto :goto_6
 
     :cond_6
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->i()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->i()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -304,18 +304,18 @@
     iput-object v0, p0, Lcom/coloros/anim/a/b/o;->l:Lcom/coloros/anim/a/b/c;
 
     .line 73
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->e()Lcom/coloros/anim/c/a/d;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->e()Lcom/coloros/anim/model/a/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
     .line 74
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->e()Lcom/coloros/anim/c/a/d;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->e()Lcom/coloros/anim/model/a/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/d;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/d;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -323,18 +323,18 @@
 
     .line 76
     :cond_7
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->f()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->f()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_8
 
     .line 77
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->f()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->f()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
@@ -348,18 +348,18 @@
 
     .line 81
     :goto_7
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->g()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->g()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
     .line 82
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/l;->g()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/l;->g()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -594,65 +594,65 @@
     return-void
 .end method
 
-.method public a(Lcom/coloros/anim/c/c/a;)V
+.method public a(Lcom/coloros/anim/model/layer/a;)V
     .locals 1
 
     .line 89
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->j:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 90
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->m:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 91
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->n:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 93
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->f:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 94
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->g:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 95
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->h:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 96
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->i:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 97
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->k:Lcom/coloros/anim/a/b/c;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 98
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->l:Lcom/coloros/anim/a/b/c;
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Lcom/coloros/anim/g/b;)Z
+.method public a(Ljava/lang/Object;Lcom/coloros/anim/e/b;)Z
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TT;>;)Z"
         }
     .end annotation
@@ -674,7 +674,7 @@
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->f:Lcom/coloros/anim/a/b/a;
 
@@ -682,7 +682,7 @@
 
     .line 286
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto/16 :goto_0
 
@@ -704,7 +704,7 @@
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->g:Lcom/coloros/anim/a/b/a;
 
@@ -712,13 +712,13 @@
 
     .line 292
     :cond_2
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto/16 :goto_0
 
     .line 294
     :cond_3
-    sget-object v0, Lcom/coloros/anim/d;->i:Lcom/coloros/anim/g/d;
+    sget-object v0, Lcom/coloros/anim/d;->i:Lcom/coloros/anim/e/d;
 
     if-ne p1, v0, :cond_5
 
@@ -730,11 +730,11 @@
     .line 296
     new-instance p1, Lcom/coloros/anim/a/b/p;
 
-    new-instance v0, Lcom/coloros/anim/g/d;
+    new-instance v0, Lcom/coloros/anim/e/d;
 
-    invoke-direct {v0}, Lcom/coloros/anim/g/d;-><init>()V
+    invoke-direct {v0}, Lcom/coloros/anim/e/d;-><init>()V
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->h:Lcom/coloros/anim/a/b/a;
 
@@ -742,7 +742,7 @@
 
     .line 298
     :cond_4
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto/16 :goto_0
 
@@ -766,7 +766,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->i:Lcom/coloros/anim/a/b/a;
 
@@ -774,7 +774,7 @@
 
     .line 304
     :cond_6
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto/16 :goto_0
 
@@ -798,7 +798,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->j:Lcom/coloros/anim/a/b/a;
 
@@ -806,7 +806,7 @@
 
     .line 310
     :cond_8
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto/16 :goto_0
 
@@ -829,7 +829,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->m:Lcom/coloros/anim/a/b/a;
 
@@ -837,7 +837,7 @@
 
     .line 316
     :cond_a
-    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -860,7 +860,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p1, p2, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/b/o;->n:Lcom/coloros/anim/a/b/a;
 
@@ -868,7 +868,7 @@
 
     .line 322
     :cond_c
-    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -887,13 +887,13 @@
     .line 326
     new-instance p1, Lcom/coloros/anim/a/b/c;
 
-    new-instance v0, Lcom/coloros/anim/g/c;
+    new-instance v0, Lcom/coloros/anim/e/c;
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/coloros/anim/g/c;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/coloros/anim/e/c;-><init>(Ljava/lang/Object;)V
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -907,7 +907,7 @@
     :cond_e
     iget-object p1, p0, Lcom/coloros/anim/a/b/o;->k:Lcom/coloros/anim/a/b/c;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/c;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/c;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -926,13 +926,13 @@
     .line 331
     new-instance p1, Lcom/coloros/anim/a/b/c;
 
-    new-instance v0, Lcom/coloros/anim/g/c;
+    new-instance v0, Lcom/coloros/anim/e/c;
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/coloros/anim/g/c;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/coloros/anim/e/c;-><init>(Ljava/lang/Object;)V
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -946,7 +946,7 @@
     :cond_10
     iget-object p1, p0, Lcom/coloros/anim/a/b/o;->l:Lcom/coloros/anim/a/b/c;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/c;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/c;->a(Lcom/coloros/anim/e/b;)V
 
     :goto_0
     const/4 p1, 0x1
@@ -995,7 +995,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/coloros/anim/g/d;
+    check-cast v2, Lcom/coloros/anim/e/d;
 
     .line 259
     :goto_1
@@ -1025,7 +1025,7 @@
     iget-object v0, p0, Lcom/coloros/anim/a/b/o;->a:Landroid/graphics/Matrix;
 
     .line 265
-    invoke-virtual {v2}, Lcom/coloros/anim/g/d;->a()F
+    invoke-virtual {v2}, Lcom/coloros/anim/e/d;->a()F
 
     move-result v3
 
@@ -1040,7 +1040,7 @@
     double-to-float v3, v3
 
     .line 266
-    invoke-virtual {v2}, Lcom/coloros/anim/g/d;->b()F
+    invoke-virtual {v2}, Lcom/coloros/anim/e/d;->b()F
 
     move-result v2
 
@@ -1451,10 +1451,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/coloros/anim/g/d;
+    check-cast v0, Lcom/coloros/anim/e/d;
 
     .line 231
-    invoke-virtual {v0}, Lcom/coloros/anim/g/d;->a()F
+    invoke-virtual {v0}, Lcom/coloros/anim/e/d;->a()F
 
     move-result v3
 
@@ -1462,7 +1462,7 @@
 
     if-nez v3, :cond_7
 
-    invoke-virtual {v0}, Lcom/coloros/anim/g/d;->b()F
+    invoke-virtual {v0}, Lcom/coloros/anim/e/d;->b()F
 
     move-result v3
 
@@ -1474,11 +1474,11 @@
     :cond_7
     iget-object v2, p0, Lcom/coloros/anim/a/b/o;->a:Landroid/graphics/Matrix;
 
-    invoke-virtual {v0}, Lcom/coloros/anim/g/d;->a()F
+    invoke-virtual {v0}, Lcom/coloros/anim/e/d;->a()F
 
     move-result v3
 
-    invoke-virtual {v0}, Lcom/coloros/anim/g/d;->b()F
+    invoke-virtual {v0}, Lcom/coloros/anim/e/d;->b()F
 
     move-result v0
 

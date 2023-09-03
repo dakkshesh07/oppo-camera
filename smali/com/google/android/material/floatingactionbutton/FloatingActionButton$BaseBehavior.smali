@@ -224,13 +224,13 @@
     if-eqz v4, :cond_4
 
     .line 1184
-    invoke-static {p2, v4}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, v4}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     :cond_4
     if-eqz v2, :cond_5
 
     .line 1187
-    invoke-static {p2, v2}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {p2, v2}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     :cond_5
     return-void

@@ -40,14 +40,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 591
+    .line 632
     new-instance v0, Lcom/google/protobuf/SmallSortedMap$EmptySet$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/SmallSortedMap$EmptySet$1;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/SmallSortedMap$EmptySet;->ITERATOR:Ljava/util/Iterator;
 
-    .line 607
+    .line 650
     new-instance v0, Lcom/google/protobuf/SmallSortedMap$EmptySet$2;
 
     invoke-direct {v0}, Lcom/google/protobuf/SmallSortedMap$EmptySet$2;-><init>()V
@@ -60,16 +60,16 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 589
+    .line 630
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic access$700()Ljava/util/Iterator;
+.method static synthetic access$1000()Ljava/util/Iterator;
     .locals 1
 
-    .line 589
+    .line 630
     sget-object v0, Lcom/google/protobuf/SmallSortedMap$EmptySet;->ITERATOR:Ljava/util/Iterator;
 
     return-object v0
@@ -87,7 +87,7 @@
         }
     .end annotation
 
-    .line 617
+    .line 660
     sget-object v0, Lcom/google/protobuf/SmallSortedMap$EmptySet;->ITERABLE:Ljava/lang/Iterable;
 
     return-object v0

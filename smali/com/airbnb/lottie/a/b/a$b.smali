@@ -32,7 +32,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 186
+    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method synthetic constructor <init>(Lcom/airbnb/lottie/a/b/a$1;)V
     .locals 0
 
-    .line 186
+    .line 202
     invoke-direct {p0}, Lcom/airbnb/lottie/a/b/a$b;-><init>()V
 
     return-void
@@ -65,17 +65,17 @@
     return p1
 .end method
 
-.method public b()Lcom/airbnb/lottie/g/a;
+.method public b()Lcom/airbnb/lottie/d/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "TT;>;"
         }
     .end annotation
 
-    .line 199
+    .line 215
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "not implemented"
@@ -88,7 +88,7 @@
 .method public b(F)Z
     .locals 1
 
-    .line 214
+    .line 230
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "not implemented"

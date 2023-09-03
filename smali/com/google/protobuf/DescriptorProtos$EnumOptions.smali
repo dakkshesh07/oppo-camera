@@ -81,14 +81,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 26762
+    .line 32415
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     invoke-direct {v0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
-    .line 26770
+    .line 32423
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions$1;-><init>()V
@@ -101,23 +101,15 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 25714
+    .line 31309
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 25904
+    .line 31512
     iput-byte v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedIsInitialized:B
 
-    const/4 v0, 0x0
-
-    .line 25715
-    iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
-
-    .line 25716
-    iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
-
-    .line 25717
+    .line 31310
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
@@ -128,17 +120,19 @@
 .end method
 
 .method private constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/protobuf/InvalidProtocolBufferException;
         }
     .end annotation
 
-    .line 25729
+    .line 31329
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;-><init>()V
 
-    .line 25732
+    if-eqz p2, :cond_9
+
+    .line 31335
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->newBuilder()Lcom/google/protobuf/UnknownFieldSet$Builder;
 
     move-result-object v0
@@ -149,34 +143,32 @@
 
     :cond_0
     :goto_0
-    const/4 v3, 0x4
-
     if-nez v1, :cond_7
 
-    .line 25736
+    .line 31339
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
-    move-result v4
+    move-result v3
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    if-eqz v4, :cond_5
+    if-eqz v3, :cond_5
 
-    const/16 v6, 0x10
+    const/16 v5, 0x10
 
-    if-eq v4, v6, :cond_4
+    if-eq v3, v5, :cond_4
 
-    const/16 v6, 0x18
+    const/16 v5, 0x18
 
-    if-eq v4, v6, :cond_3
+    if-eq v3, v5, :cond_3
 
-    const/16 v6, 0x1f3a
+    const/16 v5, 0x1f3a
 
-    if-eq v4, v6, :cond_1
+    if-eq v3, v5, :cond_1
 
-    .line 25742
-    invoke-virtual {p0, p1, v0, p2, v4}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
+    .line 31364
+    invoke-virtual {p0, p1, v0, p2, v3}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
 
     move-result v3
 
@@ -185,66 +177,66 @@
     goto :goto_1
 
     :cond_1
-    and-int/lit8 v4, v2, 0x4
+    and-int/lit8 v3, v2, 0x4
 
-    if-eq v4, v3, :cond_2
+    if-nez v3, :cond_2
 
-    .line 25760
-    new-instance v4, Ljava/util/ArrayList;
+    .line 31356
+    new-instance v3, Ljava/util/ArrayList;
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
+    iput-object v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     or-int/lit8 v2, v2, 0x4
 
-    .line 25763
+    .line 31359
     :cond_2
-    iget-object v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
+    iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
-    sget-object v5, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;->PARSER:Lcom/google/protobuf/Parser;
+    sget-object v4, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 25764
-    invoke-virtual {p1, v5, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
+    .line 31360
+    invoke-virtual {p1, v4, p2}, Lcom/google/protobuf/CodedInputStream;->readMessage(Lcom/google/protobuf/Parser;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
-    move-result-object v5
+    move-result-object v4
 
-    .line 25763
-    invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 31359
+    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 25754
+    .line 31350
     :cond_3
-    iget v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    or-int/lit8 v4, v4, 0x2
+    or-int/lit8 v3, v3, 0x2
 
-    iput v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    .line 25755
+    .line 31351
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readBool()Z
 
-    move-result v4
+    move-result v3
 
-    iput-boolean v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
+    iput-boolean v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
 
     goto :goto_0
 
-    .line 25749
+    .line 31345
     :cond_4
-    iget v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    or-int/2addr v4, v5
+    or-int/2addr v3, v4
 
-    iput v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
+    iput v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    .line 25750
+    .line 31346
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readBool()Z
 
-    move-result v4
+    move-result v3
 
-    iput-boolean v4, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
+    iput-boolean v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -254,7 +246,7 @@
 
     :cond_5
     :goto_1
-    move v1, v5
+    move v1, v4
 
     goto :goto_0
 
@@ -266,13 +258,13 @@
     :catch_0
     move-exception p1
 
-    .line 25772
+    .line 31375
     :try_start_1
     new-instance p2, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 25773
+    .line 31376
     invoke-virtual {p2, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -282,7 +274,7 @@
     :catch_1
     move-exception p1
 
-    .line 25770
+    .line 31373
     invoke-virtual {p1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -294,9 +286,9 @@
     :goto_2
     and-int/lit8 p2, v2, 0x4
 
-    if-ne p2, v3, :cond_6
+    if-eqz p2, :cond_6
 
-    .line 25776
+    .line 31379
     iget-object p2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -305,7 +297,7 @@
 
     iput-object p2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
-    .line 25778
+    .line 31381
     :cond_6
     invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
 
@@ -313,17 +305,18 @@
 
     iput-object p2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
-    .line 25779
+    .line 31382
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->makeExtensionsImmutable()V
 
+    .line 31383
     throw p1
 
     :cond_7
     and-int/lit8 p1, v2, 0x4
 
-    if-ne p1, v3, :cond_8
+    if-eqz p1, :cond_8
 
-    .line 25776
+    .line 31379
     iget-object p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -332,7 +325,7 @@
 
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
-    .line 25778
+    .line 31381
     :cond_8
     invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
 
@@ -340,10 +333,18 @@
 
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
-    .line 25779
+    .line 31382
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->makeExtensionsImmutable()V
 
     return-void
+
+    .line 31331
+    :cond_9
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
+
+    throw p1
 .end method
 
 .method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/google/protobuf/DescriptorProtos$1;)V
@@ -354,7 +355,7 @@
         }
     .end annotation
 
-    .line 25705
+    .line 31299
     invoke-direct {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -371,12 +372,12 @@
         }
     .end annotation
 
-    .line 25712
+    .line 31307
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;-><init>(Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;)V
 
     const/4 p1, -0x1
 
-    .line 25904
+    .line 31512
     iput-byte p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedIsInitialized:B
 
     return-void
@@ -385,52 +386,52 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;Lcom/google/protobuf/DescriptorProtos$1;)V
     .locals 0
 
-    .line 25705
+    .line 31299
     invoke-direct {p0, p1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;-><init>(Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;)V
 
     return-void
 .end method
 
-.method static synthetic access$19002(Lcom/google/protobuf/DescriptorProtos$EnumOptions;Z)Z
+.method static synthetic access$21502(Lcom/google/protobuf/DescriptorProtos$EnumOptions;Z)Z
     .locals 0
 
-    .line 25705
+    .line 31299
     iput-boolean p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
 
     return p1
 .end method
 
-.method static synthetic access$19102(Lcom/google/protobuf/DescriptorProtos$EnumOptions;Z)Z
+.method static synthetic access$21602(Lcom/google/protobuf/DescriptorProtos$EnumOptions;Z)Z
     .locals 0
 
-    .line 25705
+    .line 31299
     iput-boolean p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
 
     return p1
 .end method
 
-.method static synthetic access$19200(Lcom/google/protobuf/DescriptorProtos$EnumOptions;)Ljava/util/List;
+.method static synthetic access$21700(Lcom/google/protobuf/DescriptorProtos$EnumOptions;)Ljava/util/List;
     .locals 0
 
-    .line 25705
+    .line 31299
     iget-object p0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     return-object p0
 .end method
 
-.method static synthetic access$19202(Lcom/google/protobuf/DescriptorProtos$EnumOptions;Ljava/util/List;)Ljava/util/List;
+.method static synthetic access$21702(Lcom/google/protobuf/DescriptorProtos$EnumOptions;Ljava/util/List;)Ljava/util/List;
     .locals 0
 
-    .line 25705
+    .line 31299
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     return-object p1
 .end method
 
-.method static synthetic access$19302(Lcom/google/protobuf/DescriptorProtos$EnumOptions;I)I
+.method static synthetic access$21802(Lcom/google/protobuf/DescriptorProtos$EnumOptions;I)I
     .locals 0
 
-    .line 25705
+    .line 31299
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
     return p1
@@ -439,7 +440,7 @@
 .method public static getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$EnumOptions;
     .locals 1
 
-    .line 26766
+    .line 32419
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     return-object v0
@@ -448,8 +449,8 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 25784
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$18500()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 31387
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$21000()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -459,7 +460,7 @@
 .method public static newBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
     .locals 1
 
-    .line 26083
+    .line 31704
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     invoke-virtual {v0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->toBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
@@ -472,7 +473,7 @@
 .method public static newBuilder(Lcom/google/protobuf/DescriptorProtos$EnumOptions;)Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
     .locals 1
 
-    .line 26086
+    .line 31707
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     invoke-virtual {v0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->toBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
@@ -494,10 +495,10 @@
         }
     .end annotation
 
-    .line 26057
+    .line 31677
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 26058
+    .line 31678
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -515,10 +516,10 @@
         }
     .end annotation
 
-    .line 26064
+    .line 31684
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 26065
+    .line 31685
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -536,7 +537,7 @@
         }
     .end annotation
 
-    .line 26025
+    .line 31645
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;)Ljava/lang/Object;
@@ -556,7 +557,7 @@
         }
     .end annotation
 
-    .line 26031
+    .line 31651
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -576,10 +577,10 @@
         }
     .end annotation
 
-    .line 26070
+    .line 31690
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 26071
+    .line 31691
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -597,10 +598,10 @@
         }
     .end annotation
 
-    .line 26077
+    .line 31697
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 26078
+    .line 31698
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -618,10 +619,10 @@
         }
     .end annotation
 
-    .line 26045
+    .line 31665
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 26046
+    .line 31666
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -639,11 +640,51 @@
         }
     .end annotation
 
-    .line 26052
+    .line 31672
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 26053
+    .line 31673
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;
+
+    return-object p0
+.end method
+
+.method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/DescriptorProtos$EnumOptions;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 31634
+    sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;
+
+    return-object p0
+.end method
+
+.method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$EnumOptions;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 31640
+    sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -660,7 +701,7 @@
         }
     .end annotation
 
-    .line 26035
+    .line 31655
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
@@ -680,7 +721,7 @@
         }
     .end annotation
 
-    .line 26041
+    .line 31661
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -703,7 +744,7 @@
         }
     .end annotation
 
-    .line 26780
+    .line 32434
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -720,24 +761,24 @@
 
     return v0
 
-    .line 25971
+    .line 31581
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     if-nez v1, :cond_1
 
-    .line 25972
+    .line 31582
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 25974
+    .line 31584
     :cond_1
     check-cast p1, Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
-    .line 25977
+    .line 31586
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->hasAllowAlias()Z
 
     move-result v1
@@ -748,49 +789,34 @@
 
     const/4 v3, 0x0
 
-    if-ne v1, v2, :cond_2
+    if-eq v1, v2, :cond_2
 
-    move v1, v0
+    return v3
 
-    goto :goto_0
-
+    .line 31587
     :cond_2
-    move v1, v3
-
-    .line 25978
-    :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->hasAllowAlias()Z
 
-    move-result v2
-
-    if-eqz v2, :cond_4
+    move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 25979
+    .line 31588
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getAllowAlias()Z
 
     move-result v1
 
-    .line 25980
+    .line 31589
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getAllowAlias()Z
 
     move-result v2
 
-    if-ne v1, v2, :cond_3
+    if-eq v1, v2, :cond_3
 
-    move v1, v0
+    return v3
 
-    goto :goto_1
-
+    .line 31591
     :cond_3
-    move v1, v3
-
-    :cond_4
-    :goto_1
-    if-eqz v1, :cond_5
-
-    .line 25982
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->hasDeprecated()Z
 
     move-result v1
@@ -799,54 +825,39 @@
 
     move-result v2
 
-    if-ne v1, v2, :cond_5
+    if-eq v1, v2, :cond_4
 
-    move v1, v0
+    return v3
 
-    goto :goto_2
-
-    :cond_5
-    move v1, v3
-
-    .line 25983
-    :goto_2
+    .line 31592
+    :cond_4
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->hasDeprecated()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_7
+    if-eqz v1, :cond_5
 
-    if-eqz v1, :cond_6
-
-    .line 25984
+    .line 31593
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDeprecated()Z
 
     move-result v1
 
-    .line 25985
+    .line 31594
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDeprecated()Z
 
     move-result v2
 
-    if-ne v1, v2, :cond_6
+    if-eq v1, v2, :cond_5
 
-    move v1, v0
+    return v3
 
-    goto :goto_3
-
-    :cond_6
-    move v1, v3
-
-    :cond_7
-    :goto_3
-    if-eqz v1, :cond_8
-
-    .line 25987
+    .line 31596
+    :cond_5
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getUninterpretedOptionList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 25988
+    .line 31597
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getUninterpretedOptionList()Ljava/util/List;
 
     move-result-object v2
@@ -855,19 +866,12 @@
 
     move-result v1
 
-    if-eqz v1, :cond_8
+    if-nez v1, :cond_6
 
-    move v1, v0
+    return v3
 
-    goto :goto_4
-
-    :cond_8
-    move v1, v3
-
-    :goto_4
-    if-eqz v1, :cond_9
-
-    .line 25989
+    .line 31598
+    :cond_6
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     iget-object v2, p1, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
@@ -876,19 +880,12 @@
 
     move-result v1
 
-    if-eqz v1, :cond_9
+    if-nez v1, :cond_7
 
-    move v1, v0
+    return v3
 
-    goto :goto_5
-
-    :cond_9
-    move v1, v3
-
-    :goto_5
-    if-eqz v1, :cond_a
-
-    .line 25991
+    .line 31599
+    :cond_7
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getExtensionFields()Ljava/util/Map;
 
     move-result-object v1
@@ -901,21 +898,18 @@
 
     move-result p1
 
-    if-eqz p1, :cond_a
+    if-nez p1, :cond_8
 
-    goto :goto_6
+    return v3
 
-    :cond_a
-    move v0, v3
-
-    :goto_6
+    :cond_8
     return v0
 .end method
 
 .method public getAllowAlias()Z
     .locals 1
 
-    .line 25817
+    .line 31423
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
 
     return v0
@@ -924,7 +918,7 @@
 .method public getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$EnumOptions;
     .locals 1
 
-    .line 26789
+    .line 32444
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     return-object v0
@@ -933,7 +927,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     move-result-object v0
@@ -944,7 +938,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     move-result-object v0
@@ -955,7 +949,7 @@
 .method public getDeprecated()Z
     .locals 1
 
-    .line 25846
+    .line 31454
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
 
     return v0
@@ -972,7 +966,7 @@
         }
     .end annotation
 
-    .line 26785
+    .line 32439
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -981,7 +975,7 @@
 .method public getSerializedSize()I
     .locals 4
 
-    .line 25943
+    .line 31554
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedSize:I
 
     const/4 v1, -0x1
@@ -990,25 +984,23 @@
 
     return v0
 
-    .line 25947
+    .line 31558
     :cond_0
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    const/4 v1, 0x1
+    and-int/lit8 v0, v0, 0x1
 
-    and-int/2addr v0, v1
+    const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x2
+    if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_1
-
-    .line 25948
+    .line 31559
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
 
-    .line 25949
-    invoke-static {v3, v0}, Lcom/google/protobuf/CodedOutputStream;->computeBoolSize(IZ)I
+    .line 31560
+    invoke-static {v1, v0}, Lcom/google/protobuf/CodedOutputStream;->computeBoolSize(IZ)I
 
     move-result v0
 
@@ -1019,27 +1011,27 @@
     :cond_1
     move v0, v2
 
-    .line 25951
+    .line 31562
     :goto_0
-    iget v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
     and-int/2addr v1, v3
 
-    if-ne v1, v3, :cond_2
+    if-eqz v1, :cond_2
 
     const/4 v1, 0x3
 
-    .line 25952
+    .line 31563
     iget-boolean v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
 
-    .line 25953
+    .line 31564
     invoke-static {v1, v3}, Lcom/google/protobuf/CodedOutputStream;->computeBoolSize(IZ)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 25955
+    .line 31566
     :cond_2
     :goto_1
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
@@ -1052,10 +1044,10 @@
 
     const/16 v1, 0x3e7
 
-    .line 25956
+    .line 31567
     iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
-    .line 25957
+    .line 31568
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -1072,7 +1064,7 @@
 
     goto :goto_1
 
-    .line 25959
+    .line 31570
     :cond_3
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->extensionsSerializedSize()I
 
@@ -1080,7 +1072,7 @@
 
     add-int/2addr v0, v1
 
-    .line 25960
+    .line 31571
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->getSerializedSize()I
@@ -1089,7 +1081,7 @@
 
     add-int/2addr v0, v1
 
-    .line 25961
+    .line 31572
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedSize:I
 
     return v0
@@ -1098,7 +1090,7 @@
 .method public getUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
     .locals 1
 
-    .line 25890
+    .line 31498
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1113,7 +1105,7 @@
 .method public getUninterpretedOptionCount()I
     .locals 1
 
-    .line 25880
+    .line 31488
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1134,7 +1126,7 @@
         }
     .end annotation
 
-    .line 25859
+    .line 31467
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     return-object v0
@@ -1143,7 +1135,7 @@
 .method public getUninterpretedOptionOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOptionOrBuilder;
     .locals 1
 
-    .line 25901
+    .line 31509
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1167,7 +1159,7 @@
         }
     .end annotation
 
-    .line 25870
+    .line 31478
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     return-object v0
@@ -1176,7 +1168,7 @@
 .method public final getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
     .locals 1
 
-    .line 25723
+    .line 31323
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     return-object v0
@@ -1185,14 +1177,14 @@
 .method public hasAllowAlias()Z
     .locals 2
 
-    .line 25806
+    .line 31411
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
     const/4 v1, 0x1
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
@@ -1204,16 +1196,14 @@
 .end method
 
 .method public hasDeprecated()Z
-    .locals 2
+    .locals 1
 
-    .line 25833
+    .line 31440
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    const/4 v1, 0x2
+    and-int/lit8 v0, v0, 0x2
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1229,12 +1219,12 @@
 .method public hashCode()I
     .locals 2
 
-    .line 25997
+    .line 31606
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 25998
+    .line 31607
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedHashCode:I
 
     return v0
@@ -1242,8 +1232,8 @@
     :cond_0
     const/16 v0, 0x30b
 
-    .line 26001
-    invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 31610
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v1
 
@@ -1253,7 +1243,7 @@
 
     add-int/2addr v0, v1
 
-    .line 26002
+    .line 31611
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->hasAllowAlias()Z
 
     move-result v1
@@ -1266,19 +1256,19 @@
 
     mul-int/lit8 v0, v0, 0x35
 
-    .line 26005
+    .line 31614
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getAllowAlias()Z
 
     move-result v1
 
-    .line 26004
+    .line 31613
     invoke-static {v1}, Lcom/google/protobuf/Internal;->hashBoolean(Z)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 26007
+    .line 31616
     :cond_1
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->hasDeprecated()Z
 
@@ -1292,19 +1282,19 @@
 
     mul-int/lit8 v0, v0, 0x35
 
-    .line 26010
+    .line 31619
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getDeprecated()Z
 
     move-result v1
 
-    .line 26009
+    .line 31618
     invoke-static {v1}, Lcom/google/protobuf/Internal;->hashBoolean(Z)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 26012
+    .line 31621
     :cond_2
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getUninterpretedOptionCount()I
 
@@ -1318,7 +1308,7 @@
 
     mul-int/lit8 v0, v0, 0x35
 
-    .line 26014
+    .line 31623
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getUninterpretedOptionList()Ljava/util/List;
 
     move-result-object v1
@@ -1329,7 +1319,7 @@
 
     add-int/2addr v0, v1
 
-    .line 26016
+    .line 31625
     :cond_3
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getExtensionFields()Ljava/util/Map;
 
@@ -1341,7 +1331,7 @@
 
     mul-int/lit8 v0, v0, 0x1d
 
-    .line 26017
+    .line 31626
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->hashCode()I
@@ -1350,7 +1340,7 @@
 
     add-int/2addr v0, v1
 
-    .line 26018
+    .line 31627
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedHashCode:I
 
     return v0
@@ -1359,8 +1349,8 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 25789
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$18600()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+    .line 31393
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$21100()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
@@ -1368,7 +1358,7 @@
 
     const-class v2, Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
-    .line 25790
+    .line 31394
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1379,7 +1369,7 @@
 .method public final isInitialized()Z
     .locals 4
 
-    .line 25906
+    .line 31515
     iget-byte v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedIsInitialized:B
 
     const/4 v1, 0x1
@@ -1398,7 +1388,7 @@
     :cond_1
     move v0, v2
 
-    .line 25910
+    .line 31519
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getUninterpretedOptionCount()I
 
@@ -1406,7 +1396,7 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 25911
+    .line 31520
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->getUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
     move-result-object v3
@@ -1417,7 +1407,7 @@
 
     if-nez v3, :cond_2
 
-    .line 25912
+    .line 31521
     iput-byte v2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedIsInitialized:B
 
     return v2
@@ -1427,7 +1417,7 @@
 
     goto :goto_0
 
-    .line 25916
+    .line 31525
     :cond_3
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->extensionsAreInitialized()Z
 
@@ -1435,12 +1425,12 @@
 
     if-nez v0, :cond_4
 
-    .line 25917
+    .line 31526
     iput-byte v2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedIsInitialized:B
 
     return v2
 
-    .line 25920
+    .line 31529
     :cond_4
     iput-byte v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->memoizedIsInitialized:B
 
@@ -1450,7 +1440,7 @@
 .method public newBuilderForType()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
     .locals 1
 
-    .line 26081
+    .line 31702
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->newBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object v0
@@ -1461,7 +1451,7 @@
 .method protected newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
     .locals 2
 
-    .line 26096
+    .line 31718
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     const/4 v1, 0x0
@@ -1474,7 +1464,7 @@
 .method public bridge synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->newBuilderForType()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object v0
@@ -1485,7 +1475,7 @@
 .method protected bridge synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object p1
@@ -1496,7 +1486,7 @@
 .method public bridge synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->newBuilderForType()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object v0
@@ -1504,10 +1494,21 @@
     return-object v0
 .end method
 
+.method protected newInstance(Lcom/google/protobuf/GeneratedMessageV3$UnusedPrivateParameter;)Ljava/lang/Object;
+    .locals 0
+
+    .line 31317
+    new-instance p1, Lcom/google/protobuf/DescriptorProtos$EnumOptions;
+
+    invoke-direct {p1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;-><init>()V
+
+    return-object p1
+.end method
+
 .method public toBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
     .locals 2
 
-    .line 26089
+    .line 31711
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$EnumOptions;
 
     const/4 v1, 0x0
@@ -1525,7 +1526,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;-><init>(Lcom/google/protobuf/DescriptorProtos$1;)V
 
-    .line 26090
+    .line 31712
     invoke-virtual {v0, p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$EnumOptions;)Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object v0
@@ -1537,7 +1538,7 @@
 .method public bridge synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->toBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object v0
@@ -1548,7 +1549,7 @@
 .method public bridge synthetic toBuilder()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 25705
+    .line 31299
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->toBuilder()Lcom/google/protobuf/DescriptorProtos$EnumOptions$Builder;
 
     move-result-object v0
@@ -1564,38 +1565,36 @@
         }
     .end annotation
 
-    .line 25928
+    .line 31538
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->newExtensionWriter()Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage$ExtensionWriter;
 
     move-result-object v0
 
-    .line 25929
+    .line 31539
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    const/4 v2, 0x1
+    and-int/lit8 v1, v1, 0x1
 
-    and-int/2addr v1, v2
+    const/4 v2, 0x2
 
-    const/4 v3, 0x2
+    if-eqz v1, :cond_0
 
-    if-ne v1, v2, :cond_0
-
-    .line 25930
+    .line 31540
     iget-boolean v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->allowAlias_:Z
 
-    invoke-virtual {p1, v3, v1}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
+    invoke-virtual {p1, v2, v1}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
 
-    .line 25932
+    .line 31542
     :cond_0
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->bitField0_:I
 
-    and-int/2addr v1, v3
+    and-int/2addr v1, v2
 
-    if-ne v1, v3, :cond_1
+    if-eqz v1, :cond_1
 
     const/4 v1, 0x3
 
-    .line 25933
+    .line 31543
     iget-boolean v2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->deprecated_:Z
 
     invoke-virtual {p1, v1, v2}, Lcom/google/protobuf/CodedOutputStream;->writeBool(IZ)V
@@ -1603,7 +1602,7 @@
     :cond_1
     const/4 v1, 0x0
 
-    .line 25935
+    .line 31545
     :goto_0
     iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
@@ -1615,7 +1614,7 @@
 
     const/16 v2, 0x3e7
 
-    .line 25936
+    .line 31546
     iget-object v3, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1633,10 +1632,10 @@
     :cond_2
     const/high16 v1, 0x20000000
 
-    .line 25938
+    .line 31548
     invoke-virtual {v0, v1, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage$ExtensionWriter;->writeUntil(ILcom/google/protobuf/CodedOutputStream;)V
 
-    .line 25939
+    .line 31549
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$EnumOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/UnknownFieldSet;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V

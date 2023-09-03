@@ -3,6 +3,11 @@
 .source "BadgeUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field public static final USE_COMPAT_PARENT:Z
 

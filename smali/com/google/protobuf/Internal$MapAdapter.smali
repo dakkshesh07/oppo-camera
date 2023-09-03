@@ -70,13 +70,13 @@
         }
     .end annotation
 
-    .line 488
+    .line 448
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
-    .line 489
+    .line 449
     iput-object p1, p0, Lcom/google/protobuf/Internal$MapAdapter;->realMap:Ljava/util/Map;
 
-    .line 490
+    .line 450
     iput-object p2, p0, Lcom/google/protobuf/Internal$MapAdapter;->valueConverter:Lcom/google/protobuf/Internal$MapAdapter$Converter;
 
     return-void
@@ -85,7 +85,7 @@
 .method static synthetic access$000(Lcom/google/protobuf/Internal$MapAdapter;)Lcom/google/protobuf/Internal$MapAdapter$Converter;
     .locals 0
 
-    .line 459
+    .line 421
     iget-object p0, p0, Lcom/google/protobuf/Internal$MapAdapter;->valueConverter:Lcom/google/protobuf/Internal$MapAdapter$Converter;
 
     return-object p0
@@ -106,7 +106,7 @@
         }
     .end annotation
 
-    .line 470
+    .line 431
     new-instance v0, Lcom/google/protobuf/Internal$MapAdapter$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/protobuf/Internal$MapAdapter$1;-><init>(Lcom/google/protobuf/Internal$EnumLiteMap;Lcom/google/protobuf/Internal$EnumLite;)V
@@ -127,7 +127,7 @@
         }
     .end annotation
 
-    .line 514
+    .line 474
     new-instance v0, Lcom/google/protobuf/Internal$MapAdapter$SetAdapter;
 
     iget-object v1, p0, Lcom/google/protobuf/Internal$MapAdapter;->realMap:Ljava/util/Map;
@@ -151,7 +151,7 @@
         }
     .end annotation
 
-    .line 496
+    .line 456
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter;->realMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -164,7 +164,7 @@
 
     return-object p1
 
-    .line 500
+    .line 460
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter;->valueConverter:Lcom/google/protobuf/Internal$MapAdapter$Converter;
 
@@ -183,7 +183,7 @@
         }
     .end annotation
 
-    .line 505
+    .line 465
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter;->realMap:Ljava/util/Map;
 
     iget-object v1, p0, Lcom/google/protobuf/Internal$MapAdapter;->valueConverter:Lcom/google/protobuf/Internal$MapAdapter$Converter;
@@ -202,7 +202,7 @@
 
     return-object p1
 
-    .line 509
+    .line 469
     :cond_0
     iget-object p2, p0, Lcom/google/protobuf/Internal$MapAdapter;->valueConverter:Lcom/google/protobuf/Internal$MapAdapter$Converter;
 

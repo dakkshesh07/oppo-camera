@@ -65,13 +65,13 @@
         }
     .end annotation
 
-    .line 439
+    .line 404
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 440
+    .line 405
     iput-object p1, p0, Lcom/google/protobuf/Internal$ListAdapter;->fromList:Ljava/util/List;
 
-    .line 441
+    .line 406
     iput-object p2, p0, Lcom/google/protobuf/Internal$ListAdapter;->converter:Lcom/google/protobuf/Internal$ListAdapter$Converter;
 
     return-void
@@ -87,7 +87,7 @@
         }
     .end annotation
 
-    .line 446
+    .line 411
     iget-object v0, p0, Lcom/google/protobuf/Internal$ListAdapter;->converter:Lcom/google/protobuf/Internal$ListAdapter$Converter;
 
     iget-object v1, p0, Lcom/google/protobuf/Internal$ListAdapter;->fromList:Ljava/util/List;
@@ -106,7 +106,7 @@
 .method public size()I
     .locals 1
 
-    .line 451
+    .line 416
     iget-object v0, p0, Lcom/google/protobuf/Internal$ListAdapter;->fromList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I

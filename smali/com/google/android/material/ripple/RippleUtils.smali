@@ -3,6 +3,11 @@
 .source "RippleUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final ENABLED_PRESSED_STATE_SET:[I
 
@@ -412,7 +417,7 @@
     move-result v0
 
     .line 257
-    invoke-static {p0, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p0, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result p0
 

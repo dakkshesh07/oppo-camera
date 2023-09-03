@@ -3,7 +3,7 @@
 .source "MediaStoreUtil.java"
 
 # interfaces
-.implements Lcom/oppo/camera/d;
+.implements Lcom/oppo/camera/CameraConstant;
 
 
 # direct methods
@@ -11,7 +11,7 @@
     .locals 2
 
     .line 28
-    sget-object v0, Lcom/oppo/camera/y;->t:Ljava/lang/String;
+    sget-object v0, Lcom/oppo/camera/ab;->u:Ljava/lang/String;
 
     const-string v1, "off"
 
@@ -28,7 +28,7 @@
 
     .line 30
     :cond_0
-    sget-object v0, Lcom/oppo/camera/y;->t:Ljava/lang/String;
+    sget-object v0, Lcom/oppo/camera/ab;->u:Ljava/lang/String;
 
     const-string v1, "on"
 
@@ -51,7 +51,7 @@
     move-result-object p0
 
     .line 33
-    invoke-static {}, Lcom/oppo/camera/y;->h()Ljava/lang/String;
+    invoke-static {}, Lcom/oppo/camera/ab;->h()Ljava/lang/String;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
 
     const-string v1, "MediaStoreUtil"
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
     invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;

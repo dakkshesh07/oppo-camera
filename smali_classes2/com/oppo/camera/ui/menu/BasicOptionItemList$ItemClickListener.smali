@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/menu/BasicOptionItemList;)V
     .locals 0
 
-    .line 374
+    .line 373
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$ItemClickListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/menu/BasicOptionItemList;Lcom/oppo/camera/ui/menu/BasicOptionItemList$1;)V
     .locals 0
 
-    .line 374
+    .line 373
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList$ItemClickListener;-><init>(Lcom/oppo/camera/ui/menu/BasicOptionItemList;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)V
     .locals 3
 
-    .line 377
+    .line 376
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$ItemClickListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->n:Ljava/util/List;
@@ -72,14 +72,14 @@
 
     if-nez v0, :cond_0
 
-    .line 378
+    .line 377
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$ItemClickListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->p:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;
 
     if-eqz v0, :cond_0
 
-    .line 379
+    .line 378
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$ItemClickListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->n:Ljava/util/List;
@@ -88,7 +88,7 @@
 
     move-result v0
 
-    .line 381
+    .line 380
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,9 +105,9 @@
 
     const-string v2, "BasicOptionItemList"
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 383
+    .line 382
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$ItemClickListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object v1, v1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->p:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;

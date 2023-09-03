@@ -35,31 +35,14 @@
 
 # virtual methods
 .method public read(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Class;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 81
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/google/gson/stream/JsonToken;->NULL:Lcom/google/gson/stream/JsonToken;
-
-    if-ne v0, v1, :cond_0
-
-    .line 82
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->nextNull()V
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 85
-    :cond_0
+    .line 77
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Attempted to deserialize a java.lang.Class. Forgot to register a type adapter?"
@@ -93,15 +76,7 @@
         }
     .end annotation
 
-    if-nez p2, :cond_0
-
-    .line 73
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonWriter;->nullValue()Lcom/google/gson/stream/JsonWriter;
-
-    return-void
-
-    .line 75
-    :cond_0
+    .line 72
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -112,7 +87,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 76
+    .line 73
     invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p2

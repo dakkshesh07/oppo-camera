@@ -41,10 +41,10 @@
         }
     .end annotation
 
-    .line 2567
+    .line 3191
     invoke-direct/range {p0 .. p5}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularFieldAccessor;-><init>(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 2570
+    .line 3194
     iget-object p1, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->type:Ljava/lang/Class;
 
     const/4 p3, 0x0
@@ -59,7 +59,7 @@
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
-    .line 2571
+    .line 3195
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,7 +80,7 @@
 
     new-array p2, p3, [Ljava/lang/Class;
 
-    .line 2572
+    .line 3196
     invoke-static {p4, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3;->access$1000(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
@@ -93,7 +93,7 @@
 .method private coerceType(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .line 2579
+    .line 3203
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->type:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -104,7 +104,7 @@
 
     return-object p1
 
-    .line 2586
+    .line 3210
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
@@ -122,11 +122,12 @@
 
     check-cast p1, Lcom/google/protobuf/Message;
 
-    .line 2587
+    .line 3211
     invoke-interface {v0, p1}, Lcom/google/protobuf/Message$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
 
     move-result-object p1
 
+    .line 3212
     invoke-interface {p1}, Lcom/google/protobuf/Message$Builder;->buildPartial()Lcom/google/protobuf/Message;
 
     move-result-object p1
@@ -139,7 +140,7 @@
 .method public getBuilder(Lcom/google/protobuf/GeneratedMessageV3$Builder;)Lcom/google/protobuf/Message$Builder;
     .locals 2
 
-    .line 2601
+    .line 3226
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->getBuilderMethodBuilder:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -158,7 +159,7 @@
 .method public newBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 3
 
-    .line 2597
+    .line 3222
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -179,7 +180,7 @@
 .method public set(Lcom/google/protobuf/GeneratedMessageV3$Builder;Ljava/lang/Object;)V
     .locals 0
 
-    .line 2593
+    .line 3218
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$SingularMessageFieldAccessor;->coerceType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2

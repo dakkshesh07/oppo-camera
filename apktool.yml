@@ -1,67 +1,59 @@
-!!brut.androlib.meta.MetaInfo
-apkFileName: OppoCamera.apk
-compressionType: false
+!!brut.androlib.apk.ApkInfo
+apkFileName: Camera_3.302.54_r.apk
 doNotCompress:
-- classes.dex
 - resources.arsc
-- assets/9403-322-6dd69a7f2c6c8d1bbd304bd35a8a543b.lic
+- assets/M_SenseME_Action_5.2.12.model
+- assets/meicam.lic
 - png
 - lib/arm64-v8a/lib2DSlender.so
-- lib/arm64-v8a/lib3DSlender.so
-- lib/arm64-v8a/libAPSClient-jni.so
-- lib/arm64-v8a/libFaceBeautyCap.so
+- lib/arm64-v8a/libAncFilter_jni.so
+- lib/arm64-v8a/libApsFaceBeautyPreviewJni.so
+- lib/arm64-v8a/libApsTiltShifPreviewJni.so
+- lib/arm64-v8a/libAvatarEngineRender.so
+- lib/arm64-v8a/libAvatarEngineRenderNative.so
 - lib/arm64-v8a/libFormatConverter.so
 - lib/arm64-v8a/libGradienterNativeLib.so
+- lib/arm64-v8a/libIccProfileJni.so
 - lib/arm64-v8a/libNvStreamingSdkCore.so
-- lib/arm64-v8a/libOPPORectify_FF.so
-- lib/arm64-v8a/libOppoFFDJni.so
-- lib/arm64-v8a/libOppoFaceBeautyJni.so
-- lib/arm64-v8a/libOppoFaceBeautyPreviewJni.so
-- lib/arm64-v8a/libOppoNativeBufferProducer.so
-- lib/arm64-v8a/libOppoRectifyJni_FF.so
-- lib/arm64-v8a/libOppoUpscaleJni.so
-- lib/arm64-v8a/libOppoWatermarkJni.so
-- lib/arm64-v8a/libOppoYuvProcessUtil.so
-- lib/arm64-v8a/libPolarrRender.so
-- lib/arm64-v8a/libPolarrRenderJNI.so
-- lib/arm64-v8a/libSingleBokeh.so
-- lib/arm64-v8a/libVDEyeEnhance.so
-- lib/arm64-v8a/libVDUpScale.so
+- lib/arm64-v8a/libOppoSloganForHalJni.so
+- lib/arm64-v8a/libOppoSloganJni.so
+- lib/arm64-v8a/libTiltShiftPre.so
 - lib/arm64-v8a/libXDocProcess.so
 - lib/arm64-v8a/libYTCommon.so
-- lib/arm64-v8a/libarcsoft_beautyshot.so
-- lib/arm64-v8a/libarcsoft_distortion_correction_6125.so
+- lib/arm64-v8a/libYuvUtil.so
 - lib/arm64-v8a/libarcsoft_gpuvideobokeh_advanced.so
 - lib/arm64-v8a/libarcsoft_panorama_burstcapture.so
-- lib/arm64-v8a/libarcsoft_relighting_pro_image.so
-- lib/arm64-v8a/libarcsoft_scbokeh_video.so
-- lib/arm64-v8a/libarcsoft_singlecam_bokeh.so
 - lib/arm64-v8a/libarcsoft_wideselfie.so
 - lib/arm64-v8a/libc++_shared.so
 - lib/arm64-v8a/libcommon.so
 - lib/arm64-v8a/libjni_burstpmk.so
 - lib/arm64-v8a/libjni_wideselfie.so
+- lib/arm64-v8a/libjpeg.so
+- lib/arm64-v8a/liblicense-checker-jni.so
 - lib/arm64-v8a/libmpbase.so
 - lib/arm64-v8a/libpreview_show.so
 - lib/arm64-v8a/libsingle_camera_bokeh_native.so
-- lib/arm64-v8a/libstface_fd_api.so
+- lib/arm64-v8a/libst_sticker.so
+- lib/arm64-v8a/libst_sticker_jni.so
 - lib/arm64-v8a/libtouchless_a3d.so
 - lib/arm64-v8a/libtouchless_a3d_jni.so
-- ogg
+- aac
 isFrameworkApk: false
 packageInfo:
   forcedPackageId: '127'
   renameManifestPackage: null
+resourcesAreCompressed: false
 sdkInfo:
   minSdkVersion: '28'
-  targetSdkVersion: '30'
+  targetSdkVersion: '29'
 sharedLibrary: false
-sparseResources: false
+sparseResources: true
 unknownFiles:
-  LICENSE-junit.txt: '8'
-  junit/runner/logo.gif: '0'
-  junit/runner/smalllogo.gif: '0'
   com/arcsoft/camera/burstpmk/YuvToRgb.rs: '8'
+  com/oplusos/sau/aidl/AppUpdateInfo.aidl: '8'
+  com/oplusos/sau/aidl/DataresUpdateInfo.aidl: '8'
+  com/oppo/camera/watch/proto/WatchAgentProto.proto: '8'
+  com/oppo/gallery3d/bitmap/ICameraTransBitmap.aidl: '8'
   com/oppo/gallery3d/predecode/IPreDecode.aidl: '8'
   google/protobuf/any.proto: '8'
   google/protobuf/api.proto: '8'
@@ -79,8 +71,8 @@ unknownFiles:
 usesFramework:
   ids:
   - 1
-  tag: '30'
-version: 2.7.0
+  tag: null
+version: 2.8.1
 versionInfo:
-  versionCode: '40026'
-  versionName: 3.1.0
+  versionCode: '40027'
+  versionName: ''

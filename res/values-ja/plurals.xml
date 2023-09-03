@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="red_dot_with_number_description">
+    <plurals name="MT_Bin">
+        <item quantity="other">%1$d 件を削除</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">%1$d 件選択済み</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
         <item quantity="other">%d 件の新しい通知</item>
         <item quantity="one">%d 件の新しい通知</item>
     </plurals>
-    <plurals name="sticker_recycle_bin_title_has_selected">
-        <item quantity="other">%1$d個のステッカーを選択済み</item>
-        <item quantity="one">%1$d個のステッカーを選択済み</item>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
+        <item quantity="other">%1$d 個のステッカーを選択済み</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
+        <item quantity="other">%1$d 件選択済み</item>
     </plurals>
 </resources>

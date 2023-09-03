@@ -1,9 +1,6 @@
-.class public abstract Landroidx/room/d$a;
-.super Landroid/os/Binder;
-.source "IMultiInstanceInvalidationService.java"
-
-# interfaces
-.implements Landroidx/room/d;
+.class Landroidx/room/d$a;
+.super Ljava/lang/Object;
+.source "InvalidationTracker.java"
 
 
 # annotations
@@ -12,190 +9,343 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x409
+    accessFlags = 0x8
     name = "a"
 .end annotation
 
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/room/d$a$a;
-    }
-.end annotation
+
+# instance fields
+.field final a:[J
+
+.field final b:[Z
+
+.field final c:[I
+
+.field d:Z
+
+.field e:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(I)V
+    .locals 2
 
-    .line 18
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    .line 744
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "androidx.room.IMultiInstanceInvalidationService"
+    .line 745
+    new-array v0, p1, [J
 
-    .line 19
-    invoke-virtual {p0, p0, v0}, Landroidx/room/d$a;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    iput-object v0, p0, Landroidx/room/d$a;->a:[J
+
+    .line 746
+    new-array v0, p1, [Z
+
+    iput-object v0, p0, Landroidx/room/d$a;->b:[Z
+
+    .line 747
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Landroidx/room/d$a;->c:[I
+
+    .line 748
+    iget-object p1, p0, Landroidx/room/d$a;->a:[J
+
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Ljava/util/Arrays;->fill([JJ)V
+
+    .line 749
+    iget-object p1, p0, Landroidx/room/d$a;->b:[Z
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->fill([ZZ)V
 
     return-void
 .end method
 
-.method public static a(Landroid/os/IBinder;)Landroidx/room/d;
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    const-string v0, "androidx.room.IMultiInstanceInvalidationService"
-
-    .line 30
-    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 31
-    instance-of v1, v0, Landroidx/room/d;
-
-    if-eqz v1, :cond_1
-
-    .line 32
-    check-cast v0, Landroidx/room/d;
-
-    return-object v0
-
-    .line 34
-    :cond_1
-    new-instance v0, Landroidx/room/d$a$a;
-
-    invoke-direct {v0, p0}, Landroidx/room/d$a$a;-><init>(Landroid/os/IBinder;)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public asBinder()Landroid/os/IBinder;
-    .locals 0
+.method varargs a([I)Z
+    .locals 9
 
-    return-object p0
+    .line 757
+    monitor-enter p0
+
+    .line 758
+    :try_start_0
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    aget v3, p1, v1
+
+    .line 759
+    iget-object v4, p0, Landroidx/room/d$a;->a:[J
+
+    aget-wide v4, v4, v3
+
+    .line 760
+    iget-object v6, p0, Landroidx/room/d$a;->a:[J
+
+    const-wide/16 v7, 0x1
+
+    add-long/2addr v7, v4
+
+    aput-wide v7, v6, v3
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v3, v4, v6
+
+    const/4 v4, 0x1
+
+    if-nez v3, :cond_0
+
+    .line 762
+    iput-boolean v4, p0, Landroidx/room/d$a;->d:Z
+
+    move v2, v4
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 766
+    :cond_1
+    monitor-exit p0
+
+    return v2
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method
 
-.method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/os/RemoteException;
-        }
-    .end annotation
+.method a()[I
+    .locals 8
 
-    const/4 v0, 0x1
+    .line 796
+    monitor-enter p0
 
-    const-string v1, "androidx.room.IMultiInstanceInvalidationService"
+    .line 797
+    :try_start_0
+    iget-boolean v0, p0, Landroidx/room/d$a;->d:Z
 
-    if-eq p1, v0, :cond_3
+    if-eqz v0, :cond_5
 
-    const/4 v2, 0x2
+    iget-boolean v0, p0, Landroidx/room/d$a;->e:Z
 
-    if-eq p1, v2, :cond_2
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x3
+    goto :goto_4
 
-    if-eq p1, v2, :cond_1
-
-    const v2, 0x5f4e5446
-
-    if-eq p1, v2, :cond_0
-
-    .line 85
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result p1
-
-    return p1
-
-    .line 47
+    .line 800
     :cond_0
-    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    iget-object v0, p0, Landroidx/room/d$a;->a:[J
 
-    return v0
+    array-length v0, v0
 
-    .line 75
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x1
+
+    if-ge v2, v0, :cond_4
+
+    .line 802
+    iget-object v4, p0, Landroidx/room/d$a;->a:[J
+
+    aget-wide v4, v4, v2
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    if-lez v4, :cond_1
+
+    move v4, v3
+
+    goto :goto_1
+
     :cond_1
-    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move v4, v1
 
-    .line 77
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    .line 803
+    :goto_1
+    iget-object v5, p0, Landroidx/room/d$a;->b:[Z
 
-    move-result p1
+    aget-boolean v5, v5, v2
 
-    .line 79
-    invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
+    if-eq v4, v5, :cond_3
 
-    move-result-object p2
+    .line 804
+    iget-object v5, p0, Landroidx/room/d$a;->c:[I
 
-    .line 80
-    invoke-virtual {p0, p1, p2}, Landroidx/room/d$a;->a(I[Ljava/lang/String;)V
+    if-eqz v4, :cond_2
 
-    return v0
+    goto :goto_2
 
-    .line 64
     :cond_2
-    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    const/4 v3, 0x2
 
-    .line 66
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    :goto_2
+    aput v3, v5, v2
 
-    move-result-object p1
+    goto :goto_3
 
-    invoke-static {p1}, Landroidx/room/c$a;->a(Landroid/os/IBinder;)Landroidx/room/c;
-
-    move-result-object p1
-
-    .line 68
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p2
-
-    .line 69
-    invoke-virtual {p0, p1, p2}, Landroidx/room/d$a;->a(Landroidx/room/c;I)V
-
-    .line 70
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v0
-
-    .line 52
+    .line 806
     :cond_3
-    invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    iget-object v3, p0, Landroidx/room/d$a;->c:[I
 
-    .line 54
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+    aput v1, v3, v2
 
-    move-result-object p1
+    .line 808
+    :goto_3
+    iget-object v3, p0, Landroidx/room/d$a;->b:[Z
 
-    invoke-static {p1}, Landroidx/room/c$a;->a(Landroid/os/IBinder;)Landroidx/room/c;
+    aput-boolean v4, v3, v2
 
-    move-result-object p1
+    add-int/lit8 v2, v2, 0x1
 
-    .line 56
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object p2
+    .line 810
+    :cond_4
+    iput-boolean v3, p0, Landroidx/room/d$a;->e:Z
 
-    .line 57
-    invoke-virtual {p0, p1, p2}, Landroidx/room/d$a;->a(Landroidx/room/c;Ljava/lang/String;)I
+    .line 811
+    iput-boolean v1, p0, Landroidx/room/d$a;->d:Z
 
-    move-result p1
+    .line 812
+    iget-object v0, p0, Landroidx/room/d$a;->c:[I
 
-    .line 58
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    monitor-exit p0
 
-    .line 59
-    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
+    return-object v0
 
-    return v0
+    :cond_5
+    :goto_4
+    const/4 v0, 0x0
+
+    .line 798
+    monitor-exit p0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    .line 813
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method b()V
+    .locals 1
+
+    .line 821
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    .line 822
+    :try_start_0
+    iput-boolean v0, p0, Landroidx/room/d$a;->e:Z
+
+    .line 823
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method varargs b([I)Z
+    .locals 11
+
+    .line 775
+    monitor-enter p0
+
+    .line 776
+    :try_start_0
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    aget v3, p1, v1
+
+    .line 777
+    iget-object v4, p0, Landroidx/room/d$a;->a:[J
+
+    aget-wide v4, v4, v3
+
+    .line 778
+    iget-object v6, p0, Landroidx/room/d$a;->a:[J
+
+    const-wide/16 v7, 0x1
+
+    sub-long v9, v4, v7
+
+    aput-wide v9, v6, v3
+
+    cmp-long v3, v4, v7
+
+    const/4 v4, 0x1
+
+    if-nez v3, :cond_0
+
+    .line 780
+    iput-boolean v4, p0, Landroidx/room/d$a;->d:Z
+
+    move v2, v4
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 784
+    :cond_1
+    monitor-exit p0
+
+    return v2
+
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

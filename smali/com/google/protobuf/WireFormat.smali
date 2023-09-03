@@ -14,9 +14,13 @@
 
 
 # static fields
-.field static final FIXED_32_SIZE:I = 0x4
+.field static final FIXED32_SIZE:I = 0x4
 
-.field static final FIXED_64_SIZE:I = 0x8
+.field static final FIXED64_SIZE:I = 0x8
+
+.field static final MAX_VARINT32_SIZE:I = 0x5
+
+.field static final MAX_VARINT64_SIZE:I = 0xa
 
 .field static final MAX_VARINT_SIZE:I = 0xa
 
@@ -59,7 +63,7 @@
 
     const/4 v1, 0x1
 
-    .line 170
+    .line 178
     invoke-static {v1, v0}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result v2
@@ -68,7 +72,7 @@
 
     const/4 v2, 0x4
 
-    .line 172
+    .line 179
     invoke-static {v1, v2}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result v1
@@ -79,14 +83,14 @@
 
     const/4 v2, 0x0
 
-    .line 174
+    .line 180
     invoke-static {v1, v2}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result v2
 
     sput v2, Lcom/google/protobuf/WireFormat;->MESSAGE_SET_TYPE_ID_TAG:I
 
-    .line 176
+    .line 182
     invoke-static {v0, v1}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result v0
@@ -99,7 +103,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 48
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -150,7 +154,7 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 257
+    .line 269
     new-instance p0, Ljava/lang/RuntimeException;
 
     const-string p1, "There is no way to get here, but the compiler thinks otherwise."
@@ -159,7 +163,7 @@
 
     throw p0
 
-    .line 253
+    .line 266
     :pswitch_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -169,7 +173,7 @@
 
     throw p0
 
-    .line 248
+    .line 262
     :pswitch_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -179,7 +183,7 @@
 
     throw p0
 
-    .line 245
+    .line 260
     :pswitch_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -189,7 +193,7 @@
 
     throw p0
 
-    .line 243
+    .line 258
     :pswitch_3
     invoke-virtual {p2, p0}, Lcom/google/protobuf/WireFormat$Utf8Validation;->readString(Lcom/google/protobuf/CodedInputStream;)Ljava/lang/Object;
 
@@ -197,7 +201,7 @@
 
     return-object p0
 
-    .line 241
+    .line 255
     :pswitch_4
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readSInt64()J
 
@@ -209,7 +213,7 @@
 
     return-object p0
 
-    .line 240
+    .line 253
     :pswitch_5
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readSInt32()I
 
@@ -221,7 +225,7 @@
 
     return-object p0
 
-    .line 239
+    .line 251
     :pswitch_6
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readSFixed64()J
 
@@ -233,7 +237,7 @@
 
     return-object p0
 
-    .line 238
+    .line 249
     :pswitch_7
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readSFixed32()I
 
@@ -245,7 +249,7 @@
 
     return-object p0
 
-    .line 237
+    .line 247
     :pswitch_8
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readUInt32()I
 
@@ -257,7 +261,7 @@
 
     return-object p0
 
-    .line 236
+    .line 245
     :pswitch_9
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readBytes()Lcom/google/protobuf/ByteString;
 
@@ -265,7 +269,7 @@
 
     return-object p0
 
-    .line 235
+    .line 243
     :pswitch_a
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readBool()Z
 
@@ -277,7 +281,7 @@
 
     return-object p0
 
-    .line 234
+    .line 241
     :pswitch_b
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readFixed32()I
 
@@ -289,7 +293,7 @@
 
     return-object p0
 
-    .line 233
+    .line 239
     :pswitch_c
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readFixed64()J
 
@@ -301,7 +305,7 @@
 
     return-object p0
 
-    .line 232
+    .line 237
     :pswitch_d
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
@@ -313,7 +317,7 @@
 
     return-object p0
 
-    .line 231
+    .line 235
     :pswitch_e
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readUInt64()J
 
@@ -325,7 +329,7 @@
 
     return-object p0
 
-    .line 230
+    .line 233
     :pswitch_f
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readInt64()J
 
@@ -337,7 +341,7 @@
 
     return-object p0
 
-    .line 229
+    .line 231
     :pswitch_10
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readFloat()F
 
@@ -349,7 +353,7 @@
 
     return-object p0
 
-    .line 228
+    .line 229
     :pswitch_11
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream;->readDouble()D
 

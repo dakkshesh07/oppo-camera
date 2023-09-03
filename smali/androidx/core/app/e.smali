@@ -3,11 +3,14 @@
 .source "ComponentActivity.java"
 
 # interfaces
-.implements Landroidx/core/g/e$a;
-.implements Landroidx/lifecycle/h;
+.implements Landroidx/core/f/e$a;
+.implements Landroidx/lifecycle/g;
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/core/app/e$a;
@@ -16,10 +19,10 @@
 
 
 # instance fields
-.field private a:Landroidx/b/g;
+.field private a:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/Class<",
             "+",
             "Landroidx/core/app/e$a;",
@@ -30,7 +33,7 @@
     .end annotation
 .end field
 
-.field private b:Landroidx/lifecycle/i;
+.field private b:Landroidx/lifecycle/h;
 
 
 # direct methods
@@ -41,18 +44,18 @@
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     .line 56
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/core/app/e;->a:Landroidx/b/g;
+    iput-object v0, p0, Landroidx/core/app/e;->a:Landroidx/collection/SimpleArrayMap;
 
     .line 63
-    new-instance v0, Landroidx/lifecycle/i;
+    new-instance v0, Landroidx/lifecycle/h;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/i;-><init>(Landroidx/lifecycle/h;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/h;-><init>(Landroidx/lifecycle/g;)V
 
-    iput-object v0, p0, Landroidx/core/app/e;->b:Landroidx/lifecycle/i;
+    iput-object v0, p0, Landroidx/core/app/e;->b:Landroidx/lifecycle/h;
 
     return-void
 .end method
@@ -61,6 +64,9 @@
 # virtual methods
 .method public a(Ljava/lang/Class;)Landroidx/core/app/e$a;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -75,9 +81,9 @@
     .end annotation
 
     .line 107
-    iget-object v0, p0, Landroidx/core/app/e;->a:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/core/app/e;->a:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -88,23 +94,28 @@
 
 .method public a(Landroidx/core/app/e$a;)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 79
-    iget-object v0, p0, Landroidx/core/app/e;->a:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/core/app/e;->a:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p1}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1, p1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
 .method public a(Landroid/view/KeyEvent;)Z
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 122
     invoke-super {p0, p1}, Landroid/app/Activity;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -129,7 +140,7 @@
     if-eqz v0, :cond_0
 
     .line 137
-    invoke-static {v0, p1}, Landroidx/core/g/e;->a(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    invoke-static {v0, p1}, Landroidx/core/f/e;->a(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result v1
 
@@ -141,7 +152,7 @@
 
     .line 140
     :cond_0
-    invoke-static {p0, v0, p0, p1}, Landroidx/core/g/e;->a(Landroidx/core/g/e$a;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
+    invoke-static {p0, v0, p0, p1}, Landroidx/core/f/e;->a(Landroidx/core/f/e$a;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -163,7 +174,7 @@
     if-eqz v0, :cond_0
 
     .line 128
-    invoke-static {v0, p1}, Landroidx/core/g/e;->a(Landroid/view/View;Landroid/view/KeyEvent;)Z
+    invoke-static {v0, p1}, Landroidx/core/f/e;->a(Landroid/view/View;Landroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -182,11 +193,11 @@
     return p1
 .end method
 
-.method public getLifecycle()Landroidx/lifecycle/e;
+.method public getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 1
 
     .line 113
-    iget-object v0, p0, Landroidx/core/app/e;->b:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/core/app/e;->b:Landroidx/lifecycle/h;
 
     return-object v0
 .end method
@@ -212,11 +223,11 @@
     .locals 2
 
     .line 92
-    iget-object v0, p0, Landroidx/core/app/e;->b:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/core/app/e;->b:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$b;->CREATED:Landroidx/lifecycle/e$b;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$b;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$State;)V
 
     .line 93
     invoke-super {p0, p1}, Landroid/app/Activity;->onSaveInstanceState(Landroid/os/Bundle;)V

@@ -82,35 +82,48 @@
 
     const/4 v0, 0x1
 
-    .line 73
+    .line 81
     new-array v1, v0, [I
 
     const/4 v2, 0x0
 
-    .line 74
+    .line 82
     invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    .line 75
+    .line 83
     aget v1, v1, v2
 
     iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->b:I
 
-    .line 77
+    .line 85
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->g()I
 
     move-result v1
 
-    .line 78
+    .line 86
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->c()I
 
     move-result v2
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 79
+    .line 87
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
-    .line 80
+    .line 88
+    iget v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->d:I
+
+    iget v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->e:I
+
+    mul-int/2addr v2, v3
+
+    mul-int/lit8 v2, v2, 0x4
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v10
+
+    .line 89
     iget v5, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->d:I
 
     iget v6, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->e:I
@@ -125,62 +138,60 @@
 
     const/16 v9, 0x1401
 
-    const/4 v10, 0x0
-
     move v2, v1
 
     invoke-static/range {v2 .. v10}, Landroid/opengl/GLES20;->glTexImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 81
+    .line 90
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
-    .line 83
+    .line 92
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->c()I
 
     move-result v2
 
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 84
+    .line 93
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
     const v2, 0x812f
 
     const/16 v3, 0x2802
 
-    .line 85
+    .line 94
     invoke-static {v1, v3, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 86
+    .line 95
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
     const/16 v3, 0x2803
 
-    .line 87
+    .line 96
     invoke-static {v1, v3, v2}, Landroid/opengl/GLES20;->glTexParameteri(III)V
 
-    .line 88
+    .line 97
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
     const v2, 0x46180400    # 9729.0f
 
     const/16 v3, 0x2801
 
-    .line 89
+    .line 98
     invoke-static {v1, v3, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 90
+    .line 99
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
     const/16 v3, 0x2800
 
-    .line 91
+    .line 100
     invoke-static {v1, v3, v2}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
 
-    .line 92
+    .line 101
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
-    .line 94
+    .line 103
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -225,9 +236,9 @@
 
     const-string v2, "WrapperTexture"
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
+    .line 106
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->a:I
 
     return-void
@@ -238,108 +249,74 @@
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_0
-
     .line 46
     :try_start_0
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
+    new-array v1, v0, [I
 
-    move-result v2
+    const/4 v2, 0x0
 
-    if-nez v2, :cond_0
+    .line 47
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
 
-    move v2, v0
+    .line 48
+    aget v1, v1, v2
+
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->b:I
+
+    .line 50
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->c()I
+
+    move-result v1
+
+    const/16 v3, 0xde1
+
+    invoke-static {v3, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    .line 51
+    invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
+
+    const/16 v1, 0x2801
+
+    const v4, 0x46180400    # 9729.0f
+
+    .line 53
+    invoke-static {v3, v1, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v1, 0x2800
+
+    .line 54
+    invoke-static {v3, v1, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v1, 0x2802
+
+    const v4, 0x47012f00    # 33071.0f
+
+    .line 55
+    invoke-static {v3, v1, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v1, 0x2803
+
+    .line 56
+    invoke-static {v3, v1, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    .line 57
+    invoke-static {v3, v2, p1, v2}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
+
+    .line 58
+    invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
     move-exception p1
 
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    invoke-static {v2}, Lb/a/a;->a(Z)V
-
-    .line 48
-    new-array v2, v0, [I
-
-    .line 49
-    invoke-static {v0, v2, v1}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
-
-    .line 50
-    aget v2, v2, v1
-
-    iput v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->b:I
-
-    .line 52
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->c()I
-
-    move-result v2
-
-    const/16 v3, 0xde1
-
-    invoke-static {v3, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
-
-    .line 53
-    invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
-
-    const/16 v2, 0x2801
-
-    const v4, 0x46180400    # 9729.0f
-
-    .line 55
-    invoke-static {v3, v2, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v2, 0x2800
-
-    .line 56
-    invoke-static {v3, v2, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v2, 0x2802
-
-    const v4, 0x47012f00    # 33071.0f
-
-    .line 57
-    invoke-static {v3, v2, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    const/16 v2, 0x2803
-
-    .line 58
-    invoke-static {v3, v2, v4}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
-
-    .line 59
-    invoke-static {v3, v1, p1, v1}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
-
     .line 60
-    invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
-    :try_end_0
-    .catch Lb/a/b; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_3
-
-    .line 64
-    :goto_1
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_3
-
-    .line 62
-    :goto_2
-    invoke-virtual {p1}, Lb/a/b;->printStackTrace()V
-
-    .line 67
-    :goto_3
+    .line 63
+    :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -368,9 +345,9 @@
 
     const-string v1, "WrapperTexture"
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
+    .line 65
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->a:I
 
     return-void
@@ -379,7 +356,7 @@
 .method public b()V
     .locals 4
 
-    .line 101
+    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -408,9 +385,9 @@
 
     const-string v1, "WrapperTexture"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
+    .line 112
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->h()Z
 
     move-result v0
@@ -421,7 +398,7 @@
 
     const/4 v0, 0x1
 
-    .line 104
+    .line 113
     new-array v2, v0, [I
 
     iget v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->b:I
@@ -430,12 +407,64 @@
 
     invoke-static {v0, v2, v1}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
 
-    .line 105
+    .line 114
     invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
-    .line 108
+    .line 117
     :cond_0
     iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->a:I
+
+    return-void
+.end method
+
+.method public b(Landroid/graphics/Bitmap;)V
+    .locals 3
+
+    .line 69
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/m;->c()I
+
+    move-result v0
+
+    const/16 v1, 0xde1
+
+    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    .line 70
+    invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
+
+    const v0, 0x46180400    # 9729.0f
+
+    const/16 v2, 0x2801
+
+    .line 72
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v2, 0x2800
+
+    .line 73
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const v0, 0x47012f00    # 33071.0f
+
+    const/16 v2, 0x2802
+
+    .line 74
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/16 v2, 0x2803
+
+    .line 75
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glTexParameterf(IIF)V
+
+    const/4 v0, 0x0
+
+    const/16 v2, 0x1908
+
+    .line 76
+    invoke-static {v1, v0, v2, p1, v0}, Landroid/opengl/GLUtils;->texImage2D(IIILandroid/graphics/Bitmap;I)V
+
+    .line 77
+    invoke-static {}, Lcom/oppo/camera/gl/i;->i()V
 
     return-void
 .end method
@@ -443,7 +472,7 @@
 .method public c()I
     .locals 1
 
-    .line 112
+    .line 121
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->b:I
 
     return v0
@@ -452,7 +481,7 @@
 .method public d()I
     .locals 1
 
-    .line 116
+    .line 125
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->c:I
 
     return v0
@@ -461,7 +490,7 @@
 .method public e()I
     .locals 1
 
-    .line 120
+    .line 129
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->d:I
 
     return v0
@@ -470,7 +499,7 @@
 .method public f()I
     .locals 1
 
-    .line 124
+    .line 133
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->e:I
 
     return v0
@@ -487,7 +516,7 @@
 .method public h()Z
     .locals 2
 
-    .line 132
+    .line 141
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/m;->a:I
 
     const/4 v1, 0x1

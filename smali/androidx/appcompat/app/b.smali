@@ -96,6 +96,80 @@
     return-object v0
 .end method
 
+.method public a(I)V
+    .locals 3
+
+    .line 271
+    new-instance v0, Landroid/util/TypedValue;
+
+    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
+
+    .line 272
+    invoke-virtual {p0}, Landroidx/appcompat/app/b;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    .line 273
+    iget-object p1, p0, Landroidx/appcompat/app/b;->a:Landroidx/appcompat/app/AlertController;
+
+    iget v0, v0, Landroid/util/TypedValue;->resourceId:I
+
+    invoke-virtual {p1, v0}, Landroidx/appcompat/app/AlertController;->b(I)V
+
+    return-void
+.end method
+
+.method public a(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
+    .locals 6
+
+    .line 226
+    iget-object v0, p0, Landroidx/appcompat/app/b;->a:Landroidx/appcompat/app/AlertController;
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    move v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-virtual/range {v0 .. v5}, Landroidx/appcompat/app/AlertController;->a(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;Landroid/os/Message;Landroid/graphics/drawable/Drawable;)V
+
+    return-void
+.end method
+
+.method public a(Landroid/view/View;)V
+    .locals 1
+
+    .line 172
+    iget-object v0, p0, Landroidx/appcompat/app/b;->a:Landroidx/appcompat/app/AlertController;
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/app/AlertController;->c(Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 164
+    iget-object v0, p0, Landroidx/appcompat/app/b;->a:Landroidx/appcompat/app/AlertController;
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/app/AlertController;->b(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 0
 

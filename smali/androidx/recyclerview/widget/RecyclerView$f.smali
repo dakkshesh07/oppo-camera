@@ -177,6 +177,15 @@
 .method public abstract a()V
 .end method
 
+.method public a(J)V
+    .locals 0
+
+    .line 12862
+    iput-wide p1, p0, Landroidx/recyclerview/widget/RecyclerView$f;->f:J
+
+    return-void
+.end method
+
 .method a(Landroidx/recyclerview/widget/RecyclerView$f$b;)V
     .locals 0
 
@@ -184,6 +193,34 @@
     iput-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$f;->a:Landroidx/recyclerview/widget/RecyclerView$f$b;
 
     return-void
+.end method
+
+.method public final a(Landroidx/recyclerview/widget/RecyclerView$f$a;)Z
+    .locals 2
+
+    .line 13269
+    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView$f;->b()Z
+
+    move-result v0
+
+    if-eqz p1, :cond_1
+
+    if-nez v0, :cond_0
+
+    .line 13272
+    invoke-interface {p1}, Landroidx/recyclerview/widget/RecyclerView$f$a;->a()V
+
+    goto :goto_0
+
+    .line 13274
+    :cond_0
+    iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$f;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    :goto_0
+    return v0
 .end method
 
 .method public abstract a(Landroidx/recyclerview/widget/RecyclerView$w;Landroidx/recyclerview/widget/RecyclerView$f$c;Landroidx/recyclerview/widget/RecyclerView$f$c;)Z

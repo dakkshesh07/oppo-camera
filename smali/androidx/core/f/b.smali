@@ -1,132 +1,182 @@
-.class public Landroidx/core/f/b;
-.super Ljava/io/Writer;
-.source "LogWriter.java"
+.class public abstract Landroidx/core/f/b;
+.super Ljava/lang/Object;
+.source "ActionProvider.java"
 
 
 # annotations
-.annotation runtime Ljava/lang/Deprecated;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/f/b$b;,
+        Landroidx/core/f/b$a;
+    }
 .end annotation
 
 
 # instance fields
-.field private final a:Ljava/lang/String;
+.field private final a:Landroid/content/Context;
 
-.field private b:Ljava/lang/StringBuilder;
+.field private b:Landroidx/core/f/b$a;
+
+.field private c:Landroidx/core/f/b$b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-    .line 43
-    invoke-direct {p0}, Ljava/io/Writer;-><init>()V
+    .line 139
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 140
+    iput-object p1, p0, Landroidx/core/f/b;->a:Landroid/content/Context;
 
-    const/16 v1, 0x80
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    iput-object v0, p0, Landroidx/core/f/b;->b:Ljava/lang/StringBuilder;
-
-    .line 44
-    iput-object p1, p0, Landroidx/core/f/b;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method private a()V
-    .locals 3
-
-    .line 68
-    iget-object v0, p0, Landroidx/core/f/b;->b:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    .line 69
-    iget-object v0, p0, Landroidx/core/f/b;->a:Ljava/lang/String;
-
-    iget-object v1, p0, Landroidx/core/f/b;->b:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 70
-    iget-object v0, p0, Landroidx/core/f/b;->b:Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public close()V
+.method public abstract a()Landroid/view/View;
+.end method
+
+.method public a(Landroid/view/MenuItem;)Landroid/view/View;
     .locals 0
 
-    .line 48
-    invoke-direct {p0}, Landroidx/core/f/b;->a()V
+    .line 170
+    invoke-virtual {p0}, Landroidx/core/f/b;->a()Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public a(Landroid/view/SubMenu;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public flush()V
+.method public a(Landroidx/core/f/b$a;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 52
-    invoke-direct {p0}, Landroidx/core/f/b;->a()V
+    .line 289
+    iput-object p1, p0, Landroidx/core/f/b;->b:Landroidx/core/f/b$a;
 
     return-void
 .end method
 
-.method public write([CII)V
-    .locals 3
+.method public a(Landroidx/core/f/b$b;)V
+    .locals 2
+
+    .line 299
+    iget-object v0, p0, Landroidx/core/f/b;->c:Landroidx/core/f/b$b;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    .line 300
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 301
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " instance while it is still in use somewhere else?"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "ActionProvider(support)"
+
+    .line 300
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 304
+    :cond_0
+    iput-object p1, p0, Landroidx/core/f/b;->c:Landroidx/core/f/b$b;
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
+    .line 279
+    iget-object v0, p0, Landroidx/core/f/b;->b:Landroidx/core/f/b$a;
+
+    if-eqz v0, :cond_0
+
+    .line 280
+    invoke-interface {v0, p1}, Landroidx/core/f/b$a;->c(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b()Z
+    .locals 1
 
     const/4 v0, 0x0
 
-    :goto_0
-    if-ge v0, p3, :cond_1
+    return v0
+.end method
 
-    add-int v1, p2, v0
+.method public c()Z
+    .locals 1
 
-    .line 57
-    aget-char v1, p1, v1
+    const/4 v0, 0x0
 
-    const/16 v2, 0xa
+    return v0
+.end method
 
-    if-ne v1, v2, :cond_0
+.method public d()Z
+    .locals 1
 
-    .line 59
-    invoke-direct {p0}, Landroidx/core/f/b;->a()V
+    const/4 v0, 0x0
 
-    goto :goto_1
+    return v0
+.end method
 
-    .line 62
-    :cond_0
-    iget-object v2, p0, Landroidx/core/f/b;->b:Ljava/lang/StringBuilder;
+.method public e()Z
+    .locals 1
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    :goto_1
-    add-int/lit8 v0, v0, 0x1
+    return v0
+.end method
 
-    goto :goto_0
+.method public f()V
+    .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    :cond_1
+    const/4 v0, 0x0
+
+    .line 312
+    iput-object v0, p0, Landroidx/core/f/b;->c:Landroidx/core/f/b$b;
+
+    .line 313
+    iput-object v0, p0, Landroidx/core/f/b;->b:Landroidx/core/f/b$a;
+
     return-void
 .end method

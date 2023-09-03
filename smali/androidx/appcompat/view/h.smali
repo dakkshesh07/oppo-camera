@@ -3,18 +3,23 @@
 .source "ViewPropertyAnimatorCompatSet.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field final a:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Landroidx/core/g/aa;",
+            "Landroidx/core/f/aa;",
             ">;"
         }
     .end annotation
 .end field
 
-.field b:Landroidx/core/g/ab;
+.field b:Landroidx/core/f/ab;
 
 .field private c:J
 
@@ -22,7 +27,7 @@
 
 .field private e:Z
 
-.field private final f:Landroidx/core/g/ac;
+.field private final f:Landroidx/core/f/ac;
 
 
 # direct methods
@@ -42,7 +47,7 @@
 
     invoke-direct {v0, p0}, Landroidx/appcompat/view/h$1;-><init>(Landroidx/appcompat/view/h;)V
 
-    iput-object v0, p0, Landroidx/appcompat/view/h;->f:Landroidx/core/g/ac;
+    iput-object v0, p0, Landroidx/appcompat/view/h;->f:Landroidx/core/f/ac;
 
     .line 49
     new-instance v0, Ljava/util/ArrayList;
@@ -86,7 +91,7 @@
     return-object p0
 .end method
 
-.method public a(Landroidx/core/g/aa;)Landroidx/appcompat/view/h;
+.method public a(Landroidx/core/f/aa;)Landroidx/appcompat/view/h;
     .locals 1
 
     .line 53
@@ -103,7 +108,7 @@
     return-object p0
 .end method
 
-.method public a(Landroidx/core/g/aa;Landroidx/core/g/aa;)Landroidx/appcompat/view/h;
+.method public a(Landroidx/core/f/aa;Landroidx/core/f/aa;)Landroidx/appcompat/view/h;
     .locals 2
 
     .line 61
@@ -112,11 +117,11 @@
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 62
-    invoke-virtual {p1}, Landroidx/core/g/aa;->a()J
+    invoke-virtual {p1}, Landroidx/core/f/aa;->a()J
 
     move-result-wide v0
 
-    invoke-virtual {p2, v0, v1}, Landroidx/core/g/aa;->b(J)Landroidx/core/g/aa;
+    invoke-virtual {p2, v0, v1}, Landroidx/core/f/aa;->b(J)Landroidx/core/f/aa;
 
     .line 63
     iget-object p1, p0, Landroidx/appcompat/view/h;->a:Ljava/util/ArrayList;
@@ -126,7 +131,7 @@
     return-object p0
 .end method
 
-.method public a(Landroidx/core/g/ab;)Landroidx/appcompat/view/h;
+.method public a(Landroidx/core/f/ab;)Landroidx/appcompat/view/h;
     .locals 1
 
     .line 114
@@ -135,7 +140,7 @@
     if-nez v0, :cond_0
 
     .line 115
-    iput-object p1, p0, Landroidx/appcompat/view/h;->b:Landroidx/core/g/ab;
+    iput-object p1, p0, Landroidx/appcompat/view/h;->b:Landroidx/core/f/ab;
 
     :cond_0
     return-object p0
@@ -170,7 +175,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/g/aa;
+    check-cast v1, Landroidx/core/f/aa;
 
     .line 70
     iget-wide v2, p0, Landroidx/appcompat/view/h;->c:J
@@ -182,7 +187,7 @@
     if-ltz v4, :cond_1
 
     .line 71
-    invoke-virtual {v1, v2, v3}, Landroidx/core/g/aa;->a(J)Landroidx/core/g/aa;
+    invoke-virtual {v1, v2, v3}, Landroidx/core/f/aa;->a(J)Landroidx/core/f/aa;
 
     .line 73
     :cond_1
@@ -191,22 +196,22 @@
     if-eqz v2, :cond_2
 
     .line 74
-    invoke-virtual {v1, v2}, Landroidx/core/g/aa;->a(Landroid/view/animation/Interpolator;)Landroidx/core/g/aa;
+    invoke-virtual {v1, v2}, Landroidx/core/f/aa;->a(Landroid/view/animation/Interpolator;)Landroidx/core/f/aa;
 
     .line 76
     :cond_2
-    iget-object v2, p0, Landroidx/appcompat/view/h;->b:Landroidx/core/g/ab;
+    iget-object v2, p0, Landroidx/appcompat/view/h;->b:Landroidx/core/f/ab;
 
     if-eqz v2, :cond_3
 
     .line 77
-    iget-object v2, p0, Landroidx/appcompat/view/h;->f:Landroidx/core/g/ac;
+    iget-object v2, p0, Landroidx/appcompat/view/h;->f:Landroidx/core/f/ac;
 
-    invoke-virtual {v1, v2}, Landroidx/core/g/aa;->a(Landroidx/core/g/ab;)Landroidx/core/g/aa;
+    invoke-virtual {v1, v2}, Landroidx/core/f/aa;->a(Landroidx/core/f/ab;)Landroidx/core/f/aa;
 
     .line 79
     :cond_3
-    invoke-virtual {v1}, Landroidx/core/g/aa;->c()V
+    invoke-virtual {v1}, Landroidx/core/f/aa;->c()V
 
     goto :goto_0
 
@@ -259,10 +264,10 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/g/aa;
+    check-cast v1, Landroidx/core/f/aa;
 
     .line 94
-    invoke-virtual {v1}, Landroidx/core/g/aa;->b()V
+    invoke-virtual {v1}, Landroidx/core/f/aa;->b()V
 
     goto :goto_0
 

@@ -112,6 +112,21 @@
     return-wide v0
 .end method
 
+.method public hashCode()I
+    .locals 1
+
+    .line 86
+    invoke-virtual {p0}, Lcom/oppo/exif/OppoRational;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public toDouble()D
     .locals 4
 
@@ -132,7 +147,7 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 86
+    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

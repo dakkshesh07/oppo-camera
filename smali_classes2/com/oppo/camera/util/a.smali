@@ -1,765 +1,461 @@
 .class public Lcom/oppo/camera/util/a;
 .super Ljava/lang/Object;
-.source "FlashStatusUtil.java"
-
-# interfaces
-.implements Lcom/oppo/camera/d;
+.source "AiVideoSceneDetector.java"
 
 
-# static fields
-.field private static final e:[Ljava/lang/String;
-
-.field private static final f:Ljava/util/Set;
+# instance fields
+.field private a:Ljava/util/ArrayDeque;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
+            "Ljava/util/ArrayDeque<",
+            "Ljava/lang/Float;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static final g:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private b:I
 
-.field private static final h:Ljava/util/Set;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private c:F
+
+.field private d:I
+
+.field private e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 10
-
-    const-string v0, "common"
-
-    const-string v1, "professional"
-
-    const-string v2, "commonVideo"
-
-    const-string v3, "slowVideo"
-
-    const-string v4, "sticker"
-
-    const-string v5, "night"
-
-    const-string v6, "portrait"
-
-    const-string v7, "panorama"
-
-    const-string v8, "beauty3d"
-
-    const-string v9, "fastVideo"
-
-    .line 33
-    filled-new-array/range {v0 .. v9}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/oppo/camera/util/a;->e:[Ljava/lang/String;
-
-    .line 37
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lcom/oppo/camera/util/a;->f:Ljava/util/Set;
-
-    .line 38
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lcom/oppo/camera/util/a;->g:Ljava/util/Set;
-
-    .line 39
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lcom/oppo/camera/util/a;->h:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;Landroid/content/SharedPreferences;Ljava/lang/String;Z)Ljava/lang/String;
-    .locals 0
-
-    .line 68
-    invoke-static {p0, p3}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {p1, p0, p2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private static a(Ljava/lang/String;Z)Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "pref_camera_flashmode_key_mode_"
-
-    if-eqz p1, :cond_1
-
-    .line 77
-    sget-object p1, Lcom/oppo/camera/config/ConfigDataBase;->KEY_TORCH_SOFT_LIGHT:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-static {p1}, Lcom/oppo/camera/config/CameraConfig;->getConfigBooleanValue(Landroid/hardware/camera2/CameraCharacteristics$Key;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 80
-    sget-object p1, Lcom/oppo/camera/util/a;->h:Ljava/util/Set;
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const-string p0, "pref_camera_flashmode_key_group_key_soft_light_group"
-
-    return-object p0
-
-    .line 83
-    :cond_0
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 88
-    :cond_1
-    sget-object p1, Lcom/oppo/camera/util/a;->f:Ljava/util/Set;
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const-string p0, "pref_camera_flashmode_key_group_key_common_cap_group"
-
-    return-object p0
-
-    .line 90
-    :cond_2
-    sget-object p1, Lcom/oppo/camera/util/a;->g:Ljava/util/Set;
-
-    invoke-interface {p1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    const-string p0, "pref_camera_flashmode_key_group_key_common_video_group"
-
-    return-object p0
-
-    .line 94
-    :cond_3
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static a()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
     .line 42
-    sget-object v0, Lcom/oppo/camera/util/a;->f:Ljava/util/Set;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
+    const/4 v0, 0x0
 
-    move-result v0
+    .line 36
+    iput-object v0, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    const-string v1, "common"
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    .line 37
+    iput v0, p0, Lcom/oppo/camera/util/a;->b:I
+
+    const/4 v1, 0x0
+
+    .line 38
+    iput v1, p0, Lcom/oppo/camera/util/a;->c:F
+
+    .line 39
+    iput v0, p0, Lcom/oppo/camera/util/a;->d:I
+
+    .line 40
+    iput v0, p0, Lcom/oppo/camera/util/a;->e:I
 
     .line 43
-    sget-object v0, Lcom/oppo/camera/util/a;->f:Ljava/util/Set;
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    .line 44
-    sget-object v0, Lcom/oppo/camera/util/a;->f:Ljava/util/Set;
+    iput-object v0, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    const-string v2, "professional"
+    return-void
+.end method
 
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 45
-    sget-object v0, Lcom/oppo/camera/util/a;->f:Ljava/util/Set;
-
-    const-string v2, "highPictureSize"
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 48
-    :cond_0
-    sget-object v0, Lcom/oppo/camera/util/a;->g:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v0
-
-    const-string v2, "commonVideo"
-
-    if-eqz v0, :cond_1
+# virtual methods
+.method public a(FF)I
+    .locals 10
 
     .line 49
-    sget-object v0, Lcom/oppo/camera/util/a;->g:Ljava/util/Set;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 50
-    sget-object v0, Lcom/oppo/camera/util/a;->g:Ljava/util/Set;
-
-    const-string v3, "slowVideo"
-
-    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    iget v0, p0, Lcom/oppo/camera/util/a;->b:I
 
     .line 51
-    sget-object v0, Lcom/oppo/camera/util/a;->g:Ljava/util/Set;
+    iget v1, p0, Lcom/oppo/camera/util/a;->d:I
 
-    const-string v3, "sticker"
+    const/4 v2, 0x1
 
-    invoke-interface {v0, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    add-int/2addr v1, v2
+
+    iput v1, p0, Lcom/oppo/camera/util/a;->d:I
+
+    .line 53
+    iget-object v1, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v1
+
+    const/16 v3, 0x19
+
+    if-gt v3, v1, :cond_0
 
     .line 54
-    :cond_1
-    invoke-static {}, Lcom/oppo/camera/MyApplication;->f()Landroid/content/Context;
+    iget v1, p0, Lcom/oppo/camera/util/a;->c:F
 
-    move-result-object v0
+    iget-object v3, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    if-eqz v0, :cond_2
-
-    invoke-static {}, Lcom/oppo/camera/MyApplication;->f()Landroid/content/Context;
-
-    move-result-object v0
-
-    instance-of v0, v0, Lcom/oppo/camera/MyApplication;
-
-    if-eqz v0, :cond_2
-
-    .line 55
-    invoke-static {}, Lcom/oppo/camera/MyApplication;->f()Landroid/content/Context;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oppo/camera/MyApplication;
-
-    invoke-virtual {v0}, Lcom/oppo/camera/MyApplication;->e()V
-
-    .line 58
-    :cond_2
-    sget-object v0, Lcom/oppo/camera/config/ConfigDataBase;->KEY_TORCH_SOFT_LIGHT:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-static {v0}, Lcom/oppo/camera/config/CameraConfig;->getConfigBooleanValue(Landroid/hardware/camera2/CameraCharacteristics$Key;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 60
-    sget-object v0, Lcom/oppo/camera/util/a;->h:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 61
-    sget-object v0, Lcom/oppo/camera/util/a;->h:Ljava/util/Set;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 62
-    sget-object v0, Lcom/oppo/camera/util/a;->h:Ljava/util/Set;
-
-    invoke-interface {v0, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    .line 63
-    sget-object v0, Lcom/oppo/camera/util/a;->h:Ljava/util/Set;
-
-    const-string v1, "portrait"
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    :cond_3
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;Lcom/oppo/camera/l;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 188
-    invoke-static {p0, p1, v0, v0}, Lcom/oppo/camera/util/a;->a(Landroid/content/Context;Lcom/oppo/camera/l;IZ)V
-
-    const/4 v0, 0x1
-
-    .line 189
-    invoke-static {p0, p1, v0, v0}, Lcom/oppo/camera/util/a;->a(Landroid/content/Context;Lcom/oppo/camera/l;IZ)V
-
-    return-void
-.end method
-
-.method private static a(Landroid/content/Context;Lcom/oppo/camera/l;IZ)V
-    .locals 3
-
-    .line 158
-    invoke-virtual {p1, p0, p2}, Lcom/oppo/camera/l;->b(Landroid/content/Context;I)Landroid/content/SharedPreferences;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object p0
-
-    .line 160
-    sget-object p1, Lcom/oppo/camera/util/a;->e:[Ljava/lang/String;
-
-    array-length p2, p1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_0
-
-    aget-object v1, p1, v0
-
-    .line 161
-    invoke-static {v1, p3}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "off"
-
-    invoke-interface {p0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 164
-    :cond_0
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
-.end method
-
-.method public static a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;Lcom/oppo/camera/ui/d;Z)V
-    .locals 2
-
-    .line 99
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "onFlashChangeByUI, key: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mode: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "FlashStatusUtil"
-
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p0, :cond_1
-
-    if-nez p3, :cond_0
-
-    goto :goto_0
-
-    .line 108
-    :cond_0
-    invoke-static {p0, p1, p2, p4}, Lcom/oppo/camera/util/a;->a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 109
-    invoke-interface {p3, p1}, Lcom/oppo/camera/ui/d;->e(Ljava/lang/String;)V
-
-    return-void
-
-    .line 102
-    :cond_1
-    :goto_0
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p2, "onFlashChangeByUI, sharedPreferences == null: "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 p2, 0x1
-
-    const/4 p4, 0x0
-
-    if-nez p0, :cond_2
-
-    move p0, p2
-
-    goto :goto_1
-
-    :cond_2
-    move p0, p4
-
-    :goto_1
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ", cameraUIInterface == null: "
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-nez p3, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move p2, p4
-
-    :goto_2
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private static a(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 2
-
-    .line 113
-    invoke-interface {p0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "off"
-
-    .line 114
-    invoke-interface {p0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p2, v0, p0, p3}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Landroid/content/SharedPreferences$Editor;Ljava/lang/String;Z)V
-
-    .line 115
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
-.end method
-
-.method private static a(Ljava/lang/String;Landroid/content/SharedPreferences$Editor;Ljava/lang/String;Z)V
-    .locals 0
-
-    .line 72
-    invoke-static {p0, p3}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {p1, p0, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;ZLandroid/content/SharedPreferences;Lcom/oppo/camera/d/j;)V
-    .locals 5
-
-    const-string v0, "FlashStatusUtil"
-
-    if-nez p2, :cond_0
-
-    const-string p0, "restoreCurrentFlashStatus, sharedPreferences is null"
-
-    .line 121
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    const-string v1, "pref_camera_torch_mode_key"
-
-    const-string v2, "off"
-
-    if-eqz p1, :cond_2
-
-    .line 128
-    invoke-virtual {p3, p0}, Lcom/oppo/camera/d/j;->a(Ljava/lang/String;)Lcom/oppo/camera/d/a;
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Lcom/oppo/camera/d/a;->a(Ljava/lang/String;)Z
+    check-cast v3, Ljava/lang/Float;
+
+    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
 
-    if-eqz v3, :cond_1
+    sub-float/2addr v1, v3
 
-    const-string v2, "auto"
+    iput v1, p0, Lcom/oppo/camera/util/a;->c:F
 
-    .line 129
-    invoke-static {p0, p2, v2, p1}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Landroid/content/SharedPreferences;Ljava/lang/String;Z)Ljava/lang/String;
+    .line 57
+    :cond_0
+    iget-object v1, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    move-result-object v2
-
-    goto :goto_0
-
-    .line 131
-    :cond_1
-    invoke-static {p0, p2, v2, p1}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Landroid/content/SharedPreferences;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    .line 134
-    :cond_2
-    invoke-static {p0, p2, v2, p1}, Lcom/oppo/camera/util/a;->a(Ljava/lang/String;Landroid/content/SharedPreferences;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 137
-    :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "restoreCurrentFlashStatus, currentModeName: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v4, ", isFrontCamera: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v4, ", flashMode: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_3
+    .line 58
+    iget v1, p0, Lcom/oppo/camera/util/a;->c:F
 
-    .line 141
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    add-float/2addr v1, p1
 
-    move-result-object p0
+    iput v1, p0, Lcom/oppo/camera/util/a;->c:F
 
-    invoke-interface {p0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    const/16 p1, 0xa
 
-    move-result-object p0
+    .line 60
+    iget v1, p0, Lcom/oppo/camera/util/a;->d:I
 
-    invoke-interface {p0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    if-eq p1, v1, :cond_1
 
-    goto :goto_1
+    return v0
 
-    .line 143
-    :cond_3
-    invoke-interface {p2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    :cond_1
+    const/4 p1, 0x0
 
-    move-result-object p1
+    .line 64
+    iput p1, p0, Lcom/oppo/camera/util/a;->d:I
 
-    .line 145
-    invoke-virtual {p3, p0}, Lcom/oppo/camera/d/j;->a(Ljava/lang/String;)Lcom/oppo/camera/d/a;
+    .line 65
+    iget v1, p0, Lcom/oppo/camera/util/a;->c:F
 
-    move-result-object p2
+    iget-object v3, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    const-string v0, "pref_camera_flashmode_key"
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->size()I
 
-    invoke-virtual {p2, v0}, Lcom/oppo/camera/d/a;->a(Ljava/lang/String;)Z
+    move-result v3
 
-    move-result p2
+    int-to-float v3, v3
 
-    if-eqz p2, :cond_4
+    div-float/2addr v1, v3
 
-    .line 146
-    invoke-interface {p1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 67
+    iget-object v3, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    .line 149
-    :cond_4
-    invoke-virtual {p3, p0}, Lcom/oppo/camera/d/j;->a(Ljava/lang/String;)Lcom/oppo/camera/d/a;
+    invoke-virtual {v3}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
 
-    move-result-object p0
+    move-result-object v3
 
-    const-string p2, "pref_camera_videoflashmode_key"
+    const/4 v4, 0x0
 
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/d/a;->a(Ljava/lang/String;)Z
+    move v5, p1
 
-    move-result p0
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eqz p0, :cond_5
+    move-result v6
 
-    .line 150
-    invoke-interface {p1, p2, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    if-eqz v6, :cond_2
 
-    .line 153
-    :cond_5
-    invoke-interface {p1}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :goto_1
-    return-void
-.end method
+    move-result-object v6
 
-.method public static a(ZZLandroid/content/Context;Lcom/oppo/camera/l;)V
-    .locals 3
+    check-cast v6, Ljava/lang/Float;
 
-    .line 169
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v6}, Ljava/lang/Float;->floatValue()F
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result v6
 
-    const-string v1, "setFlashAndTorchOffIfNeeded, isMotorFlash: "
+    .line 69
+    iget-object v7, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7}, Ljava/util/ArrayDeque;->size()I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result v7
 
-    const-string v1, ", isSoftLight: "
+    int-to-float v7, v7
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    int-to-float v8, v5
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    const/high16 v9, 0x40000000    # 2.0f
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    mul-float/2addr v8, v9
 
-    move-result-object v0
+    mul-float/2addr v7, v7
 
-    const-string v1, "FlashStatusUtil"
+    div-float/2addr v8, v7
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    sub-float/2addr v6, v1
 
-    const/4 v0, 0x1
+    mul-float/2addr v6, v6
 
-    const/4 v2, 0x0
+    mul-float/2addr v6, v8
 
-    if-eqz p3, :cond_3
+    add-float/2addr v4, v6
 
-    if-nez p2, :cond_0
+    add-int/2addr v5, v2
 
     goto :goto_0
 
-    :cond_0
-    if-eqz p0, :cond_1
-
-    .line 179
-    invoke-static {p2, p3, v2, v2}, Lcom/oppo/camera/util/a;->a(Landroid/content/Context;Lcom/oppo/camera/l;IZ)V
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    .line 183
-    invoke-static {p2, p3, v0, v0}, Lcom/oppo/camera/util/a;->a(Landroid/content/Context;Lcom/oppo/camera/l;IZ)V
-
     :cond_2
-    return-void
+    const/high16 v3, 0x42c80000    # 100.0f
 
-    .line 172
+    cmpg-float v3, v4, v3
+
+    if-ltz v3, :cond_3
+
+    const/high16 v3, 0x43610000    # 225.0f
+
+    cmpg-float v3, v1, v3
+
+    if-ltz v3, :cond_3
+
+    const/high16 v3, 0x43c30000    # 390.0f
+
+    cmpl-float v3, v1, v3
+
+    if-lez v3, :cond_4
+
     :cond_3
-    :goto_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    move p1, v2
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    :cond_4
+    if-eqz p1, :cond_9
 
-    const-string p1, "onFlashChangeByUI, mPreferences == null: "
+    const p1, 0x45e0ffff    # 7199.9995f
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    div-float/2addr p1, v1
 
-    if-nez p3, :cond_4
+    const v0, 0x42700001    # 60.000004f
 
-    move p1, v0
+    mul-float/2addr v0, p2
+
+    const/high16 v3, 0x41200000    # 10.0f
+
+    div-float/2addr v0, v3
+
+    add-float/2addr p1, v0
+
+    const/high16 v0, 0x40200000    # 2.5f
+
+    cmpl-float v3, p2, v0
+
+    if-lez v3, :cond_5
+
+    const/high16 v3, 0x439b0000    # 310.0f
+
+    cmpg-float v3, v1, v3
+
+    if-gez v3, :cond_5
+
+    const/high16 v3, 0x42820000    # 65.0f
+
+    cmpl-float p1, p1, v3
+
+    if-lez p1, :cond_5
+
+    move v0, v2
 
     goto :goto_1
 
-    :cond_4
-    move p1, v2
+    :cond_5
+    const p1, 0x43ac8000    # 345.0f
 
+    cmpl-float p1, v1, p1
+
+    if-lez p1, :cond_6
+
+    cmpg-float p1, p2, v0
+
+    if-ltz p1, :cond_7
+
+    :cond_6
+    const p1, 0x43bb8000    # 375.0f
+
+    cmpl-float p1, v1, p1
+
+    if-lez p1, :cond_8
+
+    :cond_7
+    const/4 v0, 0x2
+
+    goto :goto_1
+
+    :cond_8
+    const/4 v0, -0x1
+
+    .line 95
+    :cond_9
     :goto_1
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iput v0, p0, Lcom/oppo/camera/util/a;->b:I
 
-    const-string p1, ", context == null: "
+    return v0
+.end method
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public b(FF)I
+    .locals 5
 
-    if-nez p2, :cond_5
+    .line 101
+    iget v0, p0, Lcom/oppo/camera/util/a;->e:I
 
-    goto :goto_2
+    const/4 v1, 0x1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/oppo/camera/util/a;->e:I
+
+    .line 103
+    iget-object v0, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v0
+
+    const/16 v2, 0x19
+
+    if-gt v2, v0, :cond_0
+
+    .line 104
+    iget v0, p0, Lcom/oppo/camera/util/a;->c:F
+
+    iget-object v2, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v2}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Float;
+
+    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
+
+    move-result v2
+
+    sub-float/2addr v0, v2
+
+    iput v0, p0, Lcom/oppo/camera/util/a;->c:F
+
+    .line 107
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    .line 108
+    iget v0, p0, Lcom/oppo/camera/util/a;->c:F
+
+    add-float/2addr v0, p1
+
+    iput v0, p0, Lcom/oppo/camera/util/a;->c:F
+
+    .line 109
+    iget p1, p0, Lcom/oppo/camera/util/a;->c:F
+
+    iget-object v0, p0, Lcom/oppo/camera/util/a;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr p1, v0
+
+    const/16 v0, 0x23
+
+    .line 111
+    iget v2, p0, Lcom/oppo/camera/util/a;->e:I
+
+    const/4 v3, 0x0
+
+    if-eq v0, v2, :cond_1
+
+    return v3
+
+    :cond_1
+    const v0, 0x45e0ffff    # 7199.9995f
+
+    div-float/2addr v0, p1
+
+    const v2, 0x42700001    # 60.000004f
+
+    mul-float/2addr v2, p2
+
+    const/high16 v4, 0x40a00000    # 5.0f
+
+    div-float/2addr v2, v4
+
+    add-float/2addr v0, v2
+
+    const v2, 0x3fe66666    # 1.8f
+
+    cmpl-float v2, p2, v2
+
+    if-lez v2, :cond_2
+
+    const/high16 v2, 0x439b0000    # 310.0f
+
+    cmpg-float v2, p1, v2
+
+    if-gez v2, :cond_2
+
+    const/high16 v2, 0x42820000    # 65.0f
+
+    cmpl-float v0, v0, v2
+
+    if-lez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    cmpl-float v0, p1, v0
+
+    if-lez v0, :cond_3
+
+    const v0, 0x40333333    # 2.8f
+
+    cmpg-float p2, p2, v0
+
+    if-ltz p2, :cond_4
+
+    :cond_3
+    const/high16 p2, 0x43c80000    # 400.0f
+
+    cmpl-float p1, p1, p2
+
+    if-lez p1, :cond_5
+
+    :cond_4
+    const/4 v1, 0x2
+
+    goto :goto_0
 
     :cond_5
-    move v0, v2
+    const/4 v1, -0x1
 
-    :goto_2
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 127
+    :goto_0
+    iput v3, p0, Lcom/oppo/camera/util/a;->e:I
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return v1
 .end method

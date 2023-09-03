@@ -7,6 +7,11 @@
 .implements Lokio/Sink;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # virtual methods
 .method public abstract buffer()Lokio/Buffer;
 .end method
@@ -42,6 +47,14 @@
 .end method
 
 .method public abstract write(Lokio/ByteString;)Lokio/BufferedSink;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method public abstract write(Lokio/ByteString;II)Lokio/BufferedSink;
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<S:",
@@ -41,7 +44,7 @@
         value = {
             "()",
             "Ljava/util/Collection<",
-            "Landroidx/core/f/d<",
+            "Landroidx/core/util/e<",
             "Ljava/lang/Long;",
             "Ljava/lang/Long;",
             ">;>;"

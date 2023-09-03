@@ -26,16 +26,16 @@
 .method protected constructor <init>(Ljava/lang/String;ZZ)V
     .locals 0
 
-    .line 181
+    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 182
+    .line 186
     iput-object p1, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->name:Ljava/lang/String;
 
-    .line 183
+    .line 187
     iput-boolean p2, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->serialized:Z
 
-    .line 184
+    .line 188
     iput-boolean p3, p0, Lcom/google/gson/internal/bind/ReflectiveTypeAdapterFactory$BoundField;->deserialized:Z
 
     return-void

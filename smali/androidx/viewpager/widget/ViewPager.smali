@@ -1489,7 +1489,7 @@
     .line 2003
     iget-object p1, p0, Landroidx/viewpager/widget/ViewPager;->aj:Ljava/lang/Runnable;
 
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     goto :goto_2
 
@@ -2782,17 +2782,17 @@
 
     invoke-direct {v1, p0}, Landroidx/viewpager/widget/ViewPager$d;-><init>(Landroidx/viewpager/widget/ViewPager;)V
 
-    invoke-static {p0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 421
-    invoke-static {p0}, Landroidx/core/g/w;->f(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->f(Landroid/view/View;)I
 
     move-result v1
 
     if-nez v1, :cond_0
 
     .line 423
-    invoke-static {p0, v0}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 427
     :cond_0
@@ -2800,7 +2800,7 @@
 
     invoke-direct {v0, p0}, Landroidx/viewpager/widget/ViewPager$4;-><init>(Landroidx/viewpager/widget/ViewPager;)V
 
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     return-void
 .end method
@@ -4060,7 +4060,7 @@
     invoke-virtual/range {v3 .. v8}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
     .line 1004
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -5618,7 +5618,7 @@
 
     .line 1809
     :cond_1
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 
@@ -5973,7 +5973,7 @@
     if-eqz v1, :cond_4
 
     .line 2462
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_4
     return-void
@@ -6673,7 +6673,7 @@
     if-eqz v0, :cond_c
 
     .line 2107
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     goto :goto_2
 
@@ -8210,7 +8210,7 @@
     if-eqz v2, :cond_e
 
     .line 2287
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_e
     return v1
@@ -8566,7 +8566,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

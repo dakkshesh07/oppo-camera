@@ -44,7 +44,7 @@
 
     const/4 v0, 0x0
 
-    .line 943
+    .line 982
     new-array v0, v0, [B
 
     sput-object v0, Lcom/google/protobuf/ByteString$Output;->EMPTY_BYTE_ARRAY:[B
@@ -55,29 +55,29 @@
 .method constructor <init>(I)V
     .locals 1
 
-    .line 961
+    .line 999
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     if-ltz p1, :cond_0
 
-    .line 965
+    .line 1003
     iput p1, p0, Lcom/google/protobuf/ByteString$Output;->initialCapacity:I
 
-    .line 966
+    .line 1004
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
-    .line 967
+    .line 1005
     new-array p1, p1, [B
 
     iput-object p1, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
     return-void
 
-    .line 963
+    .line 1001
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -91,10 +91,10 @@
 .method private copyArray([BI)[B
     .locals 2
 
-    .line 1013
+    .line 1049
     new-array v0, p2, [B
 
-    .line 1014
+    .line 1050
     array-length v1, p1
 
     invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
@@ -111,7 +111,7 @@
 .method private flushFullBuffer(I)V
     .locals 3
 
-    .line 1076
+    .line 1110
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/google/protobuf/ByteString$LiteralByteString;
@@ -122,7 +122,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1077
+    .line 1111
     iget v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffersTotalBytes:I
 
     iget-object v1, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
@@ -133,31 +133,29 @@
 
     iput v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffersTotalBytes:I
 
-    .line 1081
+    .line 1115
     iget v0, p0, Lcom/google/protobuf/ByteString$Output;->initialCapacity:I
 
     iget v1, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffersTotalBytes:I
 
     ushr-int/lit8 v1, v1, 0x1
 
-    .line 1082
     invoke-static {p1, v1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    .line 1081
     invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result p1
 
-    .line 1083
+    .line 1116
     new-array p1, p1, [B
 
     iput-object p1, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
     const/4 p1, 0x0
 
-    .line 1084
+    .line 1117
     iput p1, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
     return-void
@@ -166,7 +164,7 @@
 .method private flushLastBuffer()V
     .locals 3
 
-    .line 1092
+    .line 1125
     iget v0, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
     iget-object v1, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
@@ -177,12 +175,12 @@
 
     if-lez v0, :cond_1
 
-    .line 1094
+    .line 1127
     invoke-direct {p0, v1, v0}, Lcom/google/protobuf/ByteString$Output;->copyArray([BI)[B
 
     move-result-object v0
 
-    .line 1095
+    .line 1128
     iget-object v1, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
     new-instance v2, Lcom/google/protobuf/ByteString$LiteralByteString;
@@ -193,7 +191,7 @@
 
     goto :goto_0
 
-    .line 1100
+    .line 1133
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
@@ -203,12 +201,12 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1106
+    .line 1139
     sget-object v0, Lcom/google/protobuf/ByteString$Output;->EMPTY_BYTE_ARRAY:[B
 
     iput-object v0, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
-    .line 1108
+    .line 1141
     :cond_1
     :goto_0
     iget v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffersTotalBytes:I
@@ -221,7 +219,7 @@
 
     const/4 v0, 0x0
 
-    .line 1109
+    .line 1142
     iput v0, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
     return-void
@@ -234,7 +232,7 @@
 
     monitor-enter p0
 
-    .line 1059
+    .line 1093
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
@@ -242,15 +240,15 @@
 
     const/4 v0, 0x0
 
-    .line 1060
+    .line 1094
     iput v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffersTotalBytes:I
 
-    .line 1061
+    .line 1095
     iput v0, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1062
+    .line 1096
     monitor-exit p0
 
     return-void
@@ -268,7 +266,7 @@
 
     monitor-enter p0
 
-    .line 1050
+    .line 1085
     :try_start_0
     iget v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffersTotalBytes:I
 
@@ -295,11 +293,11 @@
 
     monitor-enter p0
 
-    .line 1005
+    .line 1043
     :try_start_0
     invoke-direct {p0}, Lcom/google/protobuf/ByteString$Output;->flushLastBuffer()V
 
-    .line 1006
+    .line 1044
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFrom(Ljava/lang/Iterable;)Lcom/google/protobuf/ByteString;
@@ -325,10 +323,10 @@
 
     const/4 v0, 0x2
 
-    .line 1066
+    .line 1100
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1067
+    .line 1102
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -355,7 +353,7 @@
 
     const-string v1, "<ByteString.Output@%s size=%d>"
 
-    .line 1066
+    .line 1100
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -368,7 +366,7 @@
 
     monitor-enter p0
 
-    .line 972
+    .line 1010
     :try_start_0
     iget v0, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
@@ -380,10 +378,10 @@
 
     const/4 v0, 0x1
 
-    .line 973
+    .line 1011
     invoke-direct {p0, v0}, Lcom/google/protobuf/ByteString$Output;->flushFullBuffer(I)V
 
-    .line 975
+    .line 1013
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
@@ -399,7 +397,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 976
+    .line 1014
     monitor-exit p0
 
     return-void
@@ -417,7 +415,7 @@
 
     monitor-enter p0
 
-    .line 980
+    .line 1018
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
@@ -429,14 +427,14 @@
 
     if-gt p3, v0, :cond_0
 
-    .line 982
+    .line 1020
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 983
+    .line 1021
     iget p1, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
     add-int/2addr p1, p3
@@ -445,7 +443,7 @@
 
     goto :goto_0
 
-    .line 986
+    .line 1024
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
@@ -455,7 +453,7 @@
 
     sub-int/2addr v0, v1
 
-    .line 987
+    .line 1025
     iget-object v1, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
     iget v2, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
@@ -466,22 +464,22 @@
 
     sub-int/2addr p3, v0
 
-    .line 992
+    .line 1030
     invoke-direct {p0, p3}, Lcom/google/protobuf/ByteString$Output;->flushFullBuffer(I)V
 
-    .line 993
+    .line 1031
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
     const/4 v1, 0x0
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 994
+    .line 1032
     iput p3, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 996
+    .line 1034
     :goto_0
     monitor-exit p0
 
@@ -503,16 +501,15 @@
         }
     .end annotation
 
-    .line 1029
+    .line 1065
     monitor-enter p0
 
-    .line 1032
+    .line 1068
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lcom/google/protobuf/ByteString$Output;->flushedBuffers:Ljava/util/ArrayList;
 
-    .line 1033
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
@@ -525,18 +522,18 @@
 
     check-cast v0, [Lcom/google/protobuf/ByteString;
 
-    .line 1034
+    .line 1069
     iget-object v1, p0, Lcom/google/protobuf/ByteString$Output;->buffer:[B
 
-    .line 1035
+    .line 1070
     iget v2, p0, Lcom/google/protobuf/ByteString$Output;->bufferPos:I
 
-    .line 1036
+    .line 1071
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1037
+    .line 1072
     array-length v3, v0
 
     const/4 v4, 0x0
@@ -546,14 +543,14 @@
 
     aget-object v5, v0, v4
 
-    .line 1038
+    .line 1073
     invoke-virtual {v5, p1}, Lcom/google/protobuf/ByteString;->writeTo(Ljava/io/OutputStream;)V
 
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 1041
+    .line 1076
     :cond_0
     invoke-direct {p0, v1, v2}, Lcom/google/protobuf/ByteString$Output;->copyArray([BI)[B
 
@@ -566,7 +563,7 @@
     :catchall_0
     move-exception p1
 
-    .line 1036
+    .line 1071
     :try_start_1
     monitor-exit p0
     :try_end_1

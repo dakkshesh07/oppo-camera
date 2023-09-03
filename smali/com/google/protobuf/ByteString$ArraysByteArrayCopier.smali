@@ -21,7 +21,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 120
+    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +30,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/ByteString$1;)V
     .locals 0
 
-    .line 120
+    .line 114
     invoke-direct {p0}, Lcom/google/protobuf/ByteString$ArraysByteArrayCopier;-><init>()V
 
     return-void
@@ -43,7 +43,7 @@
 
     add-int/2addr p3, p2
 
-    .line 123
+    .line 117
     invoke-static {p1, p2, p3}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object p1

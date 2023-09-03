@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/d/b;->a(Landroid/content/Context;Landroidx/core/d/a;Landroidx/core/content/a/f$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/d/b;->a(Landroid/content/Context;Landroidx/core/d/a;Landroidx/core/a/a/f$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -81,13 +81,13 @@
     if-eqz v1, :cond_0
 
     .line 259
-    sget-object v1, Landroidx/core/d/b;->a:Landroidx/b/e;
+    sget-object v1, Landroidx/core/d/b;->a:Landroidx/collection/LruCache;
 
     iget-object v2, p0, Landroidx/core/d/b$1;->d:Ljava/lang/String;
 
     iget-object v3, v0, Landroidx/core/d/b$c;->a:Landroid/graphics/Typeface;
 
-    invoke-virtual {v1, v2, v3}, Landroidx/b/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3}, Landroidx/collection/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v0

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/l;->b(Landroidx/fragment/app/n;Landroid/view/ViewGroup;Landroid/view/View;Landroidx/b/a;Landroidx/fragment/app/l$a;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    value = Landroidx/fragment/app/l;->b(Landroidx/fragment/app/n;Landroid/view/ViewGroup;Landroid/view/View;Landroidx/collection/ArrayMap;Landroidx/fragment/app/l$a;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic a:Landroidx/fragment/app/n;
 
-.field final synthetic b:Landroidx/b/a;
+.field final synthetic b:Landroidx/collection/ArrayMap;
 
 .field final synthetic c:Ljava/lang/Object;
 
@@ -44,13 +44,13 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/n;Landroidx/b/a;Ljava/lang/Object;Landroidx/fragment/app/l$a;Ljava/util/ArrayList;Landroid/view/View;Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLjava/util/ArrayList;Ljava/lang/Object;Landroid/graphics/Rect;)V
+.method constructor <init>(Landroidx/fragment/app/n;Landroidx/collection/ArrayMap;Ljava/lang/Object;Landroidx/fragment/app/l$a;Ljava/util/ArrayList;Landroid/view/View;Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLjava/util/ArrayList;Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
     .line 736
     iput-object p1, p0, Landroidx/fragment/app/l$4;->a:Landroidx/fragment/app/n;
 
-    iput-object p2, p0, Landroidx/fragment/app/l$4;->b:Landroidx/b/a;
+    iput-object p2, p0, Landroidx/fragment/app/l$4;->b:Landroidx/collection/ArrayMap;
 
     iput-object p3, p0, Landroidx/fragment/app/l$4;->c:Ljava/lang/Object;
 
@@ -85,13 +85,13 @@
     .line 739
     iget-object v0, p0, Landroidx/fragment/app/l$4;->a:Landroidx/fragment/app/n;
 
-    iget-object v1, p0, Landroidx/fragment/app/l$4;->b:Landroidx/b/a;
+    iget-object v1, p0, Landroidx/fragment/app/l$4;->b:Landroidx/collection/ArrayMap;
 
     iget-object v2, p0, Landroidx/fragment/app/l$4;->c:Ljava/lang/Object;
 
     iget-object v3, p0, Landroidx/fragment/app/l$4;->d:Landroidx/fragment/app/l$a;
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/fragment/app/l;->a(Landroidx/fragment/app/n;Landroidx/b/a;Ljava/lang/Object;Landroidx/fragment/app/l$a;)Landroidx/b/a;
+    invoke-static {v0, v1, v2, v3}, Landroidx/fragment/app/l;->a(Landroidx/fragment/app/n;Landroidx/collection/ArrayMap;Ljava/lang/Object;Landroidx/fragment/app/l$a;)Landroidx/collection/ArrayMap;
 
     move-result-object v0
 
@@ -100,7 +100,7 @@
     .line 743
     iget-object v1, p0, Landroidx/fragment/app/l$4;->e:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Landroidx/b/a;->values()Ljava/util/Collection;
+    invoke-virtual {v0}, Landroidx/collection/ArrayMap;->values()Ljava/util/Collection;
 
     move-result-object v2
 
@@ -123,7 +123,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v1, v2, v3, v0, v4}, Landroidx/fragment/app/l;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/b/a;Z)V
+    invoke-static {v1, v2, v3, v0, v4}, Landroidx/fragment/app/l;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Z)V
 
     .line 749
     iget-object v1, p0, Landroidx/fragment/app/l$4;->c:Ljava/lang/Object;
@@ -146,7 +146,7 @@
 
     iget-boolean v3, p0, Landroidx/fragment/app/l$4;->i:Z
 
-    invoke-static {v0, v1, v2, v3}, Landroidx/fragment/app/l;->a(Landroidx/b/a;Landroidx/fragment/app/l$a;Ljava/lang/Object;Z)Landroid/view/View;
+    invoke-static {v0, v1, v2, v3}, Landroidx/fragment/app/l;->a(Landroidx/collection/ArrayMap;Landroidx/fragment/app/l$a;Ljava/lang/Object;Z)Landroid/view/View;
 
     move-result-object v0
 

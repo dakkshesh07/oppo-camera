@@ -3,6 +3,11 @@
 .source "AnimatorSetCompat.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0

@@ -5,9 +5,9 @@
 # instance fields
 .field public final a:Landroid/content/res/Resources;
 
-.field public b:La/a/a/d;
+.field public b:La/a/b/d;
 
-.field public c:La/a/a/b/c;
+.field public c:La/a/b/b/c;
 
 .field public d:Landroid/os/Handler;
 
@@ -24,7 +24,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/a/d;
+    iput-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/b/d;
 
     const/4 v0, 0x0
 
@@ -35,10 +35,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Lco/polarr/renderer/PolarrRenderThread;)La/a/a/d;
+.method public static synthetic a(Lco/polarr/renderer/PolarrRenderThread;)La/a/b/d;
     .locals 0
 
-    iget-object p0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/a/d;
+    iget-object p0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/b/d;
 
     return-object p0
 .end method
@@ -88,25 +88,25 @@
 .method public final a()V
     .locals 7
 
-    new-instance v0, La/a/a/b/c;
+    new-instance v0, La/a/b/b/c;
 
-    invoke-direct {v0}, La/a/a/b/c;-><init>()V
+    invoke-direct {v0}, La/a/b/b/c;-><init>()V
 
-    iput-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->c:La/a/a/b/c;
+    iput-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->c:La/a/b/b/c;
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->c:La/a/a/b/c;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->c:La/a/b/b/c;
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1, v1}, La/a/a/b/c;->a(II)I
+    invoke-virtual {v0, v1, v1}, La/a/b/b/c;->a(II)I
 
-    new-instance v0, La/a/a/d;
+    new-instance v0, La/a/b/d;
 
-    invoke-direct {v0}, La/a/a/d;-><init>()V
+    invoke-direct {v0}, La/a/b/d;-><init>()V
 
-    iput-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/a/d;
+    iput-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/b/d;
 
-    iget-object v1, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/a/d;
+    iget-object v1, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/b/d;
 
     iget-object v2, p0, Lco/polarr/renderer/PolarrRenderThread;->a:Landroid/content/res/Resources;
 
@@ -120,11 +120,11 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual/range {v1 .. v6}, La/a/a/d;->a(Landroid/content/res/Resources;IIZI)V
+    invoke-virtual/range {v1 .. v6}, La/a/b/d;->a(Landroid/content/res/Resources;IIZI)V
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->c()V
+    invoke-virtual {v0}, La/a/b/d;->c()V
 
     return-void
 .end method
@@ -132,13 +132,13 @@
 .method public final b()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->b:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->o()V
+    invoke-virtual {v0}, La/a/b/d;->o()V
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->c:La/a/a/b/c;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRenderThread;->c:La/a/b/b/c;
 
-    invoke-virtual {v0}, La/a/a/b/c;->a()V
+    invoke-virtual {v0}, La/a/b/b/c;->a()V
 
     return-void
 .end method

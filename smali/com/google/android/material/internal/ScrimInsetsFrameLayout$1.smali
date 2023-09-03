@@ -3,7 +3,7 @@
 .source "ScrimInsetsFrameLayout.java"
 
 # interfaces
-.implements Landroidx/core/g/r;
+.implements Landroidx/core/f/r;
 
 
 # annotations
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 4
 
     .line 78
@@ -61,22 +61,22 @@
     iget-object p1, p1, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->insets:Landroid/graphics/Rect;
 
     .line 82
-    invoke-virtual {p2}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->a()I
 
     move-result v0
 
     .line 83
-    invoke-virtual {p2}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->b()I
 
     move-result v1
 
     .line 84
-    invoke-virtual {p2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->c()I
 
     move-result v2
 
     .line 85
-    invoke-virtual {p2}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->d()I
 
     move-result v3
 
@@ -86,12 +86,12 @@
     .line 86
     iget-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;->this$0:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onInsetsChanged(Landroidx/core/g/ae;)V
+    invoke-virtual {p1, p2}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout;->onInsetsChanged(Landroidx/core/f/ae;)V
 
     .line 87
     iget-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;->this$0:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->e()Z
+    invoke-virtual {p2}, Landroidx/core/f/ae;->e()Z
 
     move-result v0
 
@@ -120,10 +120,10 @@
     .line 88
     iget-object p1, p0, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;->this$0:Lcom/google/android/material/internal/ScrimInsetsFrameLayout;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     .line 89
-    invoke-virtual {p2}, Landroidx/core/g/ae;->g()Landroidx/core/g/ae;
+    invoke-virtual {p2}, Landroidx/core/f/ae;->g()Landroidx/core/f/ae;
 
     move-result-object p1
 

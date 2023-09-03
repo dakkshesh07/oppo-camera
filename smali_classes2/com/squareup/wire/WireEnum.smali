@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/squareup/wire/WireEnum;
 .super Ljava/lang/Object;
-.source "WireEnum.kt"
+.source "WireEnum.java"
 
 
 # virtual methods

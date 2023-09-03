@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/google/protobuf/ByteString;)V
     .locals 0
 
-    .line 94
+    .line 110
     iput-object p1, p0, Lcom/google/protobuf/TextFormatEscaper$1;->val$input:Lcom/google/protobuf/ByteString;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public byteAt(I)B
     .locals 1
 
-    .line 101
+    .line 118
     iget-object v0, p0, Lcom/google/protobuf/TextFormatEscaper$1;->val$input:Lcom/google/protobuf/ByteString;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/ByteString;->byteAt(I)B
@@ -51,7 +51,7 @@
 .method public size()I
     .locals 1
 
-    .line 97
+    .line 113
     iget-object v0, p0, Lcom/google/protobuf/TextFormatEscaper$1;->val$input:Lcom/google/protobuf/ByteString;
 
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString;->size()I

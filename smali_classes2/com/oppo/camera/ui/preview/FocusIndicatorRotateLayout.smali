@@ -3,7 +3,7 @@
 .source "FocusIndicatorRotateLayout.java"
 
 # interfaces
-.implements Lcom/oppo/camera/ui/preview/g;
+.implements Lcom/oppo/camera/ui/preview/k;
 
 
 # annotations
@@ -137,6 +137,15 @@
 
     .line 55
     iput v0, p0, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->a:I
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    .line 110
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->d:Z
 
     return-void
 .end method
@@ -365,25 +374,6 @@
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->setScaleX(F)V
 
     .line 106
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->setScaleY(F)V
-
-    return-void
-.end method
-
-.method public d()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    .line 110
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->setVisibility(I)V
-
-    const v0, 0x3f0ccccd    # 0.55f
-
-    .line 111
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->setScaleX(F)V
-
-    .line 112
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->setScaleY(F)V
 
     return-void

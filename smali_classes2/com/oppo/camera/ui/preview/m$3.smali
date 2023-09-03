@@ -1,14 +1,11 @@
 .class Lcom/oppo/camera/ui/preview/m$3;
-.super Ljava/lang/Object;
-.source "PIAISceneUI.java"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.super Landroid/animation/AnimatorListenerAdapter;
+.source "GradienterAssistView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/m;->m()V
+    value = Lcom/oppo/camera/ui/preview/m;->f()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,50 +22,52 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/m;)V
     .locals 0
 
-    .line 506
+    .line 298
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/m$3;->a:Lcom/oppo/camera/ui/preview/m;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 1
-
-    .line 519
-    iget-object p1, p0, Lcom/oppo/camera/ui/preview/m$3;->a:Lcom/oppo/camera/ui/preview/m;
-
-    const/16 v0, 0x8
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;I)V
-
-    return-void
-.end method
-
 .method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
+    .locals 0
 
-    .line 514
+    .line 301
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    .line 303
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/m$3;->a:Lcom/oppo/camera/ui/preview/m;
 
-    const/16 v0, 0x8
+    invoke-static {p1}, Lcom/oppo/camera/ui/preview/m;->m(Lcom/oppo/camera/ui/preview/m;)Landroid/animation/ValueAnimator;
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;I)V
+    move-result-object p1
 
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->isRunning()Z
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    move-result p1
 
-    return-void
-.end method
+    if-nez p1, :cond_0
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/m$3;->a:Lcom/oppo/camera/ui/preview/m;
 
+    invoke-static {p1}, Lcom/oppo/camera/ui/preview/m;->h(Lcom/oppo/camera/ui/preview/m;)Ljava/util/LinkedList;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/LinkedList;->size()I
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    .line 304
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/m$3;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {p1}, Lcom/oppo/camera/ui/preview/m;->n(Lcom/oppo/camera/ui/preview/m;)V
+
+    :cond_0
     return-void
 .end method

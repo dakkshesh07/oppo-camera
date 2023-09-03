@@ -89,7 +89,7 @@
 
     iget v3, p0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    invoke-static {p1, v0, v1, v2, v3}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {p1, v0, v1, v2, v3}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     return-void
 .end method

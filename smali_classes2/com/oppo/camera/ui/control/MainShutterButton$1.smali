@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/control/MainShutterButton;->l()V
+    value = Lcom/oppo/camera/ui/control/MainShutterButton;->o()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/control/MainShutterButton;Ljava/lang/Class;Ljava/lang/String;)V
     .locals 0
 
-    .line 782
+    .line 1433
     iput-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$1;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
     invoke-direct {p0, p2, p3}, Landroid/util/Property;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
@@ -44,7 +44,7 @@
 .method public a(Lcom/oppo/camera/ui/control/MainShutterButton;)Ljava/lang/Float;
     .locals 0
 
-    .line 785
+    .line 1436
     invoke-virtual {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->getCurrentGlobalAngle()F
 
     move-result p1
@@ -59,7 +59,7 @@
 .method public a(Lcom/oppo/camera/ui/control/MainShutterButton;Ljava/lang/Float;)V
     .locals 0
 
-    .line 790
+    .line 1441
     invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
     move-result p2
@@ -72,7 +72,7 @@
 .method public synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 782
+    .line 1433
     check-cast p1, Lcom/oppo/camera/ui/control/MainShutterButton;
 
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/control/MainShutterButton$1;->a(Lcom/oppo/camera/ui/control/MainShutterButton;)Ljava/lang/Float;
@@ -85,7 +85,7 @@
 .method public synthetic set(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    .line 782
+    .line 1433
     check-cast p1, Lcom/oppo/camera/ui/control/MainShutterButton;
 
     check-cast p2, Ljava/lang/Float;

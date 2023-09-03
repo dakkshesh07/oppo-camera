@@ -105,7 +105,7 @@
 
     invoke-static {v0, p0, v3, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-static {v3}, La/a/a/e/t;->b([B)[B
+    invoke-static {v3}, La/a/b/e/t;->b([B)[B
 
     move-result-object v3
 

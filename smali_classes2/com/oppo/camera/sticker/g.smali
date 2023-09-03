@@ -86,7 +86,7 @@
     const-string p0, "getStickerItemsCursor, empty categoryId!"
 
     .line 45
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
@@ -136,7 +136,7 @@
     const-string p0, "getStickerItemsCursor, recycleBinStickerCursor is null!"
 
     .line 62
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object p1
 
@@ -144,7 +144,7 @@
     const-string p0, "getStickerItemsCursor, myStickerCursor is null!"
 
     .line 67
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
@@ -253,7 +253,7 @@
     const-string v3, "getUnstableContentProviderCursor, client is null!"
 
     .line 206
-    invoke-static {v0, v3}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
@@ -283,7 +283,7 @@
     const-string v4, "getUnstableContentProviderCursor, RemoteException! e: "
 
     .line 209
-    invoke-static {v0, v4, v3}, Lcom/oppo/camera/e;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v4, v3}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     if-eqz v2, :cond_1
 
@@ -339,7 +339,7 @@
     const-string p1, "getUnstableContentProviderCursor2, client is null!"
 
     .line 226
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -356,7 +356,7 @@
     const-string p2, "getUnstableContentProviderCursor, RemoteException again! "
 
     .line 229
-    invoke-static {v0, p2, p1}, Lcom/oppo/camera/e;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p2, p1}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
@@ -549,7 +549,7 @@
 
     const-string p2, "StickerItemDBHelper"
 
-    invoke-static {p2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     :goto_2
@@ -1039,7 +1039,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -1070,7 +1070,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -1202,7 +1202,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     :goto_3
@@ -1251,7 +1251,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -1282,7 +1282,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -1423,7 +1423,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     :goto_3

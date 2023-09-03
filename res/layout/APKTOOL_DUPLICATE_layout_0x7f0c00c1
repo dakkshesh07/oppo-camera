@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AlertDialogLayout android:gravity="start|center|top" android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090219" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00c3" />
+    <FrameLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900bb" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip">
+        <View android:layout_gravity="top" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090270" android:background="?APKTOOL_DUPLICATE_attr_0x7f0400e6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <androidx.core.widget.NestedScrollView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090271" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <android.widget.Space android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902f4" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070041" />
+                <TextView android:id="@android:id/message" android:paddingLeft="?APKTOOL_DUPLICATE_attr_0x7f0402db" android:paddingRight="?APKTOOL_DUPLICATE_attr_0x7f0402db" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?APKTOOL_DUPLICATE_attr_0x7f04043e" />
+                <android.widget.Space android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902f3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070041" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <View android:layout_gravity="bottom" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09026f" android:background="?APKTOOL_DUPLICATE_attr_0x7f0400e6" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900e3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip">
+        <FrameLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900e2" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00c2" />
+</androidx.appcompat.widget.AlertDialogLayout>

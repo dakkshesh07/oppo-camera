@@ -36,7 +36,7 @@
 .method constructor <init>(Lcom/google/protobuf/Internal$EnumLiteMap;Lcom/google/protobuf/Internal$EnumLite;)V
     .locals 0
 
-    .line 470
+    .line 431
     iput-object p1, p0, Lcom/google/protobuf/Internal$MapAdapter$1;->val$enumMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     iput-object p2, p0, Lcom/google/protobuf/Internal$MapAdapter$1;->val$unrecognizedValue:Lcom/google/protobuf/Internal$EnumLite;
@@ -57,7 +57,7 @@
         }
     .end annotation
 
-    .line 479
+    .line 440
     invoke-interface {p1}, Lcom/google/protobuf/Internal$EnumLite;->getNumber()I
 
     move-result p1
@@ -72,7 +72,7 @@
 .method public bridge synthetic doBackward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 470
+    .line 431
     check-cast p1, Lcom/google/protobuf/Internal$EnumLite;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Internal$MapAdapter$1;->doBackward(Lcom/google/protobuf/Internal$EnumLite;)Ljava/lang/Integer;
@@ -92,7 +92,7 @@
         }
     .end annotation
 
-    .line 473
+    .line 434
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter$1;->val$enumMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -105,7 +105,7 @@
 
     if-nez p1, :cond_0
 
-    .line 474
+    .line 435
     iget-object p1, p0, Lcom/google/protobuf/Internal$MapAdapter$1;->val$unrecognizedValue:Lcom/google/protobuf/Internal$EnumLite;
 
     :cond_0
@@ -115,7 +115,7 @@
 .method public bridge synthetic doForward(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 470
+    .line 431
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Internal$MapAdapter$1;->doForward(Ljava/lang/Integer;)Lcom/google/protobuf/Internal$EnumLite;

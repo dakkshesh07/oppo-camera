@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 37
+    .line 35
     new-instance v0, Lcom/google/protobuf/MutabilityOracle$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/MutabilityOracle$1;-><init>()V

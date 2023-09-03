@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Lcom/color/support/widget/ColorLoadingView;
+.field public a:Lcom/oppo/camera/ui/LoaddingProgress;
 
 .field public b:Lcom/oppo/camera/ui/RotateImageView;
 
@@ -12,7 +12,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/color/support/widget/ColorLoadingView;Lcom/oppo/camera/ui/RotateImageView;Landroid/widget/ImageView;)V
+.method public constructor <init>(Lcom/oppo/camera/ui/LoaddingProgress;Lcom/oppo/camera/ui/RotateImageView;Landroid/widget/ImageView;)V
     .locals 1
 
     .line 13
@@ -21,7 +21,7 @@
     const/4 v0, 0x0
 
     .line 9
-    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/b;->a:Lcom/color/support/widget/ColorLoadingView;
+    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/b;->a:Lcom/oppo/camera/ui/LoaddingProgress;
 
     .line 10
     iput-object v0, p0, Lcom/oppo/camera/sticker/ui/b;->b:Lcom/oppo/camera/ui/RotateImageView;
@@ -30,7 +30,7 @@
     iput-object v0, p0, Lcom/oppo/camera/sticker/ui/b;->c:Landroid/widget/ImageView;
 
     .line 14
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/b;->a:Lcom/color/support/widget/ColorLoadingView;
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/b;->a:Lcom/oppo/camera/ui/LoaddingProgress;
 
     .line 15
     iput-object p2, p0, Lcom/oppo/camera/sticker/ui/b;->b:Lcom/oppo/camera/ui/RotateImageView;

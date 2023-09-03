@@ -2,6 +2,9 @@
 .super Ljava/lang/Object;
 .source "SupportSQLiteOpenHelper.java"
 
+# interfaces
+.implements Ljava/io/Closeable;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -21,4 +24,10 @@
 .end method
 
 .method public abstract b()Landroidx/f/a/b;
+.end method
+
+.method public abstract c()Landroidx/f/a/b;
+.end method
+
+.method public abstract close()V
 .end method

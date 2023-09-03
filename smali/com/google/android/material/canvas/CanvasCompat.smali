@@ -3,6 +3,11 @@
 .source "CanvasCompat.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method private constructor <init>()V
     .locals 0

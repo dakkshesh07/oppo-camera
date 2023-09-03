@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001d">
+        <item>1- ئاي</item>
+        <item>2- ئاي</item>
+        <item>3- ئاي</item>
+        <item>4- ئاي</item>
+        <item>5- ئاي</item>
+        <item>6- ئاي</item>
+        <item>7- ئاي</item>
+        <item>8- ئاي</item>
+        <item>9- ئاي</item>
+        <item>10- ئاي</item>
+        <item>11- ئاي</item>
+        <item>12- ئاي</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030023">
+        <item>چۈشتىن بۇرۇن</item>
+        <item>چۈشتىن كېيىن</item>
+    </string-array>
+</resources>

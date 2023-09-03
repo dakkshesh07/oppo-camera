@@ -3,6 +3,11 @@
 .source "BottomNavigationMenu.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field public static final MAX_ITEM_COUNT:I = 0x5
 

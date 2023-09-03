@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/view/f$a;
@@ -73,9 +76,9 @@
 
     move-result-object v2
 
-    check-cast v2, Landroidx/core/a/a/a;
+    check-cast v2, Landroidx/core/b/a/a;
 
-    invoke-direct {v0, v1, v2}, Landroidx/appcompat/view/menu/p;-><init>(Landroid/content/Context;Landroidx/core/a/a/a;)V
+    invoke-direct {v0, v1, v2}, Landroidx/appcompat/view/menu/p;-><init>(Landroid/content/Context;Landroidx/core/b/a/a;)V
 
     return-object v0
 .end method

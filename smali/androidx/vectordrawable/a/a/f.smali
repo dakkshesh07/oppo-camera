@@ -6,6 +6,11 @@
 .implements Landroid/animation/TypeEvaluator;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final a:Landroidx/vectordrawable/a/a/f;
 

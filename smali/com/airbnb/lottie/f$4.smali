@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/f;I)V
     .locals 0
 
-    .line 731
+    .line 769
     iput-object p1, p0, Lcom/airbnb/lottie/f$4;->b:Lcom/airbnb/lottie/f;
 
     iput p2, p0, Lcom/airbnb/lottie/f$4;->a:I
@@ -42,7 +42,7 @@
 .method public a(Lcom/airbnb/lottie/d;)V
     .locals 1
 
-    .line 734
+    .line 772
     iget-object p1, p0, Lcom/airbnb/lottie/f$4;->b:Lcom/airbnb/lottie/f;
 
     iget v0, p0, Lcom/airbnb/lottie/f$4;->a:I

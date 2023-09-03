@@ -60,14 +60,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 6234
+    .line 6871
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     invoke-direct {v0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
-    .line 6242
+    .line 6879
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$1;-><init>()V
@@ -80,21 +80,13 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 5692
+    .line 6275
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 5806
+    .line 6402
     iput-byte v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedIsInitialized:B
-
-    const/4 v0, 0x0
-
-    .line 5693
-    iput v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->start_:I
-
-    .line 5694
-    iput v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->end_:I
 
     return-void
 .end method
@@ -107,10 +99,12 @@
         }
     .end annotation
 
-    .line 5706
+    .line 6294
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;-><init>()V
 
-    .line 5709
+    if-eqz p2, :cond_5
+
+    .line 6300
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->newBuilder()Lcom/google/protobuf/UnknownFieldSet$Builder;
 
     move-result-object v0
@@ -121,7 +115,7 @@
     :goto_0
     if-nez v1, :cond_4
 
-    .line 5713
+    .line 6304
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
@@ -139,7 +133,7 @@
 
     if-eq v2, v4, :cond_1
 
-    .line 5719
+    .line 6320
     invoke-virtual {p0, p1, v0, p2, v2}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
 
     move-result v2
@@ -148,7 +142,7 @@
 
     goto :goto_1
 
-    .line 5731
+    .line 6315
     :cond_1
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
@@ -156,7 +150,7 @@
 
     iput v2, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
-    .line 5732
+    .line 6316
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
     move-result v2
@@ -165,7 +159,7 @@
 
     goto :goto_0
 
-    .line 5726
+    .line 6310
     :cond_2
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
@@ -173,7 +167,7 @@
 
     iput v2, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
-    .line 5727
+    .line 6311
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
     move-result v2
@@ -200,13 +194,13 @@
     :catch_0
     move-exception p1
 
-    .line 5740
+    .line 6331
     :try_start_1
     new-instance p2, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 5741
+    .line 6332
     invoke-virtual {p2, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -216,7 +210,7 @@
     :catch_1
     move-exception p1
 
-    .line 5738
+    .line 6329
     invoke-virtual {p1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -225,7 +219,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5743
+    .line 6334
     :goto_2
     invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
 
@@ -233,12 +227,13 @@
 
     iput-object p2, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
-    .line 5744
+    .line 6335
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->makeExtensionsImmutable()V
 
+    .line 6336
     throw p1
 
-    .line 5743
+    .line 6334
     :cond_4
     invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
 
@@ -246,10 +241,18 @@
 
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
-    .line 5744
+    .line 6335
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->makeExtensionsImmutable()V
 
     return-void
+
+    .line 6296
+    :cond_5
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
+
+    throw p1
 .end method
 
 .method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/google/protobuf/DescriptorProtos$1;)V
@@ -260,7 +263,7 @@
         }
     .end annotation
 
-    .line 5684
+    .line 6266
     invoke-direct {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;-><init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
 
     return-void
@@ -276,12 +279,12 @@
         }
     .end annotation
 
-    .line 5690
+    .line 6273
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     const/4 p1, -0x1
 
-    .line 5806
+    .line 6402
     iput-byte p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedIsInitialized:B
 
     return-void
@@ -290,26 +293,17 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/google/protobuf/DescriptorProtos$1;)V
     .locals 0
 
-    .line 5684
+    .line 6266
     invoke-direct {p0, p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     return-void
 .end method
 
-.method static synthetic access$4202(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;I)I
-    .locals 0
-
-    .line 5684
-    iput p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->start_:I
-
-    return p1
-.end method
-
 .method static synthetic access$4302(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;I)I
     .locals 0
 
-    .line 5684
-    iput p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->end_:I
+    .line 6266
+    iput p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->start_:I
 
     return p1
 .end method
@@ -317,7 +311,16 @@
 .method static synthetic access$4402(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;I)I
     .locals 0
 
-    .line 5684
+    .line 6266
+    iput p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->end_:I
+
+    return p1
+.end method
+
+.method static synthetic access$4502(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;I)I
+    .locals 0
+
+    .line 6266
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
     return p1
@@ -326,7 +329,7 @@
 .method public static getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
     .locals 1
 
-    .line 6238
+    .line 6875
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     return-object v0
@@ -335,8 +338,8 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 5749
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$3700()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 6340
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$3800()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -346,7 +349,7 @@
 .method public static newBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
     .locals 1
 
-    .line 5952
+    .line 6561
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     invoke-virtual {v0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->toBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
@@ -359,7 +362,7 @@
 .method public static newBuilder(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
     .locals 1
 
-    .line 5955
+    .line 6564
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     invoke-virtual {v0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->toBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
@@ -381,10 +384,10 @@
         }
     .end annotation
 
-    .line 5926
+    .line 6534
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 5927
+    .line 6535
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -402,10 +405,10 @@
         }
     .end annotation
 
-    .line 5933
+    .line 6541
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 5934
+    .line 6542
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -423,7 +426,7 @@
         }
     .end annotation
 
-    .line 5894
+    .line 6502
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;)Ljava/lang/Object;
@@ -443,7 +446,7 @@
         }
     .end annotation
 
-    .line 5900
+    .line 6508
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -463,10 +466,10 @@
         }
     .end annotation
 
-    .line 5939
+    .line 6547
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 5940
+    .line 6548
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -484,10 +487,10 @@
         }
     .end annotation
 
-    .line 5946
+    .line 6554
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 5947
+    .line 6555
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -505,10 +508,10 @@
         }
     .end annotation
 
-    .line 5914
+    .line 6522
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 5915
+    .line 6523
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -526,11 +529,51 @@
         }
     .end annotation
 
-    .line 5921
+    .line 6529
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 5922
+    .line 6530
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
+
+    return-object p0
+.end method
+
+.method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 6491
+    sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
+
+    return-object p0
+.end method
+
+.method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 6497
+    sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -547,7 +590,7 @@
         }
     .end annotation
 
-    .line 5904
+    .line 6512
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
@@ -567,7 +610,7 @@
         }
     .end annotation
 
-    .line 5910
+    .line 6518
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -590,7 +633,7 @@
         }
     .end annotation
 
-    .line 6252
+    .line 6890
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -607,24 +650,24 @@
 
     return v0
 
-    .line 5851
+    .line 6449
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     if-nez v1, :cond_1
 
-    .line 5852
+    .line 6450
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 5854
+    .line 6452
     :cond_1
     check-cast p1, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
-    .line 5857
+    .line 6454
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->hasStart()Z
 
     move-result v1
@@ -635,49 +678,34 @@
 
     const/4 v3, 0x0
 
-    if-ne v1, v2, :cond_2
+    if-eq v1, v2, :cond_2
 
-    move v1, v0
+    return v3
 
-    goto :goto_0
-
+    .line 6455
     :cond_2
-    move v1, v3
-
-    .line 5858
-    :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->hasStart()Z
 
-    move-result v2
-
-    if-eqz v2, :cond_4
+    move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 5859
+    .line 6456
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getStart()I
 
     move-result v1
 
-    .line 5860
+    .line 6457
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getStart()I
 
     move-result v2
 
-    if-ne v1, v2, :cond_3
+    if-eq v1, v2, :cond_3
 
-    move v1, v0
+    return v3
 
-    goto :goto_1
-
+    .line 6459
     :cond_3
-    move v1, v3
-
-    :cond_4
-    :goto_1
-    if-eqz v1, :cond_5
-
-    .line 5862
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->hasEnd()Z
 
     move-result v1
@@ -686,49 +714,34 @@
 
     move-result v2
 
-    if-ne v1, v2, :cond_5
+    if-eq v1, v2, :cond_4
 
-    move v1, v0
+    return v3
 
-    goto :goto_2
-
-    :cond_5
-    move v1, v3
-
-    .line 5863
-    :goto_2
+    .line 6460
+    :cond_4
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->hasEnd()Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_7
+    if-eqz v1, :cond_5
 
-    if-eqz v1, :cond_6
-
-    .line 5864
+    .line 6461
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getEnd()I
 
     move-result v1
 
-    .line 5865
+    .line 6462
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getEnd()I
 
     move-result v2
 
-    if-ne v1, v2, :cond_6
+    if-eq v1, v2, :cond_5
 
-    move v1, v0
+    return v3
 
-    goto :goto_3
-
-    :cond_6
-    move v1, v3
-
-    :cond_7
-    :goto_3
-    if-eqz v1, :cond_8
-
-    .line 5867
+    .line 6464
+    :cond_5
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     iget-object p1, p1, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
@@ -737,21 +750,18 @@
 
     move-result p1
 
-    if-eqz p1, :cond_8
+    if-nez p1, :cond_6
 
-    goto :goto_4
+    return v3
 
-    :cond_8
-    move v0, v3
-
-    :goto_4
+    :cond_6
     return v0
 .end method
 
 .method public getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
     .locals 1
 
-    .line 6261
+    .line 6900
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     return-object v0
@@ -760,7 +770,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     move-result-object v0
@@ -771,7 +781,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     move-result-object v0
@@ -782,7 +792,7 @@
 .method public getEnd()I
     .locals 1
 
-    .line 5803
+    .line 6399
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->end_:I
 
     return v0
@@ -799,7 +809,7 @@
         }
     .end annotation
 
-    .line 6257
+    .line 6895
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -808,7 +818,7 @@
 .method public getSerializedSize()I
     .locals 3
 
-    .line 5828
+    .line 6427
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedSize:I
 
     const/4 v1, -0x1
@@ -820,26 +830,26 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 5832
+    .line 6431
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
     const/4 v2, 0x1
 
     and-int/2addr v1, v2
 
-    if-ne v1, v2, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 5833
+    .line 6432
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->start_:I
 
-    .line 5834
+    .line 6433
     invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 5836
+    .line 6435
     :cond_1
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
@@ -847,19 +857,19 @@
 
     and-int/2addr v1, v2
 
-    if-ne v1, v2, :cond_2
+    if-eqz v1, :cond_2
 
-    .line 5837
+    .line 6436
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->end_:I
 
-    .line 5838
+    .line 6437
     invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 5840
+    .line 6439
     :cond_2
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
@@ -869,7 +879,7 @@
 
     add-int/2addr v0, v1
 
-    .line 5841
+    .line 6440
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedSize:I
 
     return v0
@@ -878,7 +888,7 @@
 .method public getStart()I
     .locals 1
 
-    .line 5780
+    .line 6374
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->start_:I
 
     return v0
@@ -887,23 +897,21 @@
 .method public final getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
     .locals 1
 
-    .line 5700
+    .line 6288
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     return-object v0
 .end method
 
 .method public hasEnd()Z
-    .locals 2
+    .locals 1
 
-    .line 5793
+    .line 6388
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
-    const/4 v1, 0x2
+    and-int/lit8 v0, v0, 0x2
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -919,14 +927,14 @@
 .method public hasStart()Z
     .locals 2
 
-    .line 5770
+    .line 6363
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
     const/4 v1, 0x1
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
@@ -940,12 +948,12 @@
 .method public hashCode()I
     .locals 2
 
-    .line 5873
+    .line 6470
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 5874
+    .line 6471
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedHashCode:I
 
     return v0
@@ -953,8 +961,8 @@
     :cond_0
     const/16 v0, 0x30b
 
-    .line 5877
-    invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 6474
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v1
 
@@ -964,7 +972,7 @@
 
     add-int/2addr v0, v1
 
-    .line 5878
+    .line 6475
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->hasStart()Z
 
     move-result v1
@@ -977,14 +985,14 @@
 
     mul-int/lit8 v0, v0, 0x35
 
-    .line 5880
+    .line 6477
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getStart()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 5882
+    .line 6479
     :cond_1
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->hasEnd()Z
 
@@ -998,7 +1006,7 @@
 
     mul-int/lit8 v0, v0, 0x35
 
-    .line 5884
+    .line 6481
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->getEnd()I
 
     move-result v1
@@ -1008,7 +1016,7 @@
     :cond_2
     mul-int/lit8 v0, v0, 0x1d
 
-    .line 5886
+    .line 6483
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->hashCode()I
@@ -1017,7 +1025,7 @@
 
     add-int/2addr v0, v1
 
-    .line 5887
+    .line 6484
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedHashCode:I
 
     return v0
@@ -1026,8 +1034,8 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 5754
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$3800()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+    .line 6346
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$3900()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
@@ -1035,7 +1043,7 @@
 
     const-class v2, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
-    .line 5755
+    .line 6347
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1046,7 +1054,7 @@
 .method public final isInitialized()Z
     .locals 2
 
-    .line 5808
+    .line 6405
     iget-byte v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedIsInitialized:B
 
     const/4 v1, 0x1
@@ -1062,7 +1070,7 @@
 
     return v0
 
-    .line 5812
+    .line 6409
     :cond_1
     iput-byte v1, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->memoizedIsInitialized:B
 
@@ -1072,7 +1080,7 @@
 .method public newBuilderForType()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
     .locals 1
 
-    .line 5950
+    .line 6559
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->newBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object v0
@@ -1083,7 +1091,7 @@
 .method protected newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
     .locals 2
 
-    .line 5965
+    .line 6575
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     const/4 v1, 0x0
@@ -1096,7 +1104,7 @@
 .method public bridge synthetic newBuilderForType()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->newBuilderForType()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object v0
@@ -1107,7 +1115,7 @@
 .method protected bridge synthetic newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object p1
@@ -1118,7 +1126,7 @@
 .method public bridge synthetic newBuilderForType()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->newBuilderForType()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object v0
@@ -1126,10 +1134,21 @@
     return-object v0
 .end method
 
+.method protected newInstance(Lcom/google/protobuf/GeneratedMessageV3$UnusedPrivateParameter;)Ljava/lang/Object;
+    .locals 0
+
+    .line 6282
+    new-instance p1, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
+
+    invoke-direct {p1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;-><init>()V
+
+    return-object p1
+.end method
+
 .method public toBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
     .locals 2
 
-    .line 5958
+    .line 6568
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->DEFAULT_INSTANCE:Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;
 
     const/4 v1, 0x0
@@ -1147,7 +1166,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;-><init>(Lcom/google/protobuf/DescriptorProtos$1;)V
 
-    .line 5959
+    .line 6569
     invoke-virtual {v0, p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;)Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object v0
@@ -1159,7 +1178,7 @@
 .method public bridge synthetic toBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->toBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object v0
@@ -1170,7 +1189,7 @@
 .method public bridge synthetic toBuilder()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 5684
+    .line 6266
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->toBuilder()Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange$Builder;
 
     move-result-object v0
@@ -1186,21 +1205,21 @@
         }
     .end annotation
 
-    .line 5818
+    .line 6416
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
     const/4 v1, 0x1
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 5819
+    .line 6417
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->start_:I
 
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
 
-    .line 5821
+    .line 6419
     :cond_0
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->bitField0_:I
 
@@ -1208,14 +1227,14 @@
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 5822
+    .line 6420
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->end_:I
 
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
 
-    .line 5824
+    .line 6422
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$DescriptorProto$ReservedRange;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 

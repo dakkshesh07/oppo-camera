@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/transition/MaterialContainerTransform;
 .end annotation

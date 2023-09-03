@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/drawer_height" android:splitMotionEvents="false"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.oppo.camera.ui.menu.OppoTextView android:textSize="@dimen/drawer_menu_name_text_size" android:textColor="@color/camera_white" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="@dimen/drawer_key_layout_height" android:layout_marginTop="@dimen/drawer_key_layout_margin_top" android:layout_marginBottom="@dimen/drawer_key_layout_margin_bottom" android:layout_marginStart="@dimen/drawer_layout_margin_start" />
-</FrameLayout>

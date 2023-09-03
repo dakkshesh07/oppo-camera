@@ -24,21 +24,21 @@
 
 
 # virtual methods
-.method public abstract a(Landroidx/loader/b/a;)V
+.method public abstract a(Landroidx/loader/content/a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/loader/b/a<",
+            "Landroidx/loader/content/a<",
             "TD;>;)V"
         }
     .end annotation
 .end method
 
-.method public abstract a(Landroidx/loader/b/a;Ljava/lang/Object;)V
+.method public abstract a(Landroidx/loader/content/a;Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/loader/b/a<",
+            "Landroidx/loader/content/a<",
             "TD;>;TD;)V"
         }
     .end annotation

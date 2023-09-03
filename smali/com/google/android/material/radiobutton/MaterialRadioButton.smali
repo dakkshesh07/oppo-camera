@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/radiobutton/MaterialRadioButton;
-.super Landroidx/appcompat/widget/r;
+.super Landroidx/appcompat/widget/q;
 .source "MaterialRadioButton.java"
 
 
@@ -122,7 +122,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/r;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/q;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 68
     invoke-virtual {p0}, Lcom/google/android/material/radiobutton/MaterialRadioButton;->getContext()Landroid/content/Context;
@@ -272,7 +272,7 @@
     .locals 1
 
     .line 82
-    invoke-super {p0}, Landroidx/appcompat/widget/r;->onAttachedToWindow()V
+    invoke-super {p0}, Landroidx/appcompat/widget/q;->onAttachedToWindow()V
 
     .line 84
     iget-boolean v0, p0, Lcom/google/android/material/radiobutton/MaterialRadioButton;->useMaterialThemeColors:Z

@@ -43,13 +43,13 @@
         }
     .end annotation
 
-    .line 1845
+    .line 2089
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1846
+    .line 2090
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 1847
+    .line 2091
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,14 +72,14 @@
 
     new-array v3, v2, [Ljava/lang/Class;
 
-    .line 1848
+    .line 2092
     invoke-static {p3, p1, v3}, Lcom/google/protobuf/GeneratedMessageV3;->access$1000(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->caseMethod:Ljava/lang/reflect/Method;
 
-    .line 1849
+    .line 2093
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,14 +96,14 @@
 
     new-array p3, v2, [Ljava/lang/Class;
 
-    .line 1850
+    .line 2094
     invoke-static {p4, p1, p3}, Lcom/google/protobuf/GeneratedMessageV3;->access$1000(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->caseMethodBuilder:Ljava/lang/reflect/Method;
 
-    .line 1851
+    .line 2095
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +134,7 @@
 .method public clear(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
     .locals 2
 
-    .line 1890
+    .line 2134
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->clearMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -149,7 +149,7 @@
 .method public get(Lcom/google/protobuf/GeneratedMessageV3$Builder;)Lcom/google/protobuf/Descriptors$FieldDescriptor;
     .locals 2
 
-    .line 1882
+    .line 2126
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->caseMethodBuilder:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -168,7 +168,7 @@
 
     if-lez p1, :cond_0
 
-    .line 1884
+    .line 2128
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/Descriptors$Descriptor;->findFieldByNumber(I)Lcom/google/protobuf/Descriptors$FieldDescriptor;
@@ -186,7 +186,7 @@
 .method public get(Lcom/google/protobuf/GeneratedMessageV3;)Lcom/google/protobuf/Descriptors$FieldDescriptor;
     .locals 2
 
-    .line 1874
+    .line 2118
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->caseMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -205,7 +205,7 @@
 
     if-lez p1, :cond_0
 
-    .line 1876
+    .line 2120
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/Descriptors$Descriptor;->findFieldByNumber(I)Lcom/google/protobuf/Descriptors$FieldDescriptor;
@@ -223,7 +223,7 @@
 .method public has(Lcom/google/protobuf/GeneratedMessageV3$Builder;)Z
     .locals 3
 
-    .line 1867
+    .line 2111
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->caseMethodBuilder:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -253,7 +253,7 @@
 .method public has(Lcom/google/protobuf/GeneratedMessageV3;)Z
     .locals 3
 
-    .line 1860
+    .line 2104
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$OneofAccessor;->caseMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0

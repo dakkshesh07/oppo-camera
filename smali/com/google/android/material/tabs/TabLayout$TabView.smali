@@ -65,7 +65,7 @@
 
     iget v2, p1, Lcom/google/android/material/tabs/TabLayout;->tabPaddingBottom:I
 
-    invoke-static {p0, p2, v0, v1, v2}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {p0, p2, v0, v1, v2}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     const/16 p2, 0x11
 
@@ -91,12 +91,12 @@
 
     const/16 p2, 0x3ea
 
-    invoke-static {p1, p2}, Landroidx/core/g/t;->a(Landroid/content/Context;I)Landroidx/core/g/t;
+    invoke-static {p1, p2}, Landroidx/core/f/t;->a(Landroid/content/Context;I)Landroidx/core/f/t;
 
     move-result-object p1
 
     .line 2237
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/t;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/t;)V
 
     return-void
 .end method
@@ -1026,7 +1026,7 @@
     .line 2282
     :cond_5
     :goto_1
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 2283
     iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout$TabView;->this$0:Lcom/google/android/material/tabs/TabLayout;
@@ -1209,14 +1209,14 @@
     if-eqz v3, :cond_8
 
     .line 2749
-    invoke-static {p1}, Landroidx/core/g/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {p1}, Landroidx/core/f/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v3
 
     if-eq v2, v3, :cond_9
 
     .line 2750
-    invoke-static {p1, v2}, Landroidx/core/g/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {p1, v2}, Landroidx/core/f/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     .line 2751
     iput v4, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
@@ -1239,7 +1239,7 @@
     iput v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
     .line 2759
-    invoke-static {p1, v4}, Landroidx/core/g/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {p1, v4}, Landroidx/core/f/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     .line 2761
     invoke-virtual {p2, p1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -1270,7 +1270,7 @@
 
     .line 2768
     :cond_b
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/au;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/at;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -1385,7 +1385,7 @@
 
     .line 2365
     :cond_0
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -1411,12 +1411,12 @@
     move-result v5
 
     .line 2367
-    invoke-static/range {v0 .. v5}, Landroidx/core/g/a/d$c;->a(IIIIZZ)Landroidx/core/g/a/d$c;
+    invoke-static/range {v0 .. v5}, Landroidx/core/f/a/d$c;->a(IIIIZZ)Landroidx/core/f/a/d$c;
 
     move-result-object v0
 
     .line 2366
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->b(Ljava/lang/Object;)V
 
     .line 2374
     invoke-virtual {p0}, Lcom/google/android/material/tabs/TabLayout$TabView;->isSelected()Z
@@ -1428,18 +1428,18 @@
     const/4 v0, 0x0
 
     .line 2375
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->h(Z)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->h(Z)V
 
     .line 2376
-    sget-object v0, Landroidx/core/g/a/d$a;->e:Landroidx/core/g/a/d$a;
+    sget-object v0, Landroidx/core/f/a/d$a;->e:Landroidx/core/f/a/d$a;
 
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->b(Landroidx/core/g/a/d$a;)Z
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->b(Landroidx/core/f/a/d$a;)Z
 
     :cond_1
     const-string v0, "Tab"
 
     .line 2378
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->i(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->i(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

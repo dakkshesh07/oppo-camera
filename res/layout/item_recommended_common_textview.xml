@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="@dimen/recommended_preference_list_item_text_size_common" android:textColor="@color/bottom_recommended_title_common" android:gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/recommended_preference_list_item_common_margin_vertical" android:layout_marginBottom="@dimen/recommended_preference_list_item_common_margin_vertical" android:textAlignment="viewStart" android:layout_marginStart="@dimen/recommended_preference_list_item_common_margin_start"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

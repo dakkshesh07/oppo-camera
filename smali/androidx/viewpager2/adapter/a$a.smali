@@ -53,9 +53,9 @@
     :cond_1
     iget-object v0, p0, Landroidx/viewpager2/adapter/a$a;->a:Landroidx/viewpager2/adapter/a;
 
-    iget-object v0, v0, Landroidx/viewpager2/adapter/a;->c:Landroidx/b/d;
+    iget-object v0, v0, Landroidx/viewpager2/adapter/a;->c:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v0}, Landroidx/b/d;->c()Z
+    invoke-virtual {v0}, Landroidx/collection/LongSparseArray;->isEmpty()Z
 
     move-result v0
 
@@ -113,9 +113,9 @@
     :cond_4
     iget-object p1, p0, Landroidx/viewpager2/adapter/a$a;->a:Landroidx/viewpager2/adapter/a;
 
-    iget-object p1, p1, Landroidx/viewpager2/adapter/a;->c:Landroidx/b/d;
+    iget-object p1, p1, Landroidx/viewpager2/adapter/a;->c:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {p1, v0, v1}, Landroidx/b/d;->a(J)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -157,9 +157,9 @@
     :goto_0
     iget-object v3, p0, Landroidx/viewpager2/adapter/a$a;->a:Landroidx/viewpager2/adapter/a;
 
-    iget-object v3, v3, Landroidx/viewpager2/adapter/a;->c:Landroidx/b/d;
+    iget-object v3, v3, Landroidx/viewpager2/adapter/a;->c:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v3}, Landroidx/b/d;->b()I
+    invoke-virtual {v3}, Landroidx/collection/LongSparseArray;->size()I
 
     move-result v3
 
@@ -168,18 +168,18 @@
     .line 706
     iget-object v3, p0, Landroidx/viewpager2/adapter/a$a;->a:Landroidx/viewpager2/adapter/a;
 
-    iget-object v3, v3, Landroidx/viewpager2/adapter/a;->c:Landroidx/b/d;
+    iget-object v3, v3, Landroidx/viewpager2/adapter/a;->c:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v3, v0}, Landroidx/b/d;->b(I)J
+    invoke-virtual {v3, v0}, Landroidx/collection/LongSparseArray;->keyAt(I)J
 
     move-result-wide v3
 
     .line 707
     iget-object v5, p0, Landroidx/viewpager2/adapter/a$a;->a:Landroidx/viewpager2/adapter/a;
 
-    iget-object v5, v5, Landroidx/viewpager2/adapter/a;->c:Landroidx/b/d;
+    iget-object v5, v5, Landroidx/viewpager2/adapter/a;->c:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v5, v0}, Landroidx/b/d;->c(I)Ljava/lang/Object;
+    invoke-virtual {v5, v0}, Landroidx/collection/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -203,9 +203,9 @@
     if-eqz v6, :cond_7
 
     .line 714
-    sget-object v6, Landroidx/lifecycle/e$b;->STARTED:Landroidx/lifecycle/e$b;
+    sget-object v6, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1, v5, v6}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)Landroidx/fragment/app/k;
+    invoke-virtual {p1, v5, v6}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/k;
 
     goto :goto_1
 
@@ -239,9 +239,9 @@
     if-eqz v2, :cond_a
 
     .line 722
-    sget-object v0, Landroidx/lifecycle/e$b;->RESUMED:Landroidx/lifecycle/e$b;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p1, v2, v0}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)Landroidx/fragment/app/k;
+    invoke-virtual {p1, v2, v0}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/k;
 
     .line 725
     :cond_a

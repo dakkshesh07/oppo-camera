@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;Ljava/lang/Runnable;)V
     .locals 0
 
-    .line 117
+    .line 189
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel$1;->b:Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;
 
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel$1;->a:Ljava/lang/Runnable;
@@ -42,10 +42,12 @@
 .method public onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 0
 
-    .line 121
+    .line 193
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel$1;->b:Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;
 
-    iget-boolean p1, p1, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;->a:Z
+    invoke-static {p1}, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;->a(Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;)Z
+
+    move-result p1
 
     if-eqz p1, :cond_0
 
@@ -57,12 +59,12 @@
 
     if-lez p5, :cond_0
 
-    .line 122
+    .line 194
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel$1;->a:Ljava/lang/Runnable;
 
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 123
+    .line 195
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel$1;->b:Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;
 
     invoke-virtual {p1, p0}, Lcom/oppo/camera/ui/menu/setting/CameraDrawerSettingMenuPanel;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V

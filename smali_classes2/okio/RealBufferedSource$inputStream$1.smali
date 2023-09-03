@@ -13,6 +13,9 @@
     name = null
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lokio/RealBufferedSource;
@@ -27,7 +30,7 @@
         }
     .end annotation
 
-    .line 425
+    .line 143
     iput-object p1, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
@@ -40,17 +43,17 @@
 .method public available()I
     .locals 4
 
-    .line 448
+    .line 166
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     iget-boolean v0, v0, Lokio/RealBufferedSource;->closed:Z
 
     if-nez v0, :cond_0
 
-    .line 449
+    .line 167
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 479
+    .line 190
     iget-object v0, v0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->size()J
@@ -61,7 +64,7 @@
 
     int-to-long v2, v2
 
-    .line 480
+    .line 191
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
@@ -70,7 +73,7 @@
 
     return v0
 
-    .line 448
+    .line 166
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -86,7 +89,7 @@
 .method public close()V
     .locals 1
 
-    .line 452
+    .line 170
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     invoke-virtual {v0}, Lokio/RealBufferedSource;->close()V
@@ -97,17 +100,17 @@
 .method public read()I
     .locals 4
 
-    .line 427
+    .line 145
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     iget-boolean v0, v0, Lokio/RealBufferedSource;->closed:Z
 
     if-nez v0, :cond_1
 
-    .line 428
+    .line 146
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 472
+    .line 183
     iget-object v0, v0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->size()J
@@ -120,21 +123,21 @@
 
     if-nez v0, :cond_0
 
-    .line 429
+    .line 147
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     iget-object v0, v0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
     iget-object v1, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 473
+    .line 184
     iget-object v1, v1, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const/16 v2, 0x2000
 
     int-to-long v2, v2
 
-    .line 429
+    .line 147
     invoke-interface {v0, v1, v2, v3}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v0
@@ -149,14 +152,14 @@
 
     return v0
 
-    .line 432
+    .line 150
     :cond_0
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 474
+    .line 185
     iget-object v0, v0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
-    .line 432
+    .line 150
     invoke-virtual {v0}, Lokio/Buffer;->readByte()B
 
     move-result v0
@@ -165,7 +168,7 @@
 
     return v0
 
-    .line 427
+    .line 145
     :cond_1
     new-instance v0, Ljava/io/IOException;
 
@@ -183,16 +186,16 @@
 
     const-string v0, "data"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 436
+    .line 154
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     iget-boolean v0, v0, Lokio/RealBufferedSource;->closed:Z
 
     if-nez v0, :cond_1
 
-    .line 437
+    .line 155
     array-length v0, p1
 
     int-to-long v1, v0
@@ -203,10 +206,10 @@
 
     invoke-static/range {v1 .. v6}, Lokio/-Util;->checkOffsetAndCount(JJJ)V
 
-    .line 439
+    .line 157
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 476
+    .line 187
     iget-object v0, v0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->size()J
@@ -219,21 +222,21 @@
 
     if-nez v0, :cond_0
 
-    .line 440
+    .line 158
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
     iget-object v0, v0, Lokio/RealBufferedSource;->source:Lokio/Source;
 
     iget-object v1, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 477
+    .line 188
     iget-object v1, v1, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
     const/16 v2, 0x2000
 
     int-to-long v2, v2
 
-    .line 440
+    .line 158
     invoke-interface {v0, v1, v2, v3}, Lokio/Source;->read(Lokio/Buffer;J)J
 
     move-result-wide v0
@@ -248,21 +251,21 @@
 
     return p1
 
-    .line 444
+    .line 162
     :cond_0
     iget-object v0, p0, Lokio/RealBufferedSource$inputStream$1;->this$0:Lokio/RealBufferedSource;
 
-    .line 478
+    .line 189
     iget-object v0, v0, Lokio/RealBufferedSource;->bufferField:Lokio/Buffer;
 
-    .line 444
+    .line 162
     invoke-virtual {v0, p1, p2, p3}, Lokio/Buffer;->read([BII)I
 
     move-result p1
 
     return p1
 
-    .line 436
+    .line 154
     :cond_1
     new-instance p1, Ljava/io/IOException;
 
@@ -278,7 +281,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 454
+    .line 172
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

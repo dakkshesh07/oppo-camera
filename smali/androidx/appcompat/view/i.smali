@@ -6,6 +6,11 @@
 .implements Landroid/view/Window$Callback;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field final b:Landroid/view/Window$Callback;
 

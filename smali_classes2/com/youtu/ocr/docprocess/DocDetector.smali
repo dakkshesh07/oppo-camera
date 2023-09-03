@@ -512,24 +512,6 @@
 .method public native SetOESTextureIDNative(IIII)Z
 .end method
 
-.method public a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-    .locals 0
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    .line 392
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/youtu/ocr/docprocess/DocDetector;->xnnEnhance(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public a(Z)Lcom/youtu/ocr/docprocess/IText$DetectResult;
     .locals 7
 
@@ -1461,16 +1443,10 @@
 .method public native detectTextByByteNative([BIII)Ljava/lang/String;
 .end method
 
-.method public native xnnEnhance(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-.end method
-
 .method public native xnnInitedByByte([B)Z
 .end method
 
 .method public native xnnInitedByByteGPU([BLjava/lang/String;)Z
-.end method
-
-.method public native xnnQuad(Landroid/graphics/Bitmap;[Landroid/graphics/Point;)Landroid/graphics/Bitmap;
 .end method
 
 .method public native xnnReleaseGLSource()V

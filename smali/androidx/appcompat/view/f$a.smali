@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/view/f;
 .end annotation
@@ -32,10 +35,10 @@
     .end annotation
 .end field
 
-.field final d:Landroidx/b/g;
+.field final d:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Landroid/view/Menu;",
             "Landroid/view/Menu;",
             ">;"
@@ -65,11 +68,11 @@
     iput-object p1, p0, Landroidx/appcompat/view/f$a;->c:Ljava/util/ArrayList;
 
     .line 154
-    new-instance p1, Landroidx/b/g;
+    new-instance p1, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {p1}, Landroidx/b/g;-><init>()V
+    invoke-direct {p1}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object p1, p0, Landroidx/appcompat/view/f$a;->d:Landroidx/b/g;
+    iput-object p1, p0, Landroidx/appcompat/view/f$a;->d:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -78,9 +81,9 @@
     .locals 3
 
     .line 182
-    iget-object v0, p0, Landroidx/appcompat/view/f$a;->d:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/f$a;->d:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -95,14 +98,14 @@
 
     move-object v2, p1
 
-    check-cast v2, Landroidx/core/a/a/a;
+    check-cast v2, Landroidx/core/b/a/a;
 
-    invoke-direct {v0, v1, v2}, Landroidx/appcompat/view/menu/p;-><init>(Landroid/content/Context;Landroidx/core/a/a/a;)V
+    invoke-direct {v0, v1, v2}, Landroidx/appcompat/view/menu/p;-><init>(Landroid/content/Context;Landroidx/core/b/a/a;)V
 
     .line 185
-    iget-object v1, p0, Landroidx/appcompat/view/f$a;->d:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/f$a;->d:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, p1, v0}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v0
@@ -162,9 +165,9 @@
 
     iget-object v2, p0, Landroidx/appcompat/view/f$a;->b:Landroid/content/Context;
 
-    check-cast p2, Landroidx/core/a/a/b;
+    check-cast p2, Landroidx/core/b/a/b;
 
-    invoke-direct {v1, v2, p2}, Landroidx/appcompat/view/menu/k;-><init>(Landroid/content/Context;Landroidx/core/a/a/b;)V
+    invoke-direct {v1, v2, p2}, Landroidx/appcompat/view/menu/k;-><init>(Landroid/content/Context;Landroidx/core/b/a/b;)V
 
     invoke-interface {v0, p1, v1}, Landroid/view/ActionMode$Callback;->onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
 

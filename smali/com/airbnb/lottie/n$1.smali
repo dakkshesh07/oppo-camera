@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Ljava/util/Comparator<",
-        "Landroidx/core/f/d<",
+        "Landroidx/core/util/e<",
         "Ljava/lang/String;",
         "Ljava/lang/Float;",
         ">;>;"
@@ -46,16 +46,16 @@
 
 
 # virtual methods
-.method public a(Landroidx/core/f/d;Landroidx/core/f/d;)I
+.method public a(Landroidx/core/util/e;Landroidx/core/util/e;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/core/f/d<",
+            "Landroidx/core/util/e<",
             "Ljava/lang/String;",
             "Ljava/lang/Float;",
             ">;",
-            "Landroidx/core/f/d<",
+            "Landroidx/core/util/e<",
             "Ljava/lang/String;",
             "Ljava/lang/Float;",
             ">;)I"
@@ -63,7 +63,7 @@
     .end annotation
 
     .line 29
-    iget-object p1, p1, Landroidx/core/f/d;->b:Ljava/lang/Object;
+    iget-object p1, p1, Landroidx/core/util/e;->b:Ljava/lang/Object;
 
     check-cast p1, Ljava/lang/Float;
 
@@ -72,7 +72,7 @@
     move-result p1
 
     .line 30
-    iget-object p2, p2, Landroidx/core/f/d;->b:Ljava/lang/Object;
+    iget-object p2, p2, Landroidx/core/util/e;->b:Ljava/lang/Object;
 
     check-cast p2, Ljava/lang/Float;
 
@@ -107,11 +107,11 @@
     .locals 0
 
     .line 27
-    check-cast p1, Landroidx/core/f/d;
+    check-cast p1, Landroidx/core/util/e;
 
-    check-cast p2, Landroidx/core/f/d;
+    check-cast p2, Landroidx/core/util/e;
 
-    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/n$1;->a(Landroidx/core/f/d;Landroidx/core/f/d;)I
+    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/n$1;->a(Landroidx/core/util/e;Landroidx/core/util/e;)I
 
     move-result p1
 

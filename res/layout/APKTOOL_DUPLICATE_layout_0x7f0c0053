@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.coui.appcompat.widget.toolbar.COUIToolbar android:id="@id/APKTOOL_DUPLICATE_id_0x7f090311" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701d1" />
+    <androidx.recyclerview.widget.COUIRecyclerView android:scrollbarThumbVertical="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802b3" android:scrollbarStyle="insideOverlay" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090287" android:background="@android:color/transparent" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701d0" android:divider="@null" android:overScrollMode="ifContentScrolls" android:requiresFadingEdge="vertical" />
+</LinearLayout>

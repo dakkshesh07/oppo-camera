@@ -4,10 +4,10 @@
 
 
 # static fields
-.field private static final a:Landroidx/b/g;
+.field private static final a:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "Ljava/lang/Class<",
             "*>;>;"
@@ -21,11 +21,11 @@
     .locals 1
 
     .line 32
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    sput-object v0, Landroidx/fragment/app/f;->a:Landroidx/b/g;
+    sput-object v0, Landroidx/fragment/app/f;->a:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -97,7 +97,7 @@
     move-exception p0
 
     .line 94
-    new-instance v1, Landroidx/fragment/app/Fragment$b;
+    new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -115,7 +115,7 @@
 
     move-result-object p1
 
-    invoke-direct {v1, p1, p0}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {v1, p1, p0}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw v1
 
@@ -123,7 +123,7 @@
     move-exception p0
 
     .line 91
-    new-instance v1, Landroidx/fragment/app/Fragment$b;
+    new-instance v1, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -141,7 +141,7 @@
 
     move-result-object p1
 
-    invoke-direct {v1, p1, p0}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {v1, p1, p0}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw v1
 .end method
@@ -166,9 +166,9 @@
     .end annotation
 
     .line 44
-    sget-object v0, Landroidx/fragment/app/f;->a:Landroidx/b/g;
+    sget-object v0, Landroidx/fragment/app/f;->a:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -184,9 +184,9 @@
     move-result-object v0
 
     .line 48
-    sget-object p0, Landroidx/fragment/app/f;->a:Landroidx/b/g;
+    sget-object p0, Landroidx/fragment/app/f;->a:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p0, p1, v0}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object v0
@@ -235,7 +235,7 @@
     move-exception p1
 
     .line 128
-    new-instance v0, Landroidx/fragment/app/Fragment$b;
+    new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -253,7 +253,7 @@
 
     move-result-object p2
 
-    invoke-direct {v0, p2, p1}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {v0, p2, p1}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw v0
 
@@ -261,7 +261,7 @@
     move-exception p1
 
     .line 125
-    new-instance v0, Landroidx/fragment/app/Fragment$b;
+    new-instance v0, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -279,7 +279,7 @@
 
     move-result-object p2
 
-    invoke-direct {v0, p2, p1}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {v0, p2, p1}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw v0
 
@@ -287,7 +287,7 @@
     move-exception p1
 
     .line 121
-    new-instance v2, Landroidx/fragment/app/Fragment$b;
+    new-instance v2, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -303,7 +303,7 @@
 
     move-result-object p2
 
-    invoke-direct {v2, p2, p1}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {v2, p2, p1}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw v2
 
@@ -311,7 +311,7 @@
     move-exception p1
 
     .line 117
-    new-instance v2, Landroidx/fragment/app/Fragment$b;
+    new-instance v2, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -327,7 +327,7 @@
 
     move-result-object p2
 
-    invoke-direct {v2, p2, p1}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {v2, p2, p1}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw v2
 .end method

@@ -4,10 +4,80 @@
 
 
 # direct methods
+.method public static a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/BuildInStickerCategory;)I
+    .locals 2
+
+    .line 296
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->getReadableId()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "readable_id"
+
+    .line 295
+    invoke-static {p0, v1, v0}, Lcom/oppo/camera/sticker/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/oppo/camera/sticker/data/StickerCategoryItem;
+
+    move-result-object p0
+
+    .line 298
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "isStickerCategoryCanAddOrUpdate, item: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", Category: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StickerCategoryTableHelper"
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    .line 304
+    :cond_0
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->getIconVersion()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->getIconVersion()J
+
+    move-result-wide p0
+
+    cmp-long p0, v0, p0
+
+    if-gez p0, :cond_1
+
+    const/4 p0, 0x2
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)I
     .locals 1
 
-    .line 295
+    .line 313
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -28,12 +98,12 @@
 
     move-result-object p1
 
-    .line 296
+    .line 314
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 297
+    .line 315
     sget-object p2, Lcom/oppo/camera/sticker/a/c$c;->a:Landroid/net/Uri;
 
     const/4 v0, 0x0
@@ -50,12 +120,12 @@
 
     const-string v0, "StickerCategoryTableHelper"
 
-    .line 269
+    .line 278
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v1
 
-    .line 271
+    .line 280
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -78,7 +148,7 @@
 
     const/4 p0, 0x0
 
-    .line 273
+    .line 282
     :try_start_0
     sget-object v2, Lcom/oppo/camera/sticker/a/c$c;->a:Landroid/net/Uri;
 
@@ -96,7 +166,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 274
+    .line 283
     :try_start_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -104,7 +174,7 @@
 
     if-eqz p2, :cond_2
 
-    .line 275
+    .line 284
     invoke-static {p1}, Lcom/oppo/camera/sticker/a/a;->a(Landroid/database/Cursor;)Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;
 
     move-result-object p2
@@ -112,7 +182,7 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 276
+    .line 285
     :try_start_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -128,7 +198,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -158,7 +228,7 @@
 
     move-object p0, v7
 
-    .line 273
+    .line 282
     :goto_0
     :try_start_3
     throw p0
@@ -173,7 +243,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 278
+    .line 287
     :try_start_4
     invoke-interface {p1}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -225,8 +295,8 @@
     :goto_4
     const-string p1, "getStickerCategory, e:"
 
-    .line 279
-    invoke-static {v0, p1, p0}, Lcom/oppo/camera/e;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 288
+    invoke-static {v0, p1, p0}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     move-object p0, p2
 
@@ -238,14 +308,14 @@
 .method public static a(Landroid/database/Cursor;)Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;
     .locals 4
 
-    .line 244
+    .line 252
     new-instance v0, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;
 
     invoke-direct {v0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;-><init>()V
 
     const-string v1, "readable_id"
 
-    .line 245
+    .line 253
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -258,7 +328,7 @@
 
     const-string v1, "category_name"
 
-    .line 246
+    .line 254
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -271,7 +341,7 @@
 
     const-string v1, "position"
 
-    .line 247
+    .line 255
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -284,7 +354,7 @@
 
     const-string v1, "icon_url"
 
-    .line 248
+    .line 256
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -297,7 +367,7 @@
 
     const-string v1, "icon_path"
 
-    .line 249
+    .line 257
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -310,7 +380,7 @@
 
     const-string v1, "icon_file_uri"
 
-    .line 250
+    .line 258
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -323,7 +393,7 @@
 
     const-string v1, "icon_md5"
 
-    .line 251
+    .line 259
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -336,12 +406,12 @@
 
     const-string v1, "icon_highlight_url"
 
-    .line 252
+    .line 260
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 253
+    .line 261
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -350,12 +420,12 @@
 
     const-string v1, "icon_highlight_path"
 
-    .line 254
+    .line 262
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 255
+    .line 263
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -364,12 +434,12 @@
 
     const-string v1, "icon_highlight_file_uri"
 
-    .line 256
+    .line 264
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 257
+    .line 265
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -378,12 +448,12 @@
 
     const-string v1, "icon_highlight_md5"
 
-    .line 258
+    .line 266
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 259
+    .line 267
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -392,7 +462,7 @@
 
     const-string v1, "request_time"
 
-    .line 260
+    .line 268
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -405,7 +475,7 @@
 
     const-string v1, "is_new"
 
-    .line 261
+    .line 269
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -427,13 +497,35 @@
     :cond_0
     move v1, v3
 
-    .line 262
+    .line 270
     :goto_0
     invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->setCategoryNew(Z)V
 
     const-string v1, "is_valid"
 
-    .line 263
+    .line 271
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-interface {p0, v1}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v3
+
+    .line 272
+    :goto_1
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->setCategoryValid(Z)V
+
+    const-string v1, "icon_version"
+
+    .line 273
     invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
@@ -442,16 +534,9 @@
 
     move-result p0
 
-    if-nez p0, :cond_1
+    int-to-long v1, p0
 
-    goto :goto_1
-
-    :cond_1
-    move v2, v3
-
-    .line 264
-    :goto_1
-    invoke-virtual {v0, v2}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->setCategoryValid(Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->setIconVersion(J)V
 
     return-object v0
 .end method
@@ -477,17 +562,17 @@
         }
     .end annotation
 
-    .line 222
+    .line 230
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 224
+    .line 232
     new-instance p0, Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 226
+    .line 234
     :try_start_0
     sget-object v1, Lcom/oppo/camera/sticker/a/c$c;->a:Landroid/net/Uri;
 
@@ -509,7 +594,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 227
+    .line 235
     :try_start_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -517,7 +602,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 229
+    .line 237
     :cond_0
     invoke-static {v0}, Lcom/oppo/camera/sticker/a/a;->a(Landroid/database/Cursor;)Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;
 
@@ -525,7 +610,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 231
+    .line 239
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getCategoryName()Ljava/lang/String;
 
     move-result-object v3
@@ -536,10 +621,10 @@
 
     if-nez v3, :cond_1
 
-    .line 232
+    .line 240
     invoke-interface {p0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 234
+    .line 242
     :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -560,7 +645,7 @@
     :catch_0
     move-exception v1
 
-    .line 226
+    .line 234
     :try_start_2
     throw v1
     :try_end_2
@@ -571,7 +656,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 236
+    .line 244
     :try_start_3
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -608,7 +693,7 @@
     :catch_2
     move-exception v0
 
-    .line 237
+    .line 245
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -625,7 +710,7 @@
 
     const-string v1, "StickerCategoryTableHelper"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     :goto_3
@@ -635,12 +720,12 @@
 .method public static a(Landroid/content/Context;JJ)V
     .locals 3
 
-    .line 301
+    .line 319
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 302
+    .line 320
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -659,7 +744,7 @@
 
     const/4 p4, 0x1
 
-    .line 304
+    .line 322
     new-array v0, p4, [Ljava/lang/String;
 
     invoke-static {p4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -670,12 +755,12 @@
 
     aput-object p4, v0, v1
 
-    .line 305
+    .line 323
     new-instance p4, Landroid/content/ContentValues;
 
     invoke-direct {p4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 306
+    .line 324
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
@@ -684,14 +769,14 @@
 
     invoke-virtual {p4, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 307
+    .line 325
     sget-object v1, Lcom/oppo/camera/sticker/a/c$c;->a:Landroid/net/Uri;
 
     invoke-virtual {p0, v1, p4, p3, v0}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result p0
 
-    .line 309
+    .line 327
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,7 +799,7 @@
 
     const-string p1, "StickerCategoryTableHelper"
 
-    invoke-static {p1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -732,13 +817,13 @@
 
     goto/16 :goto_e
 
-    .line 68
+    .line 74
     :cond_0
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 69
+    .line 75
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -761,10 +846,10 @@
 
     move-result-object v10
 
-    .line 70
+    .line 76
     sget-object v11, Lcom/oppo/camera/sticker/a/c$c;->a:Landroid/net/Uri;
 
-    .line 71
+    .line 77
     new-instance v12, Landroid/content/ContentValues;
 
     invoke-direct {v12}, Landroid/content/ContentValues;-><init>()V
@@ -781,7 +866,7 @@
 
     move-object v7, v10
 
-    .line 73
+    .line 79
     :try_start_0
     invoke-virtual/range {v4 .. v9}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -819,7 +904,7 @@
 
     if-eqz v4, :cond_4
 
-    .line 74
+    .line 80
     :try_start_1
     invoke-interface {v4}, Landroid/database/Cursor;->getCount()I
 
@@ -830,81 +915,81 @@
 
     if-lez v18, :cond_4
 
-    .line 75
+    .line 81
     :try_start_2
     invoke-interface {v4}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 77
+    .line 83
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getReadableId()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v12, v2, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 78
+    .line 84
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getCategoryName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
+    .line 85
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 86
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v15, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 81
+    .line 87
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconFileUri()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v14, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 82
+    .line 88
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v13, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
+    .line 89
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
+    .line 90
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v8, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 85
+    .line 91
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightFileUri()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 86
+    .line 92
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v6, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
+    .line 93
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getPosition()I
 
     move-result v1
@@ -915,7 +1000,20 @@
 
     invoke-virtual {v12, v5, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 89
+    const-string v1, "icon_version"
+
+    .line 94
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconVersion()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 96
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryNew()Z
 
     move-result v1
@@ -928,7 +1026,7 @@
     :try_start_3
     const-string v1, "is_new"
 
-    .line 90
+    .line 97
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryNew()Z
 
     move-result v2
@@ -970,7 +1068,7 @@
     :try_start_4
     const-string v1, "is_valid"
 
-    .line 93
+    .line 100
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryValid()Z
 
     move-result v2
@@ -998,13 +1096,13 @@
 
     const/4 v10, 0x0
 
-    .line 95
+    .line 102
     :try_start_5
     invoke-virtual {v0, v11, v12, v1, v10}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v0
 
-    .line 97
+    .line 104
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1025,7 +1123,7 @@
     move-object/from16 v1, v16
 
     :try_start_6
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
@@ -1118,7 +1216,7 @@
 
     move-object/from16 p0, v4
 
-    .line 99
+    .line 106
     :try_start_7
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getReadableId()Ljava/lang/String;
 
@@ -1126,63 +1224,63 @@
 
     invoke-virtual {v12, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 100
+    .line 107
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getCategoryName()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
+    .line 108
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
+    .line 109
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v15, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
+    .line 110
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconFileUri()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v14, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 104
+    .line 111
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v13, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
+    .line 112
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
+    .line 113
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v8, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
+    .line 114
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightFileUri()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v12, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 108
+    .line 115
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightMd5()Ljava/lang/String;
 
     move-result-object v1
@@ -1191,7 +1289,7 @@
 
     const-string v1, "request_time"
 
-    .line 109
+    .line 116
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getLastRequestTime()J
 
     move-result-wide v2
@@ -1202,7 +1300,7 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 110
+    .line 117
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getPosition()I
 
     move-result v1
@@ -1215,7 +1313,7 @@
 
     const-string v1, "is_new"
 
-    .line 111
+    .line 118
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryNew()Z
 
     move-result v2
@@ -1238,7 +1336,7 @@
 
     const-string v1, "is_valid"
 
-    .line 112
+    .line 119
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryValid()Z
 
     move-result v2
@@ -1259,12 +1357,25 @@
 
     invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 113
+    const-string v1, "icon_version"
+
+    .line 120
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconVersion()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v12, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 121
     invoke-virtual {v0, v11, v12}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 115
+    .line 123
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1279,7 +1390,7 @@
 
     move-result-object v0
 
-    invoke-static {v10, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_5
@@ -1287,7 +1398,7 @@
     :goto_7
     if-eqz p0, :cond_7
 
-    .line 119
+    .line 127
     :try_start_8
     invoke-interface/range {p0 .. p0}, Landroid/database/Cursor;->close()V
     :try_end_8
@@ -1309,7 +1420,7 @@
     :goto_8
     move-object v1, v0
 
-    .line 73
+    .line 79
     :goto_9
     :try_start_9
     throw v1
@@ -1329,7 +1440,7 @@
 
     if-eqz v2, :cond_8
 
-    .line 119
+    .line 127
     :try_start_a
     invoke-interface/range {p0 .. p0}, Landroid/database/Cursor;->close()V
     :try_end_a
@@ -1367,7 +1478,7 @@
 
     move-object v10, v2
 
-    .line 120
+    .line 128
     :goto_d
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1391,7 +1502,7 @@
 
     move-result-object v0
 
-    invoke-static {v10, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -1405,52 +1516,10 @@
 
     const-string v0, "updateOrAddToCategoryTable, context or category is null!"
 
-    .line 63
-    invoke-static {v10, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 69
+    invoke-static {v10, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
-.end method
-
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Z
-    .locals 1
-
-    const-string v0, "readable_id"
-
-    .line 286
-    invoke-static {p0, v0, p1}, Lcom/oppo/camera/sticker/a/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/oppo/camera/sticker/data/StickerCategoryItem;
-
-    move-result-object p0
-
-    .line 288
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "hasStickerCategory, item: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "StickerCategoryTableHelper"
-
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/util/List;)Z
@@ -1471,7 +1540,7 @@
 
     if-eqz p1, :cond_12
 
-    .line 127
+    .line 135
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -1485,7 +1554,7 @@
 
     move-object/from16 v3, p0
 
-    .line 133
+    .line 141
     invoke-virtual {v3, v0}, Landroid/content/Context;->getDatabasePath(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
@@ -1496,23 +1565,23 @@
 
     const/4 v3, 0x0
 
-    .line 134
+    .line 142
     invoke-static {v0, v3, v2}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v12
 
-    .line 137
+    .line 145
     :try_start_0
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 138
+    .line 146
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     const-string v13, "sticker_category"
 
-    .line 141
+    .line 149
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v14
@@ -1532,10 +1601,10 @@
 
     check-cast v11, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;
 
-    .line 142
+    .line 150
     invoke-virtual {v0}, Landroid/content/ContentValues;->clear()V
 
-    .line 143
+    .line 151
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1582,7 +1651,7 @@
 
     move-object/from16 v11, v17
 
-    .line 145
+    .line 153
     invoke-virtual/range {v4 .. v11}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v4
@@ -1618,7 +1687,7 @@
 
     if-eqz v4, :cond_8
 
-    .line 146
+    .line 154
     :try_start_1
     invoke-interface {v4}, Landroid/database/Cursor;->getCount()I
 
@@ -1626,7 +1695,7 @@
 
     if-lez v19, :cond_8
 
-    .line 147
+    .line 155
     invoke-interface {v4}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
@@ -1634,7 +1703,7 @@
 
     move-object/from16 v19, v4
 
-    .line 149
+    .line 157
     :try_start_2
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getReadableId()Ljava/lang/String;
 
@@ -1642,28 +1711,28 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 150
+    .line 158
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getCategoryName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v14, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
+    .line 159
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
+    .line 160
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v11, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 154
+    .line 162
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconPath()Ljava/lang/String;
 
     move-result-object v1
@@ -1674,14 +1743,14 @@
 
     if-nez v1, :cond_1
 
-    .line 155
+    .line 163
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v15, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
+    .line 166
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconFileUri()Ljava/lang/String;
 
@@ -1693,14 +1762,14 @@
 
     if-nez v1, :cond_2
 
-    .line 159
+    .line 167
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconFileUri()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v10, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
+    .line 170
     :cond_2
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightUrl()Ljava/lang/String;
 
@@ -1708,14 +1777,14 @@
 
     invoke-virtual {v0, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
+    .line 171
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
+    .line 173
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightPath()Ljava/lang/String;
 
     move-result-object v1
@@ -1726,14 +1795,14 @@
 
     if-nez v1, :cond_3
 
-    .line 166
+    .line 174
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v8, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
+    .line 177
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightFileUri()Ljava/lang/String;
 
@@ -1745,15 +1814,15 @@
 
     if-nez v1, :cond_4
 
-    .line 171
+    .line 179
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightFileUri()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 170
+    .line 178
     invoke-virtual {v0, v6, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
+    .line 182
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getPosition()I
 
@@ -1765,7 +1834,7 @@
 
     invoke-virtual {v0, v5, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 176
+    .line 184
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryNew()Z
 
     move-result v1
@@ -1774,7 +1843,7 @@
 
     const-string v1, "is_new"
 
-    .line 177
+    .line 185
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryNew()Z
 
     move-result v3
@@ -1798,7 +1867,7 @@
     :cond_6
     const-string v1, "is_valid"
 
-    .line 180
+    .line 188
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryValid()Z
 
     move-result v3
@@ -1821,12 +1890,12 @@
 
     const/4 v1, 0x0
 
-    .line 181
+    .line 189
     invoke-virtual {v12, v13, v0, v2, v1}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
     move-result v2
 
-    .line 183
+    .line 191
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1855,7 +1924,7 @@
     move-object/from16 v2, v18
 
     :try_start_3
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -1930,7 +1999,7 @@
 
     move-object/from16 v18, v2
 
-    .line 186
+    .line 194
     :try_start_4
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getReadableId()Ljava/lang/String;
 
@@ -1938,63 +2007,63 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 187
+    .line 195
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getCategoryName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v14, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
+    .line 196
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v3, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
+    .line 197
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v15, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 190
+    .line 198
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v11, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
+    .line 199
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconFileUri()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v10, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 192
+    .line 200
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightUrl()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v9, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 193
+    .line 201
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightPath()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v8, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 194
+    .line 202
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightMd5()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v7, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
+    .line 203
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getIconHighlightFileUri()Ljava/lang/String;
 
     move-result-object v1
@@ -2003,7 +2072,7 @@
 
     const-string v1, "request_time"
 
-    .line 196
+    .line 204
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getLastRequestTime()J
 
     move-result-wide v2
@@ -2014,7 +2083,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 197
+    .line 205
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->getPosition()I
 
     move-result v1
@@ -2027,7 +2096,7 @@
 
     const-string v1, "is_new"
 
-    .line 198
+    .line 206
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryNew()Z
 
     move-result v2
@@ -2050,7 +2119,7 @@
 
     const-string v1, "is_valid"
 
-    .line 199
+    .line 207
     invoke-virtual {v4}, Lcom/oppo/camera/sticker/data/StickerCategoryItemWrapper;->isCategoryValid()Z
 
     move-result v2
@@ -2076,13 +2145,13 @@
 
     const/4 v1, 0x0
 
-    .line 200
+    .line 208
     :try_start_5
     invoke-virtual {v12, v13, v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
     move-result-wide v2
 
-    .line 202
+    .line 210
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2109,7 +2178,7 @@
     move-object/from16 v3, v18
 
     :try_start_6
-    invoke-static {v3, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_5
@@ -2117,7 +2186,7 @@
     :goto_8
     if-eqz v19, :cond_b
 
-    .line 204
+    .line 212
     :try_start_7
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
     :try_end_7
@@ -2171,7 +2240,7 @@
     :goto_a
     move-object v1, v0
 
-    .line 145
+    .line 153
     :goto_b
     :try_start_8
     throw v1
@@ -2188,7 +2257,7 @@
 
     if-eqz v2, :cond_c
 
-    .line 204
+    .line 212
     :try_start_9
     invoke-interface/range {v19 .. v19}, Landroid/database/Cursor;->close()V
     :try_end_9
@@ -2218,7 +2287,7 @@
     :cond_e
     move-object v3, v1
 
-    .line 207
+    .line 215
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_6
@@ -2226,10 +2295,10 @@
 
     if-eqz v12, :cond_f
 
-    .line 213
+    .line 221
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 214
+    .line 222
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_f
@@ -2252,7 +2321,7 @@
 
     move-object v3, v1
 
-    .line 210
+    .line 218
     :goto_e
     :try_start_b
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2269,16 +2338,16 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_6
 
     if-eqz v12, :cond_10
 
-    .line 213
+    .line 221
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 214
+    .line 222
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
     :cond_10
@@ -2289,13 +2358,13 @@
     :goto_f
     if-eqz v12, :cond_11
 
-    .line 213
+    .line 221
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 214
+    .line 222
     invoke-virtual {v12}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 216
+    .line 224
     :cond_11
     throw v0
 
@@ -2305,8 +2374,8 @@
 
     const-string v0, "updateOrAddToCategoryTable, categoryList is empty!"
 
-    .line 128
-    invoke-static {v3, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 136
+    invoke-static {v3, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 

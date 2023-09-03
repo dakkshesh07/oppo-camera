@@ -6,6 +6,11 @@
 .implements Landroid/graphics/drawable/Drawable$Callback;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private mDrawable:Landroid/graphics/drawable/Drawable;
 

@@ -904,7 +904,7 @@
         }
     .end annotation
 
-    .line 732
+    .line 736
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readShort()S
@@ -917,7 +917,7 @@
 
     if-ne v2, v0, :cond_0
 
-    .line 734
+    .line 738
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     sget-object v2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
@@ -931,14 +931,14 @@
 
     if-ne v2, v0, :cond_2
 
-    .line 736
+    .line 740
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     sget-object v2, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, v2}, Lcom/oppo/exif/OppoCountedDataInputStream;->setByteOrder(Ljava/nio/ByteOrder;)V
 
-    .line 741
+    .line 745
     :goto_0
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
@@ -952,7 +952,7 @@
 
     return-void
 
-    .line 742
+    .line 746
     :cond_1
     new-instance v0, Lcom/oppo/exif/OppoExifInvalidFormatException;
 
@@ -960,7 +960,7 @@
 
     throw v0
 
-    .line 738
+    .line 742
     :cond_2
     new-instance v0, Lcom/oppo/exif/OppoExifInvalidFormatException;
 
@@ -1281,12 +1281,12 @@
         }
     .end annotation
 
-    .line 748
+    .line 752
     new-instance v0, Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-direct {v0, p1}, Lcom/oppo/exif/OppoCountedDataInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 749
+    .line 753
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readShort()S
 
     move-result p1
@@ -1295,7 +1295,7 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 753
+    .line 757
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readShort()S
 
     move-result p1
@@ -1307,14 +1307,14 @@
 
     if-eq p1, v1, :cond_3
 
-    .line 754
+    .line 758
     invoke-static {p1}, Lcom/oppo/exif/OppoJpegHeader;->isSofMarker(S)Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    .line 755
+    .line 759
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readUnsignedShort()I
 
     move-result v1
@@ -1327,12 +1327,12 @@
 
     if-lt v1, p1, :cond_0
 
-    .line 762
+    .line 766
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readInt()I
 
     move-result p1
 
-    .line 763
+    .line 767
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readShort()S
 
     move-result v3
@@ -1345,17 +1345,17 @@
 
     if-nez v3, :cond_0
 
-    .line 766
+    .line 770
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->getReadByteCount()I
 
     move-result p1
 
     iput p1, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStartPosition:I
 
-    .line 767
+    .line 771
     iput v1, p0, Lcom/oppo/exif/OppoExifParser;->mApp1End:I
 
-    .line 768
+    .line 772
     iget p1, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStartPosition:I
 
     iget v0, p0, Lcom/oppo/exif/OppoExifParser;->mApp1End:I
@@ -1377,7 +1377,7 @@
 
     int-to-long v3, v1
 
-    .line 773
+    .line 777
     invoke-virtual {v0, v3, v4}, Lcom/oppo/exif/OppoCountedDataInputStream;->skip(J)J
 
     move-result-wide v5
@@ -1388,7 +1388,7 @@
 
     goto :goto_1
 
-    .line 777
+    .line 781
     :cond_1
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readShort()S
 
@@ -1402,13 +1402,13 @@
 
     const-string v0, "Invalid JPEG format."
 
-    .line 774
+    .line 778
     invoke-static {p1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
     return v2
 
-    .line 750
+    .line 754
     :cond_4
     new-instance p1, Lcom/oppo/exif/OppoExifInvalidFormatException;
 
@@ -1474,7 +1474,7 @@
 .method protected getByteOrder()Ljava/nio/ByteOrder;
     .locals 1
 
-    .line 907
+    .line 911
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->getByteOrder()Ljava/nio/ByteOrder;
@@ -1519,7 +1519,7 @@
 .method protected getOffsetToExifEndFromSOF()I
     .locals 1
 
-    .line 783
+    .line 787
     iget v0, p0, Lcom/oppo/exif/OppoExifParser;->mOffsetToApp1EndFromSOF:I
 
     return v0
@@ -1589,7 +1589,7 @@
 .method protected getTiffStartPosition()I
     .locals 1
 
-    .line 787
+    .line 791
     iget v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStartPosition:I
 
     return v0
@@ -2042,7 +2042,7 @@
         }
     .end annotation
 
-    .line 801
+    .line 805
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0, p1}, Lcom/oppo/exif/OppoCountedDataInputStream;->read([B)I
@@ -2060,7 +2060,7 @@
         }
     .end annotation
 
-    .line 794
+    .line 798
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/oppo/exif/OppoCountedDataInputStream;->read([BII)I
@@ -2071,46 +2071,226 @@
 .end method
 
 .method protected readFullTagValue(Lcom/oppo/exif/OppoExifTag;)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 642
+    const-string v0, "ExifParser"
+
+    .line 643
+    :try_start_0
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getDataType()S
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x7
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_4
-
-    .line 645
-    :cond_0
-    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
-
-    move-result v0
-
-    .line 646
-    iget-object v1, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
-
-    invoke-virtual {v1}, Ljava/util/TreeMap;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_4
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_0
+
+    const/4 v2, 0x7
+
+    if-eq v1, v2, :cond_0
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_4
+
+    .line 646
+    :cond_0
+    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
+
+    move-result v1
 
     .line 647
+    iget-object v2, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
+
+    invoke-virtual {v2}, Ljava/util/TreeMap;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_4
+
+    .line 648
+    iget-object v2, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
+
+    invoke-virtual {v2}, Ljava/util/TreeMap;->firstEntry()Ljava/util/Map$Entry;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
+
+    invoke-virtual {v3}, Lcom/oppo/exif/OppoCountedDataInputStream;->getReadByteCount()I
+
+    move-result v3
+
+    add-int/2addr v3, v1
+
+    if-ge v2, v3, :cond_4
+
+    .line 650
+    iget-object v1, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
+
+    invoke-virtual {v1}, Ljava/util/TreeMap;->firstEntry()Ljava/util/Map$Entry;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 651
+    instance-of v2, v1, Lcom/oppo/exif/OppoExifParser$ImageEvent;
+
+    if-eqz v2, :cond_1
+
+    .line 653
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Thumbnail overlaps value for tag: \n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 654
+    iget-object v1, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
+
+    invoke-virtual {v1}, Ljava/util/TreeMap;->pollFirstEntry()Ljava/util/Map$Entry;
+
+    move-result-object v1
+
+    .line 655
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Invalid thumbnail offset: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_1
+
+    .line 658
+    :cond_1
+    instance-of v2, v1, Lcom/oppo/exif/OppoExifParser$IfdEvent;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string v3, " overlaps value for tag: \n"
+
+    if-eqz v2, :cond_2
+
+    .line 659
+    :try_start_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Ifd "
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    check-cast v1, Lcom/oppo/exif/OppoExifParser$IfdEvent;
+
+    iget v1, v1, Lcom/oppo/exif/OppoExifParser$IfdEvent;->ifd:I
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 661
+    :cond_2
+    instance-of v2, v1, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;
+
+    if-eqz v2, :cond_3
+
+    .line 662
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Tag value for tag: \n"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    check-cast v1, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;
+
+    iget-object v1, v1, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;->tag:Lcom/oppo/exif/OppoExifTag;
+
+    invoke-virtual {v1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 666
+    :cond_3
+    :goto_0
     iget-object v1, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
 
     invoke-virtual {v1}, Ljava/util/TreeMap;->firstEntry()Ljava/util/Map$Entry;
@@ -2133,415 +2313,261 @@
 
     move-result v2
 
-    add-int/2addr v2, v0
+    sub-int/2addr v1, v2
 
-    if-ge v1, v2, :cond_4
+    .line 668
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    .line 649
-    iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
-
-    invoke-virtual {v0}, Ljava/util/TreeMap;->firstEntry()Ljava/util/Map$Entry;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 650
-    instance-of v1, v0, Lcom/oppo/exif/OppoExifParser$ImageEvent;
-
-    const-string v2, "ExifParser"
-
-    if-eqz v1, :cond_1
-
-    .line 652
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Thumbnail overlaps value for tag: \n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 653
-    iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
-
-    invoke-virtual {v0}, Ljava/util/TreeMap;->pollFirstEntry()Ljava/util/Map$Entry;
-
-    move-result-object v0
-
-    .line 654
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Invalid thumbnail offset: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto/16 :goto_1
-
-    .line 657
-    :cond_1
-    instance-of v1, v0, Lcom/oppo/exif/OppoExifParser$IfdEvent;
-
-    const-string v3, " overlaps value for tag: \n"
-
-    if-eqz v1, :cond_2
-
-    .line 658
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Ifd "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    check-cast v0, Lcom/oppo/exif/OppoExifParser$IfdEvent;
-
-    iget v0, v0, Lcom/oppo/exif/OppoExifParser$IfdEvent;->ifd:I
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    .line 660
-    :cond_2
-    instance-of v1, v0, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;
-
-    if-eqz v1, :cond_3
-
-    .line 661
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Tag value for tag: \n"
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    check-cast v0, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;
-
-    iget-object v0, v0, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;->tag:Lcom/oppo/exif/OppoExifTag;
-
-    invoke-virtual {v0}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 665
-    :cond_3
-    :goto_0
-    iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mCorrespondingEvent:Ljava/util/TreeMap;
-
-    invoke-virtual {v0}, Ljava/util/TreeMap;->firstEntry()Ljava/util/Map$Entry;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
-
-    invoke-virtual {v1}, Lcom/oppo/exif/OppoCountedDataInputStream;->getReadByteCount()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    .line 667
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "Invalid size of tag: \n"
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v3, " setting count to: "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 669
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->forceSetComponentCount(I)V
+    .line 670
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->forceSetComponentCount(I)V
 
-    .line 674
+    .line 675
     :cond_4
     :goto_1
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getDataType()S
 
-    move-result v0
+    move-result v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch v1, :pswitch_data_0
 
     :pswitch_0
     goto/16 :goto_7
 
-    .line 718
+    .line 719
     :pswitch_1
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [Lcom/oppo/exif/OppoRational;
-
-    .line 719
-    array-length v2, v0
-
-    :goto_2
-    if-ge v1, v2, :cond_5
+    new-array v1, v1, [Lcom/oppo/exif/OppoRational;
 
     .line 720
+    array-length v3, v1
+
+    :goto_2
+    if-ge v2, v3, :cond_5
+
+    .line 721
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readRational()Lcom/oppo/exif/OppoRational;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v0, v1
+    aput-object v4, v1, v2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 722
+    .line 723
     :cond_5
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue([Lcom/oppo/exif/OppoRational;)Z
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([Lcom/oppo/exif/OppoRational;)Z
 
     goto/16 :goto_7
 
-    .line 710
+    .line 711
     :pswitch_2
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [I
-
-    .line 711
-    array-length v2, v0
-
-    :goto_3
-    if-ge v1, v2, :cond_6
+    new-array v1, v1, [I
 
     .line 712
+    array-length v3, v1
+
+    :goto_3
+    if-ge v2, v3, :cond_6
+
+    .line 713
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readLong()I
 
-    move-result v3
+    move-result v4
 
-    aput v3, v0, v1
+    aput v4, v1, v2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 714
+    .line 715
     :cond_6
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue([I)Z
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([I)Z
 
-    goto :goto_7
+    goto/16 :goto_7
 
-    .line 694
+    .line 695
     :pswitch_3
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [Lcom/oppo/exif/OppoRational;
-
-    .line 695
-    array-length v2, v0
-
-    :goto_4
-    if-ge v1, v2, :cond_7
+    new-array v1, v1, [Lcom/oppo/exif/OppoRational;
 
     .line 696
+    array-length v3, v1
+
+    :goto_4
+    if-ge v2, v3, :cond_7
+
+    .line 697
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readUnsignedRational()Lcom/oppo/exif/OppoRational;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v0, v1
+    aput-object v4, v1, v2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 698
+    .line 699
     :cond_7
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue([Lcom/oppo/exif/OppoRational;)Z
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([Lcom/oppo/exif/OppoRational;)Z
 
     goto :goto_7
 
-    .line 686
+    .line 687
     :pswitch_4
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [J
-
-    .line 687
-    array-length v2, v0
-
-    :goto_5
-    if-ge v1, v2, :cond_8
+    new-array v1, v1, [J
 
     .line 688
+    array-length v3, v1
+
+    :goto_5
+    if-ge v2, v3, :cond_8
+
+    .line 689
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readUnsignedLong()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    aput-wide v3, v0, v1
+    aput-wide v4, v1, v2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_5
 
-    .line 690
+    .line 691
     :cond_8
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue([J)Z
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([J)Z
 
     goto :goto_7
 
-    .line 702
+    .line 703
     :pswitch_5
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [I
-
-    .line 703
-    array-length v2, v0
-
-    :goto_6
-    if-ge v1, v2, :cond_9
+    new-array v1, v1, [I
 
     .line 704
+    array-length v3, v1
+
+    :goto_6
+    if-ge v2, v3, :cond_9
+
+    .line 705
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readUnsignedShort()I
 
-    move-result v3
+    move-result v4
 
-    aput v3, v0, v1
+    aput v4, v1, v2
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_6
 
-    .line 706
+    .line 707
     :cond_9
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue([I)Z
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([I)Z
 
     goto :goto_7
 
-    .line 683
+    .line 684
     :pswitch_6
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    invoke-virtual {p0, v0}, Lcom/oppo/exif/OppoExifParser;->readString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/oppo/exif/OppoExifParser;->readString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue(Ljava/lang/String;)Z
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue(Ljava/lang/String;)Z
 
     goto :goto_7
 
-    .line 677
+    .line 678
     :pswitch_7
     invoke-virtual {p1}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
-    move-result v0
+    move-result v1
 
-    new-array v0, v0, [B
-
-    .line 678
-    invoke-virtual {p0, v0}, Lcom/oppo/exif/OppoExifParser;->read([B)I
+    new-array v1, v1, [B
 
     .line 679
-    invoke-virtual {p1, v0}, Lcom/oppo/exif/OppoExifTag;->setValue([B)Z
+    invoke-virtual {p0, v1}, Lcom/oppo/exif/OppoExifParser;->read([B)I
+
+    .line 680
+    invoke-virtual {p1, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([B)Z
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_7
+
+    :catch_0
+    move-exception p1
+
+    .line 731
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "readFullTagValue e = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_7
     return-void
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -2566,7 +2592,7 @@
         }
     .end annotation
 
-    .line 856
+    .line 860
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readInt()I
@@ -2584,17 +2610,17 @@
         }
     .end annotation
 
-    .line 863
+    .line 867
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readLong()I
 
     move-result v0
 
-    .line 864
+    .line 868
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readLong()I
 
     move-result v1
 
-    .line 865
+    .line 869
     new-instance v2, Lcom/oppo/exif/OppoRational;
 
     int-to-long v3, v0
@@ -2614,7 +2640,7 @@
         }
     .end annotation
 
-    .line 810
+    .line 814
     sget-object v0, Lcom/oppo/exif/OppoExifParser;->US_ASCII:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, p1, v0}, Lcom/oppo/exif/OppoExifParser;->readString(ILjava/nio/charset/Charset;)Ljava/lang/String;
@@ -2634,7 +2660,7 @@
 
     if-lez p1, :cond_0
 
-    .line 820
+    .line 824
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0, p1, p2}, Lcom/oppo/exif/OppoCountedDataInputStream;->readString(ILjava/nio/charset/Charset;)Ljava/lang/String;
@@ -2657,7 +2683,7 @@
         }
     .end annotation
 
-    .line 839
+    .line 843
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readLong()I
 
     move-result v0
@@ -2679,17 +2705,17 @@
         }
     .end annotation
 
-    .line 847
+    .line 851
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readUnsignedLong()J
 
     move-result-wide v0
 
-    .line 848
+    .line 852
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifParser;->readUnsignedLong()J
 
     move-result-wide v2
 
-    .line 849
+    .line 853
     new-instance v4, Lcom/oppo/exif/OppoRational;
 
     invoke-direct {v4, v0, v1, v2, v3}, Lcom/oppo/exif/OppoRational;-><init>(JJ)V
@@ -2705,7 +2731,7 @@
         }
     .end annotation
 
-    .line 831
+    .line 835
     iget-object v0, p0, Lcom/oppo/exif/OppoExifParser;->mTiffStream:Lcom/oppo/exif/OppoCountedDataInputStream;
 
     invoke-virtual {v0}, Lcom/oppo/exif/OppoCountedDataInputStream;->readShort()S

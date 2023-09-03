@@ -147,6 +147,39 @@
     .end annotation
 .end method
 
+.method public abstract parseFrom(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/nio/ByteBuffer;",
+            ")TMessageType;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+.end method
+
+.method public abstract parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/nio/ByteBuffer;",
+            "Lcom/google/protobuf/ExtensionRegistryLite;",
+            ")TMessageType;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+.end method
+
 .method public abstract parseFrom([B)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {

@@ -1,5 +1,5 @@
-.class public Landroidx/fragment/app/Fragment$b;
-.super Ljava/lang/RuntimeException;
+.class interface abstract Landroidx/fragment/app/Fragment$b;
+.super Ljava/lang/Object;
 .source "Fragment.java"
 
 
@@ -9,17 +9,14 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x9
+    accessFlags = 0x608
     name = "b"
 .end annotation
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Exception;)V
-    .locals 0
+# virtual methods
+.method public abstract a()V
+.end method
 
-    .line 430
-    invoke-direct {p0, p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+.method public abstract b()V
 .end method

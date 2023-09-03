@@ -57,183 +57,183 @@
 
 .field public static final alertTitle:I = 0x7f090047
 
-.field public static final async:I = 0x7f090054
+.field public static final async:I = 0x7f090055
 
-.field public static final automatic:I = 0x7f090056
+.field public static final automatic:I = 0x7f090057
 
-.field public static final blocking:I = 0x7f090068
+.field public static final blocking:I = 0x7f090069
 
-.field public static final bottom:I = 0x7f09006c
+.field public static final bottom:I = 0x7f09006d
 
-.field public static final buttonPanel:I = 0x7f090079
+.field public static final buttonPanel:I = 0x7f09007d
 
-.field public static final checkbox:I = 0x7f090093
+.field public static final checkbox:I = 0x7f09009a
 
-.field public static final chronometer:I = 0x7f0900a4
+.field public static final chronometer:I = 0x7f0900ab
 
-.field public static final content:I = 0x7f0900d5
+.field public static final content:I = 0x7f0900ba
 
-.field public static final contentPanel:I = 0x7f0900d6
+.field public static final contentPanel:I = 0x7f0900bb
 
-.field public static final custom:I = 0x7f0900db
+.field public static final custom:I = 0x7f0900e2
 
-.field public static final customPanel:I = 0x7f0900dc
+.field public static final customPanel:I = 0x7f0900e3
 
-.field public static final decor_content_parent:I = 0x7f0900e3
+.field public static final decor_content_parent:I = 0x7f0900ea
 
-.field public static final default_activity_button:I = 0x7f0900e5
+.field public static final default_activity_button:I = 0x7f0900ec
 
-.field public static final edit_query:I = 0x7f090100
+.field public static final edit_query:I = 0x7f09010c
 
-.field public static final end:I = 0x7f090105
+.field public static final end:I = 0x7f090113
 
-.field public static final expand_activities_button:I = 0x7f09010b
+.field public static final expand_activities_button:I = 0x7f09011a
 
-.field public static final expanded_menu:I = 0x7f09010c
+.field public static final expanded_menu:I = 0x7f09011b
 
-.field public static final forever:I = 0x7f090131
+.field public static final forever:I = 0x7f090149
 
-.field public static final group_divider:I = 0x7f09013c
+.field public static final group_divider:I = 0x7f090154
 
-.field public static final hardware:I = 0x7f090145
+.field public static final hardware:I = 0x7f09015e
 
-.field public static final home:I = 0x7f09014a
+.field public static final home:I = 0x7f090163
 
-.field public static final icon:I = 0x7f09014d
+.field public static final icon:I = 0x7f090167
 
-.field public static final icon_group:I = 0x7f09014f
+.field public static final icon_group:I = 0x7f090169
 
-.field public static final image:I = 0x7f090151
+.field public static final image:I = 0x7f09016c
 
-.field public static final info:I = 0x7f090156
+.field public static final info:I = 0x7f090174
 
-.field public static final italic:I = 0x7f09015a
+.field public static final italic:I = 0x7f09017a
 
-.field public static final left:I = 0x7f09016a
+.field public static final left:I = 0x7f090194
 
-.field public static final line1:I = 0x7f09016e
+.field public static final line1:I = 0x7f090197
 
-.field public static final line3:I = 0x7f09016f
+.field public static final line3:I = 0x7f090198
 
-.field public static final listMode:I = 0x7f090170
+.field public static final listMode:I = 0x7f090199
 
-.field public static final list_item:I = 0x7f090174
+.field public static final list_item:I = 0x7f09019d
 
-.field public static final message:I = 0x7f090186
+.field public static final message:I = 0x7f0901b9
 
-.field public static final multiply:I = 0x7f0901ae
+.field public static final multiply:I = 0x7f0901ee
 
-.field public static final none:I = 0x7f0901b4
+.field public static final none:I = 0x7f0901fc
 
-.field public static final normal:I = 0x7f0901b5
+.field public static final normal:I = 0x7f0901fd
 
-.field public static final notification_background:I = 0x7f0901bc
+.field public static final notification_background:I = 0x7f090204
 
-.field public static final notification_main_column:I = 0x7f0901bd
+.field public static final notification_main_column:I = 0x7f090205
 
-.field public static final notification_main_column_container:I = 0x7f0901be
+.field public static final notification_main_column_container:I = 0x7f090206
 
-.field public static final parentPanel:I = 0x7f0901d4
+.field public static final parentPanel:I = 0x7f090219
 
-.field public static final progress_circular:I = 0x7f0901f3
+.field public static final progress_circular:I = 0x7f090237
 
-.field public static final progress_horizontal:I = 0x7f0901f4
+.field public static final progress_horizontal:I = 0x7f090238
 
-.field public static final radio:I = 0x7f0901f6
+.field public static final radio:I = 0x7f09023c
 
-.field public static final restart:I = 0x7f090202
+.field public static final restart:I = 0x7f090248
 
-.field public static final reverse:I = 0x7f090203
+.field public static final reverse:I = 0x7f090249
 
-.field public static final right:I = 0x7f090205
+.field public static final right:I = 0x7f09024c
 
-.field public static final right_icon:I = 0x7f090206
+.field public static final right_icon:I = 0x7f09024d
 
-.field public static final right_side:I = 0x7f090207
+.field public static final right_side:I = 0x7f09024e
 
-.field public static final screen:I = 0x7f09021f
+.field public static final screen:I = 0x7f09026b
 
-.field public static final scrollIndicatorDown:I = 0x7f090222
+.field public static final scrollIndicatorDown:I = 0x7f09026f
 
-.field public static final scrollIndicatorUp:I = 0x7f090223
+.field public static final scrollIndicatorUp:I = 0x7f090270
 
-.field public static final scrollView:I = 0x7f090224
+.field public static final scrollView:I = 0x7f090271
 
-.field public static final search_badge:I = 0x7f090228
+.field public static final search_badge:I = 0x7f090275
 
-.field public static final search_bar:I = 0x7f090229
+.field public static final search_bar:I = 0x7f090276
 
-.field public static final search_button:I = 0x7f09022a
+.field public static final search_button:I = 0x7f090277
 
-.field public static final search_close_btn:I = 0x7f09022b
+.field public static final search_close_btn:I = 0x7f090278
 
-.field public static final search_edit_frame:I = 0x7f09022c
+.field public static final search_edit_frame:I = 0x7f090279
 
-.field public static final search_go_btn:I = 0x7f09022d
+.field public static final search_go_btn:I = 0x7f09027a
 
-.field public static final search_mag_icon:I = 0x7f09022f
+.field public static final search_mag_icon:I = 0x7f09027c
 
-.field public static final search_plate:I = 0x7f090230
+.field public static final search_plate:I = 0x7f09027d
 
-.field public static final search_src_text:I = 0x7f090233
+.field public static final search_src_text:I = 0x7f090280
 
-.field public static final search_voice_btn:I = 0x7f090234
+.field public static final search_voice_btn:I = 0x7f090281
 
-.field public static final select_dialog_listview:I = 0x7f09023a
+.field public static final select_dialog_listview:I = 0x7f090287
 
-.field public static final shortcut:I = 0x7f090240
+.field public static final shortcut:I = 0x7f09028c
 
-.field public static final software:I = 0x7f090253
+.field public static final software:I = 0x7f0902a2
 
-.field public static final spacer:I = 0x7f090255
+.field public static final spacer:I = 0x7f0902a5
 
-.field public static final split_action_bar:I = 0x7f090257
+.field public static final split_action_bar:I = 0x7f0902a7
 
-.field public static final src_atop:I = 0x7f09025a
+.field public static final src_atop:I = 0x7f0902aa
 
-.field public static final src_in:I = 0x7f09025b
+.field public static final src_in:I = 0x7f0902ab
 
-.field public static final src_over:I = 0x7f09025c
+.field public static final src_over:I = 0x7f0902ac
 
-.field public static final start:I = 0x7f09025e
+.field public static final start:I = 0x7f0902ae
 
-.field public static final submenuarrow:I = 0x7f090272
+.field public static final submenuarrow:I = 0x7f0902c3
 
-.field public static final submit_area:I = 0x7f090273
+.field public static final submit_area:I = 0x7f0902c4
 
-.field public static final tabMode:I = 0x7f090284
+.field public static final tabMode:I = 0x7f0902da
 
-.field public static final tag_transition_group:I = 0x7f09028b
+.field public static final tag_transition_group:I = 0x7f0902ea
 
-.field public static final tag_unhandled_key_event_manager:I = 0x7f09028c
+.field public static final tag_unhandled_key_event_manager:I = 0x7f0902eb
 
-.field public static final tag_unhandled_key_listeners:I = 0x7f09028d
+.field public static final tag_unhandled_key_listeners:I = 0x7f0902ec
 
-.field public static final text:I = 0x7f090291
+.field public static final text:I = 0x7f0902f0
 
-.field public static final text2:I = 0x7f090292
+.field public static final text2:I = 0x7f0902f1
 
-.field public static final textSpacerNoButtons:I = 0x7f090294
+.field public static final textSpacerNoButtons:I = 0x7f0902f3
 
-.field public static final textSpacerNoTitle:I = 0x7f090295
+.field public static final textSpacerNoTitle:I = 0x7f0902f4
 
-.field public static final time:I = 0x7f0902a5
+.field public static final time:I = 0x7f090307
 
-.field public static final title:I = 0x7f0902aa
+.field public static final title:I = 0x7f09030c
 
-.field public static final titleDividerNoCustom:I = 0x7f0902ab
+.field public static final titleDividerNoCustom:I = 0x7f09030d
 
-.field public static final title_template:I = 0x7f0902ac
+.field public static final title_template:I = 0x7f09030e
 
-.field public static final top:I = 0x7f0902b0
+.field public static final top:I = 0x7f090312
 
-.field public static final topPanel:I = 0x7f0902b1
+.field public static final topPanel:I = 0x7f090313
 
-.field public static final uniform:I = 0x7f0902d2
+.field public static final uniform:I = 0x7f090348
 
-.field public static final up:I = 0x7f0902d6
+.field public static final up:I = 0x7f09034c
 
-.field public static final wrap_content:I = 0x7f0902f1
+.field public static final wrap_content:I = 0x7f09036f
 
 
 # direct methods

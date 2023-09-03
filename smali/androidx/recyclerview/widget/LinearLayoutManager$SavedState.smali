@@ -13,6 +13,9 @@
     }
 .end annotation
 
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/recyclerview/widget/LinearLayoutManager;
 .end annotation

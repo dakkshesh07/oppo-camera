@@ -52,12 +52,12 @@
         }
     .end annotation
 
-    .line 538
+    .line 498
     iput-object p1, p0, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;->this$0:Lcom/google/protobuf/Internal$MapAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 539
+    .line 499
     iput-object p2, p0, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;->realIterator:Ljava/util/Iterator;
 
     return-void
@@ -68,7 +68,7 @@
 .method public hasNext()Z
     .locals 1
 
-    .line 544
+    .line 504
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;->realIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -81,7 +81,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 534
+    .line 495
     invoke-virtual {p0}, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;->next()Ljava/util/Map$Entry;
 
     move-result-object v0
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 549
+    .line 509
     new-instance v0, Lcom/google/protobuf/Internal$MapAdapter$EntryAdapter;
 
     iget-object v1, p0, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;->this$0:Lcom/google/protobuf/Internal$MapAdapter;
@@ -120,7 +120,7 @@
 .method public remove()V
     .locals 1
 
-    .line 554
+    .line 514
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;->realIterator:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V

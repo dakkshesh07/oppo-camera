@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="48.0dip" android:layout_marginBottom="48.0dip" android:overScrollMode="ifContentScrolls"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09010d" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.coui.appcompat.widget.toolbar.COUIToolbar android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901ff" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070784" />
+        <TextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070769" android:textColor="?APKTOOL_DUPLICATE_attr_0x7f040125" android:gravity="center" android:id="@android:id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070785" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070781" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070781" />
+        <com.coui.appcompat.widget.COUIEditText android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070769" android:id="@android:id/edit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070782" android:layout_marginBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070780" android:minHeight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070783" android:cursorVisible="true" android:singleLine="true" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070781" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070781" app:APKTOOL_DUPLICATE_attr_0x7f0404c1="true" style="?APKTOOL_DUPLICATE_attr_0x7f04016f" />
+    </LinearLayout>
+</ScrollView>

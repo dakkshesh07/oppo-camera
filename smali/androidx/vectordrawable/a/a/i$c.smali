@@ -111,13 +111,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/vectordrawable/a/a/i$c;Landroidx/b/a;)V
+.method public constructor <init>(Landroidx/vectordrawable/a/a/i$c;Landroidx/collection/ArrayMap;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/vectordrawable/a/a/i$c;",
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
             ">;)V"
@@ -234,7 +234,7 @@
     if-eqz v0, :cond_0
 
     .line 1478
-    invoke-virtual {p2, v0, p0}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v0, p0}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1481
     :cond_0
@@ -275,7 +275,7 @@
 
     new-instance v3, Landroidx/vectordrawable/a/a/i$c;
 
-    invoke-direct {v3, v1, p2}, Landroidx/vectordrawable/a/a/i$c;-><init>(Landroidx/vectordrawable/a/a/i$c;Landroidx/b/a;)V
+    invoke-direct {v3, v1, p2}, Landroidx/vectordrawable/a/a/i$c;-><init>(Landroidx/vectordrawable/a/a/i$c;Landroidx/collection/ArrayMap;)V
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -323,7 +323,7 @@
     .line 1500
     iget-object v1, v2, Landroidx/vectordrawable/a/a/i$e;->m:Ljava/lang/String;
 
-    invoke-virtual {p2, v1, v2}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, v1, v2}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_3
     :goto_2
@@ -419,7 +419,7 @@
 
     const/4 v2, 0x5
 
-    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -454,7 +454,7 @@
 
     const/4 v2, 0x3
 
-    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -467,7 +467,7 @@
 
     const/4 v2, 0x4
 
-    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -480,7 +480,7 @@
 
     const/4 v2, 0x6
 
-    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -493,7 +493,7 @@
 
     const/4 v2, 0x7
 
-    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, v2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p2
 
@@ -526,7 +526,7 @@
     .line 1518
     sget-object v0, Landroidx/vectordrawable/a/a/a;->b:[I
 
-    invoke-static {p1, p3, p2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p3, p2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

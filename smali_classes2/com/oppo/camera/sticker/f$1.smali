@@ -40,11 +40,11 @@
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "onReceive action: "
+    const-string v0, "onReceive intent: "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    invoke-virtual {p2}, Landroid/content/Intent;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     const-string v0, "StickerDataRequest"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 68
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;

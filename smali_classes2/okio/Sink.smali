@@ -7,6 +7,11 @@
 .implements Ljava/io/Flushable;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # virtual methods
 .method public abstract close()V
     .annotation system Ldalvik/annotation/Throws;

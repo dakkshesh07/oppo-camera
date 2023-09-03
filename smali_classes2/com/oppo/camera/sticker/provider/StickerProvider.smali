@@ -196,7 +196,7 @@
 
     const-string p3, "StickerProvider"
 
-    invoke-static {p3, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -838,7 +838,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -862,7 +862,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_3
     if-lez v1, :cond_2
@@ -1229,7 +1229,7 @@
 
     const-string v2, "StickerProvider"
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return-object v12
@@ -1512,7 +1512,7 @@
 
     move-result-object p2
 
-    invoke-static {v0, p2}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_3
     if-lez v1, :cond_2
@@ -1542,7 +1542,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 

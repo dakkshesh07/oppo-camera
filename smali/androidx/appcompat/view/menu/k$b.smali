@@ -20,7 +20,7 @@
 # instance fields
 .field final synthetic c:Landroidx/appcompat/view/menu/k;
 
-.field private d:Landroidx/core/g/b$b;
+.field private d:Landroidx/core/f/b$b;
 
 
 # direct methods
@@ -51,11 +51,11 @@
     return-object p1
 .end method
 
-.method public a(Landroidx/core/g/b$b;)V
+.method public a(Landroidx/core/f/b$b;)V
     .locals 1
 
     .line 489
-    iput-object p1, p0, Landroidx/appcompat/view/menu/k$b;->d:Landroidx/core/g/b$b;
+    iput-object p1, p0, Landroidx/appcompat/view/menu/k$b;->d:Landroidx/core/f/b$b;
 
     .line 490
     iget-object v0, p0, Landroidx/appcompat/view/menu/k$b;->a:Landroid/view/ActionProvider;
@@ -105,12 +105,12 @@
     .locals 1
 
     .line 495
-    iget-object v0, p0, Landroidx/appcompat/view/menu/k$b;->d:Landroidx/core/g/b$b;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/k$b;->d:Landroidx/core/f/b$b;
 
     if-eqz v0, :cond_0
 
     .line 496
-    invoke-interface {v0, p1}, Landroidx/core/g/b$b;->a(Z)V
+    invoke-interface {v0, p1}, Landroidx/core/f/b$b;->a(Z)V
 
     :cond_0
     return-void

@@ -8,20 +8,20 @@
 
 .field private final d:Z
 
-.field private final e:Landroidx/b/d;
+.field private final e:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/d<",
+            "Landroidx/collection/LongSparseArray<",
             "Landroid/graphics/LinearGradient;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Landroidx/b/d;
+.field private final f:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/d<",
+            "Landroidx/collection/LongSparseArray<",
             "Landroid/graphics/RadialGradient;",
             ">;"
         }
@@ -30,7 +30,7 @@
 
 .field private final g:Landroid/graphics/RectF;
 
-.field private final h:Lcom/airbnb/lottie/c/b/f;
+.field private final h:Lcom/airbnb/lottie/model/content/GradientType;
 
 .field private final i:I
 
@@ -38,8 +38,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/airbnb/lottie/a/b/a<",
-            "Lcom/airbnb/lottie/c/b/c;",
-            "Lcom/airbnb/lottie/c/b/c;",
+            "Lcom/airbnb/lottie/model/content/c;",
+            "Lcom/airbnb/lottie/model/content/c;",
             ">;"
         }
     .end annotation
@@ -71,45 +71,45 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/c/c/a;Lcom/airbnb/lottie/c/b/e;)V
+.method public constructor <init>(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/e;)V
     .locals 11
 
     .line 44
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->h()Lcom/airbnb/lottie/c/b/p$a;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->h()Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/c/b/p$a;->toPaintCap()Landroid/graphics/Paint$Cap;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/model/content/ShapeStroke$LineCapType;->toPaintCap()Landroid/graphics/Paint$Cap;
 
     move-result-object v4
 
     .line 45
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->i()Lcom/airbnb/lottie/c/b/p$b;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->i()Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/c/b/p$b;->toPaintJoin()Landroid/graphics/Paint$Join;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/model/content/ShapeStroke$LineJoinType;->toPaintJoin()Landroid/graphics/Paint$Join;
 
     move-result-object v5
 
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->l()F
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->l()F
 
     move-result v6
 
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->d()Lcom/airbnb/lottie/c/a/d;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->d()Lcom/airbnb/lottie/model/a/d;
 
     move-result-object v7
 
     .line 46
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->g()Lcom/airbnb/lottie/c/a/b;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->g()Lcom/airbnb/lottie/model/a/b;
 
     move-result-object v8
 
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->j()Ljava/util/List;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->j()Ljava/util/List;
 
     move-result-object v9
 
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->k()Lcom/airbnb/lottie/c/a/b;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->k()Lcom/airbnb/lottie/model/a/b;
 
     move-result-object v10
 
@@ -120,21 +120,21 @@
     move-object v3, p2
 
     .line 44
-    invoke-direct/range {v1 .. v10}, Lcom/airbnb/lottie/a/a/a;-><init>(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/c/c/a;Landroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FLcom/airbnb/lottie/c/a/d;Lcom/airbnb/lottie/c/a/b;Ljava/util/List;Lcom/airbnb/lottie/c/a/b;)V
+    invoke-direct/range {v1 .. v10}, Lcom/airbnb/lottie/a/a/a;-><init>(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/model/layer/a;Landroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FLcom/airbnb/lottie/model/a/d;Lcom/airbnb/lottie/model/a/b;Ljava/util/List;Lcom/airbnb/lottie/model/a/b;)V
 
     .line 31
-    new-instance v0, Landroidx/b/d;
+    new-instance v0, Landroidx/collection/LongSparseArray;
 
-    invoke-direct {v0}, Landroidx/b/d;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->e:Landroidx/b/d;
+    iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->e:Landroidx/collection/LongSparseArray;
 
     .line 32
-    new-instance v0, Landroidx/b/d;
+    new-instance v0, Landroidx/collection/LongSparseArray;
 
-    invoke-direct {v0}, Landroidx/b/d;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->f:Landroidx/b/d;
+    iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->f:Landroidx/collection/LongSparseArray;
 
     .line 33
     new-instance v0, Landroid/graphics/RectF;
@@ -144,21 +144,21 @@
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->g:Landroid/graphics/RectF;
 
     .line 48
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->c:Ljava/lang/String;
 
     .line 49
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->b()Lcom/airbnb/lottie/c/b/f;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->b()Lcom/airbnb/lottie/model/content/GradientType;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->h:Lcom/airbnb/lottie/c/b/f;
+    iput-object v0, p0, Lcom/airbnb/lottie/a/a/i;->h:Lcom/airbnb/lottie/model/content/GradientType;
 
     .line 50
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->m()Z
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->m()Z
 
     move-result v0
 
@@ -182,11 +182,11 @@
     iput p1, p0, Lcom/airbnb/lottie/a/a/i;->i:I
 
     .line 53
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->c()Lcom/airbnb/lottie/c/a/c;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->c()Lcom/airbnb/lottie/model/a/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/c/a/c;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/model/a/c;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object p1
 
@@ -200,14 +200,14 @@
     .line 55
     iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->j:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     .line 57
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->e()Lcom/airbnb/lottie/c/a/f;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->e()Lcom/airbnb/lottie/model/a/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/c/a/f;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/model/a/f;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object p1
 
@@ -221,14 +221,14 @@
     .line 59
     iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->k:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     .line 61
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/e;->f()Lcom/airbnb/lottie/c/a/f;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/e;->f()Lcom/airbnb/lottie/model/a/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/c/a/f;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/model/a/f;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object p1
 
@@ -242,7 +242,7 @@
     .line 63
     iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->l:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     return-void
 .end method
@@ -328,11 +328,11 @@
     move-result v0
 
     .line 90
-    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->e:Landroidx/b/d;
+    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->e:Landroidx/collection/LongSparseArray;
 
     int-to-long v2, v0
 
-    invoke-virtual {v1, v2, v3}, Landroidx/b/d;->a(J)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -368,10 +368,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/airbnb/lottie/c/b/c;
+    check-cast v4, Lcom/airbnb/lottie/model/content/c;
 
     .line 97
-    invoke-virtual {v4}, Lcom/airbnb/lottie/c/b/c;->b()[I
+    invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/c;->b()[I
 
     move-result-object v5
 
@@ -380,7 +380,7 @@
     move-result-object v11
 
     .line 98
-    invoke-virtual {v4}, Lcom/airbnb/lottie/c/b/c;->a()[F
+    invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/c;->a()[F
 
     move-result-object v12
 
@@ -406,9 +406,9 @@
     invoke-direct/range {v6 .. v13}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
     .line 104
-    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->e:Landroidx/b/d;
+    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->e:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v1, v2, v3, v0}, Landroidx/b/d;->b(JLjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3, v0}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
     return-object v0
 .end method
@@ -422,11 +422,11 @@
     move-result v0
 
     .line 110
-    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->f:Landroidx/b/d;
+    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->f:Landroidx/collection/LongSparseArray;
 
     int-to-long v2, v0
 
-    invoke-virtual {v1, v2, v3}, Landroidx/b/d;->a(J)Ljava/lang/Object;
+    invoke-virtual {v1, v2, v3}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -462,10 +462,10 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/airbnb/lottie/c/b/c;
+    check-cast v4, Lcom/airbnb/lottie/model/content/c;
 
     .line 117
-    invoke-virtual {v4}, Lcom/airbnb/lottie/c/b/c;->b()[I
+    invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/c;->b()[I
 
     move-result-object v5
 
@@ -474,7 +474,7 @@
     move-result-object v10
 
     .line 118
-    invoke-virtual {v4}, Lcom/airbnb/lottie/c/b/c;->a()[F
+    invoke-virtual {v4}, Lcom/airbnb/lottie/model/content/c;->a()[F
 
     move-result-object v11
 
@@ -515,9 +515,9 @@
     invoke-direct/range {v6 .. v12}, Landroid/graphics/RadialGradient;-><init>(FFF[I[FLandroid/graphics/Shader$TileMode;)V
 
     .line 125
-    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->f:Landroidx/b/d;
+    iget-object v1, p0, Lcom/airbnb/lottie/a/a/i;->f:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v1, v2, v3, v0}, Landroidx/b/d;->b(JLjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3, v0}, Landroidx/collection/LongSparseArray;->put(JLjava/lang/Object;)V
 
     return-object v0
 .end method
@@ -626,9 +626,9 @@
     invoke-virtual {p0, v0, p2, v1}, Lcom/airbnb/lottie/a/a/i;->a(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
 
     .line 73
-    iget-object v0, p0, Lcom/airbnb/lottie/a/a/i;->h:Lcom/airbnb/lottie/c/b/f;
+    iget-object v0, p0, Lcom/airbnb/lottie/a/a/i;->h:Lcom/airbnb/lottie/model/content/GradientType;
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/f;->LINEAR:Lcom/airbnb/lottie/c/b/f;
+    sget-object v1, Lcom/airbnb/lottie/model/content/GradientType;->LINEAR:Lcom/airbnb/lottie/model/content/GradientType;
 
     if-ne v0, v1, :cond_1
 
@@ -660,23 +660,23 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Lcom/airbnb/lottie/g/c;)V
+.method public a(Ljava/lang/Object;Lcom/airbnb/lottie/d/c;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;",
-            "Lcom/airbnb/lottie/g/c<",
+            "Lcom/airbnb/lottie/d/c<",
             "TT;>;)V"
         }
     .end annotation
 
     .line 165
-    invoke-super {p0, p1, p2}, Lcom/airbnb/lottie/a/a/a;->a(Ljava/lang/Object;Lcom/airbnb/lottie/g/c;)V
+    invoke-super {p0, p1, p2}, Lcom/airbnb/lottie/a/a/a;->a(Ljava/lang/Object;Lcom/airbnb/lottie/d/c;)V
 
     .line 166
-    sget-object v0, Lcom/airbnb/lottie/k;->D:[Ljava/lang/Integer;
+    sget-object v0, Lcom/airbnb/lottie/k;->F:[Ljava/lang/Integer;
 
     if-ne p1, v0, :cond_2
 
@@ -686,11 +686,11 @@
     if-eqz p1, :cond_0
 
     .line 168
-    iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->a:Lcom/airbnb/lottie/c/c/a;
+    iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->a:Lcom/airbnb/lottie/model/layer/a;
 
     iget-object v0, p0, Lcom/airbnb/lottie/a/a/i;->m:Lcom/airbnb/lottie/a/b/p;
 
-    invoke-virtual {p1, v0}, Lcom/airbnb/lottie/c/c/a;->b(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/airbnb/lottie/model/layer/a;->b(Lcom/airbnb/lottie/a/b/a;)V
 
     :cond_0
     if-nez p2, :cond_1
@@ -706,7 +706,7 @@
     :cond_1
     new-instance p1, Lcom/airbnb/lottie/a/b/p;
 
-    invoke-direct {p1, p2}, Lcom/airbnb/lottie/a/b/p;-><init>(Lcom/airbnb/lottie/g/c;)V
+    invoke-direct {p1, p2}, Lcom/airbnb/lottie/a/b/p;-><init>(Lcom/airbnb/lottie/d/c;)V
 
     iput-object p1, p0, Lcom/airbnb/lottie/a/a/i;->m:Lcom/airbnb/lottie/a/b/p;
 
@@ -716,11 +716,11 @@
     invoke-virtual {p1, p0}, Lcom/airbnb/lottie/a/b/p;->a(Lcom/airbnb/lottie/a/b/a$a;)V
 
     .line 176
-    iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->a:Lcom/airbnb/lottie/c/c/a;
+    iget-object p1, p0, Lcom/airbnb/lottie/a/a/i;->a:Lcom/airbnb/lottie/model/layer/a;
 
     iget-object p2, p0, Lcom/airbnb/lottie/a/a/i;->m:Lcom/airbnb/lottie/a/b/p;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     :cond_2
     :goto_0

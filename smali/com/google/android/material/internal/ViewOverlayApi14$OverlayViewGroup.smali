@@ -325,7 +325,7 @@
     if-eqz v1, :cond_0
 
     .line 173
-    invoke-static {v0}, Landroidx/core/g/w;->E(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->E(Landroid/view/View;)Z
 
     move-result v1
 
@@ -356,7 +356,7 @@
 
     sub-int/2addr v4, v3
 
-    invoke-static {p1, v4}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {p1, v4}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     const/4 v3, 0x1
 
@@ -367,7 +367,7 @@
 
     sub-int/2addr v2, v1
 
-    invoke-static {p1, v2}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     .line 183
     :cond_0
@@ -564,6 +564,8 @@
 
 .method protected invalidateChildInParentFast(IILandroid/graphics/Rect;)Landroid/view/ViewParent;
     .locals 5
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 265
     iget-object v0, p0, Lcom/google/android/material/internal/ViewOverlayApi14$OverlayViewGroup;->hostView:Landroid/view/ViewGroup;

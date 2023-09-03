@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="color_lunar_mounth">
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001a">
         <item>正月</item>
         <item>二月</item>
         <item>三月</item>
@@ -14,7 +14,7 @@
         <item>冬月</item>
         <item>腊月</item>
     </string-array>
-    <string-array name="color_solor_mounth">
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001d">
         <item>Janvier</item>
         <item>Février</item>
         <item>Mars</item>
@@ -28,7 +28,7 @@
         <item>Novembre</item>
         <item>Décembre</item>
     </string-array>
-    <string-array name="oppo_time_picker_ampm">
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030023">
         <item>AM</item>
         <item>PM</item>
     </string-array>

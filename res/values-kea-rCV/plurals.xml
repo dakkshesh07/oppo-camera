@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="red_dot_with_number_description">
+    <plurals name="MT_Bin">
+        <item quantity="other">837055_Delete %1$d items</item>
+        <item quantity="zero">873992_Delete %1$d items</item>
+        <item quantity="one">166622_Delete %1$d item</item>
+        <item quantity="two">873995_Delete %1$d items</item>
+        <item quantity="few">873993_Delete %1$d items</item>
+        <item quantity="many">873994_Delete %1$d items</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">837056_%1$d selected</item>
+        <item quantity="zero">873996_%1$d selected</item>
+        <item quantity="one">166623_%1$d selected</item>
+        <item quantity="two">873999_%1$d selected</item>
+        <item quantity="few">873997_%1$d selected</item>
+        <item quantity="many">873998_%1$d selected</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
         <item quantity="other">840948_%d new notifications</item>
         <item quantity="one">840949_%d new notification</item>
     </plurals>
-    <plurals name="sticker_recycle_bin_title_has_selected">
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
         <item quantity="other">836277_%1$d stickers selected</item>
+        <item quantity="zero">871988_%1$d stickers selected</item>
         <item quantity="one">90483_%1$d sticker selected</item>
+        <item quantity="two">871991_%1$d stickers selected</item>
+        <item quantity="few">871989_%1$d stickers selected</item>
+        <item quantity="many">871990_%1$d stickers selected</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
+        <item quantity="other">849367_%1$d selected</item>
+        <item quantity="zero">876257_%1$d selected</item>
+        <item quantity="one">849366_%1$d selected</item>
+        <item quantity="two">876260_%1$d selected</item>
+        <item quantity="few">876258_%1$d selected</item>
+        <item quantity="many">876259_%1$d selected</item>
     </plurals>
 </resources>

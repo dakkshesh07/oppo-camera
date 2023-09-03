@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field public a:La/a/a/b/b;
+.field public a:La/a/b/b/b;
 
 .field public b:Landroid/opengl/GLSurfaceView;
 
@@ -44,7 +44,7 @@
 .method public a()V
     .locals 4
 
-    iget-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->a:La/a/a/b/b;
+    iget-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->a:La/a/b/b/b;
 
     if-nez v0, :cond_0
 
@@ -58,7 +58,7 @@
 
     iput-object v1, p0, Lco/polarr/renderer/render/GLRenderView;->b:Landroid/opengl/GLSurfaceView;
 
-    new-instance v1, La/a/a/b/g;
+    new-instance v1, La/a/b/b/g;
 
     invoke-virtual {p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
@@ -66,13 +66,13 @@
 
     iget-object v3, p0, Lco/polarr/renderer/render/GLRenderView;->b:Landroid/opengl/GLSurfaceView;
 
-    invoke-direct {v1, v0, v2, v3}, La/a/a/b/g;-><init>(Landroid/content/Context;Landroid/content/res/Resources;Landroid/opengl/GLSurfaceView;)V
+    invoke-direct {v1, v0, v2, v3}, La/a/b/b/g;-><init>(Landroid/content/Context;Landroid/content/res/Resources;Landroid/opengl/GLSurfaceView;)V
 
     new-instance v0, Lco/polarr/renderer/render/GLRenderView$porender_YuvEf;
 
-    invoke-direct {v0, p0, v1}, Lco/polarr/renderer/render/GLRenderView$porender_YuvEf;-><init>(Lco/polarr/renderer/render/GLRenderView;La/a/a/b/g;)V
+    invoke-direct {v0, p0, v1}, Lco/polarr/renderer/render/GLRenderView$porender_YuvEf;-><init>(Lco/polarr/renderer/render/GLRenderView;La/a/b/b/g;)V
 
-    iput-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->a:La/a/a/b/b;
+    iput-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->a:La/a/b/b/b;
 
     iget-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->b:Landroid/opengl/GLSurfaceView;
 
@@ -94,10 +94,10 @@
     return-void
 .end method
 
-.method public getRenderDelegate()La/a/a/b/b;
+.method public getRenderDelegate()La/a/b/b/b;
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->a:La/a/a/b/b;
+    iget-object v0, p0, Lco/polarr/renderer/render/GLRenderView;->a:La/a/b/b/b;
 
     return-object v0
 .end method

@@ -11,10 +11,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .line 35
+    .line 36
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/a;-><init>()V
 
-    .line 37
+    .line 38
     sget-object v0, Lcom/oppo/camera/R$styleable;->CameraMenuOptionInfo:[I
 
     const/4 v1, 0x0
@@ -23,10 +23,10 @@
 
     move-result-object p2
 
-    .line 38
+    .line 39
     invoke-direct {p0, p1, p2}, Lcom/oppo/camera/ui/menu/PreferenceMenuOptionInfo;->initMenuOptionInfo(Landroid/content/Context;Landroid/content/res/TypedArray;)V
 
-    .line 39
+    .line 40
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
@@ -64,7 +64,7 @@
 
     const/4 v1, -0x1
 
-    .line 44
+    .line 45
     invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
@@ -73,7 +73,7 @@
 
     const/16 v0, 0x9
 
-    .line 45
+    .line 46
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -82,7 +82,7 @@
 
     const/16 v0, 0xf
 
-    .line 46
+    .line 47
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -91,7 +91,7 @@
 
     const/4 v0, 0x2
 
-    .line 47
+    .line 48
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -102,7 +102,7 @@
 
     const/4 v2, 0x0
 
-    .line 48
+    .line 49
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
@@ -111,7 +111,7 @@
 
     const/16 v0, 0x8
 
-    .line 49
+    .line 50
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
@@ -120,7 +120,7 @@
 
     const/4 v0, 0x7
 
-    .line 50
+    .line 51
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
@@ -129,7 +129,7 @@
 
     const/16 v0, 0xe
 
-    .line 51
+    .line 52
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v0
@@ -138,19 +138,19 @@
 
     const/4 v0, 0x5
 
-    .line 52
+    .line 53
     invoke-virtual {p2, v0}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 54
+    .line 55
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 55
+    .line 56
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
@@ -160,54 +160,54 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 63
+    .line 64
     invoke-virtual {p2, v0, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
-    const/16 v4, 0x12
+    const/16 v4, 0x11
 
-    .line 64
+    .line 65
     invoke-virtual {p2, v4, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v4
 
-    const/16 v5, 0x11
+    const/16 v5, 0x10
 
-    .line 65
+    .line 66
     invoke-virtual {p2, v5, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v5
 
     const/4 v6, 0x6
 
-    .line 66
+    .line 67
     invoke-virtual {p2, v6, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v6
 
     const/16 v7, 0xd
 
-    .line 67
+    .line 68
     invoke-virtual {p2, v7, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v7
 
     const/4 v8, 0x4
 
-    .line 68
+    .line 69
     invoke-virtual {p2, v8, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v8
 
     const/16 v9, 0xb
 
-    .line 69
+    .line 70
     invoke-virtual {p2, v9, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v9
 
-    .line 70
+    .line 71
     invoke-virtual {p2, v2, v2}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result p2
@@ -216,7 +216,7 @@
 
     if-eqz v3, :cond_1
 
-    .line 74
+    .line 75
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -248,7 +248,7 @@
     :goto_1
     if-eqz v4, :cond_2
 
-    .line 78
+    .line 79
     :try_start_1
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -275,7 +275,7 @@
     :goto_2
     if-eqz v5, :cond_3
 
-    .line 82
+    .line 83
     :try_start_2
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -302,7 +302,7 @@
     :goto_3
     if-eqz v6, :cond_4
 
-    .line 86
+    .line 87
     :try_start_3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -323,7 +323,7 @@
     :goto_4
     if-eqz v7, :cond_5
 
-    .line 90
+    .line 91
     invoke-static {p1, v7}, Lcom/oppo/camera/util/Util;->a(Landroid/content/Context;I)Landroid/graphics/Bitmap;
 
     move-result-object v6
@@ -333,7 +333,7 @@
     :cond_5
     if-eqz v8, :cond_6
 
-    .line 94
+    .line 95
     invoke-virtual {p1, v8}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
@@ -349,11 +349,6 @@
     move-result-object v6
 
     invoke-static {v6, v9}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object v6
-
-    .line 98
-    invoke-static {v6}, Lcom/oppo/camera/util/Util;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v6
 
@@ -385,7 +380,7 @@
     const-string p1, "initMenuOptionInfo, give preference value info Error."
 
     .line 107
-    invoke-static {v6, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
@@ -427,7 +422,7 @@
     const-string p1, "initMenuOptionInfo, give preference value name info Error."
 
     .line 113
-    invoke-static {v6, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 

@@ -18,9 +18,9 @@
 
 .field private final e:[F
 
-.field private f:Lcom/airbnb/lottie/a/b/h;
+.field private final f:Landroid/graphics/PathMeasure;
 
-.field private g:Landroid/graphics/PathMeasure;
+.field private g:Lcom/airbnb/lottie/a/b/h;
 
 
 # direct methods
@@ -31,7 +31,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "Landroid/graphics/PointF;",
             ">;>;)V"
         }
@@ -54,35 +54,35 @@
 
     iput-object p1, p0, Lcom/airbnb/lottie/a/b/i;->e:[F
 
-    .line 15
+    .line 14
     new-instance p1, Landroid/graphics/PathMeasure;
 
     invoke-direct {p1}, Landroid/graphics/PathMeasure;-><init>()V
 
-    iput-object p1, p0, Lcom/airbnb/lottie/a/b/i;->g:Landroid/graphics/PathMeasure;
+    iput-object p1, p0, Lcom/airbnb/lottie/a/b/i;->f:Landroid/graphics/PathMeasure;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic a(Lcom/airbnb/lottie/g/a;F)Ljava/lang/Object;
+.method public synthetic a(Lcom/airbnb/lottie/d/a;F)Ljava/lang/Object;
     .locals 0
 
     .line 11
-    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/a/b/i;->b(Lcom/airbnb/lottie/g/a;F)Landroid/graphics/PointF;
+    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/a/b/i;->b(Lcom/airbnb/lottie/d/a;F)Landroid/graphics/PointF;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public b(Lcom/airbnb/lottie/g/a;F)Landroid/graphics/PointF;
+.method public b(Lcom/airbnb/lottie/d/a;F)Landroid/graphics/PointF;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "Landroid/graphics/PointF;",
             ">;F)",
             "Landroid/graphics/PointF;"
@@ -102,7 +102,7 @@
     if-nez v1, :cond_0
 
     .line 25
-    iget-object p1, p1, Lcom/airbnb/lottie/g/a;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/airbnb/lottie/d/a;->a:Ljava/lang/Object;
 
     check-cast p1, Landroid/graphics/PointF;
 
@@ -110,16 +110,16 @@
 
     .line 28
     :cond_0
-    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->c:Lcom/airbnb/lottie/g/c;
+    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->c:Lcom/airbnb/lottie/d/c;
 
     if-eqz p1, :cond_1
 
     .line 29
-    iget-object v2, p0, Lcom/airbnb/lottie/a/b/i;->c:Lcom/airbnb/lottie/g/c;
+    iget-object v2, p0, Lcom/airbnb/lottie/a/b/i;->c:Lcom/airbnb/lottie/d/c;
 
-    iget v3, v0, Lcom/airbnb/lottie/a/b/h;->d:F
+    iget v3, v0, Lcom/airbnb/lottie/a/b/h;->f:F
 
-    iget-object p1, v0, Lcom/airbnb/lottie/a/b/h;->e:Ljava/lang/Float;
+    iget-object p1, v0, Lcom/airbnb/lottie/a/b/h;->g:Ljava/lang/Float;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
@@ -142,7 +142,7 @@
     move v8, p2
 
     .line 29
-    invoke-virtual/range {v2 .. v9}, Lcom/airbnb/lottie/g/c;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
+    invoke-virtual/range {v2 .. v9}, Lcom/airbnb/lottie/d/c;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -154,23 +154,23 @@
 
     .line 37
     :cond_1
-    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->f:Lcom/airbnb/lottie/a/b/h;
+    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->g:Lcom/airbnb/lottie/a/b/h;
 
     const/4 v2, 0x0
 
     if-eq p1, v0, :cond_2
 
     .line 38
-    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->g:Landroid/graphics/PathMeasure;
+    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->f:Landroid/graphics/PathMeasure;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/PathMeasure;->setPath(Landroid/graphics/Path;Z)V
 
     .line 39
-    iput-object v0, p0, Lcom/airbnb/lottie/a/b/i;->f:Lcom/airbnb/lottie/a/b/h;
+    iput-object v0, p0, Lcom/airbnb/lottie/a/b/i;->g:Lcom/airbnb/lottie/a/b/h;
 
     .line 42
     :cond_2
-    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->g:Landroid/graphics/PathMeasure;
+    iget-object p1, p0, Lcom/airbnb/lottie/a/b/i;->f:Landroid/graphics/PathMeasure;
 
     invoke-virtual {p1}, Landroid/graphics/PathMeasure;->getLength()F
 

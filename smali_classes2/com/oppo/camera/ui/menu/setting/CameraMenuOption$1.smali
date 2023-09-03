@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
+    value = Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g(Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)V
     .locals 0
 
-    .line 736
+    .line 835
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,10 +38,10 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 744
+    .line 843
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -51,16 +51,16 @@
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v0
 
     if-ne p1, v0, :cond_0
 
-    .line 745
+    .line 844
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 

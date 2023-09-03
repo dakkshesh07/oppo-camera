@@ -130,7 +130,7 @@
 
     iget-object v0, v0, Landroidx/core/widget/a;->b:Landroid/view/View;
 
-    invoke-static {v0, p0}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {v0, p0}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     return-void
 

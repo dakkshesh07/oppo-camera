@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/a/a;)V
     .locals 0
 
-    .line 65
+    .line 63
     iput-object p1, p0, Lcom/oppo/camera/ui/a/a$1;->a:Lcom/oppo/camera/ui/a/a;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -35,7 +35,7 @@
 .method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .line 68
+    .line 66
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,9 +54,9 @@
 
     const-string v1, "CameraSuperTextUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
+    .line 68
     iget p1, p1, Landroid/os/Message;->what:I
 
     const/16 v0, 0x65
@@ -65,7 +65,7 @@
 
     goto :goto_0
 
-    .line 72
+    .line 70
     :cond_0
     iget-object p1, p0, Lcom/oppo/camera/ui/a/a$1;->a:Lcom/oppo/camera/ui/a/a;
 

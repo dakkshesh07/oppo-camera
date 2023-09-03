@@ -1,0 +1,261 @@
+{
+  "version": "1",
+  "areas": [
+    {
+      "areaCN": "西沙群岛",
+      "disputingParty": ["西沙群岛", "西沙群島", "Trường Sa Quần đảo"]
+    },
+    {
+      "areaCN": "中沙群岛",
+      "disputingParty": ["中沙群岛", "中沙群島", "Macclesfield Bank"]
+    },
+    {
+      "areaCN": "中业岛",
+      "disputingParty": ["中业岛", "中業島", "Pag-Asa Island"]
+    },
+    {
+      "areaCN": "台湾岛",
+      "disputingParty": ["台湾岛", "臺灣島"]
+    },
+    {
+      "areaCN": "澎湖岛",
+      "disputingParty": ["澎湖岛", "澎湖島"]
+    },
+    {
+      "areaCN": "金门岛",
+      "disputingParty": ["金门岛", "金門島"]
+    },
+    {
+      "areaCN": "马祖岛",
+      "disputingParty": ["马祖岛", "馬祖島"]
+    },
+    {
+      "areaCN": "东沙群岛",
+      "disputingParty": ["东沙群岛", "東沙群島"]
+    },
+    {
+      "areaCN": "钓鱼岛",
+      "disputingParty": ["钓鱼岛", "釣魚島", "せんかくしょとう"]
+    },
+    {
+      "areaCN": "北部湾海上边界",
+      "disputingParty": ["北部湾海上边界", "Vịnh Bắc Bộ"]
+    },
+    {
+      "areaCN": "阿克赛钦",
+      "disputingParty": ["阿克赛钦", "अक्साई चिन"]
+    },
+    {
+      "areaCN": "藏南地区",
+      "disputingParty": ["藏南地区", "अरुणाचल प्रदेश"]
+    },
+    {
+      "areaCN": "巴里加斯",
+      "disputingParty": ["巴里加斯", "अरुणाचल प्रदेश"]
+    },
+    {
+      "areaCN": "苏岩礁",
+      "disputingParty": ["Ieodo"]
+    },
+    {
+      "areaCN": "日向礁",
+      "disputingParty": ["日向礁", "Gageo Reef"]
+    },
+    {
+      "areaCN": "鲁林争议区",
+      "disputingParty": ["鲁林争议区"]
+    },
+    {
+      "areaCN": "洞郎争议区",
+      "disputingParty": ["洞郎争议区", "Doklam", "གདོང་ལམ"]
+    },
+    {
+      "areaCN": "查玛浦争议区",
+      "disputingParty": ["查玛浦争议区"]
+    },
+    {
+      "areaCN": "基伍争议区",
+      "disputingParty": ["基伍争议区"]
+    },
+    {
+      "areaCN": "白玉争议区",
+      "disputingParty": ["白玉争议区"]
+    },
+    {
+      "areaCN": "墨拉萨丁争议区",
+      "disputingParty": ["Merag-Sagteng"]
+    },
+    {
+      "areaCN": "南沙群岛",
+      "disputingParty": ["南沙群岛", "Quần đảo Trường Sa", "Kepulauan Spratly", "Gugusan Semarang Peninjau", "Kapuluan ng Kalayaan"]
+    },
+    {
+      "areaCN": "查戈斯群岛",
+      "disputingParty": ["Chagos Archipelago", "Chagos Archipelago"]
+    },
+    {
+      "areaCN": "费迪南德岛",
+      "disputingParty": ["Ferdinandea", "Julia Island", "Ìsula Firdinandèa", "Isla Ferdinand"]
+    },
+    {
+      "areaCN": "马尔维纳斯群岛",
+      "disputingParty": ["Falkland Islands", "Islas Malvinas"]
+    },
+    {
+      "areaCN": "南乔治亚",
+      "disputingParty": ["South Georgia Islands", "South Georgia Islands"]
+    },
+    {
+      "areaCN": "南桑威奇群岛",
+      "disputingParty": ["South Georgia and The South Sandwich Islands", "South Georgia and The South Sandwich Islands"]
+    },
+    {
+      "areaCN": "卡拉帕尼",
+      "disputingParty": ["Kalapani", "Kalapani"]
+    },
+    {
+      "areaCN": "利皮亚杜拉",
+      "disputingParty": ["Lipiadura", "Lipiadura"]
+    },
+    {
+      "areaCN": "利普勒赫",
+      "disputingParty": ["iplach", "iplach"]
+    },
+    {
+      "areaCN": "苏斯塔",
+      "disputingParty": ["Susta", "Susta"]
+    },
+    {
+      "areaCN": "先生湾",
+      "disputingParty": ["Sir Creek", "Sir Creek"]
+    },
+    {
+      "areaCN": "阿拉伯河",
+      "disputingParty": ["شط العرب", "اروندرود"]
+    },
+    {
+      "areaCN": "舍巴农场",
+      "disputingParty": ["مزارع شبعا", "חוות שבעא"]
+    },
+    {
+      "areaCN": "伊米亚群岛",
+      "disputingParty": ["Kardak", "Kardak"]
+    },
+    {
+      "areaCN": "西撒哈拉",
+      "disputingParty": ["الصحراء الغربية", "Sáhara Occidental", "Taneẓroft Tutrimt"]
+    },
+    {
+      "areaCN": "直布罗陀海峡",
+      "disputingParty": ["Gibraltar", "Gibraltar"]
+    },
+    {
+      "areaCN": "休达及梅利利亚",
+      "disputingParty": ["Ceuta Melilla", "Ciudad Autónoma de Ceuta"]
+    },
+    {
+      "areaCN": "独岛",
+      "disputingParty": ["독도", "たけしま"]
+    },
+    {
+      "areaCN": "奥利文萨",
+      "disputingParty": ["Olivenza", "Olivenza"]
+    },
+    {
+      "areaCN": "圣胡安河省",
+      "disputingParty": ["Río San Juan", "Río San Juan"]
+    },
+    {
+      "areaCN": "南达尔帕蒂岛",
+      "disputingParty": ["দক্ষিণ তালপট্টি দ্বীপ", "दक्षिण तालपटि द्वीप"]
+    },
+    {
+      "areaCN": "米金戈岛",
+      "disputingParty": ["Migingo", "Migingo"]
+    },
+    {
+      "areaCN": "Remba岛",
+      "disputingParty": ["Remba", "Remba"]
+    },
+    {
+      "areaCN": "Sigulu岛",
+      "disputingParty": ["Sigulu", "Sigulu"]
+    },
+    {
+      "areaCN": "维多利亚湖沿岸小岛",
+      "disputingParty": ["Lake Victoria", "Victoria Nyanza"]
+    },
+    {
+      "areaCN": "埃莱米三角",
+      "disputingParty": ["Ilemi Triangle", "Ilemi Triangle"]
+    },
+    {
+      "areaCN": "埃姆斯河河口",
+      "disputingParty": ["Ems", "Eems"]
+    },
+    {
+      "areaCN": "多拉德湾西部",
+      "disputingParty": ["Dokkard", "Dokkard"]
+    },
+    {
+      "areaCN": "特罗姆兰岛",
+      "disputingParty": ["Île Tromelin", "Islas Glorieuses", "Islas Glorieuses"]
+    },
+    {
+      "areaCN": "格洛里厄斯群岛",
+      "disputingParty": ["Îles Glorieuses", "Islas Glorieuses", "Islas Glorieuses"]
+    },
+    {
+      "areaCN": "印度礁",
+      "disputingParty": ["Basse de Judie", "Bassas da India"]
+    },
+    {
+      "areaCN": "欧罗巴岛",
+      "disputingParty": ["Île Europa", "Île Europa"]
+    },
+    {
+      "areaCN": "新胡安岛",
+      "disputingParty": ["Île Juan-de-Nova", "Île Juan-de-Nova"]
+    },
+    {
+      "areaCN": "盖瑟礁",
+      "disputingParty": ["Banc du Geyser", "Banc du Geyser"]
+    },
+    {
+      "areaCN": "马约特",
+      "disputingParty": ["Maore", "Mahori"]
+    },
+    {
+      "areaCN": "南千岛群岛",
+      "disputingParty": ["Южный Курильские острова", "ほっぽうよんとう、ほっぽうりょうど、ほっぽうよんとう"]
+    },
+    {
+      "areaCN": "图兹拉岛",
+      "disputingParty": ["ТузлаТузла", "ТузлаТузла", "острів"]
+    },
+    {
+      "areaCN": "刻赤海峡",
+      "disputingParty": ["Керченский пролив", "Керченська протока", "Keriç boğazı"]
+    },
+    {
+      "areaCN": "克里米亚",
+      "disputingParty": ["Кры́мский полуо́стров", "Кримський півострів", "Къырымярымадасы, Qırım yarımadası"]
+    },
+    {
+      "areaCN": "伊万哥罗德",
+      "disputingParty": ["Ивангород", "Jaanilinn"]
+    },
+    {
+      "areaCN": "克什米尔",
+      "disputingParty": ["कश्मीर", "کشمیر"]
+    },
+    {
+      "areaCN": "哈拉伊卜三角区",
+      "disputingParty": ["مثلث حلايب", "مثلث حلايب"]
+    },
+    {
+      "areaCN": "耶路撒冷",
+      "disputingParty": ["القدس الشريف", "ירושלים", "Yerushalayim", "Yerushalaim"]
+    }
+  ]
+}

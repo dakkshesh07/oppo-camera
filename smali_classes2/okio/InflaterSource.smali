@@ -6,6 +6,11 @@
 .implements Lokio/Source;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # instance fields
 .field private bufferBytesHeldByInflater:I
 
@@ -22,11 +27,11 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "inflater"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +48,11 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "inflater"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 45
     invoke-static {p1}, Lokio/Okio;->buffer(Lokio/Source;)Lokio/BufferedSource;
@@ -142,7 +147,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -429,7 +434,7 @@
 
     if-nez v0, :cond_3
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     .line 98
     :cond_3

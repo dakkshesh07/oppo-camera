@@ -23,7 +23,7 @@
     .locals 3
 
     .line 126
-    invoke-static {}, Lcom/coloros/anim/c/b/i$a;->values()[Lcom/coloros/anim/c/b/i$a;
+    invoke-static {}, Lcom/coloros/anim/model/content/PolystarShape$Type;->values()[Lcom/coloros/anim/model/content/PolystarShape$Type;
 
     move-result-object v0
 
@@ -36,9 +36,9 @@
     :try_start_0
     sget-object v0, Lcom/coloros/anim/a/a/n$1;->a:[I
 
-    sget-object v1, Lcom/coloros/anim/c/b/i$a;->STAR:Lcom/coloros/anim/c/b/i$a;
+    sget-object v1, Lcom/coloros/anim/model/content/PolystarShape$Type;->STAR:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/b/i$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/model/content/PolystarShape$Type;->ordinal()I
 
     move-result v1
 
@@ -52,9 +52,9 @@
     :try_start_1
     sget-object v0, Lcom/coloros/anim/a/a/n$1;->a:[I
 
-    sget-object v1, Lcom/coloros/anim/c/b/i$a;->POLYGON:Lcom/coloros/anim/c/b/i$a;
+    sget-object v1, Lcom/coloros/anim/model/content/PolystarShape$Type;->POLYGON:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/b/i$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/model/content/PolystarShape$Type;->ordinal()I
 
     move-result v1
 

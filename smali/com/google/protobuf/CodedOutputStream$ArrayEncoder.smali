@@ -30,14 +30,14 @@
 
     const/4 v0, 0x0
 
-    .line 1157
+    .line 1156
     invoke-direct {p0, v0}, Lcom/google/protobuf/CodedOutputStream;-><init>(Lcom/google/protobuf/CodedOutputStream$1;)V
 
     if-eqz p1, :cond_1
 
     or-int v0, p2, p3
 
-    .line 1161
+    .line 1160
     array-length v1, p1
 
     add-int v2, p2, p3
@@ -62,7 +62,7 @@
 
     return-void
 
-    .line 1162
+    .line 1161
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -108,7 +108,7 @@
 
     throw v0
 
-    .line 1159
+    .line 1158
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -130,7 +130,7 @@
 .method public final getTotalBytesWritten()I
     .locals 2
 
-    .line 1496
+    .line 1522
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->offset:I
@@ -143,7 +143,7 @@
 .method public final spaceLeft()I
     .locals 2
 
-    .line 1491
+    .line 1517
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->limit:I
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -161,7 +161,7 @@
         }
     .end annotation
 
-    .line 1304
+    .line 1318
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
@@ -180,7 +180,7 @@
     :catch_0
     move-exception p1
 
-    .line 1306
+    .line 1320
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     const/4 v1, 0x3
@@ -191,7 +191,7 @@
 
     iget v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1307
+    .line 1321
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -235,12 +235,12 @@
         }
     .end annotation
 
-    .line 1435
+    .line 1461
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
 
-    .line 1437
+    .line 1463
     :try_start_0
     iget-object v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
@@ -248,7 +248,7 @@
 
     invoke-virtual {p1, v1, v2, v0}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 1438
+    .line 1464
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
     add-int/2addr p1, v0
@@ -262,7 +262,7 @@
     :catch_0
     move-exception p1
 
-    .line 1440
+    .line 1466
     new-instance v1, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     const/4 v2, 0x3
@@ -273,7 +273,7 @@
 
     iget v4, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1441
+    .line 1467
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -317,7 +317,7 @@
         }
     .end annotation
 
-    .line 1420
+    .line 1446
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
@@ -325,7 +325,7 @@
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1421
+    .line 1447
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
     add-int/2addr p1, p3
@@ -339,7 +339,7 @@
     :catch_0
     move-exception p1
 
-    .line 1423
+    .line 1449
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     const/4 v0, 0x3
@@ -350,7 +350,7 @@
 
     iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1424
+    .line 1450
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -554,7 +554,7 @@
         }
     .end annotation
 
-    .line 1357
+    .line 1386
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
@@ -570,7 +570,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1358
+    .line 1387
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -587,7 +587,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1359
+    .line 1388
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -604,7 +604,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1360
+    .line 1389
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -628,7 +628,7 @@
     :catch_0
     move-exception p1
 
-    .line 1362
+    .line 1391
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     const/4 v1, 0x3
@@ -639,7 +639,7 @@
 
     iget v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1363
+    .line 1392
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -702,7 +702,7 @@
         }
     .end annotation
 
-    .line 1403
+    .line 1429
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
@@ -720,7 +720,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1404
+    .line 1430
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -741,7 +741,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1405
+    .line 1431
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -762,7 +762,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1406
+    .line 1432
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -783,7 +783,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1407
+    .line 1433
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -804,7 +804,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1408
+    .line 1434
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -825,7 +825,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1409
+    .line 1435
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -846,7 +846,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 1410
+    .line 1436
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -874,7 +874,7 @@
     :catch_0
     move-exception p1
 
-    .line 1412
+    .line 1438
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     const/4 v0, 0x3
@@ -885,7 +885,7 @@
 
     iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1413
+    .line 1439
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -950,7 +950,7 @@
 
     if-ltz p1, :cond_0
 
-    .line 1314
+    .line 1328
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
     goto :goto_0
@@ -958,7 +958,7 @@
     :cond_0
     int-to-long v0, p1
 
-    .line 1317
+    .line 1331
     invoke-virtual {p0, v0, v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt64NoTag(J)V
 
     :goto_0
@@ -973,7 +973,7 @@
         }
     .end annotation
 
-    .line 1447
+    .line 1473
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->write(Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -987,7 +987,7 @@
         }
     .end annotation
 
-    .line 1430
+    .line 1456
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->write([BII)V
 
     return-void
@@ -1012,6 +1012,38 @@
     return-void
 .end method
 
+.method final writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const/4 v0, 0x2
+
+    .line 1280
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
+
+    .line 1281
+    move-object p1, p2
+
+    check-cast p1, Lcom/google/protobuf/AbstractMessageLite;
+
+    invoke-virtual {p1, p3}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
+
+    .line 1282
+    iget-object p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
+
+    invoke-interface {p3, p2, p1}, Lcom/google/protobuf/Schema;->writeTo(Ljava/lang/Object;Lcom/google/protobuf/Writer;)V
+
+    return-void
+.end method
+
 .method public final writeMessageNoTag(Lcom/google/protobuf/MessageLite;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
@@ -1020,15 +1052,42 @@
         }
     .end annotation
 
-    .line 1297
+    .line 1305
     invoke-interface {p1}, Lcom/google/protobuf/MessageLite;->getSerializedSize()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
-    .line 1298
+    .line 1306
     invoke-interface {p1, p0}, Lcom/google/protobuf/MessageLite;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V
+
+    return-void
+.end method
+
+.method final writeMessageNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1311
+    move-object v0, p1
+
+    check-cast v0, Lcom/google/protobuf/AbstractMessageLite;
+
+    invoke-virtual {v0, p2}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
+
+    .line 1312
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
+
+    invoke-interface {p2, p1, v0}, Lcom/google/protobuf/Schema;->writeTo(Ljava/lang/Object;Lcom/google/protobuf/Writer;)V
 
     return-void
 .end method
@@ -1045,20 +1104,20 @@
 
     const/4 v1, 0x1
 
-    .line 1280
+    .line 1288
     invoke-virtual {p0, v1, v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     const/4 v2, 0x2
 
-    .line 1281
+    .line 1289
     invoke-virtual {p0, v2, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 1282
+    .line 1290
     invoke-virtual {p0, v0, p2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     const/4 p1, 0x4
 
-    .line 1283
+    .line 1291
     invoke-virtual {p0, v1, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     return-void
@@ -1124,20 +1183,20 @@
 
     const/4 v1, 0x1
 
-    .line 1289
+    .line 1297
     invoke-virtual {p0, v1, v0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     const/4 v2, 0x2
 
-    .line 1290
+    .line 1298
     invoke-virtual {p0, v2, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32(II)V
 
-    .line 1291
+    .line 1299
     invoke-virtual {p0, v0, p2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
     const/4 p1, 0x4
 
-    .line 1292
+    .line 1300
     invoke-virtual {p0, v1, p1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeTag(II)V
 
     return-void
@@ -1170,10 +1229,10 @@
         }
     .end annotation
 
-    .line 1452
+    .line 1478
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1456
+    .line 1482
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -1181,12 +1240,12 @@
 
     mul-int/lit8 v1, v1, 0x3
 
-    .line 1457
+    .line 1483
     invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->computeUInt32SizeNoTag(I)I
 
     move-result v1
 
-    .line 1458
+    .line 1484
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1199,10 +1258,10 @@
 
     add-int v1, v0, v2
 
-    .line 1460
+    .line 1486
     iput v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1461
+    .line 1487
     iget-object v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -1215,31 +1274,31 @@
 
     move-result v1
 
-    .line 1464
+    .line 1490
     iput v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
     sub-int v3, v1, v0
 
     sub-int/2addr v3, v2
 
-    .line 1466
+    .line 1492
     invoke-virtual {p0, v3}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
-    .line 1467
+    .line 1493
     iput v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
     goto :goto_0
 
-    .line 1469
+    .line 1495
     :cond_0
     invoke-static {p1}, Lcom/google/protobuf/Utf8;->encodedLength(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 1470
+    .line 1496
     invoke-virtual {p0, v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->writeUInt32NoTag(I)V
 
-    .line 1471
+    .line 1497
     iget-object v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
     iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
@@ -1262,7 +1321,7 @@
     :catch_0
     move-exception p1
 
-    .line 1480
+    .line 1506
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -1272,10 +1331,10 @@
     :catch_1
     move-exception v1
 
-    .line 1475
+    .line 1501
     iput v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1478
+    .line 1504
     invoke-virtual {p0, p1, v1}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->inefficientWriteStringNoTag(Ljava/lang/String;Lcom/google/protobuf/Utf8$UnpairedSurrogateException;)V
 
     :goto_0
@@ -1320,177 +1379,305 @@
 .end method
 
 .method public final writeUInt32NoTag(I)V
-    .locals 7
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 1323
+    .line 1337
     invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$100()Z
 
     move-result v0
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_4
 
-    if-eqz v0, :cond_1
+    .line 1338
+    invoke-static {}, Lcom/google/protobuf/Android;->isOnAndroidDevice()Z
 
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 1339
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->spaceLeft()I
 
     move-result v0
 
-    const/16 v2, 0xa
+    const/4 v1, 0x5
 
-    if-lt v0, v2, :cond_1
+    if-lt v0, v1, :cond_4
 
-    .line 1324
-    invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$200()J
-
-    move-result-wide v2
-
-    iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
-
-    int-to-long v4, v0
-
-    add-long/2addr v2, v4
-
-    :goto_0
     and-int/lit8 v0, p1, -0x80
 
     if-nez v0, :cond_0
 
-    .line 1327
+    .line 1341
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v2, v3, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
-
-    .line 1328
-    iget p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
-
-    add-int/2addr p1, v1
-
-    iput p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     return-void
 
-    .line 1331
+    .line 1344
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
-    const-wide/16 v4, 0x1
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    add-long/2addr v4, v2
+    add-int/lit8 v2, v1, 0x1
 
-    and-int/lit8 v6, p1, 0x7f
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    or-int/lit16 v6, v6, 0x80
+    int-to-long v1, v1
 
-    int-to-byte v6, v6
+    or-int/lit16 v3, p1, 0x80
 
-    invoke-static {v0, v2, v3, v6}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
+    int-to-byte v3, v3
 
-    .line 1332
-    iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    invoke-static {v0, v1, v2, v3}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     ushr-int/lit8 p1, p1, 0x7
 
-    move-wide v2, v4
+    and-int/lit8 v0, p1, -0x80
 
-    goto :goto_0
+    if-nez v0, :cond_1
 
+    .line 1347
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
+
+    int-to-byte p1, p1
+
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
+
+    return-void
+
+    .line 1350
     :cond_1
-    :goto_1
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
+
+    or-int/lit16 v3, p1, 0x80
+
+    int-to-byte v3, v3
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
+
+    ushr-int/lit8 p1, p1, 0x7
+
     and-int/lit8 v0, p1, -0x80
 
     if-nez v0, :cond_2
 
-    .line 1340
-    :try_start_0
+    .line 1353
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
-    iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    add-int/lit8 v3, v2, 0x1
+    add-int/lit8 v2, v1, 0x1
 
-    iput v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
 
     int-to-byte p1, p1
 
-    aput-byte p1, v0, v2
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     return-void
 
-    .line 1343
+    .line 1356
     :cond_2
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
-    iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    add-int/lit8 v3, v2, 0x1
+    add-int/lit8 v2, v1, 0x1
 
-    iput v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    and-int/lit8 v3, p1, 0x7f
+    int-to-long v1, v1
 
-    or-int/lit16 v3, v3, 0x80
+    or-int/lit16 v3, p1, 0x80
 
     int-to-byte v3, v3
 
-    aput-byte v3, v0, v2
+    invoke-static {v0, v1, v2, v3}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
+
+    ushr-int/lit8 p1, p1, 0x7
+
+    and-int/lit8 v0, p1, -0x80
+
+    if-nez v0, :cond_3
+
+    .line 1359
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
+
+    int-to-byte p1, p1
+
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
+
+    return-void
+
+    .line 1362
+    :cond_3
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
+
+    or-int/lit16 v3, p1, 0x80
+
+    int-to-byte v3, v3
+
+    invoke-static {v0, v1, v2, v3}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
+
+    ushr-int/lit8 p1, p1, 0x7
+
+    .line 1364
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
+
+    int-to-byte p1, p1
+
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
+
+    return-void
+
+    :cond_4
+    :goto_0
+    and-int/lit8 v0, p1, -0x80
+
+    if-nez v0, :cond_5
+
+    .line 1369
+    :try_start_0
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-byte p1, p1
+
+    aput-byte p1, v0, v1
+
+    return-void
+
+    .line 1372
+    :cond_5
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    and-int/lit8 v2, p1, 0x7f
+
+    or-int/lit16 v2, v2, 0x80
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
     ushr-int/lit8 p1, p1, 0x7
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception p1
 
-    .line 1348
+    .line 1377
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
-    const/4 v2, 0x3
+    const/4 v1, 0x3
 
-    new-array v2, v2, [Ljava/lang/Object;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    iget v4, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iget v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1349
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 1378
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v2, v3
+    aput-object v3, v1, v2
 
-    iget v3, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->limit:I
+    iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->limit:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    aput-object v2, v1, v3
+
+    const/4 v2, 0x2
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aput-object v3, v2, v1
+    aput-object v3, v1, v2
 
-    const/4 v3, 0x2
+    const-string v2, "Pos: %d, limit: %d, len: %d"
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    aput-object v1, v2, v3
-
-    const-string v1, "Pos: %d, limit: %d, len: %d"
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1519,14 +1706,14 @@
 .end method
 
 .method public final writeUInt64NoTag(J)V
-    .locals 12
+    .locals 9
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 1369
+    .line 1398
     invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$100()Z
 
     move-result v0
@@ -1537,94 +1724,77 @@
 
     const-wide/16 v4, -0x80
 
-    const/4 v6, 0x1
-
     if-eqz v0, :cond_1
 
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->spaceLeft()I
 
     move-result v0
 
-    const/16 v7, 0xa
+    const/16 v6, 0xa
 
-    if-lt v0, v7, :cond_1
-
-    .line 1370
-    invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$200()J
-
-    move-result-wide v7
-
-    iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
-
-    int-to-long v9, v0
-
-    add-long/2addr v7, v9
+    if-lt v0, v6, :cond_1
 
     :goto_0
-    and-long v9, p1, v4
+    and-long v6, p1, v4
 
-    cmp-long v0, v9, v2
+    cmp-long v0, v6, v2
 
     if-nez v0, :cond_0
 
-    .line 1373
+    .line 1401
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
+
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+
+    int-to-long v1, v1
 
     long-to-int p1, p1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v7, v8, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
-
-    .line 1374
-    iget p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
-
-    add-int/2addr p1, v6
-
-    iput p1, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     return-void
 
-    .line 1377
+    .line 1404
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
-    const-wide/16 v9, 0x1
+    iget v6, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    add-long/2addr v9, v7
+    add-int/lit8 v7, v6, 0x1
 
-    long-to-int v11, p1
+    iput v7, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    and-int/lit8 v11, v11, 0x7f
+    int-to-long v6, v6
 
-    or-int/lit16 v11, v11, 0x80
+    long-to-int v8, p1
 
-    int-to-byte v11, v11
+    and-int/lit8 v8, v8, 0x7f
 
-    invoke-static {v0, v7, v8, v11}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
+    or-int/lit16 v8, v8, 0x80
 
-    .line 1378
-    iget v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    int-to-byte v8, v8
 
-    add-int/2addr v0, v6
-
-    iput v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    invoke-static {v0, v6, v7, v8}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     ushr-long/2addr p1, v1
-
-    move-wide v7, v9
 
     goto :goto_0
 
     :cond_1
     :goto_1
-    and-long v7, p1, v4
+    and-long v6, p1, v4
 
-    cmp-long v0, v7, v2
+    cmp-long v0, v6, v2
 
     if-nez v0, :cond_2
 
-    .line 1386
+    .line 1412
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
@@ -1642,25 +1812,25 @@
 
     return-void
 
-    .line 1389
+    .line 1415
     :cond_2
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->buffer:[B
 
-    iget v7, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iget v6, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    add-int/lit8 v8, v7, 0x1
+    add-int/lit8 v7, v6, 0x1
 
-    iput v8, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
+    iput v7, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    long-to-int v8, p1
+    long-to-int v7, p1
 
-    and-int/lit8 v8, v8, 0x7f
+    and-int/lit8 v7, v7, 0x7f
 
-    or-int/lit16 v8, v8, 0x80
+    or-int/lit16 v7, v7, 0x80
 
-    int-to-byte v8, v8
+    int-to-byte v7, v7
 
-    aput-byte v8, v0, v7
+    aput-byte v7, v0, v6
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1671,7 +1841,7 @@
     :catch_0
     move-exception p1
 
-    .line 1394
+    .line 1420
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     const/4 v0, 0x3
@@ -1682,7 +1852,7 @@
 
     iget v2, p0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;->position:I
 
-    .line 1395
+    .line 1421
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -1695,11 +1865,13 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v6
+    const/4 v2, 0x1
+
+    aput-object v1, v0, v2
 
     const/4 v1, 0x2
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 

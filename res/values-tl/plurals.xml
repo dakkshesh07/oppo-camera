@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="red_dot_with_number_description">
+    <plurals name="MT_Bin">
+        <item quantity="other">I-delete ang %1$d (na) item</item>
+        <item quantity="one">I-delete ang %1$d item</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">%1$d ang napili</item>
+        <item quantity="one">%1$d ang napili</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
         <item quantity="other">%d (na) bagong notification</item>
         <item quantity="one">%d bagong notification</item>
     </plurals>
-    <plurals name="sticker_recycle_bin_title_has_selected">
-        <item quantity="other">%1$d Sticker Pinili</item>
-        <item quantity="one">%1$d Sticker Pinili</item>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
+        <item quantity="other">%1$d (na) sticker ang pinili</item>
+        <item quantity="one">%1$d sticker ang pinili</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
+        <item quantity="other">%1$d ang napili</item>
+        <item quantity="one">%1$d ang napili</item>
     </plurals>
 </resources>

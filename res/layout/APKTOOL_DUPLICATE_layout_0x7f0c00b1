@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.menu.OppoTextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070816" android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f06003d" android:gravity="center" android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803ce" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070101" android:text="@string/APKTOOL_DUPLICATE_string_0x7f1003e8" android:includeFontPadding="false" android:lineSpacingExtra="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070813"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

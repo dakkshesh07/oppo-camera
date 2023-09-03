@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.FitWindowsLinearLayout android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090031" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.ViewStubCompat android:id="@id/APKTOOL_DUPLICATE_id_0x7f09003c" android:layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c0004" android:inflatedId="@id/APKTOOL_DUPLICATE_id_0x7f09003b" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c0014" />
+</androidx.appcompat.widget.FitWindowsLinearLayout>

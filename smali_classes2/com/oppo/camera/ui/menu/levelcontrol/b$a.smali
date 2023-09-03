@@ -28,7 +28,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/b;)V
     .locals 0
 
-    .line 132
+    .line 131
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/b$a;->d:Lcom/oppo/camera/ui/menu/levelcontrol/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +39,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/b;Lcom/oppo/camera/ui/menu/levelcontrol/b$1;)V
     .locals 0
 
-    .line 132
+    .line 131
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/b$a;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/b;)V
 
     return-void

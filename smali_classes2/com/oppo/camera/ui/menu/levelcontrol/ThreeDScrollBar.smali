@@ -21,7 +21,7 @@
 
 .field private c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
-.field private d:Lcom/oppo/camera/gl/l;
+.field private d:Lcom/oppo/camera/gl/m;
 
 .field private e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
@@ -43,13 +43,11 @@
 
 .field private n:Z
 
-.field private o:Z
+.field private o:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
 .field private p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
 .field private q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
-
-.field private r:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
 
 # direct methods
@@ -58,7 +56,7 @@
 
     const/4 v0, 0x0
 
-    .line 172
+    .line 174
     invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -67,10 +65,10 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
-    .line 176
+    .line 178
     invoke-direct {p0, p1, p2}, Landroid/view/TextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 40
+    .line 44
     new-instance p2, Landroid/view/animation/PathInterpolator;
 
     const v0, 0x3dcccccd    # 0.1f
@@ -83,7 +81,7 @@
 
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a:Landroid/view/animation/Interpolator;
 
-    .line 41
+    .line 45
     new-instance p2, Landroid/view/animation/PathInterpolator;
 
     const v2, 0x3ecccccd    # 0.4f
@@ -96,88 +94,94 @@
 
     const/4 p2, 0x0
 
-    .line 42
+    .line 46
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
-    .line 43
-    iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 47
+    iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    .line 44
+    .line 48
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
-    .line 46
+    .line 50
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->g:Landroid/os/Handler;
 
     const/4 p2, 0x1
 
-    .line 47
+    .line 51
     iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->h:I
+
+    .line 52
+    sget p2, Lcom/oppo/camera/ui/preview/effect/i;->a:I
+
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
+
+    .line 53
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
+
+    .line 54
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
+
+    .line 55
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l:F
 
     const/4 p2, 0x0
 
-    .line 48
-    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
-
-    .line 49
-    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
-
-    .line 50
-    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
-
-    .line 51
-    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l:F
-
-    .line 52
+    .line 56
     iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->m:Z
 
-    .line 53
+    .line 57
     iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
 
-    .line 54
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
-
-    .line 56
+    .line 59
     new-instance v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$1;
 
     invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$1;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
-    .line 80
+    .line 82
     new-instance v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
-    .line 116
+    .line 118
     new-instance v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$3;
 
     invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$3;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->r:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
-
-    .line 178
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setOpaque(Z)V
-
-    .line 179
-    invoke-virtual {p0, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     .line 180
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setOpaque(Z)V
+
+    .line 181
+    invoke-virtual {p0, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
+
+    .line 182
     new-instance p2, Landroid/os/Handler;
 
     invoke-direct {p2}, Landroid/os/Handler;-><init>()V
 
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->g:Landroid/os/Handler;
 
-    .line 181
+    .line 183
     new-instance p2, Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     invoke-direct {p2, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/g;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
-    .line 182
+    .line 184
+    sget-object p2, Lcom/oppo/camera/ui/inverse/InverseManager;->INS:Lcom/oppo/camera/ui/inverse/InverseManager;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
+
+    invoke-virtual {p2, p1, v0}, Lcom/oppo/camera/ui/inverse/InverseManager;->registerInverse(Landroid/content/Context;Lcom/oppo/camera/ui/inverse/a;)V
+
+    .line 185
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     new-instance p2, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;
@@ -192,7 +196,7 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;F)I
     .locals 0
 
-    .line 20
+    .line 24
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(F)I
 
     move-result p0
@@ -200,11 +204,11 @@
     return p0
 .end method
 
-.method static synthetic a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/gl/l;
+.method static synthetic a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/gl/m;
     .locals 0
 
-    .line 20
-    iget-object p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 24
+    iget-object p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     return-object p0
 .end method
@@ -212,7 +216,7 @@
 .method private a(F)V
     .locals 7
 
-    .line 542
+    .line 572
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->a()D
 
     move-result-wide v0
@@ -223,18 +227,18 @@
 
     div-float/2addr v0, v1
 
-    .line 543
+    .line 573
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     invoke-interface {v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->d()I
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v1
 
-    .line 544
+    .line 574
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
 
     move-result v2
@@ -243,11 +247,11 @@
 
     sub-int/2addr v2, v3
 
-    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v2
 
-    .line 545
+    .line 575
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v4
@@ -264,7 +268,7 @@
 
     if-lez v5, :cond_0
 
-    .line 548
+    .line 578
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v2
@@ -293,7 +297,7 @@
 
     if-gtz v1, :cond_1
 
-    .line 554
+    .line 584
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v1
@@ -314,7 +318,7 @@
 
     goto :goto_0
 
-    .line 566
+    .line 596
     :cond_1
     :goto_1
     invoke-direct {p0, v4, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FZ)V
@@ -325,7 +329,7 @@
 .method private a(FZ)V
     .locals 8
 
-    .line 689
+    .line 736
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -352,9 +356,9 @@
 
     const-string v1, "ThreeDScrollBar"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 691
+    .line 738
     iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz v2, :cond_1
@@ -369,26 +373,26 @@
 
     move v3, p1
 
-    .line 692
+    .line 739
     invoke-virtual/range {v2 .. v7}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(FFILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)V
 
-    .line 694
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 741
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_0
 
-    .line 695
-    invoke-virtual {v0}, Lcom/oppo/camera/gl/l;->d()V
+    .line 742
+    invoke-virtual {v0}, Lcom/oppo/camera/gl/m;->d()V
 
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 699
+    .line 746
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(F)I
 
     move-result p1
 
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(I)V
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)V
 
     :cond_1
     return-void
@@ -397,7 +401,7 @@
 .method private a(IZ)V
     .locals 2
 
-    .line 361
+    .line 378
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -420,14 +424,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 362
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    .line 379
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isFromClick: "
+    const-string v1, ", isFromSlide: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -439,31 +443,31 @@
 
     const-string v1, "ThreeDScrollBar"
 
-    .line 361
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 378
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 364
+    .line 381
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
     if-eq p1, v0, :cond_0
 
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 365
+    .line 382
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(I)V
 
-    .line 366
+    .line 383
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     invoke-interface {v0, p1, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->a(IZ)V
 
-    .line 367
+    .line 384
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
     :cond_0
@@ -473,7 +477,7 @@
 .method private a(Landroid/view/MotionEvent;)V
     .locals 2
 
-    .line 479
+    .line 504
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v0
@@ -482,24 +486,24 @@
 
     const/4 v0, 0x0
 
-    .line 480
+    .line 505
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    .line 481
+    .line 506
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v0
 
-    .line 482
+    .line 507
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v0
 
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
 
-    .line 485
+    .line 510
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -509,17 +513,17 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 486
+    .line 511
     invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    .line 487
+    .line 512
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v0
 
-    .line 488
+    .line 513
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result p1
@@ -533,17 +537,8 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;I)V
     .locals 0
 
-    .line 20
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(I)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;IZ)V
-    .locals 0
-
-    .line 20
-    invoke-direct {p0, p1, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(IZ)V
+    .line 24
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)V
 
     return-void
 .end method
@@ -551,14 +546,14 @@
 .method private a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
     .locals 7
 
-    .line 665
+    .line 711
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v0
 
     sub-float v3, p1, v0
 
-    .line 667
+    .line 713
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz p1, :cond_0
@@ -573,10 +568,10 @@
 
     const/4 p1, 0x1
 
-    .line 668
+    .line 714
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setScrolling(Z)V
 
-    .line 669
+    .line 715
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
@@ -591,12 +586,12 @@
 
     invoke-virtual/range {v1 .. v6}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(FFILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)V
 
-    .line 670
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 717
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {p2, p1}, Lcom/oppo/camera/gl/l;->b(I)V
+    invoke-virtual {p2, p1}, Lcom/oppo/camera/gl/m;->b(I)V
 
-    .line 672
+    .line 719
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getContext()Landroid/content/Context;
 
     move-result-object p2
@@ -614,8 +609,8 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 684
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
+    .line 731
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
 
     return p1
 .end method
@@ -623,8 +618,8 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;Z)Z
     .locals 0
 
-    .line 20
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
+    .line 24
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
 
     return p1
 .end method
@@ -632,7 +627,7 @@
 .method static synthetic b(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Landroid/os/Handler;
     .locals 0
 
-    .line 20
+    .line 24
     iget-object p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->g:Landroid/os/Handler;
 
     return-object p0
@@ -641,8 +636,8 @@
 .method private b(F)V
     .locals 9
 
-    .line 615
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    .line 660
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v0
 
@@ -652,11 +647,11 @@
 
     const-string p1, "scrollToByFling, texture not init, so return"
 
-    .line 616
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 661
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 618
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
+    .line 663
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
 
     return-void
 
@@ -665,12 +660,12 @@
 
     mul-float/2addr v0, p1
 
-    .line 623
+    .line 668
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->f(F)F
 
     move-result v0
 
-    .line 625
+    .line 670
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->e()F
 
     move-result v2
@@ -685,29 +680,29 @@
 
     mul-float/2addr v2, v3
 
-    .line 626
+    .line 671
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     invoke-interface {v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->d()I
 
     move-result v3
 
-    invoke-direct {p0, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v3
 
-    .line 627
+    .line 672
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
 
     move-result v4
 
     add-int/lit8 v4, v4, -0x1
 
-    invoke-direct {p0, v4}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v4}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v4
 
-    .line 628
+    .line 673
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v5
@@ -716,7 +711,7 @@
 
     const/16 v0, 0x1a
 
-    .line 631
+    .line 676
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v6
@@ -748,7 +743,7 @@
 
     move v5, v0
 
-    .line 638
+    .line 683
     :cond_2
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
@@ -770,10 +765,10 @@
 
     mul-int/lit8 v0, v0, 0x2
 
-    .line 640
+    .line 685
     iget-object v6, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b:Landroid/view/animation/Interpolator;
 
-    iget-object v7, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->r:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v7, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, v5, v0, v6, v7}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
@@ -792,7 +787,7 @@
 
     move v5, v0
 
-    .line 646
+    .line 691
     :cond_4
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
@@ -814,16 +809,16 @@
 
     mul-int/lit8 v0, v0, 0x2
 
-    .line 648
+    .line 693
     iget-object v6, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b:Landroid/view/animation/Interpolator;
 
-    iget-object v7, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->r:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v7, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, v5, v0, v6, v7}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
     goto :goto_1
 
-    .line 650
+    .line 695
     :cond_5
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
@@ -847,29 +842,29 @@
 
     add-int/2addr v0, v6
 
-    .line 651
+    .line 696
     invoke-direct {p0, v5}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(F)I
 
     move-result v6
 
-    invoke-direct {p0, v6}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v6}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v6
 
     iget-object v7, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a:Landroid/view/animation/Interpolator;
 
-    iget-object v8, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v8, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, v6, v0, v7, v8}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
     goto :goto_1
 
-    .line 632
+    .line 677
     :cond_6
     :goto_0
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
 
-    .line 654
+    .line 699
     :goto_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -915,27 +910,16 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private b(I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 357
-    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(IZ)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method private b(Landroid/view/MotionEvent;)V
-    .locals 5
+    .locals 7
 
-    .line 587
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    .line 617
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v0
 
@@ -945,17 +929,17 @@
 
     const-string p1, "scrollToByClick, texture not init, so return"
 
-    .line 588
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 618
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 590
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
+    .line 620
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
 
     return-void
 
-    .line 594
+    .line 624
     :cond_0
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result v0
 
@@ -969,114 +953,142 @@
 
     sub-float/2addr v0, p1
 
-    .line 595
+    .line 625
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->f(F)F
 
     move-result p1
 
     const/4 v0, 0x0
 
-    .line 596
-    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
-
-    move-result v0
-
-    invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->e()F
-
-    move-result v2
-
-    const/high16 v3, 0x40000000    # 2.0f
-
-    div-float/2addr v2, v3
-
-    add-float/2addr v0, v2
-
-    .line 597
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    .line 626
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v2
 
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->e()F
-
-    move-result v4
-
-    div-float/2addr v4, v3
-
-    sub-float/2addr v2, v4
-
-    .line 598
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v3
 
-    add-float/2addr v3, p1
+    const/high16 v4, 0x40000000    # 2.0f
 
-    cmpl-float p1, v3, v0
+    div-float/2addr v3, v4
 
-    if-gtz p1, :cond_3
+    add-float/2addr v2, v3
 
-    cmpg-float p1, v3, v2
+    .line 627
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
+
+    move-result v3
+
+    const/4 v5, 0x1
+
+    sub-int/2addr v3, v5
+
+    invoke-direct {p0, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
+
+    move-result v3
+
+    invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->e()F
+
+    move-result v6
+
+    div-float/2addr v6, v4
+
+    sub-float/2addr v3, v6
+
+    .line 628
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
+
+    move-result v4
+
+    add-float/2addr v4, p1
+
+    cmpl-float p1, v4, v2
+
+    if-gtz p1, :cond_4
+
+    cmpg-float p1, v4, v3
 
     if-gtz p1, :cond_1
 
     goto :goto_0
 
-    .line 605
+    .line 635
     :cond_1
-    invoke-direct {p0, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(F)I
+    invoke-direct {p0, v4}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(F)I
 
     move-result p1
 
-    .line 607
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 637
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "scrollToByClick, toYAngle: "
+    const-string v3, "scrollToByClick, toYAngle: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v2, ", index: "
+    const-string v3, ", index: "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
+    iget v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v2, " -> "
+    const-string v3, " -> "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
+    .line 639
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_3
 
-    invoke-interface {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->a(I)Z
+    invoke-interface {v1, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->a(I)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_3
 
-    .line 610
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    .line 640
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
+
+    if-eqz v1, :cond_2
+
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
+
+    move-result v1
+
+    sub-float/2addr v4, v1
+
+    const/4 v1, 0x0
+
+    invoke-static {v4, v1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 641
+    iput-boolean v5, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
+
+    .line 642
+    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(IZ)V
+
+    .line 645
+    :cond_2
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result p1
 
@@ -1084,52 +1096,26 @@
 
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a:Landroid/view/animation/Interpolator;
 
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
-    :cond_2
-    return-void
-
-    .line 601
     :cond_3
+    return-void
+
+    .line 631
+    :cond_4
     :goto_0
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
 
     return-void
-.end method
-
-.method static synthetic b(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;Z)Z
-    .locals 0
-
-    .line 20
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
-
-    return p1
-.end method
-
-.method private c(I)F
-    .locals 1
-
-    neg-int p1, p1
-
-    int-to-float p1, p1
-
-    .line 725
-    invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->g()F
-
-    move-result v0
-
-    mul-float/2addr p1, v0
-
-    return p1
 .end method
 
 .method private c(F)I
     .locals 4
 
-    .line 730
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    .line 777
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v0
 
@@ -1141,29 +1127,29 @@
 
     const-string v0, "convertAngleToIndex, texture not init, so return"
 
-    .line 731
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 778
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
-    .line 736
+    .line 783
     :cond_0
-    invoke-direct {p0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v0
 
-    .line 737
+    .line 784
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
 
     move-result v2
 
     add-int/lit8 v2, v2, -0x1
 
-    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v2
 
-    .line 738
+    .line 785
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->g()F
 
     move-result v3
@@ -1186,7 +1172,7 @@
 
     goto :goto_1
 
-    .line 742
+    .line 789
     :cond_1
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
 
@@ -1205,7 +1191,7 @@
 
     goto :goto_1
 
-    .line 743
+    .line 790
     :cond_3
     :goto_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
@@ -1222,17 +1208,45 @@
 .method static synthetic c(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)I
     .locals 0
 
-    .line 20
+    .line 24
     iget p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
     return p0
 .end method
 
+.method private c(I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 374
+    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(IZ)V
+
+    return-void
+.end method
+
+.method private d(I)F
+    .locals 1
+
+    neg-int p1, p1
+
+    int-to-float p1, p1
+
+    .line 772
+    invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/h;->g()F
+
+    move-result v0
+
+    mul-float/2addr p1, v0
+
+    return p1
+.end method
+
 .method static synthetic d(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)V
     .locals 0
 
-    .line 20
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
+    .line 24
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
 
     return-void
 .end method
@@ -1240,7 +1254,7 @@
 .method static synthetic e(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
     .locals 0
 
-    .line 20
+    .line 24
     iget-object p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     return-object p0
@@ -1249,25 +1263,16 @@
 .method static synthetic f(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/g;
     .locals 0
 
-    .line 20
+    .line 24
     iget-object p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     return-object p0
 .end method
 
-.method static synthetic g(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Z
-    .locals 0
-
-    .line 20
-    iget-boolean p0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
-
-    return p0
-.end method
-
 .method private getCurrYAngle()F
     .locals 1
 
-    .line 762
+    .line 809
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz v0, :cond_0
@@ -1288,7 +1293,7 @@
 .method private getModelNum()I
     .locals 1
 
-    .line 758
+    .line 805
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz v0, :cond_0
@@ -1306,15 +1311,15 @@
     return v0
 .end method
 
-.method private i()V
+.method private j()V
     .locals 4
 
-    .line 572
+    .line 602
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     if-eqz v0, :cond_0
 
-    .line 573
+    .line 603
     invoke-interface {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->d()I
 
     move-result v0
@@ -1324,14 +1329,14 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 576
+    .line 606
     :goto_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v1
 
-    .line 577
-    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    .line 607
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v0
 
@@ -1344,17 +1349,17 @@
     :cond_1
     move v0, v1
 
-    .line 579
+    .line 609
     :goto_1
     invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(F)I
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v0
 
-    .line 581
+    .line 611
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1381,74 +1386,74 @@
 
     const-string v2, "ThreeDScrollBar"
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v1, 0x1a
 
-    .line 583
+    .line 613
     iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a:Landroid/view/animation/Interpolator;
 
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
     return-void
 .end method
 
-.method private j()V
+.method private k()V
     .locals 2
 
     const-string v0, "ThreeDScrollBar"
 
     const-string v1, "cancelYAngleAnim"
 
-    .line 705
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 752
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 707
+    .line 754
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->g:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 708
+    .line 755
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 711
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
+    .line 758
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
 
-    .line 712
+    .line 759
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setScrolling(Z)V
 
-    .line 714
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 761
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v1, :cond_1
 
-    .line 715
-    invoke-virtual {v1, v0}, Lcom/oppo/camera/gl/l;->b(I)V
+    .line 762
+    invoke-virtual {v1, v0}, Lcom/oppo/camera/gl/m;->b(I)V
 
-    .line 718
+    .line 765
     :cond_1
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz v0, :cond_2
 
-    .line 719
+    .line 766
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a()V
 
     :cond_2
     return-void
 .end method
 
-.method private k()Z
+.method private l()Z
     .locals 1
 
-    .line 750
+    .line 797
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getModelNum()I
 
     move-result v0
@@ -1471,8 +1476,8 @@
 .method public a()V
     .locals 1
 
-    .line 251
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 258
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_0
 
@@ -1480,24 +1485,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
+    .line 260
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 254
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d()Z
+    .line 261
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 255
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 262
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {v0}, Lcom/oppo/camera/gl/l;->d()V
+    invoke-virtual {v0}, Lcom/oppo/camera/gl/m;->d()V
 
     :cond_0
     return-void
@@ -1506,28 +1511,29 @@
 .method public a(I)V
     .locals 1
 
+    .line 348
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
+
+    if-eqz v0, :cond_0
+
+    .line 349
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
+
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->c(I)V
+
     .line 350
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    .line 352
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+    invoke-virtual {p1}, Lcom/oppo/camera/gl/m;->d()V
 
-    .line 353
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
-
-    move-result p1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FZ)V
-
+    :cond_0
     return-void
 .end method
 
 .method public a(II)V
     .locals 3
 
-    .line 260
+    .line 267
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1550,16 +1556,16 @@
 
     const-string v1, "ThreeDScrollBar"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x4
 
-    .line 262
+    .line 269
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 264
+    .line 271
     invoke-static {p2, p1}, Lcom/oppo/camera/util/Util;->b(II)I
 
     move-result v1
@@ -1574,32 +1580,32 @@
 
     aput v2, v0, v1
 
-    .line 268
+    .line 275
     :cond_0
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz v1, :cond_1
 
-    .line 269
+    .line 276
     invoke-virtual {v1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a([F)V
 
-    .line 272
+    .line 279
     :cond_1
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_2
 
-    .line 273
+    .line 280
     new-instance v1, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$5;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$5;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;II)V
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/l;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/m;->a(Ljava/lang/Runnable;)V
 
-    .line 281
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 287
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/gl/l;->d()V
+    invoke-virtual {p1}, Lcom/oppo/camera/gl/m;->d()V
 
     :cond_2
     return-void
@@ -1616,12 +1622,12 @@
 .method public a(ILjava/lang/String;)V
     .locals 1
 
-    .line 332
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 342
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_0
 
-    .line 333
+    .line 343
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(ILjava/lang/String;)V
@@ -1633,7 +1639,7 @@
 .method public a(Lcom/oppo/camera/ui/menu/levelcontrol/f;)V
     .locals 2
 
-    .line 317
+    .line 327
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1642,7 +1648,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1652,19 +1658,19 @@
 
     const-string v1, "ThreeDScrollBar"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 329
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_0
 
-    .line 320
+    .line 330
     new-instance v1, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;
 
     invoke-direct {v1, p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;Lcom/oppo/camera/ui/menu/levelcontrol/f;)V
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/l;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/m;->a(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -1673,19 +1679,35 @@
 .method public b()V
     .locals 1
 
-    .line 286
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 292
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_0
 
-    .line 287
-    invoke-virtual {v0}, Lcom/oppo/camera/gl/l;->g()V
+    .line 293
+    invoke-virtual {v0}, Lcom/oppo/camera/gl/m;->g()V
 
     :cond_0
+    return-void
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    .line 367
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
+
+    .line 369
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()V
+
+    .line 370
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
+
+    move-result p1
+
     const/4 v0, 0x0
 
-    .line 290
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
+    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FZ)V
 
     return-void
 .end method
@@ -1693,51 +1715,75 @@
 .method public c()V
     .locals 2
 
-    .line 294
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 298
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_1
 
-    .line 295
+    .line 299
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
     if-eqz v1, :cond_0
 
-    .line 296
-    invoke-virtual {v1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(Lcom/oppo/camera/gl/l;)V
+    .line 300
+    invoke-virtual {v1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(Lcom/oppo/camera/gl/m;)V
 
-    .line 299
+    .line 303
     :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {v0}, Lcom/oppo/camera/gl/l;->f()V
+    invoke-virtual {v0}, Lcom/oppo/camera/gl/m;->f()V
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 302
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
+    .line 306
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
 
-    .line 303
+    .line 307
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->setScrolling(Z)V
 
     return-void
 .end method
 
-.method public d()Z
+.method public d()V
+    .locals 2
+
+    .line 311
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
+
+    if-eqz v1, :cond_0
+
+    .line 312
+    invoke-virtual {v1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->b(Lcom/oppo/camera/gl/m;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public e()Z
     .locals 1
 
-    .line 313
+    .line 323
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->m:Z
 
     return v0
 .end method
 
-.method public e()V
+.method public f()V
     .locals 4
 
-    .line 493
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    const/4 v0, 0x0
+
+    .line 518
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
+
+    .line 520
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v0
 
@@ -1747,12 +1793,12 @@
 
     const-string v0, "slideToNextItem, texture not init, so return"
 
-    .line 494
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 521
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 499
+    .line 526
     :cond_0
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
@@ -1766,13 +1812,13 @@
 
     return-void
 
-    .line 503
+    .line 530
     :cond_1
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 505
+    .line 532
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1795,13 +1841,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 507
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+    .line 534
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()V
 
-    .line 508
-    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    .line 535
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v0
 
@@ -1809,18 +1855,23 @@
 
     iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a:Landroid/view/animation/Interpolator;
 
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
     return-void
 .end method
 
-.method public f()V
+.method public g()V
     .locals 4
 
-    .line 512
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()Z
+    const/4 v0, 0x0
+
+    .line 539
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
+
+    .line 541
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l()Z
 
     move-result v0
 
@@ -1830,12 +1881,12 @@
 
     const-string v0, "slideToPreviousItem, texture not init, so return"
 
-    .line 513
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 542
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 518
+    .line 547
     :cond_0
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
@@ -1849,13 +1900,13 @@
 
     return-void
 
-    .line 522
+    .line 551
     :cond_1
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i:I
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 524
+    .line 553
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1878,13 +1929,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+    .line 555
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()V
 
-    .line 527
-    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    .line 556
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v0
 
@@ -1892,17 +1943,22 @@
 
     iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a:Landroid/view/animation/Interpolator;
 
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->q:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->p:Lcom/oppo/camera/ui/menu/levelcontrol/g$b;
 
     invoke-direct {p0, v0, v1, v2, v3}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FILandroid/view/animation/Interpolator;Lcom/oppo/camera/ui/menu/levelcontrol/g$b;)Z
 
     return-void
 .end method
 
-.method public g()V
+.method public h()V
     .locals 3
 
-    .line 531
+    const/4 v0, 0x0
+
+    .line 560
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
+
+    .line 561
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v0
@@ -1911,11 +1967,11 @@
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c(I)F
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d(I)F
 
     move-result v0
 
-    .line 533
+    .line 563
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->getCurrYAngle()F
 
     move-result v1
@@ -1926,7 +1982,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 534
+    .line 564
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1953,34 +2009,34 @@
 
     const-string v2, "ThreeDScrollBar"
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+    .line 566
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()V
 
     const/4 v1, 0x1
 
-    .line 537
+    .line 567
     invoke-direct {p0, v0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(FZ)V
 
     :cond_0
     return-void
 .end method
 
-.method public h()V
+.method public i()V
     .locals 2
 
-    .line 766
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 813
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     if-eqz v0, :cond_0
 
-    .line 767
+    .line 814
     new-instance v1, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$8;
 
     invoke-direct {v1, p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$8;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)V
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/l;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/m;->a(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -1993,38 +2049,38 @@
 
     const-string v1, "onSurfaceTextureAvailable"
 
-    .line 210
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 217
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 212
-    new-instance v0, Lcom/oppo/camera/gl/l;
+    .line 219
+    new-instance v0, Lcom/oppo/camera/gl/m;
 
-    invoke-direct {v0, p1}, Lcom/oppo/camera/gl/l;-><init>(Landroid/graphics/SurfaceTexture;)V
+    invoke-direct {v0, p1}, Lcom/oppo/camera/gl/m;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    .line 214
+    .line 221
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->h:I
 
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 215
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 222
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/l;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/m;->a(Z)V
 
-    .line 218
+    .line 225
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     const/4 v0, 0x2
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/l;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/m;->a(I)V
 
-    .line 219
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 226
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     const/16 v2, 0x8
 
@@ -2038,42 +2094,42 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual/range {v1 .. v7}, Lcom/oppo/camera/gl/l;->a(IIIIII)V
+    invoke-virtual/range {v1 .. v7}, Lcom/oppo/camera/gl/m;->a(IIIIII)V
 
-    .line 222
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 229
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/l;->a(Lcom/oppo/camera/gl/l$m;)V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/m;->a(Lcom/oppo/camera/gl/m$m;)V
 
-    .line 223
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 230
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/l;->b(I)V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/m;->b(I)V
 
-    .line 224
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 231
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v1}, Lcom/oppo/camera/gl/l;->a(Landroid/view/SurfaceHolder;)V
+    invoke-virtual {p1, v1}, Lcom/oppo/camera/gl/m;->a(Landroid/view/SurfaceHolder;)V
 
-    .line 225
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 232
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {p1, v1, v0, p2, p3}, Lcom/oppo/camera/gl/l;->a(Landroid/view/SurfaceHolder;III)V
+    invoke-virtual {p1, v1, v0, p2, p3}, Lcom/oppo/camera/gl/m;->a(Landroid/view/SurfaceHolder;III)V
 
-    .line 226
+    .line 233
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     invoke-interface {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->c()I
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(I)V
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(I)V
 
     return-void
 .end method
@@ -2085,20 +2141,20 @@
 
     const-string v0, "onSurfaceTextureDestroyed"
 
-    .line 239
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 246
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 241
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 248
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/l;->b(Landroid/view/SurfaceHolder;)V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/gl/m;->b(Landroid/view/SurfaceHolder;)V
 
-    .line 242
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 249
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/gl/l;->e()V
+    invoke-virtual {p1}, Lcom/oppo/camera/gl/m;->e()V
 
     const/4 p1, 0x0
 
@@ -2112,22 +2168,22 @@
 
     const-string v0, "onSurfaceTextureSizeChanged"
 
-    .line 231
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 238
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 233
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 240
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1, p2, p3}, Lcom/oppo/camera/gl/l;->a(Landroid/view/SurfaceHolder;III)V
+    invoke-virtual {p1, v0, v1, p2, p3}, Lcom/oppo/camera/gl/m;->a(Landroid/view/SurfaceHolder;III)V
 
-    .line 234
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/l;
+    .line 241
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->d:Lcom/oppo/camera/gl/m;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/gl/l;->d()V
+    invoke-virtual {p1}, Lcom/oppo/camera/gl/m;->d()V
 
     return-void
 .end method
@@ -2141,259 +2197,31 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 373
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->o:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    return v1
-
-    .line 377
-    :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
-
-    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 378
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
-
-    .line 380
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 381
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Landroid/view/MotionEvent;)V
-
-    :cond_1
-    return v1
-
-    .line 387
-    :cond_2
+    .line 390
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
+    .line 392
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->n:Z
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
     .line 393
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
-    move-result v2
+    move-result p1
 
-    if-eqz v2, :cond_f
+    if-nez p1, :cond_0
 
-    const/high16 v3, 0x40000000    # 2.0f
+    const-string p1, "ThreeDScrollBar"
 
-    if-eq v2, v1, :cond_b
+    const-string v1, "onTouchEvent, click scrolling, reset touch x"
 
-    const/4 v4, 0x2
-
-    if-eq v2, v4, :cond_8
-
-    const/4 v4, 0x3
-
-    if-eq v2, v4, :cond_5
-
-    const/4 v0, 0x5
-
-    if-eq v2, v0, :cond_4
-
-    const/4 v0, 0x6
-
-    if-eq v2, v0, :cond_3
-
-    goto/16 :goto_1
-
-    .line 432
-    :cond_3
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Landroid/view/MotionEvent;)V
-
-    goto/16 :goto_1
-
-    .line 402
-    :cond_4
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
-
-    .line 403
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Landroid/view/MotionEvent;)V
-
-    .line 404
-    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    goto/16 :goto_1
-
-    .line 458
-    :cond_5
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    if-eqz v2, :cond_6
-
-    .line 459
-    invoke-virtual {v2}, Landroid/view/VelocityTracker;->recycle()V
-
-    const/4 v2, 0x0
-
-    .line 460
-    iput-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    .line 463
-    :cond_6
-    iget v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
-
-    sub-float/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    cmpl-float v0, v0, v3
-
-    if-lez v0, :cond_7
-
-    .line 464
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
-
-    goto/16 :goto_1
-
-    .line 466
-    :cond_7
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(Landroid/view/MotionEvent;)V
-
-    goto :goto_1
-
-    .line 408
-    :cond_8
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
-
-    move-result v2
-
-    .line 409
-    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
-
-    move-result v2
-
-    if-ne v2, v1, :cond_9
-
-    .line 417
-    iget v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l:F
-
-    sub-float v2, v0, v2
-
-    .line 418
-    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l:F
-
-    goto :goto_0
-
-    .line 420
-    :cond_9
-    iget v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
-
-    sub-float v2, v0, v2
-
-    .line 421
-    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
-
-    .line 424
-    :goto_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    if-eqz v0, :cond_a
-
-    .line 425
-    invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    .line 428
-    :cond_a
-    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(F)V
-
-    goto :goto_1
-
-    :cond_b
-    const/4 v2, 0x0
-
-    .line 438
-    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    if-eqz v4, :cond_c
-
-    .line 439
-    invoke-virtual {v4, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    .line 440
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    const/16 v4, 0x3e8
-
-    invoke-virtual {v2, v4}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
-
-    .line 441
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v2}, Landroid/view/VelocityTracker;->getXVelocity()F
-
-    move-result v2
-
-    .line 442
-    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v4}, Landroid/view/VelocityTracker;->clear()V
-
-    .line 445
-    :cond_c
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v4
-
-    const/high16 v5, 0x447a0000    # 1000.0f
-
-    cmpl-float v4, v4, v5
-
-    if-ltz v4, :cond_d
-
-    .line 446
-    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(F)V
-
-    goto :goto_1
-
-    .line 448
-    :cond_d
-    iget v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
-
-    sub-float/2addr v0, v2
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    cmpl-float v0, v0, v3
-
-    if-lez v0, :cond_e
-
-    .line 449
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->i()V
-
-    goto :goto_1
-
-    .line 451
-    :cond_e
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(Landroid/view/MotionEvent;)V
-
-    goto :goto_1
-
-    .line 395
-    :cond_f
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+    .line 394
+    invoke-static {p1, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 396
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
@@ -2408,15 +2236,282 @@
 
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
 
+    :cond_0
+    return v2
+
+    .line 404
+    :cond_1
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
+
+    invoke-interface {v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 405
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+
+    .line 407
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 408
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Landroid/view/MotionEvent;)V
+
+    :cond_2
+    return v2
+
+    .line 418
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
+
+    move-result v1
+
+    if-eqz v1, :cond_10
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    if-eq v1, v2, :cond_c
+
+    const/4 v4, 0x2
+
+    if-eq v1, v4, :cond_9
+
+    const/4 v4, 0x3
+
+    if-eq v1, v4, :cond_6
+
+    const/4 v0, 0x5
+
+    if-eq v1, v0, :cond_5
+
+    const/4 v0, 0x6
+
+    if-eq v1, v0, :cond_4
+
+    goto/16 :goto_1
+
+    .line 457
+    :cond_4
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Landroid/view/MotionEvent;)V
+
+    goto/16 :goto_1
+
+    .line 427
+    :cond_5
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()V
+
+    .line 428
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Landroid/view/MotionEvent;)V
+
+    .line 429
+    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    goto/16 :goto_1
+
+    .line 483
+    :cond_6
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    if-eqz v1, :cond_7
+
+    .line 484
+    invoke-virtual {v1}, Landroid/view/VelocityTracker;->recycle()V
+
+    const/4 v1, 0x0
+
+    .line 485
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    .line 488
+    :cond_7
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
+
+    sub-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpl-float v0, v0, v3
+
+    if-lez v0, :cond_8
+
+    .line 489
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+
+    goto/16 :goto_1
+
+    .line 491
+    :cond_8
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(Landroid/view/MotionEvent;)V
+
+    goto :goto_1
+
+    .line 433
+    :cond_9
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
+
+    move-result v1
+
+    .line 434
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v1
+
+    if-ne v1, v2, :cond_a
+
+    .line 442
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l:F
+
+    sub-float v1, v0, v1
+
+    .line 443
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->l:F
+
+    goto :goto_0
+
+    .line 445
+    :cond_a
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
+
+    sub-float v1, v0, v1
+
+    .line 446
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
+
+    .line 449
+    :goto_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    if-eqz v0, :cond_b
+
+    .line 450
+    invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+    .line 453
+    :cond_b
+    invoke-direct {p0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(F)V
+
+    goto :goto_1
+
+    :cond_c
+    const/4 v1, 0x0
+
+    .line 463
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    if-eqz v4, :cond_d
+
+    .line 464
+    invoke-virtual {v4, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+    .line 465
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    const/16 v4, 0x9c4
+
+    invoke-virtual {v1, v4}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
+
+    .line 466
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    invoke-virtual {v1}, Landroid/view/VelocityTracker;->getXVelocity()F
+
+    move-result v1
+
+    .line 467
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
+    invoke-virtual {v4}, Landroid/view/VelocityTracker;->clear()V
+
+    .line 470
+    :cond_d
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v4
+
+    const/high16 v5, 0x447a0000    # 1000.0f
+
+    cmpl-float v4, v4, v5
+
+    if-ltz v4, :cond_e
+
+    .line 471
+    invoke-direct {p0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(F)V
+
+    goto :goto_1
+
+    .line 473
+    :cond_e
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
+
+    sub-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpl-float v0, v0, v3
+
+    if-lez v0, :cond_f
+
+    .line 474
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j()V
+
+    goto :goto_1
+
+    .line 476
+    :cond_f
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(Landroid/view/MotionEvent;)V
+
+    goto :goto_1
+
+    .line 420
+    :cond_10
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k()V
+
+    .line 421
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->k:F
+
+    .line 422
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->j:F
+
+    .line 423
+    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f:Landroid/view/VelocityTracker;
+
     :goto_1
-    return v1
+    return v2
 .end method
 
 .method public setCameraEntryType(I)V
     .locals 0
 
-    .line 205
+    .line 208
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->h:I
+
+    return-void
+.end method
+
+.method public setFilterCategory(Lcom/oppo/camera/ui/preview/effect/FilterTexturePreview$FilterCategory;)V
+    .locals 1
+
+    .line 212
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->c:Lcom/oppo/camera/ui/menu/levelcontrol/g;
+
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(Lcom/oppo/camera/ui/preview/effect/FilterTexturePreview$FilterCategory;)V
 
     return-void
 .end method
@@ -2424,7 +2519,7 @@
 .method public setScrolling(Z)V
     .locals 2
 
-    .line 307
+    .line 317
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2449,9 +2544,9 @@
 
     const-string v1, "ThreeDScrollBar"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 309
+    .line 319
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->m:Z
 
     return-void
@@ -2460,7 +2555,7 @@
 .method public setThreeDScrollBarTextureViewCallback(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;)V
     .locals 0
 
-    .line 168
+    .line 170
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->e:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$a;
 
     return-void

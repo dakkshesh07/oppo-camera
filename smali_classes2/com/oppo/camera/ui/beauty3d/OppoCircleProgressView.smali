@@ -128,7 +128,7 @@
 
     const-string v2, "OppoCircleProgressView"
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->g:[I
@@ -313,7 +313,7 @@
 
     const-string v1, "OppoCircleProgressView"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
     iput p1, p0, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->d:I
@@ -508,7 +508,7 @@
 
     const-string v1, "OppoCircleProgressView"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 120
     iget v0, p0, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->e:I
@@ -532,11 +532,11 @@
 
     int-to-float v4, v3
 
-    sub-int/2addr v1, v0
+    int-to-float v5, v1
 
-    int-to-float v0, v1
+    add-int/2addr v3, v0
 
-    int-to-float v5, v3
+    int-to-float v0, v3
 
     iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->g:[I
 
@@ -548,7 +548,9 @@
 
     move v3, v4
 
-    move v4, v0
+    move v4, v5
+
+    move v5, v0
 
     invoke-direct/range {v1 .. v8}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 

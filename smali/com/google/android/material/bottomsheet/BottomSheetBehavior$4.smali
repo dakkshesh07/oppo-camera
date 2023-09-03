@@ -3,12 +3,12 @@
 .source "BottomSheetBehavior.java"
 
 # interfaces
-.implements Landroidx/core/g/a/g;
+.implements Landroidx/core/f/a/g;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+    value = Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public perform(Landroid/view/View;Landroidx/core/g/a/g$a;)Z
+.method public perform(Landroid/view/View;Landroidx/core/f/a/g$a;)Z
     .locals 0
 
     .line 1723

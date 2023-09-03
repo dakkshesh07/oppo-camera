@@ -3,15 +3,15 @@
 .source "AppCompatEditText.java"
 
 # interfaces
-.implements Landroidx/core/g/v;
+.implements Landroidx/core/f/v;
 
 
 # instance fields
 .field private final mBackgroundTintHelper:Landroidx/appcompat/widget/e;
 
-.field private final mTextClassifierHelper:Landroidx/appcompat/widget/v;
+.field private final mTextClassifierHelper:Landroidx/appcompat/widget/u;
 
-.field private final mTextHelper:Landroidx/appcompat/widget/w;
+.field private final mTextHelper:Landroidx/appcompat/widget/v;
 
 
 # direct methods
@@ -41,7 +41,7 @@
     .locals 0
 
     .line 74
-    invoke-static {p1}, Landroidx/appcompat/widget/ap;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/ao;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -52,7 +52,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 78
     new-instance p1, Landroidx/appcompat/widget/e;
@@ -67,28 +67,28 @@
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/e;->a(Landroid/util/AttributeSet;I)V
 
     .line 81
-    new-instance p1, Landroidx/appcompat/widget/w;
-
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/w;-><init>(Landroid/widget/TextView;)V
-
-    iput-object p1, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/w;
-
-    .line 82
-    iget-object p1, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/w;
-
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/w;->a(Landroid/util/AttributeSet;I)V
-
-    .line 83
-    iget-object p1, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/w;
-
-    invoke-virtual {p1}, Landroidx/appcompat/widget/w;->b()V
-
-    .line 85
     new-instance p1, Landroidx/appcompat/widget/v;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/v;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/j;->mTextClassifierHelper:Landroidx/appcompat/widget/v;
+    iput-object p1, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/v;
+
+    .line 82
+    iget-object p1, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/v;
+
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/v;->a(Landroid/util/AttributeSet;I)V
+
+    .line 83
+    iget-object p1, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/v;
+
+    invoke-virtual {p1}, Landroidx/appcompat/widget/v;->b()V
+
+    .line 85
+    new-instance p1, Landroidx/appcompat/widget/u;
+
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/u;-><init>(Landroid/widget/TextView;)V
+
+    iput-object p1, p0, Landroidx/appcompat/widget/j;->mTextClassifierHelper:Landroidx/appcompat/widget/u;
 
     return-void
 .end method
@@ -111,12 +111,12 @@
 
     .line 180
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_1
 
     .line 181
-    invoke-virtual {v0}, Landroidx/appcompat/widget/w;->b()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/v;->b()V
 
     :cond_1
     return-void
@@ -124,6 +124,8 @@
 
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 142
     iget-object v0, p0, Landroidx/appcompat/widget/j;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -146,6 +148,8 @@
 
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 170
     iget-object v0, p0, Landroidx/appcompat/widget/j;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -213,7 +217,7 @@
 
     if-ge v0, v1, :cond_1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextClassifierHelper:Landroidx/appcompat/widget/v;
+    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextClassifierHelper:Landroidx/appcompat/widget/u;
 
     if-nez v0, :cond_0
 
@@ -221,7 +225,7 @@
 
     .line 236
     :cond_0
-    invoke-virtual {v0}, Landroidx/appcompat/widget/v;->a()Landroid/view/textclassifier/TextClassifier;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/u;->a()Landroid/view/textclassifier/TextClassifier;
 
     move-result-object v0
 
@@ -304,6 +308,8 @@
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 127
     iget-object v0, p0, Landroidx/appcompat/widget/j;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -319,6 +325,8 @@
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 155
     iget-object v0, p0, Landroidx/appcompat/widget/j;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -339,12 +347,12 @@
     invoke-super {p0, p1, p2}, Landroid/widget/EditText;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 188
-    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextHelper:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_0
 
     .line 189
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/w;->a(Landroid/content/Context;I)V
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/v;->a(Landroid/content/Context;I)V
 
     :cond_0
     return-void
@@ -360,7 +368,7 @@
 
     if-ge v0, v1, :cond_1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextClassifierHelper:Landroidx/appcompat/widget/v;
+    iget-object v0, p0, Landroidx/appcompat/widget/j;->mTextClassifierHelper:Landroidx/appcompat/widget/u;
 
     if-nez v0, :cond_0
 
@@ -368,7 +376,7 @@
 
     .line 219
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/v;->a(Landroid/view/textclassifier/TextClassifier;)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/u;->a(Landroid/view/textclassifier/TextClassifier;)V
 
     return-void
 

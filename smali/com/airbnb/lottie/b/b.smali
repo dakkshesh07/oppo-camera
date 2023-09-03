@@ -111,7 +111,7 @@
     const-string p1, "LottieDrawable must be inside of a view for images to work."
 
     .line 39
-    invoke-static {p1}, Lcom/airbnb/lottie/f/d;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/airbnb/lottie/c/d;->b(Ljava/lang/String;)V
 
     .line 40
     new-instance p1, Ljava/util/HashMap;
@@ -149,12 +149,12 @@
 .method private a(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .line 126
+    .line 131
     sget-object v0, Lcom/airbnb/lottie/b/b;->a:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 127
+    .line 132
     :try_start_0
     iget-object v1, p0, Lcom/airbnb/lottie/b/b;->e:Ljava/util/Map;
 
@@ -166,7 +166,7 @@
 
     invoke-virtual {p1, p2}, Lcom/airbnb/lottie/g;->a(Landroid/graphics/Bitmap;)V
 
-    .line 128
+    .line 133
     monitor-exit v0
 
     return-object p2
@@ -174,7 +174,7 @@
     :catchall_0
     move-exception p1
 
-    .line 129
+    .line 134
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -311,7 +311,7 @@
     const-string v0, "data URL did not have correct base64 format."
 
     .line 98
-    invoke-static {v0, p1}, Lcom/airbnb/lottie/f/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/c/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v1
 
@@ -351,14 +351,17 @@
 
     move-result-object v2
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 116
+    .line 117
+    :try_start_2
     invoke-static {v2, v1, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
+    :try_end_2
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 117
+    .line 122
     invoke-virtual {v0}, Lcom/airbnb/lottie/g;->a()I
 
     move-result v2
@@ -367,20 +370,30 @@
 
     move-result v0
 
-    invoke-static {v1, v2, v0}, Lcom/airbnb/lottie/f/h;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {v1, v2, v0}, Lcom/airbnb/lottie/c/h;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 118
+    .line 123
     invoke-direct {p0, p1, v0}, Lcom/airbnb/lottie/b/b;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     return-object p1
 
+    :catch_1
+    move-exception p1
+
+    const-string v0, "Unable to decode image."
+
+    .line 119
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/c/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
+
     .line 108
     :cond_5
-    :try_start_2
+    :try_start_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
     const-string v0, "You must set an images folder before loading an image. Set it with LottieComposition#setImagesFolder or LottieDrawable#setImagesFolder"
@@ -388,16 +401,16 @@
     invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    :catch_1
+    :catch_2
     move-exception p1
 
     const-string v0, "Unable to open asset."
 
     .line 113
-    invoke-static {v0, p1}, Lcom/airbnb/lottie/f/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/c/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v1
 .end method
@@ -416,7 +429,7 @@
 
     if-nez p1, :cond_0
 
-    .line 122
+    .line 127
     iget-object v0, p0, Lcom/airbnb/lottie/b/b;->b:Landroid/content/Context;
 
     if-eqz v0, :cond_1

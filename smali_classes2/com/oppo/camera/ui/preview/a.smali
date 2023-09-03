@@ -16,7 +16,7 @@
 
 .field protected b:Landroid/view/ViewGroup;
 
-.field protected c:Lcom/oppo/camera/l;
+.field protected c:Lcom/oppo/camera/i;
 
 
 # direct methods
@@ -35,7 +35,7 @@
     iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->b:Landroid/view/ViewGroup;
 
     .line 30
-    iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->c:Lcom/oppo/camera/l;
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->c:Lcom/oppo/camera/i;
 
     return-void
 .end method
@@ -63,6 +63,15 @@
 .end method
 
 .method public a(IZ)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract a(J)V
+.end method
+
+.method public a(Landroid/view/MotionEvent;)V
     .locals 0
 
     return-void
@@ -106,6 +115,12 @@
 .method public abstract b(Z)V
 .end method
 
+.method public c(I)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public c()Z
     .locals 1
 
@@ -114,7 +129,13 @@
     return v0
 .end method
 
-.method public c(I)Z
+.method public d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public d(I)Z
     .locals 0
 
     const/4 p1, 0x0
@@ -122,7 +143,7 @@
     return p1
 .end method
 
-.method public d()I
+.method public e()I
     .locals 1
 
     const/4 v0, 0x0
@@ -130,31 +151,37 @@
     return v0
 .end method
 
-.method public abstract d(I)V
+.method protected abstract e(I)V
 .end method
 
-.method public abstract e()Landroid/widget/RelativeLayout;
+.method public abstract f()I
 .end method
 
-.method public abstract f()V
+.method public abstract f(I)V
 .end method
 
-.method public abstract g()Z
+.method public abstract g()Landroid/widget/RelativeLayout;
 .end method
 
-.method public h()V
+.method public abstract h()V
+.end method
+
+.method public abstract i()Z
+.end method
+
+.method public j()V
     .locals 1
 
     const/4 v0, 0x0
 
-    .line 92
+    .line 101
     iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->a:Landroid/app/Activity;
 
-    .line 93
+    .line 102
     iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->b:Landroid/view/ViewGroup;
 
-    .line 94
-    iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->c:Lcom/oppo/camera/l;
+    .line 103
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/a;->c:Lcom/oppo/camera/i;
 
     return-void
 .end method

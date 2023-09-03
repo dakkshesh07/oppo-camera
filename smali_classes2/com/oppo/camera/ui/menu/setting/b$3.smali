@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/setting/b;->s()V
+    value = Lcom/oppo/camera/ui/menu/setting/b;->u()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/b;)V
     .locals 0
 
-    .line 366
+    .line 360
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$3;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 3
 
-    .line 369
+    .line 363
     new-instance p2, Landroid/content/Intent;
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/b$3;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
-    .line 370
+    .line 364
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/b;->getActivity()Landroidx/fragment/app/c;
 
     move-result-object v0
@@ -64,14 +64,14 @@
 
     invoke-direct {p2, v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 371
+    .line 365
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/b$3;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, p2, v1}, Lcom/oppo/camera/ui/menu/setting/b;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 372
+    .line 366
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void

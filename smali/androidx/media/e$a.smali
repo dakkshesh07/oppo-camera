@@ -21,6 +21,8 @@
 # direct methods
 .method public constructor <init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 163
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

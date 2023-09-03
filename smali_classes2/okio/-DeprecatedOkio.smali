@@ -3,6 +3,11 @@
 .source "-DeprecatedOkio.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # static fields
 .field public static final INSTANCE:Lokio/-DeprecatedOkio;
 
@@ -37,7 +42,7 @@
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
     invoke-static {p1}, Lokio/Okio;->appendingSink(Ljava/io/File;)Lokio/Sink;
@@ -63,7 +68,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 42
     invoke-static {p1}, Lokio/Okio;->buffer(Lokio/Sink;)Lokio/BufferedSink;
@@ -78,7 +83,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 50
     invoke-static {p1}, Lokio/Okio;->buffer(Lokio/Source;)Lokio/BufferedSource;
@@ -93,7 +98,7 @@
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -114,7 +119,7 @@
 
     const-string v0, "outputStream"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 66
     invoke-static {p1}, Lokio/Okio;->sink(Ljava/io/OutputStream;)Lokio/Sink;
@@ -129,7 +134,7 @@
 
     const-string v0, "socket"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 82
     invoke-static {p1}, Lokio/Okio;->sink(Ljava/net/Socket;)Lokio/Sink;
@@ -144,11 +149,11 @@
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "options"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 74
     array-length v0, p2
@@ -171,7 +176,7 @@
 
     const-string v0, "file"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 90
     invoke-static {p1}, Lokio/Okio;->source(Ljava/io/File;)Lokio/Source;
@@ -186,7 +191,7 @@
 
     const-string v0, "inputStream"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 98
     invoke-static {p1}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
@@ -201,7 +206,7 @@
 
     const-string v0, "socket"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 114
     invoke-static {p1}, Lokio/Okio;->source(Ljava/net/Socket;)Lokio/Source;
@@ -216,11 +221,11 @@
 
     const-string v0, "path"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "options"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 106
     array-length v0, p2

@@ -158,18 +158,18 @@
     .line 651
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$b;->a:Landroidx/appcompat/widget/ActivityChooserView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/g/b;
+    iget-object v0, v0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/f/b;
 
     if-eqz v0, :cond_0
 
     .line 652
     iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView$b;->a:Landroidx/appcompat/widget/ActivityChooserView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/g/b;
+    iget-object v0, v0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/f/b;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/core/g/b;->a(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/f/b;->a(Z)V
 
     :cond_0
     return-void

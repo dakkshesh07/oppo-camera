@@ -194,7 +194,7 @@
     invoke-virtual {p0, v6}, Lcom/google/android/material/chip/Chip;->setChipDrawable(Lcom/google/android/material/chip/ChipDrawable;)V
 
     .line 205
-    invoke-static {p0}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {p0}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result v0
 
@@ -330,7 +330,7 @@
 
     .line 248
     :cond_3
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p1
 
@@ -1045,7 +1045,7 @@
     .line 301
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->touchHelper:Lcom/google/android/material/chip/Chip$ChipTouchHelper;
 
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     goto :goto_0
 
@@ -1053,7 +1053,7 @@
     const/4 v0, 0x0
 
     .line 304
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     :goto_0
     return-void
@@ -1085,7 +1085,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 445
     invoke-direct {p0}, Lcom/google/android/material/chip/Chip;->updatePaddingInternal()V
@@ -1135,7 +1135,7 @@
     .line 475
     iget-object v0, p0, Lcom/google/android/material/chip/Chip;->ripple:Landroid/graphics/drawable/RippleDrawable;
 
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 476
     invoke-direct {p0}, Lcom/google/android/material/chip/Chip;->updatePaddingInternal()V
@@ -1253,7 +1253,7 @@
     move-result v3
 
     .line 354
-    invoke-static {p0, v1, v2, v0, v3}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {p0, v1, v2, v0, v3}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     :cond_2
     :goto_0
@@ -2787,7 +2787,7 @@
     check-cast v0, Lcom/google/android/material/chip/ChipGroup;
 
     .line 283
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -2827,12 +2827,12 @@
     move-result v7
 
     .line 287
-    invoke-static/range {v2 .. v7}, Landroidx/core/g/a/d$c;->a(IIIIZZ)Landroidx/core/g/a/d$c;
+    invoke-static/range {v2 .. v7}, Landroidx/core/f/a/d$c;->a(IIIIZZ)Landroidx/core/f/a/d$c;
 
     move-result-object v0
 
     .line 286
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->b(Ljava/lang/Object;)V
 
     :cond_4
     return-void

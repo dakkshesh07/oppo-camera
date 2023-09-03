@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/widget/ActivityChooserView;
 .end annotation
@@ -47,21 +50,21 @@
     .line 872
     sget-object v0, Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;->a:[I
 
-    invoke-static {p1, p2, v0}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroidx/appcompat/widget/ar;
 
     move-result-object p1
 
     const/4 p2, 0x0
 
     .line 873
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 874
-    invoke-virtual {p1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 .end method

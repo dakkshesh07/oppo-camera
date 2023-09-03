@@ -19,6 +19,9 @@
 .method public abstract getSecondDownloadUrl()Ljava/lang/String;
 .end method
 
+.method public abstract getUniqueId()Ljava/lang/String;
+.end method
+
 .method public abstract onFirstDownloadFinish(Landroid/content/Context;ZLjava/lang/String;)V
 .end method
 

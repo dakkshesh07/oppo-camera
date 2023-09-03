@@ -45,7 +45,7 @@
     sput-object v2, Lcom/oppo/camera/ui/control/g;->a:Lcom/oppo/camera/ui/control/e;
 
     .line 62
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/control/e;->b()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcom/oppo/camera/ui/control/e;->d()Landroid/net/Uri;
 
     move-result-object v3
 

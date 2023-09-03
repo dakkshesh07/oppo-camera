@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final androidx_core_ripple_material_light:I = 0x7f06001f
+.field public static final androidx_core_ripple_material_light:I = 0x7f060020
 
-.field public static final androidx_core_secondary_text_default_material_light:I = 0x7f060020
+.field public static final androidx_core_secondary_text_default_material_light:I = 0x7f060021
 
-.field public static final notification_action_color_filter:I = 0x7f06031f
+.field public static final notification_action_color_filter:I = 0x7f0603d6
 
-.field public static final notification_icon_bg_color:I = 0x7f060320
+.field public static final notification_icon_bg_color:I = 0x7f0603d7
 
 
 # direct methods

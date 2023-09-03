@@ -6,12 +6,17 @@
 .implements Landroid/view/Menu;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
-.field private final b:Landroidx/core/a/a/a;
+.field private final b:Landroidx/core/b/a/a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroidx/core/a/a/a;)V
+.method public constructor <init>(Landroid/content/Context;Landroidx/core/b/a/a;)V
     .locals 0
 
     .line 41
@@ -20,7 +25,7 @@
     if-eqz p2, :cond_0
 
     .line 45
-    iput-object p2, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iput-object p2, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
     return-void
 
@@ -41,9 +46,9 @@
     .locals 1
 
     .line 55
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->add(I)Landroid/view/MenuItem;
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->add(I)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -58,9 +63,9 @@
     .locals 1
 
     .line 65
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/a/a/a;->add(IIII)Landroid/view/MenuItem;
+    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/b/a/a;->add(IIII)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -75,9 +80,9 @@
     .locals 1
 
     .line 60
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/a/a/a;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/b/a/a;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -92,9 +97,9 @@
     .locals 1
 
     .line 50
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->add(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->add(Ljava/lang/CharSequence;)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -126,7 +131,7 @@
 
     .line 97
     :goto_0
-    iget-object v3, v0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v3, v0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
     move v4, p1
 
@@ -145,7 +150,7 @@
     move-object v11, v2
 
     .line 98
-    invoke-interface/range {v3 .. v11}, Landroidx/core/a/a/a;->addIntentOptions(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;I[Landroid/view/MenuItem;)I
+    invoke-interface/range {v3 .. v11}, Landroidx/core/b/a/a;->addIntentOptions(IIILandroid/content/ComponentName;[Landroid/content/Intent;Landroid/content/Intent;I[Landroid/view/MenuItem;)I
 
     move-result v3
 
@@ -180,9 +185,9 @@
     .locals 1
 
     .line 75
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->addSubMenu(I)Landroid/view/SubMenu;
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->addSubMenu(I)Landroid/view/SubMenu;
 
     move-result-object p1
 
@@ -197,10 +202,10 @@
     .locals 1
 
     .line 85
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
     .line 86
-    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/a/a/a;->addSubMenu(IIII)Landroid/view/SubMenu;
+    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/b/a/a;->addSubMenu(IIII)Landroid/view/SubMenu;
 
     move-result-object p1
 
@@ -216,9 +221,9 @@
     .locals 1
 
     .line 80
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/a/a/a;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
+    invoke-interface {v0, p1, p2, p3, p4}, Landroidx/core/b/a/a;->addSubMenu(IIILjava/lang/CharSequence;)Landroid/view/SubMenu;
 
     move-result-object p1
 
@@ -233,9 +238,9 @@
     .locals 1
 
     .line 70
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->addSubMenu(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->addSubMenu(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
 
     move-result-object p1
 
@@ -253,9 +258,9 @@
     invoke-virtual {p0}, Landroidx/appcompat/view/menu/p;->a()V
 
     .line 124
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0}, Landroidx/core/a/a/a;->clear()V
+    invoke-interface {v0}, Landroidx/core/b/a/a;->clear()V
 
     return-void
 .end method
@@ -264,9 +269,9 @@
     .locals 1
 
     .line 164
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0}, Landroidx/core/a/a/a;->close()V
+    invoke-interface {v0}, Landroidx/core/b/a/a;->close()V
 
     return-void
 .end method
@@ -275,9 +280,9 @@
     .locals 1
 
     .line 149
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->findItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->findItem(I)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -292,9 +297,9 @@
     .locals 1
 
     .line 159
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->getItem(I)Landroid/view/MenuItem;
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->getItem(I)Landroid/view/MenuItem;
 
     move-result-object p1
 
@@ -309,9 +314,9 @@
     .locals 1
 
     .line 144
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0}, Landroidx/core/a/a/a;->hasVisibleItems()Z
+    invoke-interface {v0}, Landroidx/core/b/a/a;->hasVisibleItems()Z
 
     move-result v0
 
@@ -322,9 +327,9 @@
     .locals 1
 
     .line 174
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2}, Landroidx/core/a/a/a;->isShortcutKey(ILandroid/view/KeyEvent;)Z
+    invoke-interface {v0, p1, p2}, Landroidx/core/b/a/a;->isShortcutKey(ILandroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -335,9 +340,9 @@
     .locals 1
 
     .line 179
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2}, Landroidx/core/a/a/a;->performIdentifierAction(II)Z
+    invoke-interface {v0, p1, p2}, Landroidx/core/b/a/a;->performIdentifierAction(II)Z
 
     move-result p1
 
@@ -348,9 +353,9 @@
     .locals 1
 
     .line 169
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2, p3}, Landroidx/core/a/a/a;->performShortcut(ILandroid/view/KeyEvent;I)Z
+    invoke-interface {v0, p1, p2, p3}, Landroidx/core/b/a/a;->performShortcut(ILandroid/view/KeyEvent;I)Z
 
     move-result p1
 
@@ -364,9 +369,9 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/p;->a(I)V
 
     .line 118
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->removeGroup(I)V
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->removeGroup(I)V
 
     return-void
 .end method
@@ -378,9 +383,9 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/p;->b(I)V
 
     .line 112
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->removeItem(I)V
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->removeItem(I)V
 
     return-void
 .end method
@@ -389,9 +394,9 @@
     .locals 1
 
     .line 129
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2, p3}, Landroidx/core/a/a/a;->setGroupCheckable(IZZ)V
+    invoke-interface {v0, p1, p2, p3}, Landroidx/core/b/a/a;->setGroupCheckable(IZZ)V
 
     return-void
 .end method
@@ -400,9 +405,9 @@
     .locals 1
 
     .line 139
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2}, Landroidx/core/a/a/a;->setGroupEnabled(IZ)V
+    invoke-interface {v0, p1, p2}, Landroidx/core/b/a/a;->setGroupEnabled(IZ)V
 
     return-void
 .end method
@@ -411,9 +416,9 @@
     .locals 1
 
     .line 134
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1, p2}, Landroidx/core/a/a/a;->setGroupVisible(IZ)V
+    invoke-interface {v0, p1, p2}, Landroidx/core/b/a/a;->setGroupVisible(IZ)V
 
     return-void
 .end method
@@ -422,9 +427,9 @@
     .locals 1
 
     .line 184
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0, p1}, Landroidx/core/a/a/a;->setQwertyMode(Z)V
+    invoke-interface {v0, p1}, Landroidx/core/b/a/a;->setQwertyMode(Z)V
 
     return-void
 .end method
@@ -433,9 +438,9 @@
     .locals 1
 
     .line 154
-    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/a/a/a;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/p;->b:Landroidx/core/b/a/a;
 
-    invoke-interface {v0}, Landroidx/core/a/a/a;->size()I
+    invoke-interface {v0}, Landroidx/core/b/a/a;->size()I
 
     move-result v0
 

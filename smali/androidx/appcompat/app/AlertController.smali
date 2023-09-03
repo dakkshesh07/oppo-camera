@@ -520,7 +520,7 @@
     if-lt v2, v3, :cond_1
 
     .line 565
-    invoke-static {p2, p3, p4}, Landroidx/core/g/w;->a(Landroid/view/View;II)V
+    invoke-static {p2, p3, p4}, Landroidx/core/f/w;->a(Landroid/view/View;II)V
 
     if-eqz v0, :cond_0
 

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static a(ILandroidx/core/graphics/b;)Landroid/graphics/ColorFilter;
+.method public static a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
     .locals 3
 
     .line 42
@@ -17,7 +17,7 @@
     if-lt v0, v2, :cond_1
 
     .line 43
-    invoke-static {p1}, Landroidx/core/graphics/c;->a(Landroidx/core/graphics/b;)Landroid/graphics/BlendMode;
+    invoke-static {p1}, Landroidx/core/graphics/b;->a(Landroidx/core/graphics/BlendModeCompat;)Landroid/graphics/BlendMode;
 
     move-result-object p1
 
@@ -33,7 +33,7 @@
 
     .line 48
     :cond_1
-    invoke-static {p1}, Landroidx/core/graphics/c;->b(Landroidx/core/graphics/b;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {p1}, Landroidx/core/graphics/b;->b(Landroidx/core/graphics/BlendModeCompat;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p1
 

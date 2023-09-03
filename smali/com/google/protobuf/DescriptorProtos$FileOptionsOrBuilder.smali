@@ -83,7 +83,40 @@
 .method public abstract getOptimizeFor()Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 .end method
 
+.method public abstract getPhpClassPrefix()Ljava/lang/String;
+.end method
+
+.method public abstract getPhpClassPrefixBytes()Lcom/google/protobuf/ByteString;
+.end method
+
+.method public abstract getPhpGenericServices()Z
+.end method
+
+.method public abstract getPhpMetadataNamespace()Ljava/lang/String;
+.end method
+
+.method public abstract getPhpMetadataNamespaceBytes()Lcom/google/protobuf/ByteString;
+.end method
+
+.method public abstract getPhpNamespace()Ljava/lang/String;
+.end method
+
+.method public abstract getPhpNamespaceBytes()Lcom/google/protobuf/ByteString;
+.end method
+
 .method public abstract getPyGenericServices()Z
+.end method
+
+.method public abstract getRubyPackage()Ljava/lang/String;
+.end method
+
+.method public abstract getRubyPackageBytes()Lcom/google/protobuf/ByteString;
+.end method
+
+.method public abstract getSwiftPrefix()Ljava/lang/String;
+.end method
+
+.method public abstract getSwiftPrefixBytes()Lcom/google/protobuf/ByteString;
 .end method
 
 .method public abstract getUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
@@ -159,5 +192,23 @@
 .method public abstract hasOptimizeFor()Z
 .end method
 
+.method public abstract hasPhpClassPrefix()Z
+.end method
+
+.method public abstract hasPhpGenericServices()Z
+.end method
+
+.method public abstract hasPhpMetadataNamespace()Z
+.end method
+
+.method public abstract hasPhpNamespace()Z
+.end method
+
 .method public abstract hasPyGenericServices()Z
+.end method
+
+.method public abstract hasRubyPackage()Z
+.end method
+
+.method public abstract hasSwiftPrefix()Z
 .end method

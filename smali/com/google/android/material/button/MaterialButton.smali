@@ -325,7 +325,7 @@
     .locals 2
 
     .line 499
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -646,7 +646,7 @@
     sub-int/2addr v4, v0
 
     .line 481
-    invoke-static {p0}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v0
 
@@ -659,7 +659,7 @@
     sub-int/2addr v4, v0
 
     .line 484
-    invoke-static {p0}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result v0
 
@@ -948,6 +948,8 @@
 
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 301
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isUsingOriginalBackground()Z
@@ -976,6 +978,8 @@
 
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 339
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isUsingOriginalBackground()Z
@@ -1980,6 +1984,8 @@
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 282
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isUsingOriginalBackground()Z
@@ -2005,6 +2011,8 @@
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 320
     invoke-direct {p0}, Lcom/google/android/material/button/MaterialButton;->isUsingOriginalBackground()Z

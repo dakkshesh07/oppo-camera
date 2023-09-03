@@ -26,3 +26,29 @@
         }
     .end annotation
 .end field
+
+
+# direct methods
+.method constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Intent;",
+            "Ljava/util/ArrayList<",
+            "Landroidx/e/a/a$b;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 79
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 80
+    iput-object p1, p0, Landroidx/e/a/a$a;->a:Landroid/content/Intent;
+
+    .line 81
+    iput-object p2, p0, Landroidx/e/a/a$a;->b:Ljava/util/ArrayList;
+
+    return-void
+.end method

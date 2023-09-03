@@ -45,14 +45,14 @@
     .locals 1
 
     .line 107
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
     .line 108
-    sget-object v0, Lcom/oppo/camera/sticker/d/b;->l:Ljava/lang/String;
+    sget-object v0, Lcom/oppo/camera/sticker/b/b;->l:Ljava/lang/String;
 
-    invoke-static {p1, v0, p2}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p2}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -126,6 +126,17 @@
 
     .line 48
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->mThumbnailPath:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getUniqueId()Ljava/lang/String;
+    .locals 1
+
+    .line 113
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -252,7 +263,7 @@
 .method public toDumpString()Ljava/lang/String;
     .locals 3
 
-    .line 112
+    .line 117
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -271,7 +282,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 113
+    .line 118
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerName()Ljava/lang/String;
 
     move-result-object v1
@@ -282,7 +293,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 114
+    .line 119
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getPosition()I
 
     move-result v1
@@ -293,7 +304,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 115
+    .line 120
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getLastRequestTime()J
 
     move-result-wide v1
@@ -304,7 +315,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 116
+    .line 121
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getDownloadState()I
 
     move-result v1
@@ -315,7 +326,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 117
+    .line 122
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getDownloadTime()J
 
     move-result-wide v1
@@ -326,7 +337,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 118
+    .line 123
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getDownloadUid()Ljava/lang/String;
 
     move-result-object v1
@@ -337,7 +348,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
+    .line 124
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getCategoryId()Ljava/lang/String;
 
     move-result-object v1
@@ -348,7 +359,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 120
+    .line 125
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getCategoryPosition()I
 
     move-result v1
@@ -359,7 +370,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 121
+    .line 126
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getVersion()J
 
     move-result-wide v1
@@ -370,7 +381,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 122
+    .line 127
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getProtocolVersion()J
 
     move-result-wide v1
@@ -381,7 +392,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 123
+    .line 128
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getAttribute()J
 
     move-result-wide v1
@@ -392,7 +403,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 124
+    .line 129
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
     move-result v1
@@ -403,7 +414,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 125
+    .line 130
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->hasMusic()Z
 
     move-result v1
@@ -414,7 +425,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 126
+    .line 131
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->needUpdate()Z
 
     move-result v1
@@ -425,7 +436,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 127
+    .line 132
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isStickerNew()Z
 
     move-result v1
@@ -436,7 +447,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
+    .line 133
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isValid()Z
 
     move-result v1
@@ -447,30 +458,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 129
+    .line 134
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileUri: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 130
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFileContentUri()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileUrl: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 131
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFileDownloadUrl()Ljava/lang/String;
 
     move-result-object v1
 
@@ -480,30 +469,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
+    .line 135
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFileMd5()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", thumbUri: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 133
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getThumbnailFileUri()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", thumbUrl: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 134
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getThumbnailUrl()Ljava/lang/String;
 
     move-result-object v1
 
@@ -513,30 +480,8 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getThumbnailMd5()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", logoUri: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     .line 136
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getLogoFileUri()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", logoUrl: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 137
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getLogoUrl()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getThumbnailMd5()Ljava/lang/String;
 
     move-result-object v1
 
@@ -546,7 +491,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
+    .line 137
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getLogoMd5()Ljava/lang/String;
 
     move-result-object v1

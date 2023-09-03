@@ -32,11 +32,11 @@
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
     .locals 0
 
     .line 99
-    invoke-super {p0, p1, p2}, Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+    invoke-super {p0, p1, p2}, Lcom/google/android/material/textfield/TextInputLayout$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
 
     .line 101
     const-class p1, Landroid/widget/Spinner;
@@ -45,10 +45,10 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->b(Ljava/lang/CharSequence;)V
 
     .line 102
-    invoke-virtual {p2}, Landroidx/core/g/a/d;->x()Z
+    invoke-virtual {p2}, Landroidx/core/f/a/d;->x()Z
 
     move-result p1
 
@@ -57,7 +57,7 @@
     const/4 p1, 0x0
 
     .line 105
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->f(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->f(Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void

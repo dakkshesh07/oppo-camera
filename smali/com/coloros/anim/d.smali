@@ -20,7 +20,7 @@
 
 .field public static final h:Landroid/graphics/PointF;
 
-.field public static final i:Lcom/coloros/anim/g/d;
+.field public static final i:Lcom/coloros/anim/e/d;
 
 .field public static final j:Ljava/lang/Float;
 
@@ -126,11 +126,11 @@
     sput-object v0, Lcom/coloros/anim/d;->h:Landroid/graphics/PointF;
 
     .line 92
-    new-instance v0, Lcom/coloros/anim/g/d;
+    new-instance v0, Lcom/coloros/anim/e/d;
 
-    invoke-direct {v0}, Lcom/coloros/anim/g/d;-><init>()V
+    invoke-direct {v0}, Lcom/coloros/anim/e/d;-><init>()V
 
-    sput-object v0, Lcom/coloros/anim/d;->i:Lcom/coloros/anim/g/d;
+    sput-object v0, Lcom/coloros/anim/d;->i:Lcom/coloros/anim/e/d;
 
     const/high16 v0, 0x3f800000    # 1.0f
 

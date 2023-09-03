@@ -3,6 +3,11 @@
 .source "IconCompatParcelizer.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -13,7 +18,7 @@
     return-void
 .end method
 
-.method public static read(Landroidx/versionedparcelable/a;)Landroidx/core/graphics/drawable/IconCompat;
+.method public static read(Landroidx/versionedparcelable/VersionedParcel;)Landroidx/core/graphics/drawable/IconCompat;
     .locals 3
 
     .line 14
@@ -26,7 +31,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(II)I
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(II)I
 
     move-result v1
 
@@ -37,7 +42,7 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b([BI)[B
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b([BI)[B
 
     move-result-object v1
 
@@ -48,7 +53,7 @@
 
     const/4 v2, 0x3
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -59,7 +64,7 @@
 
     const/4 v2, 0x4
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(II)I
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(II)I
 
     move-result v1
 
@@ -70,7 +75,7 @@
 
     const/4 v2, 0x5
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(II)I
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(II)I
 
     move-result v1
 
@@ -81,7 +86,7 @@
 
     const/4 v2, 0x6
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -94,7 +99,7 @@
 
     const/4 v2, 0x7
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p0
 
@@ -106,16 +111,16 @@
     return-object v0
 .end method
 
-.method public static write(Landroidx/core/graphics/drawable/IconCompat;Landroidx/versionedparcelable/a;)V
+.method public static write(Landroidx/core/graphics/drawable/IconCompat;Landroidx/versionedparcelable/VersionedParcel;)V
     .locals 3
 
     const/4 v0, 0x1
 
     .line 28
-    invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/a;->a(ZZ)V
+    invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/VersionedParcel;->a(ZZ)V
 
     .line 29
-    invoke-virtual {p1}, Landroidx/versionedparcelable/a;->a()Z
+    invoke-virtual {p1}, Landroidx/versionedparcelable/VersionedParcel;->a()Z
 
     move-result v1
 
@@ -131,7 +136,7 @@
     .line 31
     iget v1, p0, Landroidx/core/graphics/drawable/IconCompat;->a:I
 
-    invoke-virtual {p1, v1, v0}, Landroidx/versionedparcelable/a;->a(II)V
+    invoke-virtual {p1, v1, v0}, Landroidx/versionedparcelable/VersionedParcel;->a(II)V
 
     .line 33
     :cond_0
@@ -144,7 +149,7 @@
 
     const/4 v1, 0x2
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/a;->a([BI)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->a([BI)V
 
     .line 36
     :cond_1
@@ -157,7 +162,7 @@
 
     const/4 v1, 0x3
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/a;->a(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->a(Landroid/os/Parcelable;I)V
 
     .line 39
     :cond_2
@@ -170,7 +175,7 @@
 
     const/4 v1, 0x4
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/a;->a(II)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->a(II)V
 
     .line 42
     :cond_3
@@ -183,7 +188,7 @@
 
     const/4 v1, 0x5
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/a;->a(II)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->a(II)V
 
     .line 45
     :cond_4
@@ -196,7 +201,7 @@
 
     const/4 v1, 0x6
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/a;->a(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->a(Landroid/os/Parcelable;I)V
 
     .line 48
     :cond_5
@@ -209,7 +214,7 @@
 
     const/4 v0, 0x7
 
-    invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/a;->a(Ljava/lang/String;I)V
+    invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->a(Ljava/lang/String;I)V
 
     :cond_6
     return-void

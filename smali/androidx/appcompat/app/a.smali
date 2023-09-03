@@ -30,6 +30,8 @@
 
 .method public a(Landroidx/appcompat/view/b$a;)Landroidx/appcompat/view/b;
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -60,12 +62,16 @@
 
 .method public a(Landroid/content/res/Configuration;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
 
 .method public a(Ljava/lang/CharSequence;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
@@ -75,6 +81,8 @@
 
 .method public a(ILandroid/view/KeyEvent;)Z
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -83,6 +91,8 @@
 
 .method public a(Landroid/view/KeyEvent;)Z
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -123,6 +133,8 @@
 
 .method public c()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -131,12 +143,16 @@
 
 .method public d(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
 
 .method public d()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -145,12 +161,16 @@
 
 .method public e(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
 
 .method public e()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -159,12 +179,16 @@
 
 .method public f(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
 
 .method public f()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 

@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    .line 191
+    .line 197
     invoke-direct {p0, p1, p2, v0}, Lcom/google/protobuf/WireFormat$Utf8Validation;-><init>(Ljava/lang/String;ILcom/google/protobuf/WireFormat$1;)V
 
     return-void
@@ -36,7 +36,7 @@
         }
     .end annotation
 
-    .line 194
+    .line 200
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readStringRequireUtf8()Ljava/lang/String;
 
     move-result-object p1

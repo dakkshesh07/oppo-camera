@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:name="vector" android:height="@dimen/svg_icon_face_beauty_ai_width" android:width="@dimen/svg_icon_face_beauty_ai_width" android:viewportWidth="60.0" android:viewportHeight="60.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:name="group">
-        <path android:name="path" android:fillColor="?colorTintControlNormal" android:pathData="M 30 0 C 22.047 0 14.411 3.163 8.787 8.787 C 3.163 14.411 0 22.047 0 30 C 0 37.953 3.163 45.589 8.787 51.213 C 14.411 56.837 22.047 60 30 60 C 37.953 60 45.589 56.837 51.213 51.213 C 56.837 45.589 60 37.953 60 30 C 60 22.047 56.837 14.411 51.213 8.787 C 45.589 3.163 37.953 0 30 0 Z" />
-        <path android:name="path_1" android:fillColor="?colorTintControlNormal" android:pathData="M 30 6 C 23.637 6 17.529 8.53 13.029 13.029 C 8.53 17.529 6 23.637 6 30 C 6 36.363 8.53 42.471 13.029 46.971 C 17.529 51.47 23.637 54 30 54 C 36.363 54 42.471 51.47 46.971 46.971 C 51.47 42.471 54 36.363 54 30 C 54 23.637 51.47 17.529 46.971 13.029 C 42.471 8.53 36.363 6 30 6 Z" />
-    </group>
-</vector>

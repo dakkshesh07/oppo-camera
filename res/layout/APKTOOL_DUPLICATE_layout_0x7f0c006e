@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:paddingTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070799" android:paddingBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070798" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070797"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|right" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <TextView android:gravity="right" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900da" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070261" style="@style/APKTOOL_DUPLICATE_style_0x7f11019e" />
+    </LinearLayout>
+    <ImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900d3" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070788" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080240" android:importantForAccessibility="no" />
+</LinearLayout>

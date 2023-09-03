@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 603
+    .line 617
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 
     const-string v0, "StickerMultiCfg.json"
 
-    .line 619
+    .line 633
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result p1
@@ -63,7 +63,7 @@
 .method public a(Ljava/util/zip/ZipEntry;Ljava/util/zip/ZipEntry;)I
     .locals 0
 
-    .line 606
+    .line 620
     invoke-virtual {p1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -72,7 +72,7 @@
 
     move-result p1
 
-    .line 607
+    .line 621
     invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object p2
@@ -103,7 +103,7 @@
 .method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 0
 
-    .line 603
+    .line 617
     check-cast p1, Ljava/util/zip/ZipEntry;
 
     check-cast p2, Ljava/util/zip/ZipEntry;

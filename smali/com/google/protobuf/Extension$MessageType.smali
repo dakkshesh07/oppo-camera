@@ -34,7 +34,7 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .line 70
+    .line 69
     new-instance v0, Lcom/google/protobuf/Extension$MessageType;
 
     const/4 v1, 0x0
@@ -45,7 +45,7 @@
 
     sput-object v0, Lcom/google/protobuf/Extension$MessageType;->PROTO1:Lcom/google/protobuf/Extension$MessageType;
 
-    .line 71
+    .line 70
     new-instance v0, Lcom/google/protobuf/Extension$MessageType;
 
     const/4 v2, 0x1
@@ -58,7 +58,7 @@
 
     const/4 v0, 0x2
 
-    .line 69
+    .line 68
     new-array v0, v0, [Lcom/google/protobuf/Extension$MessageType;
 
     sget-object v3, Lcom/google/protobuf/Extension$MessageType;->PROTO1:Lcom/google/protobuf/Extension$MessageType;
@@ -82,7 +82,7 @@
         }
     .end annotation
 
-    .line 69
+    .line 68
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -91,7 +91,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/Extension$MessageType;
     .locals 1
 
-    .line 69
+    .line 68
     const-class v0, Lcom/google/protobuf/Extension$MessageType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -106,7 +106,7 @@
 .method public static values()[Lcom/google/protobuf/Extension$MessageType;
     .locals 1
 
-    .line 69
+    .line 68
     sget-object v0, Lcom/google/protobuf/Extension$MessageType;->$VALUES:[Lcom/google/protobuf/Extension$MessageType;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/Extension$MessageType;->clone()Ljava/lang/Object;

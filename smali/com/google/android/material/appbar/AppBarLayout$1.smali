@@ -3,7 +3,7 @@
 .source "AppBarLayout.java"
 
 # interfaces
-.implements Landroidx/core/g/r;
+.implements Landroidx/core/f/r;
 
 
 # annotations
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 0
 
     .line 274
     iget-object p1, p0, Lcom/google/android/material/appbar/AppBarLayout$1;->this$0:Lcom/google/android/material/appbar/AppBarLayout;
 
-    invoke-virtual {p1, p2}, Lcom/google/android/material/appbar/AppBarLayout;->onWindowInsetChanged(Landroidx/core/g/ae;)Landroidx/core/g/ae;
+    invoke-virtual {p1, p2}, Lcom/google/android/material/appbar/AppBarLayout;->onWindowInsetChanged(Landroidx/core/f/ae;)Landroidx/core/f/ae;
 
     move-result-object p1
 

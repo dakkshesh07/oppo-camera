@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.coui.appcompat.widget.seekbar.COUISeekBar android:layout_gravity="bottom|center" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900b6" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070610" android:hapticFeedbackEnabled="false" app:APKTOOL_DUPLICATE_attr_0x7f040233="@color/APKTOOL_DUPLICATE_color_0x7f06033c" app:APKTOOL_DUPLICATE_attr_0x7f040236="?APKTOOL_DUPLICATE_attr_0x7f040281" app:APKTOOL_DUPLICATE_attr_0x7f04023c="@color/APKTOOL_DUPLICATE_color_0x7f06033b" />
+</merge>

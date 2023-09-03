@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static a:Lcom/oppo/camera/ui/menu/BasicOptionItemList; = null
+.field private static a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-.field private static b:Z = false
+.field private static b:Z
 
 .field private static c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -34,7 +34,7 @@
     const-string v1, "showPopUpWindow"
 
     .line 27
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p0, :cond_1
 
@@ -129,7 +129,7 @@
 
     const-string v1, "PopUpWindowManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -253,7 +253,7 @@
 
     const-string v1, "PopUpWindowManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -315,7 +315,7 @@
 
     const-string v1, "PopUpWindowManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 116
     sget-object v0, Lcom/oppo/camera/ui/menu/f;->c:Ljava/util/ArrayList;
@@ -386,7 +386,7 @@
     const-string v1, "hidePopUpWindow"
 
     .line 68
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 70
     sget-object v0, Lcom/oppo/camera/ui/menu/f;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
@@ -428,7 +428,7 @@
 
     const-string v1, "PopUpWindowManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 130
     sget-object v0, Lcom/oppo/camera/ui/menu/f;->c:Ljava/util/ArrayList;
@@ -489,7 +489,7 @@
     const-string v1, "clearListener"
 
     .line 162
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

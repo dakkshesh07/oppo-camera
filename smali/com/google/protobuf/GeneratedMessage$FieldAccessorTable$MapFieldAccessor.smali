@@ -42,42 +42,42 @@
         }
     .end annotation
 
-    .line 2530
+    .line 2532
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2531
+    .line 2533
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->field:Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     const/4 p1, 0x0
 
-    .line 2532
+    .line 2534
     new-array p2, p1, [Ljava/lang/Class;
 
     const-string p4, "getDefaultInstance"
 
-    .line 2533
+    .line 2535
     invoke-static {p3, p4, p2}, Lcom/google/protobuf/GeneratedMessage;->access$1100(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p2
 
-    .line 2534
+    .line 2536
     new-array p1, p1, [Ljava/lang/Object;
 
     const/4 p3, 0x0
 
-    .line 2535
+    .line 2537
     invoke-static {p2, p3, p1}, Lcom/google/protobuf/GeneratedMessage;->access$1200(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/google/protobuf/GeneratedMessage;
 
-    .line 2534
+    .line 2536
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMapField(Lcom/google/protobuf/GeneratedMessage;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
 
-    .line 2537
+    .line 2539
     invoke-virtual {p1}, Lcom/google/protobuf/MapField;->getMapEntryMessageDefaultInstance()Lcom/google/protobuf/Message;
 
     move-result-object p1
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 2548
+    .line 2550
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->field:Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
@@ -125,7 +125,7 @@
         }
     .end annotation
 
-    .line 2544
+    .line 2546
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->field:Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
@@ -151,15 +151,15 @@
         }
     .end annotation
 
-    .line 2553
+    .line 2555
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->field:Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 2554
+    .line 2556
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getNumber()I
 
     move-result v0
 
-    .line 2553
+    .line 2555
     invoke-virtual {p1, v0}, Lcom/google/protobuf/GeneratedMessage$Builder;->internalGetMutableMapField(I)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -172,7 +172,7 @@
 .method public addRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
     .locals 0
 
-    .line 2620
+    .line 2624
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMutableMapField(Lcom/google/protobuf/GeneratedMessage$Builder;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -191,7 +191,7 @@
 .method public clear(Lcom/google/protobuf/GeneratedMessage$Builder;)V
     .locals 0
 
-    .line 2647
+    .line 2651
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMutableMapField(Lcom/google/protobuf/GeneratedMessage$Builder;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -208,14 +208,14 @@
 .method public get(Lcom/google/protobuf/GeneratedMessage$Builder;)Ljava/lang/Object;
     .locals 3
 
-    .line 2568
+    .line 2572
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2569
+    .line 2573
     :goto_0
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getRepeatedCount(Lcom/google/protobuf/GeneratedMessage$Builder;)I
 
@@ -223,7 +223,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 2570
+    .line 2574
     invoke-virtual {p0, p1, v1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;I)Ljava/lang/Object;
 
     move-result-object v2
@@ -234,7 +234,7 @@
 
     goto :goto_0
 
-    .line 2572
+    .line 2576
     :cond_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -246,14 +246,14 @@
 .method public get(Lcom/google/protobuf/GeneratedMessage;)Ljava/lang/Object;
     .locals 3
 
-    .line 2559
+    .line 2562
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v1, 0x0
 
-    .line 2560
+    .line 2563
     :goto_0
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getRepeatedCount(Lcom/google/protobuf/GeneratedMessage;)I
 
@@ -261,7 +261,7 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 2561
+    .line 2564
     invoke-virtual {p0, p1, v1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getRepeated(Lcom/google/protobuf/GeneratedMessage;I)Ljava/lang/Object;
 
     move-result-object v2
@@ -272,7 +272,7 @@
 
     goto :goto_0
 
-    .line 2563
+    .line 2566
     :cond_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
@@ -284,7 +284,7 @@
 .method public getBuilder(Lcom/google/protobuf/GeneratedMessage$Builder;)Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 2657
+    .line 2661
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "Nested builder not supported for map fields."
@@ -297,7 +297,7 @@
 .method public getRaw(Lcom/google/protobuf/GeneratedMessage$Builder;)Ljava/lang/Object;
     .locals 0
 
-    .line 2582
+    .line 2586
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->get(Lcom/google/protobuf/GeneratedMessage$Builder;)Ljava/lang/Object;
 
     move-result-object p1
@@ -308,7 +308,7 @@
 .method public getRaw(Lcom/google/protobuf/GeneratedMessage;)Ljava/lang/Object;
     .locals 0
 
-    .line 2577
+    .line 2581
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->get(Lcom/google/protobuf/GeneratedMessage;)Ljava/lang/Object;
 
     move-result-object p1
@@ -319,7 +319,7 @@
 .method public getRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;I)Ljava/lang/Object;
     .locals 0
 
-    .line 2600
+    .line 2604
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMapField(Lcom/google/protobuf/GeneratedMessage$Builder;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -338,7 +338,7 @@
 .method public getRepeated(Lcom/google/protobuf/GeneratedMessage;I)Ljava/lang/Object;
     .locals 0
 
-    .line 2595
+    .line 2599
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMapField(Lcom/google/protobuf/GeneratedMessage;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -357,7 +357,7 @@
 .method public getRepeatedBuilder(Lcom/google/protobuf/GeneratedMessage$Builder;I)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 2663
+    .line 2667
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "Nested builder not supported for map fields."
@@ -370,7 +370,7 @@
 .method public getRepeatedCount(Lcom/google/protobuf/GeneratedMessage$Builder;)I
     .locals 0
 
-    .line 2642
+    .line 2646
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMapField(Lcom/google/protobuf/GeneratedMessage$Builder;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -389,7 +389,7 @@
 .method public getRepeatedCount(Lcom/google/protobuf/GeneratedMessage;)I
     .locals 0
 
-    .line 2637
+    .line 2641
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMapField(Lcom/google/protobuf/GeneratedMessage;)Lcom/google/protobuf/MapField;
 
     move-result-object p1
@@ -408,7 +408,7 @@
 .method public getRepeatedRaw(Lcom/google/protobuf/GeneratedMessage$Builder;I)Ljava/lang/Object;
     .locals 0
 
-    .line 2610
+    .line 2614
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -419,7 +419,7 @@
 .method public getRepeatedRaw(Lcom/google/protobuf/GeneratedMessage;I)Ljava/lang/Object;
     .locals 0
 
-    .line 2605
+    .line 2609
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getRepeated(Lcom/google/protobuf/GeneratedMessage;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -430,7 +430,7 @@
 .method public has(Lcom/google/protobuf/GeneratedMessage$Builder;)Z
     .locals 1
 
-    .line 2631
+    .line 2635
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "hasField() is not supported for repeated fields."
@@ -443,7 +443,7 @@
 .method public has(Lcom/google/protobuf/GeneratedMessage;)Z
     .locals 1
 
-    .line 2625
+    .line 2629
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string v0, "hasField() is not supported for repeated fields."
@@ -456,7 +456,7 @@
 .method public newBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 2652
+    .line 2656
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->mapEntryMessageDefaultInstance:Lcom/google/protobuf/Message;
 
     invoke-interface {v0}, Lcom/google/protobuf/Message;->newBuilderForType()Lcom/google/protobuf/Message$Builder;
@@ -469,10 +469,10 @@
 .method public set(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
     .locals 1
 
-    .line 2587
+    .line 2591
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->clear(Lcom/google/protobuf/GeneratedMessage$Builder;)V
 
-    .line 2588
+    .line 2592
     check-cast p2, Ljava/util/List;
 
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -490,7 +490,7 @@
 
     move-result-object v0
 
-    .line 2589
+    .line 2593
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->addRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
 
     goto :goto_0
@@ -502,7 +502,7 @@
 .method public setRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;ILjava/lang/Object;)V
     .locals 0
 
-    .line 2615
+    .line 2619
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;->getMutableMapField(Lcom/google/protobuf/GeneratedMessage$Builder;)Lcom/google/protobuf/MapField;
 
     move-result-object p1

@@ -42,25 +42,25 @@
 
     const/4 v0, 0x0
 
-    .line 1248
+    .line 1321
     invoke-direct {p0, v0}, Lcom/google/protobuf/CodedInputStream;-><init>(Lcom/google/protobuf/CodedInputStream$1;)V
 
     const v0, 0x7fffffff
 
-    .line 1242
+    .line 1315
     iput v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->currentLimit:I
 
-    .line 1249
+    .line 1322
     iput-object p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 1250
+    .line 1323
     invoke-static {p1}, Lcom/google/protobuf/UnsafeUtil;->addressOffset(Ljava/nio/ByteBuffer;)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->address:J
 
-    .line 1251
+    .line 1324
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->address:J
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->limit()I
@@ -73,7 +73,7 @@
 
     iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
-    .line 1252
+    .line 1325
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->address:J
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
@@ -86,12 +86,12 @@
 
     iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1253
+    .line 1326
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->startPos:J
 
-    .line 1254
+    .line 1327
     iput-boolean p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->immutable:Z
 
     return-void
@@ -100,7 +100,7 @@
 .method synthetic constructor <init>(Ljava/nio/ByteBuffer;ZLcom/google/protobuf/CodedInputStream$1;)V
     .locals 0
 
-    .line 1207
+    .line 1280
     invoke-direct {p0, p1, p2}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;-><init>(Ljava/nio/ByteBuffer;Z)V
 
     return-void
@@ -109,7 +109,7 @@
 .method private bufferPos(J)I
     .locals 2
 
-    .line 1928
+    .line 2005
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->address:J
 
     sub-long/2addr p1, v0
@@ -119,128 +119,10 @@
     return p1
 .end method
 
-.method private copy(JJ)Ljava/nio/ByteBuffer;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1947
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->copyToArray(JJ)[B
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method private copyToArray(JJ)[B
-    .locals 4
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 1951
-    iget-object v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
-
-    move-result v0
-
-    .line 1952
-    iget-object v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->limit()I
-
-    move-result v1
-
-    .line 1954
-    :try_start_0
-    iget-object v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-direct {p0, p1, p2}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferPos(J)I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 1955
-    iget-object v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-direct {p0, p3, p4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferPos(J)I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    sub-long/2addr p3, p1
-
-    long-to-int p1, p3
-
-    .line 1956
-    new-array p1, p1, [B
-
-    .line 1957
-    iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 1962
-    iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 1963
-    iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_0
-
-    .line 1960
-    :catch_0
-    :try_start_1
-    invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
-
-    move-result-object p1
-
-    throw p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 1962
-    :goto_0
-    iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    .line 1963
-    iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    throw p1
-.end method
-
 .method static isSupported()Z
     .locals 1
 
-    .line 1245
+    .line 1318
     invoke-static {}, Lcom/google/protobuf/UnsafeUtil;->hasUnsafeByteBufferOperations()Z
 
     move-result v0
@@ -251,7 +133,7 @@
 .method private recomputeBufferSizeAfterLimit()V
     .locals 4
 
-    .line 1912
+    .line 1989
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     iget v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferSizeAfterLimit:I
@@ -262,7 +144,7 @@
 
     iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
-    .line 1913
+    .line 1990
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->startPos:J
@@ -271,17 +153,17 @@
 
     long-to-int v2, v2
 
-    .line 1914
+    .line 1991
     iget v3, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->currentLimit:I
 
     if-le v2, v3, :cond_0
 
     sub-int/2addr v2, v3
 
-    .line 1916
+    .line 1993
     iput v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferSizeAfterLimit:I
 
-    .line 1917
+    .line 1994
     iget v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferSizeAfterLimit:I
 
     int-to-long v2, v2
@@ -295,7 +177,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 1919
+    .line 1996
     iput v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferSizeAfterLimit:I
 
     :goto_0
@@ -305,7 +187,7 @@
 .method private remaining()I
     .locals 4
 
-    .line 1924
+    .line 2001
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
@@ -325,7 +207,7 @@
         }
     .end annotation
 
-    .line 1673
+    .line 1750
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v0
@@ -334,12 +216,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1674
+    .line 1751
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipRawVarintFastPath()V
 
     goto :goto_0
 
-    .line 1676
+    .line 1753
     :cond_0
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipRawVarintSlowPath()V
 
@@ -362,7 +244,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1682
+    .line 1759
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     const-wide/16 v3, 0x1
@@ -384,7 +266,7 @@
 
     goto :goto_0
 
-    .line 1686
+    .line 1763
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->malformedVarint()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -408,7 +290,7 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1691
+    .line 1768
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawByte()B
 
     move-result v1
@@ -422,7 +304,7 @@
 
     goto :goto_0
 
-    .line 1695
+    .line 1772
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->malformedVarint()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -439,21 +321,21 @@
         }
     .end annotation
 
-    .line 1932
+    .line 2009
     iget-object v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 1933
+    .line 2010
     iget-object v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v1
 
-    .line 1935
+    .line 2012
     :try_start_0
     iget-object v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -463,7 +345,7 @@
 
     invoke-virtual {v2, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 1936
+    .line 2013
     iget-object p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-direct {p0, p3, p4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferPos(J)I
@@ -472,7 +354,7 @@
 
     invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 1937
+    .line 2014
     iget-object p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -482,12 +364,12 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1941
+    .line 2018
     iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 1942
+    .line 2019
     iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
@@ -499,7 +381,7 @@
 
     goto :goto_0
 
-    .line 1939
+    .line 2016
     :catch_0
     :try_start_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
@@ -510,17 +392,18 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1941
+    .line 2018
     :goto_0
     iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 1942
+    .line 2019
     iget-object p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
+    .line 2020
     throw p1
 .end method
 
@@ -534,14 +417,14 @@
         }
     .end annotation
 
-    .line 1275
+    .line 1348
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->lastTag:I
 
     if-ne v0, p1, :cond_0
 
     return-void
 
-    .line 1276
+    .line 1349
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidEndTag()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -553,7 +436,7 @@
 .method public enableAliasing(Z)V
     .locals 0
 
-    .line 1819
+    .line 1896
     iput-boolean p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->enableAliasing:Z
 
     return-void
@@ -562,7 +445,7 @@
 .method public getBytesUntilLimit()I
     .locals 2
 
-    .line 1852
+    .line 1929
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->currentLimit:I
 
     const v1, 0x7fffffff
@@ -573,7 +456,7 @@
 
     return v0
 
-    .line 1856
+    .line 1933
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->getTotalBytesRead()I
 
@@ -587,7 +470,7 @@
 .method public getLastTag()I
     .locals 1
 
-    .line 1282
+    .line 1355
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->lastTag:I
 
     return v0
@@ -596,7 +479,7 @@
 .method public getTotalBytesRead()I
     .locals 4
 
-    .line 1866
+    .line 1943
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->startPos:J
@@ -616,7 +499,7 @@
         }
     .end annotation
 
-    .line 1861
+    .line 1938
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
@@ -639,10 +522,10 @@
 .method public popLimit(I)V
     .locals 0
 
-    .line 1846
+    .line 1923
     iput p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->currentLimit:I
 
-    .line 1847
+    .line 1924
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recomputeBufferSizeAfterLimit()V
 
     return-void
@@ -658,27 +541,27 @@
 
     if-ltz p1, :cond_1
 
-    .line 1832
+    .line 1909
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->getTotalBytesRead()I
 
     move-result v0
 
     add-int/2addr p1, v0
 
-    .line 1833
+    .line 1910
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->currentLimit:I
 
     if-gt p1, v0, :cond_0
 
-    .line 1837
+    .line 1914
     iput p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->currentLimit:I
 
-    .line 1839
+    .line 1916
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recomputeBufferSizeAfterLimit()V
 
     return v0
 
-    .line 1835
+    .line 1912
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -686,7 +569,7 @@
 
     throw p1
 
-    .line 1830
+    .line 1907
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -703,7 +586,7 @@
         }
     .end annotation
 
-    .line 1423
+    .line 1496
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint64()J
 
     move-result-wide v0
@@ -733,7 +616,7 @@
         }
     .end annotation
 
-    .line 1568
+    .line 1642
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
@@ -746,28 +629,28 @@
 .end method
 
 .method public readByteBuffer()Ljava/nio/ByteBuffer;
-    .locals 6
+    .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 1573
+    .line 1647
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 1574
+    .line 1648
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v1
 
     if-gt v0, v1, :cond_1
 
-    .line 1579
+    .line 1652
     iget-boolean v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->immutable:Z
 
     if-nez v1, :cond_0
@@ -776,47 +659,61 @@
 
     if-eqz v1, :cond_0
 
-    .line 1580
+    .line 1653
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     int-to-long v3, v0
 
-    add-long/2addr v3, v1
+    add-long v5, v1, v3
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->slice(JJ)Ljava/nio/ByteBuffer;
+    invoke-direct {p0, v1, v2, v5, v6}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->slice(JJ)Ljava/nio/ByteBuffer;
 
-    move-result-object v1
+    move-result-object v0
 
-    goto :goto_0
+    .line 1654
+    iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1582
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+
+    return-object v0
+
+    .line 1658
     :cond_0
-    iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    new-array v1, v0, [B
 
-    int-to-long v3, v0
+    .line 1659
+    iget-wide v3, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    add-long/2addr v3, v1
+    const-wide/16 v6, 0x0
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->copy(JJ)Ljava/nio/ByteBuffer;
+    int-to-long v10, v0
 
-    move-result-object v1
+    move-object v5, v1
 
-    .line 1584
-    :goto_0
+    move-wide v8, v10
+
+    invoke-static/range {v3 .. v9}, Lcom/google/protobuf/UnsafeUtil;->copyMemory(J[BJJ)V
+
+    .line 1660
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    int-to-long v4, v0
-
-    add-long/2addr v2, v4
+    add-long/2addr v2, v10
 
     iput-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    return-object v1
+    .line 1661
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    return-object v0
 
     :cond_1
     if-nez v0, :cond_2
 
-    .line 1590
+    .line 1667
     sget-object v0, Lcom/google/protobuf/Internal;->EMPTY_BYTE_BUFFER:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -824,14 +721,14 @@
     :cond_2
     if-gez v0, :cond_3
 
-    .line 1593
+    .line 1670
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
 
     throw v0
 
-    .line 1595
+    .line 1672
     :cond_3
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -841,28 +738,28 @@
 .end method
 
 .method public readBytes()Lcom/google/protobuf/ByteString;
-    .locals 6
+    .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 1545
+    .line 1616
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 1546
+    .line 1617
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v1
 
     if-gt v0, v1, :cond_1
 
-    .line 1548
+    .line 1618
     iget-boolean v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->immutable:Z
 
     if-eqz v1, :cond_0
@@ -871,43 +768,57 @@
 
     if-eqz v1, :cond_0
 
-    .line 1549
+    .line 1619
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     int-to-long v3, v0
 
-    add-long/2addr v3, v1
+    add-long v5, v1, v3
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->slice(JJ)Ljava/nio/ByteBuffer;
+    invoke-direct {p0, v1, v2, v5, v6}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->slice(JJ)Ljava/nio/ByteBuffer;
 
-    move-result-object v1
+    move-result-object v0
 
-    goto :goto_0
+    .line 1620
+    iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1551
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+
+    .line 1621
+    invoke-static {v0}, Lcom/google/protobuf/ByteString;->wrap(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/ByteString;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 1624
     :cond_0
+    new-array v8, v0, [B
+
+    .line 1625
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    int-to-long v3, v0
+    const-wide/16 v4, 0x0
 
-    add-long/2addr v3, v1
+    int-to-long v9, v0
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->copy(JJ)Ljava/nio/ByteBuffer;
+    move-object v3, v8
 
-    move-result-object v1
+    move-wide v6, v9
 
-    .line 1553
-    :goto_0
-    iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    invoke-static/range {v1 .. v7}, Lcom/google/protobuf/UnsafeUtil;->copyMemory(J[BJJ)V
 
-    int-to-long v4, v0
+    .line 1626
+    iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    add-long/2addr v2, v4
+    add-long/2addr v0, v9
 
-    iput-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1554
-    invoke-static {v1}, Lcom/google/protobuf/ByteString;->wrap(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/ByteString;
+    .line 1627
+    invoke-static {v8}, Lcom/google/protobuf/ByteString;->wrap([B)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
@@ -916,7 +827,7 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 1558
+    .line 1632
     sget-object v0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     return-object v0
@@ -924,14 +835,14 @@
     :cond_2
     if-gez v0, :cond_3
 
-    .line 1561
+    .line 1635
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
 
     throw v0
 
-    .line 1563
+    .line 1637
     :cond_3
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -948,7 +859,7 @@
         }
     .end annotation
 
-    .line 1388
+    .line 1461
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian64()J
 
     move-result-wide v0
@@ -968,7 +879,7 @@
         }
     .end annotation
 
-    .line 1605
+    .line 1682
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
@@ -984,7 +895,7 @@
         }
     .end annotation
 
-    .line 1418
+    .line 1491
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian32()I
 
     move-result v0
@@ -1000,7 +911,7 @@
         }
     .end annotation
 
-    .line 1413
+    .line 1486
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian64()J
 
     move-result-wide v0
@@ -1016,7 +927,7 @@
         }
     .end annotation
 
-    .line 1393
+    .line 1466
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian32()I
 
     move-result v0
@@ -1048,21 +959,21 @@
         }
     .end annotation
 
-    .line 1493
+    .line 1564
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     iget v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionLimit:I
 
     if-ge v0, v1, :cond_0
 
-    .line 1496
+    .line 1567
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
-    .line 1497
+    .line 1568
     invoke-interface {p2, p0, p3}, Lcom/google/protobuf/Parser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p2
@@ -1071,14 +982,14 @@
 
     const/4 p3, 0x4
 
-    .line 1498
+    .line 1569
     invoke-static {p1, p3}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->checkLastTagWas(I)V
 
-    .line 1499
+    .line 1570
     iget p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 p1, p1, -0x1
@@ -1087,7 +998,7 @@
 
     return-object p2
 
-    .line 1494
+    .line 1565
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->recursionLimitExceeded()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1104,33 +1015,33 @@
         }
     .end annotation
 
-    .line 1477
+    .line 1548
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     iget v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionLimit:I
 
     if-ge v0, v1, :cond_0
 
-    .line 1480
+    .line 1551
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
-    .line 1481
+    .line 1552
     invoke-interface {p2, p0, p3}, Lcom/google/protobuf/MessageLite$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite$Builder;
 
     const/4 p2, 0x4
 
-    .line 1482
+    .line 1553
     invoke-static {p1, p2}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->checkLastTagWas(I)V
 
-    .line 1483
+    .line 1554
     iget p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 p1, p1, -0x1
@@ -1139,7 +1050,7 @@
 
     return-void
 
-    .line 1478
+    .line 1549
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->recursionLimitExceeded()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1156,7 +1067,7 @@
         }
     .end annotation
 
-    .line 1408
+    .line 1481
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
@@ -1172,7 +1083,7 @@
         }
     .end annotation
 
-    .line 1403
+    .line 1476
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint64()J
 
     move-result-wide v0
@@ -1200,31 +1111,31 @@
         }
     .end annotation
 
-    .line 1530
+    .line 1601
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
 
-    .line 1531
+    .line 1602
     iget v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     iget v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionLimit:I
 
     if-ge v1, v2, :cond_0
 
-    .line 1534
+    .line 1605
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pushLimit(I)I
 
     move-result v0
 
-    .line 1535
+    .line 1606
     iget v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
-    .line 1536
+    .line 1607
     invoke-interface {p1, p0, p2}, Lcom/google/protobuf/Parser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p1
@@ -1233,22 +1144,22 @@
 
     const/4 p2, 0x0
 
-    .line 1537
+    .line 1608
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->checkLastTagWas(I)V
 
-    .line 1538
+    .line 1609
     iget p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 p2, p2, -0x1
 
     iput p2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
-    .line 1539
+    .line 1610
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->popLimit(I)V
 
     return-object p1
 
-    .line 1532
+    .line 1603
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->recursionLimitExceeded()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1265,51 +1176,51 @@
         }
     .end annotation
 
-    .line 1514
+    .line 1585
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
 
-    .line 1515
+    .line 1586
     iget v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     iget v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionLimit:I
 
     if-ge v1, v2, :cond_0
 
-    .line 1518
+    .line 1589
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pushLimit(I)I
 
     move-result v0
 
-    .line 1519
+    .line 1590
     iget v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
-    .line 1520
+    .line 1591
     invoke-interface {p1, p0, p2}, Lcom/google/protobuf/MessageLite$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite$Builder;
 
     const/4 p1, 0x0
 
-    .line 1521
+    .line 1592
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->checkLastTagWas(I)V
 
-    .line 1522
+    .line 1593
     iget p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->recursionDepth:I
 
-    .line 1523
+    .line 1594
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->popLimit(I)V
 
     return-void
 
-    .line 1516
+    .line 1587
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->recursionLimitExceeded()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1326,7 +1237,7 @@
         }
     .end annotation
 
-    .line 1871
+    .line 1948
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
@@ -1339,7 +1250,7 @@
 
     add-long/2addr v2, v0
 
-    .line 1874
+    .line 1951
     iput-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
@@ -1348,7 +1259,7 @@
 
     return v0
 
-    .line 1872
+    .line 1949
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1367,17 +1278,17 @@
 
     if-ltz p1, :cond_0
 
-    .line 1879
+    .line 1956
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v0
 
     if-gt p1, v0, :cond_0
 
-    .line 1880
+    .line 1957
     new-array v0, p1, [B
 
-    .line 1881
+    .line 1958
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     int-to-long v3, p1
@@ -1390,7 +1301,7 @@
 
     invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 1882
+    .line 1959
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     add-long/2addr v1, v3
@@ -1404,12 +1315,12 @@
 
     if-nez p1, :cond_1
 
-    .line 1888
+    .line 1965
     sget-object p1, Lcom/google/protobuf/Internal;->EMPTY_BYTE_ARRAY:[B
 
     return-object p1
 
-    .line 1890
+    .line 1967
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1417,7 +1328,7 @@
 
     throw p1
 
-    .line 1894
+    .line 1971
     :cond_2
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1434,10 +1345,10 @@
         }
     .end annotation
 
-    .line 1785
+    .line 1862
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1787
+    .line 1864
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     sub-long/2addr v2, v0
@@ -1450,10 +1361,10 @@
 
     add-long/2addr v4, v0
 
-    .line 1791
+    .line 1868
     iput-wide v4, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1792
+    .line 1869
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v2
@@ -1464,7 +1375,7 @@
 
     add-long/2addr v3, v0
 
-    .line 1793
+    .line 1870
     invoke-static {v3, v4}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v3
@@ -1479,7 +1390,7 @@
 
     add-long/2addr v3, v0
 
-    .line 1794
+    .line 1871
     invoke-static {v3, v4}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v3
@@ -1494,7 +1405,7 @@
 
     add-long/2addr v0, v3
 
-    .line 1795
+    .line 1872
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v0
@@ -1507,7 +1418,7 @@
 
     return v0
 
-    .line 1788
+    .line 1865
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1524,10 +1435,10 @@
         }
     .end annotation
 
-    .line 1800
+    .line 1877
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1802
+    .line 1879
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     sub-long/2addr v2, v0
@@ -1540,10 +1451,10 @@
 
     add-long/2addr v4, v0
 
-    .line 1806
+    .line 1883
     iput-wide v4, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1807
+    .line 1884
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v2
@@ -1558,7 +1469,7 @@
 
     add-long/2addr v6, v0
 
-    .line 1808
+    .line 1885
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -1577,7 +1488,7 @@
 
     add-long/2addr v6, v0
 
-    .line 1809
+    .line 1886
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -1596,7 +1507,7 @@
 
     add-long/2addr v6, v0
 
-    .line 1810
+    .line 1887
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -1615,7 +1526,7 @@
 
     add-long/2addr v6, v0
 
-    .line 1811
+    .line 1888
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -1634,7 +1545,7 @@
 
     add-long/2addr v6, v0
 
-    .line 1812
+    .line 1889
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -1653,7 +1564,7 @@
 
     add-long/2addr v6, v0
 
-    .line 1813
+    .line 1890
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -1672,7 +1583,7 @@
 
     add-long/2addr v0, v6
 
-    .line 1814
+    .line 1891
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v0
@@ -1689,7 +1600,7 @@
 
     return-wide v0
 
-    .line 1803
+    .line 1880
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1706,10 +1617,10 @@
         }
     .end annotation
 
-    .line 1635
+    .line 1712
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1637
+    .line 1714
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     cmp-long v2, v2, v0
@@ -1723,19 +1634,19 @@
 
     add-long v4, v0, v2
 
-    .line 1642
+    .line 1719
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v0
 
     if-ltz v0, :cond_1
 
-    .line 1643
+    .line 1720
     iput-wide v4, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     return v0
 
-    .line 1645
+    .line 1722
     :cond_1
     iget-wide v6, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
@@ -1752,7 +1663,7 @@
     :cond_2
     add-long v6, v4, v2
 
-    .line 1647
+    .line 1724
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1770,7 +1681,7 @@
     :cond_3
     add-long v4, v6, v2
 
-    .line 1649
+    .line 1726
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1791,7 +1702,7 @@
     :cond_5
     add-long v6, v4, v2
 
-    .line 1651
+    .line 1728
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1811,7 +1722,7 @@
     :cond_6
     add-long v4, v6, v2
 
-    .line 1654
+    .line 1731
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1828,7 +1739,7 @@
 
     add-long v6, v4, v2
 
-    .line 1658
+    .line 1735
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1837,7 +1748,7 @@
 
     add-long v4, v6, v2
 
-    .line 1659
+    .line 1736
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1846,7 +1757,7 @@
 
     add-long v6, v4, v2
 
-    .line 1660
+    .line 1737
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1855,7 +1766,7 @@
 
     add-long v4, v6, v2
 
-    .line 1661
+    .line 1738
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1864,14 +1775,14 @@
 
     add-long v6, v4, v2
 
-    .line 1662
+    .line 1739
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
 
     if-gez v1, :cond_7
 
-    .line 1669
+    .line 1746
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint64SlowPath()J
 
@@ -1881,7 +1792,7 @@
 
     return v0
 
-    .line 1666
+    .line 1743
     :cond_7
     :goto_1
     iput-wide v6, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
@@ -1897,10 +1808,10 @@
         }
     .end annotation
 
-    .line 1713
+    .line 1790
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1715
+    .line 1792
     iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
     cmp-long v2, v2, v0
@@ -1914,21 +1825,21 @@
 
     add-long v4, v0, v2
 
-    .line 1721
+    .line 1798
     invoke-static {v0, v1}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v0
 
     if-ltz v0, :cond_1
 
-    .line 1722
+    .line 1799
     iput-wide v4, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     int-to-long v0, v0
 
     return-wide v0
 
-    .line 1724
+    .line 1801
     :cond_1
     iget-wide v6, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->limit:J
 
@@ -1945,7 +1856,7 @@
     :cond_2
     add-long v6, v4, v2
 
-    .line 1726
+    .line 1803
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1968,7 +1879,7 @@
     :cond_3
     add-long v4, v6, v2
 
-    .line 1728
+    .line 1805
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -1988,7 +1899,7 @@
     :cond_4
     add-long v6, v4, v2
 
-    .line 1730
+    .line 1807
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v1
@@ -2010,7 +1921,7 @@
 
     add-long v4, v6, v2
 
-    .line 1732
+    .line 1809
     invoke-static {v6, v7}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v6
@@ -2039,7 +1950,7 @@
     :cond_6
     add-long v8, v4, v2
 
-    .line 1734
+    .line 1811
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v4
@@ -2068,7 +1979,7 @@
     :cond_7
     add-long v4, v8, v2
 
-    .line 1736
+    .line 1813
     invoke-static {v8, v9}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v8
@@ -2092,7 +2003,7 @@
     :cond_8
     add-long v8, v4, v2
 
-    .line 1738
+    .line 1815
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v4
@@ -2116,7 +2027,7 @@
     :cond_9
     add-long v4, v8, v2
 
-    .line 1748
+    .line 1825
     invoke-static {v8, v9}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v8
@@ -2139,7 +2050,7 @@
 
     add-long/2addr v2, v4
 
-    .line 1759
+    .line 1836
     invoke-static {v4, v5}, Lcom/google/protobuf/UnsafeUtil;->getByte(J)B
 
     move-result v4
@@ -2150,7 +2061,7 @@
 
     if-gez v4, :cond_a
 
-    .line 1767
+    .line 1844
     :goto_3
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint64SlowPath()J
 
@@ -2161,7 +2072,7 @@
     :cond_a
     move-wide v4, v2
 
-    .line 1764
+    .line 1841
     :cond_b
     :goto_4
     iput-wide v4, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
@@ -2186,7 +2097,7 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 1774
+    .line 1851
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawByte()B
 
     move-result v3
@@ -2210,7 +2121,7 @@
 
     goto :goto_0
 
-    .line 1780
+    .line 1857
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->malformedVarint()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -2227,7 +2138,7 @@
         }
     .end annotation
 
-    .line 1610
+    .line 1687
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian32()I
 
     move-result v0
@@ -2243,7 +2154,7 @@
         }
     .end annotation
 
-    .line 1615
+    .line 1692
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian64()J
 
     move-result-wide v0
@@ -2259,7 +2170,7 @@
         }
     .end annotation
 
-    .line 1620
+    .line 1697
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
@@ -2279,7 +2190,7 @@
         }
     .end annotation
 
-    .line 1625
+    .line 1702
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint64()J
 
     move-result-wide v0
@@ -2292,53 +2203,58 @@
 .end method
 
 .method public readString()Ljava/lang/String;
-    .locals 7
+    .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 1428
+    .line 1501
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 1429
+    .line 1502
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v1
 
     if-gt v0, v1, :cond_0
 
-    .line 1431
-    iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    .line 1507
+    new-array v1, v0, [B
 
-    int-to-long v3, v0
+    .line 1508
+    iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    add-long v5, v1, v3
+    const-wide/16 v5, 0x0
 
-    invoke-direct {p0, v1, v2, v5, v6}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->copyToArray(JJ)[B
+    int-to-long v9, v0
 
-    move-result-object v0
+    move-object v4, v1
 
-    .line 1432
-    new-instance v1, Ljava/lang/String;
+    move-wide v7, v9
+
+    invoke-static/range {v2 .. v8}, Lcom/google/protobuf/UnsafeUtil;->copyMemory(J[BJJ)V
+
+    .line 1509
+    new-instance v0, Ljava/lang/String;
 
     sget-object v2, Lcom/google/protobuf/Internal;->UTF_8:Ljava/nio/charset/Charset;
 
-    invoke-direct {v1, v0, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    .line 1433
-    iget-wide v5, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    .line 1510
+    iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    add-long/2addr v5, v3
+    add-long/2addr v1, v9
 
-    iput-wide v5, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    iput-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    return-object v1
+    return-object v0
 
     :cond_0
     if-nez v0, :cond_1
@@ -2350,14 +2266,14 @@
     :cond_1
     if-gez v0, :cond_2
 
-    .line 1441
+    .line 1518
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
 
     throw v0
 
-    .line 1443
+    .line 1520
     :cond_2
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -2367,88 +2283,71 @@
 .end method
 
 .method public readStringRequireUtf8()Ljava/lang/String;
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 1448
+    .line 1525
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
 
-    if-ltz v0, :cond_1
+    if-lez v0, :cond_0
 
-    .line 1449
+    .line 1526
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v1
 
-    if-gt v0, v1, :cond_1
+    if-gt v0, v1, :cond_0
 
-    .line 1451
+    .line 1527
     iget-wide v1, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    int-to-long v3, v0
-
-    add-long v5, v1, v3
-
-    invoke-direct {p0, v1, v2, v5, v6}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->copyToArray(JJ)[B
-
-    move-result-object v0
-
-    .line 1453
-    invoke-static {v0}, Lcom/google/protobuf/Utf8;->isValidUtf8([B)Z
+    invoke-direct {p0, v1, v2}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->bufferPos(J)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    .line 1528
+    iget-object v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 1457
-    new-instance v1, Ljava/lang/String;
+    invoke-static {v2, v1, v0}, Lcom/google/protobuf/Utf8;->decodeUtf8(Ljava/nio/ByteBuffer;II)Ljava/lang/String;
 
-    sget-object v2, Lcom/google/protobuf/Internal;->UTF_8:Ljava/nio/charset/Charset;
+    move-result-object v1
 
-    invoke-direct {v1, v0, v2}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    .line 1529
+    iget-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
-    .line 1458
-    iget-wide v5, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    int-to-long v4, v0
 
-    add-long/2addr v5, v3
+    add-long/2addr v2, v4
 
-    iput-wide v5, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
+    iput-wide v2, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     return-object v1
 
-    .line 1454
     :cond_0
-    invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidUtf8()Lcom/google/protobuf/InvalidProtocolBufferException;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_1
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     const-string v0, ""
 
     return-object v0
 
-    :cond_2
-    if-gtz v0, :cond_3
+    :cond_1
+    if-gtz v0, :cond_2
 
-    .line 1466
+    .line 1537
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
 
     throw v0
 
-    .line 1468
-    :cond_3
+    .line 1539
+    :cond_2
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
@@ -2464,7 +2363,7 @@
         }
     .end annotation
 
-    .line 1259
+    .line 1332
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->isAtEnd()Z
 
     move-result v0
@@ -2473,12 +2372,12 @@
 
     const/4 v0, 0x0
 
-    .line 1260
+    .line 1333
     iput v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->lastTag:I
 
     return v0
 
-    .line 1264
+    .line 1337
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
@@ -2486,7 +2385,7 @@
 
     iput v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->lastTag:I
 
-    .line 1265
+    .line 1338
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->lastTag:I
 
     invoke-static {v0}, Lcom/google/protobuf/WireFormat;->getTagFieldNumber(I)I
@@ -2495,12 +2394,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1270
+    .line 1343
     iget v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->lastTag:I
 
     return v0
 
-    .line 1268
+    .line 1341
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidTag()Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -2517,7 +2416,7 @@
         }
     .end annotation
 
-    .line 1600
+    .line 1677
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
     move-result v0
@@ -2533,7 +2432,7 @@
         }
     .end annotation
 
-    .line 1398
+    .line 1471
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint64()J
 
     move-result-wide v0
@@ -2552,7 +2451,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1507
+    .line 1578
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistryLite;->getEmptyRegistry()Lcom/google/protobuf/ExtensionRegistryLite;
 
     move-result-object v0
@@ -2565,7 +2464,7 @@
 .method public resetSizeCounter()V
     .locals 2
 
-    .line 1824
+    .line 1901
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     iput-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->startPos:J
@@ -2581,7 +2480,7 @@
         }
     .end annotation
 
-    .line 1287
+    .line 1360
     invoke-static {p1}, Lcom/google/protobuf/WireFormat;->getTagWireType(I)I
 
     move-result v0
@@ -2608,12 +2507,12 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1305
+    .line 1378
     invoke-virtual {p0, v3}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipRawBytes(I)V
 
     return v1
 
-    .line 1308
+    .line 1381
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidWireType()Lcom/google/protobuf/InvalidProtocolBufferException$InvalidWireTypeException;
 
@@ -2626,11 +2525,11 @@
 
     return p1
 
-    .line 1298
+    .line 1371
     :cond_2
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipMessage()V
 
-    .line 1300
+    .line 1373
     invoke-static {p1}, Lcom/google/protobuf/WireFormat;->getTagFieldNumber(I)I
 
     move-result p1
@@ -2639,12 +2538,12 @@
 
     move-result p1
 
-    .line 1299
+    .line 1372
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->checkLastTagWas(I)V
 
     return v1
 
-    .line 1295
+    .line 1368
     :cond_3
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawVarint32()I
 
@@ -2657,12 +2556,12 @@
     :cond_4
     const/16 p1, 0x8
 
-    .line 1292
+    .line 1365
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipRawBytes(I)V
 
     return v1
 
-    .line 1289
+    .line 1362
     :cond_5
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipRawVarint()V
 
@@ -2677,7 +2576,7 @@
         }
     .end annotation
 
-    .line 1314
+    .line 1387
     invoke-static {p1}, Lcom/google/protobuf/WireFormat;->getTagWireType(I)I
 
     move-result v0
@@ -2704,20 +2603,20 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1353
+    .line 1426
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian32()I
 
     move-result v0
 
-    .line 1354
+    .line 1427
     invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedOutputStream;->writeRawVarint32(I)V
 
-    .line 1355
+    .line 1428
     invoke-virtual {p2, v0}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32NoTag(I)V
 
     return v1
 
-    .line 1359
+    .line 1432
     :cond_0
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->invalidWireType()Lcom/google/protobuf/InvalidProtocolBufferException$InvalidWireTypeException;
 
@@ -2730,69 +2629,69 @@
 
     return p1
 
-    .line 1338
+    .line 1411
     :cond_2
     invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedOutputStream;->writeRawVarint32(I)V
 
-    .line 1339
+    .line 1412
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipMessage(Lcom/google/protobuf/CodedOutputStream;)V
 
-    .line 1342
+    .line 1415
     invoke-static {p1}, Lcom/google/protobuf/WireFormat;->getTagFieldNumber(I)I
 
     move-result p1
 
-    .line 1341
+    .line 1414
     invoke-static {p1, v3}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result p1
 
-    .line 1343
+    .line 1416
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->checkLastTagWas(I)V
 
-    .line 1344
+    .line 1417
     invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedOutputStream;->writeRawVarint32(I)V
 
     return v1
 
-    .line 1331
+    .line 1404
     :cond_3
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readBytes()Lcom/google/protobuf/ByteString;
 
     move-result-object v0
 
-    .line 1332
+    .line 1405
     invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedOutputStream;->writeRawVarint32(I)V
 
-    .line 1333
+    .line 1406
     invoke-virtual {p2, v0}, Lcom/google/protobuf/CodedOutputStream;->writeBytesNoTag(Lcom/google/protobuf/ByteString;)V
 
     return v1
 
-    .line 1324
+    .line 1397
     :cond_4
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readRawLittleEndian64()J
 
     move-result-wide v2
 
-    .line 1325
+    .line 1398
     invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedOutputStream;->writeRawVarint32(I)V
 
-    .line 1326
+    .line 1399
     invoke-virtual {p2, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64NoTag(J)V
 
     return v1
 
-    .line 1317
+    .line 1390
     :cond_5
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readInt64()J
 
     move-result-wide v2
 
-    .line 1318
+    .line 1391
     invoke-virtual {p2, p1}, Lcom/google/protobuf/CodedOutputStream;->writeRawVarint32(I)V
 
-    .line 1319
+    .line 1392
     invoke-virtual {p2, v2, v3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64NoTag(J)V
 
     return v1
@@ -2806,7 +2705,7 @@
         }
     .end annotation
 
-    .line 1366
+    .line 1439
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readTag()I
 
@@ -2814,7 +2713,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1367
+    .line 1440
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipField(I)Z
 
     move-result v0
@@ -2833,7 +2732,7 @@
         }
     .end annotation
 
-    .line 1376
+    .line 1449
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->readTag()I
 
@@ -2841,7 +2740,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1377
+    .line 1450
     invoke-virtual {p0, v0, p1}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->skipField(ILcom/google/protobuf/CodedOutputStream;)Z
 
     move-result v0
@@ -2862,14 +2761,14 @@
 
     if-ltz p1, :cond_0
 
-    .line 1899
+    .line 1976
     invoke-direct {p0}, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->remaining()I
 
     move-result v0
 
     if-gt p1, v0, :cond_0
 
-    .line 1901
+    .line 1978
     iget-wide v0, p0, Lcom/google/protobuf/CodedInputStream$UnsafeDirectNioDecoder;->pos:J
 
     int-to-long v2, p1
@@ -2883,14 +2782,14 @@
     :cond_0
     if-gez p1, :cond_1
 
-    .line 1906
+    .line 1983
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->negativeSize()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
 
     throw p1
 
-    .line 1908
+    .line 1985
     :cond_1
     invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
 

@@ -36,17 +36,17 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .line 642
+    .line 649
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 640
+    .line 647
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/provider/FileProvider$b;->b:Ljava/util/HashMap;
 
-    .line 643
+    .line 650
     iput-object p1, p0, Lcom/oppo/camera/sticker/provider/FileProvider$b;->a:Ljava/lang/String;
 
     return-void
@@ -57,7 +57,7 @@
 .method public a(Ljava/io/File;)Landroid/net/Uri;
     .locals 5
 
-    .line 670
+    .line 677
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
 
@@ -67,7 +67,7 @@
 
     const/4 v0, 0x0
 
-    .line 678
+    .line 685
     iget-object v1, p0, Lcom/oppo/camera/sticker/provider/FileProvider$b;->b:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -92,7 +92,7 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 679
+    .line 686
     invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v3
@@ -103,7 +103,7 @@
 
     move-result-object v3
 
-    .line 681
+    .line 688
     invoke-virtual {p1, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v4
@@ -112,7 +112,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 682
+    .line 689
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -141,7 +141,7 @@
     :cond_2
     if-eqz v0, :cond_4
 
-    .line 692
+    .line 699
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -154,14 +154,14 @@
 
     const-string v2, "/"
 
-    .line 694
+    .line 701
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 695
+    .line 702
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v1
@@ -172,7 +172,7 @@
 
     goto :goto_1
 
-    .line 697
+    .line 704
     :cond_3
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -184,7 +184,7 @@
 
     move-result-object p1
 
-    .line 701
+    .line 708
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -216,7 +216,7 @@
 
     move-result-object p1
 
-    .line 702
+    .line 709
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -243,7 +243,7 @@
 
     return-object p1
 
-    .line 688
+    .line 695
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -265,7 +265,7 @@
 
     throw v0
 
-    .line 672
+    .line 679
     :catch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -291,7 +291,7 @@
 .method public a(Landroid/net/Uri;)Ljava/io/File;
     .locals 4
 
-    .line 707
+    .line 714
     invoke-virtual {p1}, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
 
     move-result-object v0
@@ -300,12 +300,12 @@
 
     const/16 v2, 0x2f
 
-    .line 709
+    .line 716
     invoke-virtual {v0, v2, v1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v2
 
-    .line 710
+    .line 717
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
@@ -316,7 +316,7 @@
 
     add-int/2addr v2, v1
 
-    .line 711
+    .line 718
     invoke-virtual {v0, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
@@ -325,7 +325,7 @@
 
     move-result-object v0
 
-    .line 713
+    .line 720
     iget-object v1, p0, Lcom/oppo/camera/sticker/provider/FileProvider$b;->b:Ljava/util/HashMap;
 
     invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -336,12 +336,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 719
+    .line 726
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 722
+    .line 729
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
 
@@ -349,7 +349,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 727
+    .line 734
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -366,7 +366,7 @@
 
     return-object p1
 
-    .line 728
+    .line 735
     :cond_0
     new-instance p1, Ljava/lang/SecurityException;
 
@@ -376,7 +376,7 @@
 
     throw p1
 
-    .line 724
+    .line 731
     :catch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -398,7 +398,7 @@
 
     throw v0
 
-    .line 716
+    .line 723
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -424,14 +424,14 @@
 .method public a(Ljava/lang/String;Ljava/io/File;)V
     .locals 3
 
-    .line 651
+    .line 658
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 657
+    .line 664
     :try_start_0
     invoke-virtual {p2}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
 
@@ -439,7 +439,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 662
+    .line 669
     iget-object v0, p0, Lcom/oppo/camera/sticker/provider/FileProvider$b;->b:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -449,7 +449,7 @@
     :catch_0
     move-exception p1
 
-    .line 659
+    .line 666
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -470,7 +470,7 @@
 
     throw v0
 
-    .line 652
+    .line 659
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

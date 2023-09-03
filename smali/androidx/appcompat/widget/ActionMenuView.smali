@@ -1183,6 +1183,8 @@
 
 .method public a(Landroidx/appcompat/view/menu/n$a;Landroidx/appcompat/view/menu/h$a;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 670
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->h:Landroidx/appcompat/view/menu/n$a;
@@ -1195,6 +1197,8 @@
 
 .method public a()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 570
     iget-boolean v0, p0, Landroidx/appcompat/widget/ActionMenuView;->f:Z
@@ -1204,6 +1208,8 @@
 
 .method protected a(I)Z
     .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1267,6 +1273,8 @@
 
 .method public a(Landroidx/appcompat/view/menu/j;)Z
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 623
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->c:Landroidx/appcompat/view/menu/h;
@@ -1300,6 +1308,8 @@
 
 .method public c()Landroidx/appcompat/widget/ActionMenuView$c;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 614
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActionMenuView;->b()Landroidx/appcompat/widget/ActionMenuView$c;
@@ -1325,6 +1335,8 @@
 
 .method public d()Landroidx/appcompat/view/menu/h;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 680
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->c:Landroidx/appcompat/view/menu/h;
@@ -1591,6 +1603,8 @@
 
 .method public getWindowAnimations()I
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1599,6 +1613,8 @@
 
 .method public h()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 714
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->g:Landroidx/appcompat/widget/ActionMenuPresenter;
@@ -1639,6 +1655,8 @@
 
 .method public initialize(Landroidx/appcompat/view/menu/h;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 637
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->c:Landroidx/appcompat/view/menu/h;
@@ -1744,7 +1762,7 @@
     sub-int/2addr v5, v6
 
     .line 452
-    invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v6
 
@@ -2236,6 +2254,8 @@
 
 .method public setExpandedActionViewsExclusive(Z)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 754
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuView;->g:Landroidx/appcompat/widget/ActionMenuPresenter;
@@ -2270,6 +2290,8 @@
 
 .method public setOverflowReserved(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 576
     iput-boolean p1, p0, Landroidx/appcompat/widget/ActionMenuView;->f:Z
@@ -2318,6 +2340,8 @@
 
 .method public setPresenter(Landroidx/appcompat/widget/ActionMenuPresenter;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 123
     iput-object p1, p0, Landroidx/appcompat/widget/ActionMenuView;->g:Landroidx/appcompat/widget/ActionMenuPresenter;

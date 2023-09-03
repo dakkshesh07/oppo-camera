@@ -1,5 +1,5 @@
 .class public Lcom/android/ui/menu/CameraSwitchPreference;
-.super Lcom/color/support/preference/ColorSwitchPreference;
+.super Lcom/coui/appcompat/preference/COUISwitchPreference;
 .source "CameraSwitchPreference.java"
 
 # interfaces
@@ -11,19 +11,21 @@
 
 .field private c:Landroidx/preference/Preference;
 
-.field private d:Lcolor/support/v7/app/b;
+.field private d:Lcom/coui/appcompat/dialog/app/b;
 
-.field private final e:Landroid/content/DialogInterface$OnClickListener;
+.field private e:Lcom/coui/appcompat/dialog/app/b;
 
 .field private final f:Landroid/content/DialogInterface$OnClickListener;
+
+.field private final g:Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 41
-    invoke-direct {p0, p1}, Lcom/color/support/preference/ColorSwitchPreference;-><init>(Landroid/content/Context;)V
+    .line 42
+    invoke-direct {p0, p1}, Lcom/coui/appcompat/preference/COUISwitchPreference;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
@@ -34,26 +36,29 @@
     iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
     .line 38
-    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcom/coui/appcompat/dialog/app/b;
 
-    .line 112
+    .line 39
+    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
+
+    .line 110
     new-instance v0, Lcom/android/ui/menu/CameraSwitchPreference$1;
 
     invoke-direct {v0, p0}, Lcom/android/ui/menu/CameraSwitchPreference$1;-><init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
 
-    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 135
+    .line 133
     new-instance v0, Lcom/android/ui/menu/CameraSwitchPreference$2;
 
     invoke-direct {v0, p0}, Lcom/android/ui/menu/CameraSwitchPreference$2;-><init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
 
-    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 42
-    iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
+    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->g:Landroid/content/DialogInterface$OnClickListener;
 
     .line 43
+    iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
+
+    .line 44
     invoke-virtual {p0, p0}, Lcom/android/ui/menu/CameraSwitchPreference;->a(Landroidx/preference/Preference$b;)V
 
     return-void
@@ -62,8 +67,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 47
-    invoke-direct {p0, p1, p2}, Lcom/color/support/preference/ColorSwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 48
+    invoke-direct {p0, p1, p2}, Lcom/coui/appcompat/preference/COUISwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p2, 0x0
 
@@ -74,26 +79,29 @@
     iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
     .line 38
-    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcom/coui/appcompat/dialog/app/b;
 
-    .line 112
+    .line 39
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
+
+    .line 110
     new-instance p2, Lcom/android/ui/menu/CameraSwitchPreference$1;
 
     invoke-direct {p2, p0}, Lcom/android/ui/menu/CameraSwitchPreference$1;-><init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
 
-    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 135
+    .line 133
     new-instance p2, Lcom/android/ui/menu/CameraSwitchPreference$2;
 
     invoke-direct {p2, p0}, Lcom/android/ui/menu/CameraSwitchPreference$2;-><init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
 
-    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 48
-    iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->g:Landroid/content/DialogInterface$OnClickListener;
 
     .line 49
+    iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
+
+    .line 50
     invoke-virtual {p0, p0}, Lcom/android/ui/menu/CameraSwitchPreference;->a(Landroidx/preference/Preference$b;)V
 
     return-void
@@ -102,8 +110,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 53
-    invoke-direct {p0, p1, p2, p3}, Lcom/color/support/preference/ColorSwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 54
+    invoke-direct {p0, p1, p2, p3}, Lcom/coui/appcompat/preference/COUISwitchPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p2, 0x0
 
@@ -114,26 +122,29 @@
     iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
     .line 38
-    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcom/coui/appcompat/dialog/app/b;
 
-    .line 112
+    .line 39
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
+
+    .line 110
     new-instance p2, Lcom/android/ui/menu/CameraSwitchPreference$1;
 
     invoke-direct {p2, p0}, Lcom/android/ui/menu/CameraSwitchPreference$1;-><init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
 
-    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Landroid/content/DialogInterface$OnClickListener;
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
 
-    .line 135
+    .line 133
     new-instance p2, Lcom/android/ui/menu/CameraSwitchPreference$2;
 
     invoke-direct {p2, p0}, Lcom/android/ui/menu/CameraSwitchPreference$2;-><init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
 
-    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
-
-    .line 54
-    iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
+    iput-object p2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->g:Landroid/content/DialogInterface$OnClickListener;
 
     .line 55
+    iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
+
+    .line 56
     invoke-virtual {p0, p0}, Lcom/android/ui/menu/CameraSwitchPreference;->a(Landroidx/preference/Preference$b;)V
 
     return-void
@@ -151,7 +162,7 @@
 .method private l()V
     .locals 4
 
-    .line 120
+    .line 118
     iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
     if-nez v0, :cond_0
@@ -160,16 +171,16 @@
 
     const-string v1, "Exception: null == mPreference"
 
-    .line 121
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 119
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 126
+    .line 124
     :cond_0
     monitor-enter v0
 
-    .line 127
+    .line 125
     :try_start_0
     iget-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
@@ -181,7 +192,7 @@
 
     move-result-object v1
 
-    .line 128
+    .line 126
     iget-object v2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
     invoke-virtual {v2}, Landroidx/preference/Preference;->B()Ljava/lang/String;
@@ -192,15 +203,15 @@
 
     invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 129
+    .line 127
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     const/4 v1, 0x0
 
-    .line 131
+    .line 129
     invoke-virtual {p0, v1}, Lcom/android/ui/menu/CameraSwitchPreference;->e(Z)V
 
-    .line 132
+    .line 130
     monitor-exit v0
 
     return-void
@@ -220,64 +231,64 @@
 .method public c()V
     .locals 3
 
-    .line 82
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 81
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->isShowing()Z
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 83
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 82
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->dismiss()V
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->dismiss()V
 
-    .line 86
+    .line 85
     :cond_0
-    new-instance v0, Lcolor/support/v7/app/b$a;
+    new-instance v0, Lcom/coui/appcompat/dialog/app/b$a;
 
     iget-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
 
-    const v2, 0x7f110129
+    const v2, 0x7f110146
 
-    invoke-direct {v0, v1, v2}, Lcolor/support/v7/app/b$a;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lcom/coui/appcompat/dialog/app/b$a;-><init>(Landroid/content/Context;I)V
 
-    const v1, 0x7f100202
+    const v1, 0x7f100376
+
+    .line 86
+    invoke-virtual {v0, v1}, Lcom/coui/appcompat/dialog/app/b$a;->a(I)Lcom/coui/appcompat/dialog/app/b$a;
+
+    const v1, 0x7f10036e
 
     .line 87
-    invoke-virtual {v0, v1}, Lcolor/support/v7/app/b$a;->a(I)Lcolor/support/v7/app/b$a;
+    invoke-virtual {v0, v1}, Lcom/coui/appcompat/dialog/app/b$a;->b(I)Lcom/coui/appcompat/dialog/app/b$a;
 
-    const v1, 0x7f1001fe
+    const v1, 0x7f10036b
 
     .line 88
-    invoke-virtual {v0, v1}, Lcolor/support/v7/app/b$a;->b(I)Lcolor/support/v7/app/b$a;
-
-    const v1, 0x7f1001fb
-
-    .line 89
-    iget-object v2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Landroid/content/DialogInterface$OnClickListener;
-
-    invoke-virtual {v0, v1, v2}, Lcolor/support/v7/app/b$a;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcolor/support/v7/app/b$a;
-
-    const v1, 0x7f1001fa
-
-    .line 90
     iget-object v2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->f:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-virtual {v0, v1, v2}, Lcolor/support/v7/app/b$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcolor/support/v7/app/b$a;
+    invoke-virtual {v0, v1, v2}, Lcom/coui/appcompat/dialog/app/b$a;->a(ILandroid/content/DialogInterface$OnClickListener;)Lcom/coui/appcompat/dialog/app/b$a;
 
-    .line 91
-    invoke-virtual {v0}, Lcolor/support/v7/app/b$a;->a()Lcolor/support/v7/app/b;
+    const v1, 0x7f10036a
+
+    .line 89
+    iget-object v2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->g:Landroid/content/DialogInterface$OnClickListener;
+
+    invoke-virtual {v0, v1, v2}, Lcom/coui/appcompat/dialog/app/b$a;->b(ILandroid/content/DialogInterface$OnClickListener;)Lcom/coui/appcompat/dialog/app/b$a;
+
+    .line 90
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b$a;->a()Lcom/coui/appcompat/dialog/app/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
-    .line 93
+    .line 92
     iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->b:Landroid/content/Context;
 
     instance-of v0, v0, Landroid/app/Activity;
@@ -296,10 +307,10 @@
 
     if-nez v0, :cond_1
 
-    .line 94
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 93
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->show()V
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->show()V
 
     :cond_1
     return-void
@@ -308,7 +319,7 @@
 .method protected c(Z)Z
     .locals 2
 
-    .line 60
+    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -335,7 +346,7 @@
 
     const-string v1, "CameraSwitchPreference"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -346,7 +357,7 @@
     :cond_0
     const-string p1, "off"
 
-    .line 61
+    .line 62
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/ui/menu/CameraSwitchPreference;->d(Ljava/lang/String;)Z
 
@@ -356,41 +367,66 @@
 .end method
 
 .method public d()V
-    .locals 2
+    .locals 3
 
     const-string v0, "CameraSwitchPreference"
 
     const-string v1, "release"
 
-    .line 143
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 141
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
-    iget-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 143
+    iget-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcom/coui/appcompat/dialog/app/b;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcolor/support/v7/app/b;->isShowing()Z
+    invoke-virtual {v1}, Lcom/coui/appcompat/dialog/app/b;->isShowing()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const-string v1, "release, mStoragePlaceDialog dismiss"
+    const-string v1, "release, mRecordLocationDialog dismiss"
+
+    .line 144
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 146
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcom/coui/appcompat/dialog/app/b;
 
-    .line 148
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
-
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->dismiss()V
+    invoke-virtual {v1}, Lcom/coui/appcompat/dialog/app/b;->dismiss()V
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v1, 0x0
+
+    .line 149
+    iput-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcom/coui/appcompat/dialog/app/b;
 
     .line 151
-    iput-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    iget-object v2, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Lcom/coui/appcompat/dialog/app/b;->isShowing()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const-string v2, "release, mStoragePlaceDialog dismiss"
+
+    .line 152
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 154
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
+
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->dismiss()V
+
+    .line 157
+    :cond_1
+    iput-object v1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
     return-void
 .end method
@@ -409,13 +445,13 @@
     :cond_0
     const-string p1, "off"
 
-    .line 66
+    .line 67
     :goto_0
     invoke-virtual {p0, p1}, Lcom/android/ui/menu/CameraSwitchPreference;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 67
+    .line 68
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -426,12 +462,12 @@
 .method public e()Z
     .locals 1
 
-    .line 155
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 161
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->isShowing()Z
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->isShowing()Z
 
     move-result v0
 
@@ -450,21 +486,21 @@
 .method public f()V
     .locals 1
 
-    .line 163
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 169
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->isShowing()Z
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 164
-    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->d:Lcolor/support/v7/app/b;
+    .line 170
+    iget-object v0, p0, Lcom/android/ui/menu/CameraSwitchPreference;->e:Lcom/coui/appcompat/dialog/app/b;
 
-    invoke-virtual {v0}, Lcolor/support/v7/app/b;->dismiss()V
+    invoke-virtual {v0}, Lcom/coui/appcompat/dialog/app/b;->dismiss()V
 
     :cond_0
     return-void
@@ -473,7 +509,7 @@
 .method public onPreferenceChange(Landroidx/preference/Preference;Ljava/lang/Object;)Z
     .locals 2
 
-    .line 100
+    .line 99
     invoke-virtual {p1}, Landroidx/preference/Preference;->B()Ljava/lang/String;
 
     move-result-object p2
@@ -486,7 +522,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 101
+    .line 100
     invoke-virtual {p1}, Landroidx/preference/Preference;->K()Landroid/content/SharedPreferences;
 
     move-result-object p2
@@ -507,10 +543,10 @@
 
     if-eqz p2, :cond_0
 
-    .line 102
+    .line 101
     iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference;->c:Landroidx/preference/Preference;
 
-    .line 104
+    .line 102
     invoke-virtual {p0}, Lcom/android/ui/menu/CameraSwitchPreference;->c()V
 
     const/4 p1, 0x0

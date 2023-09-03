@@ -49,9 +49,9 @@
 
     iget-object v0, p0, Landroidx/appcompat/view/menu/r$1;->a:Landroidx/appcompat/view/menu/r;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/r;->a:Landroidx/appcompat/widget/ah;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/r;->a:Landroidx/appcompat/widget/ag;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ah;->i()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ag;->i()Z
 
     move-result v0
 
@@ -77,9 +77,9 @@
     :cond_0
     iget-object v0, p0, Landroidx/appcompat/view/menu/r$1;->a:Landroidx/appcompat/view/menu/r;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/r;->a:Landroidx/appcompat/widget/ah;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/r;->a:Landroidx/appcompat/widget/ag;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ah;->a_()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ag;->a_()V
 
     goto :goto_1
 

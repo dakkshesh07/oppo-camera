@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00c9" />
+    <View android:background="?APKTOOL_DUPLICATE_attr_0x7f0400ee" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <include layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00ce" />
+</LinearLayout>

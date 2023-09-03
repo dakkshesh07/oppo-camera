@@ -282,7 +282,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;-><init>(Lcom/google/android/material/bottomsheet/BottomSheetDialog;)V
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 250
     new-instance p2, Lcom/google/android/material/bottomsheet/BottomSheetDialog$3;

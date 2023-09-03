@@ -63,8 +63,14 @@
 .end field
 
 .field public a:Landroid/content/Context;
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public b:Ljava/util/ArrayList;
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -132,6 +138,19 @@
 
 
 # direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x0
+
+    .line 791
+    invoke-direct {p0, p1, v0}, Landroidx/core/app/h$d;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 4
 
@@ -439,6 +458,15 @@
     move-result-object p1
 
     iput-object p1, v0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
+
+    return-object p0
+.end method
+
+.method public b(Ljava/lang/String;)Landroidx/core/app/h$d;
+    .locals 0
+
+    .line 1571
+    iput-object p1, p0, Landroidx/core/app/h$d;->I:Ljava/lang/String;
 
     return-object p0
 .end method

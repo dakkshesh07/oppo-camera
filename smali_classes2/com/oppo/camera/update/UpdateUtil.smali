@@ -10,6 +10,8 @@
 
 .field private static final APP_UPDATE_TYPE_PREFERENCE_NOW:Ljava/lang/String; = "update_sharePreference_now"
 
+.field public static final APS_TO_UPDATE:Ljava/lang/String; = "apps_camera_update_aps_param"
+
 .field private static final BACK_UP:Ljava/lang/String; = "_BACK_UP"
 
 .field private static final COLUMN_FIME_NAME:Ljava/lang/String; = "filterName"
@@ -54,6 +56,8 @@
 
 .field private static final UPDATE_URI:Landroid/net/Uri;
 
+.field private static final UPDATE_URI_DEBRANDING:Landroid/net/Uri;
+
 .field private static final VERSION:Ljava/lang/String; = "_VERSION"
 
 .field private static sUpdateUtil:Lcom/oppo/camera/update/UpdateUtil;
@@ -93,7 +97,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 63
+    .line 67
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -124,16 +128,25 @@
 
     sput-object v0, Lcom/oppo/camera/update/UpdateUtil;->TARGET_FOLDER:Ljava/lang/String;
 
-    .line 68
+    .line 72
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/oppo/camera/update/UpdateUtil;->LOCK:Ljava/lang/Object;
 
+    const-string v0, "content://com.oplus.romupdate.provider.db/update_list"
+
+    .line 73
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/oppo/camera/update/UpdateUtil;->UPDATE_URI_DEBRANDING:Landroid/net/Uri;
+
     const-string v0, "content://com.nearme.romupdate.provider.db/update_list"
 
-    .line 69
+    .line 74
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -146,15 +159,15 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 80
+    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 76
+    .line 81
     iput v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mNowTryTime:I
 
-    .line 81
+    .line 86
     iput-object p1, p0, Lcom/oppo/camera/update/UpdateUtil;->mContext:Landroid/content/Context;
 
     return-void
@@ -163,7 +176,7 @@
 .method static synthetic access$000()Ljava/lang/Object;
     .locals 1
 
-    .line 35
+    .line 38
     sget-object v0, Lcom/oppo/camera/update/UpdateUtil;->LOCK:Ljava/lang/Object;
 
     return-object v0
@@ -172,8 +185,8 @@
 .method static synthetic access$100(Lcom/oppo/camera/update/UpdateUtil;)V
     .locals 0
 
-    .line 35
-    invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->startUpdateHardwareParameter()V
+    .line 38
+    invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->startUpdateAppParameter()V
 
     return-void
 .end method
@@ -181,8 +194,8 @@
 .method static synthetic access$200(Lcom/oppo/camera/update/UpdateUtil;)V
     .locals 0
 
-    .line 35
-    invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->startUpdateAppParameter()V
+    .line 38
+    invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->startUpdateApsParameter()V
 
     return-void
 .end method
@@ -190,7 +203,7 @@
 .method private deleteFile(Ljava/io/File;)Z
     .locals 1
 
-    .line 187
+    .line 165
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -201,13 +214,13 @@
 
     return p1
 
-    .line 191
+    .line 169
     :cond_0
     invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/oppo/camera/m/a;->c(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/oppo/camera/n/a;->c(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -221,13 +234,13 @@
 
     monitor-enter v0
 
-    .line 85
+    .line 90
     :try_start_0
     sget-object v1, Lcom/oppo/camera/update/UpdateUtil;->sUpdateUtil:Lcom/oppo/camera/update/UpdateUtil;
 
     if-nez v1, :cond_0
 
-    .line 86
+    .line 91
     new-instance v1, Lcom/oppo/camera/update/UpdateUtil;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -238,7 +251,7 @@
 
     sput-object v1, Lcom/oppo/camera/update/UpdateUtil;->sUpdateUtil:Lcom/oppo/camera/update/UpdateUtil;
 
-    .line 89
+    .line 94
     :cond_0
     sget-object p0, Lcom/oppo/camera/update/UpdateUtil;->sUpdateUtil:Lcom/oppo/camera/update/UpdateUtil;
     :try_end_0
@@ -259,12 +272,12 @@
 .method private getSharedPreferences()Landroid/content/SharedPreferences;
     .locals 3
 
-    .line 258
+    .line 284
     iget-object v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
-    .line 259
+    .line 285
     iget-object v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -277,15 +290,205 @@
 
     iput-object v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mSharedPreferences:Landroid/content/SharedPreferences;
 
-    .line 263
+    .line 289
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mSharedPreferences:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
 
+.method private getUnstableContentProviderCursor(Landroid/content/Context;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    .locals 9
+
+    const-string v0, "UpdateUtil"
+
+    const/4 v1, 0x0
+
+    .line 244
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p2}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+
+    move-result-object v2
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v2, :cond_0
+
+    move-object v3, v2
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    move-object v7, p5
+
+    move-object v8, p6
+
+    .line 247
+    :try_start_1
+    invoke-virtual/range {v3 .. v8}, Landroid/content/ContentProviderClient;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v3
+
+    goto :goto_1
+
+    :cond_0
+    const-string v3, "getUnstableContentProviderCursor, client is null!"
+
+    .line 249
+    invoke-static {v0, v3}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    :goto_0
+    if-eqz v2, :cond_3
+
+    .line 276
+    invoke-virtual {v2}, Landroid/content/ContentProviderClient;->close()V
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception p1
+
+    move-object v2, v1
+
+    goto :goto_5
+
+    :catch_1
+    move-exception v3
+
+    move-object v2, v1
+
+    :goto_1
+    :try_start_2
+    const-string v4, "getUnstableContentProviderCursor, RemoteException! e: "
+
+    .line 252
+    invoke-static {v0, v4, v3}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    if-eqz v2, :cond_1
+
+    .line 255
+    invoke-virtual {v2}, Landroid/content/ContentProviderClient;->close()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 264
+    :cond_1
+    :try_start_3
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Landroid/content/ContentResolver;->acquireUnstableContentProviderClient(Landroid/net/Uri;)Landroid/content/ContentProviderClient;
+
+    move-result-object p1
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    if-eqz p1, :cond_2
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v6, p4
+
+    move-object v7, p5
+
+    move-object v8, p6
+
+    .line 267
+    :try_start_4
+    invoke-virtual/range {v3 .. v8}, Landroid/content/ContentProviderClient;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object p2
+
+    move-object v1, p2
+
+    goto :goto_3
+
+    :catch_2
+    move-exception p2
+
+    goto :goto_2
+
+    :cond_2
+    const-string p2, "getUnstableContentProviderCursor2, client is null!"
+
+    .line 269
+    invoke-static {v0, p2}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_4
+    .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_2
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p2
+
+    move-object p1, v2
+
+    :goto_2
+    :try_start_5
+    const-string p3, "getUnstableContentProviderCursor, RemoteException again! "
+
+    .line 272
+    invoke-static {v0, p3, p2}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :goto_3
+    if-eqz p1, :cond_3
+
+    .line 276
+    invoke-virtual {p1}, Landroid/content/ContentProviderClient;->close()V
+
+    :cond_3
+    :goto_4
+    return-object v1
+
+    :catchall_1
+    move-exception p2
+
+    move-object v2, p1
+
+    move-object p1, p2
+
+    goto :goto_5
+
+    :catchall_2
+    move-exception p1
+
+    :goto_5
+    if-eqz v2, :cond_4
+
+    invoke-virtual {v2}, Landroid/content/ContentProviderClient;->close()V
+
+    .line 278
+    :cond_4
+    throw p1
+.end method
+
 .method private queryUpdateRomProvider(Ljava/lang/String;)Ljava/util/Map;
-    .locals 17
+    .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -302,7 +505,7 @@
 
     const-string v1, ""
 
-    .line 195
+    .line 173
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -319,264 +522,285 @@
 
     const-string v3, "UpdateUtil"
 
-    invoke-static {v3, v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 197
+    .line 175
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
+    .line 180
+    invoke-static {}, Lcom/oppo/camera/util/Util;->u()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    sget-object v4, Lcom/oppo/camera/update/UpdateUtil;->UPDATE_URI_DEBRANDING:Landroid/net/Uri;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v4, Lcom/oppo/camera/update/UpdateUtil;->UPDATE_URI:Landroid/net/Uri;
+
+    :goto_0
+    move-object v7, v4
+
     const-string v4, "xml"
 
-    const-string v5, "md5"
+    const-string v12, "md5"
 
-    const-string v6, "version"
+    const-string v13, "version"
 
-    const-string v7, "filterName"
+    const-string v5, "filterName"
 
-    .line 202
-    filled-new-array {v4, v7, v6, v5}, [Ljava/lang/String;
+    .line 181
+    filled-new-array {v4, v5, v13, v12}, [Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v8
 
-    const/4 v7, 0x0
+    .line 182
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "filtername = \""
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, "\""
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
 
     const/4 v14, 0x0
 
-    move-object/from16 v15, p0
+    .line 183
+    new-array v10, v14, [Ljava/lang/String;
 
-    .line 205
+    const-string v11, ""
+
+    const/4 v15, 0x0
+
+    move-object/from16 v6, p0
+
+    .line 187
     :try_start_0
-    iget-object v8, v15, Lcom/oppo/camera/update/UpdateUtil;->mContext:Landroid/content/Context;
+    iget-object v5, v6, Lcom/oppo/camera/update/UpdateUtil;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    move-object/from16 v16, v5
 
-    move-result-object v8
+    move-object/from16 v5, p0
 
-    sget-object v9, Lcom/oppo/camera/update/UpdateUtil;->UPDATE_URI:Landroid/net/Uri;
+    move-object/from16 v6, v16
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    invoke-direct/range {v5 .. v11}, Lcom/oppo/camera/update/UpdateUtil;->getUnstableContentProviderCursor(Landroid/content/Context;Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v12, "filtername = \""
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v12, "\""
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    invoke-virtual/range {v8 .. v13}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v8
+    move-result-object v5
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v8, :cond_0
+    if-eqz v5, :cond_1
 
-    .line 208
+    .line 189
     :try_start_1
-    invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-result v9
+    move-result v6
 
-    if-eqz v9, :cond_0
+    if-eqz v6, :cond_1
 
-    .line 209
-    invoke-interface {v8, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    .line 190
+    invoke-interface {v5, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v4
 
-    invoke-interface {v8, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v5, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 210
+    .line 191
     :try_start_2
-    invoke-interface {v8, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v5, v12}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v9
+    move-result v6
 
-    invoke-interface {v8, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 211
-    invoke-interface {v8, v6}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    .line 192
+    invoke-interface {v5, v13}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    move-result v9
+    move-result v6
 
-    invoke-interface {v8, v9}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v5, v6}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result v9
+    move-result v6
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    move v14, v9
+    move v14, v6
 
-    move-object/from16 v16, v4
+    move-object/from16 v17, v4
 
     move-object v4, v1
 
-    move-object/from16 v1, v16
+    move-object/from16 v1, v17
 
-    goto :goto_0
+    goto :goto_1
 
     :catch_0
-    move-object/from16 v16, v4
+    move-object/from16 v17, v4
 
     move-object v4, v1
 
-    move-object/from16 v1, v16
+    move-object/from16 v1, v17
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_1
     move-object v4, v1
 
-    goto :goto_2
+    goto :goto_3
 
-    :cond_0
+    :cond_1
     move-object v4, v1
 
-    :goto_0
-    if-eqz v8, :cond_1
-
-    .line 217
     :goto_1
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+    if-eqz v5, :cond_2
 
-    goto :goto_3
+    .line 198
+    :goto_2
+    invoke-interface {v5}, Landroid/database/Cursor;->close()V
+
+    goto :goto_4
 
     :catchall_0
     move-exception v0
 
-    goto/16 :goto_6
+    move-object v5, v15
+
+    goto/16 :goto_7
 
     :catch_2
     move-object v4, v1
 
-    move-object v8, v7
+    move-object v5, v15
 
-    :goto_2
+    :goto_3
     :try_start_3
-    const-string v9, "queryUpdateRomProvider, query uri err"
+    const-string v6, "queryUpdateRomProvider, query uri err"
 
-    .line 214
-    invoke-static {v3, v9}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 195
+    invoke-static {v3, v6}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    if-eqz v8, :cond_1
+    if-eqz v5, :cond_2
 
-    goto :goto_1
+    goto :goto_2
 
-    .line 221
-    :cond_1
-    :goto_3
-    new-instance v8, Ljava/lang/StringBuilder;
+    .line 202
+    :cond_2
+    :goto_4
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v9, "queryUpdateRomProvider, content: "
+    const-string v6, "queryUpdateRomProvider, content: "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v9, ", md5: "
+    const-string v6, ", md5: "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v9, ", version: "
+    const-string v6, ", version: "
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v5
 
-    invoke-static {v3, v8}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 223
+    .line 204
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v8
+    move-result v5
 
-    if-nez v8, :cond_6
+    if-nez v5, :cond_7
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v8
+    move-result v5
 
-    if-nez v8, :cond_6
+    if-nez v5, :cond_7
 
-    if-gtz v14, :cond_2
+    if-gtz v14, :cond_3
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
-    .line 229
-    :cond_2
+    .line 210
+    :cond_3
     invoke-static {v1}, Lcom/oppo/camera/update/MD5Utils;->getMD5(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v5
 
-    invoke-virtual {v4, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v8
+    move-result v5
 
-    if-nez v8, :cond_3
+    if-nez v5, :cond_4
 
     const-string v0, "queryUpdateRomProvider, file damage"
 
-    .line 230
-    invoke-static {v3, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 211
+    invoke-static {v3, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v7
+    return-object v15
 
-    .line 235
-    :cond_3
+    .line 216
+    :cond_4
     invoke-direct/range {p0 .. p0}, Lcom/oppo/camera/update/UpdateUtil;->getSharedPreferences()Landroid/content/SharedPreferences;
 
-    move-result-object v7
+    move-result-object v5
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string v0, "_VERSION"
 
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v8, "0"
+    const-string v7, "0"
 
-    invoke-interface {v7, v0, v8}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v5, v0, v7}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -584,113 +808,111 @@
 
     move-result v0
 
-    const-string v7, "queryUpdateRomProvider, do not need to update, nowVersion: "
+    const-string v5, "queryUpdateRomProvider, do not need to update, nowVersion: "
 
-    const-string v8, "updateState"
+    const-string v7, "updateState"
 
-    if-le v0, v14, :cond_4
+    if-le v0, v14, :cond_5
 
-    .line 238
-    new-instance v10, Ljava/lang/StringBuilder;
+    .line 219
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "updated"
 
-    .line 241
-    invoke-interface {v2, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 222
+    invoke-interface {v2, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_4
-    if-ne v0, v14, :cond_5
+    :cond_5
+    if-ne v0, v14, :cond_6
 
-    .line 243
-    new-instance v10, Ljava/lang/StringBuilder;
+    .line 224
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "equal"
 
-    .line 246
-    invoke-interface {v2, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 227
+    invoke-interface {v2, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    goto :goto_4
+    goto :goto_5
 
-    :cond_5
+    :cond_6
     const-string v0, "needUpdate"
 
-    .line 248
-    invoke-interface {v2, v8, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 229
+    invoke-interface {v2, v7, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_4
+    :goto_5
     const-string v0, "content"
 
-    .line 251
+    .line 232
     invoke-interface {v2, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
-    invoke-interface {v2, v5, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 233
+    invoke-interface {v2, v12, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 253
+    .line 234
     invoke-static {v14}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v2, v6, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v13, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v2
 
-    :cond_6
-    :goto_5
+    :cond_7
+    :goto_6
     const-string v0, "queryUpdateRomProvider, content is not correct"
 
-    .line 224
-    invoke-static {v3, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 205
+    invoke-static {v3, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v7
+    return-object v15
 
     :catchall_1
     move-exception v0
 
-    move-object v7, v8
+    :goto_7
+    if-eqz v5, :cond_8
 
-    :goto_6
-    if-eqz v7, :cond_7
+    .line 198
+    invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 217
-    invoke-interface {v7}, Landroid/database/Cursor;->close()V
-
-    .line 219
-    :cond_7
+    .line 200
+    :cond_8
     throw v0
 .end method
 
@@ -703,13 +925,13 @@
 
     const/4 v1, 0x0
 
-    .line 93
+    .line 98
     :try_start_0
     sput-object v1, Lcom/oppo/camera/update/UpdateUtil;->sUpdateUtil:Lcom/oppo/camera/update/UpdateUtil;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 94
+    .line 99
     monitor-exit v0
 
     return-void
@@ -725,21 +947,21 @@
 .method private resetList()V
     .locals 1
 
-    .line 97
+    .line 102
     iget-object v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mUpdateOperationList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 98
+    .line 103
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 101
+    .line 106
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/update/UpdateUtil;->mAppLaterUpdateOperationList:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 102
+    .line 107
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     :cond_1
@@ -749,19 +971,19 @@
 .method private startUpdateAppParameter()V
     .locals 4
 
-    .line 267
+    .line 314
     invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->resetList()V
 
     const-string v0, "camera_update_app_operation"
 
-    .line 268
+    .line 315
     invoke-direct {p0, v0}, Lcom/oppo/camera/update/UpdateUtil;->queryUpdateRomProvider(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 271
+    .line 318
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -786,11 +1008,11 @@
 
     const-string v3, "UpdateUtil"
 
-    invoke-static {v3, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "updateState"
 
-    .line 273
+    .line 320
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -805,7 +1027,7 @@
 
     return-void
 
-    .line 277
+    .line 324
     :cond_0
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -821,7 +1043,7 @@
 
     const-string v1, "version"
 
-    .line 278
+    .line 325
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -836,12 +1058,110 @@
     return-void
 .end method
 
+.method private startUpdateApsParameter()V
+    .locals 4
+
+    const-string v0, "apps_camera_update_aps_param"
+
+    .line 293
+    invoke-direct {p0, v0}, Lcom/oppo/camera/update/UpdateUtil;->queryUpdateRomProvider(Ljava/lang/String;)Ljava/util/Map;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 296
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "startUpdateApsParameter, content: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "content"
+
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "UpdateUtil"
+
+    invoke-static {v3, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "updateState"
+
+    .line 298
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v3, "needUpdate"
+
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    .line 304
+    :cond_0
+    :try_start_0
+    new-instance v1, Lcom/google/gson/Gson;
+
+    invoke-direct {v1}, Lcom/google/gson/Gson;-><init>()V
+
+    .line 305
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    const-class v2, Lcom/oppo/camera/aps/update/ApsUpdateParam;
+
+    invoke-virtual {v1, v0, v2}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oppo/camera/aps/update/ApsUpdateParam;
+
+    .line 306
+    iget-object v1, p0, Lcom/oppo/camera/update/UpdateUtil;->mContext:Landroid/content/Context;
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/update/ApsUpdateHelper;->updateApsParamToFile(Landroid/content/Context;Lcom/oppo/camera/aps/update/ApsUpdateParam;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    .line 308
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
 .method private startUpdateDriverContent([Ljava/lang/String;)Z
     .locals 3
 
     const/4 v0, 0x1
 
-    .line 165
+    .line 143
     :cond_0
     iget v1, p0, Lcom/oppo/camera/update/UpdateUtil;->mNowTryTime:I
 
@@ -851,25 +1171,25 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 166
+    .line 144
     iput v1, p0, Lcom/oppo/camera/update/UpdateUtil;->mNowTryTime:I
 
     if-eqz p1, :cond_2
 
-    .line 168
+    .line 146
     array-length v1, p1
 
     if-lez v1, :cond_2
 
     const/4 v1, 0x0
 
-    .line 169
+    .line 147
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_2
 
-    .line 170
+    .line 148
     aget-object v0, p1, v1
 
     invoke-direct {p0, v0}, Lcom/oppo/camera/update/UpdateUtil;->startUpdateParameter(Ljava/lang/String;)Z
@@ -893,153 +1213,10 @@
     return v0
 .end method
 
-.method private startUpdateHardwareParameter()V
-    .locals 4
-
-    const-string v0, "UpdateUtil"
-
-    const/4 v1, 0x0
-
-    .line 136
-    iput v1, p0, Lcom/oppo/camera/update/UpdateUtil;->mNowTryTime:I
-
-    .line 137
-    new-instance v1, Ljava/io/File;
-
-    sget-object v2, Lcom/oppo/camera/update/UpdateUtil;->TARGET_FOLDER:Ljava/lang/String;
-
-    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 140
-    :try_start_0
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "startUpdateHardwareParameter, fileFolder.exists: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 142
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 143
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/oppo/camera/m/a;->f(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    const-string v0, "camera_update_file_name"
-
-    .line 151
-    invoke-direct {p0, v0}, Lcom/oppo/camera/update/UpdateUtil;->queryUpdateRomProvider(Ljava/lang/String;)Ljava/util/Map;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const-string v1, "updateState"
-
-    .line 154
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "updated"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 155
-    invoke-interface {v0}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    const/16 v2, 0x32
-
-    if-gt v1, v2, :cond_1
-
-    const-string v1, "content"
-
-    .line 156
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v2, "\r"
-
-    const-string v3, ""
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "\n"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {p0, v1}, Lcom/oppo/camera/update/UpdateUtil;->startUpdateDriverContent([Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "version"
-
-    .line 157
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const-string v1, "camera_update_file_name_VERSION"
-
-    invoke-direct {p0, v1, v0}, Lcom/oppo/camera/update/UpdateUtil;->updateSharePreference(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    return-void
-
-    :catch_0
-    const-string v1, "startUpdateHardwareParameter, mkdir err"
-
-    .line 146
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method private startUpdateParameter(Ljava/lang/String;)Z
     .locals 14
 
-    .line 285
+    .line 332
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1056,9 +1233,9 @@
 
     const-string v1, "UpdateUtil"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 287
+    .line 334
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1067,14 +1244,14 @@
 
     if-nez v0, :cond_7
 
-    .line 288
+    .line 335
     invoke-direct {p0, p1}, Lcom/oppo/camera/update/UpdateUtil;->queryUpdateRomProvider(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    .line 291
+    .line 338
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1097,11 +1274,11 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "hardware"
 
-    .line 293
+    .line 340
     invoke-virtual {p1, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -1116,7 +1293,7 @@
 
     if-eqz v3, :cond_7
 
-    .line 294
+    .line 341
     :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1132,14 +1309,14 @@
 
     move-result-object v3
 
-    .line 295
+    .line 342
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     const-string v6, "updateState"
 
-    .line 297
+    .line 344
     invoke-interface {v0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -1162,14 +1339,14 @@
 
     if-nez v7, :cond_3
 
-    .line 298
+    .line 345
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v7
 
     if-nez v7, :cond_2
 
-    .line 299
+    .line 346
     invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -1178,7 +1355,7 @@
 
     invoke-direct {p0, v3, v4}, Lcom/oppo/camera/update/UpdateUtil;->writeContentToTargetFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 301
+    .line 348
     invoke-interface {v0, v11}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -1195,15 +1372,15 @@
 
     if-nez v3, :cond_1
 
-    .line 302
-    invoke-static {v1, v8}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 349
+    invoke-static {v1, v8}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 304
+    .line 351
     invoke-direct {p0, v5}, Lcom/oppo/camera/update/UpdateUtil;->deleteFile(Ljava/io/File;)Z
 
     return v2
 
-    .line 307
+    .line 354
     :cond_1
     invoke-interface {v0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1217,7 +1394,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 308
+    .line 355
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1241,7 +1418,7 @@
     :cond_2
     return v12
 
-    .line 318
+    .line 365
     :cond_3
     new-instance v6, Ljava/io/File;
 
@@ -1261,14 +1438,14 @@
 
     invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 320
+    .line 367
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v7
 
     if-eqz v7, :cond_4
 
-    .line 321
+    .line 368
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1281,9 +1458,9 @@
 
     move-result-object v7
 
-    invoke-static {v3, v7}, Lcom/oppo/camera/m/a;->b(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v3, v7}, Lcom/oppo/camera/n/a;->b(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 324
+    .line 371
     :cond_4
     invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1293,7 +1470,7 @@
 
     invoke-direct {p0, v3, v4}, Lcom/oppo/camera/update/UpdateUtil;->writeContentToTargetFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
+    .line 373
     invoke-interface {v0, v11}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
@@ -1310,25 +1487,25 @@
 
     if-nez v4, :cond_6
 
-    .line 327
-    invoke-static {v1, v8}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 374
+    invoke-static {v1, v8}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 329
+    .line 376
     invoke-direct {p0, v5}, Lcom/oppo/camera/update/UpdateUtil;->deleteFile(Ljava/io/File;)Z
 
-    .line 330
+    .line 377
     new-instance p1, Ljava/io/File;
 
     invoke-direct {p1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 332
+    .line 379
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 333
+    .line 380
     invoke-virtual {v6}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -1337,16 +1514,16 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/m/a;->b(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v0, p1}, Lcom/oppo/camera/n/a;->b(Ljava/lang/String;Ljava/lang/String;)Z
 
     :cond_5
     return v2
 
-    .line 338
+    .line 385
     :cond_6
     invoke-direct {p0, v6}, Lcom/oppo/camera/update/UpdateUtil;->deleteFile(Ljava/io/File;)Z
 
-    .line 339
+    .line 386
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1378,12 +1555,12 @@
 
     const-string v0, "UpdateUtil"
 
-    .line 384
+    .line 431
     iget-object v1, p0, Lcom/oppo/camera/update/UpdateUtil;->mGson:Lcom/google/gson/Gson;
 
     if-nez v1, :cond_0
 
-    .line 385
+    .line 432
     new-instance v1, Lcom/google/gson/Gson;
 
     invoke-direct {v1}, Lcom/google/gson/Gson;-><init>()V
@@ -1393,7 +1570,7 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 389
+    .line 436
     :try_start_0
     iget-object v2, p0, Lcom/oppo/camera/update/UpdateUtil;->mGson:Lcom/google/gson/Gson;
 
@@ -1413,22 +1590,22 @@
 
     iput-object p1, p0, Lcom/oppo/camera/update/UpdateUtil;->mUpdateOperationList:Ljava/util/ArrayList;
 
-    .line 391
+    .line 438
     iget-object p1, p0, Lcom/oppo/camera/update/UpdateUtil;->mUpdateOperationList:Ljava/util/ArrayList;
 
     if-nez p1, :cond_1
 
     const-string p1, "updateAppParameter fail, mUpdateOperationList is null!"
 
-    .line 392
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 439
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
     :cond_1
     move p1, v1
 
-    .line 397
+    .line 444
     :goto_0
     iget-object v2, p0, Lcom/oppo/camera/update/UpdateUtil;->mUpdateOperationList:Ljava/util/ArrayList;
 
@@ -1438,7 +1615,7 @@
 
     if-ge p1, v2, :cond_5
 
-    .line 398
+    .line 445
     iget-object v2, p0, Lcom/oppo/camera/update/UpdateUtil;->mUpdateOperationList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1449,7 +1626,7 @@
 
     const-string v3, "update_sharePreference_now"
 
-    .line 400
+    .line 447
     invoke-virtual {v2}, Lcom/oppo/camera/update/UpdateOperation;->getOperation()Ljava/lang/String;
 
     move-result-object v4
@@ -1460,7 +1637,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 401
+    .line 448
     invoke-virtual {v2}, Lcom/oppo/camera/update/UpdateOperation;->getKey()Ljava/lang/String;
 
     move-result-object v3
@@ -1474,7 +1651,7 @@
     :cond_2
     const-string v3, "update_sharePreference_later"
 
-    .line 404
+    .line 451
     invoke-virtual {v2}, Lcom/oppo/camera/update/UpdateOperation;->getOperation()Ljava/lang/String;
 
     move-result-object v4
@@ -1485,19 +1662,19 @@
 
     if-eqz v3, :cond_4
 
-    .line 405
+    .line 452
     iget-object v3, p0, Lcom/oppo/camera/update/UpdateUtil;->mAppLaterUpdateOperationList:Ljava/util/ArrayList;
 
     if-nez v3, :cond_3
 
-    .line 406
+    .line 453
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lcom/oppo/camera/update/UpdateUtil;->mAppLaterUpdateOperationList:Ljava/util/ArrayList;
 
-    .line 409
+    .line 456
     :cond_3
     iget-object v3, p0, Lcom/oppo/camera/update/UpdateUtil;->mAppLaterUpdateOperationList:Ljava/util/ArrayList;
 
@@ -1518,7 +1695,7 @@
     :catch_0
     move-exception p1
 
-    .line 413
+    .line 460
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1537,7 +1714,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return v1
@@ -1546,7 +1723,7 @@
 .method private updateSharePreference(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 350
+    .line 397
     invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1555,22 +1732,22 @@
 
     move-result-object v0
 
-    .line 351
+    .line 398
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 352
+    .line 399
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     const-string v0, "_VERSION"
 
-    .line 354
+    .line 401
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 355
+    .line 402
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1589,7 +1766,7 @@
 
     const-string p1, "version"
 
-    .line 356
+    .line 403
     invoke-static {p1, p2}, Lcom/oppo/camera/statistics/CameraStatisticsUtil;->format(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -1600,14 +1777,12 @@
 
     move-result-object p1
 
-    .line 357
+    .line 404
     iget-object p2, p0, Lcom/oppo/camera/update/UpdateUtil;->mContext:Landroid/content/Context;
 
-    const/4 v0, 0x1
+    const-string v0, "RUS"
 
-    const-string v1, "RUS"
-
-    invoke-static {p2, v1, p1, v0}, Lcom/oppo/camera/statistics/CameraStatisticsUtil;->onCommon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {p2, v0, p1}, Lcom/oppo/camera/statistics/CameraStatisticsUtil;->onCommon(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1616,7 +1791,7 @@
 .method private writeContentToTargetFile(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 376
+    .line 423
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1639,16 +1814,16 @@
 
     const-string v1, "UpdateUtil"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 378
-    sget-object v0, Lcom/oppo/camera/m/a;->b:Ljava/lang/String;
-
+    .line 425
     invoke-virtual {p2}, Ljava/lang/String;->getBytes()[B
 
     move-result-object p2
 
-    invoke-static {p1, v0, p2}, Lcom/oppo/camera/m/a;->b(Ljava/lang/String;Ljava/lang/String;[B)Z
+    const-string v0, "text/plain"
+
+    invoke-static {p1, v0, p2}, Lcom/oppo/camera/n/a;->b(Ljava/lang/String;Ljava/lang/String;[B)Z
 
     return-void
 .end method
@@ -1658,7 +1833,7 @@
 .method public getBooleanValue(Ljava/lang/String;Z)Z
     .locals 2
 
-    .line 362
+    .line 409
     invoke-direct {p0}, Lcom/oppo/camera/update/UpdateUtil;->getSharedPreferences()Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -1667,14 +1842,14 @@
 
     const/4 v1, 0x0
 
-    .line 365
+    .line 412
     invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 368
+    .line 415
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -1698,7 +1873,7 @@
 .method public startUpdate(ZZ)V
     .locals 2
 
-    .line 111
+    .line 116
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/oppo/camera/update/UpdateUtil$1;
@@ -1707,7 +1882,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 124
+    .line 129
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     return-void
@@ -1718,7 +1893,7 @@
 
     const/4 v0, 0x1
 
-    .line 107
+    .line 112
     invoke-virtual {p0, v0, v0}, Lcom/oppo/camera/update/UpdateUtil;->startUpdate(ZZ)V
 
     return-void

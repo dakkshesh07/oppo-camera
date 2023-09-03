@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f2" android:top="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f2" android:right="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f2" android:bottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f2">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/APKTOOL_DUPLICATE_color_0x7f0603f7" />
+            <corners android:radius="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f0" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f0" />
+            <padding android:left="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700ee" android:top="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700ef" android:right="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700ed" android:bottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700ec" />
+            <stroke android:width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700f2" android:color="@color/APKTOOL_DUPLICATE_color_0x7f0603f8" />
+        </shape>
+    </item>
+</layer-list>

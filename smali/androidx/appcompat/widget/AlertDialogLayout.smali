@@ -3,6 +3,11 @@
 .source "AlertDialogLayout.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
@@ -26,7 +31,7 @@
     .locals 3
 
     .line 248
-    invoke-static {p0}, Landroidx/core/g/w;->m(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->m(Landroid/view/View;)I
 
     move-result v0
 
@@ -720,12 +725,12 @@
 
     .line 315
     :cond_3
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v3
 
     .line 316
-    invoke-static {v2, v3}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v2, v3}, Landroidx/core/f/d;->a(II)I
 
     move-result v2
 

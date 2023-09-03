@@ -3,6 +3,11 @@
 .source "ForwardingTimeout.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # instance fields
 .field private delegate:Lokio/Timeout;
 
@@ -13,7 +18,7 @@
 
     const-string v0, "delegate"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 26
     invoke-direct {p0}, Lokio/Timeout;-><init>()V
@@ -104,7 +109,7 @@
 
     const-string v0, "delegate"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 30
     iput-object p1, p0, Lokio/ForwardingTimeout;->delegate:Lokio/Timeout;
@@ -117,7 +122,7 @@
 
     const-string v0, "<set-?>"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
     iput-object p1, p0, Lokio/ForwardingTimeout;->delegate:Lokio/Timeout;
@@ -146,7 +151,7 @@
 
     const-string v0, "unit"
 
-    invoke-static {p3, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
     iget-object v0, p0, Lokio/ForwardingTimeout;->delegate:Lokio/Timeout;

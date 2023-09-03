@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field private defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
+.field private final defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -43,10 +43,10 @@
         }
     .end annotation
 
-    .line 1333
+    .line 1498
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
-    .line 1334
+    .line 1499
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;->defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
 
     return-void
@@ -71,10 +71,52 @@
         }
     .end annotation
 
-    .line 1340
+    .line 1505
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;->defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
 
     invoke-static {v0, p1, p2}, Lcom/google/protobuf/GeneratedMessageLite;->parsePartialFrom(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([BII",
+            "Lcom/google/protobuf/ExtensionRegistryLite;",
+            ")TT;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1512
+    iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;->defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    invoke-static {v0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageLite;->parsePartialFrom(Lcom/google/protobuf/GeneratedMessageLite;[BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1493
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;->parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
 
@@ -89,8 +131,24 @@
         }
     .end annotation
 
-    .line 1328
+    .line 1493
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 1493
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageLite$DefaultInstanceBasedParser;->parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object p1
 

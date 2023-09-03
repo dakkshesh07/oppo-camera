@@ -1076,6 +1076,8 @@
 
 .method public calculatePath(Lcom/google/android/material/shape/ShapeAppearanceModel;FLandroid/graphics/RectF;Lcom/google/android/material/shape/ShapeAppearancePathProvider$PathListener;Landroid/graphics/Path;)V
     .locals 8
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 102
     invoke-virtual {p5}, Landroid/graphics/Path;->rewind()V

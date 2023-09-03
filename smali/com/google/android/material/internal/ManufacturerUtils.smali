@@ -3,6 +3,11 @@
 .source "ManufacturerUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final LGE:Ljava/lang/String; = "lge"
 

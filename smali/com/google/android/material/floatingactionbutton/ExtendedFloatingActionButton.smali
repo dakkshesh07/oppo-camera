@@ -567,7 +567,7 @@
     .locals 1
 
     .line 603
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -681,11 +681,11 @@
     .locals 2
 
     .line 650
-    invoke-static {p0}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result v0
 
-    invoke-static {p0}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v1
 

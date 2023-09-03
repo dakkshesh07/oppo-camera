@@ -459,7 +459,7 @@
     const/4 v3, 0x1
 
     .line 906
-    invoke-static {v2, v3}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v2, v3}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     goto :goto_1
 
@@ -467,7 +467,7 @@
     const/4 v3, 0x4
 
     .line 909
-    invoke-static {v2, v3}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v2, v3}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -510,7 +510,7 @@
     .locals 2
 
     .line 1166
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -554,7 +554,7 @@
     .locals 2
 
     .line 1185
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -663,7 +663,7 @@
     .locals 2
 
     .line 2085
-    invoke-static {p0}, Landroidx/core/g/w;->f(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->f(Landroid/view/View;)I
 
     move-result v0
 
@@ -672,7 +672,7 @@
     if-eq v0, v1, :cond_0
 
     .line 2087
-    invoke-static {p0}, Landroidx/core/g/w;->f(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->f(Landroid/view/View;)I
 
     move-result p0
 
@@ -724,7 +724,7 @@
     .locals 3
 
     .line 652
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -953,12 +953,12 @@
     .locals 3
 
     .line 577
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
     .line 576
-    invoke-static {p2, v0}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p2, v0}, Landroidx/core/f/d;->a(II)I
 
     move-result v0
 
@@ -1686,7 +1686,7 @@
     const/4 p2, 0x1
 
     .line 2068
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     goto :goto_1
 
@@ -1695,7 +1695,7 @@
     const/4 p2, 0x4
 
     .line 2063
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 2074
     :goto_1
@@ -1706,7 +1706,7 @@
     .line 2075
     iget-object p2, p0, Landroidx/drawerlayout/widget/DrawerLayout;->e:Landroidx/drawerlayout/widget/DrawerLayout$a;
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     :cond_2
     return-void
@@ -1716,12 +1716,12 @@
     .locals 4
 
     .line 986
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
     .line 985
-    invoke-static {p1, v0}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p1, v0}, Landroidx/core/f/d;->a(II)I
 
     move-result p1
 
@@ -2295,7 +2295,7 @@
 
     .line 1320
     :cond_1
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_2
     return-void
@@ -2816,11 +2816,11 @@
     iget p1, p1, Landroidx/drawerlayout/widget/DrawerLayout$c;->a:I
 
     .line 946
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p1, v0}, Landroidx/core/f/d;->a(II)I
 
     move-result p1
 
@@ -2865,12 +2865,12 @@
     iget v0, v0, Landroidx/drawerlayout/widget/DrawerLayout$c;->a:I
 
     .line 1470
-    invoke-static {p1}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p1}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p1
 
     .line 1469
-    invoke-static {v0, p1}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v0, p1}, Landroidx/core/f/d;->a(II)I
 
     move-result p1
 
@@ -3854,7 +3854,7 @@
 
     if-eqz v1, :cond_5
 
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v1
 
@@ -3869,7 +3869,7 @@
 
     .line 1061
     :goto_2
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v7
 
@@ -3918,12 +3918,12 @@
     .line 1078
     iget v15, v13, Landroidx/drawerlayout/widget/DrawerLayout$c;->a:I
 
-    invoke-static {v15, v7}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v15, v7}, Landroidx/core/f/d;->a(II)I
 
     move-result v15
 
     .line 1079
-    invoke-static {v12}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {v12}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v16
 
@@ -4152,7 +4152,7 @@
     if-eqz v2, :cond_e
 
     .line 1122
-    invoke-static {v12}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {v12}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result v2
 
@@ -4163,7 +4163,7 @@
     if-eqz v2, :cond_e
 
     .line 1123
-    invoke-static {v12, v14}, Landroidx/core/g/w;->a(Landroid/view/View;F)V
+    invoke-static {v12, v14}, Landroidx/core/f/w;->a(Landroid/view/View;F)V
 
     .line 1127
     :cond_e
@@ -4795,7 +4795,7 @@
     .line 380
     iget v1, p0, Landroidx/drawerlayout/widget/DrawerLayout;->f:F
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;F)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;F)V
 
     :cond_0
     add-int/lit8 p1, p1, 0x1
@@ -4870,7 +4870,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

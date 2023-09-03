@@ -3,12 +3,12 @@
 .source "MainShutterButton.java"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/control/MainShutterButton;->s()V
+    value = Lcom/oppo/camera/ui/control/MainShutterButton;->E()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/control/MainShutterButton;)V
     .locals 0
 
-    .line 1190
+    .line 2231
     iput-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$7;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,40 +35,28 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    return-void
-.end method
+    .line 2234
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$7;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
-
-    .line 1198
-    iget-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$7;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->e(Lcom/oppo/camera/ui/control/MainShutterButton;)V
-
-    .line 1199
-    iget-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$7;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->f(Lcom/oppo/camera/ui/control/MainShutterButton;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
+    check-cast p1, Ljava/lang/Float;
 
-    return-void
-.end method
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    move-result p1
 
-    return-void
-.end method
+    invoke-static {v0, p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->c(Lcom/oppo/camera/ui/control/MainShutterButton;F)F
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    .line 2235
+    iget-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$7;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->invalidate()V
 
     return-void
 .end method

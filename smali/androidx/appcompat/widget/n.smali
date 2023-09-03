@@ -1,26 +1,37 @@
 .class public Landroidx/appcompat/widget/n;
-.super Landroid/widget/ImageView;
-.source "AppCompatImageView.java"
+.super Landroid/widget/MultiAutoCompleteTextView;
+.source "AppCompatMultiAutoCompleteTextView.java"
 
 # interfaces
-.implements Landroidx/core/g/v;
-.implements Landroidx/core/widget/l;
+.implements Landroidx/core/f/v;
+
+
+# static fields
+.field private static final a:[I
 
 
 # instance fields
-.field private final mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+.field private final b:Landroidx/appcompat/widget/e;
 
-.field private final mImageHelper:Landroidx/appcompat/widget/m;
+.field private final c:Landroidx/appcompat/widget/v;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    .line 65
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 56
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    const v2, 0x1010176
+
+    aput v2, v0, v1
+
+    sput-object v0, Landroidx/appcompat/widget/n;->a:[I
 
     return-void
 .end method
@@ -28,54 +39,90 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const/4 v0, 0x0
-
     .line 69
+    sget v0, Landroidx/appcompat/R$attr;->autoCompleteTextViewStyle:I
+
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    .locals 2
 
     .line 74
-    invoke-static {p1}, Landroidx/appcompat/widget/ap;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/ao;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 76
     invoke-virtual {p0}, Landroidx/appcompat/widget/n;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 78
+    invoke-virtual {p0}, Landroidx/appcompat/widget/n;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget-object v0, Landroidx/appcompat/widget/n;->a:[I
+
+    const/4 v1, 0x0
+
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
+
+    move-result-object p1
+
+    .line 80
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->g(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 81
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroidx/appcompat/widget/n;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 83
+    :cond_0
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
+
+    .line 85
     new-instance p1, Landroidx/appcompat/widget/e;
 
     invoke-direct {p1, p0}, Landroidx/appcompat/widget/e;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    iput-object p1, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
-    .line 79
-    iget-object p1, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 86
+    iget-object p1, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/e;->a(Landroid/util/AttributeSet;I)V
 
-    .line 81
-    new-instance p1, Landroidx/appcompat/widget/m;
+    .line 88
+    new-instance p1, Landroidx/appcompat/widget/v;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/m;-><init>(Landroid/widget/ImageView;)V
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/v;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
+    iput-object p1, p0, Landroidx/appcompat/widget/n;->c:Landroidx/appcompat/widget/v;
 
-    .line 82
-    iget-object p1, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
+    .line 89
+    iget-object p1, p0, Landroidx/appcompat/widget/n;->c:Landroidx/appcompat/widget/v;
 
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/m;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/v;->a(Landroid/util/AttributeSet;I)V
+
+    .line 90
+    iget-object p1, p0, Landroidx/appcompat/widget/n;->c:Landroidx/appcompat/widget/v;
+
+    invoke-virtual {p1}, Landroidx/appcompat/widget/v;->b()V
 
     return-void
 .end method
@@ -85,25 +132,25 @@
 .method protected drawableStateChanged()V
     .locals 1
 
-    .line 256
-    invoke-super {p0}, Landroid/widget/ImageView;->drawableStateChanged()V
+    .line 172
+    invoke-super {p0}, Landroid/widget/MultiAutoCompleteTextView;->drawableStateChanged()V
 
-    .line 257
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 173
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 258
+    .line 174
     invoke-virtual {v0}, Landroidx/appcompat/widget/e;->c()V
 
-    .line 260
+    .line 176
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->c:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_1
 
-    .line 261
-    invoke-virtual {v0}, Landroidx/appcompat/widget/m;->d()V
+    .line 177
+    invoke-virtual {v0}, Landroidx/appcompat/widget/v;->b()V
 
     :cond_1
     return-void
@@ -111,13 +158,15 @@
 
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 166
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 138
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 167
+    .line 139
     invoke-virtual {v0}, Landroidx/appcompat/widget/e;->a()Landroid/content/res/ColorStateList;
 
     move-result-object v0
@@ -133,13 +182,15 @@
 
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 194
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 166
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 195
+    .line 167
     invoke-virtual {v0}, Landroidx/appcompat/widget/e;->b()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
@@ -153,91 +204,33 @@
     return-object v0
 .end method
 
-.method public getSupportImageTintList()Landroid/content/res/ColorStateList;
+.method public onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
     .locals 1
 
-    .line 222
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    if-eqz v0, :cond_0
-
-    .line 223
-    invoke-virtual {v0}, Landroidx/appcompat/widget/m;->b()Landroid/content/res/ColorStateList;
+    .line 191
+    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
 
     move-result-object v0
 
-    goto :goto_0
+    invoke-static {v0, p1, p0}, Landroidx/appcompat/widget/k;->a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;Landroid/view/View;)Landroid/view/inputmethod/InputConnection;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object p1
 
-    :goto_0
-    return-object v0
-.end method
-
-.method public getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
-    .locals 1
-
-    .line 250
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    if-eqz v0, :cond_0
-
-    .line 251
-    invoke-virtual {v0}, Landroidx/appcompat/widget/m;->c()Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-.end method
-
-.method public hasOverlappingRendering()Z
-    .locals 1
-
-    .line 267
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/m;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0}, Landroid/widget/ImageView;->hasOverlappingRendering()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
+    return-object p1
 .end method
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 136
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .line 108
+    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 137
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 109
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 110
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/e;->a(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
@@ -247,99 +240,49 @@
 .method public setBackgroundResource(I)V
     .locals 1
 
-    .line 128
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
+    .line 100
+    invoke-super {p0, p1}, Landroid/widget/MultiAutoCompleteTextView;->setBackgroundResource(I)V
 
-    .line 129
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 101
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 130
+    .line 102
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/e;->a(I)V
 
     :cond_0
     return-void
 .end method
 
-.method public setImageBitmap(Landroid/graphics/Bitmap;)V
-    .locals 0
-
-    .line 112
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 113
-    iget-object p1, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    if-eqz p1, :cond_0
-
-    .line 114
-    invoke-virtual {p1}, Landroidx/appcompat/widget/m;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
-
-    .line 104
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 105
-    iget-object p1, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    if-eqz p1, :cond_0
-
-    .line 106
-    invoke-virtual {p1}, Landroidx/appcompat/widget/m;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setImageResource(I)V
+.method public setDropDownBackgroundResource(I)V
     .locals 1
 
-    .line 96
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
+    .line 95
+    invoke-virtual {p0}, Landroidx/appcompat/widget/n;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 98
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/m;->a(I)V
+    invoke-static {v0, p1}, Landroidx/appcompat/a/a/a;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object p1
 
-.method public setImageURI(Landroid/net/Uri;)V
-    .locals 0
+    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/n;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 120
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageURI(Landroid/net/Uri;)V
-
-    .line 121
-    iget-object p1, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    if-eqz p1, :cond_0
-
-    .line 122
-    invoke-virtual {p1}, Landroidx/appcompat/widget/m;->d()V
-
-    :cond_0
     return-void
 .end method
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 151
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 123
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 152
+    .line 124
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/e;->a(Landroid/content/res/ColorStateList;)V
 
     :cond_0
@@ -348,44 +291,34 @@
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 179
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
+    .line 151
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->b:Landroidx/appcompat/widget/e;
 
     if-eqz v0, :cond_0
 
-    .line 180
+    .line 152
     invoke-virtual {v0, p1}, Landroidx/appcompat/widget/e;->a(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_0
     return-void
 .end method
 
-.method public setSupportImageTintList(Landroid/content/res/ColorStateList;)V
+.method public setTextAppearance(Landroid/content/Context;I)V
     .locals 1
 
-    .line 207
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
+    .line 183
+    invoke-super {p0, p1, p2}, Landroid/widget/MultiAutoCompleteTextView;->setTextAppearance(Landroid/content/Context;I)V
+
+    .line 184
+    iget-object v0, p0, Landroidx/appcompat/widget/n;->c:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_0
 
-    .line 208
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/m;->a(Landroid/content/res/ColorStateList;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    .line 235
-    iget-object v0, p0, Landroidx/appcompat/widget/n;->mImageHelper:Landroidx/appcompat/widget/m;
-
-    if-eqz v0, :cond_0
-
-    .line 236
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/m;->a(Landroid/graphics/PorterDuff$Mode;)V
+    .line 185
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/v;->a(Landroid/content/Context;I)V
 
     :cond_0
     return-void

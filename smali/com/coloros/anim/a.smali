@@ -22,7 +22,7 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;>;"
         }
     .end annotation
@@ -44,7 +44,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/coloros/anim/c/d;",
+            "Lcom/coloros/anim/model/c;",
             ">;"
         }
     .end annotation
@@ -54,17 +54,17 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/h;",
+            "Lcom/coloros/anim/model/g;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private g:Landroidx/b/h;
+.field private g:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/h<",
-            "Lcom/coloros/anim/c/e;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Lcom/coloros/anim/model/d;",
             ">;"
         }
     .end annotation
@@ -74,7 +74,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/LongSparseArray<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;"
         }
     .end annotation
@@ -84,7 +84,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;"
         }
     .end annotation
@@ -141,7 +141,7 @@
 
 
 # virtual methods
-.method public a(J)Lcom/coloros/anim/c/c/d;
+.method public a(J)Lcom/coloros/anim/model/layer/Layer;
     .locals 1
 
     .line 121
@@ -151,7 +151,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/coloros/anim/c/c/d;
+    check-cast p1, Lcom/coloros/anim/model/layer/Layer;
 
     return-object p1
 .end method
@@ -169,7 +169,7 @@
     return-void
 .end method
 
-.method public a(Landroid/graphics/Rect;FFFLjava/util/List;Landroid/util/LongSparseArray;Ljava/util/Map;Ljava/util/Map;Landroidx/b/h;Ljava/util/Map;Ljava/util/List;F)V
+.method public a(Landroid/graphics/Rect;FFFLjava/util/List;Landroid/util/LongSparseArray;Ljava/util/Map;Ljava/util/Map;Landroidx/collection/SparseArrayCompat;Ljava/util/Map;Ljava/util/List;F)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -177,29 +177,29 @@
             "Landroid/graphics/Rect;",
             "FFF",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;",
             "Landroid/util/LongSparseArray<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;>;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Lcom/coloros/anim/h;",
             ">;",
-            "Landroidx/b/h<",
-            "Lcom/coloros/anim/c/e;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Lcom/coloros/anim/model/d;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/coloros/anim/c/d;",
+            "Lcom/coloros/anim/model/c;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/h;",
+            "Lcom/coloros/anim/model/g;",
             ">;F)V"
         }
     .end annotation
@@ -229,7 +229,7 @@
     iput-object p8, p0, Lcom/coloros/anim/a;->d:Ljava/util/Map;
 
     .line 74
-    iput-object p9, p0, Lcom/coloros/anim/a;->g:Landroidx/b/h;
+    iput-object p9, p0, Lcom/coloros/anim/a;->g:Landroidx/collection/SparseArrayCompat;
 
     .line 75
     iput-object p10, p0, Lcom/coloros/anim/a;->e:Ljava/util/Map;
@@ -294,7 +294,7 @@
             "Ljava/lang/String;",
             ")",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;"
         }
     .end annotation
@@ -322,7 +322,16 @@
     return-void
 .end method
 
-.method public c(Ljava/lang/String;)Lcom/coloros/anim/c/h;
+.method public c()Lcom/coloros/anim/m;
+    .locals 1
+
+    .line 117
+    iget-object v0, p0, Lcom/coloros/anim/a;->a:Lcom/coloros/anim/m;
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)Lcom/coloros/anim/model/g;
     .locals 3
 
     .line 169
@@ -349,10 +358,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/coloros/anim/c/h;
+    check-cast v1, Lcom/coloros/anim/model/g;
 
     .line 172
-    iget-object v2, v1, Lcom/coloros/anim/c/h;->a:Ljava/lang/String;
+    iget-object v2, v1, Lcom/coloros/anim/model/g;->a:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -371,15 +380,6 @@
     const/4 p1, 0x0
 
     return-object p1
-.end method
-
-.method public c()Lcom/coloros/anim/m;
-    .locals 1
-
-    .line 117
-    iget-object v0, p0, Lcom/coloros/anim/a;->a:Lcom/coloros/anim/m;
-
-    return-object v0
 .end method
 
 .method public d()Landroid/graphics/Rect;
@@ -447,7 +447,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/c/d;",
+            "Lcom/coloros/anim/model/layer/Layer;",
             ">;"
         }
     .end annotation
@@ -458,19 +458,19 @@
     return-object v0
 .end method
 
-.method public j()Landroidx/b/h;
+.method public j()Landroidx/collection/SparseArrayCompat;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/b/h<",
-            "Lcom/coloros/anim/c/e;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Lcom/coloros/anim/model/d;",
             ">;"
         }
     .end annotation
 
     .line 156
-    iget-object v0, p0, Lcom/coloros/anim/a;->g:Landroidx/b/h;
+    iget-object v0, p0, Lcom/coloros/anim/a;->g:Landroidx/collection/SparseArrayCompat;
 
     return-object v0
 .end method
@@ -482,7 +482,7 @@
             "()",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/coloros/anim/c/d;",
+            "Lcom/coloros/anim/model/c;",
             ">;"
         }
     .end annotation
@@ -561,12 +561,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/coloros/anim/c/c/d;
+    check-cast v2, Lcom/coloros/anim/model/layer/Layer;
 
     const-string v3, "\t"
 
     .line 201
-    invoke-virtual {v2, v3}, Lcom/coloros/anim/c/c/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Lcom/coloros/anim/model/layer/Layer;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

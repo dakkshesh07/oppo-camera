@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:coui="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="true" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09021c" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080238" coui:APKTOOL_DUPLICATE_attr_0x7f0402b8="false" coui:APKTOOL_DUPLICATE_attr_0x7f0402bc="true" />
+    <item android:state_enabled="false" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080237" coui:APKTOOL_DUPLICATE_attr_0x7f0402b8="false" coui:APKTOOL_DUPLICATE_attr_0x7f0402bc="true" />
+    <item android:state_enabled="true" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090289" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080226" coui:APKTOOL_DUPLICATE_attr_0x7f0402b8="true" coui:APKTOOL_DUPLICATE_attr_0x7f0402bc="false" />
+    <item android:state_enabled="false" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080225" coui:APKTOOL_DUPLICATE_attr_0x7f0402b8="true" coui:APKTOOL_DUPLICATE_attr_0x7f0402bc="false" />
+    <item android:state_enabled="true" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09034b" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802dd" coui:APKTOOL_DUPLICATE_attr_0x7f0402b8="false" coui:APKTOOL_DUPLICATE_attr_0x7f0402bc="false" />
+    <item android:state_enabled="false" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802dc" coui:APKTOOL_DUPLICATE_attr_0x7f0402b8="false" coui:APKTOOL_DUPLICATE_attr_0x7f0402bc="false" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802df" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f09034b" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f090289" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802e2" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f090289" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f09034b" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802de" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f09034b" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f09021c" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802e1" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f09021c" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f09034b" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08024d" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f090289" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f09021c" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08024f" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f09021c" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f090289" />
+</animated-selector>

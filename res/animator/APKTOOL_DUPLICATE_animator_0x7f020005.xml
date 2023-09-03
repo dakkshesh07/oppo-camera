@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="true" app:APKTOOL_DUPLICATE_attr_0x7f040543="true">
+        <set>
+            <objectAnimator android:interpolator="@interpolator/APKTOOL_DUPLICATE_interpolator_0x7f0b0008" android:duration="@integer/APKTOOL_DUPLICATE_integer_0x7f0a002e" android:valueTo="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07058f" android:valueType="floatType" android:propertyName="translationZ" android:startDelay="@integer/APKTOOL_DUPLICATE_integer_0x7f0a002d" />
+        </set>
+    </item>
+    <item android:state_enabled="true">
+        <set>
+            <objectAnimator android:interpolator="@anim/APKTOOL_DUPLICATE_anim_0x7f0100a3" android:duration="@integer/APKTOOL_DUPLICATE_integer_0x7f0a002e" android:valueTo="0.0dip" android:valueType="floatType" android:propertyName="translationZ" />
+        </set>
+    </item>
+</selector>

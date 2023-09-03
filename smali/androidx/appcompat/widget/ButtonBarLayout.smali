@@ -3,6 +3,11 @@
 .source "ButtonBarLayout.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private a:Z
 
@@ -50,7 +55,7 @@
 
     move-object v5, v0
 
-    invoke-static/range {v1 .. v7}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static/range {v1 .. v7}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     .line 56
     sget p1, Landroidx/appcompat/R$styleable;->ButtonBarLayout_allowStacking:I
@@ -430,7 +435,7 @@
     .line 138
     :cond_8
     :goto_2
-    invoke-static {p0}, Landroidx/core/g/w;->m(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->m(Landroid/view/View;)I
 
     move-result p1
 

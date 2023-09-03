@@ -47,16 +47,16 @@
 
     .line 338
     :try_start_0
-    invoke-static {p0}, Lcom/coloros/anim/e/i;->a(Landroid/util/JsonReader;)Lcom/coloros/anim/a;
+    invoke-static {p0}, Lcom/coloros/anim/c/i;->a(Landroid/util/JsonReader;)Lcom/coloros/anim/a;
 
     move-result-object v0
 
     .line 339
-    invoke-static {}, Lcom/coloros/anim/c/c;->a()Lcom/coloros/anim/c/c;
+    invoke-static {}, Lcom/coloros/anim/model/b;->a()Lcom/coloros/anim/model/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1, v0}, Lcom/coloros/anim/c/c;->a(Ljava/lang/String;Lcom/coloros/anim/a;)V
+    invoke-virtual {v1, p1, v0}, Lcom/coloros/anim/model/b;->a(Ljava/lang/String;Lcom/coloros/anim/a;)V
 
     .line 340
     new-instance p1, Lcom/coloros/anim/e;
@@ -69,7 +69,7 @@
     if-eqz p2, :cond_0
 
     .line 345
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     :cond_0
     return-object p1
@@ -93,7 +93,7 @@
     if-eqz p2, :cond_1
 
     .line 345
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     :cond_1
     return-object v0
@@ -101,7 +101,7 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     :cond_2
     throw p1
@@ -122,7 +122,7 @@
     .end annotation
 
     .line 243
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -141,7 +141,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x1
@@ -187,7 +187,7 @@
     if-eqz p2, :cond_0
 
     .line 255
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     :cond_0
     return-object p1
@@ -197,7 +197,7 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     :cond_1
     throw p1
@@ -218,7 +218,7 @@
     .end annotation
 
     .line 378
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -237,7 +237,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x0
@@ -251,14 +251,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 384
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {p0}, Lcom/coloros/anim/f/g;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/g;->a(Ljava/io/Closeable;)V
 
     throw p1
 .end method
@@ -284,7 +284,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 404
-    sget-boolean v1, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v1, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v1, :cond_0
 
@@ -303,7 +303,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 408
     :cond_0
@@ -313,7 +313,7 @@
     move-result-object v1
 
     .line 409
-    sget-boolean v2, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v2, Lcom/coloros/anim/d/b;->b:Z
 
     const/4 v3, 0x1
 
@@ -346,7 +346,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     :cond_2
     const/4 v2, 0x0
@@ -357,7 +357,7 @@
     if-eqz v1, :cond_8
 
     .line 413
-    sget-boolean v6, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v6, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v6, :cond_3
 
@@ -380,7 +380,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 416
     :cond_3
@@ -651,11 +651,11 @@
 
     .line 454
     :cond_d
-    invoke-static {}, Lcom/coloros/anim/c/c;->a()Lcom/coloros/anim/c/c;
+    invoke-static {}, Lcom/coloros/anim/model/b;->a()Lcom/coloros/anim/model/b;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, v5}, Lcom/coloros/anim/c/c;->a(Ljava/lang/String;Lcom/coloros/anim/a;)V
+    invoke-virtual {p0, p1, v5}, Lcom/coloros/anim/model/b;->a(Ljava/lang/String;Lcom/coloros/anim/a;)V
 
     .line 455
     new-instance p0, Lcom/coloros/anim/e;
@@ -689,14 +689,14 @@
     .end annotation
 
     .line 170
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "EffectiveCompositionFactory::fromRawRes."
 
     .line 171
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 174
     :cond_0
@@ -709,9 +709,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/coloros/anim/g$6;
+    new-instance v1, Lcom/coloros/anim/g$7;
 
-    invoke-direct {v1, p0, p1}, Lcom/coloros/anim/g$6;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, p0, p1}, Lcom/coloros/anim/g$7;-><init>(Landroid/content/Context;I)V
 
     invoke-static {v0, v1}, Lcom/coloros/anim/g;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/coloros/anim/f;
 
@@ -735,7 +735,7 @@
     .end annotation
 
     .line 68
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -758,7 +758,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 71
     :cond_0
@@ -803,7 +803,7 @@
     .end annotation
 
     .line 115
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -826,13 +826,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 118
     :cond_0
-    new-instance v0, Lcom/coloros/anim/g$5;
+    new-instance v0, Lcom/coloros/anim/g$6;
 
-    invoke-direct {v0, p0, p1}, Lcom/coloros/anim/g$5;-><init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/coloros/anim/g$6;-><init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
 
     invoke-static {p1, v0}, Lcom/coloros/anim/g;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/coloros/anim/f;
 
@@ -856,7 +856,7 @@
     .end annotation
 
     .line 313
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -875,13 +875,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 316
     :cond_0
-    new-instance v0, Lcom/coloros/anim/g$8;
+    new-instance v0, Lcom/coloros/anim/g$9;
 
-    invoke-direct {v0, p0, p1}, Lcom/coloros/anim/g$8;-><init>(Landroid/util/JsonReader;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1}, Lcom/coloros/anim/g$9;-><init>(Landroid/util/JsonReader;Ljava/lang/String;)V
 
     invoke-static {p1, v0}, Lcom/coloros/anim/g;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/coloros/anim/f;
 
@@ -914,11 +914,11 @@
 
     .line 479
     :cond_0
-    invoke-static {}, Lcom/coloros/anim/c/c;->a()Lcom/coloros/anim/c/c;
+    invoke-static {}, Lcom/coloros/anim/model/b;->a()Lcom/coloros/anim/model/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/coloros/anim/c/c;->a(Ljava/lang/String;)Lcom/coloros/anim/a;
+    invoke-virtual {v0, p0}, Lcom/coloros/anim/model/b;->a(Ljava/lang/String;)Lcom/coloros/anim/a;
 
     move-result-object v0
 
@@ -960,7 +960,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 483
     new-instance p0, Lcom/coloros/anim/f;
@@ -988,7 +988,7 @@
     if-eqz v2, :cond_2
 
     .line 490
-    invoke-static {}, Lcom/coloros/anim/f/g;->b()V
+    invoke-static {}, Lcom/coloros/anim/d/g;->b()V
 
     .line 491
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1017,7 +1017,7 @@
     move-result-object v0
 
     .line 491
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     :cond_2
     if-eqz p0, :cond_3
@@ -1163,7 +1163,7 @@
     .end annotation
 
     .line 150
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -1186,7 +1186,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 154
     :cond_0
@@ -1269,7 +1269,7 @@
     .end annotation
 
     .line 329
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -1288,7 +1288,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     :cond_0
     const/4 v0, 0x1
@@ -1315,14 +1315,14 @@
     .end annotation
 
     .line 184
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "EffectiveCompositionFactory::fromRawResUsingActivityContext."
 
     .line 185
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 187
     :cond_0
@@ -1335,11 +1335,69 @@
 
     move-result-object p0
 
-    new-instance v1, Lcom/coloros/anim/g$7;
+    new-instance v1, Lcom/coloros/anim/g$8;
 
-    invoke-direct {v1, v0, p1}, Lcom/coloros/anim/g$7;-><init>(Ljava/lang/ref/WeakReference;I)V
+    invoke-direct {v1, v0, p1}, Lcom/coloros/anim/g$8;-><init>(Ljava/lang/ref/WeakReference;I)V
 
     invoke-static {p0, v1}, Lcom/coloros/anim/g;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/coloros/anim/f;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/f;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/coloros/anim/f<",
+            "Lcom/coloros/anim/a;",
+            ">;"
+        }
+    .end annotation
+
+    .line 101
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
+
+    if-eqz v0, :cond_0
+
+    .line 102
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "EffectiveCompositionFactory::fromAsset fileName = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
+
+    .line 105
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    .line 106
+    new-instance v0, Lcom/coloros/anim/g$5;
+
+    invoke-direct {v0, p0, p1}, Lcom/coloros/anim/g$5;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+
+    invoke-static {p1, v0}, Lcom/coloros/anim/g;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/coloros/anim/f;
 
     move-result-object p0
 
@@ -1360,14 +1418,14 @@
     .end annotation
 
     .line 207
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
     const-string v0, "EffectiveCompositionFactory::fromRawResSync."
 
     .line 208
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 211
     :cond_0
@@ -1396,6 +1454,120 @@
     move-exception p0
 
     .line 213
+    new-instance p1, Lcom/coloros/anim/e;
+
+    invoke-direct {p1, p0}, Lcom/coloros/anim/e;-><init>(Ljava/lang/Throwable;)V
+
+    return-object p1
+.end method
+
+.method public static c(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/e;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/coloros/anim/e<",
+            "Lcom/coloros/anim/a;",
+            ">;"
+        }
+    .end annotation
+
+    .line 135
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
+
+    if-eqz v0, :cond_0
+
+    .line 136
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "EffectiveCompositionFactory::fromAssetSync fileName = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
+
+    .line 139
+    :cond_0
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "asset_"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, ".zip"
+
+    .line 140
+    invoke-virtual {p1, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 141
+    new-instance v1, Ljava/util/zip/ZipInputStream;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
+
+    invoke-static {v1, v0}, Lcom/coloros/anim/g;->a(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/coloros/anim/e;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 143
+    :cond_1
+    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object p0
+
+    invoke-static {p0, v0}, Lcom/coloros/anim/g;->a(Ljava/io/InputStream;Ljava/lang/String;)Lcom/coloros/anim/e;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    .line 145
     new-instance p1, Lcom/coloros/anim/e;
 
     invoke-direct {p1, p0}, Lcom/coloros/anim/e;-><init>(Ljava/lang/Throwable;)V

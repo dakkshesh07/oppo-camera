@@ -15,10 +15,26 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    .line 32
+    .line 31
     invoke-direct {p0}, Landroidx/preference/f;-><init>()V
+
+    const/4 v0, 0x0
+
+    .line 39
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->a:I
+
+    const/4 v0, 0x0
+
+    .line 40
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->b:[Ljava/lang/CharSequence;
+
+    .line 41
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->c:[Ljava/lang/CharSequence;
+
+    .line 42
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->d:[Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -26,7 +42,7 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/setting/e;I)I
     .locals 0
 
-    .line 32
+    .line 31
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/e;->a:I
 
     return p1
@@ -35,12 +51,12 @@
 .method public static a(Ljava/lang/String;)Lcom/oppo/camera/ui/menu/setting/e;
     .locals 3
 
-    .line 46
+    .line 45
     new-instance v0, Lcom/oppo/camera/ui/menu/setting/e;
 
     invoke-direct {v0}, Lcom/oppo/camera/ui/menu/setting/e;-><init>()V
 
-    .line 47
+    .line 46
     new-instance v1, Landroid/os/Bundle;
 
     const/4 v2, 0x1
@@ -49,10 +65,10 @@
 
     const-string v2, "key"
 
-    .line 48
+    .line 47
     invoke-virtual {v1, v2, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
+    .line 48
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/setting/e;->setArguments(Landroid/os/Bundle;)V
 
     return-object v0
@@ -61,7 +77,7 @@
 .method private c()Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;
     .locals 1
 
-    .line 79
+    .line 73
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
 
     move-result-object v0
@@ -76,10 +92,10 @@
 .method protected a(Landroidx/appcompat/app/b$a;)V
     .locals 8
 
-    .line 56
+    .line 55
     invoke-super {p0, p1}, Landroidx/preference/f;->a(Landroidx/appcompat/app/b$a;)V
 
-    .line 58
+    .line 57
     new-instance v7, Lcom/oppo/camera/ui/menu/levelcontrol/b;
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->getActivity()Landroidx/fragment/app/c;
@@ -100,7 +116,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/oppo/camera/ui/menu/levelcontrol/b;-><init>(Landroid/content/Context;ZZI[Ljava/lang/CharSequence;[Ljava/lang/CharSequence;)V
 
-    .line 61
+    .line 60
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->a:I
 
     new-instance v1, Lcom/oppo/camera/ui/menu/setting/e$1;
@@ -108,11 +124,6 @@
     invoke-direct {v1, p0}, Lcom/oppo/camera/ui/menu/setting/e$1;-><init>(Lcom/oppo/camera/ui/menu/setting/e;)V
 
     invoke-virtual {p1, v7, v0, v1}, Landroidx/appcompat/app/b$a;->setSingleChoiceItems(Landroid/widget/ListAdapter;ILandroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/b$a;
-
-    const/4 v0, 0x0
-
-    .line 74
-    invoke-virtual {p1, v0, v0}, Landroidx/appcompat/app/b$a;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroidx/appcompat/app/b$a;
 
     return-void
 .end method
@@ -122,12 +133,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 119
+    .line 110
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/e;->a:I
 
     if-ltz p1, :cond_0
 
-    .line 120
+    .line 111
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->c:[Ljava/lang/CharSequence;
 
     aget-object p1, v0, p1
@@ -136,19 +147,19 @@
 
     move-result-object p1
 
-    .line 121
+    .line 112
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/e;->c()Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;
 
     move-result-object v0
 
-    .line 123
+    .line 114
     invoke-virtual {v0, p1}, Landroidx/preference/ListPreference;->b(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 124
+    .line 115
     invoke-virtual {v0, p1}, Landroidx/preference/ListPreference;->a(Ljava/lang/String;)V
 
     :cond_0
@@ -158,17 +169,17 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 87
+    .line 78
     invoke-super {p0, p1}, Landroidx/preference/f;->onCreate(Landroid/os/Bundle;)V
 
     if-nez p1, :cond_1
 
-    .line 90
+    .line 81
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/e;->c()Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;
 
     move-result-object p1
 
-    .line 92
+    .line 83
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;->l()[Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -181,7 +192,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 87
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;->o()Ljava/lang/String;
 
     move-result-object v0
@@ -192,21 +203,21 @@
 
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->a:I
 
-    .line 97
+    .line 88
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;->l()[Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->b:[Ljava/lang/CharSequence;
 
-    .line 98
+    .line 89
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;->m()[Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->c:[Ljava/lang/CharSequence;
 
-    .line 99
+    .line 90
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;->U()[Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -215,7 +226,7 @@
 
     goto :goto_0
 
-    .line 93
+    .line 84
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -230,7 +241,7 @@
 
     const-string v1, "CameraCustomListPreferenceFragment.index"
 
-    .line 101
+    .line 92
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -239,7 +250,7 @@
 
     const-string v0, "CameraCustomListPreferenceFragment.entries"
 
-    .line 102
+    .line 93
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -248,7 +259,7 @@
 
     const-string v0, "CameraCustomListPreferenceFragment.entryValues"
 
-    .line 103
+    .line 94
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -257,7 +268,7 @@
 
     const-string v0, "CameraCustomListPreferenceFragment.entrySummary"
 
-    .line 104
+    .line 95
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getCharSequenceArray(Ljava/lang/String;)[Ljava/lang/CharSequence;
 
     move-result-object p1
@@ -269,108 +280,69 @@
 .end method
 
 .method public onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
-    .locals 2
+    .locals 1
 
-    .line 132
+    .line 123
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->getActivity()Landroidx/fragment/app/c;
 
     move-result-object p1
 
-    .line 133
-    new-instance v0, Lcolor/support/v7/app/b$a;
+    .line 124
+    new-instance v0, Lcom/coui/appcompat/dialog/app/b$a;
 
-    invoke-direct {v0, p1}, Lcolor/support/v7/app/b$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/coui/appcompat/dialog/app/b$a;-><init>(Landroid/content/Context;)V
 
-    .line 134
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
+    const/4 p1, 0x1
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroidx/preference/DialogPreference;->a()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcolor/support/v7/app/b$a;->a(Ljava/lang/CharSequence;)Lcolor/support/v7/app/b$a;
-
-    move-result-object v0
-
-    .line 135
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroidx/preference/DialogPreference;->c()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcolor/support/v7/app/b$a;->a(Landroid/graphics/drawable/Drawable;)Lcolor/support/v7/app/b$a;
-
-    move-result-object v0
-
-    .line 136
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroidx/preference/DialogPreference;->d()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p0}, Lcolor/support/v7/app/b$a;->a(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcolor/support/v7/app/b$a;
-
-    move-result-object v0
-
-    .line 137
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroidx/preference/DialogPreference;->e()Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p0}, Lcolor/support/v7/app/b$a;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcolor/support/v7/app/b$a;
-
-    move-result-object v0
-
-    .line 138
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/e;->a(Landroid/content/Context;)Landroid/view/View;
+    .line 125
+    invoke-virtual {v0, p1}, Lcom/coui/appcompat/dialog/app/b$a;->f(I)Lcom/coui/appcompat/dialog/app/b$a;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
-
-    .line 141
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/e;->a(Landroid/view/View;)V
-
-    .line 142
-    invoke-virtual {v0, p1}, Lcolor/support/v7/app/b$a;->b(Landroid/view/View;)Lcolor/support/v7/app/b$a;
-
-    goto :goto_0
-
-    .line 144
-    :cond_0
+    .line 126
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
 
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/preference/DialogPreference;->a()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/coui/appcompat/dialog/app/b$a;->a(Ljava/lang/CharSequence;)Lcom/coui/appcompat/dialog/app/b$a;
+
     move-result-object p1
 
-    invoke-virtual {p1}, Landroidx/preference/DialogPreference;->b()Ljava/lang/CharSequence;
+    .line 127
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/preference/DialogPreference;->c()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcom/coui/appcompat/dialog/app/b$a;->a(Landroid/graphics/drawable/Drawable;)Lcom/coui/appcompat/dialog/app/b$a;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcolor/support/v7/app/b$a;->b(Ljava/lang/CharSequence;)Lcolor/support/v7/app/b$a;
+    .line 128
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/e;->b()Landroidx/preference/DialogPreference;
 
-    .line 147
-    :goto_0
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/e;->a(Landroidx/appcompat/app/b$a;)V
+    move-result-object v0
 
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Landroidx/preference/DialogPreference;->b()Ljava/lang/CharSequence;
 
-    .line 148
-    invoke-virtual {v0, p1, p1}, Lcolor/support/v7/app/b$a;->b(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcolor/support/v7/app/b$a;
+    move-result-object v0
 
-    .line 150
-    invoke-virtual {v0}, Lcolor/support/v7/app/b$a;->a()Lcolor/support/v7/app/b;
+    invoke-virtual {p1, v0}, Lcom/coui/appcompat/dialog/app/b$a;->b(Ljava/lang/CharSequence;)Lcom/coui/appcompat/dialog/app/b$a;
+
+    move-result-object p1
+
+    .line 129
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/e;->a(Landroidx/appcompat/app/b$a;)V
+
+    .line 131
+    invoke-virtual {p1}, Lcom/coui/appcompat/dialog/app/b$a;->a()Lcom/coui/appcompat/dialog/app/b;
 
     move-result-object p1
 
@@ -380,31 +352,31 @@
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .line 110
+    .line 101
     invoke-super {p0, p1}, Landroidx/preference/f;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 111
+    .line 102
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->a:I
 
     const-string v1, "CameraCustomListPreferenceFragment.index"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 112
+    .line 103
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->b:[Ljava/lang/CharSequence;
 
     const-string v1, "CameraCustomListPreferenceFragment.entries"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
-    .line 113
+    .line 104
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->c:[Ljava/lang/CharSequence;
 
     const-string v1, "CameraCustomListPreferenceFragment.entryValues"
 
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putCharSequenceArray(Ljava/lang/String;[Ljava/lang/CharSequence;)V
 
-    .line 114
+    .line 105
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/e;->d:[Ljava/lang/CharSequence;
 
     const-string v1, "CameraCustomListPreferenceFragment.entrySummary"

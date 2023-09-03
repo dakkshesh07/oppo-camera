@@ -36,6 +36,8 @@
 
 .method public setupDialog(Landroid/app/Dialog;I)V
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 50
     instance-of v0, p1, Landroidx/appcompat/app/f;

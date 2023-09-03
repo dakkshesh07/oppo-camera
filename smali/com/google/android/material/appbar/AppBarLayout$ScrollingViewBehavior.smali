@@ -146,7 +146,7 @@
     sub-int/2addr v1, p2
 
     .line 2064
-    invoke-static {p1, v1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     :cond_0
     return-void
@@ -403,22 +403,22 @@
     if-eqz p2, :cond_0
 
     .line 2028
-    sget-object p2, Landroidx/core/g/a/d$a;->m:Landroidx/core/g/a/d$a;
+    sget-object p2, Landroidx/core/f/a/d$a;->m:Landroidx/core/f/a/d$a;
 
-    invoke-virtual {p2}, Landroidx/core/g/a/d$a;->a()I
+    invoke-virtual {p2}, Landroidx/core/f/a/d$a;->a()I
 
     move-result p2
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->c(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->c(Landroid/view/View;I)V
 
     .line 2029
-    sget-object p2, Landroidx/core/g/a/d$a;->n:Landroidx/core/g/a/d$a;
+    sget-object p2, Landroidx/core/f/a/d$a;->n:Landroidx/core/f/a/d$a;
 
-    invoke-virtual {p2}, Landroidx/core/g/a/d$a;->a()I
+    invoke-virtual {p2}, Landroidx/core/f/a/d$a;->a()I
 
     move-result p2
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->c(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->c(Landroid/view/View;I)V
 
     :cond_0
     return-void

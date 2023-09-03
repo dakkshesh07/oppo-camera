@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;Ljava/lang/Object;)V
+.method a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
     .locals 4
 
     .line 214

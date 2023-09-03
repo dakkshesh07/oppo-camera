@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/fragment/app/l;->a(Landroidx/fragment/app/n;Landroid/view/ViewGroup;Landroid/view/View;Landroidx/b/a;Landroidx/fragment/app/l$a;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    value = Landroidx/fragment/app/l;->a(Landroidx/fragment/app/n;Landroid/view/ViewGroup;Landroid/view/View;Landroidx/collection/ArrayMap;Landroidx/fragment/app/l$a;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
 .field final synthetic c:Z
 
-.field final synthetic d:Landroidx/b/a;
+.field final synthetic d:Landroidx/collection/ArrayMap;
 
 .field final synthetic e:Landroid/view/View;
 
@@ -34,7 +34,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/b/a;Landroid/view/View;Landroidx/fragment/app/n;Landroid/graphics/Rect;)V
+.method constructor <init>(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Landroid/view/View;Landroidx/fragment/app/n;Landroid/graphics/Rect;)V
     .locals 0
 
     .line 624
@@ -44,7 +44,7 @@
 
     iput-boolean p3, p0, Landroidx/fragment/app/l$3;->c:Z
 
-    iput-object p4, p0, Landroidx/fragment/app/l$3;->d:Landroidx/b/a;
+    iput-object p4, p0, Landroidx/fragment/app/l$3;->d:Landroidx/collection/ArrayMap;
 
     iput-object p5, p0, Landroidx/fragment/app/l$3;->e:Landroid/view/View;
 
@@ -69,11 +69,11 @@
 
     iget-boolean v2, p0, Landroidx/fragment/app/l$3;->c:Z
 
-    iget-object v3, p0, Landroidx/fragment/app/l$3;->d:Landroidx/b/a;
+    iget-object v3, p0, Landroidx/fragment/app/l$3;->d:Landroidx/collection/ArrayMap;
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Landroidx/fragment/app/l;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/b/a;Z)V
+    invoke-static {v0, v1, v2, v3, v4}, Landroidx/fragment/app/l;->a(Landroidx/fragment/app/Fragment;Landroidx/fragment/app/Fragment;ZLandroidx/collection/ArrayMap;Z)V
 
     .line 629
     iget-object v0, p0, Landroidx/fragment/app/l$3;->e:Landroid/view/View;

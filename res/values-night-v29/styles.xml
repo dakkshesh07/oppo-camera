@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppBaseTheme" parent="@style/Theme.Camera">
+    <style name="AppBaseTheme" parent="@style/APKTOOL_DUPLICATE_style_0x7f1102bb">
         <item name="android:forceDarkAllowed">true</item>
         <item name="android:isLightTheme">true</item>
-        <item name="enableFollowSystemForceDarkRank">true</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04030b">true</item>
     </style>
-    <style name="ThemeOverrideBase" parent="@style/Theme.AppCompatSupport.Light">
+    <style name="APKTOOL_DUPLICATE_style_0x7f110325" parent="@style/APKTOOL_DUPLICATE_style_0x7f11029b">
         <item name="android:backgroundDimAmount">0.7</item>
     </style>
+    <style name="APKTOOL_DUPLICATE_style_0x7f11011f" />
 </resources>

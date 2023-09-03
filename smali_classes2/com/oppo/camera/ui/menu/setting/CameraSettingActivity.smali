@@ -1,5 +1,5 @@
 .class public Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;
-.super Lcom/oppo/camera/ui/menu/setting/m;
+.super Lcom/oppo/camera/ui/menu/setting/l;
 .source "CameraSettingActivity.java"
 
 
@@ -7,8 +7,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 30
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/m;-><init>()V
+    .line 28
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/l;-><init>()V
 
     return-void
 .end method
@@ -22,15 +22,92 @@
 
     const-string v1, "attachBaseContext, follow system dpi."
 
-    .line 36
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 34
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
-    invoke-static {p1}, Lcom/oppo/camera/util/Util;->k(Landroid/content/Context;)Landroid/content/Context;
+    .line 36
+    invoke-static {p1}, Lcom/oppo/camera/util/Util;->n(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/m;->attachBaseContext(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/l;->attachBaseContext(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method public onConfigurationChanged(Landroid/content/res/Configuration;)V
+    .locals 3
+
+    .line 41
+    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/l;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+
+    .line 43
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "onConfigurationChanged, densityDpi: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p1, Landroid/content/res/Configuration;->densityDpi:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " -> "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v2, Lcom/oppo/camera/util/Util;->b:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v2, ", fontScale: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p1, Landroid/content/res/Configuration;->fontScale:F
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget v1, Lcom/oppo/camera/util/Util;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "CameraSettingActivity"
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 46
+    sget v0, Lcom/oppo/camera/util/Util;->b:I
+
+    iput v0, p1, Landroid/content/res/Configuration;->densityDpi:I
+
+    .line 47
+    sget v0, Lcom/oppo/camera/util/Util;->c:F
+
+    iput v0, p1, Landroid/content/res/Configuration;->fontScale:F
+
+    .line 49
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p1, v1}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
 
     return-void
 .end method
@@ -38,42 +115,42 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 3
 
-    .line 43
-    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/m;->onCreate(Landroid/os/Bundle;)V
+    .line 54
+    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/l;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0c00ea
+    const p1, 0x7f0c010e
 
-    .line 45
+    .line 56
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->setContentView(I)V
 
-    .line 46
+    .line 58
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->j()Landroidx/fragment/app/h;
 
     move-result-object p1
 
     const-string v0, "com.oppo.camera.ui.menu.setting.CameraSettingActivity"
 
-    .line 47
+    .line 59
     invoke-virtual {p1, v0}, Landroidx/fragment/app/h;->a(Ljava/lang/String;)Landroidx/fragment/app/Fragment;
 
     move-result-object v1
 
-    check-cast v1, Lcom/oppo/camera/ui/menu/setting/l;
+    check-cast v1, Lcom/oppo/camera/ui/menu/setting/k;
 
     if-nez v1, :cond_0
 
-    .line 50
-    new-instance v1, Lcom/oppo/camera/ui/menu/setting/l;
+    .line 62
+    new-instance v1, Lcom/oppo/camera/ui/menu/setting/k;
 
-    invoke-direct {v1}, Lcom/oppo/camera/ui/menu/setting/l;-><init>()V
+    invoke-direct {v1}, Lcom/oppo/camera/ui/menu/setting/k;-><init>()V
 
-    .line 53
+    .line 65
     :cond_0
     invoke-virtual {p1}, Landroidx/fragment/app/h;->a()Landroidx/fragment/app/k;
 
     move-result-object p1
 
-    const v2, 0x7f090133
+    const v2, 0x7f09014b
 
     invoke-virtual {p1, v2, v1, v0}, Landroidx/fragment/app/k;->b(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/k;
 
@@ -81,12 +158,12 @@
 
     invoke-virtual {p1}, Landroidx/fragment/app/k;->b()I
 
-    .line 55
+    .line 67
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object p1
 
-    .line 56
+    .line 68
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -107,18 +184,18 @@
 
     const-string v2, "CameraSettingActivity"
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f1001a4
+    const v0, 0x7f1002d0
 
-    .line 57
+    .line 69
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, p1, v0}, Lcom/oppo/camera/util/b;->a(Landroidx/appcompat/app/c;Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-static {p0, p1, v0}, Lcom/oppo/camera/util/e;->a(Landroidx/appcompat/app/c;Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 59
+    .line 71
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -135,20 +212,20 @@
 
     const-string v0, "camera_intent_data"
 
-    .line 60
+    .line 72
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
-    .line 61
-    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/menu/setting/l;->setArguments(Landroid/os/Bundle;)V
+    .line 73
+    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/menu/setting/k;->setArguments(Landroid/os/Bundle;)V
 
-    .line 62
+    .line 74
     invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->c(Z)V
 
     goto :goto_0
 
-    .line 64
+    .line 76
     :cond_1
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -162,7 +239,7 @@
 
     if-nez v0, :cond_2
 
-    .line 65
+    .line 77
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
@@ -175,7 +252,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 66
+    .line 78
     :cond_2
     invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/CameraSettingActivity;->a(Z)V
 

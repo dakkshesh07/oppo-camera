@@ -3,7 +3,7 @@
 .source "FragmentStateAdapter.java"
 
 # interfaces
-.implements Landroidx/lifecycle/f;
+.implements Landroidx/lifecycle/e;
 
 
 # annotations
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     .line 351
@@ -55,11 +55,11 @@
 
     .line 354
     :cond_0
-    invoke-interface {p1}, Landroidx/lifecycle/h;->getLifecycle()Landroidx/lifecycle/e;
+    invoke-interface {p1}, Landroidx/lifecycle/g;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Landroidx/lifecycle/e;->b(Landroidx/lifecycle/g;)V
+    invoke-virtual {p1, p0}, Landroidx/lifecycle/Lifecycle;->b(Landroidx/lifecycle/f;)V
 
     .line 355
     iget-object p1, p0, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;->a:Landroidx/viewpager2/adapter/b;
@@ -68,7 +68,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/core/g/w;->E(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->E(Landroid/view/View;)Z
 
     move-result p1
 

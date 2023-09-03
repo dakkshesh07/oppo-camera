@@ -26,7 +26,7 @@
 .method varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection;Ljava/lang/String;[Ljava/lang/Object;IJ)V
     .locals 0
 
-    .line 319
+    .line 346
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Connection$2;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     iput p4, p0, Lokhttp3/internal/http2/Http2Connection$2;->val$streamId:I
@@ -43,7 +43,7 @@
 .method public execute()V
     .locals 4
 
-    .line 322
+    .line 349
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$2;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
@@ -57,6 +57,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    .line 351
     :catch_0
+    iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$2;->this$0:Lokhttp3/internal/http2/Http2Connection;
+
+    invoke-static {v0}, Lokhttp3/internal/http2/Http2Connection;->access$000(Lokhttp3/internal/http2/Http2Connection;)V
+
+    :goto_0
     return-void
 .end method

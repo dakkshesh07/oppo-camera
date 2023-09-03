@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/beauty3d/g;)V
     .locals 0
 
-    .line 372
+    .line 368
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/g$5;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 375
+    .line 371
     invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
@@ -49,7 +49,7 @@
 
     return v1
 
-    .line 379
+    .line 375
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -66,7 +66,7 @@
     :cond_1
     const/high16 p2, 0x3f800000    # 1.0f
 
-    .line 385
+    .line 381
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_0
@@ -74,7 +74,7 @@
     :cond_2
     const/high16 p2, 0x3f000000    # 0.5f
 
-    .line 381
+    .line 377
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
     :goto_0

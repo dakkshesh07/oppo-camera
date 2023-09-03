@@ -96,7 +96,7 @@
 
     const-string v0, "MD5Utils"
 
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -111,7 +111,7 @@
 
     .line 43
     :try_start_0
-    invoke-static {p0}, Lcom/oppo/camera/m/a;->e(Ljava/lang/String;)Ljava/io/InputStream;
+    invoke-static {p0}, Lcom/oppo/camera/n/a;->e(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object p0
     :try_end_0

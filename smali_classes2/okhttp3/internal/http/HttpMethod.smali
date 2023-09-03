@@ -7,7 +7,7 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 53
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -79,70 +79,31 @@
 .method public static permitsRequestBody(Ljava/lang/String;)Z
     .locals 1
 
+    const-string v0, "GET"
+
     .line 36
-    invoke-static {p0}, Lokhttp3/internal/http/HttpMethod;->requiresRequestBody(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "OPTIONS"
-
-    .line 37
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    const-string v0, "DELETE"
+    const-string v0, "HEAD"
 
-    .line 38
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "PROPFIND"
-
-    .line 39
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "MKCOL"
-
-    .line 40
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "LOCK"
-
-    .line 41
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_0
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
     const/4 p0, 0x0
 
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    const/4 p0, 0x1
-
-    :goto_1
     return p0
 .end method
 
@@ -151,7 +112,7 @@
 
     const-string v0, "PROPFIND"
 
-    .line 50
+    .line 45
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -166,7 +127,7 @@
 
     const-string v0, "PROPFIND"
 
-    .line 45
+    .line 40
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0

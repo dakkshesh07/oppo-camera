@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 87
+    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,47 +39,54 @@
 
 # virtual methods
 .method public a(Landroid/os/Parcel;)Lcom/oppo/camera/sticker/data/BuildInStickerCategory;
-    .locals 2
+    .locals 3
 
-    .line 90
+    .line 102
     new-instance v0, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;
 
     invoke-direct {v0}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;-><init>()V
 
-    .line 91
+    .line 103
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$002(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 92
+    .line 104
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$102(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 93
+    .line 105
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$202(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 94
+    .line 106
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$302(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 95
+    .line 107
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result p1
+    move-result v1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$402(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;I)I
+    invoke-static {v0, v1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$402(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;I)I
+
+    .line 108
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v1
+
+    invoke-static {v0, v1, v2}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory;->access$502(Lcom/oppo/camera/sticker/data/BuildInStickerCategory;J)J
 
     return-object v0
 .end method
@@ -87,7 +94,7 @@
 .method public a(I)[Lcom/oppo/camera/sticker/data/BuildInStickerCategory;
     .locals 0
 
-    .line 101
+    .line 114
     new-array p1, p1, [Lcom/oppo/camera/sticker/data/BuildInStickerCategory;
 
     return-object p1
@@ -96,7 +103,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 0
 
-    .line 87
+    .line 99
     invoke-virtual {p0, p1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory$1;->a(Landroid/os/Parcel;)Lcom/oppo/camera/sticker/data/BuildInStickerCategory;
 
     move-result-object p1
@@ -107,7 +114,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 0
 
-    .line 87
+    .line 99
     invoke-virtual {p0, p1}, Lcom/oppo/camera/sticker/data/BuildInStickerCategory$1;->a(I)[Lcom/oppo/camera/sticker/data/BuildInStickerCategory;
 
     move-result-object p1

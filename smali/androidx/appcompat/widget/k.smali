@@ -26,14 +26,14 @@
     if-eqz v0, :cond_1
 
     .line 33
-    instance-of v0, p2, Landroidx/appcompat/widget/az;
+    instance-of v0, p2, Landroidx/appcompat/widget/ay;
 
     if-eqz v0, :cond_0
 
     .line 34
-    check-cast p2, Landroidx/appcompat/widget/az;
+    check-cast p2, Landroidx/appcompat/widget/ay;
 
-    invoke-interface {p2}, Landroidx/appcompat/widget/az;->a()Ljava/lang/CharSequence;
+    invoke-interface {p2}, Landroidx/appcompat/widget/ay;->a()Ljava/lang/CharSequence;
 
     move-result-object p2
 

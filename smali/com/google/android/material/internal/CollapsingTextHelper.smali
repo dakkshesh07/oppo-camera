@@ -3,6 +3,11 @@
 .source "CollapsingTextHelper.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final DEBUG_DRAW:Z = false
 
@@ -408,7 +413,7 @@
     iget-boolean v5, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
     .line 545
-    invoke-static {v4, v5}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v4, v5}, Landroidx/core/f/d;->a(II)I
 
     move-result v4
 
@@ -658,7 +663,7 @@
     iget-boolean v4, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->isRtl:Z
 
     .line 591
-    invoke-static {v2, v4}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v2, v4}, Landroidx/core/f/d;->a(II)I
 
     move-result v2
 
@@ -1053,7 +1058,7 @@
     .line 507
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1415,7 +1420,7 @@
 
     .line 837
     :goto_0
-    invoke-static {p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -2082,7 +2087,7 @@
     .line 737
     iget-object v0, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    invoke-static {v0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {v0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -2158,7 +2163,7 @@
     .line 643
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -2202,7 +2207,7 @@
     .line 648
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -2278,7 +2283,7 @@
     :cond_1
     iget-object p1, p0, Lcom/google/android/material/internal/CollapsingTextHelper;->view:Landroid/view/View;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 .end method
@@ -3295,7 +3300,7 @@
     const/high16 v1, 0x3f800000    # 1.0f
 
     .line 439
-    invoke-static {p1, v0, v1}, Landroidx/core/b/a;->a(FFF)F
+    invoke-static {p1, v0, v1}, Landroidx/core/c/a;->a(FFF)F
 
     move-result p1
 

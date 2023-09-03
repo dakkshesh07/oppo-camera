@@ -30,9 +30,9 @@
 
 .field private f:Landroidx/core/graphics/drawable/IconCompat;
 
-.field private final g:[Landroidx/core/app/k;
+.field private final g:[Landroidx/core/app/l;
 
-.field private final h:[Landroidx/core/app/k;
+.field private final h:[Landroidx/core/app/l;
 
 .field private i:Z
 
@@ -108,11 +108,11 @@
     return v0
 .end method
 
-.method public f()[Landroidx/core/app/k;
+.method public f()[Landroidx/core/app/l;
     .locals 1
 
     .line 3396
-    iget-object v0, p0, Landroidx/core/app/h$a;->g:[Landroidx/core/app/k;
+    iget-object v0, p0, Landroidx/core/app/h$a;->g:[Landroidx/core/app/l;
 
     return-object v0
 .end method
@@ -135,11 +135,11 @@
     return v0
 .end method
 
-.method public i()[Landroidx/core/app/k;
+.method public i()[Landroidx/core/app/l;
     .locals 1
 
     .line 3430
-    iget-object v0, p0, Landroidx/core/app/h$a;->h:[Landroidx/core/app/k;
+    iget-object v0, p0, Landroidx/core/app/h$a;->h:[Landroidx/core/app/l;
 
     return-object v0
 .end method

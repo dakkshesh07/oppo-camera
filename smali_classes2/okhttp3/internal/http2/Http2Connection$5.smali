@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lokhttp3/internal/http2/Http2Connection;->pushHeadersLater(ILjava/util/List;Z)V
+    value = Lokhttp3/internal/http2/Http2Connection;->pushDataLater(ILokio/BufferedSource;IZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,25 +17,29 @@
 # instance fields
 .field final synthetic this$0:Lokhttp3/internal/http2/Http2Connection;
 
-.field final synthetic val$inFinished:Z
+.field final synthetic val$buffer:Lokio/Buffer;
 
-.field final synthetic val$requestHeaders:Ljava/util/List;
+.field final synthetic val$byteCount:I
+
+.field final synthetic val$inFinished:Z
 
 .field final synthetic val$streamId:I
 
 
 # direct methods
-.method varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection;Ljava/lang/String;[Ljava/lang/Object;ILjava/util/List;Z)V
+.method varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection;Ljava/lang/String;[Ljava/lang/Object;ILokio/Buffer;IZ)V
     .locals 0
 
-    .line 805
+    .line 890
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Connection$5;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     iput p4, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$streamId:I
 
-    iput-object p5, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$requestHeaders:Ljava/util/List;
+    iput-object p5, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$buffer:Lokio/Buffer;
 
-    iput-boolean p6, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$inFinished:Z
+    iput p6, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$byteCount:I
+
+    iput-boolean p7, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$inFinished:Z
 
     invoke-direct {p0, p2, p3}, Lokhttp3/internal/NamedRunnable;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -45,27 +49,29 @@
 
 # virtual methods
 .method public execute()V
-    .locals 4
+    .locals 5
 
-    .line 807
+    .line 893
+    :try_start_0
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$5;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     iget-object v0, v0, Lokhttp3/internal/http2/Http2Connection;->pushObserver:Lokhttp3/internal/http2/PushObserver;
 
     iget v1, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$streamId:I
 
-    iget-object v2, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$requestHeaders:Ljava/util/List;
+    iget-object v2, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$buffer:Lokio/Buffer;
 
-    iget-boolean v3, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$inFinished:Z
+    iget v3, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$byteCount:I
 
-    invoke-interface {v0, v1, v2, v3}, Lokhttp3/internal/http2/PushObserver;->onHeaders(ILjava/util/List;Z)Z
+    iget-boolean v4, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$inFinished:Z
+
+    invoke-interface {v0, v1, v2, v3, v4}, Lokhttp3/internal/http2/PushObserver;->onData(ILokio/BufferedSource;IZ)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 809
-    :try_start_0
+    .line 894
     iget-object v1, p0, Lokhttp3/internal/http2/Http2Connection$5;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
     iget-object v1, v1, Lokhttp3/internal/http2/Http2Connection;->writer:Lokhttp3/internal/http2/Http2Writer;
@@ -79,12 +85,12 @@
     :cond_0
     if-nez v0, :cond_1
 
-    .line 810
+    .line 895
     iget-boolean v0, p0, Lokhttp3/internal/http2/Http2Connection$5;->val$inFinished:Z
 
     if-eqz v0, :cond_2
 
-    .line 811
+    .line 896
     :cond_1
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$5;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
@@ -92,7 +98,7 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 812
+    .line 897
     :try_start_1
     iget-object v1, p0, Lokhttp3/internal/http2/Http2Connection$5;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
@@ -106,7 +112,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 813
+    .line 898
     monitor-exit v0
 
     goto :goto_0

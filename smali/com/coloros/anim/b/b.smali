@@ -158,7 +158,7 @@
 
     .line 150
     :try_start_0
-    sget-boolean v1, Lcom/coloros/anim/f/b;->a:Z
+    sget-boolean v1, Lcom/coloros/anim/d/b;->a:Z
 
     if-eqz v1, :cond_0
 
@@ -177,7 +177,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/coloros/anim/f/b;->c(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/coloros/anim/d/b;->c(Ljava/lang/String;)V
 
     .line 153
     :cond_0
@@ -354,7 +354,7 @@
     if-nez v3, :cond_6
 
     .line 118
-    sget-boolean v3, Lcom/coloros/anim/f/b;->a:Z
+    sget-boolean v3, Lcom/coloros/anim/d/b;->a:Z
 
     if-eqz v3, :cond_5
 
@@ -381,7 +381,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/coloros/anim/f/b;->c(Ljava/lang/String;)V
+    invoke-static {v3}, Lcom/coloros/anim/d/b;->c(Ljava/lang/String;)V
 
     .line 121
     :cond_5

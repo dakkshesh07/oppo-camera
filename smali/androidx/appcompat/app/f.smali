@@ -9,7 +9,7 @@
 # instance fields
 .field private mDelegate:Landroidx/appcompat/app/e;
 
-.field private final mKeyDispatcher:Landroidx/core/g/e$a;
+.field private final mKeyDispatcher:Landroidx/core/f/e$a;
 
 
 # direct methods
@@ -39,7 +39,7 @@
 
     invoke-direct {v0, p0}, Landroidx/appcompat/app/f$1;-><init>(Landroidx/appcompat/app/f;)V
 
-    iput-object v0, p0, Landroidx/appcompat/app/f;->mKeyDispatcher:Landroidx/core/g/e$a;
+    iput-object v0, p0, Landroidx/appcompat/app/f;->mKeyDispatcher:Landroidx/core/f/e$a;
 
     .line 59
     invoke-virtual {p0}, Landroidx/appcompat/app/f;->getDelegate()Landroidx/appcompat/app/e;
@@ -72,7 +72,7 @@
 
     invoke-direct {p1, p0}, Landroidx/appcompat/app/f$1;-><init>(Landroidx/appcompat/app/f;)V
 
-    iput-object p1, p0, Landroidx/appcompat/app/f;->mKeyDispatcher:Landroidx/core/g/e$a;
+    iput-object p1, p0, Landroidx/appcompat/app/f;->mKeyDispatcher:Landroidx/core/f/e$a;
 
     return-void
 .end method
@@ -149,9 +149,9 @@
     move-result-object v0
 
     .line 214
-    iget-object v1, p0, Landroidx/appcompat/app/f;->mKeyDispatcher:Landroidx/core/g/e$a;
+    iget-object v1, p0, Landroidx/appcompat/app/f;->mKeyDispatcher:Landroidx/core/f/e$a;
 
-    invoke-static {v1, v0, p0, p1}, Landroidx/core/g/e;->a(Landroidx/core/g/e$a;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
+    invoke-static {v1, v0, p0, p1}, Landroidx/core/f/e;->a(Landroidx/core/f/e$a;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
 
     move-result p1
 
@@ -219,6 +219,8 @@
 
 .method public invalidateOptionsMenu()V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 169
     invoke-virtual {p0}, Landroidx/appcompat/app/f;->getDelegate()Landroidx/appcompat/app/e;

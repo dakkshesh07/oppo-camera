@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item android:state_enabled="false" android:color="@color/APKTOOL_DUPLICATE_color_0x7f060051" />
+    <item android:state_selected="true" android:color="@android:color/black" />
+    <item android:color="@color/APKTOOL_DUPLICATE_color_0x7f06036d" camera:APKTOOL_DUPLICATE_attr_0x7f040545="true" />
+    <item android:color="@color/APKTOOL_DUPLICATE_color_0x7f060045" />
+</selector>

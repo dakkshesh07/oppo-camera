@@ -89,11 +89,11 @@
 
 
 # virtual methods
-.method synthetic a(Lcom/coloros/anim/g/c;F)Ljava/lang/Object;
+.method synthetic a(Lcom/coloros/anim/e/c;F)Ljava/lang/Object;
     .locals 0
 
     .line 9
-    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/m;->b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/m;->b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
 
     move-result-object p1
 
@@ -173,12 +173,12 @@
     return-void
 .end method
 
-.method b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+.method b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "Landroid/graphics/PointF;",
             ">;F)",
             "Landroid/graphics/PointF;"
@@ -210,7 +210,7 @@
     const/4 v1, 0x0
 
     .line 37
-    invoke-virtual {p0, v0, v1}, Lcom/coloros/anim/a/b/m;->b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+    invoke-virtual {p0, v0, v1}, Lcom/coloros/anim/a/b/m;->b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
 
     move-result-object v0
 

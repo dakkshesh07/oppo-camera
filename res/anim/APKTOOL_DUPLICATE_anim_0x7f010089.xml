@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:interpolator="@anim/APKTOOL_DUPLICATE_anim_0x7f010087" android:duration="300" android:shareInterpolator="false" android:zAdjustment="bottom"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale android:pivotX="10.000002%" android:pivotY="10.000002%" android:fromXScale="0.1" android:toXScale="1.0" android:fromYScale="0.1" android:toYScale="1.0" />
+    <alpha android:fromAlpha="0.0" android:toAlpha="1.0" />
+</set>

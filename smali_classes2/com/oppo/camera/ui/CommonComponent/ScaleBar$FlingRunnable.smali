@@ -49,27 +49,27 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;F)V
     .locals 2
 
-    .line 454
+    .line 443
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/16 v0, 0x190
 
-    .line 440
+    .line 429
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mDuration:I
 
     const/16 v0, 0x10
 
-    .line 441
+    .line 430
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mFrameDuration:I
 
     const v0, 0x3e19999a    # 0.15f
 
-    .line 447
+    .line 436
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mMagicVelocityPx:F
 
-    .line 452
+    .line 441
     new-instance v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingInterpolator;
 
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
@@ -80,17 +80,17 @@
 
     const/4 v0, 0x0
 
-    .line 455
+    .line 444
     iput-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mbFinish:Z
 
-    .line 457
+    .line 446
     invoke-static {p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 458
+    .line 447
     invoke-static {p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
 
     move-result-object p1
@@ -104,12 +104,12 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 461
+    .line 450
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mLastX:F
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 462
+    .line 451
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mDuration:I
 
     int-to-float v1, v0
@@ -118,12 +118,12 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mDurationReciprocal:F
 
-    .line 463
+    .line 452
     iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mVelocityX:F
 
     int-to-float p1, v0
 
-    .line 464
+    .line 453
     iget p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mVelocityX:F
 
     mul-float/2addr p1, p2
@@ -138,7 +138,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mTotalDistance:F
 
-    .line 465
+    .line 454
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide p1
@@ -155,10 +155,10 @@
 
     const/4 v0, 0x1
 
-    .line 469
+    .line 458
     iput-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mbFinish:Z
 
-    .line 471
+    .line 460
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
@@ -167,7 +167,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 472
+    .line 461
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
@@ -187,14 +187,14 @@
 .method public run()V
     .locals 4
 
-    .line 478
+    .line 467
     iget-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mbFinish:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 482
+    .line 471
     :cond_0
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
@@ -206,7 +206,7 @@
 
     long-to-int v0, v0
 
-    .line 483
+    .line 472
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mInterpolator:Landroid/view/animation/Interpolator;
 
     int-to-float v2, v0
@@ -219,7 +219,7 @@
 
     move-result v1
 
-    .line 484
+    .line 473
     iget v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mLastX:F
 
     sub-float v2, v1, v2
@@ -228,20 +228,20 @@
 
     mul-float/2addr v2, v3
 
-    .line 485
+    .line 474
     iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mLastX:F
 
-    .line 487
+    .line 476
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mDuration:I
 
     if-ge v0, v1, :cond_1
 
-    .line 488
+    .line 477
     iget-object v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v0, v2}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$100(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;F)V
 
-    .line 489
+    .line 478
     iget-object v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$200(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Landroid/os/Handler;
@@ -261,20 +261,20 @@
 
     const/4 v0, 0x0
 
-    .line 491
+    .line 480
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mLastX:F
 
-    .line 492
+    .line 481
     iget-object v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$300(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)V
 
     const/4 v0, 0x1
 
-    .line 493
+    .line 482
     iput-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->mbFinish:Z
 
-    .line 495
+    .line 484
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
@@ -283,7 +283,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 496
+    .line 485
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     invoke-static {v1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;

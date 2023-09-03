@@ -105,14 +105,14 @@
 
     sput-object v0, Lcom/google/protobuf/Syntax;->$VALUES:[Lcom/google/protobuf/Syntax;
 
-    .line 81
+    .line 87
     new-instance v0, Lcom/google/protobuf/Syntax$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/Syntax$1;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/Syntax;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
-    .line 102
+    .line 107
     invoke-static {}, Lcom/google/protobuf/Syntax;->values()[Lcom/google/protobuf/Syntax;
 
     move-result-object v0
@@ -130,10 +130,10 @@
         }
     .end annotation
 
-    .line 118
+    .line 123
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 119
+    .line 124
     iput p3, p0, Lcom/google/protobuf/Syntax;->value:I
 
     return-void
@@ -152,13 +152,13 @@
 
     return-object p0
 
-    .line 71
+    .line 77
     :cond_0
     sget-object p0, Lcom/google/protobuf/Syntax;->SYNTAX_PROTO3:Lcom/google/protobuf/Syntax;
 
     return-object p0
 
-    .line 70
+    .line 76
     :cond_1
     sget-object p0, Lcom/google/protobuf/Syntax;->SYNTAX_PROTO2:Lcom/google/protobuf/Syntax;
 
@@ -168,12 +168,11 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 2
 
-    .line 98
+    .line 104
     invoke-static {}, Lcom/google/protobuf/TypeProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
 
-    .line 99
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getEnumTypes()Ljava/util/List;
 
     move-result-object v0
@@ -200,7 +199,7 @@
         }
     .end annotation
 
-    .line 78
+    .line 84
     sget-object v0, Lcom/google/protobuf/Syntax;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -211,7 +210,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 65
+    .line 67
     invoke-static {p0}, Lcom/google/protobuf/Syntax;->forNumber(I)Lcom/google/protobuf/Syntax;
 
     move-result-object p0
@@ -222,7 +221,7 @@
 .method public static valueOf(Lcom/google/protobuf/Descriptors$EnumValueDescriptor;)Lcom/google/protobuf/Syntax;
     .locals 2
 
-    .line 106
+    .line 111
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -233,7 +232,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 110
+    .line 115
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getIndex()I
 
     move-result v0
@@ -242,12 +241,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 111
+    .line 116
     sget-object p0, Lcom/google/protobuf/Syntax;->UNRECOGNIZED:Lcom/google/protobuf/Syntax;
 
     return-object p0
 
-    .line 113
+    .line 118
     :cond_0
     sget-object v0, Lcom/google/protobuf/Syntax;->VALUES:[Lcom/google/protobuf/Syntax;
 
@@ -259,7 +258,7 @@
 
     return-object p0
 
-    .line 107
+    .line 112
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -305,7 +304,7 @@
 .method public final getDescriptorForType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 1
 
-    .line 94
+    .line 100
     invoke-static {}, Lcom/google/protobuf/Syntax;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -340,7 +339,7 @@
 .method public final getValueDescriptor()Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
     .locals 2
 
-    .line 90
+    .line 96
     invoke-static {}, Lcom/google/protobuf/Syntax;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0

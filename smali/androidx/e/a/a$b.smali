@@ -21,6 +21,25 @@
 
 .field c:Z
 
+.field d:Z
+
+
+# direct methods
+.method constructor <init>(Landroid/content/IntentFilter;Landroid/content/BroadcastReceiver;)V
+    .locals 0
+
+    .line 55
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 56
+    iput-object p1, p0, Landroidx/e/a/a$b;->a:Landroid/content/IntentFilter;
+
+    .line 57
+    iput-object p2, p0, Landroidx/e/a/a$b;->b:Landroid/content/BroadcastReceiver;
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public toString()Ljava/lang/String;
@@ -54,7 +73,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     .line 67
-    iget-boolean v1, p0, Landroidx/e/a/a$b;->c:Z
+    iget-boolean v1, p0, Landroidx/e/a/a$b;->d:Z
 
     if-eqz v1, :cond_0
 

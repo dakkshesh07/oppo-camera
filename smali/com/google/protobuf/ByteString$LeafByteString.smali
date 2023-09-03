@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 825
+    .line 864
     invoke-direct {p0}, Lcom/google/protobuf/ByteString;-><init>()V
 
     return-void
@@ -48,10 +48,24 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 1
 
-    .line 825
+    .line 864
     invoke-super {p0}, Lcom/google/protobuf/ByteString;->iterator()Lcom/google/protobuf/ByteString$ByteIterator;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method writeToReverse(Lcom/google/protobuf/ByteOutput;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 877
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/ByteString$LeafByteString;->writeTo(Lcom/google/protobuf/ByteOutput;)V
+
+    return-void
 .end method

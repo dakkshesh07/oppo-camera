@@ -56,9 +56,9 @@
     .line 574
     iget-object p2, p0, Landroidx/appcompat/app/j$a;->a:Landroidx/appcompat/app/j;
 
-    iget-object p2, p2, Landroidx/appcompat/app/j;->a:Landroidx/appcompat/widget/aa;
+    iget-object p2, p2, Landroidx/appcompat/app/j;->a:Landroidx/appcompat/widget/z;
 
-    invoke-interface {p2}, Landroidx/appcompat/widget/aa;->n()V
+    invoke-interface {p2}, Landroidx/appcompat/widget/z;->n()V
 
     .line 575
     iget-object p2, p0, Landroidx/appcompat/app/j$a;->a:Landroidx/appcompat/app/j;

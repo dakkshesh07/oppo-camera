@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.chip.Chip android:ellipsize="end" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090371" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUPLICATE_string_0x7f10041d" app:APKTOOL_DUPLICATE_attr_0x7f0400bc="0.0dip" style="@style/APKTOOL_DUPLICATE_style_0x7f11040e"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

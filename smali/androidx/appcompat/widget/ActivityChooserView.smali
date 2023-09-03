@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/widget/ActivityChooserView$InnerLayout;,
@@ -20,7 +23,7 @@
 
 .field final c:Landroid/widget/FrameLayout;
 
-.field d:Landroidx/core/g/b;
+.field d:Landroidx/core/f/b;
 
 .field final e:Landroid/database/DataSetObserver;
 
@@ -40,7 +43,7 @@
 
 .field private final m:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
-.field private n:Landroidx/appcompat/widget/af;
+.field private n:Landroidx/appcompat/widget/ae;
 
 .field private o:Z
 
@@ -133,12 +136,12 @@
 
     .line 388
     :goto_1
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/af;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/ae;
 
     move-result-object p1
 
     .line 389
-    invoke-virtual {p1}, Landroidx/appcompat/widget/af;->c()Z
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ae;->c()Z
 
     move-result v3
 
@@ -183,22 +186,22 @@
     move-result v0
 
     .line 396
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/af;->h(I)V
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ae;->h(I)V
 
     .line 397
-    invoke-virtual {p1}, Landroidx/appcompat/widget/af;->a_()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ae;->a_()V
 
     .line 398
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/g/b;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/f/b;
 
     if-eqz v0, :cond_4
 
     .line 399
-    invoke-virtual {v0, v1}, Landroidx/core/g/b;->a(Z)V
+    invoke-virtual {v0, v1}, Landroidx/core/f/b;->a(Z)V
 
     .line 401
     :cond_4
-    invoke-virtual {p1}, Landroidx/appcompat/widget/af;->b_()Landroid/widget/ListView;
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ae;->b_()Landroid/widget/ListView;
 
     move-result-object v0
 
@@ -215,7 +218,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 403
-    invoke-virtual {p1}, Landroidx/appcompat/widget/af;->b_()Landroid/widget/ListView;
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ae;->b_()Landroid/widget/ListView;
 
     move-result-object p1
 
@@ -286,11 +289,11 @@
     if-eqz v0, :cond_0
 
     .line 414
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/af;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/af;->b()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ae;->b()V
 
     .line 415
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -319,11 +322,11 @@
     .locals 1
 
     .line 429
-    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/af;
+    invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getListPopupWindow()Landroidx/appcompat/widget/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/af;->c()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ae;->c()Z
 
     move-result v0
 
@@ -343,61 +346,61 @@
     return-object v0
 .end method
 
-.method getListPopupWindow()Landroidx/appcompat/widget/af;
+.method getListPopupWindow()Landroidx/appcompat/widget/ae;
     .locals 2
 
     .line 526
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     if-nez v0, :cond_0
 
     .line 527
-    new-instance v0, Landroidx/appcompat/widget/af;
+    new-instance v0, Landroidx/appcompat/widget/ae;
 
     invoke-virtual {p0}, Landroidx/appcompat/widget/ActivityChooserView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/appcompat/widget/af;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroidx/appcompat/widget/ae;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iput-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     .line 528
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserView;->a:Landroidx/appcompat/widget/ActivityChooserView$a;
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/af;->a(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ae;->a(Landroid/widget/ListAdapter;)V
 
     .line 529
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
-    invoke-virtual {v0, p0}, Landroidx/appcompat/widget/af;->b(Landroid/view/View;)V
+    invoke-virtual {v0, p0}, Landroidx/appcompat/widget/ae;->b(Landroid/view/View;)V
 
     .line 530
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/af;->a(Z)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ae;->a(Z)V
 
     .line 531
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserView;->i:Landroidx/appcompat/widget/ActivityChooserView$b;
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/af;->a(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ae;->a(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 532
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     iget-object v1, p0, Landroidx/appcompat/widget/ActivityChooserView;->i:Landroidx/appcompat/widget/ActivityChooserView$b;
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/af;->a(Landroid/widget/PopupWindow$OnDismissListener;)V
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ae;->a(Landroid/widget/PopupWindow$OnDismissListener;)V
 
     .line 534
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/af;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActivityChooserView;->n:Landroidx/appcompat/widget/ae;
 
     return-object v0
 .end method
@@ -644,11 +647,13 @@
     return-void
 .end method
 
-.method public setProvider(Landroidx/core/g/b;)V
+.method public setProvider(Landroidx/core/f/b;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 345
-    iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/g/b;
+    iput-object p1, p0, Landroidx/appcompat/widget/ActivityChooserView;->d:Landroidx/core/f/b;
 
     return-void
 .end method

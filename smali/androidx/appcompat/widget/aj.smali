@@ -1,783 +1,293 @@
 .class Landroidx/appcompat/widget/aj;
-.super Landroid/content/res/Resources;
-.source "ResourcesWrapper.java"
+.super Ljava/lang/Object;
+.source "RtlSpacingHelper.java"
 
 
 # instance fields
-.field private final a:Landroid/content/res/Resources;
+.field private a:I
+
+.field private b:I
+
+.field private c:I
+
+.field private d:I
+
+.field private e:I
+
+.field private f:I
+
+.field private g:Z
+
+.field private h:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;)V
-    .locals 3
+.method constructor <init>()V
+    .locals 2
 
-    .line 48
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    .line 28
+    iput v0, p0, Landroidx/appcompat/widget/aj;->a:I
 
-    move-result-object v1
+    .line 29
+    iput v0, p0, Landroidx/appcompat/widget/aj;->b:I
 
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    const/high16 v1, -0x80000000
 
-    move-result-object v2
+    .line 30
+    iput v1, p0, Landroidx/appcompat/widget/aj;->c:I
 
-    invoke-direct {p0, v0, v1, v2}, Landroid/content/res/Resources;-><init>(Landroid/content/res/AssetManager;Landroid/util/DisplayMetrics;Landroid/content/res/Configuration;)V
+    .line 31
+    iput v1, p0, Landroidx/appcompat/widget/aj;->d:I
 
-    .line 49
-    iput-object p1, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    .line 32
+    iput v0, p0, Landroidx/appcompat/widget/aj;->e:I
+
+    .line 33
+    iput v0, p0, Landroidx/appcompat/widget/aj;->f:I
+
+    .line 35
+    iput-boolean v0, p0, Landroidx/appcompat/widget/aj;->g:Z
+
+    .line 36
+    iput-boolean v0, p0, Landroidx/appcompat/widget/aj;->h:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getAnimation(I)Landroid/content/res/XmlResourceParser;
+.method public a()I
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
-    .line 188
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    .line 39
+    iget v0, p0, Landroidx/appcompat/widget/aj;->a:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getAnimation(I)Landroid/content/res/XmlResourceParser;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public getBoolean(I)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+.method public a(II)V
+    .locals 2
 
-    .line 173
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    .line 55
+    iput p1, p0, Landroidx/appcompat/widget/aj;->c:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
+    .line 56
+    iput p2, p0, Landroidx/appcompat/widget/aj;->d:I
 
-    move-result p1
+    const/4 v0, 0x1
 
-    return p1
-.end method
+    .line 57
+    iput-boolean v0, p0, Landroidx/appcompat/widget/aj;->h:Z
 
-.method public getColor(I)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    .line 58
+    iget-boolean v0, p0, Landroidx/appcompat/widget/aj;->g:Z
 
-    .line 162
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    const/high16 v1, -0x80000000
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    if-eqz v0, :cond_1
 
-    move-result p1
-
-    return p1
-.end method
-
-.method public getColorStateList(I)Landroid/content/res/ColorStateList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 168
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getConfiguration()Landroid/content/res/Configuration;
-    .locals 1
-
-    .line 251
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getDimension(I)F
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 110
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getDimensionPixelOffset(I)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 115
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getDimensionPixelSize(I)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 120
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getDisplayMetrics()Landroid/util/DisplayMetrics;
-    .locals 1
-
-    .line 246
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getDrawable(I)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 131
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 137
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 144
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .line 150
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getFraction(III)F
-    .locals 1
-
-    .line 125
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getFraction(III)F
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-    .locals 1
-
-    .line 256
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getIntArray(I)[I
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 100
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getIntArray(I)[I
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getInteger(I)I
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 178
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public getLayout(I)Landroid/content/res/XmlResourceParser;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 183
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getLayout(I)Landroid/content/res/XmlResourceParser;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getMovie(I)Landroid/graphics/Movie;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 156
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getMovie(I)Landroid/graphics/Movie;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getQuantityString(II)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 80
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getQuantityString(II)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public varargs getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 75
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getQuantityText(II)Ljava/lang/CharSequence;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    if-eq p2, v1, :cond_0
 
     .line 59
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    iput p2, p0, Landroidx/appcompat/widget/aj;->a:I
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getQuantityText(II)Ljava/lang/CharSequence;
+    :cond_0
+    if-eq p1, v1, :cond_3
 
-    move-result-object p1
+    .line 60
+    iput p1, p0, Landroidx/appcompat/widget/aj;->b:I
 
-    return-object p1
+    goto :goto_0
+
+    :cond_1
+    if-eq p1, v1, :cond_2
+
+    .line 62
+    iput p1, p0, Landroidx/appcompat/widget/aj;->a:I
+
+    :cond_2
+    if-eq p2, v1, :cond_3
+
+    .line 63
+    iput p2, p0, Landroidx/appcompat/widget/aj;->b:I
+
+    :cond_3
+    :goto_0
+    return-void
 .end method
 
-.method public getResourceEntryName(I)Ljava/lang/String;
+.method public a(Z)V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
-    .line 276
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    .line 74
+    iget-boolean v0, p0, Landroidx/appcompat/widget/aj;->g:Z
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getResourceEntryName(I)Ljava/lang/String;
+    if-ne p1, v0, :cond_0
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    .line 77
+    :cond_0
+    iput-boolean p1, p0, Landroidx/appcompat/widget/aj;->g:Z
+
+    .line 78
+    iget-boolean v0, p0, Landroidx/appcompat/widget/aj;->h:Z
+
+    if-eqz v0, :cond_6
+
+    const/high16 v0, -0x80000000
+
+    if-eqz p1, :cond_3
+
+    .line 80
+    iget p1, p0, Landroidx/appcompat/widget/aj;->d:I
+
+    if-eq p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget p1, p0, Landroidx/appcompat/widget/aj;->e:I
+
+    :goto_0
+    iput p1, p0, Landroidx/appcompat/widget/aj;->a:I
+
+    .line 81
+    iget p1, p0, Landroidx/appcompat/widget/aj;->c:I
+
+    if-eq p1, v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget p1, p0, Landroidx/appcompat/widget/aj;->f:I
+
+    :goto_1
+    iput p1, p0, Landroidx/appcompat/widget/aj;->b:I
+
+    goto :goto_4
+
+    .line 83
+    :cond_3
+    iget p1, p0, Landroidx/appcompat/widget/aj;->c:I
+
+    if-eq p1, v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    iget p1, p0, Landroidx/appcompat/widget/aj;->e:I
+
+    :goto_2
+    iput p1, p0, Landroidx/appcompat/widget/aj;->a:I
+
+    .line 84
+    iget p1, p0, Landroidx/appcompat/widget/aj;->d:I
+
+    if-eq p1, v0, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    iget p1, p0, Landroidx/appcompat/widget/aj;->f:I
+
+    :goto_3
+    iput p1, p0, Landroidx/appcompat/widget/aj;->b:I
+
+    goto :goto_4
+
+    .line 87
+    :cond_6
+    iget p1, p0, Landroidx/appcompat/widget/aj;->e:I
+
+    iput p1, p0, Landroidx/appcompat/widget/aj;->a:I
+
+    .line 88
+    iget p1, p0, Landroidx/appcompat/widget/aj;->f:I
+
+    iput p1, p0, Landroidx/appcompat/widget/aj;->b:I
+
+    :goto_4
+    return-void
 .end method
 
-.method public getResourceName(I)Ljava/lang/String;
+.method public b()I
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
-    .line 261
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    .line 43
+    iget v0, p0, Landroidx/appcompat/widget/aj;->b:I
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method
 
-.method public getResourcePackageName(I)Ljava/lang/String;
+.method public b(II)V
     .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
 
-    .line 266
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
+    .line 68
+    iput-boolean v0, p0, Landroidx/appcompat/widget/aj;->h:Z
 
-    move-result-object p1
+    const/high16 v0, -0x80000000
 
-    return-object p1
-.end method
-
-.method public getResourceTypeName(I)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 271
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getResourceTypeName(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getString(I)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 64
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public varargs getString(I[Ljava/lang/Object;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    if-eq p1, v0, :cond_0
 
     .line 69
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    iput p1, p0, Landroidx/appcompat/widget/aj;->e:I
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    iput p1, p0, Landroidx/appcompat/widget/aj;->a:I
 
-    move-result-object p1
+    :cond_0
+    if-eq p2, v0, :cond_1
 
-    return-object p1
-.end method
+    .line 70
+    iput p2, p0, Landroidx/appcompat/widget/aj;->f:I
 
-.method public getStringArray(I)[Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
+    iput p2, p0, Landroidx/appcompat/widget/aj;->b:I
 
-    .line 95
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getText(I)Ljava/lang/CharSequence;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 54
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-    .locals 1
-
-    .line 85
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getText(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getTextArray(I)[Ljava/lang/CharSequence;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 90
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getValue(ILandroid/util/TypedValue;Z)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 214
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
-
+    :cond_1
     return-void
 .end method
 
-.method public getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 227
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->getValue(Ljava/lang/String;Landroid/util/TypedValue;Z)V
-
-    return-void
-.end method
-
-.method public getValueForDensity(IILandroid/util/TypedValue;Z)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 221
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/content/res/Resources;->getValueForDensity(IILandroid/util/TypedValue;Z)V
-
-    return-void
-.end method
-
-.method public getXml(I)Landroid/content/res/XmlResourceParser;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 193
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+.method public c()I
     .locals 1
 
-    .line 232
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->obtainAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public obtainTypedArray(I)Landroid/content/res/TypedArray;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 105
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public openRawResource(I)Ljava/io/InputStream;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 198
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 203
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Landroid/content/res/Resources$NotFoundException;
-        }
-    .end annotation
-
-    .line 208
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public parseBundleExtra(Ljava/lang/String;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;
-        }
-    .end annotation
-
-    .line 288
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2, p3}, Landroid/content/res/Resources;->parseBundleExtra(Ljava/lang/String;Landroid/util/AttributeSet;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public parseBundleExtras(Landroid/content/res/XmlResourceParser;Landroid/os/Bundle;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Lorg/xmlpull/v1/XmlPullParserException;,
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 282
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->parseBundleExtras(Landroid/content/res/XmlResourceParser;Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
-    .locals 1
-
-    .line 238
-    invoke-super {p0, p1, p2}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
-
-    .line 239
-    iget-object v0, p0, Landroidx/appcompat/widget/aj;->a:Landroid/content/res/Resources;
+    .line 47
+    iget-boolean v0, p0, Landroidx/appcompat/widget/aj;->g:Z
 
     if-eqz v0, :cond_0
 
-    .line 240
-    invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
+    iget v0, p0, Landroidx/appcompat/widget/aj;->b:I
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    iget v0, p0, Landroidx/appcompat/widget/aj;->a:I
+
+    :goto_0
+    return v0
+.end method
+
+.method public d()I
+    .locals 1
+
+    .line 51
+    iget-boolean v0, p0, Landroidx/appcompat/widget/aj;->g:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Landroidx/appcompat/widget/aj;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    iget v0, p0, Landroidx/appcompat/widget/aj;->b:I
+
+    :goto_0
+    return v0
 .end method

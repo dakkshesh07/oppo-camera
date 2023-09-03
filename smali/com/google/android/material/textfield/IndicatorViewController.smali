@@ -479,7 +479,7 @@
     .line 190
     iget-object v0, p0, Lcom/google/android/material/textfield/IndicatorViewController;->textInputView:Lcom/google/android/material/textfield/TextInputLayout;
 
-    invoke-static {v0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -788,7 +788,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {v1}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result v1
 
@@ -799,14 +799,14 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {v2}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v2
 
     const/4 v3, 0x0
 
     .line 356
-    invoke-static {v0, v1, v3, v2, v3}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {v0, v1, v3, v2, v3}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     :cond_0
     return-void
@@ -1300,7 +1300,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v1, v2}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {v1, v2}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 443
     iget-object v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->errorView:Landroid/widget/TextView;
@@ -1468,7 +1468,7 @@
     .line 481
     iget-object v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->helperTextView:Landroid/widget/TextView;
 
-    invoke-static {v1, v0}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {v1, v0}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 483
     iget v1, p0, Lcom/google/android/material/textfield/IndicatorViewController;->helperTextTextAppearance:I

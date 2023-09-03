@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Spinner android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902a6" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07065f" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07065f" />
+    <include layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00fe" />
+</FrameLayout>

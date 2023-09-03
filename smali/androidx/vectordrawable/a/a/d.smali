@@ -3,6 +3,11 @@
 .source "AnimationUtilsCompat.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public static a(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
     .locals 4

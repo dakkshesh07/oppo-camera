@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/beauty3d/d;)V
     .locals 0
 
-    .line 1782
+    .line 1872
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/beauty3d/d;Lcom/oppo/camera/ui/beauty3d/d$1;)V
     .locals 0
 
-    .line 1782
+    .line 1872
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/d$a;-><init>(Lcom/oppo/camera/ui/beauty3d/d;)V
 
     return-void
@@ -53,7 +53,7 @@
 
     return v0
 
-    .line 1789
+    .line 1879
     :cond_0
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
@@ -61,7 +61,7 @@
 
     invoke-static {v1, v2}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;Z)Z
 
-    .line 1790
+    .line 1880
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -80,8 +80,8 @@
 
     const-string p2, "Beauty3DGestureListener, onFling"
 
-    .line 1843
-    invoke-static {p1, p2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1933
+    invoke-static {p1, p2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
@@ -95,13 +95,13 @@
 
     const-string v0, "Beauty3DGestureListener, onLongPress"
 
-    .line 1850
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1940
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1852
+    .line 1942
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->g(Lcom/oppo/camera/ui/beauty3d/d;)I
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->f(Lcom/oppo/camera/ui/beauty3d/d;)I
 
     move-result p1
 
@@ -109,22 +109,22 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 1853
+    .line 1943
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;)Lcom/oppo/camera/ui/beauty3d/h;
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;)Lcom/oppo/camera/ui/beauty3d/i;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/d;->j(Lcom/oppo/camera/ui/beauty3d/d;)[I
+    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/d;->i(Lcom/oppo/camera/ui/beauty3d/d;)[I
 
     move-result-object v0
 
-    const-string v1, "com.oppo.beauty3d.custom.mode"
+    const-string v1, "com.oplus.beauty3d.custom.mode"
 
-    invoke-interface {p1, v1, v0}, Lcom/oppo/camera/ui/beauty3d/h;->a(Ljava/lang/String;[I)V
+    invoke-interface {p1, v1, v0}, Lcom/oppo/camera/ui/beauty3d/i;->a(Ljava/lang/String;[I)V
 
     :cond_0
     return-void
@@ -141,7 +141,7 @@
 
     goto/16 :goto_0
 
-    .line 1826
+    .line 1916
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -155,7 +155,7 @@
 
     float-to-int p4, p4
 
-    .line 1828
+    .line 1918
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -186,9 +186,9 @@
 
     const-string v0, "Beauty3DEditUI"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1830
+    .line 1920
     invoke-static {p4}, Ljava/lang/Math;->abs(I)I
 
     move-result p1
@@ -199,7 +199,7 @@
 
     return p3
 
-    .line 1834
+    .line 1924
     :cond_1
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
@@ -207,10 +207,10 @@
 
     invoke-virtual {p1, p4}, Lcom/oppo/camera/ui/beauty3d/d;->b(Z)V
 
-    .line 1835
+    .line 1925
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {}, Lcom/oppo/camera/c/d;->a()Lcom/oppo/camera/c/d;
+    invoke-static {}, Lcom/oppo/camera/d/c;->a()Lcom/oppo/camera/d/c;
 
     move-result-object v0
 
@@ -218,32 +218,32 @@
 
     move-result v1
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result v2
 
     iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {v3}, Lcom/oppo/camera/ui/beauty3d/d;->h(Lcom/oppo/camera/ui/beauty3d/d;)F
+    invoke-static {v3}, Lcom/oppo/camera/ui/beauty3d/d;->g(Lcom/oppo/camera/ui/beauty3d/d;)F
 
     move-result v3
 
     iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {v4}, Lcom/oppo/camera/ui/beauty3d/d;->i(Lcom/oppo/camera/ui/beauty3d/d;)I
+    invoke-static {v4}, Lcom/oppo/camera/ui/beauty3d/d;->h(Lcom/oppo/camera/ui/beauty3d/d;)I
 
     move-result v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/oppo/camera/c/d;->a(FIFI)I
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/oppo/camera/d/c;->a(FIFI)I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;I)I
 
-    .line 1836
+    .line 1926
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;)Lcom/oppo/camera/ui/beauty3d/h;
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;)Lcom/oppo/camera/ui/beauty3d/i;
 
     move-result-object p1
 
@@ -251,17 +251,17 @@
 
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {v1}, Lcom/oppo/camera/ui/beauty3d/d;->i(Lcom/oppo/camera/ui/beauty3d/d;)I
+    invoke-static {v1}, Lcom/oppo/camera/ui/beauty3d/d;->h(Lcom/oppo/camera/ui/beauty3d/d;)I
 
     move-result v1
 
     aput v1, v0, p4
 
-    const-string p4, "com.oppo.beauty3d.analyses.rotatedegree"
+    const-string p4, "com.oplus.beauty3d.analyses.rotatedegree"
 
-    invoke-interface {p1, p4, v0}, Lcom/oppo/camera/ui/beauty3d/h;->a(Ljava/lang/String;[I)V
+    invoke-interface {p1, p4, v0}, Lcom/oppo/camera/ui/beauty3d/i;->a(Ljava/lang/String;[I)V
 
-    .line 1837
+    .line 1927
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
@@ -282,8 +282,8 @@
 
     const-string v0, "Beauty3DGestureListener, onShowPress"
 
-    .line 1796
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1886
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -300,7 +300,7 @@
     :cond_0
     const/high16 v1, 0x44b40000    # 1440.0f
 
-    .line 1805
+    .line 1895
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v2
@@ -309,14 +309,14 @@
 
     const/high16 v2, 0x44870000    # 1080.0f
 
-    .line 1806
+    .line 1896
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result p1
 
     sub-float/2addr v2, p1
 
-    .line 1808
+    .line 1898
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -339,12 +339,12 @@
 
     const-string v3, "Beauty3DEditUI"
 
-    invoke-static {v3, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1810
+    .line 1900
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->g(Lcom/oppo/camera/ui/beauty3d/d;)I
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->f(Lcom/oppo/camera/ui/beauty3d/d;)I
 
     move-result p1
 
@@ -352,22 +352,22 @@
 
     if-ne p1, v3, :cond_1
 
-    .line 1811
+    .line 1901
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     const/4 v4, 0x0
 
     invoke-static {p1, v4}, Lcom/oppo/camera/ui/beauty3d/d;->b(Lcom/oppo/camera/ui/beauty3d/d;Z)Z
 
-    .line 1812
+    .line 1902
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     invoke-static {p1, v4}, Lcom/oppo/camera/ui/beauty3d/d;->c(Lcom/oppo/camera/ui/beauty3d/d;Z)Z
 
-    .line 1813
+    .line 1903
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$a;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;)Lcom/oppo/camera/ui/beauty3d/h;
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->a(Lcom/oppo/camera/ui/beauty3d/d;)Lcom/oppo/camera/ui/beauty3d/i;
 
     move-result-object p1
 
@@ -381,9 +381,9 @@
 
     aput v1, v3, v0
 
-    const-string v1, "com.oppo.beauty3d.custom.position"
+    const-string v1, "com.oplus.beauty3d.custom.position"
 
-    invoke-interface {p1, v1, v3}, Lcom/oppo/camera/ui/beauty3d/h;->a(Ljava/lang/String;[I)V
+    invoke-interface {p1, v1, v3}, Lcom/oppo/camera/ui/beauty3d/i;->a(Ljava/lang/String;[I)V
 
     :cond_1
     return v0

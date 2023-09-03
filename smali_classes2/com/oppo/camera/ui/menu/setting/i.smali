@@ -7,7 +7,10 @@
 .method public abstract a(Ljava/lang/String;II)Ljava/lang/String;
 .end method
 
-.method public abstract a(Ljava/lang/String;)Z
+.method public abstract a(Ljava/lang/String;)V
+.end method
+
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract a(Ljava/lang/String;Z)Z
@@ -16,7 +19,13 @@
 .method public abstract a(Ljava/lang/String;ZZ)Z
 .end method
 
-.method public abstract b(Ljava/lang/String;II)V
+.method public abstract b(Ljava/lang/String;)Z
+.end method
+
+.method public abstract c(Ljava/lang/String;)V
+.end method
+
+.method public abstract d(Ljava/lang/String;)V
 .end method
 
 .method public abstract getMenuPanelAshed()Z

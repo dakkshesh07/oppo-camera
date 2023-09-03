@@ -24,18 +24,20 @@
 
 # direct methods
 .method constructor <init>(Ljava/lang/String;Ljava/lang/String;Lcom/google/protobuf/Descriptors$FileDescriptor;)V
-    .locals 0
+    .locals 1
 
-    .line 2357
-    invoke-direct {p0}, Lcom/google/protobuf/Descriptors$GenericDescriptor;-><init>()V
+    const/4 v0, 0x0
 
-    .line 2358
+    .line 2461
+    invoke-direct {p0, v0}, Lcom/google/protobuf/Descriptors$GenericDescriptor;-><init>(Lcom/google/protobuf/Descriptors$1;)V
+
+    .line 2462
     iput-object p3, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->file:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 2359
+    .line 2463
     iput-object p2, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->fullName:Ljava/lang/String;
 
-    .line 2360
+    .line 2464
     iput-object p1, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->name:Ljava/lang/String;
 
     return-void
@@ -46,7 +48,7 @@
 .method public getFile()Lcom/google/protobuf/Descriptors$FileDescriptor;
     .locals 1
 
-    .line 2353
+    .line 2458
     iget-object v0, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->file:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     return-object v0
@@ -55,7 +57,7 @@
 .method public getFullName()Ljava/lang/String;
     .locals 1
 
-    .line 2349
+    .line 2453
     iget-object v0, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->fullName:Ljava/lang/String;
 
     return-object v0
@@ -64,7 +66,7 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .line 2345
+    .line 2448
     iget-object v0, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->name:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +75,7 @@
 .method public toProto()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 2341
+    .line 2443
     iget-object v0, p0, Lcom/google/protobuf/Descriptors$DescriptorPool$PackageDescriptor;->file:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->toProto()Lcom/google/protobuf/DescriptorProtos$FileDescriptorProto;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:coui="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f090250" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090167" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701f0" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080230" android:adjustViewBounds="true" android:maxWidth="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701f1" android:maxHeight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701f1" />
+        <TextView android:ellipsize="end" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901fe" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="12345" android:maxLines="1" android:layout_below="@id/APKTOOL_DUPLICATE_id_0x7f090167" android:layout_centerHorizontal="true" android:textAlignment="center" />
+        <com.coui.appcompat.widget.COUIHintRedDot android:id="@id/APKTOOL_DUPLICATE_id_0x7f090309" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701f0" style="?APKTOOL_DUPLICATE_attr_0x7f04018d" />
+    </RelativeLayout>
+</LinearLayout>

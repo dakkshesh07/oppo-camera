@@ -30,7 +30,7 @@
 
 .field private final f:Landroid/graphics/RectF;
 
-.field private final g:Lcom/coloros/anim/c/b/f;
+.field private final g:Lcom/coloros/anim/model/content/GradientType;
 
 .field private final h:I
 
@@ -38,8 +38,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/coloros/anim/a/b/a<",
-            "Lcom/coloros/anim/c/b/c;",
-            "Lcom/coloros/anim/c/b/c;",
+            "Lcom/coloros/anim/model/content/c;",
+            "Lcom/coloros/anim/model/content/c;",
             ">;"
         }
     .end annotation
@@ -69,45 +69,45 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/c/a;Lcom/coloros/anim/c/b/e;)V
+.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/layer/a;Lcom/coloros/anim/model/content/e;)V
     .locals 11
 
     .line 39
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->h()Lcom/coloros/anim/c/b/p$a;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->h()Lcom/coloros/anim/model/content/ShapeStroke$LineCapType;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/b/p$a;->toPaintCap()Landroid/graphics/Paint$Cap;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/content/ShapeStroke$LineCapType;->toPaintCap()Landroid/graphics/Paint$Cap;
 
     move-result-object v4
 
     .line 40
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->i()Lcom/coloros/anim/c/b/p$b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->i()Lcom/coloros/anim/model/content/ShapeStroke$LineJoinType;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/b/p$b;->toPaintJoin()Landroid/graphics/Paint$Join;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/content/ShapeStroke$LineJoinType;->toPaintJoin()Landroid/graphics/Paint$Join;
 
     move-result-object v5
 
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->l()F
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->l()F
 
     move-result v6
 
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->d()Lcom/coloros/anim/c/a/d;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->d()Lcom/coloros/anim/model/a/d;
 
     move-result-object v7
 
     .line 41
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->g()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->g()Lcom/coloros/anim/model/a/b;
 
     move-result-object v8
 
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->j()Ljava/util/List;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->j()Ljava/util/List;
 
     move-result-object v9
 
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->k()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->k()Lcom/coloros/anim/model/a/b;
 
     move-result-object v10
 
@@ -118,7 +118,7 @@
     move-object v3, p2
 
     .line 39
-    invoke-direct/range {v1 .. v10}, Lcom/coloros/anim/a/a/a;-><init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/c/a;Landroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FLcom/coloros/anim/c/a/d;Lcom/coloros/anim/c/a/b;Ljava/util/List;Lcom/coloros/anim/c/a/b;)V
+    invoke-direct/range {v1 .. v10}, Lcom/coloros/anim/a/a/a;-><init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/layer/a;Landroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FLcom/coloros/anim/model/a/d;Lcom/coloros/anim/model/a/b;Ljava/util/List;Lcom/coloros/anim/model/a/b;)V
 
     .line 27
     new-instance v0, Landroid/util/LongSparseArray;
@@ -142,21 +142,21 @@
     iput-object v0, p0, Lcom/coloros/anim/a/a/i;->f:Landroid/graphics/RectF;
 
     .line 43
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/coloros/anim/a/a/i;->b:Ljava/lang/String;
 
     .line 44
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->b()Lcom/coloros/anim/c/b/f;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->b()Lcom/coloros/anim/model/content/GradientType;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/coloros/anim/a/a/i;->g:Lcom/coloros/anim/c/b/f;
+    iput-object v0, p0, Lcom/coloros/anim/a/a/i;->g:Lcom/coloros/anim/model/content/GradientType;
 
     .line 45
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->m()Z
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->m()Z
 
     move-result v0
 
@@ -180,11 +180,11 @@
     iput p1, p0, Lcom/coloros/anim/a/a/i;->h:I
 
     .line 48
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->c()Lcom/coloros/anim/c/a/c;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->c()Lcom/coloros/anim/model/a/c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/c;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/c;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -198,14 +198,14 @@
     .line 50
     iget-object p1, p0, Lcom/coloros/anim/a/a/i;->i:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 52
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->e()Lcom/coloros/anim/c/a/f;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->e()Lcom/coloros/anim/model/a/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/f;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/f;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -219,14 +219,14 @@
     .line 54
     iget-object p1, p0, Lcom/coloros/anim/a/a/i;->j:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 56
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/e;->f()Lcom/coloros/anim/c/a/f;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/e;->f()Lcom/coloros/anim/model/a/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/f;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/f;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -240,7 +240,7 @@
     .line 58
     iget-object p1, p0, Lcom/coloros/anim/a/a/i;->k:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     return-void
 .end method
@@ -294,15 +294,15 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/coloros/anim/c/b/c;
+    check-cast v4, Lcom/coloros/anim/model/content/c;
 
     .line 90
-    invoke-virtual {v4}, Lcom/coloros/anim/c/b/c;->b()[I
+    invoke-virtual {v4}, Lcom/coloros/anim/model/content/c;->b()[I
 
     move-result-object v10
 
     .line 91
-    invoke-virtual {v4}, Lcom/coloros/anim/c/b/c;->a()[F
+    invoke-virtual {v4}, Lcom/coloros/anim/model/content/c;->a()[F
 
     move-result-object v11
 
@@ -466,15 +466,15 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/coloros/anim/c/b/c;
+    check-cast v4, Lcom/coloros/anim/model/content/c;
 
     .line 110
-    invoke-virtual {v4}, Lcom/coloros/anim/c/b/c;->b()[I
+    invoke-virtual {v4}, Lcom/coloros/anim/model/content/c;->b()[I
 
     move-result-object v9
 
     .line 111
-    invoke-virtual {v4}, Lcom/coloros/anim/c/b/c;->a()[F
+    invoke-virtual {v4}, Lcom/coloros/anim/model/content/c;->a()[F
 
     move-result-object v10
 
@@ -704,9 +704,9 @@
     invoke-virtual {p0, v0, p2, v1}, Lcom/coloros/anim/a/a/i;->a(Landroid/graphics/RectF;Landroid/graphics/Matrix;Z)V
 
     .line 67
-    iget-object v0, p0, Lcom/coloros/anim/a/a/i;->g:Lcom/coloros/anim/c/b/f;
+    iget-object v0, p0, Lcom/coloros/anim/a/a/i;->g:Lcom/coloros/anim/model/content/GradientType;
 
-    sget-object v1, Lcom/coloros/anim/c/b/f;->LINEAR:Lcom/coloros/anim/c/b/f;
+    sget-object v1, Lcom/coloros/anim/model/content/GradientType;->LINEAR:Lcom/coloros/anim/model/content/GradientType;
 
     if-ne v0, v1, :cond_1
 

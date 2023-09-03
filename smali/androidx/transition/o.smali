@@ -29,7 +29,7 @@
         value = {
             "Ljava/lang/ThreadLocal<",
             "Ljava/lang/ref/WeakReference<",
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Landroid/view/ViewGroup;",
             "Ljava/util/ArrayList<",
             "Landroidx/transition/m;",
@@ -67,12 +67,12 @@
     return-void
 .end method
 
-.method static a()Landroidx/b/a;
+.method static a()Landroidx/collection/ArrayMap;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Landroid/view/ViewGroup;",
             "Ljava/util/ArrayList<",
             "Landroidx/transition/m;",
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/b/a;
+    check-cast v0, Landroidx/collection/ArrayMap;
 
     if-eqz v0, :cond_0
 
@@ -105,9 +105,9 @@
 
     .line 208
     :cond_0
-    new-instance v0, Landroidx/b/a;
+    new-instance v0, Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/a;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
     .line 209
     new-instance v1, Ljava/lang/ref/WeakReference;
@@ -134,7 +134,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -201,11 +201,11 @@
     .locals 2
 
     .line 309
-    invoke-static {}, Landroidx/transition/o;->a()Landroidx/b/a;
+    invoke-static {}, Landroidx/transition/o;->a()Landroidx/collection/ArrayMap;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Landroidx/b/a;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 

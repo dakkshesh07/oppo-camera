@@ -27,20 +27,16 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     .line 61
     new-instance v0, Lcom/google/protobuf/MapFieldLite;
 
-    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/google/protobuf/MapFieldLite;-><init>(Ljava/util/Map;)V
+    invoke-direct {v0}, Lcom/google/protobuf/MapFieldLite;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/MapFieldLite;->EMPTY_MAP_FIELD:Lcom/google/protobuf/MapFieldLite;
 
-    .line 63
+    .line 64
     sget-object v0, Lcom/google/protobuf/MapFieldLite;->EMPTY_MAP_FIELD:Lcom/google/protobuf/MapFieldLite;
 
     invoke-virtual {v0}, Lcom/google/protobuf/MapFieldLite;->makeImmutable()V
@@ -97,7 +93,7 @@
         }
     .end annotation
 
-    .line 165
+    .line 178
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -121,7 +117,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 166
+    .line 180
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -130,7 +126,6 @@
 
     move-result v2
 
-    .line 167
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -152,12 +147,12 @@
 .method private static calculateHashCodeForObject(Ljava/lang/Object;)I
     .locals 1
 
-    .line 148
+    .line 162
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
 
-    .line 149
+    .line 163
     check-cast p0, [B
 
     check-cast p0, [B
@@ -168,20 +163,20 @@
 
     return p0
 
-    .line 152
+    .line 166
     :cond_0
     instance-of v0, p0, Lcom/google/protobuf/Internal$EnumLite;
 
     if-nez v0, :cond_1
 
-    .line 155
+    .line 169
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
 
     return p0
 
-    .line 153
+    .line 167
     :cond_1
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
@@ -190,20 +185,66 @@
     throw p0
 .end method
 
+.method private static checkForNullKeysAndValues(Ljava/util/Map;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "**>;)V"
+        }
+    .end annotation
+
+    .line 119
+    invoke-interface {p0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 120
+    invoke-static {v1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 121
+    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
 .method private static copy(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .line 178
+    .line 191
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
 
-    .line 179
+    .line 192
     check-cast p0, [B
 
     check-cast p0, [B
 
-    .line 180
+    .line 193
     array-length v0, p0
 
     invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -230,12 +271,12 @@
         }
     .end annotation
 
-    .line 192
+    .line 205
     new-instance v0, Ljava/util/LinkedHashMap;
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 193
+    .line 206
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -257,7 +298,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 194
+    .line 207
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -292,7 +333,7 @@
         }
     .end annotation
 
-    .line 69
+    .line 70
     sget-object v0, Lcom/google/protobuf/MapFieldLite;->EMPTY_MAP_FIELD:Lcom/google/protobuf/MapFieldLite;
 
     return-object v0
@@ -301,7 +342,7 @@
 .method private ensureMutable()V
     .locals 1
 
-    .line 220
+    .line 231
     invoke-virtual {p0}, Lcom/google/protobuf/MapFieldLite;->isMutable()Z
 
     move-result v0
@@ -310,7 +351,7 @@
 
     return-void
 
-    .line 221
+    .line 232
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -322,7 +363,7 @@
 .method private static equals(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .line 109
+    .line 126
     instance-of v0, p0, [B
 
     if-eqz v0, :cond_0
@@ -331,7 +372,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 110
+    .line 127
     check-cast p0, [B
 
     check-cast p0, [B
@@ -346,7 +387,7 @@
 
     return p0
 
-    .line 112
+    .line 129
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -377,7 +418,7 @@
 
     return v0
 
-    .line 124
+    .line 140
     :cond_0
     invoke-interface {p0}, Ljava/util/Map;->size()I
 
@@ -393,7 +434,7 @@
 
     return v3
 
-    .line 127
+    .line 143
     :cond_1
     invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -416,7 +457,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 128
+    .line 144
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -429,7 +470,7 @@
 
     return v3
 
-    .line 131
+    .line 147
     :cond_3
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -460,11 +501,11 @@
 .method public clear()V
     .locals 0
 
-    .line 85
+    .line 88
     invoke-direct {p0}, Lcom/google/protobuf/MapFieldLite;->ensureMutable()V
 
-    .line 86
-    invoke-virtual {p0}, Lcom/google/protobuf/MapFieldLite;->clear()V
+    .line 89
+    invoke-super {p0}, Ljava/util/LinkedHashMap;->clear()V
 
     return-void
 .end method
@@ -480,7 +521,7 @@
         }
     .end annotation
 
-    .line 81
+    .line 83
     invoke-virtual {p0}, Lcom/google/protobuf/MapFieldLite;->isEmpty()Z
 
     move-result v0
@@ -505,7 +546,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 144
+    .line 158
     instance-of v0, p1, Ljava/util/Map;
 
     if-eqz v0, :cond_0
@@ -532,7 +573,7 @@
 .method public hashCode()I
     .locals 1
 
-    .line 174
+    .line 187
     invoke-static {p0}, Lcom/google/protobuf/MapFieldLite;->calculateHashCodeForMap(Ljava/util/Map;)I
 
     move-result v0
@@ -543,7 +584,7 @@
 .method public isMutable()Z
     .locals 1
 
-    .line 216
+    .line 227
     iget-boolean v0, p0, Lcom/google/protobuf/MapFieldLite;->isMutable:Z
 
     return v0
@@ -554,7 +595,7 @@
 
     const/4 v0, 0x0
 
-    .line 209
+    .line 222
     iput-boolean v0, p0, Lcom/google/protobuf/MapFieldLite;->isMutable:Z
 
     return-void
@@ -570,17 +611,17 @@
         }
     .end annotation
 
-    .line 73
+    .line 74
     invoke-direct {p0}, Lcom/google/protobuf/MapFieldLite;->ensureMutable()V
 
-    .line 74
+    .line 75
     invoke-virtual {p1}, Lcom/google/protobuf/MapFieldLite;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 75
+    .line 76
     invoke-virtual {p0, p1}, Lcom/google/protobuf/MapFieldLite;->putAll(Ljava/util/Map;)V
 
     :cond_0
@@ -597,7 +638,7 @@
         }
     .end annotation
 
-    .line 201
+    .line 214
     invoke-virtual {p0}, Lcom/google/protobuf/MapFieldLite;->isEmpty()Z
 
     move-result v0
@@ -627,10 +668,16 @@
         }
     .end annotation
 
-    .line 90
+    .line 94
     invoke-direct {p0}, Lcom/google/protobuf/MapFieldLite;->ensureMutable()V
 
-    .line 91
+    .line 95
+    invoke-static {p1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 97
+    invoke-static {p2}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 98
     invoke-super {p0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -648,7 +695,7 @@
         }
     .end annotation
 
-    .line 95
+    .line 102
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -674,10 +721,13 @@
         }
     .end annotation
 
-    .line 99
+    .line 107
     invoke-direct {p0}, Lcom/google/protobuf/MapFieldLite;->ensureMutable()V
 
-    .line 100
+    .line 108
+    invoke-static {p1}, Lcom/google/protobuf/MapFieldLite;->checkForNullKeysAndValues(Ljava/util/Map;)V
+
+    .line 109
     invoke-super {p0, p1}, Ljava/util/LinkedHashMap;->putAll(Ljava/util/Map;)V
 
     return-void
@@ -693,10 +743,10 @@
         }
     .end annotation
 
-    .line 104
+    .line 114
     invoke-direct {p0}, Lcom/google/protobuf/MapFieldLite;->ensureMutable()V
 
-    .line 105
+    .line 115
     invoke-super {p0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

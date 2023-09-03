@@ -1,99 +1,740 @@
 .class public Lcom/oppo/camera/ui/preview/p;
-.super Ljava/lang/Object;
-.source "VideoRecordingTimeUI.java"
+.super Lcom/oppo/camera/ui/preview/a;
+.source "NormalAISceneUI.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oppo/camera/ui/preview/p$a;
+    }
+.end annotation
 
 
 # instance fields
-.field private a:Landroid/app/Activity;
+.field private d:Landroid/widget/RelativeLayout;
 
-.field private b:Landroid/widget/RelativeLayout;
+.field private e:Lcom/oppo/camera/ui/menu/OppoTextView;
 
-.field private c:I
+.field private f:Landroid/widget/ImageView;
 
-.field private d:I
+.field private g:Lcom/oppo/camera/ui/menu/OppoTextView;
 
-.field private e:J
+.field private h:Landroid/widget/ImageView;
 
-.field private f:J
+.field private i:Lcom/oppo/camera/ui/preview/p$a;
 
-.field private g:Z
+.field private j:Landroid/animation/AnimatorSet;
 
-.field private h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+.field private k:Landroid/animation/ObjectAnimator;
 
-.field private i:Lcom/oppo/camera/ui/preview/CameraTimeView;
+.field private l:Lcom/oppo/camera/ui/preview/a$a;
+
+.field private m:Landroid/view/View$OnLayoutChangeListener;
+
+.field private n:I
+
+.field private o:I
+
+.field private p:I
+
+.field private q:I
+
+.field private r:I
+
+.field private s:I
+
+.field private t:I
+
+.field private u:Z
+
+.field private v:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;I)V
-    .locals 3
+.method public constructor <init>(Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/oppo/camera/i;)V
+    .locals 2
 
-    .line 45
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p2, 0x0
-
-    .line 35
-    iput-object p2, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
-
-    .line 36
-    iput-object p2, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
+    .line 69
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/a;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 37
-    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->c:I
+    .line 49
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
-    .line 38
-    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->d:I
+    .line 50
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->e:Lcom/oppo/camera/ui/menu/OppoTextView;
 
-    const-wide/16 v1, 0x0
+    .line 51
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->f:Landroid/widget/ImageView;
 
-    .line 39
-    iput-wide v1, p0, Lcom/oppo/camera/ui/preview/p;->e:J
+    .line 52
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Lcom/oppo/camera/ui/menu/OppoTextView;
 
-    .line 40
-    iput-wide v1, p0, Lcom/oppo/camera/ui/preview/p;->f:J
+    .line 53
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Landroid/widget/ImageView;
 
-    .line 41
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
+    .line 54
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
 
-    .line 42
-    iput-object p2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    .line 55
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
 
-    .line 43
-    iput-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    .line 56
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
 
-    .line 46
+    .line 57
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->l:Lcom/oppo/camera/ui/preview/a$a;
+
+    .line 58
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->m:Landroid/view/View$OnLayoutChangeListener;
+
+    const/4 v0, 0x0
+
+    .line 59
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->n:I
+
+    .line 60
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    .line 61
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->p:I
+
+    .line 62
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->q:I
+
+    .line 63
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->r:I
+
+    .line 64
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->s:I
+
+    .line 65
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->t:I
+
+    .line 66
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->u:Z
+
+    .line 67
+    iput v0, p0, Lcom/oppo/camera/ui/preview/p;->v:I
+
+    .line 70
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
+
+    .line 71
+    iput-object p2, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/view/ViewGroup;
+
+    .line 72
+    iput-object p3, p0, Lcom/oppo/camera/ui/preview/p;->c:Lcom/oppo/camera/i;
+
+    .line 73
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f0700ea
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->n:I
+
+    .line 74
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+
+    move-result p1
+
+    int-to-double p1, p1
+
+    const-wide v0, 0x3ff5555555555555L    # 1.3333333333333333
+
+    mul-double/2addr p1, v0
+
+    double-to-int p1, p1
+
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->q:I
+
+    .line 80
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
+
+    invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f0707df
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->v:I
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+.method private a(Landroid/view/View;)I
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    .line 238
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+
+    move-result v0
+
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+
+    move-result v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/view/View;->measure(II)V
+
+    .line 240
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method static synthetic a(Lcom/oppo/camera/ui/preview/p;)Landroid/widget/RelativeLayout;
     .locals 0
 
     .line 33
-    iget-object p0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    iget-object p0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
     return-object p0
 .end method
 
-.method static synthetic b(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+.method private a(II)Lcom/oppo/camera/ui/preview/p$a;
+    .locals 3
+
+    .line 329
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    if-nez v0, :cond_0
+
+    .line 330
+    new-instance v0, Lcom/oppo/camera/ui/preview/p$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/oppo/camera/ui/preview/p$a;-><init>(Lcom/oppo/camera/ui/preview/p;Lcom/oppo/camera/ui/preview/p$1;)V
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    .line 333
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/p$a;->b(I)V
+
+    .line 334
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/preview/p$a;->a(Z)V
+
+    .line 335
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/preview/p$a;->b(Z)V
+
+    packed-switch p1, :pswitch_data_0
+
+    .line 456
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {p1, v1}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 452
+    :pswitch_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f1003e3
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 448
+    :pswitch_1
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100084
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 444
+    :pswitch_2
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100087
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 440
+    :pswitch_3
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100097
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 436
+    :pswitch_4
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10008c
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 432
+    :pswitch_5
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100093
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 428
+    :pswitch_6
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100099
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 424
+    :pswitch_7
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100085
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 420
+    :pswitch_8
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100092
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 416
+    :pswitch_9
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100094
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 412
+    :pswitch_a
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100098
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 408
+    :pswitch_b
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10009c
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 404
+    :pswitch_c
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10009b
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 400
+    :pswitch_d
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10009a
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto/16 :goto_0
+
+    .line 383
+    :pswitch_e
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "getDataByAIScene, subCode: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "NormalAISceneUI"
+
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 385
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const v0, 0x7f100095
+
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    const/4 p1, 0x1
+
+    if-ne p2, p1, :cond_1
+
+    .line 388
+    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const v0, 0x7f100096
+
+    invoke-virtual {p2, v0}, Lcom/oppo/camera/ui/preview/p$a;->b(I)V
+
+    .line 389
+    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {p2, p1}, Lcom/oppo/camera/ui/preview/p$a;->a(Z)V
+
+    .line 390
+    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {p2, p1}, Lcom/oppo/camera/ui/preview/p$a;->b(Z)V
+
+    goto/16 :goto_0
+
+    :cond_1
+    const/4 v0, 0x2
+
+    if-ne p2, v0, :cond_2
+
+    .line 392
+    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {p2, v1}, Lcom/oppo/camera/ui/preview/p$a;->b(I)V
+
+    .line 393
+    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {p2, v2}, Lcom/oppo/camera/ui/preview/p$a;->a(Z)V
+
+    .line 394
+    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    invoke-virtual {p2, p1}, Lcom/oppo/camera/ui/preview/p$a;->b(Z)V
+
+    goto :goto_0
+
+    .line 379
+    :pswitch_f
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100091
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 375
+    :pswitch_10
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100090
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 371
+    :pswitch_11
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10008f
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 367
+    :pswitch_12
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10008e
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 363
+    :pswitch_13
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10008d
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 359
+    :pswitch_14
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10008b
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 355
+    :pswitch_15
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10008a
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 351
+    :pswitch_16
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f10009d
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 347
+    :pswitch_17
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100089
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 343
+    :pswitch_18
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100088
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    goto :goto_0
+
+    .line 339
+    :pswitch_19
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    const p2, 0x7f100086
+
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/preview/p$a;->a(I)V
+
+    .line 460
+    :cond_2
+    :goto_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/p$a;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method static synthetic a(Lcom/oppo/camera/ui/preview/p;I)V
     .locals 0
 
     .line 33
-    iget-object p0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/preview/p;->h(I)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/a$a;
+    .locals 0
+
+    .line 33
+    iget-object p0, p0, Lcom/oppo/camera/ui/preview/p;->l:Lcom/oppo/camera/ui/preview/a$a;
 
     return-object p0
 .end method
 
-.method private h()V
+.method private g(I)V
+    .locals 1
+
+    const/16 v0, 0xb4
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 465
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->r:I
+
+    goto :goto_0
+
+    .line 467
+    :cond_0
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->r:I
+
+    :goto_0
+    return-void
+.end method
+
+.method private h(I)V
+    .locals 1
+
+    .line 494
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-eqz v0, :cond_2
+
+    .line 495
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getVisibility()I
+
+    move-result v0
+
+    if-eq v0, p1, :cond_0
+
+    .line 496
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    .line 499
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->l:Lcom/oppo/camera/ui/preview/a$a;
+
+    if-eqz v0, :cond_2
+
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    .line 501
+    invoke-interface {v0, p1}, Lcom/oppo/camera/ui/preview/a$a;->b(I)V
+
+    goto :goto_0
+
+    .line 503
+    :cond_1
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/preview/p;->b()I
+
+    move-result p1
+
+    invoke-interface {v0, p1}, Lcom/oppo/camera/ui/preview/a$a;->b(I)V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method private k()V
     .locals 11
 
-    .line 50
+    .line 84
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_3
+
+    .line 85
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
 
-    const v1, 0x7f09007b
+    invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0c001c
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    .line 86
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
+
+    const v1, 0x7f090043
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -101,715 +742,606 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
-    .line 52
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
+    .line 87
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
-    if-nez v0, :cond_0
+    const v1, 0x7f090046
 
-    return-void
-
-    .line 56
-    :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
-
-    const v1, 0x7f090134
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oppo/camera/ui/preview/PreviewFrameLayout;
+    check-cast v0, Lcom/oppo/camera/ui/menu/OppoTextView;
 
-    .line 57
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/PreviewFrameLayout;->getTop()I
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->e:Lcom/oppo/camera/ui/menu/OppoTextView;
 
-    move-result v7
+    .line 88
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
-    .line 58
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/PreviewFrameLayout;->getHeight()I
+    const v1, 0x7f090045
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
-    .line 59
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
+    check-cast v0, Landroid/widget/ImageView;
 
-    move-result-object v8
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->f:Landroid/widget/ImageView;
 
-    .line 61
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    .line 89
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
-    const/4 v9, 0x0
+    const v1, 0x7f090044
 
-    const v10, 0x7f0c00e2
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    .line 62
-    invoke-virtual {v8, v10, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    check-cast v0, Lcom/oppo/camera/ui/menu/OppoTextView;
 
-    move-result-object v1
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Lcom/oppo/camera/ui/menu/OppoTextView;
 
-    check-cast v1, Lcom/oppo/camera/ui/preview/CameraTimeView;
+    .line 90
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
-    iput-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    const v1, 0x7f090042
 
-    .line 63
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
-    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
+    check-cast v0, Landroid/widget/ImageView;
 
-    .line 64
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Landroid/widget/ImageView;
 
-    const/4 v2, 0x0
+    .line 92
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
 
-    iget v3, p0, Lcom/oppo/camera/ui/preview/p;->c:I
+    const-wide/16 v1, 0xf0
 
-    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->j()I
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    move-result v6
+    const/4 v4, 0x0
 
-    move v4, v7
+    const/4 v5, 0x2
 
-    move v5, v0
+    if-nez v0, :cond_0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(ZIIII)V
+    .line 93
+    new-instance v0, Landroid/animation/AnimatorSet;
 
-    .line 67
-    :cond_1
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
+    invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-nez v1, :cond_3
-
-    .line 68
-    invoke-virtual {v8, v10, v9}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iput-object v1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    .line 69
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
-
-    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
-
-    .line 70
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
-
-    move-result v2
-
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
-
-    move-result v3
-
-    invoke-virtual {v1, v2, v3}, Lcom/oppo/camera/ui/preview/CameraTimeView;->measure(II)V
-
-    .line 71
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iget-boolean v2, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
-
-    iget v3, p0, Lcom/oppo/camera/ui/preview/p;->c:I
-
-    iget-object v4, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    .line 72
-    invoke-virtual {v4}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
-
-    move-result v4
-
-    iget-object v5, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v5}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getBlinkRecordIconWidth()I
-
-    move-result v5
-
-    sub-int/2addr v4, v5
-
-    div-int/lit8 v6, v4, 0x2
-
-    move v4, v7
-
-    move v5, v0
-
-    .line 71
-    invoke-virtual/range {v1 .. v6}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(ZIIII)V
-
-    .line 73
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
-
-    move-result v1
-
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/ui/preview/CameraTimeView;->measure(II)V
-
-    .line 74
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
-
-    move-result v1
-
-    neg-int v1, v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
-
-    const/16 v0, 0xb4
-
-    .line 76
-    iget v1, p0, Lcom/oppo/camera/ui/preview/p;->d:I
-
-    if-ne v0, v1, :cond_2
-
-    .line 77
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
-
-    .line 78
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getBlinkRecordIconWidth()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    div-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
-
-    goto :goto_0
-
-    .line 80
-    :cond_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
-
-    move-result v1
-
-    neg-int v1, v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
-
-    .line 81
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getBlinkRecordIconWidth()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    div-int/lit8 v1, v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
-
-    .line 84
-    :goto_0
-    new-instance v0, Lcom/oppo/camera/ui/preview/p$1;
-
-    invoke-direct {v0, p0}, Lcom/oppo/camera/ui/preview/p$1;-><init>(Lcom/oppo/camera/ui/preview/p;)V
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
 
     .line 94
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    sget-object v6, Landroid/view/View;->SCALE_X:Landroid/util/Property;
+
+    new-array v7, v5, [F
+
+    fill-array-data v7, :array_0
+
+    invoke-static {v0, v6, v7}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    .line 95
+    iget-object v6, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    sget-object v7, Landroid/view/View;->SCALE_Y:Landroid/util/Property;
+
+    new-array v8, v5, [F
+
+    fill-array-data v8, :array_1
+
+    invoke-static {v6, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v6
+
+    .line 96
+    iget-object v7, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    new-instance v8, Landroid/view/animation/PathInterpolator;
+
+    const v9, 0x3eb33333    # 0.35f
+
+    const/high16 v10, 0x40000000    # 2.0f
+
+    invoke-direct {v8, v9, v10, v4, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 98
+    iget-object v7, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v7, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
+
+    .line 99
+    iget-object v7, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {v7, v0}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v6}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    .line 100
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    new-instance v6, Lcom/oppo/camera/ui/preview/p$1;
+
+    invoke-direct {v6, p0}, Lcom/oppo/camera/ui/preview/p$1;-><init>(Lcom/oppo/camera/ui/preview/p;)V
+
+    invoke-virtual {v0, v6}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 126
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    if-nez v0, :cond_1
+
+    .line 127
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    sget-object v6, Landroid/view/View;->ALPHA:Landroid/util/Property;
+
+    new-array v5, v5, [F
+
+    fill-array-data v5, :array_2
+
+    invoke-static {v0, v6, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    .line 128
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    new-instance v5, Landroid/view/animation/PathInterpolator;
+
+    const v6, 0x3ed70a3d    # 0.42f
+
+    const v7, 0x3f147ae1    # 0.58f
+
+    invoke-direct {v5, v6, v4, v7, v3}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    invoke-virtual {v0, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 130
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 131
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
     new-instance v1, Lcom/oppo/camera/ui/preview/p$2;
 
     invoke-direct {v1, p0}, Lcom/oppo/camera/ui/preview/p$2;-><init>(Lcom/oppo/camera/ui/preview/p;)V
 
-    .line 104
-    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    invoke-virtual {v2, v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->setCameraTimeListener(Lcom/oppo/camera/ui/preview/CameraTimeView$a;)V
+    .line 154
+    :cond_1
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Landroid/widget/ImageView;
 
-    .line 105
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->setCameraTimeListener(Lcom/oppo/camera/ui/preview/CameraTimeView$a;)V
+    .line 155
+    new-instance v1, Lcom/oppo/camera/ui/preview/p$3;
+
+    invoke-direct {v1, p0}, Lcom/oppo/camera/ui/preview/p$3;-><init>(Lcom/oppo/camera/ui/preview/p;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 167
+    :cond_2
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->o()V
 
     :cond_3
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x0
+    .end array-data
 .end method
 
-.method private i()V
-    .locals 3
+.method private l()V
+    .locals 1
 
-    .line 110
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
+    .line 252
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
 
-    const v1, 0x7f09007b
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
-
-    .line 112
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    .line 116
-    :cond_0
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    .line 117
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
-
-    .line 118
-    iput-object v2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    .line 121
-    :cond_1
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_2
-
-    .line 122
-    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->removeView(Landroid/view/View;)V
-
-    .line 123
-    iput-object v2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    :cond_2
-    return-void
-.end method
-
-.method private j()I
-    .locals 3
-
-    .line 268
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->a:Landroid/app/Activity;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    .line 272
-    :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v2, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
-
-    if-eqz v2, :cond_2
-
-    const/16 v1, 0xb4
-
-    .line 273
-    iget v2, p0, Lcom/oppo/camera/ui/preview/p;->d:I
-
-    if-ne v1, v2, :cond_1
-
-    .line 274
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
+    .line 253
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
 
     move-result v0
 
-    div-int/lit8 v0, v0, 0x2
+    if-eqz v0, :cond_0
 
-    return v0
+    .line 254
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
 
-    .line 276
-    :cond_1
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getMeasuredWidth()I
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
+
+    .line 258
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    if-eqz v0, :cond_1
+
+    .line 259
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isRunning()Z
 
     move-result v0
 
-    neg-int v0, v0
+    if-eqz v0, :cond_1
 
-    div-int/lit8 v0, v0, 0x2
+    .line 260
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
 
-    return v0
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    :cond_2
-    return v1
+    :cond_1
+    return-void
+.end method
+
+.method private m()V
+    .locals 1
+
+    .line 515
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    if-eqz v0, :cond_0
+
+    .line 516
+    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private n()V
+    .locals 1
+
+    .line 521
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 522
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    :cond_0
+    return-void
+.end method
+
+.method private o()V
+    .locals 2
+
+    .line 542
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->m:Landroid/view/View$OnLayoutChangeListener;
+
+    if-eqz v1, :cond_0
+
+    .line 543
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    :cond_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public a()I
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    .line 560
+    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->n:I
 
-    .line 155
-    iput-wide v0, p0, Lcom/oppo/camera/ui/preview/p;->e:J
+    return v0
+.end method
 
-    .line 156
-    iput-wide v0, p0, Lcom/oppo/camera/ui/preview/p;->f:J
+.method public a(I)V
+    .locals 0
+
+    .line 556
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->p:I
 
     return-void
 .end method
 
-.method public a(I)V
-    .locals 7
+.method public a(III)V
+    .locals 4
 
-    .line 170
-    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->d:I
+    .line 192
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->s:I
 
-    if-ne v0, p1, :cond_0
+    .line 193
+    iput p3, p0, Lcom/oppo/camera/ui/preview/p;->t:I
+
+    .line 194
+    invoke-direct {p0, p2}, Lcom/oppo/camera/ui/preview/p;->g(I)V
+
+    .line 196
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->u:Z
+
+    if-eqz v0, :cond_0
 
     return-void
 
-    .line 174
+    .line 200
     :cond_0
-    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->d:I
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->k()V
 
-    .line 176
-    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    .line 202
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 206
+    :cond_1
+    invoke-direct {p0, p1, p3}, Lcom/oppo/camera/ui/preview/p;->a(II)Lcom/oppo/camera/ui/preview/p$a;
+
+    move-result-object p3
+
+    .line 208
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/preview/p$a;->a()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_2
+
+    .line 209
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->l()V
+
+    .line 210
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->n()V
+
+    goto :goto_2
+
+    .line 212
+    :cond_2
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->e:Lcom/oppo/camera/ui/menu/OppoTextView;
+
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/preview/p$a;->a()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/OppoTextView;->setText(I)V
+
+    .line 214
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/preview/p$a;->c()Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x8
+
+    if-eqz v0, :cond_3
+
+    .line 215
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Lcom/oppo/camera/ui/menu/OppoTextView;
+
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/preview/p$a;->b()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Lcom/oppo/camera/ui/menu/OppoTextView;->setText(I)V
+
+    .line 216
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->f:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 217
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Lcom/oppo/camera/ui/menu/OppoTextView;
+
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/OppoTextView;->setVisibility(I)V
+
+    goto :goto_0
+
+    .line 219
+    :cond_3
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Lcom/oppo/camera/ui/menu/OppoTextView;
+
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/menu/OppoTextView;->setVisibility(I)V
+
+    .line 220
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->f:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 223
+    :goto_0
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/preview/p$a;->d()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_4
+
+    .line 224
+    iget-object p3, p0, Lcom/oppo/camera/ui/preview/p;->h:Landroid/widget/ImageView;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p3, p1}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
+
+    .line 225
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->h:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto :goto_1
+
+    .line 227
+    :cond_4
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->h:Landroid/widget/ImageView;
+
+    invoke-virtual {p1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 230
+    :goto_1
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/preview/p;->e(I)V
+
+    .line 231
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->l()V
+
+    .line 232
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->m()V
+
+    :goto_2
+    return-void
+.end method
+
+.method public a(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/view/View$OnLayoutChangeListener;)V
+    .locals 0
+
+    .line 537
+    iput-object p1, p0, Lcom/oppo/camera/ui/preview/p;->m:Landroid/view/View$OnLayoutChangeListener;
+
+    .line 538
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->o()V
+
+    return-void
+.end method
+
+.method public a(Lcom/oppo/camera/ui/preview/a$a;)V
+    .locals 0
+
+    .line 248
+    iput-object p1, p0, Lcom/oppo/camera/ui/preview/p;->l:Lcom/oppo/camera/ui/preview/a$a;
+
+    return-void
+.end method
+
+.method public a(ZZ)V
+    .locals 1
+
+    .line 479
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/preview/p;->u:Z
+
+    .line 480
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->k()V
+
+    .line 482
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->getVisibility()I
+    .line 483
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->u:Z
+
+    if-eqz v0, :cond_0
+
+    .line 484
+    invoke-virtual {p1}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result p1
 
     if-nez p1, :cond_1
 
-    .line 177
-    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->c:I
+    const/16 p1, 0x8
 
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
+    .line 485
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/preview/p;->h(I)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/preview/p;->a(IZ)V
+    goto :goto_0
 
-    .line 180
-    :cond_1
-    iget-wide v2, p0, Lcom/oppo/camera/ui/preview/p;->e:J
-
-    iget-wide v4, p0, Lcom/oppo/camera/ui/preview/p;->f:J
-
-    const/4 v6, 0x0
-
-    move-object v1, p0
-
-    invoke-virtual/range {v1 .. v6}, Lcom/oppo/camera/ui/preview/p;->a(JJZ)V
-
-    return-void
-.end method
-
-.method public a(IIZZ)V
-    .locals 0
-
-    .line 137
-    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->c:I
-
-    .line 138
-    iput-boolean p3, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
-
-    .line 139
-    iput p2, p0, Lcom/oppo/camera/ui/preview/p;->d:I
-
-    .line 140
-    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->i()V
-
-    .line 141
-    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->h()V
-
-    .line 143
-    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz p2, :cond_0
-
-    .line 144
-    iget p3, p0, Lcom/oppo/camera/ui/preview/p;->d:I
-
-    invoke-virtual {p2, p1, p3, p4}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(IIZ)V
-
-    .line 147
     :cond_0
-    iget-object p2, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
     if-eqz p2, :cond_1
 
-    .line 148
-    iget p3, p0, Lcom/oppo/camera/ui/preview/p;->d:I
+    .line 487
+    invoke-virtual {p1}, Landroid/widget/RelativeLayout;->getVisibility()I
 
-    invoke-virtual {p2, p1, p3, p4}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(IIZ)V
-
-    :cond_1
-    const-string p1, "VideoRecordingTimeUI"
-
-    const-string p2, "CameraTest Video Shutter Timing Start"
-
-    .line 151
-    invoke-static {p1, p2}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public a(IZ)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 128
-    invoke-virtual {p0, p1, p2, v0}, Lcom/oppo/camera/ui/preview/p;->a(IZZ)V
-
-    return-void
-.end method
-
-.method public a(IZZ)V
-    .locals 1
-
-    .line 132
-    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->d:I
-
-    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/oppo/camera/ui/preview/p;->a(IIZZ)V
-
-    return-void
-.end method
-
-.method public a(JJZ)V
-    .locals 1
-
-    .line 222
-    iput-wide p1, p0, Lcom/oppo/camera/ui/preview/p;->e:J
-
-    .line 223
-    iput-wide p3, p0, Lcom/oppo/camera/ui/preview/p;->f:J
-
-    .line 225
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_0
-
-    .line 226
-    invoke-virtual {v0, p1, p2, p5}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(JZ)V
-
-    .line 229
-    :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
+    move-result p1
 
     if-eqz p1, :cond_1
 
-    const/4 p2, 0x0
+    .line 488
+    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->s:I
 
-    .line 230
-    invoke-virtual {p1, p3, p4, p2}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(JZ)V
+    iget p2, p0, Lcom/oppo/camera/ui/preview/p;->r:I
 
-    :cond_1
-    return-void
-.end method
+    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->t:I
 
-.method public a(Z)V
-    .locals 1
-
-    .line 160
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_0
-
-    .line 161
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(Z)V
-
-    .line 164
-    :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_1
-
-    .line 165
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(Z)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/oppo/camera/ui/preview/p;->a(III)V
 
     :cond_1
+    :goto_0
     return-void
 .end method
 
-.method public b()V
-    .locals 2
+.method public b()I
+    .locals 1
 
-    const-string v0, "VideoRecordingTimeUI"
-
-    const-string v1, "onPause"
-
-    .line 188
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 190
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    const/16 v1, 0x8
+    .line 510
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_0
 
-    .line 191
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->clearAnimation()V
-
-    .line 192
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->i:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->setVisibility(I)V
-
-    .line 195
-    :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_1
-
-    .line 196
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->clearAnimation()V
-
-    .line 197
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->setVisibility(I)V
-
-    .line 200
-    :cond_1
-    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->i()V
-
-    return-void
-.end method
-
-.method public b(Z)V
-    .locals 1
-
-    .line 212
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_0
-
-    .line 213
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->b(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c()I
-    .locals 1
-
-    .line 204
-    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->c:I
-
-    return v0
-.end method
-
-.method public d()Z
-    .locals 1
-
-    .line 208
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->g:Z
-
-    return v0
-.end method
-
-.method public e()V
-    .locals 6
-
-    .line 218
-    iget-wide v1, p0, Lcom/oppo/camera/ui/preview/p;->e:J
-
-    iget-wide v3, p0, Lcom/oppo/camera/ui/preview/p;->f:J
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v5}, Lcom/oppo/camera/ui/preview/p;->a(JJZ)V
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 1
-
-    .line 236
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_0
-
-    .line 237
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public g()Z
-    .locals 1
-
-    .line 243
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->h:Lcom/oppo/camera/ui/preview/CameraTimeView;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/CameraTimeView;->b()Z
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getVisibility()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    .line 511
+    invoke-direct {p0, v0}, Lcom/oppo/camera/ui/preview/p;->a(Landroid/view/View;)I
+
+    move-result v0
 
     goto :goto_0
 
@@ -817,5 +1349,409 @@
     const/4 v0, 0x0
 
     :goto_0
+    return v0
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    .line 472
+    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    if-eq p1, v0, :cond_0
+
+    .line 473
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    .line 474
+    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->r:I
+
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/preview/p;->e(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b(Z)V
+    .locals 3
+
+    .line 172
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->l()V
+
+    .line 174
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    .line 175
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->b:Landroid/view/ViewGroup;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    .line 176
+    iput-object v1, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    .line 177
+    iput-object v1, p0, Lcom/oppo/camera/ui/preview/p;->e:Lcom/oppo/camera/ui/menu/OppoTextView;
+
+    .line 180
+    :cond_0
+    iput-object v1, p0, Lcom/oppo/camera/ui/preview/p;->j:Landroid/animation/AnimatorSet;
+
+    .line 181
+    iput-object v1, p0, Lcom/oppo/camera/ui/preview/p;->k:Landroid/animation/ObjectAnimator;
+
+    .line 182
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/preview/p;->u:Z
+
+    const/4 p1, 0x0
+
+    .line 183
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->s:I
+
+    .line 184
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->t:I
+
+    return-void
+.end method
+
+.method public c(I)V
+    .locals 0
+
+    .line 188
+    iput p1, p0, Lcom/oppo/camera/ui/preview/p;->s:I
+
+    return-void
+.end method
+
+.method public c()Z
+    .locals 2
+
+    .line 548
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    .line 549
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v1, 0x1
+
+    :cond_0
+    return v1
+.end method
+
+.method protected e(I)V
+    .locals 6
+
+    .line 279
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-eqz v0, :cond_4
+
+    .line 280
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/preview/p;->g(I)V
+
+    .line 282
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/preview/p;->u:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 286
+    :cond_0
+    new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
+
+    const/4 v1, -0x2
+
+    invoke-direct {v0, v1, v1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    const v1, 0x1fffffff
+
+    const/high16 v2, -0x80000000
+
+    .line 289
+    invoke-static {v1, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v1
+
+    .line 290
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v2, v1, v1}, Landroid/widget/RelativeLayout;->measure(II)V
+
+    .line 291
+    iget-object v1, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v1}, Landroid/widget/RelativeLayout;->getMeasuredWidth()I
+
+    move-result v1
+
+    .line 292
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v2}, Landroid/widget/RelativeLayout;->getMeasuredHeight()I
+
+    move-result v2
+
+    .line 293
+    iget-object v3, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v3, v4, v4, v1, v2}, Landroid/widget/RelativeLayout;->layout(IIII)V
+
+    .line 295
+    iget v3, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    if-lez v3, :cond_1
+
+    iget v3, p0, Lcom/oppo/camera/ui/preview/p;->v:I
+
+    :cond_1
+    const/16 v3, 0x5a
+
+    const/16 v4, 0xa
+
+    if-eq p1, v3, :cond_3
+
+    const/16 v3, 0x10e
+
+    const/16 v5, 0xb
+
+    if-eq p1, v3, :cond_2
+
+    .line 315
+    invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 316
+    invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 317
+    invoke-static {}, Lcom/oppo/camera/util/Util;->D()I
+
+    move-result p1
+
+    iget v2, p0, Lcom/oppo/camera/ui/preview/p;->n:I
+
+    add-int/2addr p1, v2
+
+    iget v2, p0, Lcom/oppo/camera/ui/preview/p;->p:I
+
+    add-int/2addr p1, v2
+
+    iget v2, p0, Lcom/oppo/camera/ui/preview/p;->v:I
+
+    add-int/2addr p1, v2
+
+    iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 318
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+
+    move-result p1
+
+    sub-int/2addr p1, v1
+
+    iget v1, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    sub-int/2addr p1, v1
+
+    div-int/lit8 p1, p1, 0x2
+
+    iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    goto :goto_0
+
+    .line 307
+    :cond_2
+    invoke-virtual {v0, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 308
+    invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 309
+    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->n:I
+
+    div-int/lit8 v3, v2, 0x2
+
+    add-int/2addr p1, v3
+
+    div-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr p1, v1
+
+    iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
+
+    .line 310
+    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->q:I
+
+    sub-int/2addr p1, v2
+
+    iget v1, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    add-int/2addr p1, v1
+
+    div-int/lit8 p1, p1, 0x2
+
+    .line 311
+    invoke-static {}, Lcom/oppo/camera/util/Util;->D()I
+
+    move-result v1
+
+    add-int/2addr p1, v1
+
+    iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    goto :goto_0
+
+    :cond_3
+    const/16 p1, 0x9
+
+    .line 299
+    invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 300
+    invoke-virtual {v0, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+
+    .line 301
+    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->n:I
+
+    div-int/lit8 v3, v2, 0x2
+
+    add-int/2addr p1, v3
+
+    div-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr p1, v1
+
+    iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    .line 302
+    iget p1, p0, Lcom/oppo/camera/ui/preview/p;->q:I
+
+    sub-int/2addr p1, v2
+
+    iget v1, p0, Lcom/oppo/camera/ui/preview/p;->o:I
+
+    sub-int/2addr p1, v1
+
+    div-int/lit8 p1, p1, 0x2
+
+    .line 303
+    invoke-static {}, Lcom/oppo/camera/util/Util;->D()I
+
+    move-result v1
+
+    add-int/2addr p1, v1
+
+    iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+
+    .line 322
+    :goto_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    const v1, 0x4479c000    # 999.0f
+
+    invoke-virtual {p1, v1}, Landroid/widget/RelativeLayout;->setZ(F)V
+
+    .line 323
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 324
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->r:I
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/RelativeLayout;->setRotation(F)V
+
+    :cond_4
+    return-void
+.end method
+
+.method public f()I
+    .locals 1
+
+    .line 533
+    iget v0, p0, Lcom/oppo/camera/ui/preview/p;->s:I
+
+    return v0
+.end method
+
+.method public f(I)V
+    .locals 0
+
+    .line 528
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/preview/p;->e(I)V
+
+    return-void
+.end method
+
+.method public g()Landroid/widget/RelativeLayout;
+    .locals 1
+
+    .line 572
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    return-object v0
+.end method
+
+.method public h()V
+    .locals 1
+
+    .line 266
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-eqz v0, :cond_0
+
+    .line 267
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->l()V
+
+    .line 268
+    invoke-direct {p0}, Lcom/oppo/camera/ui/preview/p;->n()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public i()Z
+    .locals 1
+
+    .line 564
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p;->d:Landroid/widget/RelativeLayout;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 568
+    :cond_0
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->isShown()Z
+
+    move-result v0
+
     return v0
 .end method

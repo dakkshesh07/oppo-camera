@@ -6,11 +6,16 @@
 .implements Lokio/Sink;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    .line 114
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +38,7 @@
 .method public timeout()Lokio/Timeout;
     .locals 1
 
-    .line 117
+    .line 46
     sget-object v0, Lokio/Timeout;->NONE:Lokio/Timeout;
 
     return-object v0
@@ -44,9 +49,9 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 115
+    .line 44
     invoke-virtual {p1, p2, p3}, Lokio/Buffer;->skip(J)V
 
     return-void

@@ -20,11 +20,11 @@
 # instance fields
 .field final synthetic a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-.field private b:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+.field private b:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;Landroidx/appcompat/widget/ActionMenuPresenter$d;)V
+.method public constructor <init>(Landroidx/appcompat/widget/ActionMenuPresenter;Landroidx/appcompat/widget/ActionMenuPresenter$e;)V
     .locals 0
 
     .line 782
@@ -33,7 +33,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 783
-    iput-object p2, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->b:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+    iput-object p2, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->b:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
     return-void
 .end method
@@ -80,9 +80,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->b:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+    iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->b:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter$d;->c()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ActionMenuPresenter$e;->c()Z
 
     move-result v0
 
@@ -91,9 +91,9 @@
     .line 793
     iget-object v0, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->a:Landroidx/appcompat/widget/ActionMenuPresenter;
 
-    iget-object v1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->b:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+    iget-object v1, p0, Landroidx/appcompat/widget/ActionMenuPresenter$c;->b:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->h:Landroidx/appcompat/widget/ActionMenuPresenter$d;
+    iput-object v1, v0, Landroidx/appcompat/widget/ActionMenuPresenter;->h:Landroidx/appcompat/widget/ActionMenuPresenter$e;
 
     .line 795
     :cond_1

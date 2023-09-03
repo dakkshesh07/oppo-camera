@@ -3,6 +3,11 @@
 .source "ActionBarPolicy.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private a:Landroid/content/Context;
 

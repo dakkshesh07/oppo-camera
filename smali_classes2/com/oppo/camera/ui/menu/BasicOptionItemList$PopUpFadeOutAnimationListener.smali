@@ -25,7 +25,7 @@
 .method protected constructor <init>(Lcom/oppo/camera/ui/menu/BasicOptionItemList;)V
     .locals 0
 
-    .line 421
+    .line 420
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 2
 
-    .line 424
+    .line 423
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     const/4 v0, 0x0
@@ -47,26 +47,26 @@
 
     invoke-virtual {p1, v1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(ZZ)V
 
-    .line 425
+    .line 424
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     const/16 v1, 0x8
 
     invoke-virtual {p1, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setVisibility(I)V
 
-    .line 426
+    .line 425
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->b(Lcom/oppo/camera/ui/menu/BasicOptionItemList;Z)Z
 
-    .line 428
+    .line 427
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->p:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;
 
     if-eqz p1, :cond_0
 
-    .line 429
+    .line 428
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->p:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;
@@ -77,7 +77,22 @@
 
     invoke-static {p1}, Lcom/oppo/camera/ui/menu/f;->d(Ljava/lang/String;)V
 
+    .line 431
     :cond_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->q:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OnPopUpFadeOutAnimationStartListener;
+
+    if-eqz p1, :cond_1
+
+    .line 432
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->q:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OnPopUpFadeOutAnimationStartListener;
+
+    invoke-interface {p1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList$OnPopUpFadeOutAnimationStartListener;->onPopUpFadeOutAnimationEnd()V
+
+    :cond_1
     return-void
 .end method
 
@@ -90,33 +105,33 @@
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 440
+    .line 443
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(ZZ)V
 
-    .line 441
+    .line 444
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->b(Lcom/oppo/camera/ui/menu/BasicOptionItemList;Z)Z
 
-    .line 442
+    .line 445
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Lcom/oppo/camera/ui/menu/BasicOptionItemList;Z)Z
 
-    .line 444
+    .line 447
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->p:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;
 
     if-eqz p1, :cond_0
 
-    .line 445
+    .line 448
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->p:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;
@@ -127,21 +142,6 @@
 
     invoke-static {p1}, Lcom/oppo/camera/ui/menu/f;->c(Ljava/lang/String;)V
 
-    .line 448
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->q:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OnPopUpFadeOutAnimationStartListener;
-
-    if-eqz p1, :cond_1
-
-    .line 449
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/BasicOptionItemList$PopUpFadeOutAnimationListener;->a:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    iget-object p1, p1, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->q:Lcom/oppo/camera/ui/menu/BasicOptionItemList$OnPopUpFadeOutAnimationStartListener;
-
-    invoke-interface {p1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList$OnPopUpFadeOutAnimationStartListener;->onPopUpFadeOutAnimationStart()V
-
-    :cond_1
     return-void
 .end method

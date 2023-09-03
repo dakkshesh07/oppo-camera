@@ -6,6 +6,11 @@
 .implements Lokio/Sink;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # instance fields
 .field private closed:Z
 
@@ -24,7 +29,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -108,7 +113,7 @@
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_0
     :goto_0
@@ -152,7 +157,7 @@
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     goto :goto_0
 
@@ -341,7 +346,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 

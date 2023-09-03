@@ -3,6 +3,11 @@
 .source "TextScale.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final PROPNAME_SCALE:Ljava/lang/String; = "android:textscale:scale"
 

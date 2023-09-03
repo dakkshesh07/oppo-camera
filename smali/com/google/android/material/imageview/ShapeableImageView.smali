@@ -1,5 +1,5 @@
 .class public Lcom/google/android/material/imageview/ShapeableImageView;
-.super Landroidx/appcompat/widget/n;
+.super Landroidx/appcompat/widget/AppCompatImageView;
 .source "ShapeableImageView.java"
 
 # interfaces
@@ -86,7 +86,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 60
     new-instance p1, Lcom/google/android/material/shape/ShapeAppearancePathProvider;
@@ -346,7 +346,7 @@
     .locals 2
 
     .line 120
-    invoke-super {p0}, Landroidx/appcompat/widget/n;->onAttachedToWindow()V
+    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageView;->onAttachedToWindow()V
 
     const/4 v0, 0x2
 
@@ -369,7 +369,7 @@
     invoke-virtual {p0, v0, v1}, Lcom/google/android/material/imageview/ShapeableImageView;->setLayerType(ILandroid/graphics/Paint;)V
 
     .line 115
-    invoke-super {p0}, Landroidx/appcompat/widget/n;->onDetachedFromWindow()V
+    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageView;->onDetachedFromWindow()V
 
     return-void
 .end method
@@ -378,7 +378,7 @@
     .locals 2
 
     .line 126
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/n;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 127
     iget-object v0, p0, Lcom/google/android/material/imageview/ShapeableImageView;->maskPath:Landroid/graphics/Path;
@@ -397,7 +397,7 @@
     .locals 4
 
     .line 133
-    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/n;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatImageView;->onMeasure(II)V
 
     .line 134
     iget-object p1, p0, Lcom/google/android/material/imageview/ShapeableImageView;->destination:Landroid/graphics/RectF;

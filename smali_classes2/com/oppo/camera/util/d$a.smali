@@ -1,6 +1,6 @@
 .class Lcom/oppo/camera/util/d$a;
 .super Ljava/lang/Object;
-.source "ThumbnailCacheUtil.java"
+.source "LocationHelper.java"
 
 
 # annotations
@@ -14,31 +14,83 @@
 .end annotation
 
 
-# static fields
-.field private static final a:Lcom/oppo/camera/util/d;
+# instance fields
+.field private a:I
+
+.field private b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method private constructor <init>()V
+    .locals 1
 
-    .line 375
-    new-instance v0, Lcom/oppo/camera/util/d;
+    .line 341
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    const/4 v0, -0x1
 
-    invoke-direct {v0, v1}, Lcom/oppo/camera/util/d;-><init>(Lcom/oppo/camera/util/d$1;)V
+    .line 342
+    iput v0, p0, Lcom/oppo/camera/util/d$a;->a:I
 
-    sput-object v0, Lcom/oppo/camera/util/d$a;->a:Lcom/oppo/camera/util/d;
+    .line 343
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/oppo/camera/util/d$a;->b:Ljava/util/List;
 
     return-void
 .end method
 
-.method static synthetic a()Lcom/oppo/camera/util/d;
-    .locals 1
+.method synthetic constructor <init>(Lcom/oppo/camera/util/d$1;)V
+    .locals 0
 
-    .line 374
-    sget-object v0, Lcom/oppo/camera/util/d$a;->a:Lcom/oppo/camera/util/d;
+    .line 341
+    invoke-direct {p0}, Lcom/oppo/camera/util/d$a;-><init>()V
 
-    return-object v0
+    return-void
+.end method
+
+.method static synthetic a(Lcom/oppo/camera/util/d$a;I)I
+    .locals 0
+
+    .line 341
+    iput p1, p0, Lcom/oppo/camera/util/d$a;->a:I
+
+    return p1
+.end method
+
+.method static synthetic a(Lcom/oppo/camera/util/d$a;)Ljava/util/List;
+    .locals 0
+
+    .line 341
+    iget-object p0, p0, Lcom/oppo/camera/util/d$a;->b:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method static synthetic a(Lcom/oppo/camera/util/d$a;Ljava/util/List;)Ljava/util/List;
+    .locals 0
+
+    .line 341
+    iput-object p1, p0, Lcom/oppo/camera/util/d$a;->b:Ljava/util/List;
+
+    return-object p1
+.end method
+
+.method static synthetic b(Lcom/oppo/camera/util/d$a;)I
+    .locals 0
+
+    .line 341
+    iget p0, p0, Lcom/oppo/camera/util/d$a;->a:I
+
+    return p0
 .end method

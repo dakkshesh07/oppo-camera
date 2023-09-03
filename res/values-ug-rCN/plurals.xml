@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="MT_Bin">
+        <item quantity="other">%1$d تۈرنى ئۆچۈرۈش</item>
+        <item quantity="one">%1$d تۈرنى ئۆچۈرۈش</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">%1$d تۈر تاللاندى</item>
+        <item quantity="one">%1$d تۈر تاللاندى</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
+        <item quantity="other">%d يېڭى ئۇقتۇرۇش</item>
+        <item quantity="one">%d يېڭى ئۇقتۇرۇش</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
+        <item quantity="other">%1$d پارچە قەغەز تاللاندى</item>
+        <item quantity="one">%1$d پارچە قەغەز تاللاندى</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
+        <item quantity="other">%1$d تۈر تاللاندى</item>
+        <item quantity="one">%1$d تۈر تاللاندى</item>
+    </plurals>
+</resources>

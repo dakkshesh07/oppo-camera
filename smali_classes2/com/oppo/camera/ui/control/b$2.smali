@@ -1,14 +1,11 @@
 .class Lcom/oppo/camera/ui/control/b$2;
-.super Ljava/lang/Object;
+.super Lcom/a/a/e;
 .source "CameraControlUI.java"
-
-# interfaces
-.implements Lcom/oppo/camera/ui/control/ShutterButton$OnShutterButtonListener;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oppo/camera/ui/control/b;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/oppo/camera/ui/control/b;->Y()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,144 +22,88 @@
 .method constructor <init>(Lcom/oppo/camera/ui/control/b;)V
     .locals 0
 
-    .line 199
+    .line 2536
     iput-object p1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/a/a/e;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/oppo/camera/ui/control/ShutterButton;)V
-    .locals 1
+.method public a(Lcom/a/a/f;)V
+    .locals 12
 
-    const-string p1, "CameraControlUI"
+    .line 2539
+    invoke-virtual {p1}, Lcom/a/a/f;->c()D
 
-    const-string v0, "onShutterButtonClick, switch_camera_button"
+    move-result-wide v10
 
-    .line 206
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const-wide/16 v2, 0x0
 
-    .line 208
-    invoke-static {}, Lcom/oppo/camera/ui/menu/f;->a()Z
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    move-result p1
+    const-wide v6, 0x3fecccccc0000000L    # 0.8999999761581421
 
-    if-eqz p1, :cond_0
+    const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
-    .line 209
-    invoke-static {}, Lcom/oppo/camera/ui/menu/f;->d()V
+    move-wide v0, v10
 
-    .line 212
-    :cond_0
+    .line 2540
+    invoke-static/range {v0 .. v9}, Lcom/a/a/l;->a(DDDDD)D
+
+    move-result-wide v0
+
+    double-to-float p1, v0
+
+    const-wide v6, 0x3fe3333340000000L    # 0.6000000238418579
+
+    move-wide v0, v10
+
+    .line 2542
+    invoke-static/range {v0 .. v9}, Lcom/a/a/l;->a(DDDDD)D
+
+    move-result-wide v0
+
+    double-to-float v0, v0
+
+    .line 2545
+    iget-object v1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
+
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/ShutterButton;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 2546
+    iget-object v1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
+
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/ShutterButton;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/control/ShutterButton;->setScaleX(F)V
+
+    .line 2547
+    iget-object v1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
+
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/ShutterButton;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/control/ShutterButton;->setScaleY(F)V
+
+    .line 2548
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->a(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/a;
+    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/ShutterButton;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/oppo/camera/ui/control/a;->k()V
-
-    return-void
-.end method
-
-.method public a(Lcom/oppo/camera/ui/control/ShutterButton;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Lcom/oppo/camera/ui/control/ShutterButton;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public c(Lcom/oppo/camera/ui/control/ShutterButton;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d(Lcom/oppo/camera/ui/control/ShutterButton;)V
-    .locals 0
-
-    .line 225
-    iget-object p1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->a(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/a;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 226
-    iget-object p1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->a(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/a;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/oppo/camera/ui/control/a;->l()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public e(Lcom/oppo/camera/ui/control/ShutterButton;)V
-    .locals 0
-
-    .line 232
-    iget-object p1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->a(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/a;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 233
-    iget-object p1, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->a(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/a;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/oppo/camera/ui/control/a;->m()V
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/control/ShutterButton;->setAlpha(F)V
 
     :cond_0
     return-void
-.end method
-
-.method public w()Z
-    .locals 1
-
-    .line 239
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->c(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/ShutterButton;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 240
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$2;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->c(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/ShutterButton;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/control/ShutterButton;->isEnabled()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
 .end method

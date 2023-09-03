@@ -9,6 +9,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/view/menu/b$b;,
@@ -28,7 +31,7 @@
 
 .field private f:Landroid/graphics/drawable/Drawable;
 
-.field private g:Landroidx/appcompat/widget/ae;
+.field private g:Landroidx/appcompat/widget/ad;
 
 .field private h:Z
 
@@ -317,13 +320,13 @@
     move-result-object v1
 
     :goto_4
-    invoke-static {p0, v1}, Landroidx/appcompat/widget/au;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v1}, Landroidx/appcompat/widget/at;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     goto :goto_5
 
     .line 209
     :cond_6
-    invoke-static {p0, v2}, Landroidx/appcompat/widget/au;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, v2}, Landroidx/appcompat/widget/at;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     :goto_5
     return-void
@@ -456,7 +459,7 @@
     if-eqz p1, :cond_1
 
     .line 133
-    iget-object p1, p0, Landroidx/appcompat/view/menu/b;->g:Landroidx/appcompat/widget/ae;
+    iget-object p1, p0, Landroidx/appcompat/view/menu/b;->g:Landroidx/appcompat/widget/ad;
 
     if-nez p1, :cond_1
 
@@ -465,7 +468,7 @@
 
     invoke-direct {p1, p0}, Landroidx/appcompat/view/menu/b$a;-><init>(Landroidx/appcompat/view/menu/b;)V
 
-    iput-object p1, p0, Landroidx/appcompat/view/menu/b;->g:Landroidx/appcompat/widget/ae;
+    iput-object p1, p0, Landroidx/appcompat/view/menu/b;->g:Landroidx/appcompat/widget/ad;
 
     :cond_1
     return-void
@@ -664,12 +667,12 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroidx/appcompat/view/menu/b;->g:Landroidx/appcompat/widget/ae;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/b;->g:Landroidx/appcompat/widget/ad;
 
     if-eqz v0, :cond_0
 
     .line 142
-    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/widget/ae;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/widget/ad;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result v0
 

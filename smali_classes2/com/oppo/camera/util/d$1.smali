@@ -1,42 +1,27 @@
-.class Lcom/oppo/camera/util/d$1;
+.class final Lcom/oppo/camera/util/d$1;
 .super Ljava/lang/Object;
-.source "ThumbnailCacheUtil.java"
+.source "LocationHelper.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/oppo/camera/util/d;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/oppo/camera/util/d;->a()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator<",
-        "Ljava/io/File;",
-        ">;"
-    }
-.end annotation
-
-
-# instance fields
-.field final synthetic a:Lcom/oppo/camera/util/d;
-
 
 # direct methods
-.method constructor <init>(Lcom/oppo/camera/util/d;)V
+.method constructor <init>()V
     .locals 0
 
-    .line 171
-    iput-object p1, p0, Lcom/oppo/camera/util/d$1;->a:Lcom/oppo/camera/util/d;
-
+    .line 267
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,56 +29,68 @@
 
 
 # virtual methods
-.method public a(Ljava/io/File;Ljava/io/File;)I
-    .locals 3
+.method public run()V
+    .locals 4
 
-    .line 174
-    invoke-virtual {p1}, Ljava/io/File;->lastModified()J
+    const-string v0, "LocationHelper"
 
-    move-result-wide v0
+    const/4 v1, 0x0
 
-    invoke-virtual {p2}, Ljava/io/File;->lastModified()J
+    :try_start_0
+    const-string v2, "parseSensorAreaList"
 
-    move-result-wide p1
+    .line 271
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sub-long/2addr v0, p1
+    .line 273
+    invoke-static {}, Lcom/oppo/camera/util/d;->b()Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const-wide/16 p1, 0x0
+    move-result-object v2
 
-    cmp-long v2, v0, p1
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
-    if-lez v2, :cond_0
+    move-result v2
 
-    const/4 p1, -0x1
+    if-nez v2, :cond_0
 
-    return p1
+    .line 274
+    invoke-static {}, Lcom/oppo/camera/util/d;->c()V
 
+    .line 277
     :cond_0
-    cmp-long p1, p1, v0
+    invoke-static {}, Lcom/oppo/camera/util/d;->d()V
 
-    if-nez p1, :cond_1
+    .line 278
+    invoke-static {}, Lcom/oppo/camera/util/d;->b()Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    const/4 p1, 0x0
+    move-result-object v2
 
-    return p1
+    const/4 v3, 0x1
 
-    :cond_1
-    const/4 p1, 0x1
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    return p1
-.end method
+    const-string v2, "parseSensorAreaList X"
 
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 0
+    .line 280
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 171
-    check-cast p1, Ljava/io/File;
+    goto :goto_0
 
-    check-cast p2, Ljava/io/File;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/util/d$1;->a(Ljava/io/File;Ljava/io/File;)I
+    .line 282
+    invoke-static {}, Lcom/oppo/camera/util/d;->b()Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result p1
+    move-result-object v2
 
-    return p1
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    .line 283
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    :goto_0
+    return-void
 .end method

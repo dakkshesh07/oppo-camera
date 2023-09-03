@@ -3,7 +3,7 @@
 .source "ThumbnailDownloadThread.java"
 
 # interfaces
-.implements Lcom/oppo/camera/sticker/c/a$a;
+.implements Lcom/oppo/camera/sticker/net/HttpRequestHelper$a;
 
 
 # annotations
@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/sticker/download/thumbnail/b;Ljava/lang/String;)V
     .locals 0
 
-    .line 99
+    .line 101
     iput-object p1, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->b:Lcom/oppo/camera/sticker/download/thumbnail/b;
 
     iput-object p2, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->a:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public a()V
     .locals 4
 
-    .line 102
+    .line 104
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->b:Lcom/oppo/camera/sticker/download/thumbnail/b;
 
     invoke-static {v0}, Lcom/oppo/camera/sticker/download/thumbnail/b;->b(Lcom/oppo/camera/sticker/download/thumbnail/b;)Lcom/oppo/camera/sticker/download/thumbnail/a;
@@ -61,7 +61,7 @@
 
     invoke-interface {v0, v1, v3, v2}, Lcom/oppo/camera/sticker/download/thumbnail/a;->onSecondDownloadFinish(Landroid/content/Context;ZLjava/lang/String;)V
 
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->b:Lcom/oppo/camera/sticker/download/thumbnail/b;
 
     invoke-static {v0}, Lcom/oppo/camera/sticker/download/thumbnail/b;->c(Lcom/oppo/camera/sticker/download/thumbnail/b;)Lcom/oppo/camera/sticker/download/thumbnail/b$a;
@@ -82,16 +82,16 @@
 
     const-string v1, "onSuccess, second download success!"
 
-    .line 105
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 107
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public a(ILjava/lang/String;)V
+.method public a(Ljava/lang/String;)V
     .locals 4
 
-    .line 110
+    .line 112
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->b:Lcom/oppo/camera/sticker/download/thumbnail/b;
 
     invoke-static {v0}, Lcom/oppo/camera/sticker/download/thumbnail/b;->b(Lcom/oppo/camera/sticker/download/thumbnail/b;)Lcom/oppo/camera/sticker/download/thumbnail/a;
@@ -110,7 +110,7 @@
 
     invoke-interface {v0, v1, v3, v2}, Lcom/oppo/camera/sticker/download/thumbnail/a;->onSecondDownloadFinish(Landroid/content/Context;ZLjava/lang/String;)V
 
-    .line 111
+    .line 113
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->b:Lcom/oppo/camera/sticker/download/thumbnail/b;
 
     invoke-static {v0}, Lcom/oppo/camera/sticker/download/thumbnail/b;->c(Lcom/oppo/camera/sticker/download/thumbnail/b;)Lcom/oppo/camera/sticker/download/thumbnail/b$a;
@@ -127,15 +127,15 @@
 
     invoke-interface {v0, v1, v3, v2}, Lcom/oppo/camera/sticker/download/thumbnail/b$a;->b(Landroid/content/Context;ZLjava/lang/String;)V
 
-    .line 114
+    .line 116
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/oppo/camera/sticker/download/thumbnail/b$2;->a:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 116
-    invoke-static {v0}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/File;)Z
+    .line 118
+    invoke-static {v0}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/File;)Z
 
     move-result v0
 
@@ -145,32 +145,26 @@
 
     const-string v0, "second download fail! delete exist file fail!"
 
-    .line 117
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 119
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
+    .line 122
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onFail, second download fail!, errorCode: "
+    const-string v2, "onFail, second download fail! errorMsg: "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", errorMsg: "
-
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

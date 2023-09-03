@@ -25,18 +25,39 @@
 
 # static fields
 .field public static final COMMAND_ADD_QUEUE_ITEM:Ljava/lang/String; = "android.support.v4.media.session.command.ADD_QUEUE_ITEM"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final COMMAND_ADD_QUEUE_ITEM_AT:Ljava/lang/String; = "android.support.v4.media.session.command.ADD_QUEUE_ITEM_AT"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final COMMAND_ARGUMENT_INDEX:Ljava/lang/String; = "android.support.v4.media.session.command.ARGUMENT_INDEX"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final COMMAND_ARGUMENT_MEDIA_DESCRIPTION:Ljava/lang/String; = "android.support.v4.media.session.command.ARGUMENT_MEDIA_DESCRIPTION"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final COMMAND_GET_EXTRA_BINDER:Ljava/lang/String; = "android.support.v4.media.session.command.GET_EXTRA_BINDER"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final COMMAND_REMOVE_QUEUE_ITEM:Ljava/lang/String; = "android.support.v4.media.session.command.REMOVE_QUEUE_ITEM"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final COMMAND_REMOVE_QUEUE_ITEM_AT:Ljava/lang/String; = "android.support.v4.media.session.command.REMOVE_QUEUE_ITEM_AT"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field static final TAG:Ljava/lang/String; = "MediaControllerCompat"
 
@@ -745,6 +766,8 @@
 
 .method public getSessionToken2Bundle()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 543
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat;->mToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;

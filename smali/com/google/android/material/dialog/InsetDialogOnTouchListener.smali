@@ -6,6 +6,11 @@
 .implements Landroid/view/View$OnTouchListener;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private final dialog:Landroid/app/Dialog;
 

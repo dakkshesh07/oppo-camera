@@ -189,7 +189,7 @@
     const/high16 v0, 0x100000
 
     .line 409
-    invoke-static {p1, v0}, Landroidx/core/g/w;->c(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Landroidx/core/f/w;->c(Landroid/view/View;I)V
 
     .line 410
     invoke-virtual {p0, p1}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->canSwipeDismissView(Landroid/view/View;)Z
@@ -199,7 +199,7 @@
     if-eqz v0, :cond_0
 
     .line 411
-    sget-object v0, Landroidx/core/g/a/d$a;->u:Landroidx/core/g/a/d$a;
+    sget-object v0, Landroidx/core/f/a/d$a;->u:Landroidx/core/f/a/d$a;
 
     const/4 v1, 0x0
 
@@ -207,7 +207,7 @@
 
     invoke-direct {v2, p0}, Lcom/google/android/material/behavior/SwipeDismissBehavior$2;-><init>(Lcom/google/android/material/behavior/SwipeDismissBehavior;)V
 
-    invoke-static {p1, v0, v1, v2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a/d$a;Ljava/lang/CharSequence;Landroidx/core/g/a/g;)V
+    invoke-static {p1, v0, v1, v2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a/d$a;Ljava/lang/CharSequence;Landroidx/core/f/a/g;)V
 
     :cond_0
     return-void
@@ -351,7 +351,7 @@
     move-result p1
 
     .line 179
-    invoke-static {p2}, Landroidx/core/g/w;->f(Landroid/view/View;)I
+    invoke-static {p2}, Landroidx/core/f/w;->f(Landroid/view/View;)I
 
     move-result p3
 
@@ -360,7 +360,7 @@
     const/4 p3, 0x1
 
     .line 181
-    invoke-static {p2, p3}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p2, p3}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 182
     invoke-direct {p0, p2}, Lcom/google/android/material/behavior/SwipeDismissBehavior;->updateAccessibilityActions(Landroid/view/View;)V

@@ -1,11 +1,14 @@
 .class public interface abstract Landroidx/core/widget/k;
 .super Ljava/lang/Object;
-.source "TintableCompoundDrawablesView.java"
+.source "TintableCompoundButton.java"
 
 
 # virtual methods
-.method public abstract setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
+.method public abstract getSupportButtonTintList()Landroid/content/res/ColorStateList;
 .end method
 
-.method public abstract setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
+.method public abstract setSupportButtonTintList(Landroid/content/res/ColorStateList;)V
+.end method
+
+.method public abstract setSupportButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
 .end method

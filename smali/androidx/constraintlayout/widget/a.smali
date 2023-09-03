@@ -8,7 +8,7 @@
 
 .field private g:I
 
-.field private h:Landroidx/constraintlayout/a/a/b;
+.field private h:Landroidx/constraintlayout/solver/widgets/b;
 
 
 # direct methods
@@ -35,11 +35,11 @@
     invoke-super {p0, p1}, Landroidx/constraintlayout/widget/b;->a(Landroid/util/AttributeSet;)V
 
     .line 182
-    new-instance v0, Landroidx/constraintlayout/a/a/b;
+    new-instance v0, Landroidx/constraintlayout/solver/widgets/b;
 
-    invoke-direct {v0}, Landroidx/constraintlayout/a/a/b;-><init>()V
+    invoke-direct {v0}, Landroidx/constraintlayout/solver/widgets/b;-><init>()V
 
-    iput-object v0, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/a/a/b;
+    iput-object v0, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/solver/widgets/b;
 
     if-eqz p1, :cond_2
 
@@ -92,7 +92,7 @@
     if-ne v3, v4, :cond_1
 
     .line 191
-    iget-object v4, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/a/a/b;
+    iget-object v4, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/solver/widgets/b;
 
     const/4 v5, 0x1
 
@@ -100,7 +100,7 @@
 
     move-result v3
 
-    invoke-virtual {v4, v3}, Landroidx/constraintlayout/a/a/b;->a(Z)V
+    invoke-virtual {v4, v3}, Landroidx/constraintlayout/solver/widgets/b;->a(Z)V
 
     :cond_1
     :goto_1
@@ -110,9 +110,9 @@
 
     .line 195
     :cond_2
-    iget-object p1, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/a/a/b;
+    iget-object p1, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/solver/widgets/b;
 
-    iput-object p1, p0, Landroidx/constraintlayout/widget/a;->d:Landroidx/constraintlayout/a/a/j;
+    iput-object p1, p0, Landroidx/constraintlayout/widget/a;->d:Landroidx/constraintlayout/solver/widgets/h;
 
     .line 196
     invoke-virtual {p0}, Landroidx/constraintlayout/widget/a;->a()V
@@ -133,9 +133,9 @@
     .locals 1
 
     .line 200
-    iget-object v0, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/a/a/b;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/solver/widgets/b;
 
-    invoke-virtual {v0, p1}, Landroidx/constraintlayout/a/a/b;->a(Z)V
+    invoke-virtual {v0, p1}, Landroidx/constraintlayout/solver/widgets/b;->a(Z)V
 
     return-void
 .end method
@@ -247,11 +247,11 @@
     .line 172
     :cond_6
     :goto_1
-    iget-object p1, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/a/a/b;
+    iget-object p1, p0, Landroidx/constraintlayout/widget/a;->h:Landroidx/constraintlayout/solver/widgets/b;
 
     iget v0, p0, Landroidx/constraintlayout/widget/a;->g:I
 
-    invoke-virtual {p1, v0}, Landroidx/constraintlayout/a/a/b;->a(I)V
+    invoke-virtual {p1, v0}, Landroidx/constraintlayout/solver/widgets/b;->a(I)V
 
     return-void
 .end method

@@ -4,4 +4,4 @@
 
 # interfaces
 .implements Lcom/airbnb/lottie/a/a/c;
-.implements Lcom/airbnb/lottie/c/f;
+.implements Lcom/airbnb/lottie/model/e;

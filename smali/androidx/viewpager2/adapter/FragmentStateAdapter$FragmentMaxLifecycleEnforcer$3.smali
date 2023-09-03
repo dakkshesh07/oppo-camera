@@ -3,7 +3,7 @@
 .source "FragmentStateAdapter.java"
 
 # interfaces
-.implements Landroidx/lifecycle/f;
+.implements Landroidx/lifecycle/e;
 
 
 # annotations
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     .line 657

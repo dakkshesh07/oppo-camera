@@ -3,6 +3,11 @@
 .source "ThemeEnforcement.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final APPCOMPAT_CHECK_ATTRS:[I
 
@@ -403,7 +408,7 @@
     return-object p0
 .end method
 
-.method public static varargs obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/as;
+.method public static varargs obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/ar;
     .locals 0
 
     .line 115
@@ -413,7 +418,7 @@
     invoke-static/range {p0 .. p5}, Lcom/google/android/material/internal/ThemeEnforcement;->checkTextAppearance(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
     .line 121
-    invoke-static {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p0, p1, p2, p3, p4}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object p0
 

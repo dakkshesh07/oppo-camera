@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 38
+    .line 39
     invoke-direct {p0}, Lcom/google/protobuf/ExtensionLite;-><init>()V
 
     return-void
@@ -42,11 +42,19 @@
 .method public abstract getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
 .end method
 
-.method protected getExtensionType()Lcom/google/protobuf/Extension$ExtensionType;
+.method protected abstract getExtensionType()Lcom/google/protobuf/Extension$ExtensionType;
+.end method
+
+.method public abstract getMessageDefaultInstance()Lcom/google/protobuf/Message;
+.end method
+
+.method public bridge synthetic getMessageDefaultInstance()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 63
-    sget-object v0, Lcom/google/protobuf/Extension$ExtensionType;->IMMUTABLE:Lcom/google/protobuf/Extension$ExtensionType;
+    .line 39
+    invoke-virtual {p0}, Lcom/google/protobuf/Extension;->getMessageDefaultInstance()Lcom/google/protobuf/Message;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -54,7 +62,7 @@
 .method public getMessageType()Lcom/google/protobuf/Extension$MessageType;
     .locals 1
 
-    .line 79
+    .line 78
     sget-object v0, Lcom/google/protobuf/Extension$MessageType;->PROTO2:Lcom/google/protobuf/Extension$MessageType;
 
     return-object v0

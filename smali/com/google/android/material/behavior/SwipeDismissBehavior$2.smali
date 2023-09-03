@@ -3,7 +3,7 @@
 .source "SwipeDismissBehavior.java"
 
 # interfaces
-.implements Landroidx/core/g/a/g;
+.implements Landroidx/core/f/a/g;
 
 
 # annotations
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public perform(Landroid/view/View;Landroidx/core/g/a/g$a;)Z
+.method public perform(Landroid/view/View;Landroidx/core/f/a/g$a;)Z
     .locals 3
 
     .line 418
@@ -50,7 +50,7 @@
     if-eqz p2, :cond_6
 
     .line 420
-    invoke-static {p1}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p1}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p2
 
@@ -106,7 +106,7 @@
 
     .line 425
     :goto_1
-    invoke-static {p1, p2}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     const/4 p2, 0x0
 

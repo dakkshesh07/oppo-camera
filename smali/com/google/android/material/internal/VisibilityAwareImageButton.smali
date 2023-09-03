@@ -10,6 +10,9 @@
     }
 .end annotation
 
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 
 # instance fields
 .field private userSetVisibility:I

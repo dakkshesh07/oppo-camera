@@ -3,6 +3,11 @@
 .source "SegmentPool.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # static fields
 .field public static final INSTANCE:Lokio/SegmentPool;
 
@@ -61,7 +66,7 @@
 
     const-string v0, "segment"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 49
     iget-object v0, p1, Lokio/Segment;->next:Lokio/Segment;
@@ -143,7 +148,7 @@
     sput-object p1, Lokio/SegmentPool;->next:Lokio/Segment;
 
     .line 59
-    sget-object p1, Lc/f;->a:Lc/f;
+    sget-object p1, Lkotlin/u;->a:Lkotlin/u;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

@@ -16,25 +16,44 @@
     .end annotation
 .end field
 
+.field private static final b:[B
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 52
+    .line 51
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/airbnb/lottie/e;->a:Ljava/util/Map;
 
+    const/4 v0, 0x4
+
+    .line 57
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lcom/airbnb/lottie/e;->b:[B
+
     return-void
+
+    :array_0
+    .array-data 1
+        0x50t
+        0x4bt
+        0x3t
+        0x4t
+    .end array-data
 .end method
 
 .method private static a(Lcom/airbnb/lottie/d;Ljava/lang/String;)Lcom/airbnb/lottie/g;
     .locals 2
 
-    .line 464
+    .line 504
     invoke-virtual {p0}, Lcom/airbnb/lottie/d;->l()Ljava/util/Map;
 
     move-result-object p0
@@ -60,7 +79,7 @@
 
     check-cast v0, Lcom/airbnb/lottie/g;
 
-    .line 465
+    .line 505
     invoke-virtual {v0}, Lcom/airbnb/lottie/g;->d()Ljava/lang/String;
 
     move-result-object v1
@@ -79,12 +98,12 @@
     return-object p0
 .end method
 
-.method public static a(Lcom/airbnb/lottie/e/a/c;Ljava/lang/String;)Lcom/airbnb/lottie/l;
+.method public static a(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;)Lcom/airbnb/lottie/l;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/airbnb/lottie/e/a/c;",
+            "Lcom/airbnb/lottie/parser/moshi/JsonReader;",
             "Ljava/lang/String;",
             ")",
             "Lcom/airbnb/lottie/l<",
@@ -95,20 +114,20 @@
 
     const/4 v0, 0x1
 
-    .line 364
-    invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/e;->a(Lcom/airbnb/lottie/e/a/c;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
+    .line 382
+    invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/e;->a(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static a(Lcom/airbnb/lottie/e/a/c;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
+.method private static a(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/airbnb/lottie/e/a/c;",
+            "Lcom/airbnb/lottie/parser/moshi/JsonReader;",
             "Ljava/lang/String;",
             "Z)",
             "Lcom/airbnb/lottie/l<",
@@ -117,22 +136,22 @@
         }
     .end annotation
 
-    .line 371
+    .line 389
     :try_start_0
-    invoke-static {p0}, Lcom/airbnb/lottie/e/t;->a(Lcom/airbnb/lottie/e/a/c;)Lcom/airbnb/lottie/d;
+    invoke-static {p0}, Lcom/airbnb/lottie/parser/t;->a(Lcom/airbnb/lottie/parser/moshi/JsonReader;)Lcom/airbnb/lottie/d;
 
     move-result-object v0
 
     if-eqz p1, :cond_0
 
-    .line 373
-    invoke-static {}, Lcom/airbnb/lottie/c/g;->a()Lcom/airbnb/lottie/c/g;
+    .line 391
+    invoke-static {}, Lcom/airbnb/lottie/model/f;->a()Lcom/airbnb/lottie/model/f;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1, v0}, Lcom/airbnb/lottie/c/g;->a(Ljava/lang/String;Lcom/airbnb/lottie/d;)V
+    invoke-virtual {v1, p1, v0}, Lcom/airbnb/lottie/model/f;->a(Ljava/lang/String;Lcom/airbnb/lottie/d;)V
 
-    .line 375
+    .line 393
     :cond_0
     new-instance p1, Lcom/airbnb/lottie/l;
 
@@ -143,8 +162,8 @@
 
     if-eqz p2, :cond_1
 
-    .line 380
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    .line 398
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
     :cond_1
     return-object p1
@@ -157,7 +176,7 @@
     :catch_0
     move-exception p1
 
-    .line 377
+    .line 395
     :try_start_1
     new-instance v0, Lcom/airbnb/lottie/l;
 
@@ -167,8 +186,8 @@
 
     if-eqz p2, :cond_2
 
-    .line 380
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    .line 398
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
     :cond_2
     return-object v0
@@ -176,8 +195,9 @@
     :goto_0
     if-eqz p2, :cond_3
 
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
+    .line 400
     :cond_3
     throw p1
 .end method
@@ -196,7 +216,7 @@
         }
     .end annotation
 
-    .line 294
+    .line 312
     :try_start_0
     invoke-static {p0}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
 
@@ -206,11 +226,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/airbnb/lottie/e/a/c;->a(Lokio/BufferedSource;)Lcom/airbnb/lottie/e/a/c;
+    invoke-static {v0}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->a(Lokio/BufferedSource;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/airbnb/lottie/e;->a(Lcom/airbnb/lottie/e/a/c;Ljava/lang/String;)Lcom/airbnb/lottie/l;
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/e;->a(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;)Lcom/airbnb/lottie/l;
 
     move-result-object p1
     :try_end_0
@@ -218,8 +238,8 @@
 
     if-eqz p2, :cond_0
 
-    .line 297
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    .line 315
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
     :cond_0
     return-object p1
@@ -229,8 +249,9 @@
 
     if-eqz p2, :cond_1
 
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
+    .line 317
     :cond_1
     throw p1
 .end method
@@ -249,7 +270,7 @@
         }
     .end annotation
 
-    .line 403
+    .line 421
     :try_start_0
     invoke-static {p0, p1}, Lcom/airbnb/lottie/e;->b(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/l;
 
@@ -257,16 +278,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 405
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    .line 423
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
     return-object p1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {p0}, Lcom/airbnb/lottie/f/h;->a(Ljava/io/Closeable;)V
+    invoke-static {p0}, Lcom/airbnb/lottie/c/h;->a(Ljava/io/Closeable;)V
 
+    .line 424
     throw p1
 .end method
 
@@ -283,7 +305,7 @@
         }
     .end annotation
 
-    .line 198
+    .line 212
     invoke-static {p0, p1}, Lcom/airbnb/lottie/e;->c(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
@@ -310,20 +332,20 @@
         }
     .end annotation
 
-    .line 212
+    .line 226
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 213
+    .line 227
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 214
+    .line 228
     new-instance v1, Lcom/airbnb/lottie/e$5;
 
-    invoke-direct {v1, v0, p0, p1}, Lcom/airbnb/lottie/e$5;-><init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;I)V
+    invoke-direct {v1, v0, p0, p1, p2}, Lcom/airbnb/lottie/e$5;-><init>(Ljava/lang/ref/WeakReference;Landroid/content/Context;ILjava/lang/String;)V
 
     invoke-static {p2, v1}, Lcom/airbnb/lottie/e;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/m;
 
@@ -346,7 +368,7 @@
         }
     .end annotation
 
-    .line 79
+    .line 85
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -383,7 +405,7 @@
         }
     .end annotation
 
-    .line 88
+    .line 94
     new-instance v0, Lcom/airbnb/lottie/e$1;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/airbnb/lottie/e$1;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
@@ -409,7 +431,7 @@
         }
     .end annotation
 
-    .line 274
+    .line 292
     new-instance v0, Lcom/airbnb/lottie/e$6;
 
     invoke-direct {v0, p0, p1}, Lcom/airbnb/lottie/e$6;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
@@ -443,20 +465,20 @@
 
     goto :goto_0
 
-    .line 479
+    .line 519
     :cond_0
-    invoke-static {}, Lcom/airbnb/lottie/c/g;->a()Lcom/airbnb/lottie/c/g;
+    invoke-static {}, Lcom/airbnb/lottie/model/f;->a()Lcom/airbnb/lottie/model/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/airbnb/lottie/c/g;->a(Ljava/lang/String;)Lcom/airbnb/lottie/d;
+    invoke-virtual {v0, p0}, Lcom/airbnb/lottie/model/f;->a(Ljava/lang/String;)Lcom/airbnb/lottie/d;
 
     move-result-object v0
 
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 481
+    .line 521
     new-instance p0, Lcom/airbnb/lottie/m;
 
     new-instance p1, Lcom/airbnb/lottie/e$7;
@@ -470,7 +492,7 @@
     :cond_1
     if-eqz p0, :cond_2
 
-    .line 488
+    .line 528
     sget-object v0, Lcom/airbnb/lottie/e;->a:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -479,7 +501,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 489
+    .line 529
     sget-object p1, Lcom/airbnb/lottie/e;->a:Ljava/util/Map;
 
     invoke-interface {p1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -490,7 +512,7 @@
 
     return-object p0
 
-    .line 492
+    .line 532
     :cond_2
     new-instance v0, Lcom/airbnb/lottie/m;
 
@@ -498,21 +520,21 @@
 
     if-eqz p0, :cond_3
 
-    .line 494
+    .line 534
     new-instance p1, Lcom/airbnb/lottie/e$2;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/e$2;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/m;->a(Lcom/airbnb/lottie/h;)Lcom/airbnb/lottie/m;
 
-    .line 500
+    .line 540
     new-instance p1, Lcom/airbnb/lottie/e$3;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/e$3;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/m;->c(Lcom/airbnb/lottie/h;)Lcom/airbnb/lottie/m;
 
-    .line 506
+    .line 546
     sget-object p1, Lcom/airbnb/lottie/e;->a:Ljava/util/Map;
 
     invoke-interface {p1, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -521,10 +543,83 @@
     return-object v0
 .end method
 
+.method private static a(Lokio/BufferedSource;)Ljava/lang/Boolean;
+    .locals 6
+
+    const/4 v0, 0x0
+
+    .line 488
+    :try_start_0
+    invoke-interface {p0}, Lokio/BufferedSource;->peek()Lokio/BufferedSource;
+
+    move-result-object p0
+
+    .line 489
+    sget-object v1, Lcom/airbnb/lottie/e;->b:[B
+
+    array-length v2, v1
+
+    move v3, v0
+
+    :goto_0
+    if-ge v3, v2, :cond_1
+
+    aget-byte v4, v1, v3
+
+    .line 490
+    invoke-interface {p0}, Lokio/BufferedSource;->readByte()B
+
+    move-result v5
+
+    if-eq v5, v4, :cond_0
+
+    .line 491
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    .line 493
+    :cond_1
+    invoke-interface {p0}, Lokio/BufferedSource;->close()V
+
+    const/4 p0, 0x1
+
+    .line 494
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    const-string v1, "Failed to check zip file header"
+
+    .line 496
+    invoke-static {v1, p0}, Lcom/airbnb/lottie/c/d;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 497
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 .method static synthetic a()Ljava/util/Map;
     .locals 1
 
-    .line 46
+    .line 45
     sget-object v0, Lcom/airbnb/lottie/e;->a:Ljava/util/Map;
 
     return-object v0
@@ -533,7 +628,7 @@
 .method private static a(Landroid/content/Context;)Z
     .locals 1
 
-    .line 264
+    .line 282
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -574,7 +669,7 @@
         }
     .end annotation
 
-    .line 235
+    .line 249
     invoke-static {p0, p1}, Lcom/airbnb/lottie/e;->c(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
@@ -601,13 +696,53 @@
         }
     .end annotation
 
-    .line 250
+    .line 264
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lokio/Okio;->buffer(Lokio/Source;)Lokio/BufferedSource;
+
+    move-result-object p0
+
+    .line 265
+    invoke-static {p0}, Lcom/airbnb/lottie/e;->a(Lokio/BufferedSource;)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 266
+    new-instance p1, Ljava/util/zip/ZipInputStream;
+
+    invoke-interface {p0}, Lokio/BufferedSource;->inputStream()Ljava/io/InputStream;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
+
+    invoke-static {p1, p2}, Lcom/airbnb/lottie/e;->a(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/l;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 268
+    :cond_0
+    invoke-interface {p0}, Lokio/BufferedSource;->inputStream()Ljava/io/InputStream;
 
     move-result-object p0
 
@@ -622,7 +757,7 @@
     :catch_0
     move-exception p0
 
-    .line 252
+    .line 270
     new-instance p1, Lcom/airbnb/lottie/l;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/l;-><init>(Ljava/lang/Throwable;)V
@@ -646,7 +781,7 @@
 
     const/4 v0, 0x1
 
-    .line 287
+    .line 305
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/e;->a(Ljava/io/InputStream;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
 
     move-result-object p0
@@ -655,7 +790,7 @@
 .end method
 
 .method private static b(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/l;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -668,12 +803,12 @@
         }
     .end annotation
 
-    .line 412
+    .line 430
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 415
+    .line 433
     :try_start_0
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
@@ -684,29 +819,48 @@
     move-object v3, v2
 
     :goto_0
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    .line 417
+    .line 435
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "__MACOSX"
 
-    .line 418
+    .line 436
     invoke-virtual {v4, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 419
+    .line 437
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
     goto :goto_2
 
-    .line 420
+    .line 438
     :cond_0
+    invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "manifest.json"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    .line 439
+    invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->closeEntry()V
+
+    goto :goto_2
+
+    .line 440
+    :cond_1
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -717,9 +871,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 421
+    .line 441
     invoke-static {p0}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
 
     move-result-object v1
@@ -728,14 +882,14 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/airbnb/lottie/e/a/c;->a(Lokio/BufferedSource;)Lcom/airbnb/lottie/e/a/c;
+    invoke-static {v1}, Lcom/airbnb/lottie/parser/moshi/JsonReader;->a(Lokio/BufferedSource;)Lcom/airbnb/lottie/parser/moshi/JsonReader;
 
     move-result-object v1
 
     const/4 v3, 0x0
 
-    .line 422
-    invoke-static {v1, v2, v3}, Lcom/airbnb/lottie/e;->a(Lcom/airbnb/lottie/e/a/c;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
+    .line 442
+    invoke-static {v1, v2, v3}, Lcom/airbnb/lottie/e;->a(Lcom/airbnb/lottie/parser/moshi/JsonReader;Ljava/lang/String;Z)Lcom/airbnb/lottie/l;
 
     move-result-object v1
 
@@ -749,15 +903,15 @@
 
     goto :goto_2
 
-    :cond_1
+    :cond_2
     const-string v1, ".png"
 
-    .line 423
+    .line 443
     invoke-virtual {v4, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
     const-string v1, ".webp"
 
@@ -765,40 +919,40 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     goto :goto_1
 
-    .line 428
-    :cond_2
+    .line 448
+    :cond_3
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
     goto :goto_2
 
-    :cond_3
+    :cond_4
     :goto_1
     const-string v1, "/"
 
-    .line 424
+    .line 444
     invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 425
+    .line 445
     array-length v4, v1
 
     add-int/lit8 v4, v4, -0x1
 
     aget-object v1, v1, v4
 
-    .line 426
+    .line 446
     invoke-static {p0}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
     invoke-interface {v0, v1, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 431
+    .line 451
     :goto_2
     invoke-virtual {p0}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
 
@@ -808,10 +962,10 @@
 
     goto :goto_0
 
-    :cond_4
-    if-nez v3, :cond_5
+    :cond_5
+    if-nez v3, :cond_6
 
-    .line 439
+    .line 459
     new-instance p0, Lcom/airbnb/lottie/l;
 
     new-instance p1, Ljava/lang/IllegalArgumentException;
@@ -824,8 +978,8 @@
 
     return-object p0
 
-    .line 442
-    :cond_5
+    .line 462
+    :cond_6
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p0
@@ -834,13 +988,13 @@
 
     move-result-object p0
 
-    :cond_6
+    :cond_7
     :goto_3
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -848,7 +1002,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 443
+    .line 463
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -859,9 +1013,9 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    .line 445
+    .line 465
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -876,7 +1030,7 @@
 
     move-result v4
 
-    invoke-static {v0, v2, v4}, Lcom/airbnb/lottie/f/h;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {v0, v2, v4}, Lcom/airbnb/lottie/c/h;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -884,8 +1038,8 @@
 
     goto :goto_3
 
-    .line 450
-    :cond_7
+    .line 470
+    :cond_8
     invoke-virtual {v3}, Lcom/airbnb/lottie/d;->l()Ljava/util/Map;
 
     move-result-object p0
@@ -898,12 +1052,12 @@
 
     move-result-object p0
 
-    :cond_8
+    :cond_9
     invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -911,7 +1065,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 451
+    .line 471
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -922,9 +1076,9 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
-    .line 452
+    .line 472
     new-instance p0, Lcom/airbnb/lottie/l;
 
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -959,18 +1113,18 @@
 
     return-object p0
 
-    :cond_9
-    if-eqz p1, :cond_a
+    :cond_a
+    if-eqz p1, :cond_b
 
-    .line 457
-    invoke-static {}, Lcom/airbnb/lottie/c/g;->a()Lcom/airbnb/lottie/c/g;
+    .line 477
+    invoke-static {}, Lcom/airbnb/lottie/model/f;->a()Lcom/airbnb/lottie/model/f;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1, v3}, Lcom/airbnb/lottie/c/g;->a(Ljava/lang/String;Lcom/airbnb/lottie/d;)V
+    invoke-virtual {p0, p1, v3}, Lcom/airbnb/lottie/model/f;->a(Ljava/lang/String;Lcom/airbnb/lottie/d;)V
 
-    .line 459
-    :cond_a
+    .line 479
+    :cond_b
     new-instance p0, Lcom/airbnb/lottie/l;
 
     invoke-direct {p0, v3}, Lcom/airbnb/lottie/l;-><init>(Ljava/lang/Object;)V
@@ -980,7 +1134,7 @@
     :catch_0
     move-exception p0
 
-    .line 434
+    .line 454
     new-instance p1, Lcom/airbnb/lottie/l;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/l;-><init>(Ljava/lang/Throwable;)V
@@ -1002,7 +1156,7 @@
         }
     .end annotation
 
-    .line 127
+    .line 141
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1017,7 +1171,7 @@
 
     move-result-object v0
 
-    .line 128
+    .line 142
     invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/e;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/m;
 
     move-result-object p0
@@ -1040,17 +1194,54 @@
         }
     .end annotation
 
-    .line 142
+    .line 156
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 143
+    .line 157
     new-instance v0, Lcom/airbnb/lottie/e$4;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/airbnb/lottie/e$4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {p2, v0}, Lcom/airbnb/lottie/e;->a(Ljava/lang/String;Ljava/util/concurrent/Callable;)Lcom/airbnb/lottie/m;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/content/Context;Ljava/lang/String;)Lcom/airbnb/lottie/l;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/lang/String;",
+            ")",
+            "Lcom/airbnb/lottie/l<",
+            "Lcom/airbnb/lottie/d;",
+            ">;"
+        }
+    .end annotation
+
+    .line 176
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "asset_"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 177
+    invoke-static {p0, p1, v0}, Lcom/airbnb/lottie/e;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/l;
 
     move-result-object p0
 
@@ -1075,14 +1266,42 @@
     :try_start_0
     const-string v0, ".zip"
 
-    .line 178
+    .line 192
+    invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, ".lottie"
+
     invoke-virtual {p1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 179
+    goto :goto_0
+
+    .line 195
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object p0
+
+    invoke-static {p0, p2}, Lcom/airbnb/lottie/e;->b(Ljava/io/InputStream;Ljava/lang/String;)Lcom/airbnb/lottie/l;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 193
+    :cond_1
+    :goto_0
     new-instance v0, Ljava/util/zip/ZipInputStream;
 
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
@@ -1098,22 +1317,6 @@
     invoke-static {v0, p2}, Lcom/airbnb/lottie/e;->a(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/airbnb/lottie/l;
 
     move-result-object p0
-
-    return-object p0
-
-    .line 181
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-
-    move-result-object p0
-
-    invoke-static {p0, p2}, Lcom/airbnb/lottie/e;->b(Ljava/io/InputStream;Ljava/lang/String;)Lcom/airbnb/lottie/l;
-
-    move-result-object p0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1122,7 +1325,7 @@
     :catch_0
     move-exception p0
 
-    .line 183
+    .line 197
     new-instance p1, Lcom/airbnb/lottie/l;
 
     invoke-direct {p1, p0}, Lcom/airbnb/lottie/l;-><init>(Ljava/lang/Throwable;)V
@@ -1133,7 +1336,7 @@
 .method private static c(Landroid/content/Context;I)Ljava/lang/String;
     .locals 2
 
-    .line 257
+    .line 275
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

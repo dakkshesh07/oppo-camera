@@ -3,6 +3,11 @@
 .source "ScrimInsetsFrameLayout.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private drawBottomInsetForeground:Z
 
@@ -99,7 +104,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/internal/ScrimInsetsFrameLayout$1;-><init>(Lcom/google/android/material/internal/ScrimInsetsFrameLayout;)V
 
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     return-void
 .end method
@@ -318,7 +323,7 @@
     return-void
 .end method
 
-.method protected onInsetsChanged(Landroidx/core/g/ae;)V
+.method protected onInsetsChanged(Landroidx/core/f/ae;)V
     .locals 0
 
     return-void

@@ -1003,7 +1003,7 @@
 
     iget-object p2, p0, Lco/polarr/renderer/PolarrPainter;->n:[F
 
-    invoke-static {p3, p2}, La/a/a/e/o;->a([F[F)F
+    invoke-static {p3, p2}, La/a/b/e/o;->a([F[F)F
 
     move-result p2
 
@@ -1152,7 +1152,7 @@
     :cond_2
     iget-object p3, p0, Lco/polarr/renderer/PolarrPainter;->n:[F
 
-    invoke-static {p2, p3}, La/a/a/e/o;->a([F[F)F
+    invoke-static {p2, p3}, La/a/b/e/o;->a([F[F)F
 
     move-result p3
 

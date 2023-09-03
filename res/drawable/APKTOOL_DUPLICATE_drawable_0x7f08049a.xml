@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item camera:APKTOOL_DUPLICATE_attr_0x7f040545="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0704da" />
+            <stroke android:width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0704db" android:color="#254d4d4d" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0704da" />
+            <stroke android:width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0704db" android:color="@color/APKTOOL_DUPLICATE_color_0x7f06039f" />
+        </shape>
+    </item>
+</selector>

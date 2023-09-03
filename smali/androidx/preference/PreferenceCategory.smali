@@ -23,7 +23,7 @@
 
     const v1, 0x101008c
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -54,13 +54,13 @@
 
 
 # virtual methods
-.method public a(Landroidx/core/g/a/d;)V
+.method public a(Landroidx/core/f/a/d;)V
     .locals 7
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
     .line 109
-    invoke-super {p0, p1}, Landroidx/preference/PreferenceGroup;->a(Landroidx/core/g/a/d;)V
+    invoke-super {p0, p1}, Landroidx/preference/PreferenceGroup;->a(Landroidx/core/f/a/d;)V
 
     .line 110
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -70,7 +70,7 @@
     if-ge v0, v1, :cond_1
 
     .line 111
-    invoke-virtual {p1}, Landroidx/core/g/a/d;->u()Landroidx/core/g/a/d$c;
+    invoke-virtual {p1}, Landroidx/core/f/a/d;->u()Landroidx/core/f/a/d$c;
 
     move-result-object v0
 
@@ -80,39 +80,39 @@
 
     .line 117
     :cond_0
-    invoke-virtual {v0}, Landroidx/core/g/a/d$c;->c()I
+    invoke-virtual {v0}, Landroidx/core/f/a/d$c;->c()I
 
     move-result v1
 
     .line 118
-    invoke-virtual {v0}, Landroidx/core/g/a/d$c;->d()I
+    invoke-virtual {v0}, Landroidx/core/f/a/d$c;->d()I
 
     move-result v2
 
     .line 119
-    invoke-virtual {v0}, Landroidx/core/g/a/d$c;->a()I
+    invoke-virtual {v0}, Landroidx/core/f/a/d$c;->a()I
 
     move-result v3
 
     .line 120
-    invoke-virtual {v0}, Landroidx/core/g/a/d$c;->b()I
+    invoke-virtual {v0}, Landroidx/core/f/a/d$c;->b()I
 
     move-result v4
 
     const/4 v5, 0x1
 
     .line 122
-    invoke-virtual {v0}, Landroidx/core/g/a/d$c;->e()Z
+    invoke-virtual {v0}, Landroidx/core/f/a/d$c;->e()Z
 
     move-result v6
 
     .line 116
-    invoke-static/range {v1 .. v6}, Landroidx/core/g/a/d$c;->a(IIIIZZ)Landroidx/core/g/a/d$c;
+    invoke-static/range {v1 .. v6}, Landroidx/core/f/a/d$c;->a(IIIIZZ)Landroidx/core/f/a/d$c;
 
     move-result-object v0
 
     .line 123
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->b(Ljava/lang/Object;)V
 
     :cond_1
     return-void
@@ -194,7 +194,7 @@
 
     sget v2, Landroidx/preference/R$color;->preference_fallback_accent_color:I
 
-    invoke-static {v1, v2}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v1
 

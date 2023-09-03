@@ -55,10 +55,10 @@
         }
     .end annotation
 
-    .line 620
+    .line 581
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
-    .line 621
+    .line 582
     iput-object p1, p0, Lcom/google/protobuf/RepeatedFieldBuilderV3$MessageExternalList;->builder:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     return-void
@@ -74,7 +74,7 @@
         }
     .end annotation
 
-    .line 631
+    .line 592
     iget-object v0, p0, Lcom/google/protobuf/RepeatedFieldBuilderV3$MessageExternalList;->builder:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessage(I)Lcom/google/protobuf/AbstractMessage;
@@ -87,7 +87,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
-    .line 611
+    .line 573
     invoke-virtual {p0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3$MessageExternalList;->get(I)Lcom/google/protobuf/AbstractMessage;
 
     move-result-object p1
@@ -98,7 +98,7 @@
 .method incrementModCount()V
     .locals 1
 
-    .line 635
+    .line 596
     iget v0, p0, Lcom/google/protobuf/RepeatedFieldBuilderV3$MessageExternalList;->modCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -111,7 +111,7 @@
 .method public size()I
     .locals 1
 
-    .line 626
+    .line 587
     iget-object v0, p0, Lcom/google/protobuf/RepeatedFieldBuilderV3$MessageExternalList;->builder:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getCount()I

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001a">
+        <item>1-اي</item>
+        <item>2-اي</item>
+        <item>3-اي</item>
+        <item>4-اي</item>
+        <item>5-اي</item>
+        <item>6-اي</item>
+        <item>7-اي</item>
+        <item>8-اي</item>
+        <item>9-اي</item>
+        <item>10-اي</item>
+        <item>11-اي</item>
+        <item>12-اي</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f03001d">
+        <item>قاڭتار</item>
+        <item>اقپان</item>
+        <item>ناۋرىز</item>
+        <item>ءٴساۋىر</item>
+        <item>مامىر</item>
+        <item>ماۋسىم</item>
+        <item>شىلدە</item>
+        <item>تامىز</item>
+        <item>قىركۇيەك</item>
+        <item>قازان</item>
+        <item>قاراشا</item>
+        <item>جەلتوقسان</item>
+    </string-array>
+    <string-array name="APKTOOL_DUPLICATE_array_0x7f030023">
+        <item>تۇستەن بۇرىن</item>
+        <item>تۇستەن كەيىن</item>
+    </string-array>
+</resources>

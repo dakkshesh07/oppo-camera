@@ -62,7 +62,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 17980
+    .line 22004
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     const/4 v1, 0x0
@@ -75,7 +75,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->SPEED:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
-    .line 17988
+    .line 22012
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     const/4 v3, 0x2
@@ -86,7 +86,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->CODE_SIZE:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
-    .line 17996
+    .line 22020
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     const/4 v4, 0x3
@@ -97,7 +97,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->LITE_RUNTIME:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
-    .line 17971
+    .line 21995
     new-array v0, v4, [Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     sget-object v4, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->SPEED:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
@@ -114,14 +114,14 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->$VALUES:[Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
-    .line 18051
+    .line 22081
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode$1;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
-    .line 18071
+    .line 22101
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->values()[Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     move-result-object v0
@@ -139,10 +139,10 @@
         }
     .end annotation
 
-    .line 18084
+    .line 22114
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 18085
+    .line 22115
     iput p3, p0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->value:I
 
     return-void
@@ -167,19 +167,19 @@
 
     return-object p0
 
-    .line 18041
+    .line 22071
     :cond_0
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->LITE_RUNTIME:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     return-object p0
 
-    .line 18040
+    .line 22070
     :cond_1
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->CODE_SIZE:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     return-object p0
 
-    .line 18039
+    .line 22069
     :cond_2
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->SPEED:Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
@@ -189,7 +189,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 2
 
-    .line 18068
+    .line 22098
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileOptions;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -220,7 +220,7 @@
         }
     .end annotation
 
-    .line 18048
+    .line 22078
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -231,7 +231,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 18034
+    .line 22060
     invoke-static {p0}, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->forNumber(I)Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     move-result-object p0
@@ -242,7 +242,7 @@
 .method public static valueOf(Lcom/google/protobuf/Descriptors$EnumValueDescriptor;)Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
     .locals 2
 
-    .line 18075
+    .line 22105
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -253,7 +253,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 18079
+    .line 22109
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->VALUES:[Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getIndex()I
@@ -264,7 +264,7 @@
 
     return-object p0
 
-    .line 18076
+    .line 22106
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -278,7 +278,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
     .locals 1
 
-    .line 17971
+    .line 21995
     const-class v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -293,7 +293,7 @@
 .method public static values()[Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
     .locals 1
 
-    .line 17971
+    .line 21995
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->$VALUES:[Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->clone()Ljava/lang/Object;
@@ -310,7 +310,7 @@
 .method public final getDescriptorForType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 1
 
-    .line 18064
+    .line 22094
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -321,7 +321,7 @@
 .method public final getNumber()I
     .locals 1
 
-    .line 18026
+    .line 22050
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->value:I
 
     return v0
@@ -330,7 +330,7 @@
 .method public final getValueDescriptor()Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
     .locals 2
 
-    .line 18060
+    .line 22090
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FileOptions$OptimizeMode;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0

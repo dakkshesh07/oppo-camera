@@ -48,12 +48,12 @@
         }
     .end annotation
 
-    .line 519
+    .line 480
     iput-object p1, p0, Lcom/google/protobuf/Internal$MapAdapter$SetAdapter;->this$0:Lcom/google/protobuf/Internal$MapAdapter;
 
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
-    .line 520
+    .line 481
     iput-object p2, p0, Lcom/google/protobuf/Internal$MapAdapter$SetAdapter;->realSet:Ljava/util/Set;
 
     return-void
@@ -72,7 +72,7 @@
         }
     .end annotation
 
-    .line 525
+    .line 486
     new-instance v0, Lcom/google/protobuf/Internal$MapAdapter$IteratorAdapter;
 
     iget-object v1, p0, Lcom/google/protobuf/Internal$MapAdapter$SetAdapter;->this$0:Lcom/google/protobuf/Internal$MapAdapter;
@@ -91,7 +91,7 @@
 .method public size()I
     .locals 1
 
-    .line 530
+    .line 491
     iget-object v0, p0, Lcom/google/protobuf/Internal$MapAdapter$SetAdapter;->realSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I

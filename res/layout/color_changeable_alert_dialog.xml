@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ScrollView android:scrollbarThumbVertical="@drawable/color_scrollbar_handle_vertical" android:scrollbarStyle="insideOverlay" android:id="@id/changeable_dialog_message_container" android:paddingTop="@dimen/center_dialog_scroll_padding_top" android:paddingBottom="@dimen/center_dialog_scroll_padding_bottom" android:fadingEdgeLength="@dimen/center_dialog_scroll_fading_edge_length" android:layout_width="fill_parent" android:layout_height="wrap_content" android:overScrollMode="ifContentScrolls" android:requiresFadingEdge="vertical">
-        <com.color.support.widget.ColorChangeableDialogMessage android:textSize="@dimen/TD07" android:textColor="@color/color_alert_dialog_content_text_color" android:id="@id/changeable_dialog_message_view" android:paddingLeft="@dimen/color_alert_dialog_message_padding_left" android:paddingRight="@dimen/color_alert_dialog_message_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" />
-    </ScrollView>
-    <FrameLayout android:id="@id/changeable_dialog_custom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
-</FrameLayout>

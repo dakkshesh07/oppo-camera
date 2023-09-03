@@ -50,7 +50,7 @@
 
     const-string v1, "callbacks == null"
 
-    invoke-static {p0, v1}, Landroidx/core/f/f;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v1}, Landroidx/core/util/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 

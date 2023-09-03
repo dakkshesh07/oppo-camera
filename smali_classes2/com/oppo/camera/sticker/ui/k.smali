@@ -1,598 +1,118 @@
 .class public Lcom/oppo/camera/sticker/ui/k;
-.super Landroidx/viewpager/widget/a;
-.source "StickerPageAdapter.java"
+.super Landroid/widget/CursorAdapter;
+.source "StickerRecycleBinAdapter.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oppo/camera/sticker/ui/k$a;,
+        Lcom/oppo/camera/sticker/ui/k$b;
+    }
+.end annotation
 
 
 # instance fields
-.field private a:Ljava/util/ArrayList;
+.field private a:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;",
+            "Ljava/util/HashMap<",
+            "Ljava/lang/String;",
+            "Lcom/oppo/camera/sticker/data/StickerItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private b:I
-
-.field private c:I
-
-.field private d:Landroid/app/Activity;
-
-.field private e:Lcom/oppo/camera/sticker/ui/j;
-
-.field private f:Lcom/oppo/camera/sticker/ui/c;
+.field private b:Lcom/oppo/camera/sticker/ui/k$a;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;ILcom/oppo/camera/sticker/data/StickerItem;Lcom/oppo/camera/sticker/ui/j;Lcom/oppo/camera/sticker/ui/c;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
+    .locals 0
 
-    .line 31
-    invoke-direct {p0}, Landroidx/viewpager/widget/a;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 23
-    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    .line 24
-    iput v1, p0, Lcom/oppo/camera/sticker/ui/k;->b:I
+    .line 29
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/CursorAdapter;-><init>(Landroid/content/Context;Landroid/database/Cursor;Z)V
 
     .line 25
-    iput v1, p0, Lcom/oppo/camera/sticker/ui/k;->c:I
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    const/4 p1, 0x0
 
     .line 26
-    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->d:Landroid/app/Activity;
-
-    .line 27
-    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->e:Lcom/oppo/camera/sticker/ui/j;
-
-    .line 28
-    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->f:Lcom/oppo/camera/sticker/ui/c;
-
-    .line 32
-    iput p2, p0, Lcom/oppo/camera/sticker/ui/k;->b:I
-
-    .line 33
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->d:Landroid/app/Activity;
-
-    .line 34
-    iput-object p4, p0, Lcom/oppo/camera/sticker/ui/k;->e:Lcom/oppo/camera/sticker/ui/j;
-
-    .line 35
-    iput-object p5, p0, Lcom/oppo/camera/sticker/ui/k;->f:Lcom/oppo/camera/sticker/ui/c;
-
-    const/4 p1, 0x1
-
-    .line 36
-    invoke-virtual {p0, p3, p1}, Lcom/oppo/camera/sticker/ui/k;->a(Lcom/oppo/camera/sticker/data/StickerItem;Z)V
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->b:Lcom/oppo/camera/sticker/ui/k$a;
 
     return-void
 .end method
 
-.method private b(Ljava/lang/String;)Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-    .locals 2
-
-    .line 199
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    .line 203
-    :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->d:Landroid/app/Activity;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/a/h;->b(Landroid/content/Context;)Lcom/oppo/camera/ui/preview/a/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/preview/a/h;->b()Lcom/oppo/camera/ui/preview/a/h$c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/preview/a/h$c;->e(Ljava/lang/String;)I
-
-    move-result p1
-
-    .line 205
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge p1, v0, :cond_1
-
-    .line 206
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    return-object p1
-
-    :cond_1
-    :goto_0
-    return-object v1
-.end method
-
-
-# virtual methods
-.method public a()I
-    .locals 1
-
-    .line 83
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    .line 84
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+.method private g()Ljava/util/List;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Lcom/oppo/camera/sticker/data/StickerItem;",
+            ">;"
+        }
+    .end annotation
 
-    .line 97
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
+    .line 174
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v0
+    .line 175
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCursor()Landroid/database/Cursor;
 
-    check-cast v0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 100
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
+    .line 177
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-result v1
+    move-result v2
 
-    const/4 v2, -0x1
+    if-eqz v2, :cond_1
 
-    if-ne v1, v2, :cond_0
-
-    .line 101
-    iget-object v1, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/View;
-
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    .line 104
+    .line 179
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->e:Lcom/oppo/camera/sticker/ui/j;
+    invoke-static {v1}, Lcom/oppo/camera/sticker/g;->a(Landroid/database/Cursor;)Lcom/oppo/camera/sticker/data/StickerItem;
 
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->setStickerMenuListener(Lcom/oppo/camera/sticker/ui/j;)V
+    move-result-object v2
 
-    .line 105
-    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->f:Lcom/oppo/camera/sticker/ui/c;
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->setImageDownloader(Lcom/oppo/camera/sticker/ui/c;)V
+    .line 180
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
 
     :cond_1
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
-    .locals 1
 
-    .line 113
-    iget-object p3, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
+# virtual methods
+.method public a()V
+    .locals 4
 
-    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 60
+    invoke-direct {p0}, Lcom/oppo/camera/sticker/ui/k;->g()Ljava/util/List;
 
-    move-result-object p2
+    move-result-object v0
 
-    check-cast p2, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    if-eqz p2, :cond_0
-
-    .line 115
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
-
-    move-result p3
-
-    const/4 v0, -0x1
-
-    if-eq p3, v0, :cond_0
-
-    .line 116
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public a(Lcom/oppo/camera/sticker/data/StickerItem;Z)V
-    .locals 10
-
-    const-string v0, "makeGridView"
-
-    .line 145
-    invoke-static {v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;)V
-
-    .line 147
-    iget-object v1, p0, Lcom/oppo/camera/sticker/ui/k;->d:Landroid/app/Activity;
-
-    .line 148
-    invoke-static {v1}, Lcom/oppo/camera/ui/preview/a/h;->b(Landroid/content/Context;)Lcom/oppo/camera/ui/preview/a/h;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/a/h;->b()Lcom/oppo/camera/ui/preview/a/h$c;
-
-    move-result-object v1
-
-    .line 149
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/preview/a/h$c;->b()Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    .line 151
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
-
-    move-result v3
-
-    if-lez v3, :cond_6
-
-    .line 152
-    iget-object v3, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-nez v3, :cond_0
-
-    .line 153
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v3, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    .line 156
-    :cond_0
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/oppo/camera/ui/preview/a/h$a;
-
-    .line 157
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    .line 159
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/preview/a/h$a;->a()Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_1
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lcom/oppo/camera/sticker/data/StickerItem;
-
-    .line 160
-    new-instance v7, Ljava/util/HashMap;
-
-    invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
-
-    .line 161
-    invoke-virtual {v6}, Lcom/oppo/camera/sticker/data/StickerItem;->getDownloadState()I
-
-    move-result v8
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const-string v9, "state_icon"
-
-    invoke-interface {v7, v9, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v8, "sticker_item"
-
-    .line 162
-    invoke-interface {v7, v8, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 163
-    invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    .line 166
-    :cond_1
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/preview/a/h$a;->b()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-direct {p0, v5}, Lcom/oppo/camera/sticker/ui/k;->b(Ljava/lang/String;)Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    if-nez v5, :cond_3
-
-    .line 169
-    new-instance v5, Landroid/widget/RelativeLayout$LayoutParams;
-
-    const/4 v7, -0x1
-
-    invoke-direct {v5, v7, v7}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
-
-    .line 172
-    iget-object v7, p0, Lcom/oppo/camera/sticker/ui/k;->d:Landroid/app/Activity;
-
-    invoke-static {v7}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v7
-
-    const v8, 0x7f0c00ef
-
-    .line 173
-    invoke-virtual {v7, v8, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v7
-
-    check-cast v7, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    .line 174
-    invoke-virtual {v7, v5}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 176
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/preview/a/h$a;->b()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v1, v5}, Lcom/oppo/camera/ui/preview/a/h$c;->e(Ljava/lang/String;)I
-
-    move-result v5
-
-    .line 178
-    iget-object v8, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
-
-    move-result v8
-
-    if-ge v5, v8, :cond_2
-
-    .line 179
-    iget-object v8, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v8, v5, v7}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    goto :goto_2
-
-    .line 181
-    :cond_2
-    iget-object v5, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_2
-    move-object v5, v7
-
-    :cond_3
-    if-eqz p1, :cond_4
-
-    .line 185
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->getCategoryId()Ljava/lang/String;
-
-    move-result-object v6
-
-    .line 186
-    :cond_4
-    iget v7, p0, Lcom/oppo/camera/sticker/ui/k;->b:I
-
-    .line 187
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/preview/a/h$a;->b()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    .line 186
-    invoke-virtual {v5, v4, v7, v3}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Ljava/util/List;IZ)V
-
-    goto/16 :goto_0
-
-    :cond_5
-    if-eqz p2, :cond_6
-
-    .line 191
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->c()V
-
-    .line 195
-    :cond_6
-    invoke-static {v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 1
-
-    .line 121
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 122
-    invoke-direct {p0, p1}, Lcom/oppo/camera/sticker/ui/k;->b(Ljava/lang/String;)Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 125
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;IILandroid/graphics/drawable/Drawable;ZLcom/oppo/camera/sticker/data/StickerItem;)V
-    .locals 9
-
-    .line 67
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 68
-    invoke-direct {p0, p1}, Lcom/oppo/camera/sticker/ui/k;->b(Ljava/lang/String;)Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    move-result-object v3
-
-    .line 70
-    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->d:Landroid/app/Activity;
-
-    if-eqz p1, :cond_0
-
-    if-eqz v3, :cond_0
-
-    .line 71
-    new-instance v0, Lcom/oppo/camera/sticker/ui/k$1;
-
-    move-object v1, v0
-
-    move-object v2, p0
-
-    move v4, p2
-
-    move v5, p3
-
-    move-object v6, p4
-
-    move v7, p5
-
-    move-object v8, p6
-
-    invoke-direct/range {v1 .. v8}, Lcom/oppo/camera/sticker/ui/k$1;-><init>(Lcom/oppo/camera/sticker/ui/k;Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;IILandroid/graphics/drawable/Drawable;ZLcom/oppo/camera/sticker/data/StickerItem;)V
-
-    invoke-virtual {p1, v0}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;Z)V
-    .locals 1
-
-    .line 131
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 132
-    invoke-direct {p0, p1}, Lcom/oppo/camera/sticker/ui/k;->b(Ljava/lang/String;)Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 135
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a()V
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    .line 140
-    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->c()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public a(Z)V
-    .locals 2
-
-    .line 58
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    .line 59
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    .line 62
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -607,87 +127,496 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
+    check-cast v1, Lcom/oppo/camera/sticker/data/StickerItem;
 
-    .line 60
-    invoke-virtual {v1, p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->setGridViewEnable(Z)V
+    .line 63
+    iget-object v2, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
 
-    goto :goto_0
+    invoke-virtual {v1}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v3
 
-.method public a(Landroid/view/View;Ljava/lang/Object;)Z
-    .locals 0
-
-    if-ne p1, p2, :cond_0
-
-    const/4 p1, 0x1
+    invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
+    .line 66
     :cond_0
-    const/4 p1, 0x0
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->b:Lcom/oppo/camera/sticker/ui/k$a;
 
-    :goto_0
-    return p1
-.end method
+    if-eqz v0, :cond_1
 
-.method public c(I)V
-    .locals 0
+    .line 67
+    invoke-interface {v0, p0}, Lcom/oppo/camera/sticker/ui/k$a;->a(Lcom/oppo/camera/sticker/ui/k;)V
 
-    .line 40
-    iput p1, p0, Lcom/oppo/camera/sticker/ui/k;->c:I
+    .line 70
+    :cond_1
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->notifyDataSetChanged()V
 
     return-void
 .end method
 
-.method public d()I
+.method public a(Lcom/oppo/camera/sticker/data/StickerItem;)V
     .locals 1
 
-    .line 44
-    iget v0, p0, Lcom/oppo/camera/sticker/ui/k;->c:I
+    if-eqz p1, :cond_2
 
-    return v0
-.end method
+    .line 129
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
 
-.method public d(I)V
-    .locals 2
+    move-result-object v0
 
-    .line 48
-    iput p1, p0, Lcom/oppo/camera/sticker/ui/k;->b:I
-
-    .line 50
-    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/ArrayList;
-
-    if-eqz p1, :cond_0
-
-    .line 51
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    goto :goto_0
+
+    .line 133
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    .line 134
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oppo/camera/sticker/data/StickerItem;
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "StickerRecycleBinAdapter"
+
+    const-string v0, "onStickerDelete, remove a selected sticker item!"
+
+    .line 137
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 139
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->b:Lcom/oppo/camera/sticker/ui/k$a;
+
+    if-eqz p1, :cond_1
+
+    .line 140
+    invoke-interface {p1, p0}, Lcom/oppo/camera/sticker/ui/k$a;->a(Lcom/oppo/camera/sticker/ui/k;)V
+
+    .line 145
+    :cond_1
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->notifyDataSetChanged()V
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public a(Lcom/oppo/camera/sticker/ui/k$a;)V
+    .locals 0
+
+    .line 170
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->b:Lcom/oppo/camera/sticker/ui/k$a;
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 1
+
+    .line 74
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+
+    .line 76
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->b:Lcom/oppo/camera/sticker/ui/k$a;
+
+    if-eqz v0, :cond_0
+
+    .line 77
+    invoke-interface {v0, p0}, Lcom/oppo/camera/sticker/ui/k$a;->a(Lcom/oppo/camera/sticker/ui/k;)V
+
+    .line 80
+    :cond_0
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->notifyDataSetChanged()V
+
+    return-void
+.end method
+
+.method public bindView(Landroid/view/View;Landroid/content/Context;Landroid/database/Cursor;)V
+    .locals 2
+
+    .line 43
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/oppo/camera/sticker/ui/k$b;
+
+    .line 44
+    invoke-static {p3}, Lcom/oppo/camera/sticker/g;->a(Landroid/database/Cursor;)Lcom/oppo/camera/sticker/data/StickerItem;
+
+    move-result-object p3
+
+    .line 46
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "bindView, item: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
+    const-string v1, "StickerRecycleBinAdapter"
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 48
+    invoke-static {p2}, Lcom/oppo/camera/sticker/ui/k$b;->a(Lcom/oppo/camera/sticker/ui/k$b;)Lcom/oppo/camera/sticker/ui/StickerRecycleBinThumbnailView;
+
+    move-result-object v0
+
+    invoke-virtual {p3}, Lcom/oppo/camera/sticker/data/StickerItem;->getThumbnailFileUri()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/ui/StickerRecycleBinThumbnailView;->setNormalDrawableUri(Ljava/lang/String;)V
+
+    const v0, 0x7f0902bd
+
+    .line 49
+    invoke-virtual {p1, v0, p3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    .line 50
+    invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 52
-    iget v1, p0, Lcom/oppo/camera/sticker/ui/k;->b:I
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->setOrientation(I)V
+    invoke-virtual {p3}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-virtual {p1, p3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 53
+    invoke-static {p2}, Lcom/oppo/camera/sticker/ui/k$b;->b(Lcom/oppo/camera/sticker/ui/k$b;)Landroid/widget/CheckBox;
+
+    move-result-object p1
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    goto :goto_0
+
+    .line 55
+    :cond_0
+    invoke-static {p2}, Lcom/oppo/camera/sticker/ui/k$b;->b(Lcom/oppo/camera/sticker/ui/k$b;)Landroid/widget/CheckBox;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    :goto_0
+    return-void
+.end method
+
+.method public c()Z
+    .locals 2
+
+    .line 84
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCount()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCount()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v1}, Ljava/util/HashMap;->size()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
 
     goto :goto_0
 
     :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method public d()I
+    .locals 1
+
+    .line 88
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public e()Ljava/util/Map;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Map<",
+            "Ljava/lang/String;",
+            "Lcom/oppo/camera/sticker/data/StickerItem;",
+            ">;"
+        }
+    .end annotation
+
+    .line 92
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    return-object v0
+.end method
+
+.method public f()V
+    .locals 1
+
+    .line 121
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
+
+    .line 123
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCursor()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 124
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCursor()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public getCount()I
+    .locals 3
+
+    .line 97
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCursor()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 99
+    invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    .line 104
+    :cond_0
+    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
+
+    move-result v0
+
+    return v0
+
+    .line 100
+    :cond_1
+    :goto_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "getCount, cursor is null or closed! cursor: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "StickerRecycleBinAdapter"
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getItem(I)Ljava/lang/Object;
+    .locals 2
+
+    .line 110
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->getCursor()Landroid/database/Cursor;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 112
+    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
+
+    move-result v1
+
+    if-ge p1, v1, :cond_0
+
+    .line 113
+    invoke-interface {v0, p1}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    .line 114
+    invoke-static {v0}, Lcom/oppo/camera/sticker/g;->a(Landroid/database/Cursor;)Lcom/oppo/camera/sticker/data/StickerItem;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public newView(Landroid/content/Context;Landroid/database/Cursor;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 1
+
+    .line 34
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object p1
+
+    const p2, 0x7f0c009c
+
+    const/4 v0, 0x0
+
+    .line 35
+    invoke-virtual {p1, p2, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/RelativeLayout;
+
+    .line 36
+    new-instance p2, Lcom/oppo/camera/sticker/ui/k$b;
+
+    invoke-direct {p2, p1}, Lcom/oppo/camera/sticker/ui/k$b;-><init>(Landroid/view/View;)V
+
+    .line 37
+    invoke-virtual {p1, p2}, Landroid/widget/RelativeLayout;->setTag(Ljava/lang/Object;)V
+
+    return-object p1
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 2
+
+    const v0, 0x7f0902bd
+
+    .line 150
+    invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 152
+    instance-of v0, p1, Lcom/oppo/camera/sticker/data/StickerItem;
+
+    if-eqz v0, :cond_2
+
+    .line 153
+    check-cast p1, Lcom/oppo/camera/sticker/data/StickerItem;
+
+    .line 155
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 156
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 158
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/k;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 161
+    :goto_0
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/k;->b:Lcom/oppo/camera/sticker/ui/k$a;
+
+    if-eqz p1, :cond_1
+
+    .line 162
+    invoke-interface {p1, p0}, Lcom/oppo/camera/sticker/ui/k$a;->a(Lcom/oppo/camera/sticker/ui/k;)V
+
+    .line 165
+    :cond_1
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/k;->notifyDataSetChanged()V
+
+    :cond_2
     return-void
 .end method

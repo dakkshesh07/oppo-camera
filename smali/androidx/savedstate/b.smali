@@ -57,16 +57,16 @@
     .line 56
     iget-object v0, p0, Landroidx/savedstate/b;->a:Landroidx/savedstate/c;
 
-    invoke-interface {v0}, Landroidx/savedstate/c;->getLifecycle()Landroidx/lifecycle/e;
+    invoke-interface {v0}, Landroidx/savedstate/c;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
     .line 57
-    invoke-virtual {v0}, Landroidx/lifecycle/e;->a()Landroidx/lifecycle/e$b;
+    invoke-virtual {v0}, Landroidx/lifecycle/Lifecycle;->a()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v1
 
-    sget-object v2, Landroidx/lifecycle/e$b;->INITIALIZED:Landroidx/lifecycle/e$b;
+    sget-object v2, Landroidx/lifecycle/Lifecycle$State;->INITIALIZED:Landroidx/lifecycle/Lifecycle$State;
 
     if-ne v1, v2, :cond_0
 
@@ -77,12 +77,12 @@
 
     invoke-direct {v1, v2}, Landroidx/savedstate/Recreator;-><init>(Landroidx/savedstate/c;)V
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/e;->a(Landroidx/lifecycle/g;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/f;)V
 
     .line 62
     iget-object v1, p0, Landroidx/savedstate/b;->b:Landroidx/savedstate/a;
 
-    invoke-virtual {v1, v0, p1}, Landroidx/savedstate/a;->a(Landroidx/lifecycle/e;Landroid/os/Bundle;)V
+    invoke-virtual {v1, v0, p1}, Landroidx/savedstate/a;->a(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
 
     return-void
 

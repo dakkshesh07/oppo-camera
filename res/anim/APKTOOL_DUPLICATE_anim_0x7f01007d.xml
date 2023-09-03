@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:interpolator="@anim/APKTOOL_DUPLICATE_anim_0x7f01002d" android:duration="330" android:fromAlpha="0.0" android:toAlpha="1.0" />
+    <translate android:interpolator="@anim/APKTOOL_DUPLICATE_anim_0x7f0100b1" android:duration="330" android:fromXDelta="@integer/APKTOOL_DUPLICATE_integer_0x7f0a001c" android:toXDelta="0.0" />
+</set>

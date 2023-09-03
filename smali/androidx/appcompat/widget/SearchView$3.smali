@@ -41,20 +41,20 @@
     .line 193
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$3;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->g:Landroidx/c/a/a;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->g:Landroidx/b/a/a;
 
-    instance-of v0, v0, Landroidx/appcompat/widget/am;
+    instance-of v0, v0, Landroidx/appcompat/widget/al;
 
     if-eqz v0, :cond_0
 
     .line 194
     iget-object v0, p0, Landroidx/appcompat/widget/SearchView$3;->a:Landroidx/appcompat/widget/SearchView;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->g:Landroidx/c/a/a;
+    iget-object v0, v0, Landroidx/appcompat/widget/SearchView;->g:Landroidx/b/a/a;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroidx/c/a/a;->a(Landroid/database/Cursor;)V
+    invoke-virtual {v0, v1}, Landroidx/b/a/a;->a(Landroid/database/Cursor;)V
 
     :cond_0
     return-void

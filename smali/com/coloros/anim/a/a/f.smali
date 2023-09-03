@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field private final f:Lcom/coloros/anim/c/b/a;
+.field private final f:Lcom/coloros/anim/model/content/a;
 
 .field private g:Lcom/coloros/anim/a/a/b;
 
@@ -45,7 +45,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/c/a;Lcom/coloros/anim/c/b/a;)V
+.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/layer/a;Lcom/coloros/anim/model/content/a;)V
     .locals 1
 
     .line 35
@@ -66,7 +66,7 @@
     iput-object v0, p0, Lcom/coloros/anim/a/a/f;->g:Lcom/coloros/anim/a/a/b;
 
     .line 36
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/a;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/a;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -76,39 +76,39 @@
     iput-object p1, p0, Lcom/coloros/anim/a/a/f;->c:Lcom/coloros/anim/b;
 
     .line 38
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/a;->c()Lcom/coloros/anim/c/a/f;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/a;->c()Lcom/coloros/anim/model/a/f;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/f;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/f;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/f;->d:Lcom/coloros/anim/a/b/a;
 
     .line 39
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/a;->b()Lcom/coloros/anim/c/a/m;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/a;->b()Lcom/coloros/anim/model/a/m;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/coloros/anim/c/a/m;->a()Lcom/coloros/anim/a/b/a;
+    invoke-interface {p1}, Lcom/coloros/anim/model/a/m;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/f;->e:Lcom/coloros/anim/a/b/a;
 
     .line 40
-    iput-object p3, p0, Lcom/coloros/anim/a/a/f;->f:Lcom/coloros/anim/c/b/a;
+    iput-object p3, p0, Lcom/coloros/anim/a/a/f;->f:Lcom/coloros/anim/model/content/a;
 
     .line 42
     iget-object p1, p0, Lcom/coloros/anim/a/a/f;->d:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 43
     iget-object p1, p0, Lcom/coloros/anim/a/a/f;->e:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 45
     iget-object p1, p0, Lcom/coloros/anim/a/a/f;->d:Lcom/coloros/anim/a/b/a;
@@ -150,35 +150,35 @@
     return-void
 .end method
 
-.method public a(Lcom/coloros/anim/c/f;ILjava/util/List;Lcom/coloros/anim/c/f;)V
+.method public a(Lcom/coloros/anim/model/e;ILjava/util/List;Lcom/coloros/anim/model/e;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             "I",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             ">;",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             ")V"
         }
     .end annotation
 
     .line 126
-    invoke-static {p1, p2, p3, p4, p0}, Lcom/coloros/anim/f/f;->a(Lcom/coloros/anim/c/f;ILjava/util/List;Lcom/coloros/anim/c/f;Lcom/coloros/anim/a/a/k;)V
+    invoke-static {p1, p2, p3, p4, p0}, Lcom/coloros/anim/d/f;->a(Lcom/coloros/anim/model/e;ILjava/util/List;Lcom/coloros/anim/model/e;Lcom/coloros/anim/a/a/k;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+.method public a(Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TT;>;)V"
         }
     .end annotation
@@ -191,7 +191,7 @@
     .line 133
     iget-object p1, p0, Lcom/coloros/anim/a/a/f;->d:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -204,7 +204,7 @@
     .line 135
     iget-object p1, p0, Lcom/coloros/anim/a/a/f;->e:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     :cond_1
     :goto_0
@@ -249,11 +249,11 @@
 
     check-cast v0, Lcom/coloros/anim/a/a/s;
 
-    invoke-virtual {v0}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/c/b/q$a;
+    invoke-virtual {v0}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     move-result-object v1
 
-    sget-object v2, Lcom/coloros/anim/c/b/q$a;->SIMULTANEOUSLY:Lcom/coloros/anim/c/b/q$a;
+    sget-object v2, Lcom/coloros/anim/model/content/ShapeTrimPath$Type;->SIMULTANEOUSLY:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     if-ne v1, v2, :cond_0
 
@@ -305,9 +305,9 @@
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
     .line 84
-    iget-object v1, v0, Lcom/coloros/anim/a/a/f;->f:Lcom/coloros/anim/c/b/a;
+    iget-object v1, v0, Lcom/coloros/anim/a/a/f;->f:Lcom/coloros/anim/model/content/a;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/b/a;->e()Z
+    invoke-virtual {v1}, Lcom/coloros/anim/model/content/a;->e()Z
 
     move-result v1
 
@@ -357,9 +357,9 @@
     invoke-virtual {v5}, Landroid/graphics/Path;->reset()V
 
     .line 98
-    iget-object v5, v0, Lcom/coloros/anim/a/a/f;->f:Lcom/coloros/anim/c/b/a;
+    iget-object v5, v0, Lcom/coloros/anim/a/a/f;->f:Lcom/coloros/anim/model/content/a;
 
-    invoke-virtual {v5}, Lcom/coloros/anim/c/b/a;->d()Z
+    invoke-virtual {v5}, Lcom/coloros/anim/model/content/a;->d()Z
 
     move-result v5
 

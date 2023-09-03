@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.preview.HyperLapseFocusView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090166" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07081a" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070818" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803cd"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -22,10 +22,10 @@
 .method public constructor <init>(IILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1181
+    .line 1340
     invoke-direct {p0, p1, p2, p4}, Lcom/google/protobuf/TextFormat$ParseException;-><init>(IILjava/lang/String;)V
 
-    .line 1182
+    .line 1341
     iput-object p3, p0, Lcom/google/protobuf/TextFormat$UnknownFieldParseException;->unknownField:Ljava/lang/String;
 
     return-void
@@ -38,7 +38,7 @@
 
     const-string v1, ""
 
-    .line 1167
+    .line 1328
     invoke-direct {p0, v0, v0, v1, p1}, Lcom/google/protobuf/TextFormat$UnknownFieldParseException;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -49,7 +49,7 @@
 .method public getUnknownField()Ljava/lang/String;
     .locals 1
 
-    .line 1190
+    .line 1348
     iget-object v0, p0, Lcom/google/protobuf/TextFormat$UnknownFieldParseException;->unknownField:Ljava/lang/String;
 
     return-object v0

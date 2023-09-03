@@ -6,6 +6,11 @@
 .implements Landroidx/appcompat/view/menu/o;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1

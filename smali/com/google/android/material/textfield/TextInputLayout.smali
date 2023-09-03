@@ -523,14 +523,14 @@
     move/from16 v4, p3
 
     .line 459
-    invoke-static/range {v1 .. v6}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/as;
+    invoke-static/range {v1 .. v6}, Lcom/google/android/material/internal/ThemeEnforcement;->obtainTintedStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroidx/appcompat/widget/ar;
 
     move-result-object v1
 
     .line 471
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_hintEnabled:I
 
-    invoke-virtual {v1, v2, v11}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v2, v11}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v2
 
@@ -539,7 +539,7 @@
     .line 472
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_android_hint:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -548,7 +548,7 @@
     .line 473
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_hintAnimationEnabled:I
 
-    invoke-virtual {v1, v2, v11}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v2, v11}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v2
 
@@ -586,7 +586,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_boxCollapsedPaddingTop:I
 
     .line 483
-    invoke-virtual {v1, v2, v9}, Landroidx/appcompat/widget/as;->d(II)I
+    invoke-virtual {v1, v2, v9}, Landroidx/appcompat/widget/ar;->d(II)I
 
     move-result v2
 
@@ -608,7 +608,7 @@
     move-result v3
 
     .line 486
-    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v2
 
@@ -630,7 +630,7 @@
     move-result v3
 
     .line 492
-    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v2
 
@@ -647,7 +647,7 @@
     const/high16 v3, -0x40800000    # -1.0f
 
     .line 500
-    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/as;->b(IF)F
+    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/ar;->b(IF)F
 
     move-result v2
 
@@ -655,7 +655,7 @@
     sget v4, Lcom/google/android/material/R$styleable;->TextInputLayout_boxCornerRadiusTopEnd:I
 
     .line 502
-    invoke-virtual {v1, v4, v3}, Landroidx/appcompat/widget/as;->b(IF)F
+    invoke-virtual {v1, v4, v3}, Landroidx/appcompat/widget/ar;->b(IF)F
 
     move-result v4
 
@@ -663,7 +663,7 @@
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_boxCornerRadiusBottomEnd:I
 
     .line 504
-    invoke-virtual {v1, v5, v3}, Landroidx/appcompat/widget/as;->b(IF)F
+    invoke-virtual {v1, v5, v3}, Landroidx/appcompat/widget/ar;->b(IF)F
 
     move-result v5
 
@@ -671,7 +671,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_boxCornerRadiusBottomStart:I
 
     .line 506
-    invoke-virtual {v1, v6, v3}, Landroidx/appcompat/widget/as;->b(IF)F
+    invoke-virtual {v1, v6, v3}, Landroidx/appcompat/widget/ar;->b(IF)F
 
     move-result v3
 
@@ -727,7 +727,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_boxBackgroundColor:I
 
     .line 523
-    invoke-static {v10, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -854,7 +854,7 @@
     :goto_0
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_android_textColorHint:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -864,7 +864,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_android_textColorHint:I
 
     .line 559
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -877,14 +877,14 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_boxStrokeColor:I
 
     .line 563
-    invoke-static {v10, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
     .line 565
     sget v3, Lcom/google/android/material/R$styleable;->TextInputLayout_boxStrokeColor:I
 
-    invoke-virtual {v1, v3, v9}, Landroidx/appcompat/widget/as;->b(II)I
+    invoke-virtual {v1, v3, v9}, Landroidx/appcompat/widget/ar;->b(II)I
 
     move-result v3
 
@@ -894,7 +894,7 @@
     sget v3, Lcom/google/android/material/R$color;->mtrl_textinput_default_box_stroke_color:I
 
     .line 567
-    invoke-static {v10, v3}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v10, v3}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -903,7 +903,7 @@
     .line 568
     sget v3, Lcom/google/android/material/R$color;->mtrl_textinput_disabled_color:I
 
-    invoke-static {v10, v3}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v10, v3}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -913,7 +913,7 @@
     sget v3, Lcom/google/android/material/R$color;->mtrl_textinput_hovered_box_stroke_color:I
 
     .line 570
-    invoke-static {v10, v3}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v10, v3}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -928,7 +928,7 @@
     :cond_7
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_boxStrokeErrorColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -938,7 +938,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_boxStrokeErrorColor:I
 
     .line 577
-    invoke-static {v10, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v2}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -949,7 +949,7 @@
     :cond_8
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_hintTextAppearance:I
 
-    invoke-virtual {v1, v2, v13}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v2, v13}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v2
 
@@ -958,7 +958,7 @@
     .line 583
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_hintTextAppearance:I
 
-    invoke-virtual {v1, v2, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v2, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v2
 
@@ -969,7 +969,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_errorTextAppearance:I
 
     .line 587
-    invoke-virtual {v1, v2, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v2, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v2
 
@@ -977,14 +977,14 @@
     sget v3, Lcom/google/android/material/R$styleable;->TextInputLayout_errorContentDescription:I
 
     .line 589
-    invoke-virtual {v1, v3}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v3}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v3
 
     .line 590
     sget v4, Lcom/google/android/material/R$styleable;->TextInputLayout_errorEnabled:I
 
-    invoke-virtual {v1, v4, v9}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v4, v9}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v4
 
@@ -1020,7 +1020,7 @@
     .line 597
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_errorIconDrawable:I
 
-    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v5
 
@@ -1029,7 +1029,7 @@
     .line 598
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_errorIconDrawable:I
 
-    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -1039,7 +1039,7 @@
     :cond_a
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_errorIconTint:I
 
-    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v5
 
@@ -1049,7 +1049,7 @@
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_errorIconTint:I
 
     .line 602
-    invoke-static {v10, v1, v5}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v5}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v5
 
@@ -1060,7 +1060,7 @@
     :cond_b
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_errorIconTintMode:I
 
-    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v5}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v5
 
@@ -1072,7 +1072,7 @@
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_errorIconTintMode:I
 
     .line 608
-    invoke-virtual {v1, v5, v13}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v5, v13}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v5
 
@@ -1105,7 +1105,7 @@
     .line 612
     iget-object v5, v0, Lcom/google/android/material/textfield/TextInputLayout;->errorIconView:Lcom/google/android/material/internal/CheckableImageButton;
 
-    invoke-static {v5, v14}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v5, v14}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 614
     iget-object v5, v0, Lcom/google/android/material/textfield/TextInputLayout;->errorIconView:Lcom/google/android/material/internal/CheckableImageButton;
@@ -1126,7 +1126,7 @@
     sget v5, Lcom/google/android/material/R$styleable;->TextInputLayout_helperTextTextAppearance:I
 
     .line 619
-    invoke-virtual {v1, v5, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v5, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v5
 
@@ -1134,14 +1134,14 @@
     sget v8, Lcom/google/android/material/R$styleable;->TextInputLayout_helperTextEnabled:I
 
     .line 621
-    invoke-virtual {v1, v8, v9}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v8, v9}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v8
 
     .line 622
     sget v12, Lcom/google/android/material/R$styleable;->TextInputLayout_helperText:I
 
-    invoke-virtual {v1, v12}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v12}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v12
 
@@ -1149,14 +1149,14 @@
     sget v15, Lcom/google/android/material/R$styleable;->TextInputLayout_placeholderTextAppearance:I
 
     .line 625
-    invoke-virtual {v1, v15, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v15, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v15
 
     .line 626
     sget v14, Lcom/google/android/material/R$styleable;->TextInputLayout_placeholderText:I
 
-    invoke-virtual {v1, v14}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v14}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v14
 
@@ -1164,14 +1164,14 @@
     sget v11, Lcom/google/android/material/R$styleable;->TextInputLayout_prefixTextAppearance:I
 
     .line 629
-    invoke-virtual {v1, v11, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v11, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v11
 
     .line 630
     sget v7, Lcom/google/android/material/R$styleable;->TextInputLayout_prefixText:I
 
-    invoke-virtual {v1, v7}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v7}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v7
 
@@ -1179,14 +1179,14 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_suffixTextAppearance:I
 
     .line 633
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v6
 
     .line 634
     sget v13, Lcom/google/android/material/R$styleable;->TextInputLayout_suffixText:I
 
-    invoke-virtual {v1, v13}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v13}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v13
 
@@ -1195,7 +1195,7 @@
     .line 636
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_counterEnabled:I
 
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v6
 
@@ -1206,7 +1206,7 @@
 
     const/4 v6, -0x1
 
-    invoke-virtual {v1, v9, v6}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v9, v6}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v9
 
@@ -1217,7 +1217,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v6
 
@@ -1227,7 +1227,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_counterOverflowTextAppearance:I
 
     .line 640
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v6
 
@@ -1277,7 +1277,7 @@
     .line 651
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconDrawable:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1286,7 +1286,7 @@
     .line 652
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconDrawable:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -1295,7 +1295,7 @@
     .line 653
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconContentDescription:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1305,7 +1305,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconContentDescription:I
 
     .line 655
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -1318,7 +1318,7 @@
 
     const/4 v9, 0x1
 
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v6
 
@@ -1328,7 +1328,7 @@
     :cond_e
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconTint:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1338,7 +1338,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconTint:I
 
     .line 662
-    invoke-static {v10, v1, v6}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v6}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v6
 
@@ -1349,7 +1349,7 @@
     :cond_f
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_startIconTintMode:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1361,7 +1361,7 @@
     const/4 v9, -0x1
 
     .line 669
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v6
 
@@ -1382,7 +1382,7 @@
     const/4 v9, 0x0
 
     .line 673
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v6
 
@@ -1483,7 +1483,7 @@
     .line 688
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconMode:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1494,7 +1494,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v6
 
@@ -1503,7 +1503,7 @@
     .line 692
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconDrawable:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1512,7 +1512,7 @@
     .line 693
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconDrawable:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -1522,7 +1522,7 @@
     :cond_11
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconContentDescription:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1532,7 +1532,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconContentDescription:I
 
     .line 697
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -1545,7 +1545,7 @@
 
     const/4 v9, 0x1
 
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v6
 
@@ -1557,7 +1557,7 @@
     :cond_13
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleEnabled:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1569,7 +1569,7 @@
     const/4 v9, 0x0
 
     .line 703
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v6
 
@@ -1579,7 +1579,7 @@
     .line 705
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleDrawable:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v6
 
@@ -1589,7 +1589,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleContentDescription:I
 
     .line 707
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
@@ -1599,7 +1599,7 @@
     .line 708
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleTint:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1609,7 +1609,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleTint:I
 
     .line 710
-    invoke-static {v10, v1, v6}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v6}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v6
 
@@ -1620,7 +1620,7 @@
     :cond_14
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleTintMode:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1632,7 +1632,7 @@
     const/4 v9, -0x1
 
     .line 716
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v6
 
@@ -1651,7 +1651,7 @@
     :goto_1
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_passwordToggleEnabled:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1660,7 +1660,7 @@
     .line 722
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconTint:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1670,7 +1670,7 @@
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconTint:I
 
     .line 724
-    invoke-static {v10, v1, v6}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+    invoke-static {v10, v1, v6}, Lcom/google/android/material/resources/MaterialResources;->getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
 
     move-result-object v6
 
@@ -1681,7 +1681,7 @@
     :cond_16
     sget v6, Lcom/google/android/material/R$styleable;->TextInputLayout_endIconTintMode:I
 
-    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v6}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v6
 
@@ -1693,7 +1693,7 @@
     const/4 v9, -0x1
 
     .line 731
-    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v1, v6, v9}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v6
 
@@ -1738,7 +1738,7 @@
 
     const/4 v9, 0x1
 
-    invoke-static {v6, v9}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {v6, v9}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 744
     iget-object v6, v0, Lcom/google/android/material/textfield/TextInputLayout;->startLayout:Landroid/widget/LinearLayout;
@@ -1786,7 +1786,7 @@
 
     const/4 v9, 0x1
 
-    invoke-static {v6, v9}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {v6, v9}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 758
     iget-object v6, v0, Lcom/google/android/material/textfield/TextInputLayout;->endLayout:Landroid/widget/LinearLayout;
@@ -1864,7 +1864,7 @@
     .line 777
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_errorTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1873,7 +1873,7 @@
     .line 778
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_errorTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -1883,7 +1883,7 @@
     :cond_18
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_helperTextTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1892,7 +1892,7 @@
     .line 781
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_helperTextTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -1902,7 +1902,7 @@
     :cond_19
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_hintTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1911,7 +1911,7 @@
     .line 784
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_hintTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -1921,7 +1921,7 @@
     :cond_1a
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_counterTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1930,7 +1930,7 @@
     .line 787
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_counterTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -1940,7 +1940,7 @@
     :cond_1b
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_counterOverflowTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1950,7 +1950,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_counterOverflowTextColor:I
 
     .line 791
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -1961,7 +1961,7 @@
     :cond_1c
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_placeholderTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1971,7 +1971,7 @@
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_placeholderTextColor:I
 
     .line 795
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -1982,7 +1982,7 @@
     :cond_1d
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_prefixTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -1991,7 +1991,7 @@
     .line 798
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_prefixTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -2001,7 +2001,7 @@
     :cond_1e
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_suffixTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v2
 
@@ -2010,7 +2010,7 @@
     .line 801
     sget v2, Lcom/google/android/material/R$styleable;->TextInputLayout_suffixTextColor:I
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v2
 
@@ -2027,19 +2027,19 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v1, v2, v3}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcom/google/android/material/textfield/TextInputLayout;->setEnabled(Z)V
 
     .line 807
-    invoke-virtual {v1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v1}, Landroidx/appcompat/widget/ar;->c()V
 
     const/4 v1, 0x2
 
     .line 811
-    invoke-static {v0, v1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     return-void
 
@@ -2530,7 +2530,7 @@
     iget-object v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->tmpBoundsRect:Landroid/graphics/Rect;
 
     .line 2346
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v1
 
@@ -3893,7 +3893,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/textfield/TextInputLayout;->boxBackground:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     return-void
@@ -3984,7 +3984,7 @@
     .locals 3
 
     .line 3575
-    invoke-static {p0}, Landroidx/core/g/w;->F(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->F(Landroid/view/View;)Z
 
     move-result v0
 
@@ -4031,7 +4031,7 @@
 
     .line 3582
     :goto_1
-    invoke-static {p0, v2}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p0, v2}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -4096,7 +4096,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 1979
     iget v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->placeholderTextAppearance:I
@@ -4677,7 +4677,7 @@
     check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 3473
-    invoke-static {v6}, Landroidx/core/g/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v6}, Landroidx/core/f/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v6
 
@@ -5992,7 +5992,7 @@
     if-eqz v2, :cond_3
 
     .line 3723
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v2
 
@@ -6785,6 +6785,8 @@
 
 .method public isProvidingHint()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1448
     iget-boolean v0, p0, Lcom/google/android/material/textfield/TextInputLayout;->isProvidingHint:Z
@@ -7150,7 +7152,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v0, p1}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -7551,7 +7553,7 @@
     move-result v1
 
     .line 1758
-    invoke-static {v0, v1}, Landroidx/core/g/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     .line 1761
     invoke-direct {p0}, Lcom/google/android/material/textfield/TextInputLayout;->updateCounterTextAppearanceAndColor()V
@@ -9172,7 +9174,7 @@
 
     sget v0, Lcom/google/android/material/R$color;->design_error:I
 
-    invoke-static {p2, v0}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {p2, v0}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result p2
 
@@ -9191,7 +9193,7 @@
     if-eqz v0, :cond_0
 
     .line 3375
-    invoke-static {v0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {v0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     :cond_0
     return-void
@@ -9400,7 +9402,7 @@
 
     .line 2496
     :cond_1
-    invoke-static {v0}, Landroidx/appcompat/widget/ab;->c(Landroid/graphics/drawable/Drawable;)Z
+    invoke-static {v0}, Landroidx/appcompat/widget/aa;->c(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v1
 

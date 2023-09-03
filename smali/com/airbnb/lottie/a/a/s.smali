@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/airbnb/lottie/c/b/q$a;
+.field private final d:Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
 .field private final e:Lcom/airbnb/lottie/a/b/a;
     .annotation system Ldalvik/annotation/Signature;
@@ -59,7 +59,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/airbnb/lottie/c/c/a;Lcom/airbnb/lottie/c/b/q;)V
+.method public constructor <init>(Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/ShapeTrimPath;)V
     .locals 1
 
     .line 20
@@ -73,54 +73,54 @@
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/s;->c:Ljava/util/List;
 
     .line 21
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/b/q;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/s;->a:Ljava/lang/String;
 
     .line 22
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/b/q;->f()Z
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->f()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/airbnb/lottie/a/a/s;->b:Z
 
     .line 23
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/b/q;->b()Lcom/airbnb/lottie/c/b/q$a;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->b()Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/airbnb/lottie/a/a/s;->d:Lcom/airbnb/lottie/c/b/q$a;
+    iput-object v0, p0, Lcom/airbnb/lottie/a/a/s;->d:Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     .line 24
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/b/q;->d()Lcom/airbnb/lottie/c/a/b;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->d()Lcom/airbnb/lottie/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/c/a/b;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/model/a/b;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/s;->e:Lcom/airbnb/lottie/a/b/a;
 
     .line 25
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/b/q;->c()Lcom/airbnb/lottie/c/a/b;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->c()Lcom/airbnb/lottie/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/c/a/b;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/model/a/b;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/s;->f:Lcom/airbnb/lottie/a/b/a;
 
     .line 26
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/b/q;->e()Lcom/airbnb/lottie/c/a/b;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/content/ShapeTrimPath;->e()Lcom/airbnb/lottie/model/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/airbnb/lottie/c/a/b;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {p2}, Lcom/airbnb/lottie/model/a/b;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object p2
 
@@ -129,17 +129,17 @@
     .line 28
     iget-object p2, p0, Lcom/airbnb/lottie/a/a/s;->e:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     .line 29
     iget-object p2, p0, Lcom/airbnb/lottie/a/a/s;->f:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     .line 30
     iget-object p2, p0, Lcom/airbnb/lottie/a/a/s;->g:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     .line 32
     iget-object p1, p0, Lcom/airbnb/lottie/a/a/s;->e:Lcom/airbnb/lottie/a/b/a;
@@ -232,11 +232,11 @@
     return-object v0
 .end method
 
-.method c()Lcom/airbnb/lottie/c/b/q$a;
+.method c()Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
     .locals 1
 
     .line 56
-    iget-object v0, p0, Lcom/airbnb/lottie/a/a/s;->d:Lcom/airbnb/lottie/c/b/q$a;
+    iget-object v0, p0, Lcom/airbnb/lottie/a/a/s;->d:Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     return-object v0
 .end method

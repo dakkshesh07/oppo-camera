@@ -3,11 +3,16 @@
 .source "FitWindowsFrameLayout.java"
 
 # interfaces
-.implements Landroidx/appcompat/widget/ad;
+.implements Landroidx/appcompat/widget/ac;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
 
 
 # instance fields
-.field private a:Landroidx/appcompat/widget/ad$a;
+.field private a:Landroidx/appcompat/widget/ac$a;
 
 
 # direct methods
@@ -35,12 +40,12 @@
     .locals 1
 
     .line 53
-    iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->a:Landroidx/appcompat/widget/ad$a;
+    iget-object v0, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->a:Landroidx/appcompat/widget/ac$a;
 
     if-eqz v0, :cond_0
 
     .line 54
-    invoke-interface {v0, p1}, Landroidx/appcompat/widget/ad$a;->a(Landroid/graphics/Rect;)V
+    invoke-interface {v0, p1}, Landroidx/appcompat/widget/ac$a;->a(Landroid/graphics/Rect;)V
 
     .line 56
     :cond_0
@@ -51,11 +56,11 @@
     return p1
 .end method
 
-.method public setOnFitSystemWindowsListener(Landroidx/appcompat/widget/ad$a;)V
+.method public setOnFitSystemWindowsListener(Landroidx/appcompat/widget/ac$a;)V
     .locals 0
 
     .line 48
-    iput-object p1, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->a:Landroidx/appcompat/widget/ad$a;
+    iput-object p1, p0, Landroidx/appcompat/widget/FitWindowsFrameLayout;->a:Landroidx/appcompat/widget/ac$a;
 
     return-void
 .end method

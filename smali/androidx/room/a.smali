@@ -10,13 +10,13 @@
 
 .field public final c:Ljava/lang/String;
 
-.field public final d:Landroidx/room/i$d;
+.field public final d:Landroidx/room/RoomDatabase$c;
 
 .field public final e:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Landroidx/room/i$b;",
+            "Landroidx/room/RoomDatabase$b;",
             ">;"
         }
     .end annotation
@@ -24,7 +24,7 @@
 
 .field public final f:Z
 
-.field public final g:Landroidx/room/i$c;
+.field public final g:Landroidx/room/RoomDatabase$JournalMode;
 
 .field public final h:Ljava/util/concurrent/Executor;
 
@@ -52,19 +52,22 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/f/a/c$c;Landroidx/room/i$d;Ljava/util/List;ZLandroidx/room/i$c;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/f/a/c$c;Landroidx/room/RoomDatabase$c;Ljava/util/List;ZLandroidx/room/RoomDatabase$JournalMode;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZZLjava/util/Set;Ljava/lang/String;Ljava/io/File;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/lang/String;",
             "Landroidx/f/a/c$c;",
-            "Landroidx/room/i$d;",
+            "Landroidx/room/RoomDatabase$c;",
             "Ljava/util/List<",
-            "Landroidx/room/i$b;",
+            "Landroidx/room/RoomDatabase$b;",
             ">;Z",
-            "Landroidx/room/i$c;",
+            "Landroidx/room/RoomDatabase$JournalMode;",
             "Ljava/util/concurrent/Executor;",
             "Ljava/util/concurrent/Executor;",
             "ZZZ",
@@ -90,7 +93,7 @@
     iput-object p2, p0, Landroidx/room/a;->c:Ljava/lang/String;
 
     .line 244
-    iput-object p4, p0, Landroidx/room/a;->d:Landroidx/room/i$d;
+    iput-object p4, p0, Landroidx/room/a;->d:Landroidx/room/RoomDatabase$c;
 
     .line 245
     iput-object p5, p0, Landroidx/room/a;->e:Ljava/util/List;
@@ -99,7 +102,7 @@
     iput-boolean p6, p0, Landroidx/room/a;->f:Z
 
     .line 247
-    iput-object p7, p0, Landroidx/room/a;->g:Landroidx/room/i$c;
+    iput-object p7, p0, Landroidx/room/a;->g:Landroidx/room/RoomDatabase$JournalMode;
 
     .line 248
     iput-object p8, p0, Landroidx/room/a;->h:Ljava/util/concurrent/Executor;

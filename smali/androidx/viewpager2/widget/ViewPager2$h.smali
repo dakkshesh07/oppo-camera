@@ -1,5 +1,5 @@
 .class Landroidx/viewpager2/widget/ViewPager2$h;
-.super Landroidx/recyclerview/widget/o;
+.super Landroidx/recyclerview/widget/r;
 .source "ViewPager2.java"
 
 
@@ -25,7 +25,7 @@
     .line 1044
     iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$h;->b:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-direct {p0}, Landroidx/recyclerview/widget/o;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/r;-><init>()V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/o;->a(Landroidx/recyclerview/widget/RecyclerView$i;)Landroid/view/View;
+    invoke-super {p0, p1}, Landroidx/recyclerview/widget/r;->a(Landroidx/recyclerview/widget/RecyclerView$i;)Landroid/view/View;
 
     move-result-object p1
 

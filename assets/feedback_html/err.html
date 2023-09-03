@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=1.0"/>
+<title>LinkError</title>
+<style>
+/* CSS Document */
+/*样式总结开始*/
+*{margin:0; padding:0;-webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+*{ word-wrap:break-word;}
+body{ font-size:8px; font-family:"微软雅黑"; background:#F2F3EE;}
+a img{ border:none;}
+a:link{ text-decoration:none;}
+a:visited{ text-decoration:none;}
+.clearTy{ zoom:1;overflow:hidden; }
+ul li{list-style:none;}
+table{border-collapse:collapse;}
+/*样式总结结束*/
+.bodywrap{ width:307px; margin:101px auto 0 auto;}
+.dreawer{ width:223px; height:191px; position:relative;  margin:0 auto; -webkit-transform-origin:113px -47px;}
+.nail{ width:13px; height:13px; margin:0 auto; background:#EBECE7;  border-top:1px solid #D2D3CD; border-left:1px solid #EAEBE6; border-right:1px solid #EAEBE6; border-bottom:1px solid #fff; border-radius:7px; }
+.wordBand{ width:223px;  height:139px; margin-top:40px; background:#EBECE7;border-top:1px solid #D2D3CD; border-left:1px solid #EAEBE6; border-right:1px solid #EAEBE6; border-bottom:1px solid #fff; border-radius:7px; }
+.line-left{ width:87px; height:1px; border-top:1px solid #E3E4DE; -webkit-transform:rotate(-35deg); -moz-transform:rotate(-35deg); position:absolute; left:27px; top:-23px;  z-index:-1;}
+.line-right{width:87px; height:1px; border-top:1px solid #E3E4DE;  -webkit-transform:rotate(35deg);  -moz-transform:rotate(35deg); position:absolute; left:109px; top:-23px; z-index:-1;}
+.pcont{ font-size:16px; color:#A3A49E; text-align:center; text-shadow:0 1px  rgba(255,255,255,0.75); margin-top:42px }
+a.acont{ display:block; font-size:16px; color:#6FA4C6; text-align:center; text-shadow:0 1px  rgba(255,255,255,0.75); text-decoration:underline; margin-top:13px; }
+</style>
+</head>
+<body>
+<div class="bodywrap" id="boxwrap">
+	<div class="nail"></div>
+	<div class="dreawer" id="dreawer">
+		<div class="line-left"></div>
+		<div class="line-right"></div>
+		<div class="wordBand">
+			<p class="pcont">网络出现异常</p>
+			<a href="/refresh" class="acont">点击重试</a>
+		</div>
+	</div>
+</div>
+</body>
+<script>
+	window.onload	=	function(){
+		var dou_num	=	0;  
+		var cishu =10; //抖动次数初始值
+		var dl=-20;//向20像素
+		var dy=20;//向左20像素
+		var step=4;//抖动浮动数
+		function dou()
+		{
+			var box	=	document.getElementById('boxwrap');				  
+			if(dl<0 )
+			 {
+				 box.getElementsByTagName("div")[1].setAttribute("style","-webkit-transform:rotate("+dl+"deg);");
+				 dl+=step; //像素每次向右加5像素
+				//dou_num=10; // 向右移动10像素
+			 } else {
+				 box.getElementsByTagName("div")[1].setAttribute("style","-webkit-transform:rotate("+dy+"deg);");
+				 dy-=step;////像素每次左右加5像素
+				 //dou_num=-10;//	 向左移动10像素
+			 } 			  
+			cishu--;//次数递减
+			if(cishu>0){
+				setTimeout(function(){dou()},20);//时间为40毫秒
+			}else{
+				cishu=10;
+				dl=-20;
+				dy=20;
+				box.getElementsByTagName("div")[1].setAttribute("style","-webkit-transform:rotate("+0+"deg);");
+
+			}
+		}
+	 dou();
+	}
+</script>
+</html>

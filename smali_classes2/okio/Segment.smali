@@ -10,6 +10,9 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # static fields
 .field public static final Companion:Lokio/Segment$Companion;
@@ -43,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokio/Segment$Companion;-><init>(Lc/d/b/f;)V
+    invoke-direct {v0, v1}, Lokio/Segment$Companion;-><init>(Lkotlin/jvm/internal/o;)V
 
     sput-object v0, Lokio/Segment;->Companion:Lokio/Segment$Companion;
 
@@ -80,7 +83,7 @@
 
     const-string v0, "data"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -133,7 +136,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_1
     iget-boolean v0, v0, Lokio/Segment;->owner:Z
@@ -155,7 +158,7 @@
 
     if-nez v1, :cond_3
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_3
     iget v1, v1, Lokio/Segment;->limit:I
@@ -166,7 +169,7 @@
 
     if-nez v3, :cond_4
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_4
     iget-boolean v3, v3, Lokio/Segment;->shared:Z
@@ -180,7 +183,7 @@
 
     if-nez v2, :cond_6
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_6
     iget v2, v2, Lokio/Segment;->pos:I
@@ -198,7 +201,7 @@
 
     if-nez v1, :cond_8
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_8
     invoke-virtual {p0, v1, v0}, Lokio/Segment;->writeTo(Lokio/Segment;I)V
@@ -255,7 +258,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_1
     iget-object v3, p0, Lokio/Segment;->next:Lokio/Segment;
@@ -267,7 +270,7 @@
 
     if-nez v1, :cond_2
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_2
     iget-object v3, p0, Lokio/Segment;->prev:Lokio/Segment;
@@ -290,7 +293,7 @@
 
     const-string v0, "segment"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 100
     move-object v0, p0
@@ -309,7 +312,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_0
     iput-object p1, v0, Lokio/Segment;->prev:Lokio/Segment;
@@ -406,7 +409,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v1 .. v7}, Lc/a/e;->a([B[BIIIILjava/lang/Object;)[B
+    invoke-static/range {v1 .. v7}, Lkotlin/collections/g;->a([B[BIIIILjava/lang/Object;)[B
 
     .line 131
     :goto_1
@@ -428,7 +431,7 @@
 
     if-nez p1, :cond_2
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_2
     invoke-virtual {p1, v0}, Lokio/Segment;->push(Lokio/Segment;)Lokio/Segment;
@@ -466,7 +469,7 @@
 
     const-string v0, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {v3, v0}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v4, p0, Lokio/Segment;->pos:I
 
@@ -490,7 +493,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 154
     iget-boolean v0, p1, Lokio/Segment;->owner:Z
@@ -531,7 +534,7 @@
 
     move-object v1, v2
 
-    invoke-static/range {v1 .. v7}, Lc/a/e;->a([B[BIIIILjava/lang/Object;)[B
+    invoke-static/range {v1 .. v7}, Lkotlin/collections/g;->a([B[BIIIILjava/lang/Object;)[B
 
     .line 160
     iget v0, p1, Lokio/Segment;->limit:I
@@ -582,7 +585,7 @@
 
     add-int v4, v3, p2
 
-    invoke-static {v0, v1, v2, v3, v4}, Lc/a/e;->a([B[BIII)[B
+    invoke-static {v0, v1, v2, v3, v4}, Lkotlin/collections/g;->a([B[BIII)[B
 
     .line 166
     iget v0, p1, Lokio/Segment;->limit:I

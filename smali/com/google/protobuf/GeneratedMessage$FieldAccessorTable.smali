@@ -45,16 +45,16 @@
 .method public constructor <init>(Lcom/google/protobuf/Descriptors$Descriptor;[Ljava/lang/String;)V
     .locals 0
 
-    .line 2048
+    .line 2050
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2049
+    .line 2051
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 2050
+    .line 2052
     iput-object p2, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->camelCaseNames:[Ljava/lang/String;
 
-    .line 2051
+    .line 2053
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$Descriptor;->getFields()Ljava/util/List;
 
     move-result-object p2
@@ -67,7 +67,7 @@
 
     iput-object p2, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
-    .line 2052
+    .line 2054
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$Descriptor;->getOneofs()Ljava/util/List;
 
     move-result-object p1
@@ -82,7 +82,7 @@
 
     const/4 p1, 0x0
 
-    .line 2053
+    .line 2055
     iput-boolean p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->initialized:Z
 
     return-void
@@ -107,10 +107,10 @@
         }
     .end annotation
 
-    .line 2038
+    .line 2040
     invoke-direct {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;-><init>(Lcom/google/protobuf/Descriptors$Descriptor;[Ljava/lang/String;)V
 
-    .line 2039
+    .line 2041
     invoke-virtual {p0, p3, p4}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;
 
     return-void
@@ -119,7 +119,7 @@
 .method static synthetic access$000(Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;)Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 0
 
-    .line 2021
+    .line 2023
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object p0
@@ -128,7 +128,7 @@
 .method static synthetic access$100(Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
     .locals 0
 
-    .line 2021
+    .line 2023
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->getOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
 
     move-result-object p0
@@ -139,7 +139,7 @@
 .method static synthetic access$1300(Lcom/google/protobuf/Descriptors$FileDescriptor;)Z
     .locals 0
 
-    .line 2021
+    .line 2023
     invoke-static {p0}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->supportFieldPresence(Lcom/google/protobuf/Descriptors$FileDescriptor;)Z
 
     move-result p0
@@ -150,7 +150,7 @@
 .method static synthetic access$200(Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
     .locals 0
 
-    .line 2021
+    .line 2023
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     move-result-object p0
@@ -161,7 +161,7 @@
 .method private getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
     .locals 2
 
-    .line 2139
+    .line 2141
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getContainingType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -170,14 +170,14 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 2142
+    .line 2144
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2148
+    .line 2150
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getIndex()I
@@ -188,7 +188,7 @@
 
     return-object p1
 
-    .line 2145
+    .line 2147
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -198,7 +198,7 @@
 
     throw p1
 
-    .line 2140
+    .line 2142
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -212,7 +212,7 @@
 .method private getOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
     .locals 2
 
-    .line 2153
+    .line 2155
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$OneofDescriptor;->getContainingType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -221,7 +221,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2157
+    .line 2159
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->oneofs:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
 
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$OneofDescriptor;->getIndex()I
@@ -232,7 +232,7 @@
 
     return-object p1
 
-    .line 2154
+    .line 2156
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -254,7 +254,7 @@
 .method private static supportFieldPresence(Lcom/google/protobuf/Descriptors$FileDescriptor;)Z
     .locals 1
 
-    .line 2243
+    .line 2245
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getSyntax()Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     move-result-object p0
@@ -293,18 +293,18 @@
         }
     .end annotation
 
-    .line 2071
+    .line 2073
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->initialized:Z
 
     if-eqz v0, :cond_0
 
     return-object p0
 
-    .line 2072
+    .line 2074
     :cond_0
     monitor-enter p0
 
-    .line 2073
+    .line 2075
     :try_start_0
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->initialized:Z
 
@@ -314,7 +314,7 @@
 
     return-object p0
 
-    .line 2074
+    .line 2076
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
@@ -329,7 +329,7 @@
 
     if-ge v2, v0, :cond_a
 
-    .line 2076
+    .line 2078
     iget-object v4, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     invoke-virtual {v4}, Lcom/google/protobuf/Descriptors$Descriptor;->getFields()Ljava/util/List;
@@ -344,17 +344,17 @@
 
     check-cast v6, Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 2078
+    .line 2080
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getContainingOneof()Lcom/google/protobuf/Descriptors$OneofDescriptor;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    .line 2079
+    .line 2081
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->camelCaseNames:[Ljava/lang/String;
 
-    .line 2080
+    .line 2082
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getContainingOneof()Lcom/google/protobuf/Descriptors$OneofDescriptor;
 
     move-result-object v4
@@ -370,14 +370,14 @@
     :cond_2
     move-object v10, v3
 
-    .line 2082
+    .line 2084
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
     move-result v3
 
     if-eqz v3, :cond_6
 
-    .line 2083
+    .line 2085
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v3
@@ -386,7 +386,7 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 2084
+    .line 2086
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isMapField()Z
 
     move-result v3
@@ -399,7 +399,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 2085
+    .line 2087
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v4, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$MapFieldAccessor;
@@ -414,7 +414,7 @@
 
     goto/16 :goto_1
 
-    .line 2088
+    .line 2090
     :cond_3
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
@@ -430,7 +430,7 @@
 
     goto/16 :goto_1
 
-    .line 2091
+    .line 2093
     :cond_4
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -440,7 +440,7 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 2092
+    .line 2094
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v4, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedEnumFieldAccessor;
@@ -455,7 +455,7 @@
 
     goto/16 :goto_1
 
-    .line 2095
+    .line 2097
     :cond_5
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
@@ -471,7 +471,7 @@
 
     goto :goto_1
 
-    .line 2099
+    .line 2101
     :cond_6
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -481,7 +481,7 @@
 
     if-ne v3, v4, :cond_7
 
-    .line 2100
+    .line 2102
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v4, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularMessageFieldAccessor;
@@ -502,7 +502,7 @@
 
     goto :goto_1
 
-    .line 2103
+    .line 2105
     :cond_7
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -512,7 +512,7 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 2104
+    .line 2106
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v4, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;
@@ -533,7 +533,7 @@
 
     goto :goto_1
 
-    .line 2107
+    .line 2109
     :cond_8
     invoke-virtual {v6}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -543,7 +543,7 @@
 
     if-ne v3, v4, :cond_9
 
-    .line 2108
+    .line 2110
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
     new-instance v4, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularStringFieldAccessor;
@@ -564,7 +564,7 @@
 
     goto :goto_1
 
-    .line 2112
+    .line 2114
     :cond_9
     iget-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->fields:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$FieldAccessor;
 
@@ -589,7 +589,7 @@
 
     goto/16 :goto_0
 
-    .line 2119
+    .line 2121
     :cond_a
     iget-object v2, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->oneofs:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
 
@@ -598,7 +598,7 @@
     :goto_2
     if-ge v1, v2, :cond_b
 
-    .line 2121
+    .line 2123
     iget-object v4, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->oneofs:[Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
 
     new-instance v5, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$OneofAccessor;
@@ -622,13 +622,13 @@
     :cond_b
     const/4 p1, 0x1
 
-    .line 2125
+    .line 2127
     iput-boolean p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->initialized:Z
 
-    .line 2126
+    .line 2128
     iput-object v3, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable;->camelCaseNames:[Ljava/lang/String;
 
-    .line 2127
+    .line 2129
     monitor-exit p0
 
     return-object p0
@@ -636,7 +636,7 @@
     :catchall_0
     move-exception p1
 
-    .line 2128
+    .line 2130
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

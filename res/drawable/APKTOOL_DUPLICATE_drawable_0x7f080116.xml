@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="72.0" android:viewportHeight="72.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="_R_G">
+        <group android:name="_R_G_L_1_G" android:scaleX="1.0" android:scaleY="1.0" android:translateX="35.818" android:translateY="36.182">
+            <path android:name="_R_G_L_1_G_D_0_P_0" android:pathData=" M-18.73 -19 C-18.73,-19 18.82,18.27 18.82,18.27 " android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f06036d" android:strokeWidth="4.0" android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeAlpha="1.0" />
+            <path android:name="_R_G_L_1_G_D_1_P_0" android:pathData=" M18.98 -18.98 C18.98,-18.98 -18.82,18.52 -18.82,18.52 " android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f06036d" android:strokeWidth="4.0" android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeAlpha="1.0" />
+        </group>
+        <group android:name="_R_G_L_0_G" android:pivotY="24.0" android:scaleX="0.0" android:scaleY="0.0" android:translateX="36.0" android:translateY="12.188">
+            <path android:name="_R_G_L_0_G_D_0_P_0" android:pathData=" M0 5.87 C3.38,5.87 6.13,8.62 6.13,12 C6.13,15.38 3.38,18.13 0,18.13 C-3.38,18.13 -6.13,15.38 -6.13,12 C-6.13,8.62 -3.38,5.87 0,5.87c " android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f06036d" android:strokeWidth="4.0" android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeAlpha="1.0" />
+            <path android:name="_R_G_L_0_G_D_1_P_0" android:pathData=" M0 29.87 C3.38,29.87 6.13,32.62 6.13,36 C6.13,39.38 3.38,42.13 0,42.13 C-3.38,42.13 -6.13,39.38 -6.13,36 C-6.13,32.62 -3.38,29.87 0,29.87c " android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f06036d" android:strokeWidth="4.0" android:strokeLineCap="butt" android:strokeLineJoin="miter" android:strokeAlpha="1.0" />
+        </group>
+    </group>
+    <group android:name="time_group" />
+</vector>

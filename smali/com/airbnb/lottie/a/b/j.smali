@@ -24,7 +24,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "Landroid/graphics/PointF;",
             ">;>;)V"
         }
@@ -45,23 +45,34 @@
 
 
 # virtual methods
-.method public synthetic a(Lcom/airbnb/lottie/g/a;F)Ljava/lang/Object;
+.method public synthetic a(Lcom/airbnb/lottie/d/a;F)Ljava/lang/Object;
     .locals 0
 
     .line 9
-    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/a/b/j;->b(Lcom/airbnb/lottie/g/a;F)Landroid/graphics/PointF;
+    invoke-virtual {p0, p1, p2}, Lcom/airbnb/lottie/a/b/j;->b(Lcom/airbnb/lottie/d/a;F)Landroid/graphics/PointF;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public b(Lcom/airbnb/lottie/g/a;F)Landroid/graphics/PointF;
-    .locals 10
+.method protected synthetic a(Lcom/airbnb/lottie/d/a;FFF)Ljava/lang/Object;
+    .locals 0
+
+    .line 9
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/airbnb/lottie/a/b/j;->b(Lcom/airbnb/lottie/d/a;FFF)Landroid/graphics/PointF;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public b(Lcom/airbnb/lottie/d/a;F)Landroid/graphics/PointF;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "Landroid/graphics/PointF;",
             ">;F)",
             "Landroid/graphics/PointF;"
@@ -69,43 +80,63 @@
     .end annotation
 
     .line 17
-    iget-object v0, p1, Lcom/airbnb/lottie/g/a;->a:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, p2, p2}, Lcom/airbnb/lottie/a/b/j;->b(Lcom/airbnb/lottie/d/a;FFF)Landroid/graphics/PointF;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    iget-object v0, p1, Lcom/airbnb/lottie/g/a;->b:Ljava/lang/Object;
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_1
+.method protected b(Lcom/airbnb/lottie/d/a;FFF)Landroid/graphics/PointF;
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/airbnb/lottie/d/a<",
+            "Landroid/graphics/PointF;",
+            ">;FFF)",
+            "Landroid/graphics/PointF;"
+        }
+    .end annotation
 
     .line 21
-    iget-object v0, p1, Lcom/airbnb/lottie/g/a;->a:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/airbnb/lottie/d/a;->a:Ljava/lang/Object;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Lcom/airbnb/lottie/d/a;->b:Ljava/lang/Object;
+
+    if-eqz v0, :cond_1
+
+    .line 25
+    iget-object v0, p1, Lcom/airbnb/lottie/d/a;->a:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/PointF;
 
-    .line 22
-    iget-object v1, p1, Lcom/airbnb/lottie/g/a;->b:Ljava/lang/Object;
+    .line 26
+    iget-object v1, p1, Lcom/airbnb/lottie/d/a;->b:Ljava/lang/Object;
 
     move-object v9, v1
 
     check-cast v9, Landroid/graphics/PointF;
 
-    .line 24
-    iget-object v1, p0, Lcom/airbnb/lottie/a/b/j;->c:Lcom/airbnb/lottie/g/c;
+    .line 28
+    iget-object v1, p0, Lcom/airbnb/lottie/a/b/j;->c:Lcom/airbnb/lottie/d/c;
 
     if-eqz v1, :cond_0
 
-    .line 26
-    iget-object v1, p0, Lcom/airbnb/lottie/a/b/j;->c:Lcom/airbnb/lottie/g/c;
+    .line 30
+    iget-object v1, p0, Lcom/airbnb/lottie/a/b/j;->c:Lcom/airbnb/lottie/d/c;
 
-    iget v2, p1, Lcom/airbnb/lottie/g/a;->d:F
+    iget v2, p1, Lcom/airbnb/lottie/d/a;->f:F
 
-    iget-object p1, p1, Lcom/airbnb/lottie/g/a;->e:Ljava/lang/Float;
+    iget-object p1, p1, Lcom/airbnb/lottie/d/a;->g:Ljava/lang/Float;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     move-result v3
 
-    .line 27
+    .line 31
     invoke-virtual {p0}, Lcom/airbnb/lottie/a/b/j;->d()F
 
     move-result v7
@@ -120,8 +151,8 @@
 
     move v6, p2
 
-    .line 26
-    invoke-virtual/range {v1 .. v8}, Lcom/airbnb/lottie/g/c;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
+    .line 30
+    invoke-virtual/range {v1 .. v8}, Lcom/airbnb/lottie/d/c;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -131,42 +162,42 @@
 
     return-object p1
 
-    .line 33
+    .line 37
     :cond_0
     iget-object p1, p0, Lcom/airbnb/lottie/a/b/j;->d:Landroid/graphics/PointF;
 
-    iget v1, v0, Landroid/graphics/PointF;->x:F
+    iget p2, v0, Landroid/graphics/PointF;->x:F
 
-    iget v2, v9, Landroid/graphics/PointF;->x:F
+    iget v1, v9, Landroid/graphics/PointF;->x:F
 
-    iget v3, v0, Landroid/graphics/PointF;->x:F
+    iget v2, v0, Landroid/graphics/PointF;->x:F
 
-    sub-float/2addr v2, v3
+    sub-float/2addr v1, v2
 
-    mul-float/2addr v2, p2
+    mul-float/2addr p3, v1
 
-    add-float/2addr v1, v2
+    add-float/2addr p2, p3
 
-    iget v2, v0, Landroid/graphics/PointF;->y:F
+    iget p3, v0, Landroid/graphics/PointF;->y:F
 
-    iget v3, v9, Landroid/graphics/PointF;->y:F
+    iget v1, v9, Landroid/graphics/PointF;->y:F
 
     iget v0, v0, Landroid/graphics/PointF;->y:F
 
-    sub-float/2addr v3, v0
+    sub-float/2addr v1, v0
 
-    mul-float/2addr p2, v3
+    mul-float/2addr p4, v1
 
-    add-float/2addr v2, p2
+    add-float/2addr p3, p4
 
-    invoke-virtual {p1, v1, v2}, Landroid/graphics/PointF;->set(FF)V
+    invoke-virtual {p1, p2, p3}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 35
+    .line 39
     iget-object p1, p0, Lcom/airbnb/lottie/a/b/j;->d:Landroid/graphics/PointF;
 
     return-object p1
 
-    .line 18
+    .line 22
     :cond_1
     new-instance p1, Ljava/lang/IllegalStateException;
 

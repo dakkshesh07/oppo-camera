@@ -8,11 +8,11 @@
 
 
 # instance fields
-.field private A:Landroid/widget/ImageView;
+.field private A:Landroid/animation/ObjectAnimator;
 
-.field private B:Landroid/widget/FrameLayout;
+.field private B:Landroid/animation/ObjectAnimator;
 
-.field private C:Landroid/animation/AnimatorSet;
+.field private C:Landroid/animation/ObjectAnimator;
 
 .field private D:Landroid/animation/ObjectAnimator;
 
@@ -22,17 +22,21 @@
 
 .field private G:Landroid/animation/ObjectAnimator;
 
-.field private H:Landroid/animation/ObjectAnimator;
+.field private H:Landroid/animation/AnimatorSet;
 
-.field private I:Landroid/animation/AnimatorSet;
+.field private I:Z
 
-.field private J:Z
+.field private J:Landroid/animation/TimeInterpolator;
 
 .field private K:Landroid/animation/TimeInterpolator;
 
 .field private L:Landroid/animation/TimeInterpolator;
 
-.field private M:Landroid/os/Handler;
+.field private M:[I
+
+.field private N:[I
+
+.field private O:Landroid/os/Handler;
 
 .field private a:Z
 
@@ -70,9 +74,9 @@
 
 .field private r:Landroid/widget/TextView;
 
-.field private s:Landroid/widget/RelativeLayout;
+.field private s:Lcom/oppo/camera/ui/beauty3d/h;
 
-.field private t:Landroid/animation/AnimatorSet;
+.field private t:Lcom/oppo/camera/ui/beauty3d/h;
 
 .field private u:Lcom/oppo/camera/ui/beauty3d/e;
 
@@ -91,175 +95,263 @@
 .method public constructor <init>(Landroid/app/Activity;Landroid/view/ViewGroup;Landroid/view/ViewGroup;)V
     .locals 6
 
-    .line 158
+    .line 211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 73
+    .line 65
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
-    .line 74
+    .line 66
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
-    .line 75
+    .line 67
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
 
-    .line 76
+    .line 68
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->d:Z
 
     const/4 v1, 0x0
 
-    .line 77
+    .line 69
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    .line 78
+    .line 70
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->f:Landroid/view/ViewGroup;
 
-    .line 79
+    .line 71
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->g:Landroid/view/ViewGroup;
 
-    .line 80
+    .line 72
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
-    .line 81
+    .line 73
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->i:Z
 
-    .line 82
+    .line 74
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    .line 83
+    .line 75
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->k:Z
 
     const/4 v2, 0x1
 
-    .line 84
+    .line 76
     iput-boolean v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->l:Z
 
-    .line 85
+    .line 77
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    .line 86
+    .line 78
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    .line 87
+    .line 79
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
 
-    .line 88
+    .line 80
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
 
-    .line 89
+    .line 81
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
 
-    .line 90
+    .line 82
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
 
-    .line 91
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Landroid/widget/RelativeLayout;
+    .line 83
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
 
-    .line 92
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
+    .line 84
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
 
-    .line 93
+    .line 85
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
-    .line 94
+    .line 86
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->v:Landroid/graphics/Point;
 
-    .line 95
+    .line 87
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
 
-    .line 96
+    .line 88
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    .line 97
+    .line 89
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
 
-    .line 98
+    .line 90
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
-    .line 99
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/widget/ImageView;
+    .line 92
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    .line 100
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 93
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
 
-    .line 102
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 94
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
-    .line 103
+    .line 95
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
 
-    .line 104
+    .line 96
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
 
-    .line 105
+    .line 97
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
 
-    .line 106
+    .line 98
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
 
-    .line 107
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/ObjectAnimator;
+    .line 99
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
-    .line 108
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 100
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Z
 
-    .line 109
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Z
-
-    .line 111
+    .line 102
     new-instance v1, Landroid/view/animation/PathInterpolator;
 
     const/high16 v2, 0x3f800000    # 1.0f
 
     const/4 v3, 0x0
 
-    const v4, 0x3e99999a    # 0.3f
+    const v4, 0x3ed70a3d    # 0.42f
 
-    invoke-direct {v1, v4, v3, v4, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
-
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    .line 112
-    new-instance v1, Landroid/view/animation/PathInterpolator;
-
-    const v5, 0x3dcccccd    # 0.1f
+    const v5, 0x3f147ae1    # 0.58f
 
     invoke-direct {v1, v4, v3, v5, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Landroid/animation/TimeInterpolator;
+
+    .line 103
+    new-instance v1, Landroid/view/animation/PathInterpolator;
+
+    const v4, 0x3dcccccd    # 0.1f
+
+    invoke-direct {v1, v3, v3, v4, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
+
+    .line 104
+    new-instance v1, Landroid/view/animation/PathInterpolator;
+
+    const v5, 0x3e99999a    # 0.3f
+
+    invoke-direct {v1, v5, v3, v4, v2}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
+
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->L:Landroid/animation/TimeInterpolator;
 
-    .line 114
+    const/16 v1, 0x1e
+
+    .line 105
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_0
+
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:[I
+
+    const/16 v1, 0x18
+
+    .line 138
+    new-array v1, v1, [I
+
+    fill-array-data v1, :array_1
+
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->N:[I
+
+    .line 165
     new-instance v1, Lcom/oppo/camera/ui/beauty3d/f$1;
 
     invoke-direct {v1, p0}, Lcom/oppo/camera/ui/beauty3d/f$1;-><init>(Lcom/oppo/camera/ui/beauty3d/f;)V
 
-    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:Landroid/os/Handler;
+    iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
 
-    .line 159
+    .line 212
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    .line 160
+    .line 213
     iput-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->f:Landroid/view/ViewGroup;
 
-    .line 161
+    .line 214
     iput-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->g:Landroid/view/ViewGroup;
 
-    .line 162
+    .line 215
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
-    .line 163
+    .line 216
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x7f08018f
+        0x7f080190
+        0x7f080191
+        0x7f080192
+        0x7f080193
+        0x7f080194
+        0x7f080195
+        0x7f080196
+        0x7f080197
+        0x7f080198
+        0x7f080199
+        0x7f08019a
+        0x7f08019b
+        0x7f08019c
+        0x7f08019d
+        0x7f08019e
+        0x7f08019f
+        0x7f0801a0
+        0x7f0801a1
+        0x7f0801a2
+        0x7f0801a3
+        0x7f0801a4
+        0x7f0801a5
+        0x7f0801a6
+        0x7f0801a7
+        0x7f0801a8
+        0x7f0801a9
+        0x7f0801aa
+        0x7f0801ab
+        0x7f0801ac
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x7f0801af
+        0x7f0801b0
+        0x7f0801b1
+        0x7f0801b2
+        0x7f0801b3
+        0x7f0801b4
+        0x7f0801b5
+        0x7f0801b6
+        0x7f0801b7
+        0x7f0801b8
+        0x7f0801b9
+        0x7f0801ba
+        0x7f0801bb
+        0x7f0801bc
+        0x7f0801bd
+        0x7f0801be
+        0x7f0801bf
+        0x7f0801c0
+        0x7f0801c1
+        0x7f0801c2
+        0x7f0801c3
+        0x7f0801c4
+        0x7f0801c5
+        0x7f0801c6
+    .end array-data
 .end method
 
-.method static synthetic a(Lcom/oppo/camera/ui/beauty3d/f;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
+.method static synthetic a(Lcom/oppo/camera/ui/beauty3d/f;Landroid/animation/ObjectAnimator;)Landroid/animation/ObjectAnimator;
     .locals 0
 
-    .line 48
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 45
+    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
     return-object p1
 .end method
@@ -267,19 +359,19 @@
 .method private a(IZLandroid/widget/TextView;ZII)Landroid/widget/RelativeLayout$LayoutParams;
     .locals 7
 
-    .line 206
+    .line 259
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    const v1, 0x7f09013f
+    const v1, 0x7f090157
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 207
+    .line 260
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    const v2, 0x7f09013e
+    const v2, 0x7f090156
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -287,13 +379,13 @@
 
     const/4 v2, 0x0
 
-    .line 208
+    .line 261
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 209
+    .line 262
     invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 210
+    .line 263
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
     const v1, 0x7f09005d
@@ -306,7 +398,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    .line 211
+    .line 264
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -329,7 +421,7 @@
 
     move v6, p6
 
-    .line 215
+    .line 268
     invoke-direct/range {v1 .. v6}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/RelativeLayout$LayoutParams;II)V
 
     goto :goto_0
@@ -345,24 +437,24 @@
     :cond_2
     if-eqz p4, :cond_3
 
-    .line 219
+    .line 272
     invoke-direct {p0, v2, p3}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/widget/TextView;Landroid/widget/TextView;)V
 
     :cond_3
     const/16 p1, 0xc
 
-    .line 222
+    .line 275
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 p1, 0xa
 
-    .line 223
+    .line 276
     invoke-virtual {v0, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 224
+    .line 277
     iput p5, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 225
+    .line 278
     iput p6, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
     :cond_4
@@ -370,38 +462,37 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/widget/TextView;
-    .locals 0
-
-    .line 48
-    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
-
-    return-object p0
-.end method
-
 .method private a(Landroid/widget/TextView;)V
-    .locals 2
+    .locals 3
 
     if-eqz p1, :cond_0
 
-    .line 788
+    .line 822
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 789
-    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->p()I
+    .line 823
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
+
+    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f07012f
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
+    iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 790
+    .line 824
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 791
+    .line 825
     invoke-virtual {p1}, Landroid/widget/TextView;->requestLayout()V
 
     :cond_0
@@ -411,21 +502,21 @@
 .method private a(Landroid/widget/TextView;Landroid/widget/TextView;)V
     .locals 3
 
-    .line 759
+    .line 802
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 760
+    .line 803
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0700b9
+    const v2, 0x7f0700af
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -435,24 +526,24 @@
 
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 761
+    .line 804
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 762
+    .line 805
     invoke-virtual {p2}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 763
+    .line 806
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0700bb
+    const v1, 0x7f0700b1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -462,7 +553,7 @@
 
     iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 764
+    .line 807
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
@@ -471,21 +562,21 @@
 .method private a(Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/RelativeLayout$LayoutParams;II)V
     .locals 3
 
-    .line 233
+    .line 286
     invoke-virtual {p1}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 234
+    .line 287
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0700ba
+    const v2, 0x7f0700b0
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -495,24 +586,24 @@
 
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 235
+    .line 288
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 236
+    .line 289
     invoke-virtual {p2}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 237
+    .line 290
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0700b8
+    const v1, 0x7f0700ae
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -522,23 +613,23 @@
 
     iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 238
+    .line 291
     invoke-virtual {p2, p1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/16 p1, 0xc
 
-    .line 240
+    .line 293
     invoke-virtual {p3, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
     const/16 p1, 0xa
 
-    .line 241
+    .line 294
     invoke-virtual {p3, p1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 242
+    .line 295
     iput p4, p3, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 243
+    .line 296
     iput p5, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
     return-void
@@ -547,25 +638,61 @@
 .method static synthetic a(Lcom/oppo/camera/ui/beauty3d/f;I)V
     .locals 0
 
-    .line 48
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/f;->c(I)V
+    .line 45
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/f;->d(I)V
 
     return-void
+.end method
+
+.method static synthetic a(Lcom/oppo/camera/ui/beauty3d/f;)Z
+    .locals 0
+
+    .line 45
+    iget-boolean p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->l:Z
+
+    return p0
 .end method
 
 .method static synthetic a(Lcom/oppo/camera/ui/beauty3d/f;Z)Z
     .locals 0
 
-    .line 48
+    .line 45
     iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->l:Z
 
     return p1
 .end method
 
-.method private b(IZ)V
+.method static synthetic b(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/widget/TextView;
+    .locals 0
+
+    .line 45
+    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
+
+    return-object p0
+.end method
+
+.method static synthetic b(Lcom/oppo/camera/ui/beauty3d/f;Z)Z
+    .locals 0
+
+    .line 45
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->d:Z
+
+    return p1
+.end method
+
+.method static synthetic c(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/app/Activity;
+    .locals 0
+
+    .line 45
+    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
+
+    return-object p0
+.end method
+
+.method private c(IZ)V
     .locals 2
 
-    .line 731
+    .line 774
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -588,9 +715,9 @@
 
     const-string v1, "Beauty3DGuideScanUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 733
+    .line 776
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     if-nez v0, :cond_0
@@ -604,12 +731,12 @@
 
     const/4 v1, 0x0
 
-    .line 738
-    invoke-static {v0, p1, p2, v1, v1}, Lcom/oppo/camera/util/Util;->a(Landroid/view/View;IILandroid/view/animation/BaseInterpolator;Landroid/animation/Animator$AnimatorListener;)V
+    .line 781
+    invoke-static {v0, p1, p2, v1, v1}, Lcom/oppo/camera/util/Util;->a(Landroid/view/View;IILandroid/view/animation/Interpolator;Landroid/animation/Animator$AnimatorListener;)V
 
     goto :goto_0
 
-    .line 741
+    .line 784
     :cond_1
     invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -617,365 +744,17 @@
     return-void
 .end method
 
-.method static synthetic b(Lcom/oppo/camera/ui/beauty3d/f;)Z
-    .locals 0
-
-    .line 48
-    iget-boolean p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->l:Z
-
-    return p0
-.end method
-
-.method static synthetic b(Lcom/oppo/camera/ui/beauty3d/f;Z)Z
-    .locals 0
-
-    .line 48
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->d:Z
-
-    return p1
-.end method
-
-.method static synthetic c(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/app/Activity;
-    .locals 0
-
-    .line 48
-    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
-
-    return-object p0
-.end method
-
-.method private c(I)V
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    .line 970
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
-
-    const/4 v3, 0x0
-
-    if-nez v1, :cond_0
-
-    .line 971
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
-
-    if-eqz v1, :cond_0
-
-    .line 972
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
-
-    const/4 v4, 0x2
-
-    new-array v5, v4, [F
-
-    fill-array-data v5, :array_0
-
-    const-string v6, "alpha"
-
-    invoke-static {v1, v6, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v1
-
-    const-wide/16 v7, 0x12c
-
-    .line 974
-    invoke-virtual {v1, v7, v8}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 975
-    iget-object v5, v0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v1, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 977
-    iget-object v5, v0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
-
-    new-array v9, v4, [F
-
-    fill-array-data v9, :array_1
-
-    invoke-static {v5, v6, v9}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    .line 979
-    invoke-virtual {v5, v7, v8}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 980
-    iget-object v9, v0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v5, v9}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 982
-    new-array v9, v4, [F
-
-    fill-array-data v9, :array_2
-
-    const-string v10, "scaleX"
-
-    invoke-static {v10, v9}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v9
-
-    .line 984
-    new-array v10, v4, [F
-
-    fill-array-data v10, :array_3
-
-    const-string v11, "scaleY"
-
-    invoke-static {v11, v10}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v10
-
-    .line 986
-    new-array v11, v4, [F
-
-    fill-array-data v11, :array_4
-
-    invoke-static {v6, v11}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v11
-
-    .line 988
-    iget-object v12, v0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
-
-    const/4 v13, 0x3
-
-    new-array v14, v13, [Landroid/animation/PropertyValuesHolder;
-
-    aput-object v9, v14, v3
-
-    const/4 v9, 0x1
-
-    aput-object v10, v14, v9
-
-    aput-object v11, v14, v4
-
-    invoke-static {v12, v14}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
-
-    move-result-object v10
-
-    .line 990
-    iget-object v11, v0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v10, v11}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    const-wide/16 v11, 0x1ae
-
-    .line 991
-    invoke-virtual {v10, v11, v12}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 992
-    iget-object v14, v0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/widget/ImageView;
-
-    new-array v15, v4, [F
-
-    fill-array-data v15, :array_5
-
-    const-string v2, "rotation"
-
-    invoke-static {v14, v2, v15}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
-
-    .line 994
-    new-instance v14, Landroid/view/animation/LinearInterpolator;
-
-    invoke-direct {v14}, Landroid/view/animation/LinearInterpolator;-><init>()V
-
-    invoke-virtual {v2, v14}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 995
-    invoke-virtual {v2, v11, v12}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    const/4 v11, -0x1
-
-    .line 996
-    invoke-virtual {v2, v11}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
-
-    .line 998
-    iget-object v12, v0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
-
-    new-array v14, v4, [F
-
-    fill-array-data v14, :array_6
-
-    invoke-static {v12, v6, v14}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v6
-
-    .line 1000
-    invoke-virtual {v6, v11}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
-
-    .line 1001
-    invoke-virtual {v6, v4}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
-
-    const-wide/16 v11, 0x320
-
-    .line 1002
-    invoke-virtual {v6, v11, v12}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 1003
-    invoke-virtual {v6, v7, v8}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
-
-    .line 1005
-    new-instance v7, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v7}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v7, v0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
-
-    .line 1006
-    iget-object v7, v0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
-
-    const/4 v8, 0x5
-
-    new-array v8, v8, [Landroid/animation/Animator;
-
-    aput-object v1, v8, v3
-
-    aput-object v5, v8, v9
-
-    aput-object v10, v8, v4
-
-    aput-object v2, v8, v13
-
-    const/4 v1, 0x4
-
-    aput-object v6, v8, v1
-
-    invoke-virtual {v7, v8}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
-
-    .line 1011
-    :cond_0
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 1012
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
-
-    if-eqz v1, :cond_1
-
-    move/from16 v2, p1
-
-    .line 1013
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
-
-    :cond_1
-    const-string v1, "Beauty3DGuideScanUI"
-
-    const-string v2, "startScanLoadAnimation, mScanLoadAnimation start"
-
-    .line 1016
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 1018
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 1019
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v1, v3}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 1020
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
-
-    const/4 v2, 0x4
-
-    invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->setVisibility(I)V
-
-    .line 1021
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 1023
-    iget-object v1, v0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
-
-    if-eqz v1, :cond_2
-
-    const v2, 0x7f090219
-
-    .line 1024
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    const v2, 0x7f08019f
-
-    .line 1025
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    :cond_2
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
-
-    :array_1
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x3f4ccccd    # 0.8f
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x3f4ccccd    # 0.8f
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_4
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_5
-    .array-data 4
-        0x0
-        0x41400000    # 12.0f
-    .end array-data
-
-    :array_6
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3ecccccd    # 0.4f
-    .end array-data
-.end method
-
 .method private c(Z)V
     .locals 2
 
-    .line 641
+    .line 686
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 643
+    .line 688
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -992,7 +771,7 @@
 
     goto :goto_0
 
-    .line 645
+    .line 690
     :cond_0
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
@@ -1000,7 +779,7 @@
 
     move-result-object p1
 
-    const v1, 0x7f060021
+    const v1, 0x7f060022
 
     invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1016,8 +795,8 @@
 .method static synthetic c(Lcom/oppo/camera/ui/beauty3d/f;Z)Z
     .locals 0
 
-    .line 48
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Z
+    .line 45
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Z
 
     return p1
 .end method
@@ -1025,16 +804,219 @@
 .method static synthetic d(Lcom/oppo/camera/ui/beauty3d/f;)Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
     .locals 0
 
-    .line 48
+    .line 45
     iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
 
     return-object p0
 .end method
 
+.method private d(I)V
+    .locals 6
+
+    .line 1005
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_0
+
+    .line 1006
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_0
+
+    .line 1007
+    new-instance v2, Lcom/oppo/camera/ui/beauty3d/h;
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->N:[I
+
+    const/16 v4, 0x29
+
+    invoke-direct {v2, v0, v3, v4, v1}, Lcom/oppo/camera/ui/beauty3d/h;-><init>(Landroid/widget/ImageView;[IIZ)V
+
+    iput-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
+
+    .line 1011
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 1012
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->a()V
+
+    .line 1015
+    :cond_1
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->c()Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    .line 1016
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_2
+
+    .line 1017
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+
+    :cond_2
+    const-string p1, "Beauty3DGuideScanUI"
+
+    const-string v0, "startScanLoadAnim, mScanLoadAnimation start"
+
+    .line 1020
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1022
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->d()V
+
+    .line 1023
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->setVisibility(I)V
+
+    .line 1025
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
+
+    if-eqz v0, :cond_3
+
+    const v2, 0x7f090265
+
+    .line 1026
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    const v2, 0x7f08018e
+
+    .line 1027
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    :cond_3
+    const/4 v0, 0x2
+
+    .line 1030
+    new-array v2, v0, [F
+
+    fill-array-data v2, :array_0
+
+    const-string v3, "scaleX"
+
+    invoke-static {v3, v2}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
+
+    move-result-object v2
+
+    .line 1032
+    new-array v3, v0, [F
+
+    fill-array-data v3, :array_1
+
+    const-string v4, "scaleY"
+
+    invoke-static {v4, v3}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
+
+    move-result-object v3
+
+    .line 1035
+    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v4}, Landroid/animation/ObjectAnimator;->isRunning()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    .line 1036
+    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v4}, Landroid/animation/ObjectAnimator;->cancel()V
+
+    .line 1039
+    :cond_4
+    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
+
+    new-array v0, v0, [Landroid/animation/PropertyValuesHolder;
+
+    const/4 v5, 0x0
+
+    aput-object v2, v0, v5
+
+    aput-object v3, v0, v1
+
+    invoke-static {v4, v0}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+
+    .line 1040
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+
+    const-wide/16 v1, 0x1f4
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    .line 1041
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->L:Landroid/animation/TimeInterpolator;
+
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    const-string v0, "startScanLoadAnim, scaleAnim start"
+
+    .line 1043
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1045
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
+
+    :cond_5
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3f400000    # 0.75f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3f400000    # 0.75f
+    .end array-data
+.end method
+
 .method static synthetic e(Lcom/oppo/camera/ui/beauty3d/f;)V
     .locals 0
 
-    .line 48
+    .line 45
     invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->m()V
 
     return-void
@@ -1043,8 +1025,8 @@
 .method static synthetic f(Lcom/oppo/camera/ui/beauty3d/f;)V
     .locals 0
 
-    .line 48
-    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->r()V
+    .line 45
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->q()V
 
     return-void
 .end method
@@ -1052,17 +1034,26 @@
 .method static synthetic g(Lcom/oppo/camera/ui/beauty3d/f;)Lcom/oppo/camera/ui/beauty3d/e;
     .locals 0
 
-    .line 48
+    .line 45
     iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     return-object p0
 .end method
 
-.method static synthetic h(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/os/Handler;
+.method static synthetic h(Lcom/oppo/camera/ui/beauty3d/f;)Z
     .locals 0
 
-    .line 48
-    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:Landroid/os/Handler;
+    .line 45
+    iget-boolean p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Z
+
+    return p0
+.end method
+
+.method static synthetic i(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/os/Handler;
+    .locals 0
+
+    .line 45
+    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
 
     return-object p0
 .end method
@@ -1070,12 +1061,12 @@
 .method private i()V
     .locals 4
 
-    .line 315
+    .line 368
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 316
+    .line 369
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -1094,7 +1085,7 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    .line 319
+    .line 372
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
@@ -1103,24 +1094,24 @@
     return-void
 .end method
 
-.method static synthetic i(Lcom/oppo/camera/ui/beauty3d/f;)Z
+.method static synthetic j(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/widget/ImageView;
     .locals 0
 
-    .line 48
-    iget-boolean p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
+    .line 45
+    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
-    return p0
+    return-object p0
 .end method
 
 .method private j()V
     .locals 4
 
-    .line 323
+    .line 376
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 324
+    .line 377
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -1139,36 +1130,23 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    .line 327
+    .line 380
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 328
+    .line 381
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 329
+    .line 382
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f09020b
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Landroid/widget/RelativeLayout;
-
-    .line 330
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
-
-    const v1, 0x7f090149
+    const v1, 0x7f090162
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1178,10 +1156,10 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
 
-    .line 331
+    .line 383
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f09021b
+    const v1, 0x7f090267
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1191,10 +1169,10 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
 
-    .line 332
+    .line 384
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f09021c
+    const v1, 0x7f090268
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1204,10 +1182,10 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
 
-    .line 333
+    .line 385
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f09021e
+    const v1, 0x7f09026a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1220,200 +1198,60 @@
     return-void
 .end method
 
-.method static synthetic j(Lcom/oppo/camera/ui/beauty3d/f;)Z
-    .locals 0
-
-    .line 48
-    iget-boolean p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Z
-
-    return p0
-.end method
-
-.method static synthetic k(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/widget/FrameLayout;
-    .locals 0
-
-    .line 48
-    iget-object p0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
-
-    return-object p0
-.end method
-
 .method private k()V
-    .locals 11
+    .locals 3
 
-    .line 349
+    .line 401
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     const/4 v1, 0x2
 
-    new-array v2, v1, [F
+    new-array v1, v1, [F
 
-    fill-array-data v2, :array_0
+    fill-array-data v1, :array_0
 
-    const-string v3, "alpha"
+    const-string v2, "alpha"
 
-    invoke-static {v0, v3, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+    invoke-static {v0, v2, v1}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
-    .line 350
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    .line 402
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    .line 352
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Landroid/animation/TimeInterpolator;
 
-    new-array v3, v1, [F
+    invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    fill-array-data v3, :array_1
+    .line 403
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    const-string v4, "translationY"
+    const-wide/16 v1, 0x140
 
-    invoke-static {v2, v4, v3}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
-
-    .line 354
-    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 355
-    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
-
-    new-array v5, v1, [F
-
-    fill-array-data v5, :array_2
-
-    invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v3
-
-    .line 357
-    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v3, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 359
-    new-array v4, v1, [F
-
-    fill-array-data v4, :array_3
-
-    const-string v5, "scaleX"
-
-    invoke-static {v5, v4}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v4
-
-    .line 360
-    new-array v5, v1, [F
-
-    fill-array-data v5, :array_4
-
-    const-string v6, "scaleY"
-
-    invoke-static {v6, v5}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v5
-
-    .line 361
-    iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Landroid/widget/RelativeLayout;
-
-    new-array v7, v1, [Landroid/animation/PropertyValuesHolder;
-
-    const/4 v8, 0x0
-
-    aput-object v4, v7, v8
-
-    const/4 v4, 0x1
-
-    aput-object v5, v7, v4
-
-    invoke-static {v6, v7}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    .line 362
-    iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v5, v6}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 364
-    new-instance v6, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v6}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
-
-    .line 365
-    iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
-
-    const-wide/16 v9, 0x168
-
-    invoke-virtual {v6, v9, v10}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
-
-    .line 366
-    iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
-
-    const/4 v7, 0x4
-
-    new-array v7, v7, [Landroid/animation/Animator;
-
-    aput-object v0, v7, v8
-
-    aput-object v2, v7, v4
-
-    aput-object v3, v7, v1
-
-    const/4 v0, 0x3
-
-    aput-object v5, v7, v0
-
-    invoke-virtual {v6, v7}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
-
-    :array_1
-    .array-data 4
-        0x42480000    # 50.0f
-        0x0
-    .end array-data
-
-    :array_2
-    .array-data 4
-        0x42480000    # 50.0f
-        0x0
-    .end array-data
-
-    :array_3
-    .array-data 4
-        0x3f8ccccd    # 1.1f
-        0x3f800000    # 1.0f
-    .end array-data
-
-    :array_4
-    .array-data 4
-        0x3f8ccccd    # 1.1f
-        0x3f800000    # 1.0f
-    .end array-data
 .end method
 
 .method private l()V
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
-    .line 470
+    .line 509
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
 
-    .line 472
+    .line 511
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -1426,140 +1264,139 @@
 
     if-eqz v0, :cond_0
 
-    .line 473
+    .line 512
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 476
+    .line 515
     :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    if-eqz v0, :cond_2
+
+    .line 516
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 517
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->a()V
+
+    .line 520
+    :cond_1
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->d()V
+
+    .line 523
+    :cond_2
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    if-eqz v0, :cond_1
-
-    const/4 v2, 0x2
-
-    .line 477
-    new-array v2, v2, [F
-
-    fill-array-data v2, :array_0
-
-    const-string v3, "alpha"
-
-    invoke-static {v0, v3, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    .line 478
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v0, v2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    const-wide/16 v2, 0xc8
-
-    .line 479
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    .line 480
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
-
-    .line 481
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
+    if-eqz v0, :cond_3
 
     const/4 v2, 0x4
 
+    .line 524
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 482
+    .line 525
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setClickable(Z)V
 
-    :cond_1
+    :cond_3
     return-void
-
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
 .end method
 
 .method private m()V
     .locals 1
 
-    .line 565
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 606
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isRunning()Z
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 566
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 607
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 569
+    .line 610
     :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_1
 
-    .line 570
+    .line 611
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
     const/4 v0, 0x0
 
-    .line 571
-    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
+    .line 612
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
 
-    .line 574
+    .line 615
     :cond_1
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
 
     if-eqz v0, :cond_2
 
-    .line 575
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+    .line 616
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->a()V
 
-    .line 578
+    .line 619
     :cond_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
 
     if-eqz v0, :cond_3
+
+    .line 620
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->a()V
+
+    .line 623
+    :cond_3
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
+
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isRunning()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    .line 579
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 624
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
 .method private n()V
     .locals 5
 
-    .line 651
+    .line 696
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 652
+    .line 697
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    const v1, 0x7f09007b
+    const v1, 0x7f09007f
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -1567,7 +1404,7 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 653
+    .line 698
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -1586,7 +1423,7 @@
 
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
-    .line 654
+    .line 699
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
@@ -1595,7 +1432,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f060021
+    const v3, 0x7f060022
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1603,17 +1440,17 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 655
+    .line 700
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 657
+    .line 702
     iget-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->i:Z
 
     if-nez v1, :cond_0
 
-    .line 658
+    .line 703
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v2, -0x1
@@ -1622,19 +1459,19 @@
 
     invoke-direct {v1, v2, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    const/16 v2, 0xe
+    const/16 v2, 0xa
 
-    .line 660
+    .line 705
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 661
+    .line 706
     iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0700cb
+    const v3, 0x7f0700bd
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1644,17 +1481,17 @@
 
     iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 662
+    .line 707
     iput v4, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 663
+    .line 708
     iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     invoke-virtual {v0, v2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 v0, 0x1
 
-    .line 664
+    .line 709
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->i:Z
 
     :cond_0
@@ -1664,12 +1501,12 @@
 .method private o()V
     .locals 5
 
-    .line 706
+    .line 749
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 707
+    .line 750
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -1688,7 +1525,7 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    .line 708
+    .line 751
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
@@ -1697,7 +1534,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060021
+    const v2, 0x7f060022
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1705,10 +1542,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 709
+    .line 752
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    const v1, 0x7f09007b
+    const v1, 0x7f09007f
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
@@ -1716,12 +1553,12 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 711
+    .line 754
     iget-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->k:Z
 
     if-nez v1, :cond_0
 
-    .line 712
+    .line 755
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v2, -0x1
@@ -1732,129 +1569,99 @@
 
     const/16 v2, 0xc
 
-    .line 714
+    .line 757
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 715
+    .line 758
     iput v3, v1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 716
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
-
-    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f07029e
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    .line 759
+    invoke-static {}, Lcom/oppo/camera/util/Util;->E()I
 
     move-result v2
 
-    float-to-int v2, v2
-
     iput v2, v1, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 717
+    .line 760
     iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     invoke-virtual {v0, v2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 v0, 0x1
 
-    .line 718
+    .line 761
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->k:Z
 
     :cond_0
     return-void
 .end method
 
-.method private p()I
+.method private p()V
     .locals 2
 
-    .line 796
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0700c6
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-
-    .line 798
-    invoke-static {}, Lcom/oppo/camera/util/Util;->S()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 799
-    invoke-static {}, Lcom/oppo/camera/util/Util;->R()I
-
-    move-result v0
-
-    :cond_0
-    return v0
-.end method
-
-.method private q()V
-    .locals 1
-
-    .line 827
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
+    .line 871
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
 
     if-eqz v0, :cond_0
 
-    .line 828
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
+    .line 872
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/h;->a()V
 
     :cond_0
     const/4 v0, 0x0
 
-    .line 831
-    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
+    .line 875
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    .line 877
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
+
+    if-eqz v1, :cond_1
+
+    .line 878
+    invoke-virtual {v1}, Lcom/oppo/camera/ui/beauty3d/h;->a()V
+
+    .line 881
+    :cond_1
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Lcom/oppo/camera/ui/beauty3d/h;
 
     return-void
 .end method
 
-.method private r()V
+.method private q()V
     .locals 2
 
-    .line 835
+    .line 885
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
 
     const/4 v1, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 836
+    .line 886
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 839
+    .line 889
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_1
 
-    .line 840
+    .line 890
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 843
+    .line 893
     :cond_1
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_2
 
-    .line 844
+    .line 894
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 847
+    .line 897
     :cond_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_3
 
@@ -1864,14 +1671,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 848
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    .line 898
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 851
+    .line 901
     :cond_3
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_4
 
@@ -1881,14 +1688,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 852
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+    .line 902
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 855
+    .line 905
     :cond_4
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_5
 
@@ -1898,14 +1705,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 856
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+    .line 906
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 859
+    .line 909
     :cond_5
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_6
 
@@ -1915,8 +1722,8 @@
 
     if-eqz v0, :cond_6
 
-    .line 860
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/ObjectAnimator;
+    .line 910
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
@@ -1937,7 +1744,7 @@
 
     if-nez p1, :cond_0
 
-    .line 248
+    .line 301
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
     if-eqz p1, :cond_4
@@ -1946,28 +1753,28 @@
 
     if-eqz v3, :cond_4
 
-    .line 249
+    .line 302
     iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->g:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     const-string p1, "onViewDismiss, mRootView.removeGuideView."
 
-    .line 251
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 304
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 253
+    .line 306
     iput-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    .line 254
+    .line 307
     iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
-    .line 256
+    .line 309
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     if-eqz p1, :cond_4
 
-    .line 257
+    .line 310
     invoke-interface {p1}, Lcom/oppo/camera/ui/beauty3d/e;->a()V
 
     goto :goto_0
@@ -1977,7 +1784,7 @@
 
     if-ne v3, p1, :cond_4
 
-    .line 261
+    .line 314
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     if-eqz p1, :cond_1
@@ -1986,23 +1793,23 @@
 
     if-eqz v3, :cond_1
 
-    .line 262
+    .line 315
     iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->f:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     const-string p1, "onViewDismiss, mRootPreviewView.removeScanView."
 
-    .line 264
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 317
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
+    .line 319
     iput-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    .line 267
+    .line 320
     iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
-    .line 270
+    .line 323
     :cond_1
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
@@ -2012,18 +1819,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 271
+    .line 324
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->g:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 272
+    .line 325
     iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->i:Z
 
-    .line 273
+    .line 326
     iput-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
-    .line 276
+    .line 329
     :cond_2
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
@@ -2033,194 +1840,40 @@
 
     if-eqz v0, :cond_3
 
-    .line 277
+    .line 330
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->g:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 278
+    .line 331
     iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->k:Z
 
-    .line 279
+    .line 332
     iput-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    .line 282
+    .line 335
     :cond_3
-    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->q()V
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->p()V
 
     :cond_4
     :goto_0
     return-void
 .end method
 
-.method public a(II)V
-    .locals 2
-
-    const/4 v0, 0x2
-
-    .line 768
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    aput p1, v0, v1
-
-    const/4 p1, 0x1
-
-    aput p2, v0, p1
-
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    const-wide/16 v0, 0x294
-
-    .line 769
-    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    .line 770
-    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 771
-    new-instance p2, Lcom/oppo/camera/ui/beauty3d/f$3;
-
-    invoke-direct {p2, p0}, Lcom/oppo/camera/ui/beauty3d/f$3;-><init>(Lcom/oppo/camera/ui/beauty3d/f;)V
-
-    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 783
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
-
-    return-void
-.end method
-
 .method public a(IZ)V
-    .locals 2
+    .locals 0
 
-    .line 677
-    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->o()V
+    .line 502
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->k()V
 
-    .line 678
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
+    .line 503
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/beauty3d/f;->a(Z)V
 
-    const v0, 0x7f090214
+    .line 504
+    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/beauty3d/f;->b(IZ)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/TextView;
-
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
-
-    .line 679
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
-
-    const v0, 0x7f090260
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/Button;
-
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
-
-    .line 681
-    invoke-static {}, Lcom/oppo/camera/util/Util;->S()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 682
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
-
-    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/widget/TextView;)V
-
-    .line 685
-    :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 686
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 687
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    if-eqz p2, :cond_1
-
-    .line 690
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
-
-    const p2, 0x7f06002c
-
-    invoke-virtual {p1, p2}, Landroid/app/Activity;->getColor(I)I
-
-    move-result p1
-
-    .line 691
-    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->b(IZ)V
-
-    .line 694
-    :cond_1
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setEnabled(Z)V
-
-    .line 695
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
-
-    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setClickable(Z)V
-
-    .line 696
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 697
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
-
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->a(I)V
-
-    .line 698
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, p2}, Landroid/widget/Button;->setAlpha(F)V
-
-    .line 699
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
-
-    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 700
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
-
-    invoke-virtual {p1, v1}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 701
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
-
-    invoke-virtual {p1, v1}, Landroid/widget/Button;->setClickable(Z)V
-
-    .line 702
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
-
-    invoke-virtual {p1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    .line 505
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->l()V
 
     return-void
 .end method
@@ -2228,7 +1881,7 @@
 .method public a(IZII)V
     .locals 8
 
-    .line 183
+    .line 236
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
     if-eqz v0, :cond_1
@@ -2239,11 +1892,11 @@
 
     goto :goto_0
 
-    .line 187
+    .line 240
     :cond_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->i()V
 
-    .line 189
+    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2262,17 +1915,17 @@
 
     const-string v1, "Beauty3DGuideScanUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
+    .line 244
     iget-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
     if-nez v0, :cond_1
 
-    .line 192
+    .line 245
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    const v1, 0x7f09025f
+    const v1, 0x7f0902af
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2280,13 +1933,13 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    .line 193
+    .line 246
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 194
+    .line 247
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    const v1, 0x7f090247
+    const v1, 0x7f090294
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2296,7 +1949,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 195
+    .line 248
     invoke-virtual {v4, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const/4 v5, 0x0
@@ -2311,12 +1964,12 @@
 
     move v7, p4
 
-    .line 196
+    .line 249
     invoke-direct/range {v1 .. v7}, Lcom/oppo/camera/ui/beauty3d/f;->a(IZLandroid/widget/TextView;ZII)Landroid/widget/RelativeLayout$LayoutParams;
 
     move-result-object p1
 
-    .line 199
+    .line 252
     iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->g:Landroid/view/ViewGroup;
 
     iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
@@ -2325,7 +1978,7 @@
 
     const/4 p1, 0x1
 
-    .line 200
+    .line 253
     iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
     :cond_1
@@ -2338,7 +1991,7 @@
 
     if-eqz p2, :cond_3
 
-    .line 940
+    .line 975
     invoke-virtual {p2}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -2352,7 +2005,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 944
+    .line 979
     invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isRunning()Z
 
     move-result v1
@@ -2361,22 +2014,22 @@
 
     const-string p1, "playFadeOutArrowAnim, animator is Running"
 
-    .line 945
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 980
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
     :cond_1
     const-string v1, "playFadeOutArrowAnim"
 
-    .line 950
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 985
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_2
 
     const/4 p1, 0x2
 
-    .line 953
+    .line 988
     new-array p1, p1, [F
 
     fill-array-data p1, :array_0
@@ -2387,25 +2040,25 @@
 
     move-result-object p1
 
-    .line 954
-    new-instance v0, Lcom/oppo/camera/ui/beauty3d/f$4;
+    .line 989
+    new-instance v0, Lcom/oppo/camera/ui/beauty3d/f$3;
 
-    invoke-direct {v0, p0, p2}, Lcom/oppo/camera/ui/beauty3d/f$4;-><init>(Lcom/oppo/camera/ui/beauty3d/f;Landroid/view/View;)V
+    invoke-direct {v0, p0, p2}, Lcom/oppo/camera/ui/beauty3d/f$3;-><init>(Lcom/oppo/camera/ui/beauty3d/f;Landroid/view/View;)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 964
+    .line 999
     :cond_2
-    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
+    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
     const-wide/16 v0, 0xc8
 
-    .line 965
+    .line 1000
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 966
+    .line 1001
     invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
 
     :cond_3
@@ -2420,22 +2073,22 @@
 .end method
 
 .method public a(Landroid/view/View;Ljava/lang/String;)V
-    .locals 13
+    .locals 7
 
     if-eqz p1, :cond_3
 
-    .line 895
+    .line 945
     invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    .line 899
+    .line 949
     :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_1
 
@@ -2445,215 +2098,149 @@
 
     if-eqz v0, :cond_1
 
-    .line 900
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    .line 950
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
     :cond_1
-    const v0, 0x3dfd3f50
+    const-string v0, "Beauty3DGuideScanUI"
 
-    const/high16 v1, 0x3f000000    # 0.5f
+    const-string v1, "playStartArrowAnim"
 
-    const v2, 0x3f1fa7ea
+    .line 953
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/16 v0, 0x64
+
+    .line 958
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result v1
+
+    const v2, 0x7f090268
 
     const/4 v3, 0x0
 
-    .line 908
-    invoke-static {v3, v3}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    const/4 v4, 0x2
 
-    move-result-object v4
+    const/4 v5, 0x1
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    const/4 v6, 0x0
 
-    .line 909
-    invoke-static {v0, v5}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    if-ne v1, v2, :cond_2
 
-    move-result-object v6
+    .line 959
+    new-array v1, v4, [F
 
-    .line 910
-    invoke-static {v1, v5}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    aput v3, v1, v6
 
-    move-result-object v7
+    int-to-float v0, v0
 
-    .line 911
-    invoke-static {v2, v3}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    aput v0, v1, v5
 
-    move-result-object v8
+    invoke-static {p2, v1}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
-    .line 912
-    invoke-static {v5, v3}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
-
-    move-result-object v9
-
-    .line 913
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v10
-
-    const v11, 0x7f09021c
-
-    if-ne v10, v11, :cond_2
-
-    const/high16 v10, 0x41a00000    # 20.0f
+    move-result-object p2
 
     goto :goto_0
 
+    .line 961
     :cond_2
-    const/high16 v10, -0x3e600000    # -20.0f
+    new-array v0, v4, [F
+
+    aput v3, v0, v6
+
+    const/16 v1, -0x64
+
+    int-to-float v1, v1
+
+    aput v1, v0, v5
+
+    invoke-static {p2, v0}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
+
+    move-result-object p2
 
     :goto_0
-    neg-float v11, v10
+    const/4 v0, 0x4
 
-    .line 914
-    invoke-static {v3, v11}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    .line 964
+    new-array v0, v0, [F
 
-    move-result-object v11
+    fill-array-data v0, :array_0
 
-    .line 915
-    invoke-static {v0, v3}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    const-string v1, "alpha"
+
+    invoke-static {v1, v0}, Landroid/animation/PropertyValuesHolder;->ofFloat(Ljava/lang/String;[F)Landroid/animation/PropertyValuesHolder;
 
     move-result-object v0
 
-    .line 916
-    invoke-static {v1, v3}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    .line 965
+    new-array v1, v4, [Landroid/animation/PropertyValuesHolder;
 
-    move-result-object v1
+    aput-object p2, v1, v6
 
-    .line 917
-    invoke-static {v2, v10}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
+    aput-object v0, v1, v5
 
-    move-result-object v2
-
-    .line 918
-    invoke-static {v5, v10}, Landroid/animation/Keyframe;->ofFloat(FF)Landroid/animation/Keyframe;
-
-    move-result-object v3
-
-    .line 919
-    iget-object v5, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v6, v5}, Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 920
-    iget-object v5, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v8, v5}, Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 921
-    iget-object v5, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v0, v5}, Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 922
-    iget-object v5, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {v2, v5}, Landroid/animation/Keyframe;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    const/4 v5, 0x5
-
-    .line 923
-    new-array v10, v5, [Landroid/animation/Keyframe;
-
-    const/4 v12, 0x0
-
-    aput-object v4, v10, v12
-
-    const/4 v4, 0x1
-
-    aput-object v6, v10, v4
-
-    const/4 v6, 0x2
-
-    aput-object v7, v10, v6
-
-    const/4 v7, 0x3
-
-    aput-object v8, v10, v7
-
-    const/4 v8, 0x4
-
-    aput-object v9, v10, v8
-
-    const-string v9, "alpha"
-
-    invoke-static {v9, v10}, Landroid/animation/PropertyValuesHolder;->ofKeyframe(Ljava/lang/String;[Landroid/animation/Keyframe;)Landroid/animation/PropertyValuesHolder;
-
-    move-result-object v9
-
-    .line 925
-    new-array v5, v5, [Landroid/animation/Keyframe;
-
-    aput-object v11, v5, v12
-
-    aput-object v0, v5, v4
-
-    aput-object v1, v5, v6
-
-    aput-object v2, v5, v7
-
-    aput-object v3, v5, v8
-
-    invoke-static {p2, v5}, Landroid/animation/PropertyValuesHolder;->ofKeyframe(Ljava/lang/String;[Landroid/animation/Keyframe;)Landroid/animation/PropertyValuesHolder;
+    invoke-static {p1, v1}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
 
     move-result-object p2
 
-    .line 928
-    new-array v0, v6, [Landroid/animation/PropertyValuesHolder;
+    iput-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
-    aput-object v9, v0, v12
+    .line 966
+    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
-    aput-object p2, v0, v4
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
 
-    invoke-static {p1, v0}, Landroid/animation/ObjectAnimator;->ofPropertyValuesHolder(Ljava/lang/Object;[Landroid/animation/PropertyValuesHolder;)Landroid/animation/ObjectAnimator;
+    invoke-virtual {p2, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    move-result-object p2
+    .line 967
+    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
-    iput-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
-
-    .line 929
-    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
-
-    const-wide/16 v0, 0x744
+    const-wide/16 v0, 0x4b0
 
     invoke-virtual {p2, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 930
-    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    .line 968
+    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
     const/4 v0, -0x1
 
     invoke-virtual {p2, v0}, Landroid/animation/ObjectAnimator;->setRepeatCount(I)V
 
-    .line 931
-    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    .line 969
+    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {p2, v4}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
+    invoke-virtual {p2, v5}, Landroid/animation/ObjectAnimator;->setRepeatMode(I)V
 
-    const-string p2, "Beauty3DGuideScanUI"
-
-    const-string v0, "playStartArrowAnim"
-
-    .line 933
-    invoke-static {p2, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 935
-    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    .line 970
+    iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {p2}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 936
-    invoke-virtual {p1, v12}, Landroid/view/View;->setVisibility(I)V
+    .line 971
+    invoke-virtual {p1, v6}, Landroid/view/View;->setVisibility(I)V
 
     :cond_3
     :goto_1
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x0
+    .end array-data
 .end method
 
 .method public a(Lcom/oppo/camera/ui/beauty3d/e;)V
     .locals 0
 
-    .line 167
+    .line 220
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     return-void
@@ -2662,8 +2249,8 @@
 .method public a(Ljava/lang/Integer;)V
     .locals 2
 
-    .line 370
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:Landroid/os/Handler;
+    .line 407
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
@@ -2673,22 +2260,22 @@
 
     const/4 v1, 0x1
 
-    .line 371
+    .line 408
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 372
+    .line 409
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 373
+    .line 410
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 374
+    .line 411
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 375
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:Landroid/os/Handler;
+    .line 412
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
 
     invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -2697,17 +2284,17 @@
 .end method
 
 .method public a(Ljava/lang/String;)V
-    .locals 2
+    .locals 12
 
-    .line 815
+    .line 839
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
 
-    .line 816
+    .line 840
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f090149
+    const v1, 0x7f090162
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2717,47 +2304,178 @@
 
     iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
 
-    .line 819
+    .line 843
     :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 845
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
+
+    if-nez v0, :cond_3
+
+    .line 846
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    :goto_0
+    const/4 v3, 0x5
+
+    const/4 v4, 0x4
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x2
+
+    const/16 v7, -0x1e
+
+    const/4 v8, 0x6
+
+    const-string v9, "translationX"
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x1e
+
+    if-eqz v0, :cond_2
+
+    .line 849
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
+
+    new-array v8, v8, [F
+
+    aput v10, v8, v1
+
+    int-to-float v1, v11
+
+    aput v1, v8, v2
+
+    int-to-float v2, v7
+
+    aput v2, v8, v6
+
+    aput v1, v8, v5
+
+    aput v2, v8, v4
+
+    aput v10, v8, v3
+
+    invoke-static {v0, v9, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
+
+    goto :goto_1
+
+    .line 852
+    :cond_2
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
+
+    new-array v8, v8, [F
+
+    aput v10, v8, v1
+
+    int-to-float v1, v7
+
+    aput v1, v8, v2
+
+    int-to-float v2, v11
+
+    aput v2, v8, v6
+
+    aput v1, v8, v5
+
+    aput v2, v8, v4
+
+    aput v10, v8, v3
+
+    invoke-static {v0, v9, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
+
+    .line 857
+    :cond_3
+    :goto_1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_4
 
-    .line 820
+    .line 858
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_0
+    .line 861
+    :cond_4
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
 
-    .line 822
-    :cond_1
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->r:Landroid/widget/TextView;
+    const-wide/16 v0, 0x12c
 
-    const-string v0, ""
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    .line 863
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
 
-    :goto_0
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isRunning()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    .line 864
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->cancel()V
+
+    .line 867
+    :cond_5
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
+
     return-void
 .end method
 
 .method public a(Z)V
     .locals 2
 
-    .line 631
+    .line 676
     invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->n()V
 
-    .line 632
+    .line 677
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 633
+    .line 678
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     const/4 v1, 0x1
@@ -2766,7 +2484,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 636
+    .line 681
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/f;->c(Z)V
 
     :cond_0
@@ -2776,14 +2494,12 @@
 .method public a(ZZ)V
     .locals 4
 
-    .line 487
+    .line 530
     iget-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->d:Z
-
-    const-string v1, "Beauty3DGuideScanUI"
 
     if-eqz v0, :cond_0
 
-    .line 488
+    .line 531
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2804,61 +2520,40 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const-string p2, "Beauty3DGuideScanUI"
+
+    invoke-static {p2, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 493
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "stop3DScan, needAnim: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v2, ", needRemove: "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     const/4 v0, 0x1
 
-    .line 495
+    .line 536
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->d:Z
 
     const/4 v1, 0x0
 
-    .line 496
+    .line 537
     iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
 
-    .line 498
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:Landroid/os/Handler;
+    .line 539
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    .line 499
+    .line 540
     invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 500
+    .line 541
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->l:Z
 
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 504
+    .line 545
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     const/4 v0, 0x2
@@ -2873,59 +2568,59 @@
 
     move-result-object p1
 
-    .line 505
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->K:Landroid/animation/TimeInterpolator;
+    .line 546
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->J:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    const-wide/16 v0, 0x168
+    const-wide/16 v0, 0x140
 
-    .line 506
+    .line 547
     invoke-virtual {p1, v0, v1}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 507
+    .line 548
     new-instance v0, Lcom/oppo/camera/ui/beauty3d/f$2;
 
     invoke-direct {v0, p0, p2}, Lcom/oppo/camera/ui/beauty3d/f$2;-><init>(Lcom/oppo/camera/ui/beauty3d/f;Z)V
 
     invoke-virtual {p1, v0}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 543
+    .line 584
     invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
 
     goto :goto_1
 
-    .line 545
+    .line 586
     :cond_2
     invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->m()V
 
-    .line 546
-    iput-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 587
+    iput-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    .line 548
-    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->r()V
+    .line 589
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->q()V
 
     if-eqz p2, :cond_3
 
-    .line 551
+    .line 592
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(I)V
 
     goto :goto_0
 
-    .line 553
+    .line 594
     :cond_3
     invoke-virtual {p0}, Lcom/oppo/camera/ui/beauty3d/f;->c()V
 
-    .line 556
+    .line 597
     :goto_0
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     if-eqz p1, :cond_4
 
-    .line 557
+    .line 598
     invoke-interface {p1, v1}, Lcom/oppo/camera/ui/beauty3d/e;->a(Z)V
 
-    .line 560
+    .line 601
     :cond_4
     iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->d:Z
 
@@ -2944,179 +2639,177 @@
 .method public a()Z
     .locals 1
 
-    .line 171
+    .line 224
     iget-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
     return v0
 .end method
 
 .method public b(I)V
-    .locals 3
+    .locals 2
 
-    const-string v0, "translationX"
+    .line 811
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
 
-    const-string v1, "Beauty3DGuideScanUI"
+    if-eqz v0, :cond_0
 
-    const v2, 0x7f10005a
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
 
-    if-eq p1, v2, :cond_5
+    if-eqz v1, :cond_0
 
-    const v2, 0x7f100024
+    const/4 v1, 0x2
 
-    if-ne p1, v2, :cond_0
+    .line 812
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    goto :goto_1
+    .line 813
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v0
+
+    .line 814
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    .line 815
+    iput v1, v0, Landroid/os/Message;->what:I
+
+    .line 816
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->O:Landroid/os/Handler;
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
     :cond_0
-    const v2, 0x7f10005b
+    return-void
+.end method
 
-    if-eq p1, v2, :cond_4
+.method public b(IZ)V
+    .locals 2
 
-    const v2, 0x7f100025
+    .line 722
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->o()V
 
-    if-ne p1, v2, :cond_1
+    .line 723
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    goto :goto_0
+    const v0, 0x7f090262
 
-    :cond_1
-    const v0, 0x7f10005c
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    if-ne p1, v0, :cond_2
+    move-result-object p1
 
-    const-string p1, "updateArrow, turn up"
+    check-cast p1, Landroid/widget/TextView;
 
-    .line 878
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
 
-    .line 880
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+    .line 724
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    const-string v0, "translationY"
+    const v0, 0x7f0902b0
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 881
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+    move-result-object p1
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+    check-cast p1, Landroid/widget/Button;
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    .line 882
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
-
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
-
-    goto :goto_2
-
-    .line 884
-    :cond_2
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isRunning()Z
+    .line 726
+    invoke-static {}, Lcom/oppo/camera/util/Util;->R()Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
-    .line 885
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+    .line 727
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->cancel()V
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/widget/TextView;)V
 
-    .line 888
-    :cond_3
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+    .line 730
+    :cond_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 889
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+    .line 731
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 890
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/ObjectAnimator;
+    .line 732
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+    invoke-virtual {p1, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    if-eqz p2, :cond_1
 
-    goto :goto_2
+    .line 735
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    :cond_4
-    :goto_0
-    const-string p1, "updateArrow, turn right"
+    const p2, 0x7f06002c
 
-    .line 872
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, Landroid/app/Activity;->getColor(I)I
 
-    .line 874
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+    move-result p1
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/view/View;Ljava/lang/String;)V
+    .line 736
+    invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->c(IZ)V
 
-    .line 875
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+    .line 739
+    :cond_1
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    .line 740
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
 
-    .line 876
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/ObjectAnimator;
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setClickable(Z)V
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+    .line 741
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->w:Landroid/widget/TextView;
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    goto :goto_2
+    .line 742
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    :cond_5
-    :goto_1
-    const-string p1, "updateArrow, turn left"
+    invoke-virtual {p1, v0}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 866
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 743
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    .line 868
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+    invoke-virtual {p1, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/view/View;Ljava/lang/String;)V
+    .line 744
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    .line 869
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
+    invoke-virtual {p1, v1}, Landroid/widget/Button;->setClickable(Z)V
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+    .line 745
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->x:Landroid/widget/Button;
 
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    invoke-virtual {p1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 870
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/ObjectAnimator;
-
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
-
-    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
-
-    :goto_2
     return-void
 .end method
 
 .method public b(IZII)V
-    .locals 7
+    .locals 8
 
-    .line 380
+    .line 417
     iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    if-eqz p4, :cond_6
+    if-eqz p4, :cond_7
 
     iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->f:Landroid/view/ViewGroup;
 
@@ -3124,11 +2817,14 @@
 
     goto/16 :goto_1
 
-    .line 384
+    .line 421
     :cond_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->j()V
 
-    .line 386
+    .line 422
+    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->k()V
+
+    .line 424
     new-instance p4, Ljava/lang/StringBuilder;
 
     invoke-direct {p4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3147,65 +2843,28 @@
 
     const-string v0, "Beauty3DGuideScanUI"
 
-    invoke-static {v0, p4}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p4}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
+    .line 426
     iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     const/4 v0, 0x0
 
     invoke-virtual {p4, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 390
+    .line 428
     iget-boolean p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
-    if-nez p4, :cond_4
+    const/4 v1, 0x1
 
-    .line 391
+    if-nez p4, :cond_5
+
+    .line 429
     iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f090217
+    const v2, 0x7f090263
 
-    invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p4
-
-    check-cast p4, Landroid/widget/ImageView;
-
-    iput-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/widget/ImageView;
-
-    .line 392
-    iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
-
-    const v1, 0x7f090215
-
-    invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p4
-
-    check-cast p4, Landroid/widget/FrameLayout;
-
-    iput-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
-
-    .line 393
-    iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
-
-    const v1, 0x7f0900a6
-
-    invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p4
-
-    check-cast p4, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
-
-    iput-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
-
-    .line 394
-    iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
-
-    const v1, 0x7f0900a7
-
-    invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p4, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p4
 
@@ -3213,217 +2872,249 @@
 
     iput-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
-    .line 395
+    .line 431
+    iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    if-nez p4, :cond_1
+
+    .line 432
+    new-instance p4, Lcom/oppo/camera/ui/beauty3d/h;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->M:[I
+
+    const/16 v4, 0x21
+
+    invoke-direct {p4, v2, v3, v4, v1}, Lcom/oppo/camera/ui/beauty3d/h;-><init>(Landroid/widget/ImageView;[IIZ)V
+
+    iput-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->s:Lcom/oppo/camera/ui/beauty3d/h;
+
+    .line 435
+    :cond_1
     iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f090219
+    const v2, 0x7f0900ad
 
-    invoke-virtual {p4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p4, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p4
+
+    check-cast p4, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
+
+    iput-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
+
+    .line 436
+    iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
+
+    const v2, 0x7f090265
+
+    invoke-virtual {p4, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p4
 
     check-cast p4, Landroid/widget/ImageView;
 
-    .line 396
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
-
-    const v2, 0x7f09021a
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 397
+    .line 437
     iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v3, 0x7f090218
+    const v3, 0x7f090266
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    const/4 v3, 0x2
+    .line 438
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    if-ne p1, v3, :cond_1
+    const v4, 0x7f090264
 
-    if-nez p2, :cond_1
+    invoke-virtual {v3, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    const/16 p3, 0x8
+    move-result-object v3
 
-    .line 400
-    invoke-virtual {v1, p3}, Landroid/view/View;->setVisibility(I)V
+    const/4 v4, 0x2
 
-    .line 401
-    invoke-virtual {v2, p3}, Landroid/view/View;->setVisibility(I)V
-
-    goto/16 :goto_0
-
-    :cond_1
-    const v3, 0x7f0700c9
-
-    const/16 v4, 0xa
-
-    if-nez p1, :cond_2
+    if-ne p1, v4, :cond_2
 
     if-nez p2, :cond_2
 
-    .line 403
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+    const/16 p3, 0x8
 
-    .line 404
+    .line 441
+    invoke-virtual {v2, p3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 442
+    invoke-virtual {v3, p3}, Landroid/view/View;->setVisibility(I)V
+
+    goto/16 :goto_0
+
+    :cond_2
+    const v4, 0x7f0700bb
+
+    const/16 v5, 0xa
+
+    if-nez p1, :cond_3
+
+    if-nez p2, :cond_3
+
+    .line 444
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 406
-    iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 445
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 447
+    iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
+
+    invoke-virtual {p3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 407
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
+    .line 448
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    float-to-int v1, v1
+    float-to-int v2, v2
 
-    .line 408
-    invoke-virtual {p3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    .line 449
+    invoke-virtual {p3, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 409
-    iput v1, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    .line 450
+    iput v2, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 410
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 451
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
-    invoke-virtual {v2, p3}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, p3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 412
+    .line 453
     invoke-virtual {p4}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 413
-    invoke-virtual {p3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    .line 454
+    invoke-virtual {p3, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 414
-    iput v1, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    .line 455
+    iput v2, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 415
+    .line 456
     invoke-virtual {p4, p3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    :cond_2
-    if-eqz p2, :cond_3
+    :cond_3
+    if-eqz p2, :cond_4
 
-    .line 417
-    iget-object v5, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
+    .line 458
+    iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    const v6, 0x7f090062
+    const v7, 0x7f090062
 
-    invoke-virtual {v5, v6}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v6, v7}, Landroid/app/Activity;->findViewById(I)Landroid/view/View;
 
-    move-result-object v5
+    move-result-object v6
 
-    .line 418
-    invoke-virtual {v5, v0}, Landroid/view/View;->setVisibility(I)V
+    .line 459
+    invoke-virtual {v6, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 421
-    iget-object v5, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
+    .line 462
+    iget-object v6, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    invoke-virtual {v5}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Landroid/widget/RelativeLayout$LayoutParams;
+    check-cast v6, Landroid/widget/RelativeLayout$LayoutParams;
 
-    const/16 v6, 0xc
+    const/16 v7, 0xc
 
-    .line 422
-    invoke-virtual {v5, v6}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    .line 463
+    invoke-virtual {v6, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 423
-    iput p3, v5, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
+    .line 464
+    iput p3, v6, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 424
+    .line 465
     iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    invoke-virtual {p3, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p3, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 426
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 427
+    .line 467
     invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 428
-    iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 468
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 469
+    iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
+
+    invoke-virtual {p3}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 429
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
+    .line 470
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
-    move-result v1
+    move-result v2
 
-    float-to-int v1, v1
+    float-to-int v2, v2
 
-    .line 430
-    invoke-virtual {p3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    .line 471
+    invoke-virtual {p3, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 431
-    iput v1, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    .line 472
+    iput v2, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 432
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 473
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
-    invoke-virtual {v2, p3}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v3, p3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 434
+    .line 475
     invoke-virtual {p4}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 435
-    invoke-virtual {p3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
+    .line 476
+    invoke-virtual {p3, v5}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 436
-    iput v1, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
+    .line 477
+    iput v2, p3, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 437
+    .line 478
     invoke-virtual {p4, p3}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 440
-    :cond_3
+    .line 481
+    :cond_4
     :goto_0
     iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
     invoke-virtual {p3}, Landroid/view/View;->requestLayout()V
 
-    .line 441
+    .line 482
     iget-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
 
     invoke-virtual {p3}, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->getCenterPoint()Landroid/graphics/Point;
@@ -3432,59 +3123,54 @@
 
     iput-object p3, p0, Lcom/oppo/camera/ui/beauty3d/f;->v:Landroid/graphics/Point;
 
-    .line 443
+    .line 484
     new-instance p3, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 p4, -0x1
 
     invoke-direct {p3, p4, p4}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    .line 445
+    .line 486
     iget-object p4, p0, Lcom/oppo/camera/ui/beauty3d/f;->f:Landroid/view/ViewGroup;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    invoke-virtual {p4, v1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p4, v2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 448
-    :cond_4
-    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/beauty3d/f;->a(IZ)V
+    .line 489
+    :cond_5
+    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/beauty3d/f;->b(IZ)V
 
-    .line 449
+    .line 490
     invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/beauty3d/f;->a(Z)V
 
-    const/4 p1, 0x1
+    .line 491
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
-    .line 450
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
+    .line 493
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    .line 452
-    invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->k()V
-
-    .line 454
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->isStarted()Z
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isStarted()Z
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_6
 
-    .line 455
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 494
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 458
-    :cond_5
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/AnimatorSet;
+    .line 497
+    :cond_6
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->A:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->start()V
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 459
+    .line 498
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
 
-    :cond_6
+    :cond_7
     :goto_1
     return-void
 .end method
@@ -3492,15 +3178,15 @@
 .method public b(Z)V
     .locals 1
 
-    .line 806
+    .line 830
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 807
+    .line 831
     invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 808
+    .line 832
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
@@ -3512,7 +3198,7 @@
 .method public b()Z
     .locals 2
 
-    .line 175
+    .line 228
     iget-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
     const/4 v1, 0x0
@@ -3523,7 +3209,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
+    .line 229
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -3543,66 +3229,66 @@
 
     const-string v1, "onScanViewHide"
 
-    .line 287
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 340
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 289
+    .line 342
     invoke-virtual {p0}, Lcom/oppo/camera/ui/beauty3d/f;->f()V
 
-    .line 290
+    .line 343
     invoke-virtual {p0}, Lcom/oppo/camera/ui/beauty3d/f;->g()V
 
-    .line 292
+    .line 345
     iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->y:Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;
 
     if-eqz v1, :cond_0
 
     const/4 v2, 0x0
 
-    .line 293
+    .line 346
     invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/beauty3d/OppoCircleProgressView;->setVisibility(I)V
 
-    .line 296
+    .line 349
     :cond_0
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isRunning()Z
+    invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->isRunning()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 297
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->t:Landroid/animation/AnimatorSet;
+    .line 350
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->G:Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
+    invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 300
+    .line 353
     :cond_1
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_2
 
     const-string v1, "onScanViewHide, reset scanCircle"
 
-    .line 301
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 354
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 356
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setScaleX(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleX(F)V
 
-    .line 304
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 357
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setScaleY(F)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleY(F)V
 
-    .line 307
+    .line 360
     :cond_2
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
@@ -3610,13 +3296,13 @@
 
     const/16 v1, 0x8
 
-    .line 308
+    .line 361
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 309
+    .line 362
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    const v1, 0x7f090219
+    const v1, 0x7f090265
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3624,19 +3310,179 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f0801a2
+    const v1, 0x7f0801ad
 
-    .line 310
+    .line 363
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     :cond_3
     return-void
 .end method
 
+.method public c(I)V
+    .locals 3
+
+    const-string v0, "translationX"
+
+    const-string v1, "Beauty3DGuideScanUI"
+
+    const v2, 0x7f10005b
+
+    if-eq p1, v2, :cond_5
+
+    const v2, 0x7f100025
+
+    if-ne p1, v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const v2, 0x7f10005c
+
+    if-eq p1, v2, :cond_4
+
+    const v2, 0x7f100026
+
+    if-ne p1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const v0, 0x7f10005d
+
+    if-ne p1, v0, :cond_2
+
+    const-string p1, "updateArrow, turn up"
+
+    .line 928
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 930
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+
+    const-string v0, "translationY"
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/view/View;Ljava/lang/String;)V
+
+    .line 931
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    .line 932
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    goto :goto_2
+
+    .line 934
+    :cond_2
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->isRunning()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    .line 935
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->C:Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ObjectAnimator;->cancel()V
+
+    .line 938
+    :cond_3
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    .line 939
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    .line 940
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    goto :goto_2
+
+    :cond_4
+    :goto_0
+    const-string p1, "updateArrow, turn right"
+
+    .line 922
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 924
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/view/View;Ljava/lang/String;)V
+
+    .line 925
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->D:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    .line 926
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    const-string p1, "updateArrow, turn left"
+
+    .line 916
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 918
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->o:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/view/View;Ljava/lang/String;)V
+
+    .line 919
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->E:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->p:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    .line 920
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->F:Landroid/animation/ObjectAnimator;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->q:Landroid/widget/ImageView;
+
+    invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+
+    :goto_2
+    return-void
+.end method
+
 .method public c(IZII)Z
     .locals 8
 
-    .line 746
+    .line 789
     iget-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
     if-eqz v0, :cond_1
@@ -3648,9 +3494,9 @@
     goto :goto_0
 
     :cond_0
-    const v1, 0x7f090247
+    const v1, 0x7f090294
 
-    .line 750
+    .line 793
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
@@ -3671,17 +3517,17 @@
 
     move v7, p4
 
-    .line 751
+    .line 794
     invoke-direct/range {v1 .. v7}, Lcom/oppo/camera/ui/beauty3d/f;->a(IZLandroid/widget/TextView;ZII)Landroid/widget/RelativeLayout$LayoutParams;
 
     move-result-object p1
 
-    .line 753
+    .line 796
     iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 754
+    .line 797
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
@@ -3702,35 +3548,35 @@
 
     const/4 v0, 0x0
 
-    .line 337
+    .line 389
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(I)V
 
     const/4 v1, 0x1
 
-    .line 338
+    .line 390
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/beauty3d/f;->a(I)V
 
     const/4 v1, 0x0
 
-    .line 339
+    .line 391
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->e:Landroid/app/Activity;
 
-    .line 340
+    .line 392
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->m:Landroid/view/View;
 
-    .line 341
+    .line 393
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->n:Landroid/view/View;
 
-    .line 342
+    .line 394
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->a:Z
 
-    .line 343
+    .line 395
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->b:Z
 
-    .line 344
+    .line 396
     iput-boolean v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->c:Z
 
-    .line 345
+    .line 397
     iput-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     return-void
@@ -3741,10 +3587,10 @@
 
     const/4 v0, 0x0
 
-    .line 626
+    .line 671
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(I)V
 
-    .line 627
+    .line 672
     invoke-virtual {p0, v0, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(ZZ)V
 
     return-void
@@ -3753,17 +3599,17 @@
 .method public f()V
     .locals 2
 
-    .line 670
+    .line 715
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x8
 
-    .line 671
+    .line 716
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 672
+    .line 717
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->h:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -3777,17 +3623,17 @@
 .method public g()V
     .locals 2
 
-    .line 724
+    .line 767
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x8
 
-    .line 725
+    .line 768
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 726
+    .line 769
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->j:Landroid/view/View;
 
     const/4 v1, 0x0
@@ -3805,11 +3651,11 @@
 
     const-string v1, "scanComplete"
 
-    .line 1031
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1050
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1033
-    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 1052
+    iget-object v1, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
     if-eqz v1, :cond_0
 
@@ -3821,22 +3667,22 @@
 
     const-string v1, "scanComplete,isRunning return"
 
-    .line 1034
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 1053
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 1039
+    .line 1058
     :cond_0
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    iput-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
     const/4 v0, 0x2
 
-    .line 1040
+    .line 1059
     new-array v1, v0, [F
 
     fill-array-data v1, :array_0
@@ -3847,7 +3693,7 @@
 
     move-result-object v1
 
-    .line 1042
+    .line 1061
     new-array v2, v0, [F
 
     fill-array-data v2, :array_1
@@ -3858,8 +3704,8 @@
 
     move-result-object v2
 
-    .line 1045
-    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 1064
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
     new-array v4, v0, [Landroid/animation/PropertyValuesHolder;
 
@@ -3875,13 +3721,13 @@
 
     move-result-object v2
 
-    .line 1046
+    .line 1065
     iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->L:Landroid/animation/TimeInterpolator;
 
     invoke-virtual {v2, v3}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1047
-    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->B:Landroid/widget/FrameLayout;
+    .line 1066
+    iget-object v3, p0, Lcom/oppo/camera/ui/beauty3d/f;->z:Landroid/widget/ImageView;
 
     new-array v4, v0, [F
 
@@ -3893,15 +3739,15 @@
 
     move-result-object v3
 
-    .line 1050
-    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 1069
+    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
     const-wide/16 v6, 0x1f4
 
     invoke-virtual {v4, v6, v7}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1051
-    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 1070
+    iget-object v4, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
     new-array v0, v0, [Landroid/animation/Animator;
 
@@ -3911,17 +3757,17 @@
 
     invoke-virtual {v4, v0}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1052
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 1071
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
-    new-instance v1, Lcom/oppo/camera/ui/beauty3d/f$5;
+    new-instance v1, Lcom/oppo/camera/ui/beauty3d/f$4;
 
-    invoke-direct {v1, p0}, Lcom/oppo/camera/ui/beauty3d/f$5;-><init>(Lcom/oppo/camera/ui/beauty3d/f;)V
+    invoke-direct {v1, p0}, Lcom/oppo/camera/ui/beauty3d/f$4;-><init>(Lcom/oppo/camera/ui/beauty3d/f;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1088
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->I:Landroid/animation/AnimatorSet;
+    .line 1107
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f;->H:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
@@ -3951,7 +3797,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .line 585
+    .line 630
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
     move-result p1
@@ -3964,27 +3810,27 @@
 
     goto :goto_0
 
-    .line 602
+    .line 647
     :sswitch_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/beauty3d/f;->l()V
 
-    .line 604
+    .line 649
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     if-eqz p1, :cond_0
 
-    .line 605
+    .line 650
     new-array v2, v1, [I
 
     aput v1, v2, v0
 
-    const-string v0, "com.oppo.beauty3d.scan.state"
+    const-string v0, "com.oplus.beauty3d.scan.state"
 
     invoke-interface {p1, v0, v2}, Lcom/oppo/camera/ui/beauty3d/e;->a(Ljava/lang/String;[I)V
 
     goto :goto_0
 
-    .line 587
+    .line 632
     :sswitch_1
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(I)V
 
@@ -3992,26 +3838,26 @@
 
     const-string v0, "onClick, startScan, disMiss Guide."
 
-    .line 589
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 634
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 591
+    .line 636
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f;->u:Lcom/oppo/camera/ui/beauty3d/e;
 
     if-eqz p1, :cond_0
 
-    .line 592
+    .line 637
     invoke-interface {p1}, Lcom/oppo/camera/ui/beauty3d/e;->b()V
 
     goto :goto_0
 
-    .line 598
+    .line 643
     :sswitch_2
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/beauty3d/f;->a(I)V
 
     goto :goto_0
 
-    .line 612
+    .line 657
     :sswitch_3
     invoke-virtual {p0, v1, v1}, Lcom/oppo/camera/ui/beauty3d/f;->a(ZZ)V
 
@@ -4023,10 +3869,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f090214 -> :sswitch_3
-        0x7f090247 -> :sswitch_2
-        0x7f09025f -> :sswitch_1
-        0x7f090260 -> :sswitch_0
+        0x7f090262 -> :sswitch_3
+        0x7f090294 -> :sswitch_2
+        0x7f0902af -> :sswitch_1
+        0x7f0902b0 -> :sswitch_0
     .end sparse-switch
 .end method
 

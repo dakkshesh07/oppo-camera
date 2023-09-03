@@ -1,5 +1,5 @@
 .class public Lco/polarr/renderer/render/GLRenderView$porender_YuvEf;
-.super La/a/a/b/b;
+.super La/a/b/b/b;
 
 
 # annotations
@@ -18,12 +18,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lco/polarr/renderer/render/GLRenderView;La/a/a/b/g;)V
+.method public constructor <init>(Lco/polarr/renderer/render/GLRenderView;La/a/b/b/g;)V
     .locals 0
 
     iput-object p1, p0, Lco/polarr/renderer/render/GLRenderView$porender_YuvEf;->f:Lco/polarr/renderer/render/GLRenderView;
 
-    invoke-direct {p0, p2}, La/a/a/b/b;-><init>(La/a/a/b/g;)V
+    invoke-direct {p0, p2}, La/a/b/b/b;-><init>(La/a/b/b/g;)V
 
     return-void
 .end method

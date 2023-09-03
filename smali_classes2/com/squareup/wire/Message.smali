@@ -1,6 +1,6 @@
 .class public abstract Lcom/squareup/wire/Message;
 .super Ljava/lang/Object;
-.source "Message.kt"
+.source "Message.java"
 
 # interfaces
 .implements Ljava/io/Serializable;
@@ -9,8 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/squareup/wire/Message$Builder;,
-        Lcom/squareup/wire/Message$Companion;
+        Lcom/squareup/wire/Message$Builder;
     }
 .end annotation
 
@@ -28,8 +27,6 @@
 
 
 # static fields
-.field public static final Companion:Lcom/squareup/wire/Message$Companion;
-
 .field private static final serialVersionUID:J
 
 
@@ -43,7 +40,7 @@
     .end annotation
 .end field
 
-.field private transient cachedSerializedSize:I
+.field transient cachedSerializedSize:I
 
 .field protected transient hashCode:I
 
@@ -51,20 +48,6 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lcom/squareup/wire/Message$Companion;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/squareup/wire/Message$Companion;-><init>(Lc/d/b/f;)V
-
-    sput-object v0, Lcom/squareup/wire/Message;->Companion:Lcom/squareup/wire/Message$Companion;
-
-    return-void
-.end method
-
 .method protected constructor <init>(Lcom/squareup/wire/ProtoAdapter;Lokio/ByteString;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -77,22 +60,48 @@
         }
     .end annotation
 
-    const-string v0, "adapter"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "unknownFields"
-
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 28
+    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
+    .line 37
+    iput v0, p0, Lcom/squareup/wire/Message;->cachedSerializedSize:I
+
+    .line 40
+    iput v0, p0, Lcom/squareup/wire/Message;->hashCode:I
+
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    .line 45
     iput-object p1, p0, Lcom/squareup/wire/Message;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
+    .line 46
     iput-object p2, p0, Lcom/squareup/wire/Message;->unknownFields:Lokio/ByteString;
 
     return-void
+
+    .line 44
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "unknownFields == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 43
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "adapter == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
@@ -107,114 +116,74 @@
         }
     .end annotation
 
-    .line 30
+    .line 80
     iget-object v0, p0, Lcom/squareup/wire/Message;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
     return-object v0
 .end method
 
 .method public final encode(Ljava/io/OutputStream;)V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const-string v0, "stream"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 68
+    .line 98
     iget-object v0, p0, Lcom/squareup/wire/Message;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
-    move-object v1, p0
-
-    check-cast v1, Lcom/squareup/wire/Message;
-
-    invoke-virtual {v0, p1, v1}, Lcom/squareup/wire/ProtoAdapter;->encode(Ljava/io/OutputStream;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p0}, Lcom/squareup/wire/ProtoAdapter;->encode(Ljava/io/OutputStream;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final encode(Lokio/BufferedSink;)V
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    const-string v0, "sink"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 59
+    .line 86
     iget-object v0, p0, Lcom/squareup/wire/Message;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
-    move-object v1, p0
-
-    check-cast v1, Lcom/squareup/wire/Message;
-
-    invoke-virtual {v0, p1, v1}, Lcom/squareup/wire/ProtoAdapter;->encode(Lokio/BufferedSink;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p0}, Lcom/squareup/wire/ProtoAdapter;->encode(Lokio/BufferedSink;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 .method public final encode()[B
-    .locals 2
+    .locals 1
 
-    .line 63
+    .line 92
     iget-object v0, p0, Lcom/squareup/wire/Message;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
-    move-object v1, p0
-
-    check-cast v1, Lcom/squareup/wire/Message;
-
-    invoke-virtual {v0, v1}, Lcom/squareup/wire/ProtoAdapter;->encode(Ljava/lang/Object;)[B
+    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter;->encode(Ljava/lang/Object;)[B
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final getCachedSerializedSize$wire_runtime()I
-    .locals 1
-
-    .line 38
-    iget v0, p0, Lcom/squareup/wire/Message;->cachedSerializedSize:I
-
-    return v0
-.end method
-
 .method public abstract newBuilder()Lcom/squareup/wire/Message$Builder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()TB;"
+            "()",
+            "Lcom/squareup/wire/Message$Builder<",
+            "TM;TB;>;"
         }
     .end annotation
 .end method
 
-.method public final setCachedSerializedSize$wire_runtime(I)V
-    .locals 0
-
-    .line 38
-    iput p1, p0, Lcom/squareup/wire/Message;->cachedSerializedSize:I
-
-    return-void
-.end method
-
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    .line 51
+    .line 70
     iget-object v0, p0, Lcom/squareup/wire/Message;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
-    move-object v1, p0
-
-    check-cast v1, Lcom/squareup/wire/Message;
-
-    invoke-virtual {v0, v1}, Lcom/squareup/wire/ProtoAdapter;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -224,9 +193,18 @@
 .method public final unknownFields()Lokio/ByteString;
     .locals 1
 
-    .line 35
+    .line 54
     iget-object v0, p0, Lcom/squareup/wire/Message;->unknownFields:Lokio/ByteString;
 
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    .line 55
+    :cond_0
+    sget-object v0, Lokio/ByteString;->EMPTY:Lokio/ByteString;
+
+    :goto_0
     return-object v0
 .end method
 
@@ -238,7 +216,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 65
     invoke-virtual {p0}, Lcom/squareup/wire/Message;->newBuilder()Lcom/squareup/wire/Message$Builder;
 
     move-result-object v0
@@ -262,7 +240,7 @@
         }
     .end annotation
 
-    .line 54
+    .line 75
     new-instance v0, Lcom/squareup/wire/MessageSerializedForm;
 
     invoke-virtual {p0}, Lcom/squareup/wire/Message;->encode()[B
@@ -273,18 +251,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_0
-
     invoke-direct {v0, v1, v2}, Lcom/squareup/wire/MessageSerializedForm;-><init>([BLjava/lang/Class;)V
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Lc/e;
-
-    const-string v1, "null cannot be cast to non-null type java.lang.Class<M>"
-
-    invoke-direct {v0, v1}, Lc/e;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

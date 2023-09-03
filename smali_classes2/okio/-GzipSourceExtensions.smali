@@ -3,6 +3,11 @@
 .source "GzipSource.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # static fields
 .field private static final FCOMMENT:I = 0x4
 
@@ -58,7 +63,7 @@
 
     const-string v0, "$this$gzip"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 219
     new-instance v0, Lokio/GzipSource;

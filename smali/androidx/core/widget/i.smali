@@ -239,6 +239,8 @@
 
 .method public static a(Landroid/widget/TextView;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 519
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -353,7 +355,7 @@
     .locals 2
 
     .line 993
-    invoke-static {p0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 994
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -369,14 +371,14 @@
 
     .line 996
     :cond_0
-    instance-of v0, p0, Landroidx/core/widget/k;
+    instance-of v0, p0, Landroidx/core/widget/l;
 
     if-eqz v0, :cond_1
 
     .line 997
-    check-cast p0, Landroidx/core/widget/k;
+    check-cast p0, Landroidx/core/widget/l;
 
-    invoke-interface {p0, p1}, Landroidx/core/widget/k;->setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
+    invoke-interface {p0, p1}, Landroidx/core/widget/l;->setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
 
     :cond_1
     :goto_0
@@ -387,7 +389,7 @@
     .locals 2
 
     .line 1027
-    invoke-static {p0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1028
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -403,14 +405,14 @@
 
     .line 1030
     :cond_0
-    instance-of v0, p0, Landroidx/core/widget/k;
+    instance-of v0, p0, Landroidx/core/widget/l;
 
     if-eqz v0, :cond_1
 
     .line 1031
-    check-cast p0, Landroidx/core/widget/k;
+    check-cast p0, Landroidx/core/widget/l;
 
-    invoke-interface {p0, p1}, Landroidx/core/widget/k;->setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    invoke-interface {p0, p1}, Landroidx/core/widget/l;->setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
     :cond_1
     :goto_0
@@ -648,7 +650,7 @@
     .locals 3
 
     .line 693
-    invoke-static {p1}, Landroidx/core/f/f;->a(I)I
+    invoke-static {p1}, Landroidx/core/util/g;->a(I)I
 
     .line 694
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -832,7 +834,7 @@
     .locals 3
 
     .line 738
-    invoke-static {p1}, Landroidx/core/f/f;->a(I)I
+    invoke-static {p1}, Landroidx/core/util/g;->a(I)I
 
     .line 740
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
@@ -928,7 +930,7 @@
     .locals 2
 
     .line 796
-    invoke-static {p1}, Landroidx/core/f/f;->a(I)I
+    invoke-static {p1}, Landroidx/core/util/g;->a(I)I
 
     .line 798
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;

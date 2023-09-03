@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/floatingactionbutton/BorderDrawable$BorderState;
@@ -155,7 +158,7 @@
 
     iget v4, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v4}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {v3, v4}, Landroidx/core/graphics/c;->a(II)I
 
     move-result v3
 
@@ -168,7 +171,7 @@
 
     iget v5, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v5}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {v3, v5}, Landroidx/core/graphics/c;->a(II)I
 
     move-result v3
 
@@ -180,14 +183,14 @@
     iget v3, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->topInnerStrokeColor:I
 
     .line 233
-    invoke-static {v3, v4}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {v3, v4}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v3
 
     iget v6, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
     .line 232
-    invoke-static {v3, v6}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {v3, v6}, Landroidx/core/graphics/c;->a(II)I
 
     move-result v3
 
@@ -199,14 +202,14 @@
     iget v3, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->bottomInnerStrokeColor:I
 
     .line 236
-    invoke-static {v3, v4}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {v3, v4}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v3
 
     iget v7, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
     .line 235
-    invoke-static {v3, v7}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {v3, v7}, Landroidx/core/graphics/c;->a(II)I
 
     move-result v3
 
@@ -219,7 +222,7 @@
 
     iget v9, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v9}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {v3, v9}, Landroidx/core/graphics/c;->a(II)I
 
     move-result v3
 
@@ -232,7 +235,7 @@
 
     iget v10, p0, Lcom/google/android/material/floatingactionbutton/BorderDrawable;->currentBorderTintColor:I
 
-    invoke-static {v3, v10}, Landroidx/core/graphics/d;->a(II)I
+    invoke-static {v3, v10}, Landroidx/core/graphics/c;->a(II)I
 
     move-result v3
 

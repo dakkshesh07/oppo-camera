@@ -44,7 +44,7 @@
         }
     .end annotation
 
-    .line 96
+    .line 91
     invoke-interface {p0}, Lcom/google/protobuf/Message;->newBuilderForType()Lcom/google/protobuf/Message$Builder;
 
     move-result-object p0
@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    .line 73
+    .line 70
     new-instance v0, Lcom/google/protobuf/RpcUtil$1;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/google/protobuf/RpcUtil$1;-><init>(Ljava/lang/Class;Lcom/google/protobuf/Message;Lcom/google/protobuf/RpcCallback;)V
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 108
+    .line 101
     new-instance v0, Lcom/google/protobuf/RpcUtil$2;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/RpcUtil$2;-><init>(Lcom/google/protobuf/RpcCallback;)V

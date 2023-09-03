@@ -72,7 +72,7 @@
 
     sub-int v1, p1, v1
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     goto :goto_0
 

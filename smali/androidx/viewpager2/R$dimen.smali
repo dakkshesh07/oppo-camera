@@ -15,61 +15,61 @@
 
 
 # static fields
-.field public static final compat_button_inset_horizontal_material:I = 0x7f070295
+.field public static final compat_button_inset_horizontal_material:I = 0x7f070126
 
-.field public static final compat_button_inset_vertical_material:I = 0x7f070296
+.field public static final compat_button_inset_vertical_material:I = 0x7f070127
 
-.field public static final compat_button_padding_horizontal_material:I = 0x7f070297
+.field public static final compat_button_padding_horizontal_material:I = 0x7f070128
 
-.field public static final compat_button_padding_vertical_material:I = 0x7f070298
+.field public static final compat_button_padding_vertical_material:I = 0x7f070129
 
-.field public static final compat_control_corner_material:I = 0x7f070299
+.field public static final compat_control_corner_material:I = 0x7f07012a
 
-.field public static final compat_notification_large_icon_max_height:I = 0x7f07029a
+.field public static final compat_notification_large_icon_max_height:I = 0x7f07012b
 
-.field public static final compat_notification_large_icon_max_width:I = 0x7f07029b
+.field public static final compat_notification_large_icon_max_width:I = 0x7f07012c
 
-.field public static final fastscroll_default_thickness:I = 0x7f07032f
+.field public static final fastscroll_default_thickness:I = 0x7f0703b8
 
-.field public static final fastscroll_margin:I = 0x7f070330
+.field public static final fastscroll_margin:I = 0x7f0703b9
 
-.field public static final fastscroll_minimum_range:I = 0x7f070331
+.field public static final fastscroll_minimum_range:I = 0x7f0703ba
 
-.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f070386
+.field public static final item_touch_helper_max_drag_scroll_per_frame:I = 0x7f07042a
 
-.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f070387
+.field public static final item_touch_helper_swipe_escape_max_velocity:I = 0x7f07042b
 
-.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f070388
+.field public static final item_touch_helper_swipe_escape_velocity:I = 0x7f07042c
 
-.field public static final notification_action_icon_size:I = 0x7f070482
+.field public static final notification_action_icon_size:I = 0x7f0705fd
 
-.field public static final notification_action_text_size:I = 0x7f070483
+.field public static final notification_action_text_size:I = 0x7f0705fe
 
-.field public static final notification_big_circle_margin:I = 0x7f070484
+.field public static final notification_big_circle_margin:I = 0x7f0705ff
 
-.field public static final notification_content_margin_start:I = 0x7f070485
+.field public static final notification_content_margin_start:I = 0x7f070600
 
-.field public static final notification_large_icon_height:I = 0x7f070486
+.field public static final notification_large_icon_height:I = 0x7f070601
 
-.field public static final notification_large_icon_width:I = 0x7f070487
+.field public static final notification_large_icon_width:I = 0x7f070602
 
-.field public static final notification_main_column_padding_top:I = 0x7f070488
+.field public static final notification_main_column_padding_top:I = 0x7f070603
 
-.field public static final notification_media_narrow_margin:I = 0x7f070489
+.field public static final notification_media_narrow_margin:I = 0x7f070604
 
-.field public static final notification_right_icon_size:I = 0x7f07048a
+.field public static final notification_right_icon_size:I = 0x7f070605
 
-.field public static final notification_right_side_padding_top:I = 0x7f07048b
+.field public static final notification_right_side_padding_top:I = 0x7f070606
 
-.field public static final notification_small_icon_background_padding:I = 0x7f07048c
+.field public static final notification_small_icon_background_padding:I = 0x7f070607
 
-.field public static final notification_small_icon_size_as_large:I = 0x7f07048d
+.field public static final notification_small_icon_size_as_large:I = 0x7f070608
 
-.field public static final notification_subtext_size:I = 0x7f07048e
+.field public static final notification_subtext_size:I = 0x7f070609
 
-.field public static final notification_top_pad:I = 0x7f07048f
+.field public static final notification_top_pad:I = 0x7f07060a
 
-.field public static final notification_top_pad_large_text:I = 0x7f070490
+.field public static final notification_top_pad_large_text:I = 0x7f07060b
 
 
 # direct methods

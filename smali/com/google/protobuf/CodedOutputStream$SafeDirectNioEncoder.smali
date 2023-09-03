@@ -28,13 +28,13 @@
 
     const/4 v0, 0x0
 
-    .line 1531
+    .line 1559
     invoke-direct {p0, v0}, Lcom/google/protobuf/CodedOutputStream;-><init>(Lcom/google/protobuf/CodedOutputStream$1;)V
 
-    .line 1532
+    .line 1560
     iput-object p1, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->originalBuffer:Ljava/nio/ByteBuffer;
 
-    .line 1533
+    .line 1561
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -47,7 +47,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 1534
+    .line 1562
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
 
     move-result p1
@@ -65,7 +65,7 @@
         }
     .end annotation
 
-    .line 1826
+    .line 1865
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -78,7 +78,7 @@
     :catch_0
     move-exception p1
 
-    .line 1828
+    .line 1867
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -91,7 +91,7 @@
 .method public flush()V
     .locals 2
 
-    .line 1811
+    .line 1850
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->originalBuffer:Ljava/nio/ByteBuffer;
 
     iget-object v1, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
@@ -108,7 +108,7 @@
 .method public getTotalBytesWritten()I
     .locals 2
 
-    .line 1821
+    .line 1860
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
@@ -125,7 +125,7 @@
 .method public spaceLeft()I
     .locals 1
 
-    .line 1816
+    .line 1855
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -143,7 +143,7 @@
         }
     .end annotation
 
-    .line 1645
+    .line 1684
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -156,7 +156,7 @@
     :catch_0
     move-exception p1
 
-    .line 1647
+    .line 1686
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -172,7 +172,7 @@
         }
     .end annotation
 
-    .line 1755
+    .line 1794
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -185,7 +185,7 @@
     :catch_0
     move-exception p1
 
-    .line 1757
+    .line 1796
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -201,7 +201,7 @@
         }
     .end annotation
 
-    .line 1739
+    .line 1778
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -215,7 +215,7 @@
     :catch_0
     move-exception p1
 
-    .line 1743
+    .line 1782
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -225,7 +225,7 @@
     :catch_1
     move-exception p1
 
-    .line 1741
+    .line 1780
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -243,12 +243,12 @@
 
     const/4 v0, 0x0
 
-    .line 1574
+    .line 1602
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
     int-to-byte p1, p2
 
-    .line 1575
+    .line 1603
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->write(B)V
 
     return-void
@@ -262,7 +262,7 @@
         }
     .end annotation
 
-    .line 1592
+    .line 1620
     array-length v0, p2
 
     const/4 v1, 0x0
@@ -282,10 +282,10 @@
 
     const/4 v0, 0x2
 
-    .line 1599
+    .line 1627
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1600
+    .line 1628
     invoke-virtual {p0, p2, p3, p4}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeByteArrayNoTag([BII)V
 
     return-void
@@ -299,10 +299,10 @@
         }
     .end annotation
 
-    .line 1659
+    .line 1698
     invoke-virtual {p0, p3}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
-    .line 1660
+    .line 1699
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->write([BII)V
 
     return-void
@@ -318,17 +318,17 @@
 
     const/4 v0, 0x2
 
-    .line 1606
+    .line 1633
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1607
+    .line 1634
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result p1
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
-    .line 1608
+    .line 1635
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeRawBytes(Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -344,10 +344,10 @@
 
     const/4 v0, 0x2
 
-    .line 1586
+    .line 1614
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1587
+    .line 1615
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeBytesNoTag(Lcom/google/protobuf/ByteString;)V
 
     return-void
@@ -361,14 +361,14 @@
         }
     .end annotation
 
-    .line 1653
+    .line 1692
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
-    .line 1654
+    .line 1693
     invoke-virtual {p1, p0}, Lcom/google/protobuf/ByteString;->writeTo(Lcom/google/protobuf/ByteOutput;)V
 
     return-void
@@ -384,10 +384,10 @@
 
     const/4 v0, 0x5
 
-    .line 1556
+    .line 1584
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1557
+    .line 1585
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeFixed32NoTag(I)V
 
     return-void
@@ -401,7 +401,7 @@
         }
     .end annotation
 
-    .line 1704
+    .line 1743
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -414,7 +414,7 @@
     :catch_0
     move-exception p1
 
-    .line 1706
+    .line 1745
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -432,10 +432,10 @@
 
     const/4 v0, 0x1
 
-    .line 1568
+    .line 1596
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1569
+    .line 1597
     invoke-virtual {p0, p2, p3}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeFixed64NoTag(J)V
 
     return-void
@@ -449,7 +449,7 @@
         }
     .end annotation
 
-    .line 1730
+    .line 1769
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -462,7 +462,7 @@
     :catch_0
     move-exception p1
 
-    .line 1732
+    .line 1771
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -480,10 +480,10 @@
 
     const/4 v0, 0x0
 
-    .line 1544
+    .line 1572
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1545
+    .line 1573
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeInt32NoTag(I)V
 
     return-void
@@ -499,7 +499,7 @@
 
     if-ltz p1, :cond_0
 
-    .line 1677
+    .line 1716
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
     goto :goto_0
@@ -507,7 +507,7 @@
     :cond_0
     int-to-long v0, p1
 
-    .line 1680
+    .line 1719
     invoke-virtual {p0, v0, v1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt64NoTag(J)V
 
     :goto_0
@@ -522,7 +522,7 @@
         }
     .end annotation
 
-    .line 1763
+    .line 1802
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->write(Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -536,7 +536,7 @@
         }
     .end annotation
 
-    .line 1749
+    .line 1788
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->write([BII)V
 
     return-void
@@ -552,11 +552,30 @@
 
     const/4 v0, 0x2
 
-    .line 1614
+    .line 1640
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1615
+    .line 1641
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeMessageNoTag(Lcom/google/protobuf/MessageLite;)V
+
+    return-void
+.end method
+
+.method writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    const/4 v0, 0x2
+
+    .line 1647
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
+
+    .line 1648
+    invoke-virtual {p0, p2, p3}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeMessageNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
 
     return-void
 .end method
@@ -569,15 +588,42 @@
         }
     .end annotation
 
-    .line 1638
+    .line 1671
     invoke-interface {p1}, Lcom/google/protobuf/MessageLite;->getSerializedSize()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
-    .line 1639
+    .line 1672
     invoke-interface {p1, p0}, Lcom/google/protobuf/MessageLite;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V
+
+    return-void
+.end method
+
+.method writeMessageNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1677
+    move-object v0, p1
+
+    check-cast v0, Lcom/google/protobuf/AbstractMessageLite;
+
+    invoke-virtual {v0, p2}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
+
+    .line 1678
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
+
+    invoke-interface {p2, p1, v0}, Lcom/google/protobuf/Schema;->writeTo(Ljava/lang/Object;Lcom/google/protobuf/Writer;)V
 
     return-void
 .end method
@@ -594,20 +640,20 @@
 
     const/4 v1, 0x1
 
-    .line 1621
+    .line 1654
     invoke-virtual {p0, v1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
     const/4 v2, 0x2
 
-    .line 1622
+    .line 1655
     invoke-virtual {p0, v2, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32(II)V
 
-    .line 1623
+    .line 1656
     invoke-virtual {p0, v0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     const/4 p1, 0x4
 
-    .line 1624
+    .line 1657
     invoke-virtual {p0, v1, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
     return-void
@@ -621,14 +667,14 @@
         }
     .end annotation
 
-    .line 1665
+    .line 1704
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1666
+    .line 1705
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
@@ -645,16 +691,16 @@
 
     goto :goto_0
 
-    .line 1668
+    .line 1707
     :cond_0
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 1669
+    .line 1708
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 1670
+    .line 1709
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->write(Ljava/nio/ByteBuffer;)V
 
     :goto_0
@@ -673,20 +719,20 @@
 
     const/4 v1, 0x1
 
-    .line 1630
+    .line 1663
     invoke-virtual {p0, v1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
     const/4 v2, 0x2
 
-    .line 1631
+    .line 1664
     invoke-virtual {p0, v2, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32(II)V
 
-    .line 1632
+    .line 1665
     invoke-virtual {p0, v0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeBytes(ILcom/google/protobuf/ByteString;)V
 
     const/4 p1, 0x4
 
-    .line 1633
+    .line 1666
     invoke-virtual {p0, v1, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
     return-void
@@ -702,10 +748,10 @@
 
     const/4 v0, 0x2
 
-    .line 1580
+    .line 1608
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1581
+    .line 1609
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeStringNoTag(Ljava/lang/String;)V
 
     return-void
@@ -719,14 +765,14 @@
         }
     .end annotation
 
-    .line 1768
+    .line 1807
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v0
 
-    .line 1772
+    .line 1811
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -734,12 +780,12 @@
 
     mul-int/lit8 v1, v1, 0x3
 
-    .line 1773
+    .line 1812
     invoke-static {v1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->computeUInt32SizeNoTag(I)I
 
     move-result v1
 
-    .line 1774
+    .line 1813
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -750,7 +796,7 @@
 
     if-ne v2, v1, :cond_0
 
-    .line 1778
+    .line 1817
     iget-object v1, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->position()I
@@ -759,48 +805,48 @@
 
     add-int/2addr v1, v2
 
-    .line 1779
+    .line 1818
     iget-object v2, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 1782
+    .line 1821
     invoke-direct {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->encode(Ljava/lang/String;)V
 
-    .line 1785
+    .line 1824
     iget-object v2, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v2
 
-    .line 1786
+    .line 1825
     iget-object v3, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v3, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     sub-int v1, v2, v1
 
-    .line 1787
+    .line 1826
     invoke-virtual {p0, v1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
-    .line 1790
+    .line 1829
     iget-object v1, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
     goto :goto_0
 
-    .line 1792
+    .line 1831
     :cond_0
     invoke-static {p1}, Lcom/google/protobuf/Utf8;->encodedLength(Ljava/lang/CharSequence;)I
 
     move-result v1
 
-    .line 1793
+    .line 1832
     invoke-virtual {p0, v1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
-    .line 1794
+    .line 1833
     invoke-direct {p0, p1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->encode(Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/google/protobuf/Utf8$UnpairedSurrogateException; {:try_start_0 .. :try_end_0} :catch_1
@@ -811,7 +857,7 @@
     :catch_0
     move-exception p1
 
-    .line 1804
+    .line 1843
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -821,12 +867,12 @@
     :catch_1
     move-exception v1
 
-    .line 1798
+    .line 1837
     iget-object v2, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 1801
+    .line 1840
     invoke-virtual {p0, p1, v1}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->inefficientWriteStringNoTag(Ljava/lang/String;Lcom/google/protobuf/Utf8$UnpairedSurrogateException;)V
 
     :goto_0
@@ -841,7 +887,7 @@
         }
     .end annotation
 
-    .line 1539
+    .line 1567
     invoke-static {p1, p2}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result p1
@@ -861,10 +907,10 @@
 
     const/4 v0, 0x0
 
-    .line 1550
+    .line 1578
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1551
+    .line 1579
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt32NoTag(I)V
 
     return-void
@@ -883,7 +929,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1689
+    .line 1728
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -893,7 +939,7 @@
 
     return-void
 
-    .line 1692
+    .line 1731
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -914,7 +960,7 @@
     :catch_0
     move-exception p1
 
-    .line 1697
+    .line 1736
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -932,10 +978,10 @@
 
     const/4 v0, 0x0
 
-    .line 1562
+    .line 1590
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeTag(II)V
 
-    .line 1563
+    .line 1591
     invoke-virtual {p0, p2, p3}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->writeUInt64NoTag(J)V
 
     return-void
@@ -960,7 +1006,7 @@
 
     if-nez v0, :cond_0
 
-    .line 1715
+    .line 1754
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -972,7 +1018,7 @@
 
     return-void
 
-    .line 1718
+    .line 1757
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;->buffer:Ljava/nio/ByteBuffer;
 
@@ -997,7 +1043,7 @@
     :catch_0
     move-exception p1
 
-    .line 1723
+    .line 1762
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V

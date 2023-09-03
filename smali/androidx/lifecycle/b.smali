@@ -3,24 +3,24 @@
 .source "FullLifecycleObserver.java"
 
 # interfaces
-.implements Landroidx/lifecycle/g;
+.implements Landroidx/lifecycle/f;
 
 
 # virtual methods
-.method public abstract a(Landroidx/lifecycle/h;)V
+.method public abstract a(Landroidx/lifecycle/g;)V
 .end method
 
-.method public abstract b(Landroidx/lifecycle/h;)V
+.method public abstract b(Landroidx/lifecycle/g;)V
 .end method
 
-.method public abstract c(Landroidx/lifecycle/h;)V
+.method public abstract c(Landroidx/lifecycle/g;)V
 .end method
 
-.method public abstract d(Landroidx/lifecycle/h;)V
+.method public abstract d(Landroidx/lifecycle/g;)V
 .end method
 
-.method public abstract e(Landroidx/lifecycle/h;)V
+.method public abstract e(Landroidx/lifecycle/g;)V
 .end method
 
-.method public abstract f(Landroidx/lifecycle/h;)V
+.method public abstract f(Landroidx/lifecycle/g;)V
 .end method

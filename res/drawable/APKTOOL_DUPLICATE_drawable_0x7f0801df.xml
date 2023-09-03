@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item android:state_pressed="true" camera:APKTOOL_DUPLICATE_attr_0x7f040545="true">
+        <bitmap android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0804cd" android:tint="@color/APKTOOL_DUPLICATE_color_0x7f06036d" android:alpha="0.8" />
+    </item>
+    <item android:state_pressed="true" camera:APKTOOL_DUPLICATE_attr_0x7f040545="false">
+        <bitmap android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0804cd" android:alpha="0.8" />
+    </item>
+    <item android:state_pressed="false" camera:APKTOOL_DUPLICATE_attr_0x7f040545="true">
+        <bitmap android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0804cd" android:tint="@color/APKTOOL_DUPLICATE_color_0x7f06036d" />
+    </item>
+    <item android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0804cd" />
+</selector>

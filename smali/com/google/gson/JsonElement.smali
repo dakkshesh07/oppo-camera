@@ -15,13 +15,13 @@
 
 
 # virtual methods
-.method abstract deepCopy()Lcom/google/gson/JsonElement;
+.method public abstract deepCopy()Lcom/google/gson/JsonElement;
 .end method
 
 .method public getAsBigDecimal()Ljava/math/BigDecimal;
     .locals 2
 
-    .line 285
+    .line 286
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -40,7 +40,7 @@
 .method public getAsBigInteger()Ljava/math/BigInteger;
     .locals 2
 
-    .line 299
+    .line 300
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -59,7 +59,7 @@
 .method public getAsBoolean()Z
     .locals 2
 
-    .line 152
+    .line 153
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -78,7 +78,7 @@
 .method getAsBooleanWrapper()Ljava/lang/Boolean;
     .locals 2
 
-    .line 165
+    .line 166
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -97,7 +97,7 @@
 .method public getAsByte()B
     .locals 2
 
-    .line 257
+    .line 258
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -116,7 +116,7 @@
 .method public getAsCharacter()C
     .locals 2
 
-    .line 271
+    .line 272
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -135,7 +135,7 @@
 .method public getAsDouble()D
     .locals 2
 
-    .line 204
+    .line 205
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -154,7 +154,7 @@
 .method public getAsFloat()F
     .locals 2
 
-    .line 217
+    .line 218
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -173,7 +173,7 @@
 .method public getAsInt()I
     .locals 2
 
-    .line 243
+    .line 244
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -190,27 +190,39 @@
 .end method
 
 .method public getAsJsonArray()Lcom/google/gson/JsonArray;
-    .locals 2
+    .locals 3
 
-    .line 103
+    .line 104
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 104
+    .line 105
     move-object v0, p0
 
     check-cast v0, Lcom/google/gson/JsonArray;
 
     return-object v0
 
-    .line 106
+    .line 107
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "This is not a JSON Array."
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Not a JSON Array: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -218,27 +230,39 @@
 .end method
 
 .method public getAsJsonNull()Lcom/google/gson/JsonNull;
-    .locals 2
+    .locals 3
 
-    .line 136
+    .line 137
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonNull()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 137
+    .line 138
     move-object v0, p0
 
     check-cast v0, Lcom/google/gson/JsonNull;
 
     return-object v0
 
-    .line 139
+    .line 140
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "This is not a JSON Null."
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Not a JSON Null: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -248,21 +272,21 @@
 .method public getAsJsonObject()Lcom/google/gson/JsonObject;
     .locals 3
 
-    .line 87
+    .line 88
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonObject()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 88
+    .line 89
     move-object v0, p0
 
     check-cast v0, Lcom/google/gson/JsonObject;
 
     return-object v0
 
-    .line 90
+    .line 91
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -286,27 +310,39 @@
 .end method
 
 .method public getAsJsonPrimitive()Lcom/google/gson/JsonPrimitive;
-    .locals 2
+    .locals 3
 
-    .line 119
+    .line 120
     invoke-virtual {p0}, Lcom/google/gson/JsonElement;->isJsonPrimitive()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 120
+    .line 121
     move-object v0, p0
 
     check-cast v0, Lcom/google/gson/JsonPrimitive;
 
     return-object v0
 
-    .line 122
+    .line 123
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    const-string v1, "This is not a JSON Primitive."
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Not a JSON Primitive: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
@@ -316,7 +352,7 @@
 .method public getAsLong()J
     .locals 2
 
-    .line 230
+    .line 231
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -335,7 +371,7 @@
 .method public getAsNumber()Ljava/lang/Number;
     .locals 2
 
-    .line 178
+    .line 179
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -354,7 +390,7 @@
 .method public getAsShort()S
     .locals 2
 
-    .line 312
+    .line 313
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -373,7 +409,7 @@
 .method public getAsString()Ljava/lang/String;
     .locals 2
 
-    .line 191
+    .line 192
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -392,7 +428,7 @@
 .method public isJsonArray()Z
     .locals 1
 
-    .line 46
+    .line 47
     instance-of v0, p0, Lcom/google/gson/JsonArray;
 
     return v0
@@ -401,7 +437,7 @@
 .method public isJsonNull()Z
     .locals 1
 
-    .line 74
+    .line 75
     instance-of v0, p0, Lcom/google/gson/JsonNull;
 
     return v0
@@ -410,7 +446,7 @@
 .method public isJsonObject()Z
     .locals 1
 
-    .line 55
+    .line 56
     instance-of v0, p0, Lcom/google/gson/JsonObject;
 
     return v0
@@ -419,7 +455,7 @@
 .method public isJsonPrimitive()Z
     .locals 1
 
-    .line 64
+    .line 65
     instance-of v0, p0, Lcom/google/gson/JsonPrimitive;
 
     return v0
@@ -428,26 +464,26 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 321
+    .line 322
     :try_start_0
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 322
+    .line 323
     new-instance v1, Lcom/google/gson/stream/JsonWriter;
 
     invoke-direct {v1, v0}, Lcom/google/gson/stream/JsonWriter;-><init>(Ljava/io/Writer;)V
 
     const/4 v2, 0x1
 
-    .line 323
+    .line 324
     invoke-virtual {v1, v2}, Lcom/google/gson/stream/JsonWriter;->setLenient(Z)V
 
-    .line 324
+    .line 325
     invoke-static {p0, v1}, Lcom/google/gson/internal/Streams;->write(Lcom/google/gson/JsonElement;Lcom/google/gson/stream/JsonWriter;)V
 
-    .line 325
+    .line 326
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -459,7 +495,7 @@
     :catch_0
     move-exception v0
 
-    .line 327
+    .line 328
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

@@ -1,9 +1,6 @@
 .class Landroidx/appcompat/widget/ae$b;
-.super Ljava/lang/Object;
-.source "ForwardingListener.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/database/DataSetObserver;
+.source "ListPopupWindow.java"
 
 
 # annotations
@@ -25,23 +22,44 @@
 .method constructor <init>(Landroidx/appcompat/widget/ae;)V
     .locals 0
 
-    .line 329
+    .line 1343
     iput-object p1, p0, Landroidx/appcompat/widget/ae$b;->a:Landroidx/appcompat/widget/ae;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public onChanged()V
     .locals 1
 
-    .line 334
+    .line 1348
     iget-object v0, p0, Landroidx/appcompat/widget/ae$b;->a:Landroidx/appcompat/widget/ae;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ae;->d()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ae;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1350
+    iget-object v0, p0, Landroidx/appcompat/widget/ae$b;->a:Landroidx/appcompat/widget/ae;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ae;->a_()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onInvalidated()V
+    .locals 1
+
+    .line 1356
+    iget-object v0, p0, Landroidx/appcompat/widget/ae$b;->a:Landroidx/appcompat/widget/ae;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ae;->b()V
 
     return-void
 .end method

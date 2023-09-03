@@ -33,7 +33,7 @@
         }
     .end annotation
 
-    .line 146
+    .line 150
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -184,7 +184,7 @@
 .method isSynthetic()Z
     .locals 1
 
-    .line 155
+    .line 159
     iget-object v0, p0, Lcom/google/gson/FieldAttributes;->field:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Field;->isSynthetic()Z

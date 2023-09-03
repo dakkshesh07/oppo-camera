@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/transition/m;->runAnimator(Landroid/animation/Animator;Landroidx/b/a;)V
+    value = Landroidx/transition/m;->runAnimator(Landroid/animation/Animator;Landroidx/collection/ArrayMap;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field final synthetic a:Landroidx/b/a;
+.field final synthetic a:Landroidx/collection/ArrayMap;
 
 .field final synthetic b:Landroidx/transition/m;
 
 
 # direct methods
-.method constructor <init>(Landroidx/transition/m;Landroidx/b/a;)V
+.method constructor <init>(Landroidx/transition/m;Landroidx/collection/ArrayMap;)V
     .locals 0
 
     .line 898
     iput-object p1, p0, Landroidx/transition/m$2;->b:Landroidx/transition/m;
 
-    iput-object p2, p0, Landroidx/transition/m$2;->a:Landroidx/b/a;
+    iput-object p2, p0, Landroidx/transition/m$2;->a:Landroidx/collection/ArrayMap;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 1
 
     .line 906
-    iget-object v0, p0, Landroidx/transition/m$2;->a:Landroidx/b/a;
+    iget-object v0, p0, Landroidx/transition/m$2;->a:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/a;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 907
     iget-object v0, p0, Landroidx/transition/m$2;->b:Landroidx/transition/m;

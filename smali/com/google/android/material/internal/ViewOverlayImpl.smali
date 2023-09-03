@@ -3,6 +3,11 @@
 .source "ViewOverlayImpl.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # virtual methods
 .method public abstract add(Landroid/graphics/drawable/Drawable;)V
 .end method

@@ -94,9 +94,9 @@
     .line 3300
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;->g:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/n;
+    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/q;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/n;->e()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/q;->e()I
 
     move-result v0
 
@@ -110,9 +110,9 @@
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;->g:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/n;
+    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/q;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/n;->d()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/q;->d()I
 
     move-result v0
 
@@ -188,9 +188,9 @@
 
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;->g:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/n;
+    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/q;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/n;->e()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/q;->e()I
 
     move-result v0
 
@@ -199,10 +199,10 @@
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager$a;->g:Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
 
-    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/n;
+    iget-object v0, v0, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;->b:Landroidx/recyclerview/widget/q;
 
     .line 3295
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/n;->d()I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/q;->d()I
 
     move-result v0
 

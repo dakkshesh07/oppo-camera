@@ -27,17 +27,17 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/menu/b/c;Landroid/animation/Animator$AnimatorListener;)V
     .locals 0
 
-    .line 666
+    .line 740
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 664
+    .line 738
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/b/c$c;->b:Landroid/animation/Animator$AnimatorListener;
 
-    .line 667
+    .line 741
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/b/c$c;->b:Landroid/animation/Animator$AnimatorListener;
 
     return-void
@@ -52,36 +52,36 @@
 
     const-string v1, "DefaultHideAnimatorListener, onAnimationCancel"
 
-    .line 694
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 768
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 696
+    .line 770
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/b/c;->setVisibility(I)V
 
-    .line 697
+    .line 771
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-static {v0, v1}, Lcom/oppo/camera/ui/menu/b/c;->a(Lcom/oppo/camera/ui/menu/b/c;F)V
 
-    .line 698
+    .line 772
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/b/c;->setEnabled(Z)V
 
-    .line 700
+    .line 774
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->b:Landroid/animation/Animator$AnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 701
+    .line 775
     invoke-interface {v0, p1}, Landroid/animation/Animator$AnimatorListener;->onAnimationCancel(Landroid/animation/Animator;)V
 
     :cond_0
@@ -95,36 +95,36 @@
 
     const-string v1, "DefaultHideAnimatorListener, onAnimationEnd"
 
-    .line 681
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 755
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 683
+    .line 757
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/b/c;->setVisibility(I)V
 
-    .line 684
+    .line 758
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-static {v0, v1}, Lcom/oppo/camera/ui/menu/b/c;->a(Lcom/oppo/camera/ui/menu/b/c;F)V
 
-    .line 685
+    .line 759
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/b/c;->setEnabled(Z)V
 
-    .line 687
+    .line 761
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->b:Landroid/animation/Animator$AnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 688
+    .line 762
     invoke-interface {v0, p1}, Landroid/animation/Animator$AnimatorListener;->onAnimationEnd(Landroid/animation/Animator;)V
 
     :cond_0
@@ -134,12 +134,12 @@
 .method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 707
+    .line 781
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->b:Landroid/animation/Animator$AnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 708
+    .line 782
     invoke-interface {v0, p1}, Landroid/animation/Animator$AnimatorListener;->onAnimationRepeat(Landroid/animation/Animator;)V
 
     :cond_0
@@ -153,15 +153,15 @@
 
     const-string v1, "DefaultHideAnimatorListener, onAnimationStart"
 
-    .line 672
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 746
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 674
+    .line 748
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$c;->b:Landroid/animation/Animator$AnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 675
+    .line 749
     invoke-interface {v0, p1}, Landroid/animation/Animator$AnimatorListener;->onAnimationStart(Landroid/animation/Animator;)V
 
     :cond_0

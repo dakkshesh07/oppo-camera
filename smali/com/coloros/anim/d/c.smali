@@ -1,554 +1,1243 @@
 .class public Lcom/coloros/anim/d/c;
-.super Ljava/lang/Object;
-.source "NetworkFetcher.java"
+.super Lcom/coloros/anim/d/a;
+.source "EffectiveValueAnimator.java"
+
+# interfaces
+.implements Landroid/view/Choreographer$FrameCallback;
 
 
 # instance fields
-.field private final a:Landroid/content/Context;
+.field protected a:Z
 
-.field private final b:Ljava/lang/String;
+.field private b:F
 
-.field private final c:Lcom/coloros/anim/d/b;
+.field private c:Z
+
+.field private d:J
+
+.field private e:F
+
+.field private f:I
+
+.field private g:F
+
+.field private h:F
+
+.field private i:Lcom/coloros/anim/a;
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 1
-
-    .line 31
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 32
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/coloros/anim/d/c;->a:Landroid/content/Context;
-
-    .line 33
-    iput-object p2, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
+.method public constructor <init>()V
+    .locals 3
 
     .line 34
-    new-instance p1, Lcom/coloros/anim/d/b;
+    invoke-direct {p0}, Lcom/coloros/anim/d/a;-><init>()V
 
-    iget-object v0, p0, Lcom/coloros/anim/d/c;->a:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    invoke-direct {p1, v0, p2}, Lcom/coloros/anim/d/b;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    .line 22
+    iput-boolean v0, p0, Lcom/coloros/anim/d/c;->a:Z
 
-    iput-object p1, p0, Lcom/coloros/anim/d/c;->c:Lcom/coloros/anim/d/b;
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    .line 24
+    iput v1, p0, Lcom/coloros/anim/d/c;->b:F
+
+    .line 25
+    iput-boolean v0, p0, Lcom/coloros/anim/d/c;->c:Z
+
+    const-wide/16 v1, 0x0
+
+    .line 26
+    iput-wide v1, p0, Lcom/coloros/anim/d/c;->d:J
+
+    const/4 v1, 0x0
+
+    .line 27
+    iput v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    .line 28
+    iput v0, p0, Lcom/coloros/anim/d/c;->f:I
+
+    const/high16 v0, -0x31000000
+
+    .line 29
+    iput v0, p0, Lcom/coloros/anim/d/c;->g:F
+
+    const/high16 v0, 0x4f000000
+
+    .line 30
+    iput v0, p0, Lcom/coloros/anim/d/c;->h:F
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/e;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/coloros/anim/e<",
-            "Lcom/coloros/anim/a;",
-            ">;"
-        }
-    .end annotation
+.method private q()F
+    .locals 2
 
-    .line 38
-    new-instance v0, Lcom/coloros/anim/d/c;
-
-    invoke-direct {v0, p0, p1}, Lcom/coloros/anim/d/c;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lcom/coloros/anim/d/c;->a()Lcom/coloros/anim/e;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method private b()Lcom/coloros/anim/a;
-    .locals 4
-
-    .line 58
-    iget-object v0, p0, Lcom/coloros/anim/d/c;->c:Lcom/coloros/anim/d/b;
-
-    invoke-virtual {v0}, Lcom/coloros/anim/d/b;->a()Landroid/util/Pair;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
+    .line 140
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
 
     if-nez v0, :cond_0
 
-    return-object v1
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 63
+    return v0
+
     :cond_0
-    iget-object v2, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
+    const v1, 0x4e6e6b28    # 1.0E9f
 
-    check-cast v2, Lcom/coloros/anim/d/a;
-
-    .line 64
-    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v0, Ljava/io/InputStream;
-
-    .line 66
-    sget-object v3, Lcom/coloros/anim/d/a;->ZIP:Lcom/coloros/anim/d/a;
-
-    if-ne v2, v3, :cond_1
-
-    .line 67
-    new-instance v2, Ljava/util/zip/ZipInputStream;
-
-    invoke-direct {v2, v0}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
-
-    iget-object v0, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lcom/coloros/anim/g;->a(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/coloros/anim/e;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 69
-    :cond_1
-    iget-object v2, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Lcom/coloros/anim/g;->a(Ljava/io/InputStream;Ljava/lang/String;)Lcom/coloros/anim/e;
-
-    move-result-object v0
-
-    .line 71
-    :goto_0
-    invoke-virtual {v0}, Lcom/coloros/anim/e;->a()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    .line 72
-    invoke-virtual {v0}, Lcom/coloros/anim/e;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/coloros/anim/a;
-
-    return-object v0
-
-    :cond_2
-    return-object v1
-.end method
-
-.method private c()Lcom/coloros/anim/e;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/coloros/anim/e<",
-            "Lcom/coloros/anim/a;",
-            ">;"
-        }
-    .end annotation
-
-    .line 80
-    :try_start_0
-    invoke-direct {p0}, Lcom/coloros/anim/d/c;->d()Lcom/coloros/anim/e;
-
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    .line 82
-    new-instance v1, Lcom/coloros/anim/e;
-
-    invoke-direct {v1, v0}, Lcom/coloros/anim/e;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v1
-.end method
-
-.method private d()Lcom/coloros/anim/e;
-    .locals 7
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 88
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Fetching "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/coloros/anim/k;->a(Ljava/lang/String;)V
-
-    .line 89
-    new-instance v0, Ljava/net/URL;
-
-    iget-object v1, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/net/HttpURLConnection;
-
-    const-string v1, "GET"
-
-    .line 91
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
-
-    .line 92
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->connect()V
-
-    .line 94
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
-
-    move-result-object v1
-
-    if-nez v1, :cond_7
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v1
-
-    const/16 v2, 0xc8
-
-    if-eq v1, v2, :cond_0
-
-    goto/16 :goto_3
-
-    .line 108
-    :cond_0
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getContentType()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, -0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    const v4, -0x4a67ee1e
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    if-eq v3, v4, :cond_2
-
-    const v4, -0x29cf5b9
-
-    if-eq v3, v4, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v3, "application/json"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    move v2, v5
-
-    goto :goto_0
-
-    :cond_2
-    const-string v3, "application/zip"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    move v2, v6
-
-    :cond_3
-    :goto_0
-    if-eqz v2, :cond_4
-
-    const-string v1, "Received json response."
-
-    .line 117
-    invoke-static {v1}, Lcom/coloros/anim/k;->a(Ljava/lang/String;)V
-
-    .line 118
-    sget-object v1, Lcom/coloros/anim/d/a;->JSON:Lcom/coloros/anim/d/a;
-
-    .line 119
-    iget-object v2, p0, Lcom/coloros/anim/d/c;->c:Lcom/coloros/anim/d/b;
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v1}, Lcom/coloros/anim/d/b;->a(Ljava/io/InputStream;Lcom/coloros/anim/d/a;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 120
-    new-instance v2, Ljava/io/FileInputStream;
-
-    new-instance v3, Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v2, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    iget-object v0, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lcom/coloros/anim/g;->a(Ljava/io/InputStream;Ljava/lang/String;)Lcom/coloros/anim/e;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_4
-    const-string v1, "Handling zip response."
-
-    .line 110
-    invoke-static {v1}, Lcom/coloros/anim/k;->a(Ljava/lang/String;)V
-
-    .line 111
-    sget-object v1, Lcom/coloros/anim/d/a;->ZIP:Lcom/coloros/anim/d/a;
-
-    .line 112
-    iget-object v2, p0, Lcom/coloros/anim/d/c;->c:Lcom/coloros/anim/d/b;
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v1}, Lcom/coloros/anim/d/b;->a(Ljava/io/InputStream;Lcom/coloros/anim/d/a;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 113
-    new-instance v2, Ljava/util/zip/ZipInputStream;
-
-    new-instance v3, Ljava/io/FileInputStream;
-
-    invoke-direct {v3, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    invoke-direct {v2, v3}, Ljava/util/zip/ZipInputStream;-><init>(Ljava/io/InputStream;)V
-
-    iget-object v0, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-static {v2, v0}, Lcom/coloros/anim/g;->a(Ljava/util/zip/ZipInputStream;Ljava/lang/String;)Lcom/coloros/anim/e;
-
-    move-result-object v0
-
-    .line 124
-    :goto_1
-    invoke-virtual {v0}, Lcom/coloros/anim/e;->a()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_5
-
-    .line 125
-    iget-object v2, p0, Lcom/coloros/anim/d/c;->c:Lcom/coloros/anim/d/b;
-
-    invoke-virtual {v2, v1}, Lcom/coloros/anim/d/b;->a(Lcom/coloros/anim/d/a;)V
-
-    .line 128
-    :cond_5
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Completed fetch from network. Success: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Lcom/coloros/anim/e;->a()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    move v5, v6
-
-    :goto_2
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/coloros/anim/k;->a(Ljava/lang/String;)V
-
-    return-object v0
-
-    .line 95
-    :cond_7
-    :goto_3
-    new-instance v1, Ljava/io/BufferedReader;
-
-    new-instance v2, Ljava/io/InputStreamReader;
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getErrorStream()Ljava/io/InputStream;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
-
-    invoke-direct {v1, v2}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
-
-    .line 96
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 98
-    :goto_4
-    invoke-virtual {v1}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_8
-
-    .line 99
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v3, 0xa
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    goto :goto_4
-
-    .line 101
-    :cond_8
-    new-instance v1, Lcom/coloros/anim/e;
-
-    new-instance v3, Ljava/lang/IllegalArgumentException;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Unable to fetch "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v5, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, ". Failed with "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 102
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
+    .line 143
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->h()F
 
     move-result v0
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    div-float/2addr v1, v0
 
-    const-string v0, "\n"
+    iget v0, p0, Lcom/coloros/anim/d/c;->b:F
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    div-float/2addr v1, v0
 
-    move-result-object v0
+    return v1
+.end method
 
-    invoke-direct {v3, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+.method private r()Z
+    .locals 2
 
-    invoke-direct {v1, v3}, Lcom/coloros/anim/e;-><init>(Ljava/lang/Throwable;)V
+    .line 246
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->h()F
 
-    return-object v1
+    move-result v0
+
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+.end method
+
+.method private s()V
+    .locals 4
+
+    .line 300
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 303
+    :cond_0
+    iget v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    iget v1, p0, Lcom/coloros/anim/d/c;->g:F
+
+    cmpg-float v1, v0, v1
+
+    if-ltz v1, :cond_1
+
+    iget v1, p0, Lcom/coloros/anim/d/c;->h:F
+
+    cmpl-float v0, v0, v1
+
+    if-gtz v0, :cond_1
+
+    return-void
+
+    .line 304
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    iget v3, p0, Lcom/coloros/anim/d/c;->g:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    iget v3, p0, Lcom/coloros/anim/d/c;->h:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    iget v3, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const-string v2, "Frame must be [%f,%f]. It is %f"
+
+    invoke-static {v2, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public a()Lcom/coloros/anim/e;
+.method public a(F)V
+    .locals 0
+
+    .line 193
+    iput p1, p0, Lcom/coloros/anim/d/c;->b:F
+
+    return-void
+.end method
+
+.method public a(FF)V
+    .locals 3
+
+    cmpl-float v0, p1, p2
+
+    if-gtz v0, :cond_2
+
+    .line 174
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const v0, -0x800001
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->f()F
+
+    move-result v0
+
+    .line 175
+    :goto_0
+    iget-object v1, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v1, :cond_1
+
+    const v1, 0x7f7fffff    # Float.MAX_VALUE
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Lcom/coloros/anim/a;->g()F
+
+    move-result v1
+
+    .line 176
+    :goto_1
+    invoke-static {p1, v0, v1}, Lcom/coloros/anim/d/f;->b(FFF)F
+
+    move-result v2
+
+    iput v2, p0, Lcom/coloros/anim/d/c;->g:F
+
+    .line 177
+    invoke-static {p2, v0, v1}, Lcom/coloros/anim/d/f;->b(FFF)F
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/d/c;->h:F
+
+    .line 178
+    iget v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-static {v0, p1, p2}, Lcom/coloros/anim/d/f;->b(FFF)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    invoke-virtual {p0, p1}, Lcom/coloros/anim/d/c;->a(I)V
+
+    return-void
+
+    .line 172
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    aput-object p1, v1, v2
+
+    const/4 p1, 0x1
+
+    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p2
+
+    aput-object p2, v1, p1
+
+    const-string p1, "minFrame (%s) must be <= maxFrame (%s)"
+
+    invoke-static {p1, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public a(I)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/coloros/anim/e<",
-            "Lcom/coloros/anim/a;",
-            ">;"
-        }
-    .end annotation
+
+    .line 86
+    iget v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    int-to-float p1, p1
+
+    cmpl-float v0, v0, p1
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    .line 89
+    :cond_0
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v1
+
+    invoke-static {p1, v0, v1}, Lcom/coloros/anim/d/f;->b(FFF)F
+
+    move-result p1
+
+    iput p1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    .line 90
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/coloros/anim/d/c;->d:J
+
+    .line 91
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->c()V
+
+    return-void
+.end method
+
+.method public a(Lcom/coloros/anim/a;)V
+    .locals 2
+
+    .line 154
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 155
+    :goto_0
+    iput-object p1, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-eqz v0, :cond_1
+
+    .line 158
+    iget v0, p0, Lcom/coloros/anim/d/c;->g:F
+
+    .line 159
+    invoke-virtual {p1}, Lcom/coloros/anim/a;->f()F
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/coloros/anim/d/c;->h:F
+
+    .line 160
+    invoke-virtual {p1}, Lcom/coloros/anim/a;->g()F
+
+    move-result p1
+
+    invoke-static {v1, p1}, Ljava/lang/Math;->min(FF)F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    int-to-float p1, p1
+
+    .line 158
+    invoke-virtual {p0, v0, p1}, Lcom/coloros/anim/d/c;->a(FF)V
+
+    goto :goto_1
+
+    .line 163
+    :cond_1
+    invoke-virtual {p1}, Lcom/coloros/anim/a;->f()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p1}, Lcom/coloros/anim/a;->g()F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    int-to-float p1, p1
+
+    invoke-virtual {p0, v0, p1}, Lcom/coloros/anim/d/c;->a(FF)V
+
+    .line 165
+    :goto_1
+    iget p1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    const/4 v0, 0x0
+
+    .line 166
+    iput v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    float-to-int p1, p1
+
+    .line 167
+    invoke-virtual {p0, p1}, Lcom/coloros/anim/d/c;->a(I)V
+
+    return-void
+.end method
+
+.method public b(F)V
+    .locals 1
+
+    .line 268
+    iget v0, p0, Lcom/coloros/anim/d/c;->g:F
+
+    invoke-virtual {p0, v0, p1}, Lcom/coloros/anim/d/c;->a(FF)V
+
+    return-void
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    int-to-float p1, p1
+
+    .line 257
+    iget v0, p0, Lcom/coloros/anim/d/c;->h:F
+
+    float-to-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p0, p1, v0}, Lcom/coloros/anim/d/c;->a(FF)V
+
+    return-void
+.end method
+
+.method protected c(Z)V
+    .locals 2
+
+    .line 289
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "EffectiveAnimation"
+
+    const-string v1, "Gets the choreographer is null"
+
+    .line 290
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 292
+    :cond_0
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/Choreographer;->removeFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    const/4 p1, 0x0
+
+    .line 295
+    iput-boolean p1, p0, Lcom/coloros/anim/d/c;->a:Z
+
+    :cond_1
+    return-void
+.end method
+
+.method public cancel()V
+    .locals 0
+
+    .line 241
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->b()V
+
+    .line 242
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->p()V
+
+    return-void
+.end method
+
+.method public d()F
+    .locals 3
+
+    .line 52
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 55
+    :cond_0
+    iget v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->f()F
+
+    move-result v0
+
+    sub-float/2addr v1, v0
+
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->g()F
+
+    move-result v0
+
+    iget-object v2, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    invoke-virtual {v2}, Lcom/coloros/anim/a;->f()F
+
+    move-result v2
+
+    sub-float/2addr v0, v2
+
+    div-float/2addr v1, v0
+
+    return v1
+.end method
+
+.method public doFrame(J)V
+    .locals 4
+
+    .line 101
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->o()V
+
+    .line 102
+    iget-object p1, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->isRunning()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto/16 :goto_3
+
+    .line 106
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide p1
+
+    .line 107
+    iget-wide v0, p0, Lcom/coloros/anim/d/c;->d:J
+
+    sub-long v0, p1, v0
+
+    .line 108
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->q()F
+
+    move-result v2
+
+    long-to-float v0, v0
+
+    div-float/2addr v0, v2
+
+    .line 111
+    iget v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    neg-float v0, v0
+
+    :cond_1
+    add-float/2addr v1, v0
+
+    iput v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    .line 112
+    iget v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v2
+
+    invoke-static {v0, v1, v2}, Lcom/coloros/anim/d/f;->c(FFF)Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    .line 113
+    iget v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v2
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v3
+
+    invoke-static {v1, v2, v3}, Lcom/coloros/anim/d/f;->b(FFF)F
+
+    move-result v1
+
+    iput v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    .line 115
+    iput-wide p1, p0, Lcom/coloros/anim/d/c;->d:J
+
+    .line 117
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->c()V
+
+    if-eqz v0, :cond_5
+
+    .line 119
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->getRepeatCount()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_2
+
+    iget v0, p0, Lcom/coloros/anim/d/c;->f:I
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->getRepeatCount()I
+
+    move-result v1
+
+    if-lt v0, v1, :cond_2
+
+    .line 120
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result p1
+
+    iput p1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    .line 121
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->p()V
+
+    .line 122
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/coloros/anim/d/c;->b(Z)V
+
+    goto :goto_2
+
+    .line 124
+    :cond_2
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->a()V
+
+    .line 125
+    iget v0, p0, Lcom/coloros/anim/d/c;->f:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/coloros/anim/d/c;->f:I
+
+    .line 126
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->getRepeatMode()I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_3
+
+    .line 127
+    iget-boolean v0, p0, Lcom/coloros/anim/d/c;->c:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    iput-boolean v0, p0, Lcom/coloros/anim/d/c;->c:Z
+
+    .line 128
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->g()V
+
+    goto :goto_1
+
+    .line 130
+    :cond_3
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v0
+
+    :goto_0
+    iput v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    .line 132
+    :goto_1
+    iput-wide p1, p0, Lcom/coloros/anim/d/c;->d:J
+
+    .line 136
+    :cond_5
+    :goto_2
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->s()V
+
+    :cond_6
+    :goto_3
+    return-void
+.end method
+
+.method public e()F
+    .locals 1
+
+    .line 82
+    iget v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    return v0
+.end method
+
+.method public f()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 147
+    iput-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    const/high16 v0, -0x31000000
+
+    .line 148
+    iput v0, p0, Lcom/coloros/anim/d/c;->g:F
+
+    const/high16 v0, 0x4f000000
+
+    .line 149
+    iput v0, p0, Lcom/coloros/anim/d/c;->h:F
+
+    return-void
+.end method
+
+.method public g()V
+    .locals 1
+
+    .line 182
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->h()F
+
+    move-result v0
+
+    neg-float v0, v0
+
+    invoke-virtual {p0, v0}, Lcom/coloros/anim/d/c;->a(F)V
+
+    return-void
+.end method
+
+.method public getAnimatedFraction()F
+    .locals 3
+
+    .line 66
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 69
+    :cond_0
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 70
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v0
+
+    iget v1, p0, Lcom/coloros/anim/d/c;->e:F
+
+    sub-float/2addr v0, v1
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v2
+
+    :goto_0
+    sub-float/2addr v1, v2
+
+    div-float/2addr v0, v1
+
+    return v0
+
+    .line 72
+    :cond_1
+    iget v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v2
+
+    goto :goto_0
+.end method
+
+.method public getAnimatedValue()Ljava/lang/Object;
+    .locals 1
 
     .line 43
-    invoke-direct {p0}, Lcom/coloros/anim/d/c;->b()Lcom/coloros/anim/a;
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->d()F
 
-    move-result-object v0
+    move-result v0
 
-    if-eqz v0, :cond_0
-
-    .line 45
-    new-instance v1, Lcom/coloros/anim/e;
-
-    invoke-direct {v1, v0}, Lcom/coloros/anim/e;-><init>(Ljava/lang/Object;)V
-
-    return-object v1
-
-    .line 48
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Animation for "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/coloros/anim/d/c;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " not found in cache. Fetching from network."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/coloros/anim/k;->a(Ljava/lang/String;)V
-
-    .line 49
-    invoke-direct {p0}, Lcom/coloros/anim/d/c;->c()Lcom/coloros/anim/e;
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public getDuration()J
+    .locals 2
+
+    .line 78
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const-wide/16 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->e()F
+
+    move-result v0
+
+    float-to-long v0, v0
+
+    :goto_0
+    return-wide v0
+.end method
+
+.method public h()F
+    .locals 1
+
+    .line 189
+    iget v0, p0, Lcom/coloros/anim/d/c;->b:F
+
+    return v0
+.end method
+
+.method public i()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    .line 207
+    iput-boolean v0, p0, Lcom/coloros/anim/d/c;->a:Z
+
+    .line 208
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/coloros/anim/d/c;->a(Z)V
+
+    .line 209
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v0
+
+    :goto_0
+    float-to-int v0, v0
+
+    invoke-virtual {p0, v0}, Lcom/coloros/anim/d/c;->a(I)V
+
+    .line 210
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/coloros/anim/d/c;->d:J
+
+    const/4 v0, 0x0
+
+    .line 211
+    iput v0, p0, Lcom/coloros/anim/d/c;->f:I
+
+    .line 212
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->o()V
+
+    return-void
+.end method
+
+.method public isRunning()Z
+    .locals 1
+
+    .line 96
+    iget-boolean v0, p0, Lcom/coloros/anim/d/c;->a:Z
+
+    return v0
+.end method
+
+.method public j()V
+    .locals 1
+
+    .line 217
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->p()V
+
+    .line 218
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lcom/coloros/anim/d/c;->b(Z)V
+
+    return-void
+.end method
+
+.method public k()V
+    .locals 0
+
+    .line 223
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->p()V
+
+    return-void
+.end method
+
+.method public l()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    .line 228
+    iput-boolean v0, p0, Lcom/coloros/anim/d/c;->a:Z
+
+    .line 229
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->o()V
+
+    .line 230
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/coloros/anim/d/c;->d:J
+
+    .line 231
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->e()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v1
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    .line 232
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    goto :goto_0
+
+    .line 233
+    :cond_0
+    invoke-direct {p0}, Lcom/coloros/anim/d/c;->r()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->e()F
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->n()F
+
+    move-result v1
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_1
+
+    .line 234
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->m()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/coloros/anim/d/c;->e:F
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method public m()F
+    .locals 3
+
+    .line 250
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 253
+    :cond_0
+    iget v1, p0, Lcom/coloros/anim/d/c;->g:F
+
+    const/high16 v2, -0x31000000
+
+    cmpl-float v2, v1, v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->f()F
+
+    move-result v1
+
+    :cond_1
+    return v1
+.end method
+
+.method public n()F
+    .locals 3
+
+    .line 261
+    iget-object v0, p0, Lcom/coloros/anim/d/c;->i:Lcom/coloros/anim/a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return v0
+
+    .line 264
+    :cond_0
+    iget v1, p0, Lcom/coloros/anim/d/c;->h:F
+
+    const/high16 v2, 0x4f000000
+
+    cmpl-float v2, v1, v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Lcom/coloros/anim/a;->g()F
+
+    move-result v1
+
+    :cond_1
+    return v1
+.end method
+
+.method protected o()V
+    .locals 2
+
+    .line 272
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->isRunning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    .line 273
+    invoke-virtual {p0, v0}, Lcom/coloros/anim/d/c;->c(Z)V
+
+    .line 274
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "EffectiveAnimation"
+
+    const-string v1, "Gets the choreographer is null"
+
+    .line 275
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    .line 277
+    :cond_0
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method protected p()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 284
+    invoke-virtual {p0, v0}, Lcom/coloros/anim/d/c;->c(Z)V
+
+    return-void
+.end method
+
+.method public setRepeatMode(I)V
+    .locals 1
+
+    .line 198
+    invoke-super {p0, p1}, Lcom/coloros/anim/d/a;->setRepeatMode(I)V
+
+    const/4 v0, 0x2
+
+    if-eq p1, v0, :cond_0
+
+    .line 199
+    iget-boolean p1, p0, Lcom/coloros/anim/d/c;->c:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    .line 200
+    iput-boolean p1, p0, Lcom/coloros/anim/d/c;->c:Z
+
+    .line 201
+    invoke-virtual {p0}, Lcom/coloros/anim/d/c;->g()V
+
+    :cond_0
+    return-void
 .end method

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="vector" android:height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07079d" android:width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0707a4" android:viewportWidth="96.0" android:viewportHeight="96.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="path_1" android:fillColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:pathData="M 59.071 57.357 L 47.014 64.591 C 46.541 64.875 45.927 64.722 45.643 64.248 C 45.549 64.093 45.5 63.915 45.5 63.734 L 45.5 49.266 C 45.5 48.714 45.948 48.266 46.5 48.266 C 46.681 48.266 46.859 48.315 47.014 48.409 L 59.071 55.643 C 59.544 55.927 59.698 56.541 59.414 57.014 C 59.329 57.155 59.212 57.273 59.071 57.357 Z" />
+    <path android:name="path_width" android:pathData="M 17 35 L 85 35 L 85 78 L 17 78 Z" android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:strokeWidth="@integer/APKTOOL_DUPLICATE_integer_0x7f0a0037" />
+    <path android:name="path_width" android:pathData="M 32.541 17.812 L 28.968 32.389 M 48.348 13.534 L 44.775 28.11 M 64.505 9.029 L 60.931 23.605 M 13.049 23.012 L 78.732 5.412 L 82.097 17.969 L 16.414 35.569 Z" android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:strokeWidth="@integer/APKTOOL_DUPLICATE_integer_0x7f0a0037" />
+</vector>

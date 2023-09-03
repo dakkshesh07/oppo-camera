@@ -130,7 +130,7 @@
     .line 36
     iget-object p1, p0, Lcom/sensetime/stmobile/STSoundPlayManager;->mCachedPath:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/oppo/camera/m/a;->f(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/oppo/camera/n/a;->f(Ljava/lang/String;)Z
 
     .line 39
     :cond_0
@@ -328,11 +328,11 @@
 
     const/4 v0, 0x0
 
-    .line 202
     :try_start_0
-    sget-object v1, Lcom/oppo/camera/m/a;->g:Ljava/lang/String;
+    const-string v1, "audio/mpeg"
 
-    invoke-static {p1, v1}, Lcom/oppo/camera/m/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/io/OutputStream;
+    .line 202
+    invoke-static {p1, v1}, Lcom/oppo/camera/n/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/io/OutputStream;
 
     move-result-object v1
     :try_end_0
@@ -446,7 +446,7 @@
 
     const-string v1, "STSoundPlayManager"
 
-    invoke-static {v1, p2, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, p2, p1}, Lcom/oppo/camera/c;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v0
 .end method
@@ -461,7 +461,7 @@
     const-string v1, "pauseSound"
 
     .line 217
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 219
     iget-object v0, p0, Lcom/sensetime/stmobile/STSoundPlayManager;->mSoundMetaDataMap:Ljava/util/HashMap;
@@ -542,7 +542,7 @@
     const-string v1, "resumeSound"
 
     .line 231
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 233
     iget-object v1, p0, Lcom/sensetime/stmobile/STSoundPlayManager;->mSoundMetaDataMap:Ljava/util/HashMap;
@@ -560,7 +560,7 @@
     const-string v1, "No meta-data when Resume"
 
     .line 236
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 

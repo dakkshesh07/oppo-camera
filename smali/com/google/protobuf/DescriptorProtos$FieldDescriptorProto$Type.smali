@@ -122,7 +122,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .line 9887
+    .line 11601
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v1, 0x1
@@ -135,7 +135,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_DOUBLE:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9891
+    .line 11605
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v2, 0x2
@@ -146,7 +146,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_FLOAT:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9900
+    .line 11614
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v3, 0x3
@@ -157,7 +157,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_INT64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9904
+    .line 11618
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v4, 0x4
@@ -168,7 +168,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_UINT64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9913
+    .line 11627
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v5, 0x5
@@ -179,7 +179,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_INT32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9917
+    .line 11631
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v6, 0x6
@@ -190,7 +190,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_FIXED64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9921
+    .line 11635
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/4 v7, 0x7
@@ -201,7 +201,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_FIXED32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9925
+    .line 11639
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v8, 0x8
@@ -212,7 +212,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_BOOL:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9929
+    .line 11643
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v9, 0x9
@@ -223,7 +223,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_STRING:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9937
+    .line 11654
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v10, 0xa
@@ -234,7 +234,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_GROUP:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9945
+    .line 11662
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v11, 0xb
@@ -245,7 +245,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_MESSAGE:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9953
+    .line 11670
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v12, 0xc
@@ -256,7 +256,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_BYTES:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9957
+    .line 11674
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v13, 0xd
@@ -267,7 +267,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_UINT32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9961
+    .line 11678
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v14, 0xe
@@ -278,7 +278,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_ENUM:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9965
+    .line 11682
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const/16 v15, 0xf
@@ -289,7 +289,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SFIXED32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9969
+    .line 11686
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const-string v13, "TYPE_SFIXED64"
@@ -300,7 +300,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SFIXED64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9977
+    .line 11694
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const-string v13, "TYPE_SINT32"
@@ -311,7 +311,7 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SINT32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 9985
+    .line 11702
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     const-string v13, "TYPE_SINT64"
@@ -326,7 +326,7 @@
 
     const/16 v0, 0x12
 
-    .line 9877
+    .line 11591
     new-array v0, v0, [Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     sget-object v13, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_DOUBLE:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
@@ -415,14 +415,14 @@
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->$VALUES:[Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
-    .line 10138
+    .line 11864
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type$1;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
-    .line 10158
+    .line 11884
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->values()[Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     move-result-object v0
@@ -440,10 +440,10 @@
         }
     .end annotation
 
-    .line 10171
+    .line 11897
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 10172
+    .line 11898
     iput p3, p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->value:I
 
     return-void
@@ -458,109 +458,109 @@
 
     return-object p0
 
-    .line 10128
+    .line 11854
     :pswitch_0
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SINT64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10127
+    .line 11853
     :pswitch_1
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SINT32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10126
+    .line 11852
     :pswitch_2
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SFIXED64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10125
+    .line 11851
     :pswitch_3
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_SFIXED32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10124
+    .line 11850
     :pswitch_4
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_ENUM:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10123
+    .line 11849
     :pswitch_5
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_UINT32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10122
+    .line 11848
     :pswitch_6
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_BYTES:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10121
+    .line 11847
     :pswitch_7
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_MESSAGE:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10120
+    .line 11846
     :pswitch_8
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_GROUP:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10119
+    .line 11845
     :pswitch_9
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_STRING:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10118
+    .line 11844
     :pswitch_a
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_BOOL:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10117
+    .line 11843
     :pswitch_b
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_FIXED32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10116
+    .line 11842
     :pswitch_c
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_FIXED64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10115
+    .line 11841
     :pswitch_d
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_INT32:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10114
+    .line 11840
     :pswitch_e
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_UINT64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10113
+    .line 11839
     :pswitch_f
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_INT64:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10112
+    .line 11838
     :pswitch_10
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_FLOAT:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     return-object p0
 
-    .line 10111
+    .line 11837
     :pswitch_11
     sget-object p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->TYPE_DOUBLE:Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
@@ -594,7 +594,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 2
 
-    .line 10155
+    .line 11881
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -625,7 +625,7 @@
         }
     .end annotation
 
-    .line 10135
+    .line 11861
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -636,7 +636,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 10106
+    .line 11828
     invoke-static {p0}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->forNumber(I)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     move-result-object p0
@@ -647,7 +647,7 @@
 .method public static valueOf(Lcom/google/protobuf/Descriptors$EnumValueDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
     .locals 2
 
-    .line 10162
+    .line 11888
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -658,7 +658,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 10166
+    .line 11892
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->VALUES:[Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getIndex()I
@@ -669,7 +669,7 @@
 
     return-object p0
 
-    .line 10163
+    .line 11889
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -683,7 +683,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
     .locals 1
 
-    .line 9877
+    .line 11591
     const-class v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -698,7 +698,7 @@
 .method public static values()[Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
     .locals 1
 
-    .line 9877
+    .line 11591
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->$VALUES:[Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->clone()Ljava/lang/Object;
@@ -715,7 +715,7 @@
 .method public final getDescriptorForType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 1
 
-    .line 10151
+    .line 11877
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -726,7 +726,7 @@
 .method public final getNumber()I
     .locals 1
 
-    .line 10098
+    .line 11818
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->value:I
 
     return v0
@@ -735,7 +735,7 @@
 .method public final getValueDescriptor()Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
     .locals 2
 
-    .line 10147
+    .line 11873
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0

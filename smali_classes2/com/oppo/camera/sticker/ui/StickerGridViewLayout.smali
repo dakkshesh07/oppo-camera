@@ -14,7 +14,7 @@
 
 .field private e:Landroid/content/Context;
 
-.field private f:Lcom/oppo/camera/sticker/ui/j;
+.field private f:Lcom/oppo/camera/sticker/ui/i;
 
 .field private g:I
 
@@ -77,7 +77,7 @@
     iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->e:Landroid/content/Context;
 
     .line 30
-    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/j;
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/i;
 
     const/4 p2, 0x0
 
@@ -90,11 +90,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/j;
+.method static synthetic a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/i;
     .locals 0
 
     .line 22
-    iget-object p0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/j;
+    iget-object p0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/i;
 
     return-object p0
 .end method
@@ -204,7 +204,7 @@
     const-string v1, "StickerGridViewLayout"
 
     .line 75
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 78
     iput p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->g:I
@@ -231,9 +231,9 @@
     .line 83
     iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->c:Lcom/oppo/camera/sticker/ui/a;
 
-    iget-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/j;
+    iget-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/i;
 
-    invoke-virtual {p1, p2}, Lcom/oppo/camera/sticker/ui/a;->a(Lcom/oppo/camera/sticker/ui/j;)V
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/sticker/ui/a;->a(Lcom/oppo/camera/sticker/ui/i;)V
 
     .line 84
     iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->c:Lcom/oppo/camera/sticker/ui/a;
@@ -299,7 +299,7 @@
     .line 139
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f090268
+    const v0, 0x7f0902b8
 
     .line 141
     invoke-virtual {p0, v0}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->findViewById(I)Landroid/view/View;
@@ -328,7 +328,7 @@
 
     iget-object v1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->c:Lcom/oppo/camera/sticker/ui/a;
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/ui/FooterGridView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/ui/FooterGridView;->setAdapter(Landroid/widget/BaseAdapter;)V
 
     .line 146
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b:Lcom/oppo/camera/sticker/ui/FooterGridView;
@@ -339,7 +339,7 @@
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/ui/FooterGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 165
+    .line 163
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b:Lcom/oppo/camera/sticker/ui/FooterGridView;
 
     new-instance v1, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$2;
@@ -354,15 +354,15 @@
 .method public setGridViewEnable(Z)V
     .locals 1
 
-    .line 188
+    .line 186
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b:Lcom/oppo/camera/sticker/ui/FooterGridView;
 
     if-eqz v0, :cond_0
 
-    .line 189
+    .line 187
     invoke-virtual {v0, p1}, Lcom/oppo/camera/sticker/ui/FooterGridView;->setClickable(Z)V
 
-    .line 190
+    .line 188
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b:Lcom/oppo/camera/sticker/ui/FooterGridView;
 
     invoke-virtual {v0, p1}, Lcom/oppo/camera/sticker/ui/FooterGridView;->setEnabled(Z)V
@@ -407,11 +407,11 @@
     return-void
 .end method
 
-.method public setStickerMenuListener(Lcom/oppo/camera/sticker/ui/j;)V
+.method public setStickerMenuListener(Lcom/oppo/camera/sticker/ui/i;)V
     .locals 1
 
     .line 59
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/j;
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->f:Lcom/oppo/camera/sticker/ui/i;
 
     .line 61
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->c:Lcom/oppo/camera/sticker/ui/a;
@@ -419,7 +419,7 @@
     if-eqz v0, :cond_0
 
     .line 62
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/sticker/ui/a;->a(Lcom/oppo/camera/sticker/ui/j;)V
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/sticker/ui/a;->a(Lcom/oppo/camera/sticker/ui/i;)V
 
     :cond_0
     return-void
@@ -482,7 +482,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070608
+    const v1, 0x7f070742
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -506,7 +506,7 @@
     .line 124
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a:Landroid/widget/TextView;
 
-    const v1, 0x7f100370
+    const v1, 0x7f100552
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -536,7 +536,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070107
+    const v3, 0x7f0700f9
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -548,7 +548,11 @@
     .line 130
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->u()Landroid/graphics/Typeface;
+    invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/oppo/camera/util/Util;->j(Landroid/content/Context;)Landroid/graphics/Typeface;
 
     move-result-object v1
 

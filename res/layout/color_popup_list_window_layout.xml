@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.color.support.widget.popupwindow.RoundFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:rfRadius="@dimen/color_popup_list_window_content_radius"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.color.support.view.ForegroundListView android:id="@id/color_popup_list_view" android:background="@android:color/transparent" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/color_popup_list_selector" android:divider="@null" android:overScrollMode="ifContentScrolls" />
-</com.color.support.widget.popupwindow.RoundFrameLayout>

@@ -24,14 +24,14 @@
 
 
 # instance fields
-.field final a:Landroidx/lifecycle/e;
+.field final a:Landroidx/lifecycle/Lifecycle;
 
 .field final b:Landroidx/fragment/app/h;
 
-.field final c:Landroidx/b/d;
+.field final c:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/d<",
+            "Landroidx/collection/LongSparseArray<",
             "Landroidx/fragment/app/Fragment;",
             ">;"
         }
@@ -131,13 +131,13 @@
     .locals 5
 
     .line 285
-    iget-object v0, p0, Landroidx/viewpager2/adapter/a;->c:Landroidx/b/d;
+    iget-object v0, p0, Landroidx/viewpager2/adapter/a;->c:Landroidx/collection/LongSparseArray;
 
     invoke-virtual {p1}, Landroidx/viewpager2/adapter/b;->getItemId()J
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Landroidx/b/d;->a(J)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -273,10 +273,10 @@
 
     move-result-object p1
 
-    sget-object v1, Landroidx/lifecycle/e$b;->STARTED:Landroidx/lifecycle/e$b;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
     .line 340
-    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)Landroidx/fragment/app/k;
+    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/k;
 
     move-result-object p1
 
@@ -306,13 +306,13 @@
 
     .line 347
     :cond_7
-    iget-object v0, p0, Landroidx/viewpager2/adapter/a;->a:Landroidx/lifecycle/e;
+    iget-object v0, p0, Landroidx/viewpager2/adapter/a;->a:Landroidx/lifecycle/Lifecycle;
 
     new-instance v1, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;
 
     invoke-direct {v1, p0, p1}, Landroidx/viewpager2/adapter/FragmentStateAdapter$2;-><init>(Landroidx/viewpager2/adapter/a;Landroidx/viewpager2/adapter/b;)V
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/e;->a(Landroidx/lifecycle/g;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/f;)V
 
     :goto_1
     return-void

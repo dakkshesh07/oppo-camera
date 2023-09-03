@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;)V
+.method public abstract onChanged(Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)V"

@@ -53,13 +53,13 @@
         }
     .end annotation
 
-    .line 488
+    .line 482
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
+    .line 483
     iput-object p1, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
-    .line 490
+    .line 484
     iput-object p2, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     return-void
@@ -75,12 +75,12 @@
         }
     .end annotation
 
-    .line 525
+    .line 519
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 526
+    .line 520
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -100,12 +100,12 @@
         }
     .end annotation
 
-    .line 542
+    .line 536
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 543
+    .line 537
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -118,12 +118,12 @@
 .method public clear()V
     .locals 1
 
-    .line 560
+    .line 554
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 561
+    .line 555
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
@@ -134,7 +134,7 @@
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 505
+    .line 499
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -154,7 +154,7 @@
         }
     .end annotation
 
-    .line 537
+    .line 531
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
@@ -167,7 +167,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 566
+    .line 560
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
@@ -180,7 +180,7 @@
 .method public hashCode()I
     .locals 1
 
-    .line 571
+    .line 565
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->hashCode()I
@@ -193,7 +193,7 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 500
+    .line 494
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -213,7 +213,7 @@
         }
     .end annotation
 
-    .line 510
+    .line 504
     new-instance v0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;
 
     iget-object v1, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
@@ -232,12 +232,12 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 531
+    .line 525
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 532
+    .line 526
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
@@ -257,12 +257,12 @@
         }
     .end annotation
 
-    .line 554
+    .line 548
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 555
+    .line 549
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->removeAll(Ljava/util/Collection;)Z
@@ -282,12 +282,12 @@
         }
     .end annotation
 
-    .line 548
+    .line 542
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 549
+    .line 543
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->retainAll(Ljava/util/Collection;)Z
@@ -300,7 +300,7 @@
 .method public size()I
     .locals 1
 
-    .line 495
+    .line 489
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->size()I
@@ -313,7 +313,7 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
-    .line 515
+    .line 509
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->toArray()[Ljava/lang/Object;
@@ -333,7 +333,7 @@
         }
     .end annotation
 
-    .line 520
+    .line 514
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -346,7 +346,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 576
+    .line 570
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareSet;->delegate:Ljava/util/Set;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

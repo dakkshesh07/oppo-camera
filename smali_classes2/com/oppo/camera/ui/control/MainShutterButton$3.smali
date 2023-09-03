@@ -3,12 +3,12 @@
 .source "MainShutterButton.java"
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/control/MainShutterButton;->l()V
+    value = Lcom/oppo/camera/ui/control/MainShutterButton;->x()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/control/MainShutterButton;)V
     .locals 0
 
-    .line 818
+    .line 2006
     iput-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,31 +35,281 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 8
 
-    return-void
-.end method
+    .line 2009
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    check-cast p1, Ljava/lang/Float;
 
-    .line 836
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-static {v0, p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->a(Lcom/oppo/camera/ui/control/MainShutterButton;F)F
+
+    .line 2010
     iget-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->a(Lcom/oppo/camera/ui/control/MainShutterButton;)V
+    invoke-static {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
 
-    return-void
-.end method
+    move-result p1
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->l(Lcom/oppo/camera/ui/control/MainShutterButton;)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    sub-float/2addr p1, v0
+
+    .line 2012
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->m(Lcom/oppo/camera/ui/control/MainShutterButton;)Landroid/graphics/RectF;
+
+    move-result-object v0
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    if-nez v0, :cond_0
+
+    .line 2013
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    new-instance v2, Landroid/graphics/RectF;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->getWidth()I
+
+    move-result v3
+
+    div-int/lit8 v3, v3, 0x2
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v4}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    div-float v1, p1, v1
+
+    add-float/2addr v3, v1
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    .line 2014
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/control/MainShutterButton;->getHeight()I
+
+    move-result v4
+
+    div-int/lit8 v4, v4, 0x2
+
+    int-to-float v4, v4
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v5}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v5
+
+    sub-float/2addr v4, v5
+
+    add-float/2addr v4, v1
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    .line 2015
+    invoke-virtual {v5}, Lcom/oppo/camera/ui/control/MainShutterButton;->getWidth()I
+
+    move-result v5
+
+    div-int/lit8 v5, v5, 0x2
+
+    int-to-float v5, v5
+
+    iget-object v6, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v6}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v6
+
+    add-float/2addr v5, v6
+
+    sub-float/2addr v5, v1
+
+    iget-object v6, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    .line 2016
+    invoke-virtual {v6}, Lcom/oppo/camera/ui/control/MainShutterButton;->getWidth()I
+
+    move-result v6
+
+    div-int/lit8 v6, v6, 0x2
+
+    int-to-float v6, v6
+
+    iget-object v7, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v7}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v7
+
+    add-float/2addr v6, v7
+
+    sub-float/2addr v6, v1
+
+    invoke-direct {v2, v3, v4, v5, v6}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    .line 2013
+    invoke-static {v0, v2}, Lcom/oppo/camera/ui/control/MainShutterButton;->a(Lcom/oppo/camera/ui/control/MainShutterButton;Landroid/graphics/RectF;)Landroid/graphics/RectF;
+
+    goto :goto_0
+
+    .line 2018
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->m(Lcom/oppo/camera/ui/control/MainShutterButton;)Landroid/graphics/RectF;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/control/MainShutterButton;->getWidth()I
+
+    move-result v2
+
+    div-int/lit8 v2, v2, 0x2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v3}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    div-float v1, p1, v1
+
+    add-float/2addr v2, v1
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    .line 2019
+    invoke-virtual {v3}, Lcom/oppo/camera/ui/control/MainShutterButton;->getHeight()I
+
+    move-result v3
+
+    div-int/lit8 v3, v3, 0x2
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v4}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v4
+
+    sub-float/2addr v3, v4
+
+    add-float/2addr v3, v1
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    .line 2020
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/control/MainShutterButton;->getWidth()I
+
+    move-result v4
+
+    div-int/lit8 v4, v4, 0x2
+
+    int-to-float v4, v4
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v5}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v5
+
+    add-float/2addr v4, v5
+
+    sub-float/2addr v4, v1
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    .line 2021
+    invoke-virtual {v5}, Lcom/oppo/camera/ui/control/MainShutterButton;->getWidth()I
+
+    move-result v5
+
+    div-int/lit8 v5, v5, 0x2
+
+    int-to-float v5, v5
+
+    iget-object v6, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v6}, Lcom/oppo/camera/ui/control/MainShutterButton;->k(Lcom/oppo/camera/ui/control/MainShutterButton;)F
+
+    move-result v6
+
+    add-float/2addr v5, v6
+
+    sub-float/2addr v5, v1
+
+    .line 2018
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
+
+    .line 2024
+    :goto_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->f(Lcom/oppo/camera/ui/control/MainShutterButton;)Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 2025
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0, p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->b(Lcom/oppo/camera/ui/control/MainShutterButton;F)F
+
+    .line 2027
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->g(Lcom/oppo/camera/ui/control/MainShutterButton;)Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 2028
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->g(Lcom/oppo/camera/ui/control/MainShutterButton;)Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    .line 2031
+    :cond_1
+    iget-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$3;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->invalidate()V
 
     return-void
 .end method

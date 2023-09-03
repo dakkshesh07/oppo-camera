@@ -28,13 +28,13 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 2716
+    .line 2867
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2717
+    .line 2868
     iput-object p1, p0, Lcom/oppo/camera/util/Util$a;->a:Ljava/lang/String;
 
-    .line 2718
+    .line 2869
     new-instance p1, Ljava/text/SimpleDateFormat;
 
     iget-object v0, p0, Lcom/oppo/camera/util/Util$a;->a:Ljava/lang/String;
@@ -53,12 +53,12 @@
 .method public a(J)Ljava/lang/String;
     .locals 1
 
-    .line 2770
+    .line 2920
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 2772
+    .line 2922
     iget-object p1, p0, Lcom/oppo/camera/util/Util$a;->b:Ljava/text/SimpleDateFormat;
 
     invoke-virtual {p1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
@@ -71,12 +71,12 @@
 .method public a(JZ)Ljava/lang/String;
     .locals 9
 
-    .line 2728
+    .line 2879
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 2729
+    .line 2880
     iget-object v1, p0, Lcom/oppo/camera/util/Util$a;->b:Ljava/text/SimpleDateFormat;
 
     invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
@@ -91,7 +91,7 @@
 
     if-eqz p3, :cond_3
 
-    .line 2734
+    .line 2883
     div-long v5, p1, v3
 
     iget-wide v7, p0, Lcom/oppo/camera/util/Util$a;->c:J
@@ -102,19 +102,19 @@
 
     if-eqz p3, :cond_0
 
-    .line 2735
+    .line 2884
     iput-wide p1, p0, Lcom/oppo/camera/util/Util$a;->c:J
 
-    .line 2736
+    .line 2885
     iput v2, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
-    .line 2739
+    .line 2888
     :cond_0
     iget p1, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
     if-ge p1, v1, :cond_1
 
-    .line 2740
+    .line 2889
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,7 +135,7 @@
 
     goto :goto_0
 
-    .line 2742
+    .line 2891
     :cond_1
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -155,13 +155,13 @@
 
     move-result-object p1
 
-    .line 2745
+    .line 2894
     :goto_0
     iget p2, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
     if-nez p2, :cond_2
 
-    .line 2746
+    .line 2895
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,7 +179,7 @@
     :cond_2
     move-object v0, p1
 
-    .line 2749
+    .line 2898
     iget p1, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
     add-int/lit8 p1, p1, 0x1
@@ -188,7 +188,7 @@
 
     goto :goto_1
 
-    .line 2751
+    .line 2900
     :cond_3
     div-long v5, p1, v3
 
@@ -200,19 +200,19 @@
 
     if-nez p3, :cond_5
 
-    .line 2752
+    .line 2903
     iget p1, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
-    .line 2754
+    .line 2905
     iget p1, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
     if-ge p1, v1, :cond_4
 
-    .line 2755
+    .line 2906
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -233,7 +233,7 @@
 
     goto :goto_1
 
-    .line 2757
+    .line 2908
     :cond_4
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -255,11 +255,11 @@
 
     goto :goto_1
 
-    .line 2760
+    .line 2911
     :cond_5
     iput-wide p1, p0, Lcom/oppo/camera/util/Util$a;->c:J
 
-    .line 2761
+    .line 2912
     iput v2, p0, Lcom/oppo/camera/util/Util$a;->d:I
 
     :goto_1
@@ -269,12 +269,12 @@
 .method public a()V
     .locals 3
 
-    .line 2722
+    .line 2873
     iget-object v0, p0, Lcom/oppo/camera/util/Util$a;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 2723
+    .line 2874
     new-instance v1, Ljava/text/SimpleDateFormat;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;

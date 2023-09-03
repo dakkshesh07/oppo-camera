@@ -3,7 +3,7 @@
 .source "ViewUtils.java"
 
 # interfaces
-.implements Landroidx/core/g/r;
+.implements Landroidx/core/f/r;
 
 
 # annotations
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 3
 
     .line 227
@@ -51,7 +51,7 @@
 
     invoke-direct {v1, v2}, Lcom/google/android/material/internal/ViewUtils$RelativePadding;-><init>(Lcom/google/android/material/internal/ViewUtils$RelativePadding;)V
 
-    invoke-interface {v0, p1, p2, v1}, Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/g/ae;
+    invoke-interface {v0, p1, p2, v1}, Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/f/ae;
 
     move-result-object p1
 

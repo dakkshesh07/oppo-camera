@@ -149,7 +149,7 @@
     return-object p0
 .end method
 
-.method public a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)Landroidx/fragment/app/k;
+.method public a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/k;
     .locals 2
 
     .line 350
@@ -157,7 +157,7 @@
 
     const/16 v1, 0xa
 
-    invoke-direct {v0, v1, p1, p2}, Landroidx/fragment/app/k$a;-><init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)V
+    invoke-direct {v0, v1, p1, p2}, Landroidx/fragment/app/k$a;-><init>(ILandroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
 
     invoke-virtual {p0, v0}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/k$a;)V
 

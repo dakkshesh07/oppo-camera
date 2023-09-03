@@ -40,21 +40,21 @@
 .method public constructor <init>(Landroid/content/res/Resources;Landroid/graphics/drawable/BitmapDrawable;Ljava/lang/String;Lcom/oppo/camera/sticker/ui/c$c;)V
     .locals 0
 
-    .line 462
+    .line 463
     invoke-virtual {p2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object p2
 
     invoke-direct {p0, p1, p2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 463
+    .line 464
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object p1, p0, Lcom/oppo/camera/sticker/ui/c$b;->a:Ljava/lang/ref/WeakReference;
 
-    .line 464
+    .line 465
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p4}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -69,7 +69,7 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
-    .line 468
+    .line 469
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/c$b;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -84,7 +84,7 @@
 .method public b()Lcom/oppo/camera/sticker/ui/c$c;
     .locals 1
 
-    .line 472
+    .line 473
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/c$b;->b:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;

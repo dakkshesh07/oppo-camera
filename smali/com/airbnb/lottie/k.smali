@@ -8,9 +8,13 @@
 
 .field public static final B:Ljava/lang/Float;
 
-.field public static final C:Landroid/graphics/ColorFilter;
+.field public static final C:Ljava/lang/Float;
 
-.field public static final D:[Ljava/lang/Integer;
+.field public static final D:Ljava/lang/Float;
+
+.field public static final E:Landroid/graphics/ColorFilter;
+
+.field public static final F:[Ljava/lang/Integer;
 
 .field public static final a:Ljava/lang/Integer;
 
@@ -24,19 +28,19 @@
 
 .field public static final f:Landroid/graphics/PointF;
 
-.field public static final g:Landroid/graphics/PointF;
+.field public static final g:Ljava/lang/Float;
 
-.field public static final h:Landroid/graphics/PointF;
+.field public static final h:Ljava/lang/Float;
 
-.field public static final i:Ljava/lang/Float;
+.field public static final i:Landroid/graphics/PointF;
 
 .field public static final j:Landroid/graphics/PointF;
 
-.field public static final k:Lcom/airbnb/lottie/g/d;
+.field public static final k:Ljava/lang/Float;
 
-.field public static final l:Ljava/lang/Float;
+.field public static final l:Landroid/graphics/PointF;
 
-.field public static final m:Ljava/lang/Float;
+.field public static final m:Lcom/airbnb/lottie/d/d;
 
 .field public static final n:Ljava/lang/Float;
 
@@ -119,113 +123,113 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->f:Landroid/graphics/PointF;
 
+    const/high16 v0, 0x41700000    # 15.0f
+
     .line 73
-    new-instance v0, Landroid/graphics/PointF;
-
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
-
-    sput-object v0, Lcom/airbnb/lottie/k;->g:Landroid/graphics/PointF;
-
-    .line 75
-    new-instance v0, Landroid/graphics/PointF;
-
-    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
-
-    sput-object v0, Lcom/airbnb/lottie/k;->h:Landroid/graphics/PointF;
-
-    const/4 v0, 0x0
-
-    .line 77
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    sput-object v0, Lcom/airbnb/lottie/k;->i:Ljava/lang/Float;
+    sput-object v0, Lcom/airbnb/lottie/k;->g:Ljava/lang/Float;
+
+    const/high16 v0, 0x41800000    # 16.0f
+
+    .line 75
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/airbnb/lottie/k;->h:Ljava/lang/Float;
+
+    .line 77
+    new-instance v0, Landroid/graphics/PointF;
+
+    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
+
+    sput-object v0, Lcom/airbnb/lottie/k;->i:Landroid/graphics/PointF;
 
     .line 79
+    new-instance v0, Landroid/graphics/PointF;
+
+    invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
+
+    sput-object v0, Lcom/airbnb/lottie/k;->j:Landroid/graphics/PointF;
+
+    const/4 v0, 0x0
+
+    .line 81
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/airbnb/lottie/k;->k:Ljava/lang/Float;
+
+    .line 83
     new-instance v1, Landroid/graphics/PointF;
 
     invoke-direct {v1}, Landroid/graphics/PointF;-><init>()V
 
-    sput-object v1, Lcom/airbnb/lottie/k;->j:Landroid/graphics/PointF;
+    sput-object v1, Lcom/airbnb/lottie/k;->l:Landroid/graphics/PointF;
 
-    .line 80
-    new-instance v1, Lcom/airbnb/lottie/g/d;
+    .line 84
+    new-instance v1, Lcom/airbnb/lottie/d/d;
 
-    invoke-direct {v1}, Lcom/airbnb/lottie/g/d;-><init>()V
+    invoke-direct {v1}, Lcom/airbnb/lottie/d/d;-><init>()V
 
-    sput-object v1, Lcom/airbnb/lottie/k;->k:Lcom/airbnb/lottie/g/d;
+    sput-object v1, Lcom/airbnb/lottie/k;->m:Lcom/airbnb/lottie/d/d;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 82
+    .line 86
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
 
-    sput-object v1, Lcom/airbnb/lottie/k;->l:Ljava/lang/Float;
-
-    .line 84
-    sput-object v0, Lcom/airbnb/lottie/k;->m:Ljava/lang/Float;
-
-    .line 86
-    sput-object v0, Lcom/airbnb/lottie/k;->n:Ljava/lang/Float;
-
-    const/high16 v0, 0x40000000    # 2.0f
+    sput-object v1, Lcom/airbnb/lottie/k;->n:Ljava/lang/Float;
 
     .line 88
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
     sput-object v0, Lcom/airbnb/lottie/k;->o:Ljava/lang/Float;
 
-    const/high16 v0, 0x40400000    # 3.0f
-
-    .line 89
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
+    .line 90
     sput-object v0, Lcom/airbnb/lottie/k;->p:Ljava/lang/Float;
 
-    const/high16 v0, 0x40800000    # 4.0f
-
-    .line 90
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/airbnb/lottie/k;->q:Ljava/lang/Float;
-
-    const/high16 v0, 0x40a00000    # 5.0f
-
-    .line 91
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/airbnb/lottie/k;->r:Ljava/lang/Float;
-
-    const/high16 v0, 0x40c00000    # 6.0f
+    const/high16 v0, 0x40000000    # 2.0f
 
     .line 92
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
-    sput-object v0, Lcom/airbnb/lottie/k;->s:Ljava/lang/Float;
+    sput-object v0, Lcom/airbnb/lottie/k;->q:Ljava/lang/Float;
 
-    const/high16 v0, 0x40e00000    # 7.0f
+    const/high16 v0, 0x40400000    # 3.0f
+
+    .line 93
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/airbnb/lottie/k;->r:Ljava/lang/Float;
+
+    const/high16 v0, 0x40800000    # 4.0f
 
     .line 94
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
+    sput-object v0, Lcom/airbnb/lottie/k;->s:Ljava/lang/Float;
+
+    const/high16 v0, 0x40a00000    # 5.0f
+
+    .line 95
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
     sput-object v0, Lcom/airbnb/lottie/k;->t:Ljava/lang/Float;
 
-    const/high16 v0, 0x41000000    # 8.0f
+    const/high16 v0, 0x40c00000    # 6.0f
 
     .line 96
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -234,7 +238,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->u:Ljava/lang/Float;
 
-    const/high16 v0, 0x41100000    # 9.0f
+    const/high16 v0, 0x40e00000    # 7.0f
 
     .line 98
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -243,7 +247,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->v:Ljava/lang/Float;
 
-    const/high16 v0, 0x41200000    # 10.0f
+    const/high16 v0, 0x41000000    # 8.0f
 
     .line 100
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -252,7 +256,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->w:Ljava/lang/Float;
 
-    const/high16 v0, 0x41300000    # 11.0f
+    const/high16 v0, 0x41100000    # 9.0f
 
     .line 102
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -261,7 +265,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->x:Ljava/lang/Float;
 
-    const/high16 v0, 0x41400000    # 12.0f
+    const/high16 v0, 0x41200000    # 10.0f
 
     .line 104
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -270,7 +274,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->y:Ljava/lang/Float;
 
-    const v0, 0x4141999a    # 12.1f
+    const/high16 v0, 0x41300000    # 11.0f
 
     .line 106
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -279,7 +283,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->z:Ljava/lang/Float;
 
-    const/high16 v0, 0x41500000    # 13.0f
+    const/high16 v0, 0x41400000    # 12.0f
 
     .line 108
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -288,7 +292,7 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->A:Ljava/lang/Float;
 
-    const/high16 v0, 0x41600000    # 14.0f
+    const v0, 0x4141999a    # 12.1f
 
     .line 110
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -297,19 +301,37 @@
 
     sput-object v0, Lcom/airbnb/lottie/k;->B:Ljava/lang/Float;
 
+    const/high16 v0, 0x41500000    # 13.0f
+
     .line 112
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/airbnb/lottie/k;->C:Ljava/lang/Float;
+
+    const/high16 v0, 0x41600000    # 14.0f
+
+    .line 114
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/airbnb/lottie/k;->D:Ljava/lang/Float;
+
+    .line 116
     new-instance v0, Landroid/graphics/ColorFilter;
 
     invoke-direct {v0}, Landroid/graphics/ColorFilter;-><init>()V
 
-    sput-object v0, Lcom/airbnb/lottie/k;->C:Landroid/graphics/ColorFilter;
+    sput-object v0, Lcom/airbnb/lottie/k;->E:Landroid/graphics/ColorFilter;
 
     const/4 v0, 0x0
 
-    .line 114
+    .line 118
     new-array v0, v0, [Ljava/lang/Integer;
 
-    sput-object v0, Lcom/airbnb/lottie/k;->D:[Ljava/lang/Integer;
+    sput-object v0, Lcom/airbnb/lottie/k;->F:[Ljava/lang/Integer;
 
     return-void
 .end method

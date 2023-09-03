@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="mtrl_calendar_header_orientation">0</integer>
-    <integer name="mtrl_calendar_selection_text_lines">6</integer>
+    <integer name="APKTOOL_DUPLICATE_integer_0x7f0a002a">0</integer>
+    <integer name="APKTOOL_DUPLICATE_integer_0x7f0a002b">6</integer>
 </resources>

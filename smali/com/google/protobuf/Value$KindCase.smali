@@ -3,6 +3,7 @@
 .source "Value.java"
 
 # interfaces
+.implements Lcom/google/protobuf/AbstractMessageLite$InternalOneOfEnum;
 .implements Lcom/google/protobuf/Internal$EnumLite;
 
 
@@ -21,6 +22,7 @@
         "Ljava/lang/Enum<",
         "Lcom/google/protobuf/Value$KindCase;",
         ">;",
+        "Lcom/google/protobuf/AbstractMessageLite$InternalOneOfEnum;",
         "Lcom/google/protobuf/Internal$EnumLite;"
     }
 .end annotation
@@ -52,7 +54,7 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .line 130
+    .line 146
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const/4 v1, 0x1
@@ -65,7 +67,7 @@
 
     sput-object v0, Lcom/google/protobuf/Value$KindCase;->NULL_VALUE:Lcom/google/protobuf/Value$KindCase;
 
-    .line 131
+    .line 147
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const/4 v3, 0x2
@@ -76,7 +78,7 @@
 
     sput-object v0, Lcom/google/protobuf/Value$KindCase;->NUMBER_VALUE:Lcom/google/protobuf/Value$KindCase;
 
-    .line 132
+    .line 148
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const/4 v4, 0x3
@@ -87,7 +89,7 @@
 
     sput-object v0, Lcom/google/protobuf/Value$KindCase;->STRING_VALUE:Lcom/google/protobuf/Value$KindCase;
 
-    .line 133
+    .line 149
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const/4 v5, 0x4
@@ -98,7 +100,7 @@
 
     sput-object v0, Lcom/google/protobuf/Value$KindCase;->BOOL_VALUE:Lcom/google/protobuf/Value$KindCase;
 
-    .line 134
+    .line 150
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const/4 v6, 0x5
@@ -109,7 +111,7 @@
 
     sput-object v0, Lcom/google/protobuf/Value$KindCase;->STRUCT_VALUE:Lcom/google/protobuf/Value$KindCase;
 
-    .line 135
+    .line 151
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const/4 v7, 0x6
@@ -120,7 +122,7 @@
 
     sput-object v0, Lcom/google/protobuf/Value$KindCase;->LIST_VALUE:Lcom/google/protobuf/Value$KindCase;
 
-    .line 136
+    .line 152
     new-instance v0, Lcom/google/protobuf/Value$KindCase;
 
     const-string v8, "KIND_NOT_SET"
@@ -131,7 +133,7 @@
 
     const/4 v0, 0x7
 
-    .line 128
+    .line 143
     new-array v0, v0, [Lcom/google/protobuf/Value$KindCase;
 
     sget-object v8, Lcom/google/protobuf/Value$KindCase;->NULL_VALUE:Lcom/google/protobuf/Value$KindCase;
@@ -175,10 +177,10 @@
         }
     .end annotation
 
-    .line 138
+    .line 154
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 139
+    .line 155
     iput p3, p0, Lcom/google/protobuf/Value$KindCase;->value:I
 
     return-void
@@ -193,43 +195,43 @@
 
     return-object p0
 
-    .line 156
+    .line 174
     :pswitch_0
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->LIST_VALUE:Lcom/google/protobuf/Value$KindCase;
 
     return-object p0
 
-    .line 155
+    .line 173
     :pswitch_1
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->STRUCT_VALUE:Lcom/google/protobuf/Value$KindCase;
 
     return-object p0
 
-    .line 154
+    .line 172
     :pswitch_2
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->BOOL_VALUE:Lcom/google/protobuf/Value$KindCase;
 
     return-object p0
 
-    .line 153
+    .line 171
     :pswitch_3
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->STRING_VALUE:Lcom/google/protobuf/Value$KindCase;
 
     return-object p0
 
-    .line 152
+    .line 170
     :pswitch_4
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->NUMBER_VALUE:Lcom/google/protobuf/Value$KindCase;
 
     return-object p0
 
-    .line 151
+    .line 169
     :pswitch_5
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->NULL_VALUE:Lcom/google/protobuf/Value$KindCase;
 
     return-object p0
 
-    .line 157
+    .line 175
     :pswitch_6
     sget-object p0, Lcom/google/protobuf/Value$KindCase;->KIND_NOT_SET:Lcom/google/protobuf/Value$KindCase;
 
@@ -252,7 +254,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 146
+    .line 164
     invoke-static {p0}, Lcom/google/protobuf/Value$KindCase;->forNumber(I)Lcom/google/protobuf/Value$KindCase;
 
     move-result-object p0
@@ -263,7 +265,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/Value$KindCase;
     .locals 1
 
-    .line 128
+    .line 143
     const-class v0, Lcom/google/protobuf/Value$KindCase;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -278,7 +280,7 @@
 .method public static values()[Lcom/google/protobuf/Value$KindCase;
     .locals 1
 
-    .line 128
+    .line 143
     sget-object v0, Lcom/google/protobuf/Value$KindCase;->$VALUES:[Lcom/google/protobuf/Value$KindCase;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/Value$KindCase;->clone()Ljava/lang/Object;
@@ -295,7 +297,7 @@
 .method public getNumber()I
     .locals 1
 
-    .line 162
+    .line 180
     iget v0, p0, Lcom/google/protobuf/Value$KindCase;->value:I
 
     return v0

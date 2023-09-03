@@ -27,7 +27,7 @@
 .method constructor <init>(Landroidx/f/a/c$a;[Landroidx/f/a/a/a;)V
     .locals 0
 
-    .line 80
+    .line 133
     iput-object p1, p0, Landroidx/f/a/a/b$a$1;->a:Landroidx/f/a/c$a;
 
     iput-object p2, p0, Landroidx/f/a/a/b$a$1;->b:[Landroidx/f/a/a/a;
@@ -42,7 +42,7 @@
 .method public onCorruption(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 2
 
-    .line 83
+    .line 136
     iget-object v0, p0, Landroidx/f/a/a/b$a$1;->a:Landroidx/f/a/c$a;
 
     iget-object v1, p0, Landroidx/f/a/a/b$a$1;->b:[Landroidx/f/a/a/a;

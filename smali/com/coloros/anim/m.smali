@@ -27,7 +27,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/coloros/anim/f/e;",
+            "Lcom/coloros/anim/d/e;",
             ">;"
         }
     .end annotation
@@ -104,14 +104,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/coloros/anim/f/e;
+    check-cast v0, Lcom/coloros/anim/d/e;
 
     if-nez v0, :cond_1
 
     .line 47
-    new-instance v0, Lcom/coloros/anim/f/e;
+    new-instance v0, Lcom/coloros/anim/d/e;
 
-    invoke-direct {v0}, Lcom/coloros/anim/f/e;-><init>()V
+    invoke-direct {v0}, Lcom/coloros/anim/d/e;-><init>()V
 
     .line 48
     iget-object v1, p0, Lcom/coloros/anim/m;->b:Ljava/util/Map;
@@ -120,7 +120,7 @@
 
     .line 50
     :cond_1
-    invoke-virtual {v0, p2}, Lcom/coloros/anim/f/e;->a(F)V
+    invoke-virtual {v0, p2}, Lcom/coloros/anim/d/e;->a(F)V
 
     const-string v0, "__container"
 

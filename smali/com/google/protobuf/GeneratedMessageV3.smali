@@ -15,13 +15,16 @@
         Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;,
         Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessageOrBuilder;,
         Lcom/google/protobuf/GeneratedMessageV3$Builder;,
-        Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
+        Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;,
+        Lcom/google/protobuf/GeneratedMessageV3$UnusedPrivateParameter;
     }
 .end annotation
 
 
 # static fields
 .field protected static alwaysUseFieldBuilders:Z = false
+
+.field private static forTestUseReflection:Z = false
 
 .field private static final serialVersionUID:J = 0x1L
 
@@ -40,10 +43,10 @@
 .method protected constructor <init>()V
     .locals 1
 
-    .line 77
+    .line 101
     invoke-direct {p0}, Lcom/google/protobuf/AbstractMessage;-><init>()V
 
-    .line 78
+    .line 102
     invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object v0
@@ -63,10 +66,10 @@
         }
     .end annotation
 
-    .line 81
+    .line 105
     invoke-direct {p0}, Lcom/google/protobuf/AbstractMessage;-><init>()V
 
-    .line 82
+    .line 106
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
 
     move-result-object p1
@@ -79,7 +82,7 @@
 .method static synthetic access$1000(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 0
 
-    .line 63
+    .line 81
     invoke-static {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3;->getMethodOrDie(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p0
@@ -90,7 +93,7 @@
 .method static synthetic access$1100(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 63
+    .line 81
     invoke-static {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3;->invokeOrDie(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
@@ -98,10 +101,30 @@
     return-object p0
 .end method
 
+.method static synthetic access$1200(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    .locals 0
+
+    .line 81
+    invoke-static {p0}, Lcom/google/protobuf/GeneratedMessageV3;->handleException(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method static synthetic access$1400()Z
+    .locals 1
+
+    .line 81
+    sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->forTestUseReflection:Z
+
+    return v0
+.end method
+
 .method static synthetic access$500(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
     .locals 0
 
-    .line 63
+    .line 81
     invoke-static {p0}, Lcom/google/protobuf/GeneratedMessageV3;->checkNotLite(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
 
     move-result-object p0
@@ -112,12 +135,39 @@
 .method static synthetic access$800(Lcom/google/protobuf/GeneratedMessageV3;Z)Ljava/util/Map;
     .locals 0
 
-    .line 63
+    .line 81
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->getAllFieldsMutable(Z)Ljava/util/Map;
 
     move-result-object p0
 
     return-object p0
+.end method
+
+.method protected static canUseUnsafe()Z
+    .locals 1
+
+    .line 399
+    invoke-static {}, Lcom/google/protobuf/UnsafeUtil;->hasUnsafeArrayOperations()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/google/protobuf/UnsafeUtil;->hasUnsafeByteBufferOperations()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method
 
 .method private static checkNotLite(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
@@ -136,19 +186,19 @@
         }
     .end annotation
 
-    .line 2673
+    .line 3296
     invoke-virtual {p0}, Lcom/google/protobuf/ExtensionLite;->isLite()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2677
+    .line 3300
     check-cast p0, Lcom/google/protobuf/Extension;
 
     return-object p0
 
-    .line 2674
+    .line 3297
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -162,12 +212,12 @@
 .method protected static computeStringSize(ILjava/lang/Object;)I
     .locals 1
 
-    .line 2681
+    .line 3304
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 2682
+    .line 3305
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeStringSize(ILjava/lang/String;)I
@@ -176,7 +226,7 @@
 
     return p0
 
-    .line 2684
+    .line 3307
     :cond_0
     check-cast p1, Lcom/google/protobuf/ByteString;
 
@@ -190,12 +240,12 @@
 .method protected static computeStringSizeNoTag(Ljava/lang/Object;)I
     .locals 1
 
-    .line 2689
+    .line 3312
     instance-of v0, p0, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 2690
+    .line 3313
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
@@ -204,7 +254,7 @@
 
     return p0
 
-    .line 2692
+    .line 3315
     :cond_0
     check-cast p0, Lcom/google/protobuf/ByteString;
 
@@ -215,13 +265,68 @@
     return p0
 .end method
 
+.method protected static emptyBooleanList()Lcom/google/protobuf/Internal$BooleanList;
+    .locals 1
+
+    .line 459
+    invoke-static {}, Lcom/google/protobuf/BooleanArrayList;->emptyList()Lcom/google/protobuf/BooleanArrayList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected static emptyDoubleList()Lcom/google/protobuf/Internal$DoubleList;
+    .locals 1
+
+    .line 445
+    invoke-static {}, Lcom/google/protobuf/DoubleArrayList;->emptyList()Lcom/google/protobuf/DoubleArrayList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected static emptyFloatList()Lcom/google/protobuf/Internal$FloatList;
+    .locals 1
+
+    .line 431
+    invoke-static {}, Lcom/google/protobuf/FloatArrayList;->emptyList()Lcom/google/protobuf/FloatArrayList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected static emptyIntList()Lcom/google/protobuf/Internal$IntList;
+    .locals 1
+
+    .line 403
+    invoke-static {}, Lcom/google/protobuf/IntArrayList;->emptyList()Lcom/google/protobuf/IntArrayList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected static emptyLongList()Lcom/google/protobuf/Internal$LongList;
+    .locals 1
+
+    .line 417
+    invoke-static {}, Lcom/google/protobuf/LongArrayList;->emptyList()Lcom/google/protobuf/LongArrayList;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method static enableAlwaysUseFieldBuildersForTesting()V
     .locals 1
 
     const/4 v0, 0x1
 
-    .line 98
-    sput-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
+    .line 119
+    invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageV3;->setAlwaysUseFieldBuildersForTesting(Z)V
 
     return-void
 .end method
@@ -238,12 +343,12 @@
         }
     .end annotation
 
-    .line 122
+    .line 168
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    .line 124
+    .line 170
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v1
@@ -252,14 +357,14 @@
 
     move-result-object v1
 
-    .line 125
+    .line 171
     invoke-virtual {v1}, Lcom/google/protobuf/Descriptors$Descriptor;->getFields()Ljava/util/List;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 127
+    .line 173
     :goto_0
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -267,21 +372,21 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 128
+    .line 174
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 129
+    .line 175
     invoke-virtual {v3}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getContainingOneof()Lcom/google/protobuf/Descriptors$OneofDescriptor;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    .line 137
+    .line 183
     invoke-virtual {v4}, Lcom/google/protobuf/Descriptors$OneofDescriptor;->getFieldCount()I
 
     move-result v3
@@ -290,7 +395,7 @@
 
     add-int/2addr v2, v3
 
-    .line 138
+    .line 184
     invoke-virtual {p0, v4}, Lcom/google/protobuf/GeneratedMessageV3;->hasOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Z
 
     move-result v3
@@ -299,7 +404,7 @@
 
     goto :goto_2
 
-    .line 143
+    .line 189
     :cond_0
     invoke-virtual {p0, v4}, Lcom/google/protobuf/GeneratedMessageV3;->getOneofFieldDescriptor(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
@@ -307,7 +412,7 @@
 
     goto :goto_1
 
-    .line 146
+    .line 192
     :cond_1
     invoke-virtual {v3}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
@@ -315,26 +420,26 @@
 
     if-eqz v4, :cond_2
 
-    .line 147
+    .line 193
     invoke-virtual {p0, v3}, Lcom/google/protobuf/GeneratedMessageV3;->getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Ljava/util/List;
 
-    .line 148
+    .line 194
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
     move-result v5
 
     if-nez v5, :cond_5
 
-    .line 149
+    .line 195
     invoke-virtual {v0, v3, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 153
+    .line 199
     :cond_2
     invoke-virtual {p0, v3}, Lcom/google/protobuf/GeneratedMessageV3;->hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
 
@@ -348,7 +453,7 @@
     :goto_1
     if-eqz p1, :cond_4
 
-    .line 158
+    .line 204
     invoke-virtual {v3}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     move-result-object v4
@@ -357,7 +462,7 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 159
+    .line 205
     invoke-virtual {p0, v3}, Lcom/google/protobuf/GeneratedMessageV3;->getFieldRaw(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
 
     move-result-object v4
@@ -366,7 +471,7 @@
 
     goto :goto_2
 
-    .line 161
+    .line 207
     :cond_4
     invoke-virtual {p0, v3}, Lcom/google/protobuf/GeneratedMessageV3;->getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
 
@@ -387,7 +492,7 @@
 .method private static varargs getMethodOrDie(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 3
 
-    .line 1620
+    .line 1853
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -400,7 +505,7 @@
     :catch_0
     move-exception p2
 
-    .line 1622
+    .line 1855
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -411,7 +516,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1623
+    .line 1856
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -437,10 +542,58 @@
     throw v0
 .end method
 
+.method private static handleException(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    .locals 2
+
+    .line 1885
+    instance-of v0, p0, Ljava/lang/ClassCastException;
+
+    if-nez v0, :cond_2
+
+    .line 1889
+    instance-of v0, p0, Ljava/lang/RuntimeException;
+
+    if-nez v0, :cond_1
+
+    .line 1891
+    instance-of v0, p0, Ljava/lang/Error;
+
+    if-eqz v0, :cond_0
+
+    .line 1892
+    check-cast p0, Ljava/lang/Error;
+
+    throw p0
+
+    .line 1894
+    :cond_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "Unexpected exception thrown by generated accessor method."
+
+    invoke-direct {v0, v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v0
+
+    .line 1890
+    :cond_1
+    check-cast p0, Ljava/lang/RuntimeException;
+
+    throw p0
+
+    .line 1888
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+.end method
+
 .method private static varargs invokeOrDie(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1632
+    .line 1865
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -454,27 +607,27 @@
     :catch_0
     move-exception p0
 
-    .line 1638
+    .line 1871
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
-    .line 1639
+    .line 1872
     instance-of p1, p0, Ljava/lang/RuntimeException;
 
     if-nez p1, :cond_1
 
-    .line 1641
+    .line 1874
     instance-of p1, p0, Ljava/lang/Error;
 
     if-eqz p1, :cond_0
 
-    .line 1642
+    .line 1875
     check-cast p0, Ljava/lang/Error;
 
     throw p0
 
-    .line 1644
+    .line 1877
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -484,7 +637,7 @@
 
     throw p1
 
-    .line 1640
+    .line 1873
     :cond_1
     check-cast p0, Ljava/lang/RuntimeException;
 
@@ -493,7 +646,7 @@
     :catch_1
     move-exception p0
 
-    .line 1634
+    .line 1867
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t use Java reflection to implement protocol message reflection."
@@ -526,7 +679,7 @@
         }
     .end annotation
 
-    .line 2816
+    .line 3439
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -537,12 +690,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2818
+    .line 3441
     invoke-virtual {p2}, Lcom/google/protobuf/MapEntry;->newBuilderForType()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object p2
 
-    .line 2819
+    .line 3442
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -551,7 +704,7 @@
 
     move-result-object p2
 
-    .line 2820
+    .line 3443
     invoke-static {p4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p4
@@ -564,16 +717,201 @@
 
     move-result-object p1
 
-    .line 2821
+    .line 3444
     invoke-virtual {p1}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object p1
 
-    .line 2817
+    .line 3440
     invoke-virtual {p0, p3, p1}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     :cond_0
     return-void
+.end method
+
+.method protected static mutableCopy(Lcom/google/protobuf/Internal$BooleanList;)Lcom/google/protobuf/Internal$BooleanList;
+    .locals 1
+
+    .line 467
+    invoke-interface {p0}, Lcom/google/protobuf/Internal$BooleanList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 468
+    :goto_0
+    invoke-interface {p0, v0}, Lcom/google/protobuf/Internal$BooleanList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$BooleanList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method protected static mutableCopy(Lcom/google/protobuf/Internal$DoubleList;)Lcom/google/protobuf/Internal$DoubleList;
+    .locals 1
+
+    .line 453
+    invoke-interface {p0}, Lcom/google/protobuf/Internal$DoubleList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 454
+    :goto_0
+    invoke-interface {p0, v0}, Lcom/google/protobuf/Internal$DoubleList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$DoubleList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method protected static mutableCopy(Lcom/google/protobuf/Internal$FloatList;)Lcom/google/protobuf/Internal$FloatList;
+    .locals 1
+
+    .line 439
+    invoke-interface {p0}, Lcom/google/protobuf/Internal$FloatList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 440
+    :goto_0
+    invoke-interface {p0, v0}, Lcom/google/protobuf/Internal$FloatList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$FloatList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method protected static mutableCopy(Lcom/google/protobuf/Internal$IntList;)Lcom/google/protobuf/Internal$IntList;
+    .locals 1
+
+    .line 411
+    invoke-interface {p0}, Lcom/google/protobuf/Internal$IntList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 412
+    :goto_0
+    invoke-interface {p0, v0}, Lcom/google/protobuf/Internal$IntList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$IntList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method protected static mutableCopy(Lcom/google/protobuf/Internal$LongList;)Lcom/google/protobuf/Internal$LongList;
+    .locals 1
+
+    .line 425
+    invoke-interface {p0}, Lcom/google/protobuf/Internal$LongList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    :cond_0
+    mul-int/lit8 v0, v0, 0x2
+
+    .line 426
+    :goto_0
+    invoke-interface {p0, v0}, Lcom/google/protobuf/Internal$LongList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$LongList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method protected static newBooleanList()Lcom/google/protobuf/Internal$BooleanList;
+    .locals 1
+
+    .line 463
+    new-instance v0, Lcom/google/protobuf/BooleanArrayList;
+
+    invoke-direct {v0}, Lcom/google/protobuf/BooleanArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method protected static newDoubleList()Lcom/google/protobuf/Internal$DoubleList;
+    .locals 1
+
+    .line 449
+    new-instance v0, Lcom/google/protobuf/DoubleArrayList;
+
+    invoke-direct {v0}, Lcom/google/protobuf/DoubleArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method protected static newFloatList()Lcom/google/protobuf/Internal$FloatList;
+    .locals 1
+
+    .line 435
+    new-instance v0, Lcom/google/protobuf/FloatArrayList;
+
+    invoke-direct {v0}, Lcom/google/protobuf/FloatArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method protected static newIntList()Lcom/google/protobuf/Internal$IntList;
+    .locals 1
+
+    .line 407
+    new-instance v0, Lcom/google/protobuf/IntArrayList;
+
+    invoke-direct {v0}, Lcom/google/protobuf/IntArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method protected static newLongList()Lcom/google/protobuf/Internal$LongList;
+    .locals 1
+
+    .line 421
+    new-instance v0, Lcom/google/protobuf/LongArrayList;
+
+    invoke-direct {v0}, Lcom/google/protobuf/LongArrayList;-><init>()V
+
+    return-object v0
 .end method
 
 .method protected static parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
@@ -596,7 +934,7 @@
         }
     .end annotation
 
-    .line 319
+    .line 383
     :try_start_0
     invoke-interface {p0, p1}, Lcom/google/protobuf/Parser;->parseDelimitedFrom(Ljava/io/InputStream;)Ljava/lang/Object;
 
@@ -611,7 +949,7 @@
     :catch_0
     move-exception p0
 
-    .line 321
+    .line 385
     invoke-virtual {p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -640,7 +978,7 @@
         }
     .end annotation
 
-    .line 328
+    .line 392
     :try_start_0
     invoke-interface {p0, p1, p2}, Lcom/google/protobuf/Parser;->parseDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
@@ -655,7 +993,7 @@
     :catch_0
     move-exception p0
 
-    .line 330
+    .line 394
     invoke-virtual {p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -683,7 +1021,7 @@
         }
     .end annotation
 
-    .line 301
+    .line 365
     :try_start_0
     invoke-interface {p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/CodedInputStream;)Ljava/lang/Object;
 
@@ -698,7 +1036,7 @@
     :catch_0
     move-exception p0
 
-    .line 303
+    .line 367
     invoke-virtual {p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -727,7 +1065,7 @@
         }
     .end annotation
 
-    .line 310
+    .line 374
     :try_start_0
     invoke-interface {p0, p1, p2}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
@@ -742,7 +1080,7 @@
     :catch_0
     move-exception p0
 
-    .line 312
+    .line 376
     invoke-virtual {p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -770,7 +1108,7 @@
         }
     .end annotation
 
-    .line 283
+    .line 347
     :try_start_0
     invoke-interface {p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/io/InputStream;)Ljava/lang/Object;
 
@@ -785,7 +1123,7 @@
     :catch_0
     move-exception p0
 
-    .line 285
+    .line 349
     invoke-virtual {p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -814,7 +1152,7 @@
         }
     .end annotation
 
-    .line 292
+    .line 356
     :try_start_0
     invoke-interface {p0, p1, p2}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
@@ -829,7 +1167,7 @@
     :catch_0
     move-exception p0
 
-    .line 294
+    .line 358
     invoke-virtual {p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
     move-result-object p0
@@ -860,19 +1198,19 @@
         }
     .end annotation
 
-    .line 2800
+    .line 3423
     invoke-virtual {p1}, Lcom/google/protobuf/MapField;->getMap()Ljava/util/Map;
 
     move-result-object p1
 
-    .line 2801
+    .line 3424
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream;->isSerializationDeterministic()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2802
+    .line 3425
     invoke-static {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3;->serializeMapTo(Lcom/google/protobuf/CodedOutputStream;Ljava/util/Map;Lcom/google/protobuf/MapEntry;I)V
 
     return-void
@@ -880,12 +1218,12 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 2805
+    .line 3428
     invoke-static {p0, p1, p2, p3, v0}, Lcom/google/protobuf/GeneratedMessageV3;->maybeSerializeBooleanEntryTo(Lcom/google/protobuf/CodedOutputStream;Ljava/util/Map;Lcom/google/protobuf/MapEntry;IZ)V
 
     const/4 v0, 0x1
 
-    .line 2806
+    .line 3429
     invoke-static {p0, p1, p2, p3, v0}, Lcom/google/protobuf/GeneratedMessageV3;->maybeSerializeBooleanEntryTo(Lcom/google/protobuf/CodedOutputStream;Ljava/util/Map;Lcom/google/protobuf/MapEntry;IZ)V
 
     return-void
@@ -914,24 +1252,24 @@
         }
     .end annotation
 
-    .line 2719
+    .line 3342
     invoke-virtual {p1}, Lcom/google/protobuf/MapField;->getMap()Ljava/util/Map;
 
     move-result-object p1
 
-    .line 2720
+    .line 3343
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream;->isSerializationDeterministic()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2721
+    .line 3344
     invoke-static {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3;->serializeMapTo(Lcom/google/protobuf/CodedOutputStream;Ljava/util/Map;Lcom/google/protobuf/MapEntry;I)V
 
     return-void
 
-    .line 2726
+    .line 3349
     :cond_0
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
@@ -939,7 +1277,7 @@
 
     new-array v0, v0, [I
 
-    .line 2728
+    .line 3351
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -971,18 +1309,18 @@
 
     add-int/lit8 v5, v3, 0x1
 
-    .line 2729
+    .line 3352
     aput v4, v0, v3
 
     move v3, v5
 
     goto :goto_0
 
-    .line 2731
+    .line 3354
     :cond_1
     invoke-static {v0}, Ljava/util/Arrays;->sort([I)V
 
-    .line 2732
+    .line 3355
     array-length v1, v0
 
     :goto_1
@@ -990,12 +1328,12 @@
 
     aget v3, v0, v2
 
-    .line 2734
+    .line 3357
     invoke-virtual {p2}, Lcom/google/protobuf/MapEntry;->newBuilderForType()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v4
 
-    .line 2735
+    .line 3358
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -1004,7 +1342,7 @@
 
     move-result-object v4
 
-    .line 2736
+    .line 3359
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -1017,12 +1355,12 @@
 
     move-result-object v3
 
-    .line 2737
+    .line 3360
     invoke-virtual {v3}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object v3
 
-    .line 2733
+    .line 3356
     invoke-virtual {p0, p3, v3}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -1056,24 +1394,24 @@
         }
     .end annotation
 
-    .line 2747
+    .line 3370
     invoke-virtual {p1}, Lcom/google/protobuf/MapField;->getMap()Ljava/util/Map;
 
     move-result-object p1
 
-    .line 2748
+    .line 3371
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream;->isSerializationDeterministic()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2749
+    .line 3372
     invoke-static {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3;->serializeMapTo(Lcom/google/protobuf/CodedOutputStream;Ljava/util/Map;Lcom/google/protobuf/MapEntry;I)V
 
     return-void
 
-    .line 2753
+    .line 3376
     :cond_0
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
@@ -1081,7 +1419,7 @@
 
     new-array v0, v0, [J
 
-    .line 2755
+    .line 3378
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -1113,18 +1451,18 @@
 
     add-int/lit8 v6, v3, 0x1
 
-    .line 2756
+    .line 3379
     aput-wide v4, v0, v3
 
     move v3, v6
 
     goto :goto_0
 
-    .line 2758
+    .line 3381
     :cond_1
     invoke-static {v0}, Ljava/util/Arrays;->sort([J)V
 
-    .line 2759
+    .line 3382
     array-length v1, v0
 
     :goto_1
@@ -1132,12 +1470,12 @@
 
     aget-wide v3, v0, v2
 
-    .line 2761
+    .line 3384
     invoke-virtual {p2}, Lcom/google/protobuf/MapEntry;->newBuilderForType()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v5
 
-    .line 2762
+    .line 3385
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
@@ -1146,7 +1484,7 @@
 
     move-result-object v5
 
-    .line 2763
+    .line 3386
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -1159,12 +1497,12 @@
 
     move-result-object v3
 
-    .line 2764
+    .line 3387
     invoke-virtual {v3}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object v3
 
-    .line 2760
+    .line 3383
     invoke-virtual {p0, p3, v3}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -1198,7 +1536,7 @@
         }
     .end annotation
 
-    .line 2832
+    .line 3455
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -1220,12 +1558,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 2834
+    .line 3457
     invoke-virtual {p2}, Lcom/google/protobuf/MapEntry;->newBuilderForType()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v1
 
-    .line 2835
+    .line 3458
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -1234,7 +1572,7 @@
 
     move-result-object v1
 
-    .line 2836
+    .line 3459
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -1243,12 +1581,12 @@
 
     move-result-object v0
 
-    .line 2837
+    .line 3460
     invoke-virtual {v0}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object v0
 
-    .line 2833
+    .line 3456
     invoke-virtual {p0, p3, v0}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     goto :goto_0
@@ -1280,24 +1618,24 @@
         }
     .end annotation
 
-    .line 2774
+    .line 3397
     invoke-virtual {p1}, Lcom/google/protobuf/MapField;->getMap()Ljava/util/Map;
 
     move-result-object p1
 
-    .line 2775
+    .line 3398
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream;->isSerializationDeterministic()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2776
+    .line 3399
     invoke-static {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3;->serializeMapTo(Lcom/google/protobuf/CodedOutputStream;Ljava/util/Map;Lcom/google/protobuf/MapEntry;I)V
 
     return-void
 
-    .line 2782
+    .line 3405
     :cond_0
     invoke-interface {p1}, Ljava/util/Map;->size()I
 
@@ -1305,7 +1643,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 2783
+    .line 3406
     invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
@@ -1316,10 +1654,10 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 2784
+    .line 3407
     invoke-static {v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 2785
+    .line 3408
     array-length v1, v0
 
     const/4 v2, 0x0
@@ -1329,17 +1667,17 @@
 
     aget-object v3, v0, v2
 
-    .line 2787
+    .line 3410
     invoke-virtual {p2}, Lcom/google/protobuf/MapEntry;->newBuilderForType()Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v4
 
-    .line 2788
+    .line 3411
     invoke-virtual {v4, v3}, Lcom/google/protobuf/MapEntry$Builder;->setKey(Ljava/lang/Object;)Lcom/google/protobuf/MapEntry$Builder;
 
     move-result-object v4
 
-    .line 2789
+    .line 3412
     invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
@@ -1348,12 +1686,12 @@
 
     move-result-object v3
 
-    .line 2790
+    .line 3413
     invoke-virtual {v3}, Lcom/google/protobuf/MapEntry$Builder;->build()Lcom/google/protobuf/MapEntry;
 
     move-result-object v3
 
-    .line 2786
+    .line 3409
     invoke-virtual {p0, p3, v3}, Lcom/google/protobuf/CodedOutputStream;->writeMessage(ILcom/google/protobuf/MessageLite;)V
 
     add-int/lit8 v2, v2, 0x1
@@ -1361,6 +1699,24 @@
     goto :goto_0
 
     :cond_1
+    return-void
+.end method
+
+.method static setAlwaysUseFieldBuildersForTesting(Z)V
+    .locals 0
+
+    .line 129
+    sput-boolean p0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
+
+    return-void
+.end method
+
+.method static setForTestUseReflection(Z)V
+    .locals 0
+
+    .line 88
+    sput-boolean p0, Lcom/google/protobuf/GeneratedMessageV3;->forTestUseReflection:Z
+
     return-void
 .end method
 
@@ -1372,19 +1728,19 @@
         }
     .end annotation
 
-    .line 2698
+    .line 3321
     instance-of v0, p2, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 2699
+    .line 3322
     check-cast p2, Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeString(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 2701
+    .line 3324
     :cond_0
     check-cast p2, Lcom/google/protobuf/ByteString;
 
@@ -1402,19 +1758,19 @@
         }
     .end annotation
 
-    .line 2707
+    .line 3330
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 2708
+    .line 3331
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeStringNoTag(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2710
+    .line 3333
     :cond_0
     check-cast p1, Lcom/google/protobuf/ByteString;
 
@@ -1440,12 +1796,12 @@
 
     const/4 v0, 0x0
 
-    .line 200
+    .line 246
     invoke-direct {p0, v0}, Lcom/google/protobuf/GeneratedMessageV3;->getAllFieldsMutable(Z)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 199
+    .line 245
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -1467,12 +1823,12 @@
 
     const/4 v0, 0x1
 
-    .line 215
+    .line 261
     invoke-direct {p0, v0}, Lcom/google/protobuf/GeneratedMessageV3;->getAllFieldsMutable(Z)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 214
+    .line 260
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -1483,7 +1839,7 @@
 .method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 110
+    .line 141
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1498,7 +1854,7 @@
 .method public getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
     .locals 1
 
-    .line 235
+    .line 281
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1517,7 +1873,7 @@
 .method getFieldRaw(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
     .locals 1
 
-    .line 247
+    .line 293
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1536,7 +1892,7 @@
 .method public getOneofFieldDescriptor(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Descriptors$FieldDescriptor;
     .locals 1
 
-    .line 225
+    .line 271
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1564,7 +1920,7 @@
         }
     .end annotation
 
-    .line 87
+    .line 111
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "This is supposed to be overridden by subclasses."
@@ -1577,7 +1933,7 @@
 .method public getRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;I)Ljava/lang/Object;
     .locals 1
 
-    .line 258
+    .line 304
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1586,7 +1942,7 @@
 
     move-result-object p1
 
-    .line 259
+    .line 305
     invoke-interface {p1, p0, p2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$FieldAccessor;->getRepeated(Lcom/google/protobuf/GeneratedMessageV3;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -1597,7 +1953,7 @@
 .method public getRepeatedFieldCount(Lcom/google/protobuf/Descriptors$FieldDescriptor;)I
     .locals 1
 
-    .line 252
+    .line 298
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1606,7 +1962,7 @@
 
     move-result-object p1
 
-    .line 253
+    .line 299
     invoke-interface {p1, p0}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable$FieldAccessor;->getRepeatedCount(Lcom/google/protobuf/GeneratedMessageV3;)I
 
     move-result p1
@@ -1617,7 +1973,7 @@
 .method public getSerializedSize()I
     .locals 2
 
-    .line 341
+    .line 480
     iget v0, p0, Lcom/google/protobuf/GeneratedMessageV3;->memoizedSize:I
 
     const/4 v1, -0x1
@@ -1626,20 +1982,20 @@
 
     return v0
 
-    .line 347
+    .line 486
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->getAllFieldsRaw()Ljava/util/Map;
 
     move-result-object v0
 
-    .line 346
+    .line 485
     invoke-static {p0, v0}, Lcom/google/protobuf/MessageReflection;->getSerializedSize(Lcom/google/protobuf/Message;Ljava/util/Map;)I
 
     move-result v0
 
     iput v0, p0, Lcom/google/protobuf/GeneratedMessageV3;->memoizedSize:I
 
-    .line 348
+    .line 487
     iget v0, p0, Lcom/google/protobuf/GeneratedMessageV3;->memoizedSize:I
 
     return v0
@@ -1648,7 +2004,7 @@
 .method public getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
     .locals 2
 
-    .line 264
+    .line 310
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "This is supposed to be overridden by subclasses."
@@ -1661,7 +2017,7 @@
 .method public hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
     .locals 1
 
-    .line 230
+    .line 276
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1680,7 +2036,7 @@
 .method public hasOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Z
     .locals 1
 
-    .line 220
+    .line 266
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1702,7 +2058,7 @@
 .method protected internalGetMapField(I)Lcom/google/protobuf/MapField;
     .locals 2
 
-    .line 1665
+    .line 1914
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1713,7 +2069,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1666
+    .line 1915
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -1736,7 +2092,7 @@
 .method public isInitialized()Z
     .locals 5
 
-    .line 169
+    .line 215
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -1762,7 +2118,7 @@
 
     check-cast v1, Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
-    .line 171
+    .line 217
     invoke-virtual {v1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isRequired()Z
 
     move-result v2
@@ -1771,7 +2127,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 172
+    .line 218
     invoke-virtual {p0, v1}, Lcom/google/protobuf/GeneratedMessageV3;->hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
 
     move-result v2
@@ -1780,7 +2136,7 @@
 
     return v3
 
-    .line 177
+    .line 223
     :cond_1
     invoke-virtual {v1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -1790,21 +2146,21 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 178
+    .line 224
     invoke-virtual {v1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 180
+    .line 226
     invoke-virtual {p0, v1}, Lcom/google/protobuf/GeneratedMessageV3;->getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/List;
 
-    .line 181
+    .line 227
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -1822,7 +2178,7 @@
 
     check-cast v2, Lcom/google/protobuf/Message;
 
-    .line 182
+    .line 228
     invoke-interface {v2}, Lcom/google/protobuf/Message;->isInitialized()Z
 
     move-result v2
@@ -1831,7 +2187,7 @@
 
     return v3
 
-    .line 187
+    .line 233
     :cond_3
     invoke-virtual {p0, v1}, Lcom/google/protobuf/GeneratedMessageV3;->hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
 
@@ -1865,10 +2221,68 @@
     return-void
 .end method
 
+.method protected mergeFromAndMakeImmutableInternal(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 148
+    invoke-static {}, Lcom/google/protobuf/Protobuf;->getInstance()Lcom/google/protobuf/Protobuf;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/google/protobuf/Protobuf;->schemaFor(Ljava/lang/Object;)Lcom/google/protobuf/Schema;
+
+    move-result-object v0
+
+    .line 150
+    :try_start_0
+    invoke-static {p1}, Lcom/google/protobuf/CodedInputStreamReader;->forCodedInput(Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/CodedInputStreamReader;
+
+    move-result-object p1
+
+    invoke-interface {v0, p0, p1, p2}, Lcom/google/protobuf/Schema;->mergeFrom(Ljava/lang/Object;Lcom/google/protobuf/Reader;Lcom/google/protobuf/ExtensionRegistryLite;)V
+    :try_end_0
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 156
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Schema;->makeImmutable(Ljava/lang/Object;)V
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    .line 154
+    new-instance p2, Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
+
+    invoke-virtual {p2, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+
+    :catch_1
+    move-exception p1
+
+    .line 152
+    invoke-virtual {p1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+.end method
+
 .method protected newBuilderForType(Lcom/google/protobuf/AbstractMessage$BuilderParent;)Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 375
+    .line 537
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$1;
 
     invoke-direct {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$1;-><init>(Lcom/google/protobuf/GeneratedMessageV3;Lcom/google/protobuf/AbstractMessage$BuilderParent;)V
@@ -1883,6 +2297,19 @@
 .method protected abstract newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Message$Builder;
 .end method
 
+.method protected newInstance(Lcom/google/protobuf/GeneratedMessageV3$UnusedPrivateParameter;)Ljava/lang/Object;
+    .locals 1
+
+    .line 512
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "This method must be overridden by the subclass."
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
 .method protected parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
@@ -1891,8 +2318,39 @@
         }
     .end annotation
 
-    .line 277
+    .line 325
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->shouldDiscardUnknownFields()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    .line 326
+    invoke-virtual {p1, p4}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
+
+    move-result p1
+
+    return p1
+
+    .line 328
+    :cond_0
     invoke-virtual {p2, p4, p1}, Lcom/google/protobuf/UnknownFieldSet$Builder;->mergeFieldFrom(ILcom/google/protobuf/CodedInputStream;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method protected parseUnknownFieldProto3(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 341
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageV3;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
 
     move-result p1
 
@@ -1907,7 +2365,7 @@
         }
     .end annotation
 
-    .line 2663
+    .line 3288
     new-instance v0, Lcom/google/protobuf/GeneratedMessageLite$SerializedForm;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite$SerializedForm;-><init>(Lcom/google/protobuf/MessageLite;)V
@@ -1923,7 +2381,7 @@
         }
     .end annotation
 
-    .line 336
+    .line 475
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3;->getAllFieldsRaw()Ljava/util/Map;
 
     move-result-object v0

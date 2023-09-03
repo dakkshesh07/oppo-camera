@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="mtrl_calendar_bottom_padding">0.0dip</dimen>
-    <dimen name="mtrl_calendar_day_corner">22.0dip</dimen>
-    <dimen name="mtrl_calendar_day_height">48.0dip</dimen>
-    <dimen name="mtrl_calendar_day_width">48.0dip</dimen>
-    <dimen name="mtrl_calendar_days_of_week_height">48.0dip</dimen>
-    <dimen name="mtrl_calendar_month_horizontal_padding">0.0dip</dimen>
+    <dimen name="APKTOOL_DUPLICATE_dimen_0x7f070565">0.0dip</dimen>
+    <dimen name="APKTOOL_DUPLICATE_dimen_0x7f070567">22.0dip</dimen>
+    <dimen name="APKTOOL_DUPLICATE_dimen_0x7f070568">48.0dip</dimen>
+    <dimen name="APKTOOL_DUPLICATE_dimen_0x7f07056c">48.0dip</dimen>
+    <dimen name="APKTOOL_DUPLICATE_dimen_0x7f07056d">48.0dip</dimen>
+    <dimen name="APKTOOL_DUPLICATE_dimen_0x7f07057a">0.0dip</dimen>
 </resources>

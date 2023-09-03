@@ -24,7 +24,7 @@
 
     const-string v0, "This RpcCallback was already called and cannot be called multiple times."
 
-    .line 132
+    .line 123
     invoke-direct {p0, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     return-void

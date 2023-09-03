@@ -1,6 +1,6 @@
 .class public interface abstract annotation Lcom/squareup/wire/WireField;
 .super Ljava/lang/Object;
-.source "WireField.kt"
+.source "WireField.java"
 
 # interfaces
 .implements Ljava/lang/annotation/Annotation;

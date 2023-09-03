@@ -51,17 +51,17 @@
         }
     .end annotation
 
-    .line 2677
+    .line 2681
     invoke-direct/range {p0 .. p5}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;-><init>(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 2679
+    .line 2683
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getEnumType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object p5
 
     iput-object p5, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->enumDescriptor:Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
-    .line 2681
+    .line 2685
     iget-object p5, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->type:Ljava/lang/Class;
 
     const/4 v0, 0x1
@@ -82,21 +82,21 @@
 
     iput-object p5, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->valueOfMethod:Ljava/lang/reflect/Method;
 
-    .line 2683
+    .line 2687
     iget-object p5, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->type:Ljava/lang/Class;
 
     new-array v1, v3, [Ljava/lang/Class;
 
     const-string v2, "getValueDescriptor"
 
-    .line 2684
+    .line 2688
     invoke-static {p5, v2, v1}, Lcom/google/protobuf/GeneratedMessage;->access$1100(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p5
 
     iput-object p5, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueDescriptorMethod:Ljava/lang/reflect/Method;
 
-    .line 2686
+    .line 2690
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getFile()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object p1
@@ -107,12 +107,12 @@
 
     iput-boolean p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->supportUnknownEnumValue:Z
 
-    .line 2687
+    .line 2691
     iget-boolean p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->supportUnknownEnumValue:Z
 
     if-eqz p1, :cond_0
 
-    .line 2688
+    .line 2692
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -133,14 +133,14 @@
 
     new-array v2, v3, [Ljava/lang/Class;
 
-    .line 2689
+    .line 2693
     invoke-static {p3, p1, v2}, Lcom/google/protobuf/GeneratedMessage;->access$1100(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueMethod:Ljava/lang/reflect/Method;
 
-    .line 2690
+    .line 2694
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -157,14 +157,14 @@
 
     new-array p3, v3, [Ljava/lang/Class;
 
-    .line 2691
+    .line 2695
     invoke-static {p4, p1, p3}, Lcom/google/protobuf/GeneratedMessage;->access$1100(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueMethodBuilder:Ljava/lang/reflect/Method;
 
-    .line 2692
+    .line 2696
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -187,7 +187,7 @@
 
     aput-object p3, p2, v3
 
-    .line 2693
+    .line 2697
     invoke-static {p4, p1, p2}, Lcom/google/protobuf/GeneratedMessage;->access$1100(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object p1
@@ -203,14 +203,14 @@
 .method public get(Lcom/google/protobuf/GeneratedMessage$Builder;)Ljava/lang/Object;
     .locals 2
 
-    .line 2718
+    .line 2722
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->supportUnknownEnumValue:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2719
+    .line 2723
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueMethodBuilder:Ljava/lang/reflect/Method;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -225,7 +225,7 @@
 
     move-result p1
 
-    .line 2720
+    .line 2724
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->enumDescriptor:Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/Descriptors$EnumDescriptor;->findValueByNumberCreatingIfUnknown(I)Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
@@ -234,7 +234,7 @@
 
     return-object p1
 
-    .line 2722
+    .line 2726
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueDescriptorMethod:Ljava/lang/reflect/Method;
 
@@ -254,14 +254,14 @@
 .method public get(Lcom/google/protobuf/GeneratedMessage;)Ljava/lang/Object;
     .locals 2
 
-    .line 2709
+    .line 2713
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->supportUnknownEnumValue:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 2710
+    .line 2714
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueMethod:Ljava/lang/reflect/Method;
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -276,7 +276,7 @@
 
     move-result p1
 
-    .line 2711
+    .line 2715
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->enumDescriptor:Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/Descriptors$EnumDescriptor;->findValueByNumberCreatingIfUnknown(I)Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
@@ -285,7 +285,7 @@
 
     return-object p1
 
-    .line 2713
+    .line 2717
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->getValueDescriptorMethod:Ljava/lang/reflect/Method;
 
@@ -305,7 +305,7 @@
 .method public set(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
     .locals 4
 
-    .line 2727
+    .line 2731
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->supportUnknownEnumValue:Z
 
     const/4 v1, 0x0
@@ -314,14 +314,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2728
+    .line 2732
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->setValueMethod:Ljava/lang/reflect/Method;
 
     new-array v2, v2, [Ljava/lang/Object;
 
     check-cast p2, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
 
-    .line 2729
+    .line 2733
     invoke-virtual {p2}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getNumber()I
 
     move-result p2
@@ -332,12 +332,12 @@
 
     aput-object p2, v2, v1
 
-    .line 2728
+    .line 2732
     invoke-static {v0, p1, v2}, Lcom/google/protobuf/GeneratedMessage;->access$1200(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
-    .line 2732
+    .line 2736
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularEnumFieldAccessor;->valueOfMethod:Ljava/lang/reflect/Method;
 

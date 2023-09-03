@@ -305,17 +305,17 @@
 
     const/4 p2, 0x1
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 377
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 380
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;Z)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;Z)V
 
     .line 381
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
@@ -324,7 +324,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$3;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     .line 398
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
@@ -333,7 +333,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/snackbar/BaseTransientBottomBar$4;-><init>(Lcom/google/android/material/snackbar/BaseTransientBottomBar;)V
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 419
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->context:Landroid/content/Context;
@@ -1012,7 +1012,7 @@
     .line 927
     iget-object v1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
-    invoke-static {v1, v0}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {v1, v0}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     goto :goto_0
 
@@ -1913,7 +1913,7 @@
     :cond_1
     iget-object v0, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar;->view:Lcom/google/android/material/snackbar/BaseTransientBottomBar$SnackbarBaseLayout;
 
-    invoke-static {v0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 

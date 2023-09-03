@@ -13,6 +13,9 @@
     name = "Companion"
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # direct methods
 .method private constructor <init>()V
@@ -24,7 +27,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lc/d/b/f;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/o;)V
     .locals 0
 
     .line 217

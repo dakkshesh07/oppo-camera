@@ -3,6 +3,11 @@
 .source "-DeprecatedUpgrade.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # static fields
 .field private static final Okio:Lokio/-DeprecatedOkio;
 

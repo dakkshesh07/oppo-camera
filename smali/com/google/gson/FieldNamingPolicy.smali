@@ -146,7 +146,7 @@
 .method private static modifyString(CLjava/lang/String;I)Ljava/lang/String;
     .locals 1
 
-    .line 165
+    .line 162
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -159,7 +159,7 @@
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 166
+    .line 163
     invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
@@ -172,7 +172,7 @@
 
     goto :goto_0
 
-    .line 167
+    .line 164
     :cond_0
     invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
 
@@ -183,49 +183,49 @@
 .end method
 
 .method static separateCamelCase(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+    .locals 5
 
     .line 124
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v1, 0x0
-
     .line 125
-    :goto_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    move-result v2
+    move-result v1
 
-    if-ge v1, v2, :cond_1
+    const/4 v2, 0x0
+
+    :goto_0
+    if-ge v2, v1, :cond_1
 
     .line 126
-    invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    .line 127
-    invoke-static {v2}, Ljava/lang/Character;->isUpperCase(C)Z
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    .line 127
+    invoke-static {v3}, Ljava/lang/Character;->isUpperCase(C)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_0
 
     .line 128
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 130
     :cond_0
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
@@ -239,7 +239,7 @@
 .end method
 
 .method static upperCaseFirstLetter(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+    .locals 5
 
     .line 139
     new-instance v0, Ljava/lang/StringBuilder;
@@ -253,63 +253,48 @@
 
     move-result v2
 
-    .line 143
-    :goto_0
+    .line 142
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    add-int/lit8 v3, v3, -0x1
+    :goto_0
+    add-int/lit8 v4, v3, -0x1
 
-    if-ge v1, v3, :cond_1
+    if-ge v1, v4, :cond_1
 
-    .line 144
+    .line 145
     invoke-static {v2}, Ljava/lang/Character;->isLetter(C)Z
 
-    move-result v3
+    move-result v4
 
-    if-eqz v3, :cond_0
+    if-eqz v4, :cond_0
 
     goto :goto_1
 
-    .line 148
+    .line 149
     :cond_0
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 149
+    .line 150
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
 
     goto :goto_0
 
-    .line 152
+    .line 153
     :cond_1
     :goto_1
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_2
-
-    .line 153
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 156
-    :cond_2
     invoke-static {v2}, Ljava/lang/Character;->isUpperCase(C)Z
 
     move-result v3
 
-    if-nez v3, :cond_3
+    if-nez v3, :cond_2
 
-    .line 157
+    .line 154
     invoke-static {v2}, Ljava/lang/Character;->toUpperCase(C)C
 
     move-result v2
@@ -320,14 +305,14 @@
 
     move-result-object p0
 
-    .line 158
+    .line 155
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    :cond_3
+    :cond_2
     return-object p0
 .end method
 

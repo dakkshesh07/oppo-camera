@@ -3,4 +3,4 @@
 .source "AudioAttributesImpl.java"
 
 # interfaces
-.implements Landroidx/versionedparcelable/c;
+.implements Landroidx/versionedparcelable/b;

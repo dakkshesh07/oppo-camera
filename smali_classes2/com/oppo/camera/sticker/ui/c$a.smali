@@ -42,17 +42,17 @@
 
     const/4 v0, -0x1
 
-    .line 443
+    .line 444
     invoke-direct {p0, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 444
+    .line 445
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/ui/c$a;->a:Ljava/lang/ref/WeakReference;
 
-    .line 445
+    .line 446
     new-instance p1, Ljava/lang/ref/WeakReference;
 
     invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -67,7 +67,7 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
-    .line 449
+    .line 450
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/c$a;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -82,7 +82,7 @@
 .method public b()Lcom/oppo/camera/sticker/ui/c$c;
     .locals 1
 
-    .line 453
+    .line 454
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/c$a;->b:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;

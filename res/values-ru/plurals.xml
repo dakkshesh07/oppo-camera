@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="red_dot_with_number_description">
+    <plurals name="MT_Bin">
+        <item quantity="other">Удалить элементы: %1$d</item>
+        <item quantity="one">Удалить %1$d элемент</item>
+        <item quantity="few">Удалить %1$d элемента</item>
+        <item quantity="many">Удалить %1$d элементов</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">Выбрано %1$d элементов</item>
+        <item quantity="one">Выбран %1$d элемент</item>
+        <item quantity="few">Выбрано %1$d элемента</item>
+        <item quantity="many">Выбрано %1$d элементов</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
         <item quantity="other">Новых уведомлений: %d</item>
         <item quantity="one">%d новое уведомление</item>
     </plurals>
-    <plurals name="sticker_recycle_bin_title_has_selected">
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
+        <item quantity="other">Выбрано %1$d стикеров</item>
+        <item quantity="one">Выбран %1$d стикер</item>
+        <item quantity="few">Выбрано %1$d стикера</item>
+        <item quantity="many">Выбрано %1$d стикеров</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
         <item quantity="other">Выбрано: %1$d</item>
         <item quantity="one">Выбрано: %1$d</item>
+        <item quantity="few">Выбрано %1$d элемента</item>
+        <item quantity="many">Выбрано %1$d элементов</item>
     </plurals>
 </resources>

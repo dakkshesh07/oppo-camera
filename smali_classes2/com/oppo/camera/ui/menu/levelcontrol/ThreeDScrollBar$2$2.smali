@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;F)V
     .locals 0
 
-    .line 101
+    .line 103
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$2;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$2;->a:F
@@ -42,20 +42,20 @@
 .method public run()V
     .locals 4
 
-    .line 108
+    .line 110
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$2;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/gl/l;
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/gl/m;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/l;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/gl/m;->b(I)V
 
-    .line 109
+    .line 111
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$2;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
@@ -72,7 +72,7 @@
 
     invoke-static {v0, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;I)V
 
-    .line 110
+    .line 112
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$2;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;

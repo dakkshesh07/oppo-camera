@@ -91,7 +91,7 @@
         }
     .end annotation
 
-    .line 212
+    .line 215
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec;->source:Lokio/BufferedSource;
 
     iget-wide v1, p0, Lokhttp3/internal/http1/Http1Codec;->headerLimit:J
@@ -100,7 +100,7 @@
 
     move-result-object v0
 
-    .line 213
+    .line 216
     iget-wide v1, p0, Lokhttp3/internal/http1/Http1Codec;->headerLimit:J
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -190,20 +190,20 @@
 .method detachTimeout(Lokio/ForwardingTimeout;)V
     .locals 2
 
-    .line 265
+    .line 268
     invoke-virtual {p1}, Lokio/ForwardingTimeout;->delegate()Lokio/Timeout;
 
     move-result-object v0
 
-    .line 266
+    .line 269
     sget-object v1, Lokio/Timeout;->NONE:Lokio/Timeout;
 
     invoke-virtual {p1, v1}, Lokio/ForwardingTimeout;->setDelegate(Lokio/Timeout;)Lokio/ForwardingTimeout;
 
-    .line 267
+    .line 270
     invoke-virtual {v0}, Lokio/Timeout;->clearDeadline()Lokio/Timeout;
 
-    .line 268
+    .line 271
     invoke-virtual {v0}, Lokio/Timeout;->clearTimeout()Lokio/Timeout;
 
     return-void
@@ -265,7 +265,7 @@
 .method public newChunkedSink()Lokio/Sink;
     .locals 3
 
-    .line 228
+    .line 231
     iget v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
     const/4 v1, 0x1
@@ -274,17 +274,17 @@
 
     const/4 v0, 0x2
 
-    .line 229
+    .line 232
     iput v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
-    .line 230
+    .line 233
     new-instance v0, Lokhttp3/internal/http1/Http1Codec$ChunkedSink;
 
     invoke-direct {v0, p0}, Lokhttp3/internal/http1/Http1Codec$ChunkedSink;-><init>(Lokhttp3/internal/http1/Http1Codec;)V
 
     return-object v0
 
-    .line 228
+    .line 231
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -317,7 +317,7 @@
         }
     .end annotation
 
-    .line 246
+    .line 249
     iget v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
     const/4 v1, 0x4
@@ -326,17 +326,17 @@
 
     const/4 v0, 0x5
 
-    .line 247
+    .line 250
     iput v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
-    .line 248
+    .line 251
     new-instance v0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;
 
     invoke-direct {v0, p0, p1}, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;-><init>(Lokhttp3/internal/http1/Http1Codec;Lokhttp3/HttpUrl;)V
 
     return-object v0
 
-    .line 246
+    .line 249
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -364,7 +364,7 @@
 .method public newFixedLengthSink(J)Lokio/Sink;
     .locals 2
 
-    .line 234
+    .line 237
     iget v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
     const/4 v1, 0x1
@@ -373,17 +373,17 @@
 
     const/4 v0, 0x2
 
-    .line 235
+    .line 238
     iput v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
-    .line 236
+    .line 239
     new-instance v0, Lokhttp3/internal/http1/Http1Codec$FixedLengthSink;
 
     invoke-direct {v0, p0, p1, p2}, Lokhttp3/internal/http1/Http1Codec$FixedLengthSink;-><init>(Lokhttp3/internal/http1/Http1Codec;J)V
 
     return-object v0
 
-    .line 234
+    .line 237
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -416,7 +416,7 @@
         }
     .end annotation
 
-    .line 240
+    .line 243
     iget v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
     const/4 v1, 0x4
@@ -425,17 +425,17 @@
 
     const/4 v0, 0x5
 
-    .line 241
+    .line 244
     iput v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
-    .line 242
+    .line 245
     new-instance v0, Lokhttp3/internal/http1/Http1Codec$FixedLengthSource;
 
     invoke-direct {v0, p0, p1, p2}, Lokhttp3/internal/http1/Http1Codec$FixedLengthSource;-><init>(Lokhttp3/internal/http1/Http1Codec;J)V
 
     return-object v0
 
-    .line 240
+    .line 243
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -468,34 +468,34 @@
         }
     .end annotation
 
-    .line 252
+    .line 255
     iget v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_1
 
-    .line 253
+    .line 256
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec;->streamAllocation:Lokhttp3/internal/connection/StreamAllocation;
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x5
 
-    .line 254
+    .line 257
     iput v1, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
-    .line 255
+    .line 258
     invoke-virtual {v0}, Lokhttp3/internal/connection/StreamAllocation;->noNewStreams()V
 
-    .line 256
+    .line 259
     new-instance v0, Lokhttp3/internal/http1/Http1Codec$UnknownLengthSource;
 
     invoke-direct {v0, p0}, Lokhttp3/internal/http1/Http1Codec$UnknownLengthSource;-><init>(Lokhttp3/internal/http1/Http1Codec;)V
 
     return-object v0
 
-    .line 253
+    .line 256
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -505,7 +505,7 @@
 
     throw v0
 
-    .line 252
+    .line 255
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -674,12 +674,12 @@
         }
     .end annotation
 
-    .line 219
+    .line 222
     new-instance v0, Lokhttp3/Headers$Builder;
 
     invoke-direct {v0}, Lokhttp3/Headers$Builder;-><init>()V
 
-    .line 221
+    .line 224
     :goto_0
     invoke-direct {p0}, Lokhttp3/internal/http1/Http1Codec;->readHeaderLine()Ljava/lang/String;
 
@@ -691,14 +691,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 222
+    .line 225
     sget-object v2, Lokhttp3/internal/Internal;->instance:Lokhttp3/internal/Internal;
 
     invoke-virtual {v2, v0, v1}, Lokhttp3/internal/Internal;->addLenient(Lokhttp3/Headers$Builder;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 224
+    .line 227
     :cond_0
     invoke-virtual {v0}, Lokhttp3/Headers$Builder;->build()Lokhttp3/Headers;
 
@@ -708,7 +708,7 @@
 .end method
 
 .method public readResponseHeaders(Z)Lokhttp3/Response$Builder;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -718,11 +718,11 @@
     .line 184
     iget v0, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
 
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_1
-
     const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_1
 
     if-ne v0, v1, :cond_0
 
@@ -765,67 +765,78 @@
     move-result-object v0
 
     .line 191
-    new-instance v1, Lokhttp3/Response$Builder;
+    new-instance v2, Lokhttp3/Response$Builder;
 
-    invoke-direct {v1}, Lokhttp3/Response$Builder;-><init>()V
+    invoke-direct {v2}, Lokhttp3/Response$Builder;-><init>()V
 
-    iget-object v2, v0, Lokhttp3/internal/http/StatusLine;->protocol:Lokhttp3/Protocol;
+    iget-object v3, v0, Lokhttp3/internal/http/StatusLine;->protocol:Lokhttp3/Protocol;
 
     .line 192
-    invoke-virtual {v1, v2}, Lokhttp3/Response$Builder;->protocol(Lokhttp3/Protocol;)Lokhttp3/Response$Builder;
+    invoke-virtual {v2, v3}, Lokhttp3/Response$Builder;->protocol(Lokhttp3/Protocol;)Lokhttp3/Response$Builder;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget v2, v0, Lokhttp3/internal/http/StatusLine;->code:I
+    iget v3, v0, Lokhttp3/internal/http/StatusLine;->code:I
 
     .line 193
-    invoke-virtual {v1, v2}, Lokhttp3/Response$Builder;->code(I)Lokhttp3/Response$Builder;
+    invoke-virtual {v2, v3}, Lokhttp3/Response$Builder;->code(I)Lokhttp3/Response$Builder;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, v0, Lokhttp3/internal/http/StatusLine;->message:Ljava/lang/String;
+    iget-object v3, v0, Lokhttp3/internal/http/StatusLine;->message:Ljava/lang/String;
 
     .line 194
-    invoke-virtual {v1, v2}, Lokhttp3/Response$Builder;->message(Ljava/lang/String;)Lokhttp3/Response$Builder;
+    invoke-virtual {v2, v3}, Lokhttp3/Response$Builder;->message(Ljava/lang/String;)Lokhttp3/Response$Builder;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 195
     invoke-virtual {p0}, Lokhttp3/internal/http1/Http1Codec;->readHeaders()Lokhttp3/Headers;
 
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lokhttp3/Response$Builder;->headers(Lokhttp3/Headers;)Lokhttp3/Response$Builder;
+
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lokhttp3/Response$Builder;->headers(Lokhttp3/Headers;)Lokhttp3/Response$Builder;
-
-    move-result-object v1
+    const/16 v3, 0x64
 
     if-eqz p1, :cond_2
 
     .line 197
     iget p1, v0, Lokhttp3/internal/http/StatusLine;->code:I
 
-    const/16 v0, 0x64
-
-    if-ne p1, v0, :cond_2
+    if-ne p1, v3, :cond_2
 
     const/4 p1, 0x0
 
     return-object p1
 
+    .line 199
     :cond_2
+    iget p1, v0, Lokhttp3/internal/http/StatusLine;->code:I
+
+    if-ne p1, v3, :cond_3
+
+    .line 200
+    iput v1, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
+
+    return-object v2
+
+    :cond_3
     const/4 p1, 0x4
 
-    .line 201
+    .line 204
     iput p1, p0, Lokhttp3/internal/http1/Http1Codec;->state:I
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object v1
+    return-object v2
 
     :catch_0
     move-exception p1
 
-    .line 205
+    .line 208
     new-instance v0, Ljava/io/IOException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -846,10 +857,10 @@
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 206
+    .line 209
     invoke-virtual {v0, p1}, Ljava/io/IOException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 207
+    .line 210
     throw v0
 .end method
 

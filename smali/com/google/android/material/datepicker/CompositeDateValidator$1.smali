@@ -56,7 +56,7 @@
     .line 52
     new-instance v0, Lcom/google/android/material/datepicker/CompositeDateValidator;
 
-    invoke-static {p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

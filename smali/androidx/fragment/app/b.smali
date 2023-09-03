@@ -879,6 +879,8 @@
 
 .method public setupDialog(Landroid/app/Dialog;I)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x1
 

@@ -54,10 +54,10 @@
 .method protected constructor <init>()V
     .locals 1
 
-    .line 834
+    .line 995
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
-    .line 835
+    .line 996
     invoke-static {}, Lcom/google/protobuf/FieldSet;->newFieldSet()Lcom/google/protobuf/FieldSet;
 
     move-result-object v0
@@ -77,10 +77,10 @@
         }
     .end annotation
 
-    .line 840
+    .line 1001
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
-    .line 841
+    .line 1002
     invoke-static {p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->access$400(Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;)Lcom/google/protobuf/FieldSet;
 
     move-result-object p1
@@ -93,7 +93,7 @@
 .method static synthetic access$600(Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;)Lcom/google/protobuf/FieldSet;
     .locals 0
 
-    .line 825
+    .line 986
     iget-object p0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     return-object p0
@@ -102,7 +102,7 @@
 .method private verifyContainingType(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
     .locals 1
 
-    .line 1139
+    .line 1315
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getContainingType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object p1
@@ -115,7 +115,7 @@
 
     return-void
 
-    .line 1140
+    .line 1316
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -136,7 +136,7 @@
         }
     .end annotation
 
-    .line 846
+    .line 1007
     invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object v0
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    .line 847
+    .line 1008
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v1
@@ -154,7 +154,7 @@
 
     return-void
 
-    .line 849
+    .line 1010
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -166,7 +166,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 851
+    .line 1012
     invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object p1
@@ -185,7 +185,7 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 853
+    .line 1014
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object p1
@@ -214,7 +214,7 @@
 .method protected extensionsAreInitialized()Z
     .locals 1
 
-    .line 963
+    .line 1126
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0}, Lcom/google/protobuf/FieldSet;->isInitialized()Z
@@ -227,7 +227,7 @@
 .method protected extensionsSerializedSize()I
     .locals 1
 
-    .line 1055
+    .line 1231
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0}, Lcom/google/protobuf/FieldSet;->getSerializedSize()I
@@ -240,7 +240,7 @@
 .method protected extensionsSerializedSizeAsMessageSet()I
     .locals 1
 
-    .line 1058
+    .line 1234
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0}, Lcom/google/protobuf/FieldSet;->getMessageSetSerializedSize()I
@@ -264,19 +264,19 @@
 
     const/4 v0, 0x0
 
-    .line 1071
+    .line 1247
     invoke-static {p0, v0}, Lcom/google/protobuf/GeneratedMessageV3;->access$800(Lcom/google/protobuf/GeneratedMessageV3;Z)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 1072
+    .line 1248
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtensionFields()Ljava/util/Map;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 1073
+    .line 1249
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -298,19 +298,19 @@
 
     const/4 v0, 0x0
 
-    .line 1079
+    .line 1255
     invoke-static {p0, v0}, Lcom/google/protobuf/GeneratedMessageV3;->access$800(Lcom/google/protobuf/GeneratedMessageV3;Z)Ljava/util/Map;
 
     move-result-object v0
 
-    .line 1080
+    .line 1256
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtensionFields()Ljava/util/Map;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 1081
+    .line 1257
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -330,7 +330,7 @@
         }
     .end annotation
 
-    .line 940
+    .line 1103
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtension(Lcom/google/protobuf/ExtensionLite;)Ljava/lang/Object;
 
     move-result-object p1
@@ -352,7 +352,7 @@
         }
     .end annotation
 
-    .line 952
+    .line 1115
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtension(Lcom/google/protobuf/ExtensionLite;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -372,20 +372,20 @@
         }
     .end annotation
 
-    .line 881
+    .line 1044
     invoke-static {p1}, Lcom/google/protobuf/GeneratedMessageV3;->access$500(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
 
     move-result-object p1
 
-    .line 883
+    .line 1046
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyExtensionContainingType(Lcom/google/protobuf/Extension;)V
 
-    .line 884
+    .line 1047
     invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object v0
 
-    .line 885
+    .line 1048
     iget-object v1, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v1, v0}, Lcom/google/protobuf/FieldSet;->getField(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;)Ljava/lang/Object;
@@ -394,21 +394,21 @@
 
     if-nez v1, :cond_2
 
-    .line 887
+    .line 1050
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 888
+    .line 1051
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 
-    .line 889
+    .line 1052
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -418,27 +418,27 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 891
-    invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getMessageDefaultInstance()Lcom/google/protobuf/MessageLite;
+    .line 1054
+    invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getMessageDefaultInstance()Lcom/google/protobuf/Message;
 
     move-result-object p1
 
     return-object p1
 
-    .line 894
+    .line 1057
     :cond_1
     invoke-virtual {v0}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getDefaultValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 893
+    .line 1056
     invoke-virtual {p1, v0}, Lcom/google/protobuf/Extension;->fromReflectionType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
 
-    .line 897
+    .line 1060
     :cond_2
     invoke-virtual {p1, v1}, Lcom/google/protobuf/Extension;->fromReflectionType(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -461,28 +461,28 @@
         }
     .end annotation
 
-    .line 906
+    .line 1069
     invoke-static {p1}, Lcom/google/protobuf/GeneratedMessageV3;->access$500(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
 
     move-result-object p1
 
-    .line 908
+    .line 1071
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyExtensionContainingType(Lcom/google/protobuf/Extension;)V
 
-    .line 909
+    .line 1072
     invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object v0
 
-    .line 910
+    .line 1073
     iget-object v1, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
-    .line 911
+    .line 1074
     invoke-virtual {v1, v0, p2}, Lcom/google/protobuf/FieldSet;->getRepeatedField(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;I)Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 910
+    .line 1073
     invoke-virtual {p1, p2}, Lcom/google/protobuf/Extension;->singularFromReflectionType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -502,7 +502,7 @@
         }
     .end annotation
 
-    .line 946
+    .line 1109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtension(Lcom/google/protobuf/ExtensionLite;)Ljava/lang/Object;
 
     move-result-object p1
@@ -524,7 +524,7 @@
         }
     .end annotation
 
-    .line 958
+    .line 1121
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtension(Lcom/google/protobuf/ExtensionLite;I)Ljava/lang/Object;
 
     move-result-object p1
@@ -546,7 +546,7 @@
         }
     .end annotation
 
-    .line 929
+    .line 1092
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtensionCount(Lcom/google/protobuf/ExtensionLite;)I
 
     move-result p1
@@ -568,20 +568,20 @@
         }
     .end annotation
 
-    .line 870
+    .line 1033
     invoke-static {p1}, Lcom/google/protobuf/GeneratedMessageV3;->access$500(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
 
     move-result-object p1
 
-    .line 872
+    .line 1035
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyExtensionContainingType(Lcom/google/protobuf/Extension;)V
 
-    .line 873
+    .line 1036
     invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     move-result-object p1
 
-    .line 874
+    .line 1037
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/FieldSet;->getRepeatedFieldCount(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;)I
@@ -605,7 +605,7 @@
         }
     .end annotation
 
-    .line 935
+    .line 1098
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getExtensionCount(Lcom/google/protobuf/ExtensionLite;)I
 
     move-result p1
@@ -625,7 +625,7 @@
         }
     .end annotation
 
-    .line 1065
+    .line 1241
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0}, Lcom/google/protobuf/FieldSet;->getAllFields()Ljava/util/Map;
@@ -638,17 +638,17 @@
 .method public getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
     .locals 2
 
-    .line 1096
+    .line 1272
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 1097
+    .line 1273
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyContainingType(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 1098
+    .line 1274
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/FieldSet;->getField(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;)Ljava/lang/Object;
@@ -657,21 +657,21 @@
 
     if-nez v0, :cond_2
 
-    .line 1100
+    .line 1276
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isRepeated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1101
+    .line 1277
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 
-    .line 1102
+    .line 1278
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
@@ -681,7 +681,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1105
+    .line 1281
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getMessageType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object p1
@@ -692,7 +692,7 @@
 
     return-object p1
 
-    .line 1107
+    .line 1283
     :cond_1
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getDefaultValue()Ljava/lang/Object;
 
@@ -703,7 +703,7 @@
     :cond_2
     return-object v0
 
-    .line 1113
+    .line 1289
     :cond_3
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->getField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/lang/Object;
 
@@ -715,17 +715,17 @@
 .method public getRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;I)Ljava/lang/Object;
     .locals 1
 
-    .line 1130
+    .line 1306
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1131
+    .line 1307
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyContainingType(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 1132
+    .line 1308
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/FieldSet;->getRepeatedField(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;I)Ljava/lang/Object;
@@ -734,7 +734,7 @@
 
     return-object p1
 
-    .line 1134
+    .line 1310
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3;->getRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;I)Ljava/lang/Object;
 
@@ -746,17 +746,17 @@
 .method public getRepeatedFieldCount(Lcom/google/protobuf/Descriptors$FieldDescriptor;)I
     .locals 1
 
-    .line 1119
+    .line 1295
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1120
+    .line 1296
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyContainingType(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 1121
+    .line 1297
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/FieldSet;->getRepeatedFieldCount(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;)I
@@ -765,7 +765,7 @@
 
     return p1
 
-    .line 1123
+    .line 1299
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->getRepeatedFieldCount(Lcom/google/protobuf/Descriptors$FieldDescriptor;)I
 
@@ -786,7 +786,7 @@
         }
     .end annotation
 
-    .line 917
+    .line 1080
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->hasExtension(Lcom/google/protobuf/ExtensionLite;)Z
 
     move-result p1
@@ -806,15 +806,15 @@
         }
     .end annotation
 
-    .line 860
+    .line 1022
     invoke-static {p1}, Lcom/google/protobuf/GeneratedMessageV3;->access$500(Lcom/google/protobuf/ExtensionLite;)Lcom/google/protobuf/Extension;
 
     move-result-object p1
 
-    .line 862
+    .line 1024
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyExtensionContainingType(Lcom/google/protobuf/Extension;)V
 
-    .line 863
+    .line 1025
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {p1}, Lcom/google/protobuf/Extension;->getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
@@ -840,7 +840,7 @@
         }
     .end annotation
 
-    .line 923
+    .line 1086
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->hasExtension(Lcom/google/protobuf/ExtensionLite;)Z
 
     move-result p1
@@ -851,17 +851,17 @@
 .method public hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
     .locals 1
 
-    .line 1086
+    .line 1262
     invoke-virtual {p1}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->isExtension()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1087
+    .line 1263
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->verifyContainingType(Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
 
-    .line 1088
+    .line 1264
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/FieldSet;->hasField(Lcom/google/protobuf/FieldSet$FieldDescriptorLite;)Z
@@ -870,7 +870,7 @@
 
     return p1
 
-    .line 1090
+    .line 1266
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->hasField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Z
 
@@ -882,7 +882,7 @@
 .method public isInitialized()Z
     .locals 1
 
-    .line 968
+    .line 1131
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3;->isInitialized()Z
 
     move-result v0
@@ -909,7 +909,7 @@
 .method protected makeExtensionsImmutable()V
     .locals 1
 
-    .line 988
+    .line 1164
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
     invoke-virtual {v0}, Lcom/google/protobuf/FieldSet;->makeImmutable()V
@@ -927,7 +927,7 @@
         }
     .end annotation
 
-    .line 1047
+    .line 1223
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage$ExtensionWriter;
 
     const/4 v1, 0x0
@@ -949,7 +949,7 @@
         }
     .end annotation
 
-    .line 1050
+    .line 1226
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage$ExtensionWriter;
 
     const/4 v1, 0x1
@@ -969,27 +969,53 @@
         }
     .end annotation
 
-    .line 978
+    .line 1141
+    invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->shouldDiscardUnknownFields()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p2, 0x0
+
+    :cond_0
+    move-object v1, p2
+
+    .line 1142
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v3
 
     new-instance v4, Lcom/google/protobuf/MessageReflection$ExtensionAdapter;
 
-    iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
+    iget-object p2, p0, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->extensions:Lcom/google/protobuf/FieldSet;
 
-    invoke-direct {v4, v0}, Lcom/google/protobuf/MessageReflection$ExtensionAdapter;-><init>(Lcom/google/protobuf/FieldSet;)V
+    invoke-direct {v4, p2}, Lcom/google/protobuf/MessageReflection$ExtensionAdapter;-><init>(Lcom/google/protobuf/FieldSet;)V
 
     move-object v0, p1
-
-    move-object v1, p2
 
     move-object v2, p3
 
     move v5, p4
 
-    .line 977
+    .line 1140
     invoke-static/range {v0 .. v5}, Lcom/google/protobuf/MessageReflection;->mergeFieldFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/google/protobuf/Descriptors$Descriptor;Lcom/google/protobuf/MessageReflection$MergeTarget;I)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method protected parseUnknownFieldProto3(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 1155
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
 
     move-result p1
 

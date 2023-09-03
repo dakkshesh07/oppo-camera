@@ -1,18 +1,12 @@
-.class public final Lcom/squareup/wire/MessageSerializedForm;
+.class final Lcom/squareup/wire/MessageSerializedForm;
 .super Ljava/lang/Object;
-.source "MessageSerializedForm.kt"
+.source "MessageSerializedForm.java"
 
 # interfaces
 .implements Ljava/io/Serializable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/squareup/wire/MessageSerializedForm$Companion;
-    }
-.end annotation
-
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<M:",
@@ -27,8 +21,6 @@
 
 
 # static fields
-.field public static final Companion:Lcom/squareup/wire/MessageSerializedForm$Companion;
-
 .field private static final serialVersionUID:J
 
 
@@ -46,22 +38,8 @@
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lcom/squareup/wire/MessageSerializedForm$Companion;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/squareup/wire/MessageSerializedForm$Companion;-><init>(Lc/d/b/f;)V
-
-    sput-object v0, Lcom/squareup/wire/MessageSerializedForm;->Companion:Lcom/squareup/wire/MessageSerializedForm$Companion;
-
-    return-void
-.end method
-
 .method public constructor <init>([BLjava/lang/Class;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([B",
@@ -70,19 +48,13 @@
         }
     .end annotation
 
-    const-string v0, "bytes"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "messageClass"
-
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 23
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 31
     iput-object p1, p0, Lcom/squareup/wire/MessageSerializedForm;->bytes:[B
 
+    .line 32
     iput-object p2, p0, Lcom/squareup/wire/MessageSerializedForm;->messageClass:Ljava/lang/Class;
 
     return-void
@@ -90,7 +62,7 @@
 
 
 # virtual methods
-.method public final readResolve()Ljava/lang/Object;
+.method readResolve()Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -98,16 +70,14 @@
         }
     .end annotation
 
-    .line 30
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
+    .line 36
+    iget-object v0, p0, Lcom/squareup/wire/MessageSerializedForm;->messageClass:Ljava/lang/Class;
 
-    iget-object v1, p0, Lcom/squareup/wire/MessageSerializedForm;->messageClass:Ljava/lang/Class;
-
-    invoke-virtual {v0, v1}, Lcom/squareup/wire/ProtoAdapter$Companion;->get(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
+    invoke-static {v0}, Lcom/squareup/wire/ProtoAdapter;->get(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
 
     move-result-object v0
 
-    .line 33
+    .line 39
     :try_start_0
     iget-object v1, p0, Lcom/squareup/wire/MessageSerializedForm;->bytes:[B
 
@@ -122,7 +92,7 @@
     :catch_0
     move-exception v0
 
-    .line 35
+    .line 41
     new-instance v1, Ljava/io/StreamCorruptedException;
 
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -130,8 +100,6 @@
     move-result-object v0
 
     invoke-direct {v1, v0}, Ljava/io/StreamCorruptedException;-><init>(Ljava/lang/String;)V
-
-    check-cast v1, Ljava/lang/Throwable;
 
     throw v1
 .end method

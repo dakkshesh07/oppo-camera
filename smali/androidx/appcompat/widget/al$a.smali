@@ -1,6 +1,6 @@
-.class Landroidx/appcompat/widget/al$a;
-.super Landroid/widget/BaseAdapter;
-.source "ScrollingTabContainerView.java"
+.class final Landroidx/appcompat/widget/al$a;
+.super Ljava/lang/Object;
+.source "SuggestionsAdapter.java"
 
 
 # annotations
@@ -9,109 +9,84 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x2
+    accessFlags = 0x1a
     name = "a"
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroidx/appcompat/widget/al;
+.field public final a:Landroid/widget/TextView;
+
+.field public final b:Landroid/widget/TextView;
+
+.field public final c:Landroid/widget/ImageView;
+
+.field public final d:Landroid/widget/ImageView;
+
+.field public final e:Landroid/widget/ImageView;
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/al;)V
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 1
 
-    .line 527
-    iput-object p1, p0, Landroidx/appcompat/widget/al$a;->a:Landroidx/appcompat/widget/al;
+    .line 263
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    const v0, 0x1020014
+
+    .line 264
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Landroidx/appcompat/widget/al$a;->a:Landroid/widget/TextView;
+
+    const v0, 0x1020015
+
+    .line 265
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Landroidx/appcompat/widget/al$a;->b:Landroid/widget/TextView;
+
+    const v0, 0x1020007
+
+    .line 266
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Landroidx/appcompat/widget/al$a;->c:Landroid/widget/ImageView;
+
+    const v0, 0x1020008
+
+    .line 267
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Landroidx/appcompat/widget/al$a;->d:Landroid/widget/ImageView;
+
+    .line 268
+    sget v0, Landroidx/appcompat/R$id;->edit_query:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    iput-object p1, p0, Landroidx/appcompat/widget/al$a;->e:Landroid/widget/ImageView;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public getCount()I
-    .locals 1
-
-    .line 532
-    iget-object v0, p0, Landroidx/appcompat/widget/al$a;->a:Landroidx/appcompat/widget/al;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/al;->b:Landroidx/appcompat/widget/LinearLayoutCompat;
-
-    invoke-virtual {v0}, Landroidx/appcompat/widget/LinearLayoutCompat;->getChildCount()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    .line 537
-    iget-object v0, p0, Landroidx/appcompat/widget/al$a;->a:Landroidx/appcompat/widget/al;
-
-    iget-object v0, v0, Landroidx/appcompat/widget/al;->b:Landroidx/appcompat/widget/LinearLayoutCompat;
-
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/LinearLayoutCompat;->getChildAt(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/widget/al$c;
-
-    invoke-virtual {p1}, Landroidx/appcompat/widget/al$c;->b()Landroidx/appcompat/app/a$c;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public getItemId(I)J
-    .locals 2
-
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    .line 548
-    iget-object p2, p0, Landroidx/appcompat/widget/al$a;->a:Landroidx/appcompat/widget/al;
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/al$a;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/app/a$c;
-
-    const/4 p3, 0x1
-
-    invoke-virtual {p2, p1, p3}, Landroidx/appcompat/widget/al;->a(Landroidx/appcompat/app/a$c;Z)Landroidx/appcompat/widget/al$c;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    .line 550
-    :cond_0
-    move-object p3, p2
-
-    check-cast p3, Landroidx/appcompat/widget/al$c;
-
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/al$a;->getItem(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/appcompat/app/a$c;
-
-    invoke-virtual {p3, p1}, Landroidx/appcompat/widget/al$c;->a(Landroidx/appcompat/app/a$c;)V
-
-    :goto_0
-    return-object p2
 .end method

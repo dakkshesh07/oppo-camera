@@ -21,12 +21,12 @@
     return-void
 .end method
 
-.method public static a(Landroidx/lifecycle/h;)Landroidx/loader/a/a;
+.method public static a(Landroidx/lifecycle/g;)Landroidx/loader/a/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/lifecycle/h;",
+            "Landroidx/lifecycle/g;",
             ":",
             "Landroidx/lifecycle/t;",
             ">(TT;)",
@@ -45,7 +45,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Landroidx/loader/a/b;-><init>(Landroidx/lifecycle/h;Landroidx/lifecycle/s;)V
+    invoke-direct {v0, p0, v1}, Landroidx/loader/a/b;-><init>(Landroidx/lifecycle/g;Landroidx/lifecycle/s;)V
 
     return-object v0
 .end method

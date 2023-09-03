@@ -1,5 +1,5 @@
 .class public Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;
-.super Lcom/oppo/camera/ui/menu/setting/m;
+.super Lcom/oppo/camera/ui/menu/setting/l;
 .source "CameraSubSettingActivity.java"
 
 
@@ -12,7 +12,7 @@
     .locals 1
 
     .line 26
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/m;-><init>()V
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/l;-><init>()V
 
     const/4 v0, 0x0
 
@@ -32,7 +32,7 @@
 
     if-ne v1, v0, :cond_0
 
-    const v0, 0x7f100187
+    const v0, 0x7f1002a5
 
     .line 74
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getString(I)Ljava/lang/String;
@@ -46,7 +46,7 @@
 
     if-ne v1, v0, :cond_1
 
-    const v0, 0x7f1001c4
+    const v0, 0x7f1002fc
 
     .line 76
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getString(I)Ljava/lang/String;
@@ -58,7 +58,7 @@
     :cond_1
     if-nez v0, :cond_2
 
-    const v0, 0x7f100184
+    const v0, 0x7f10029f
 
     .line 78
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getString(I)Ljava/lang/String;
@@ -72,7 +72,7 @@
 
     if-ne v1, v0, :cond_3
 
-    const v0, 0x7f100262
+    const v0, 0x7f100406
 
     .line 80
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getString(I)Ljava/lang/String;
@@ -82,7 +82,7 @@
     return-object v0
 
     :cond_3
-    const v0, 0x7f100188
+    const v0, 0x7f1002a6
 
     .line 82
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getString(I)Ljava/lang/String;
@@ -98,9 +98,9 @@
     .locals 3
 
     .line 40
-    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/m;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/l;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0c00ea
+    const p1, 0x7f0c010e
 
     .line 42
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->setContentView(I)V
@@ -117,14 +117,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/oppo/camera/ui/menu/setting/r;
+    check-cast v1, Lcom/oppo/camera/ui/menu/setting/p;
 
     if-nez v1, :cond_0
 
     .line 48
-    new-instance v1, Lcom/oppo/camera/ui/menu/setting/r;
+    new-instance v1, Lcom/oppo/camera/ui/menu/setting/p;
 
-    invoke-direct {v1}, Lcom/oppo/camera/ui/menu/setting/r;-><init>()V
+    invoke-direct {v1}, Lcom/oppo/camera/ui/menu/setting/p;-><init>()V
 
     .line 51
     :cond_0
@@ -132,7 +132,7 @@
 
     move-result-object p1
 
-    const v2, 0x7f090133
+    const v2, 0x7f09014b
 
     invoke-virtual {p1, v2, v1, v0}, Landroidx/fragment/app/k;->b(ILandroidx/fragment/app/Fragment;Ljava/lang/String;)Landroidx/fragment/app/k;
 
@@ -145,23 +145,17 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/oppo/camera/util/Util;->c(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/oppo/camera/device/a;->a(Landroid/content/Context;)V
 
     .line 54
+    invoke-static {}, Lcom/oppo/camera/aps/config/CameraConfig;->initialize()V
+
+    .line 55
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/oppo/camera/e/a;->a(Landroid/content/Context;)V
-
-    const/4 p1, 0x0
-
-    .line 55
-    invoke-static {p1}, Lcom/oppo/camera/e/a;->a(I)Lcom/oppo/camera/e/h;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lcom/oppo/camera/config/CameraConfig;->initialize(Lcom/oppo/camera/e/h;)V
+    invoke-static {p1}, Lcom/oppo/camera/util/Util;->c(Landroid/content/Context;)V
 
     .line 57
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraSubSettingActivity;->getIntent()Landroid/content/Intent;
@@ -189,7 +183,7 @@
     move-result-object p1
 
     .line 61
-    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/menu/setting/r;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/menu/setting/p;->setArguments(Landroid/os/Bundle;)V
 
     const/4 v0, 0x1
 

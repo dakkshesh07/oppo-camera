@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;F)V
     .locals 0
 
-    .line 83
+    .line 85
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$1;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$1;->a:F
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 90
+    .line 92
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$1;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
@@ -53,7 +53,7 @@
 
     move-result v0
 
-    .line 92
+    .line 94
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$1;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iget-object v1, v1, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
@@ -64,7 +64,7 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 93
+    .line 95
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2$1;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;
 
     iget-object v1, v1, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;

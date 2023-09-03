@@ -1,601 +1,385 @@
-.class public final enum Landroidx/core/graphics/b;
-.super Ljava/lang/Enum;
-.source "BlendModeCompat.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum<",
-        "Landroidx/core/graphics/b;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field private static final synthetic $VALUES:[Landroidx/core/graphics/b;
-
-.field public static final enum CLEAR:Landroidx/core/graphics/b;
-
-.field public static final enum COLOR:Landroidx/core/graphics/b;
-
-.field public static final enum COLOR_BURN:Landroidx/core/graphics/b;
-
-.field public static final enum COLOR_DODGE:Landroidx/core/graphics/b;
-
-.field public static final enum DARKEN:Landroidx/core/graphics/b;
-
-.field public static final enum DIFFERENCE:Landroidx/core/graphics/b;
-
-.field public static final enum DST:Landroidx/core/graphics/b;
-
-.field public static final enum DST_ATOP:Landroidx/core/graphics/b;
-
-.field public static final enum DST_IN:Landroidx/core/graphics/b;
-
-.field public static final enum DST_OUT:Landroidx/core/graphics/b;
-
-.field public static final enum DST_OVER:Landroidx/core/graphics/b;
-
-.field public static final enum EXCLUSION:Landroidx/core/graphics/b;
-
-.field public static final enum HARD_LIGHT:Landroidx/core/graphics/b;
-
-.field public static final enum HUE:Landroidx/core/graphics/b;
-
-.field public static final enum LIGHTEN:Landroidx/core/graphics/b;
-
-.field public static final enum LUMINOSITY:Landroidx/core/graphics/b;
-
-.field public static final enum MODULATE:Landroidx/core/graphics/b;
-
-.field public static final enum MULTIPLY:Landroidx/core/graphics/b;
-
-.field public static final enum OVERLAY:Landroidx/core/graphics/b;
-
-.field public static final enum PLUS:Landroidx/core/graphics/b;
-
-.field public static final enum SATURATION:Landroidx/core/graphics/b;
-
-.field public static final enum SCREEN:Landroidx/core/graphics/b;
-
-.field public static final enum SOFT_LIGHT:Landroidx/core/graphics/b;
-
-.field public static final enum SRC:Landroidx/core/graphics/b;
-
-.field public static final enum SRC_ATOP:Landroidx/core/graphics/b;
-
-.field public static final enum SRC_IN:Landroidx/core/graphics/b;
-
-.field public static final enum SRC_OUT:Landroidx/core/graphics/b;
-
-.field public static final enum SRC_OVER:Landroidx/core/graphics/b;
-
-.field public static final enum XOR:Landroidx/core/graphics/b;
+.class Landroidx/core/graphics/b;
+.super Ljava/lang/Object;
+.source "BlendModeUtils.java"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 16
-
-    .line 37
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v1, 0x0
-
-    const-string v2, "CLEAR"
-
-    invoke-direct {v0, v2, v1}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->CLEAR:Landroidx/core/graphics/b;
-
-    .line 47
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v2, 0x1
-
-    const-string v3, "SRC"
-
-    invoke-direct {v0, v3, v2}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SRC:Landroidx/core/graphics/b;
-
-    .line 57
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v3, 0x2
-
-    const-string v4, "DST"
-
-    invoke-direct {v0, v4, v3}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DST:Landroidx/core/graphics/b;
-
-    .line 67
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v4, 0x3
-
-    const-string v5, "SRC_OVER"
-
-    invoke-direct {v0, v5, v4}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SRC_OVER:Landroidx/core/graphics/b;
-
-    .line 77
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v5, 0x4
-
-    const-string v6, "DST_OVER"
-
-    invoke-direct {v0, v6, v5}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DST_OVER:Landroidx/core/graphics/b;
-
-    .line 88
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v6, 0x5
-
-    const-string v7, "SRC_IN"
-
-    invoke-direct {v0, v7, v6}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SRC_IN:Landroidx/core/graphics/b;
-
-    .line 98
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v7, 0x6
-
-    const-string v8, "DST_IN"
-
-    invoke-direct {v0, v8, v7}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DST_IN:Landroidx/core/graphics/b;
-
-    .line 110
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/4 v8, 0x7
-
-    const-string v9, "SRC_OUT"
-
-    invoke-direct {v0, v9, v8}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SRC_OUT:Landroidx/core/graphics/b;
-
-    .line 122
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v9, 0x8
-
-    const-string v10, "DST_OUT"
-
-    invoke-direct {v0, v10, v9}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DST_OUT:Landroidx/core/graphics/b;
-
-    .line 133
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v10, 0x9
-
-    const-string v11, "SRC_ATOP"
-
-    invoke-direct {v0, v11, v10}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SRC_ATOP:Landroidx/core/graphics/b;
-
-    .line 144
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v11, 0xa
-
-    const-string v12, "DST_ATOP"
-
-    invoke-direct {v0, v12, v11}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DST_ATOP:Landroidx/core/graphics/b;
-
-    .line 157
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v12, 0xb
-
-    const-string v13, "XOR"
-
-    invoke-direct {v0, v13, v12}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->XOR:Landroidx/core/graphics/b;
-
-    .line 168
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v13, 0xc
-
-    const-string v14, "PLUS"
-
-    invoke-direct {v0, v14, v13}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->PLUS:Landroidx/core/graphics/b;
-
-    .line 179
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v14, 0xd
-
-    const-string v15, "MODULATE"
-
-    invoke-direct {v0, v15, v14}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->MODULATE:Landroidx/core/graphics/b;
-
-    .line 189
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const/16 v15, 0xe
-
-    const-string v14, "SCREEN"
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SCREEN:Landroidx/core/graphics/b;
-
-    .line 204
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "OVERLAY"
-
-    const/16 v15, 0xf
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->OVERLAY:Landroidx/core/graphics/b;
-
-    .line 217
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "DARKEN"
-
-    const/16 v15, 0x10
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DARKEN:Landroidx/core/graphics/b;
-
-    .line 230
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "LIGHTEN"
-
-    const/16 v15, 0x11
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->LIGHTEN:Landroidx/core/graphics/b;
-
-    .line 250
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "COLOR_DODGE"
-
-    const/16 v15, 0x12
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->COLOR_DODGE:Landroidx/core/graphics/b;
-
-    .line 274
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "COLOR_BURN"
-
-    const/16 v15, 0x13
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->COLOR_BURN:Landroidx/core/graphics/b;
-
-    .line 296
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "HARD_LIGHT"
-
-    const/16 v15, 0x14
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->HARD_LIGHT:Landroidx/core/graphics/b;
-
-    .line 342
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "SOFT_LIGHT"
-
-    const/16 v15, 0x15
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SOFT_LIGHT:Landroidx/core/graphics/b;
-
-    .line 361
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "DIFFERENCE"
-
-    const/16 v15, 0x16
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->DIFFERENCE:Landroidx/core/graphics/b;
-
-    .line 379
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "EXCLUSION"
-
-    const/16 v15, 0x17
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->EXCLUSION:Landroidx/core/graphics/b;
-
-    .line 391
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "MULTIPLY"
-
-    const/16 v15, 0x18
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->MULTIPLY:Landroidx/core/graphics/b;
-
-    .line 398
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "HUE"
-
-    const/16 v15, 0x19
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->HUE:Landroidx/core/graphics/b;
-
-    .line 405
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "SATURATION"
-
-    const/16 v15, 0x1a
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->SATURATION:Landroidx/core/graphics/b;
-
-    .line 412
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "COLOR"
-
-    const/16 v15, 0x1b
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->COLOR:Landroidx/core/graphics/b;
-
-    .line 419
-    new-instance v0, Landroidx/core/graphics/b;
-
-    const-string v14, "LUMINOSITY"
-
-    const/16 v15, 0x1c
-
-    invoke-direct {v0, v14, v15}, Landroidx/core/graphics/b;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Landroidx/core/graphics/b;->LUMINOSITY:Landroidx/core/graphics/b;
-
-    const/16 v0, 0x1d
-
-    .line 27
-    new-array v0, v0, [Landroidx/core/graphics/b;
-
-    sget-object v14, Landroidx/core/graphics/b;->CLEAR:Landroidx/core/graphics/b;
-
-    aput-object v14, v0, v1
-
-    sget-object v1, Landroidx/core/graphics/b;->SRC:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->DST:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Landroidx/core/graphics/b;->SRC_OVER:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Landroidx/core/graphics/b;->DST_OVER:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Landroidx/core/graphics/b;->SRC_IN:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Landroidx/core/graphics/b;->DST_IN:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v7
-
-    sget-object v1, Landroidx/core/graphics/b;->SRC_OUT:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v8
-
-    sget-object v1, Landroidx/core/graphics/b;->DST_OUT:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v9
-
-    sget-object v1, Landroidx/core/graphics/b;->SRC_ATOP:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v10
-
-    sget-object v1, Landroidx/core/graphics/b;->DST_ATOP:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v11
-
-    sget-object v1, Landroidx/core/graphics/b;->XOR:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v12
-
-    sget-object v1, Landroidx/core/graphics/b;->PLUS:Landroidx/core/graphics/b;
-
-    aput-object v1, v0, v13
-
-    sget-object v1, Landroidx/core/graphics/b;->MODULATE:Landroidx/core/graphics/b;
-
-    const/16 v2, 0xd
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->SCREEN:Landroidx/core/graphics/b;
-
-    const/16 v2, 0xe
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->OVERLAY:Landroidx/core/graphics/b;
-
-    const/16 v2, 0xf
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->DARKEN:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x10
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->LIGHTEN:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x11
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->COLOR_DODGE:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x12
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->COLOR_BURN:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x13
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->HARD_LIGHT:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x14
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->SOFT_LIGHT:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x15
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->DIFFERENCE:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x16
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->EXCLUSION:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x17
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->MULTIPLY:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x18
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->HUE:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x19
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->SATURATION:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x1a
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->COLOR:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x1b
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Landroidx/core/graphics/b;->LUMINOSITY:Landroidx/core/graphics/b;
-
-    const/16 v2, 0x1c
-
-    aput-object v1, v0, v2
-
-    sput-object v0, Landroidx/core/graphics/b;->$VALUES:[Landroidx/core/graphics/b;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .line 27
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Landroidx/core/graphics/b;
+.method static a(Landroidx/core/graphics/BlendModeCompat;)Landroid/graphics/BlendMode;
     .locals 1
 
-    .line 27
-    const-class v0, Landroidx/core/graphics/b;
+    .line 35
+    sget-object v0, Landroidx/core/graphics/b$1;->a:[I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p0}, Landroidx/core/graphics/BlendModeCompat;->ordinal()I
 
-    move-result-object p0
+    move-result p0
 
-    check-cast p0, Landroidx/core/graphics/b;
+    aget p0, v0, p0
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
 
     return-object p0
+
+    .line 93
+    :pswitch_0
+    sget-object p0, Landroid/graphics/BlendMode;->LUMINOSITY:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 91
+    :pswitch_1
+    sget-object p0, Landroid/graphics/BlendMode;->COLOR:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 89
+    :pswitch_2
+    sget-object p0, Landroid/graphics/BlendMode;->SATURATION:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 87
+    :pswitch_3
+    sget-object p0, Landroid/graphics/BlendMode;->HUE:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 85
+    :pswitch_4
+    sget-object p0, Landroid/graphics/BlendMode;->MULTIPLY:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 83
+    :pswitch_5
+    sget-object p0, Landroid/graphics/BlendMode;->EXCLUSION:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 81
+    :pswitch_6
+    sget-object p0, Landroid/graphics/BlendMode;->DIFFERENCE:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 79
+    :pswitch_7
+    sget-object p0, Landroid/graphics/BlendMode;->SOFT_LIGHT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 77
+    :pswitch_8
+    sget-object p0, Landroid/graphics/BlendMode;->HARD_LIGHT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 75
+    :pswitch_9
+    sget-object p0, Landroid/graphics/BlendMode;->COLOR_BURN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 73
+    :pswitch_a
+    sget-object p0, Landroid/graphics/BlendMode;->COLOR_DODGE:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 71
+    :pswitch_b
+    sget-object p0, Landroid/graphics/BlendMode;->LIGHTEN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 69
+    :pswitch_c
+    sget-object p0, Landroid/graphics/BlendMode;->DARKEN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 67
+    :pswitch_d
+    sget-object p0, Landroid/graphics/BlendMode;->OVERLAY:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 65
+    :pswitch_e
+    sget-object p0, Landroid/graphics/BlendMode;->SCREEN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 63
+    :pswitch_f
+    sget-object p0, Landroid/graphics/BlendMode;->MODULATE:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 61
+    :pswitch_10
+    sget-object p0, Landroid/graphics/BlendMode;->PLUS:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 59
+    :pswitch_11
+    sget-object p0, Landroid/graphics/BlendMode;->XOR:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 57
+    :pswitch_12
+    sget-object p0, Landroid/graphics/BlendMode;->DST_ATOP:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 55
+    :pswitch_13
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_ATOP:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 53
+    :pswitch_14
+    sget-object p0, Landroid/graphics/BlendMode;->DST_OUT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 51
+    :pswitch_15
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_OUT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 49
+    :pswitch_16
+    sget-object p0, Landroid/graphics/BlendMode;->DST_IN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 47
+    :pswitch_17
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_IN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 45
+    :pswitch_18
+    sget-object p0, Landroid/graphics/BlendMode;->DST_OVER:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 43
+    :pswitch_19
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_OVER:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 41
+    :pswitch_1a
+    sget-object p0, Landroid/graphics/BlendMode;->DST:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 39
+    :pswitch_1b
+    sget-object p0, Landroid/graphics/BlendMode;->SRC:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    .line 37
+    :pswitch_1c
+    sget-object p0, Landroid/graphics/BlendMode;->CLEAR:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Landroidx/core/graphics/b;
-    .locals 1
+.method static b(Landroidx/core/graphics/BlendModeCompat;)Landroid/graphics/PorterDuff$Mode;
+    .locals 2
 
-    .line 27
-    sget-object v0, Landroidx/core/graphics/b;->$VALUES:[Landroidx/core/graphics/b;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, [Landroidx/core/graphics/b;->clone()Ljava/lang/Object;
+    if-eqz p0, :cond_0
 
-    move-result-object v0
+    .line 102
+    sget-object v1, Landroidx/core/graphics/b$1;->a:[I
 
-    check-cast v0, [Landroidx/core/graphics/b;
+    invoke-virtual {p0}, Landroidx/core/graphics/BlendModeCompat;->ordinal()I
+
+    move-result p0
+
+    aget p0, v1, p0
+
+    packed-switch p0, :pswitch_data_0
 
     return-object v0
+
+    .line 139
+    :pswitch_0
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->LIGHTEN:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 137
+    :pswitch_1
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->DARKEN:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 135
+    :pswitch_2
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->OVERLAY:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 133
+    :pswitch_3
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SCREEN:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 131
+    :pswitch_4
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 128
+    :pswitch_5
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->ADD:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 126
+    :pswitch_6
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->XOR:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 124
+    :pswitch_7
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->DST_ATOP:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 122
+    :pswitch_8
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 120
+    :pswitch_9
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->DST_OUT:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 118
+    :pswitch_a
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_OUT:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 116
+    :pswitch_b
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->DST_IN:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 114
+    :pswitch_c
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 112
+    :pswitch_d
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->DST_OVER:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 110
+    :pswitch_e
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC_OVER:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 108
+    :pswitch_f
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->DST:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 106
+    :pswitch_10
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->SRC:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    .line 104
+    :pswitch_11
+    sget-object p0, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
+
+    return-object p0
+
+    :cond_0
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

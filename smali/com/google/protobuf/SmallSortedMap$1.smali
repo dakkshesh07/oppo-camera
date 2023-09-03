@@ -29,7 +29,7 @@
 
     const/4 v0, 0x0
 
-    .line 100
+    .line 95
     invoke-direct {p0, p1, v0}, Lcom/google/protobuf/SmallSortedMap;-><init>(ILcom/google/protobuf/SmallSortedMap$1;)V
 
     return-void
@@ -40,7 +40,7 @@
 .method public makeImmutable()V
     .locals 3
 
-    .line 104
+    .line 99
     invoke-virtual {p0}, Lcom/google/protobuf/SmallSortedMap$1;->isImmutable()Z
 
     move-result v0
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x0
 
-    .line 105
+    .line 100
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/SmallSortedMap$1;->getNumArrayEntries()I
 
@@ -57,12 +57,12 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 107
+    .line 101
     invoke-virtual {p0, v0}, Lcom/google/protobuf/SmallSortedMap$1;->getArrayEntryAt(I)Ljava/util/Map$Entry;
 
     move-result-object v1
 
-    .line 108
+    .line 102
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -75,14 +75,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 109
+    .line 103
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/List;
 
-    .line 110
+    .line 104
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
@@ -94,7 +94,7 @@
 
     goto :goto_0
 
-    .line 114
+    .line 107
     :cond_1
     invoke-virtual {p0}, Lcom/google/protobuf/SmallSortedMap$1;->getOverflowEntries()Ljava/lang/Iterable;
 
@@ -118,7 +118,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 115
+    .line 108
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -131,14 +131,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 116
+    .line 109
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/util/List;
 
-    .line 117
+    .line 110
     invoke-static {v2}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
@@ -147,7 +147,7 @@
 
     goto :goto_1
 
-    .line 121
+    .line 114
     :cond_3
     invoke-super {p0}, Lcom/google/protobuf/SmallSortedMap;->makeImmutable()V
 
@@ -157,7 +157,7 @@
 .method public bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 100
+    .line 95
     check-cast p1, Lcom/google/protobuf/FieldSet$FieldDescriptorLite;
 
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/SmallSortedMap;->put(Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/Object;

@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
 
     move-result-object p7
 
-    invoke-static {p7}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p7}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p7
 

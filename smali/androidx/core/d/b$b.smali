@@ -29,12 +29,14 @@
 # direct methods
 .method public constructor <init>(Landroid/net/Uri;IIZI)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 346
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 347
-    invoke-static {p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

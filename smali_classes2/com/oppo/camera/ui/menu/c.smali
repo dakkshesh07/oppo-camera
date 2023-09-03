@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field private A:Lcom/oppo/camera/ui/e;
+.field private A:Lcom/oppo/camera/ui/d;
 
 .field private x:Lcom/oppo/camera/ui/RotateImageView;
 
 .field private y:Z
 
-.field private z:Lcom/oppo/camera/ui/h;
+.field private z:Lcom/oppo/camera/ui/m;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/oppo/camera/ui/e;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/oppo/camera/ui/d;)V
     .locals 1
 
     .line 43
@@ -39,13 +39,13 @@
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/c;->y:Z
 
     .line 39
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     .line 40
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/c;->A:Lcom/oppo/camera/ui/e;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/c;->A:Lcom/oppo/camera/ui/d;
 
     .line 45
-    iput-object p2, p0, Lcom/oppo/camera/ui/menu/c;->A:Lcom/oppo/camera/ui/e;
+    iput-object p2, p0, Lcom/oppo/camera/ui/menu/c;->A:Lcom/oppo/camera/ui/d;
 
     return-void
 .end method
@@ -61,7 +61,7 @@
 
     .line 68
     :cond_0
-    invoke-static {}, Lcom/oppo/camera/util/Util;->D()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->C()I
 
     move-result p1
 
@@ -81,23 +81,23 @@
     .locals 3
 
     .line 96
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     if-nez v0, :cond_0
 
     .line 97
-    new-instance v0, Lcom/oppo/camera/ui/h;
+    new-instance v0, Lcom/oppo/camera/ui/m;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lcom/oppo/camera/ui/h;-><init>(FF)V
+    invoke-direct {v0, v1, v2}, Lcom/oppo/camera/ui/m;-><init>(FF)V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     .line 98
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     new-instance v1, Lcom/oppo/camera/ui/menu/c$a;
 
@@ -105,14 +105,14 @@
 
     invoke-direct {v1, p0, v2}, Lcom/oppo/camera/ui/menu/c$a;-><init>(Lcom/oppo/camera/ui/menu/c;Lcom/oppo/camera/ui/menu/c$1;)V
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/h;->a(Lcom/oppo/camera/ui/h$a;)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/m;->a(Lcom/oppo/camera/ui/m$a;)V
 
     .line 99
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     const-wide/16 v1, 0x12c
 
-    invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/ui/h;->setDuration(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/ui/m;->setDuration(J)V
 
     :cond_0
     return-void
@@ -135,7 +135,7 @@
 
     .line 188
     :goto_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     if-nez v0, :cond_1
 
@@ -153,33 +153,33 @@
     if-eqz v0, :cond_2
 
     .line 193
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/h;->b()Z
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/m;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     .line 194
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/h;->a()I
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/m;->a()I
 
     move-result v0
 
     if-eq v0, p1, :cond_2
 
     .line 195
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/c;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 199
     :cond_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
-    invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/ui/h;->a(IZ)V
+    invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/ui/m;->a(IZ)V
 
     return-void
 .end method
@@ -536,7 +536,7 @@
 
     .line 293
     :cond_0
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/h;
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/c;->z:Lcom/oppo/camera/ui/m;
 
     .line 294
     invoke-super {p0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->g()V
@@ -586,7 +586,7 @@
     if-eqz v2, :cond_0
 
     .line 229
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t()I
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->z()I
 
     move-result v2
 
@@ -670,7 +670,7 @@
     if-eqz v2, :cond_0
 
     .line 209
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s()I
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y()I
 
     move-result v2
 
@@ -764,12 +764,12 @@
     if-eqz p3, :cond_1
 
     .line 270
-    invoke-virtual {p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s()I
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y()I
 
     move-result v0
 
     .line 271
-    invoke-virtual {p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t()I
+    invoke-virtual {p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->z()I
 
     move-result v1
 
@@ -779,7 +779,7 @@
     div-int/lit8 v2, v2, 0x2
 
     .line 275
-    invoke-static {}, Lcom/oppo/camera/util/Util;->U()Z
+    invoke-static {}, Lcom/oppo/camera/util/Util;->Y()Z
 
     move-result v3
 
@@ -792,7 +792,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0702fe
+    const v4, 0x7f070376
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -836,11 +836,11 @@
     .line 248
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/c;->x:Lcom/oppo/camera/ui/RotateImageView;
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result p2
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->L()I
 
     move-result v0
 
@@ -932,7 +932,7 @@
     move v2, p1
 
     :goto_1
-    invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(Z)V
+    invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(Z)V
 
     :cond_1
     add-int/lit8 v0, v0, 0x1

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onPopUpFadeOutAnimationStart()V
+.method public abstract onPopUpFadeOutAnimationEnd()V
 .end method

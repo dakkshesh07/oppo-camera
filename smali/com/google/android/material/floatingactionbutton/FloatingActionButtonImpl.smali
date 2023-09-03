@@ -728,7 +728,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultHideMotionSpec:Lcom/google/android/material/animation/MotionSpec;
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -765,7 +765,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->defaultShowMotionSpec:Lcom/google/android/material/animation/MotionSpec;
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -802,7 +802,7 @@
     .line 846
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->view:Lcom/google/android/material/floatingactionbutton/FloatingActionButton;
 
-    invoke-static {v0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -930,7 +930,7 @@
     .line 743
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shapeAppearance:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1288,7 +1288,7 @@
     iget-object p4, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
     .line 207
-    invoke-static {p4}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p4}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p4
 
@@ -1503,7 +1503,7 @@
 
     const-string v1, "Didn\'t initialize content background"
 
-    invoke-static {v0, v1}, Landroidx/core/f/f;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Landroidx/core/util/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 683
     invoke-virtual {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;->shouldAddPadding()Z

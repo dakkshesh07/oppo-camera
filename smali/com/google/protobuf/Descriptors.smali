@@ -29,10 +29,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 67
+    .line 81
     const-class v0, Lcom/google/protobuf/Descriptors;
 
-    .line 68
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -49,7 +48,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 66
+    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,16 +57,16 @@
 .method static synthetic access$100()Ljava/util/logging/Logger;
     .locals 1
 
-    .line 66
+    .line 80
     sget-object v0, Lcom/google/protobuf/Descriptors;->logger:Ljava/util/logging/Logger;
 
     return-object v0
 .end method
 
-.method static synthetic access$1600(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$Descriptor;Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic access$1700(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$Descriptor;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    .line 66
+    .line 80
     invoke-static {p0, p1, p2}, Lcom/google/protobuf/Descriptors;->computeFullName(Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$Descriptor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -82,7 +81,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 2011
+    .line 2106
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -103,26 +102,23 @@
 
     return-object p0
 
-    .line 2012
+    .line 2109
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getPackage()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    .line 2110
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result p1
 
-    if-lez p1, :cond_1
+    if-nez p1, :cond_1
 
-    .line 2013
+    .line 2111
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$FileDescriptor;->getPackage()Ljava/lang/String;
-
-    move-result-object p0
 
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

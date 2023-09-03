@@ -1,14 +1,11 @@
 .class Lcom/oppo/camera/ui/menu/setting/down/a$2;
-.super Ljava/lang/Object;
+.super Lcom/oppo/camera/b/a;
 .source "ArrowView.java"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/setting/down/a;->a()V
+    value = Lcom/oppo/camera/ui/menu/setting/down/a;->b()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,34 +22,38 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/down/a;)V
     .locals 0
 
-    .line 188
+    .line 353
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/a$2;->a:Lcom/oppo/camera/ui/menu/setting/down/a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/oppo/camera/b/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 191
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    .line 361
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/a$2;->a:Lcom/oppo/camera/ui/menu/setting/down/a;
 
-    move-result-object p1
+    const/4 v0, 0x0
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/setting/down/a;->a(Lcom/oppo/camera/ui/menu/setting/down/a;Z)Z
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    return-void
+.end method
 
-    move-result p1
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    .line 192
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/a$2;->a:Lcom/oppo/camera/ui/menu/setting/down/a;
+    .line 356
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/a$2;->a:Lcom/oppo/camera/ui/menu/setting/down/a;
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/ui/menu/setting/down/a;->a(Lcom/oppo/camera/ui/menu/setting/down/a;F)V
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/setting/down/a;->a(Lcom/oppo/camera/ui/menu/setting/down/a;Z)Z
 
     return-void
 .end method

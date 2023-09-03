@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:state_checked="true" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090288" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080226" />
+    <item android:state_enabled="true" android:state_checked="false" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09034a" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802dd" />
+    <item android:state_enabled="false" android:state_checked="true" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080225" />
+    <item android:state_enabled="false" android:state_checked="false" android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802dc" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802df" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f09034a" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f090288" />
+    <transition android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802e2" android:toId="@id/APKTOOL_DUPLICATE_id_0x7f090288" android:fromId="@id/APKTOOL_DUPLICATE_id_0x7f09034a" />
+</animated-selector>

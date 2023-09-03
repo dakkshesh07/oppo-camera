@@ -3,6 +3,11 @@
 .source "ShadowRenderer.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final COLOR_ALPHA_END:I = 0x0
 
@@ -489,7 +494,7 @@
     const/16 v0, 0x44
 
     .line 86
-    invoke-static {p1, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p1, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v0
 
@@ -498,7 +503,7 @@
     const/16 v0, 0x14
 
     .line 87
-    invoke-static {p1, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p1, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v0
 
@@ -507,7 +512,7 @@
     const/4 v0, 0x0
 
     .line 88
-    invoke-static {p1, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p1, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result p1
 

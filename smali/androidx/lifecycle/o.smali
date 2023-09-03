@@ -19,5 +19,5 @@
 
 
 # virtual methods
-.method public abstract a()Landroidx/lifecycle/e$a;
+.method public abstract a()Landroidx/lifecycle/Lifecycle$Event;
 .end method

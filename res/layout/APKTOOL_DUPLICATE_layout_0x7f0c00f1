@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070669" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.PrivacyPolicyContentScrollView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090224" android:scrollbars="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUPLICATE_attr_0x7f04045b="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07066d">
+        <LinearLayout android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090221" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070639" android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f0603de" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090222" android:paddingLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07066b" android:paddingRight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07066b" android:paddingBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070636" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUPLICATE_string_0x7f100232" android:fontFamily="sans-serif" />
+        </LinearLayout>
+    </com.oppo.camera.PrivacyPolicyContentScrollView>
+</LinearLayout>

@@ -18,15 +18,15 @@
 # instance fields
 .field final a_:Landroidx/fragment/app/e;
 
-.field final b_:Landroidx/lifecycle/i;
+.field final b_:Landroidx/lifecycle/h;
 
 .field c_:Z
 
 .field d_:Z
 
-.field e:Z
+.field e_:Z
 
-.field f:Z
+.field f_:Z
 
 .field g:Z
 
@@ -34,10 +34,10 @@
 
 .field i:I
 
-.field j:Landroidx/b/h;
+.field j:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/h<",
+            "Landroidx/collection/SparseArrayCompat<",
             "Ljava/lang/String;",
             ">;"
         }
@@ -64,21 +64,21 @@
     iput-object v0, p0, Landroidx/fragment/app/c;->a_:Landroidx/fragment/app/e;
 
     .line 89
-    new-instance v0, Landroidx/lifecycle/i;
+    new-instance v0, Landroidx/lifecycle/h;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/i;-><init>(Landroidx/lifecycle/h;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/h;-><init>(Landroidx/lifecycle/g;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iput-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
     const/4 v0, 0x1
 
     .line 93
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->e:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->e_:Z
 
     return-void
 .end method
 
-.method private static a(Landroidx/fragment/app/h;Landroidx/lifecycle/e$b;)Z
+.method private static a(Landroidx/fragment/app/h;Landroidx/lifecycle/Lifecycle$State;)Z
     .locals 4
 
     .line 996
@@ -113,26 +113,26 @@
 
     .line 1001
     :cond_1
-    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getLifecycle()Landroidx/lifecycle/e;
+    invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroidx/lifecycle/e;->a()Landroidx/lifecycle/e$b;
+    invoke-virtual {v2}, Landroidx/lifecycle/Lifecycle;->a()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v2
 
-    sget-object v3, Landroidx/lifecycle/e$b;->STARTED:Landroidx/lifecycle/e$b;
+    sget-object v3, Landroidx/lifecycle/Lifecycle$State;->STARTED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v2, v3}, Landroidx/lifecycle/e$b;->isAtLeast(Landroidx/lifecycle/e$b;)Z
+    invoke-virtual {v2, v3}, Landroidx/lifecycle/Lifecycle$State;->isAtLeast(Landroidx/lifecycle/Lifecycle$State;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 1002
-    iget-object v0, v1, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, v1, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/i;->b(Landroidx/lifecycle/e$b;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/h;->b(Landroidx/lifecycle/Lifecycle$State;)V
 
     const/4 v0, 0x1
 
@@ -150,7 +150,7 @@
     move-result-object v1
 
     .line 1008
-    invoke-static {v1, p1}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/h;Landroidx/lifecycle/e$b;)Z
+    invoke-static {v1, p1}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/h;Landroidx/lifecycle/Lifecycle$State;)Z
 
     move-result v1
 
@@ -166,9 +166,9 @@
     .locals 3
 
     .line 830
-    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->b()I
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
 
@@ -178,11 +178,11 @@
 
     .line 835
     :goto_0
-    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
     iget v2, p0, Landroidx/fragment/app/c;->i:I
 
-    invoke-virtual {v0, v2}, Landroidx/b/h;->e(I)I
+    invoke-virtual {v0, v2}, Landroidx/collection/SparseArrayCompat;->indexOfKey(I)I
 
     move-result v0
 
@@ -204,11 +204,11 @@
     iget v0, p0, Landroidx/fragment/app/c;->i:I
 
     .line 841
-    iget-object v2, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
     iget-object p1, p1, Landroidx/fragment/app/Fragment;->mWho:Ljava/lang/String;
 
-    invoke-virtual {v2, v0, p1}, Landroidx/b/h;->b(ILjava/lang/Object;)V
+    invoke-virtual {v2, v0, p1}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
     .line 842
     iget p1, p0, Landroidx/fragment/app/c;->i:I
@@ -263,9 +263,9 @@
 
     move-result-object v0
 
-    sget-object v1, Landroidx/lifecycle/e$b;->CREATED:Landroidx/lifecycle/e$b;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-static {v0, v1}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/h;Landroidx/lifecycle/e$b;)Z
+    invoke-static {v0, v1}, Landroidx/fragment/app/c;->a(Landroidx/fragment/app/h;Landroidx/lifecycle/Lifecycle$State;)Z
 
     move-result v0
 
@@ -498,7 +498,7 @@
 
     .line 859
     :try_start_0
-    iput-boolean v1, p0, Landroidx/fragment/app/c;->f:Z
+    iput-boolean v1, p0, Landroidx/fragment/app/c;->f_:Z
 
     .line 860
     invoke-direct {p0, p1}, Landroidx/fragment/app/c;->b(Landroidx/fragment/app/Fragment;)I
@@ -521,14 +521,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 864
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->f:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->f_:Z
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->f:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->f_:Z
 
     .line 865
     throw p1
@@ -536,6 +536,9 @@
 
 .method protected a(Landroid/view/View;Landroid/view/Menu;)Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -553,7 +556,7 @@
     .locals 1
 
     .line 728
-    iget-boolean v0, p0, Landroidx/fragment/app/c;->f:Z
+    iget-boolean v0, p0, Landroidx/fragment/app/c;->f_:Z
 
     if-nez v0, :cond_0
 
@@ -649,7 +652,7 @@
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 607
-    iget-boolean v1, p0, Landroidx/fragment/app/c;->e:Z
+    iget-boolean v1, p0, Landroidx/fragment/app/c;->e_:Z
 
     invoke-virtual {p3, v1}, Ljava/io/PrintWriter;->print(Z)V
 
@@ -661,7 +664,7 @@
     if-eqz v1, :cond_0
 
     .line 610
-    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/h;)Landroidx/loader/a/a;
+    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/g;)Landroidx/loader/a/a;
 
     move-result-object v1
 
@@ -684,11 +687,11 @@
     .locals 2
 
     .line 478
-    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_RESUME:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 479
     iget-object v0, p0, Landroidx/fragment/app/c;->a_:Landroidx/fragment/app/e;
@@ -726,18 +729,18 @@
     add-int/lit8 v0, v0, -0x1
 
     .line 160
-    iget-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v1, v0}, Landroidx/b/h;->a(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/SparseArrayCompat;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
     .line 161
-    iget-object v2, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v2, v0}, Landroidx/b/h;->b(I)V
+    invoke-virtual {v2, v0}, Landroidx/collection/SparseArrayCompat;->remove(I)V
 
     const-string v0, "FragmentActivity"
 
@@ -904,13 +907,13 @@
 
     .line 300
     :cond_0
-    new-instance v3, Landroidx/b/h;
+    new-instance v3, Landroidx/collection/SparseArrayCompat;
 
     array-length v4, v1
 
-    invoke-direct {v3, v4}, Landroidx/b/h;-><init>(I)V
+    invoke-direct {v3, v4}, Landroidx/collection/SparseArrayCompat;-><init>(I)V
 
-    iput-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iput-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
     move v3, v0
 
@@ -921,13 +924,13 @@
     if-ge v3, v4, :cond_2
 
     .line 302
-    iget-object v4, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v4, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
     aget v5, v1, v3
 
     aget-object v6, v2, v3
 
-    invoke-virtual {v4, v5, v6}, Landroidx/b/h;->b(ILjava/lang/Object;)V
+    invoke-virtual {v4, v5, v6}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -944,16 +947,16 @@
 
     .line 308
     :cond_2
-    iget-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
     if-nez v1, :cond_3
 
     .line 309
-    new-instance v1, Landroidx/b/h;
+    new-instance v1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-direct {v1}, Landroidx/b/h;-><init>()V
+    invoke-direct {v1}, Landroidx/collection/SparseArrayCompat;-><init>()V
 
-    iput-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iput-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
     .line 310
     iput v0, p0, Landroidx/fragment/app/c;->i:I
@@ -963,11 +966,11 @@
     invoke-super {p0, p1}, Landroidx/activity/b;->onCreate(Landroid/os/Bundle;)V
 
     .line 315
-    iget-object p1, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object p1, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_CREATE:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 316
     iget-object p1, p0, Landroidx/fragment/app/c;->a_:Landroidx/fragment/app/e;
@@ -1067,11 +1070,11 @@
     invoke-virtual {v0}, Landroidx/fragment/app/e;->j()V
 
     .line 367
-    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_DESTROY:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -1205,11 +1208,11 @@
     invoke-virtual {v0}, Landroidx/fragment/app/e;->h()V
 
     .line 421
-    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_PAUSE:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -1286,18 +1289,18 @@
     add-int/lit8 v0, v0, -0x1
 
     .line 759
-    iget-object v2, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v2, v0}, Landroidx/b/h;->a(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Landroidx/collection/SparseArrayCompat;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
     .line 760
-    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v3, v0}, Landroidx/b/h;->b(I)V
+    invoke-virtual {v3, v0}, Landroidx/collection/SparseArrayCompat;->remove(I)V
 
     const-string v0, "FragmentActivity"
 
@@ -1384,11 +1387,11 @@
     invoke-direct {p0}, Landroidx/fragment/app/c;->e()V
 
     .line 512
-    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 513
     iget-object v0, p0, Landroidx/fragment/app/c;->a_:Landroidx/fragment/app/e;
@@ -1406,9 +1409,9 @@
 
     .line 517
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->b()I
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
 
@@ -1422,18 +1425,18 @@
     invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 520
-    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->b()I
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
 
     new-array v0, v0, [I
 
     .line 521
-    iget-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v1, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v1}, Landroidx/b/h;->b()I
+    invoke-virtual {v1}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v1
 
@@ -1443,27 +1446,27 @@
 
     .line 522
     :goto_0
-    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v3}, Landroidx/b/h;->b()I
+    invoke-virtual {v3}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v3
 
     if-ge v2, v3, :cond_1
 
     .line 523
-    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v3, v2}, Landroidx/b/h;->c(I)I
+    invoke-virtual {v3, v2}, Landroidx/collection/SparseArrayCompat;->keyAt(I)I
 
     move-result v3
 
     aput v3, v0, v2
 
     .line 524
-    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/b/h;
+    iget-object v3, p0, Landroidx/fragment/app/c;->j:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v3, v2}, Landroidx/b/h;->d(I)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1499,7 +1502,7 @@
     const/4 v0, 0x0
 
     .line 538
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->e:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->e_:Z
 
     .line 540
     iget-boolean v0, p0, Landroidx/fragment/app/c;->c_:Z
@@ -1528,11 +1531,11 @@
     invoke-virtual {v0}, Landroidx/fragment/app/e;->l()Z
 
     .line 550
-    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 551
     iget-object v0, p0, Landroidx/fragment/app/c;->a_:Landroidx/fragment/app/e;
@@ -1562,7 +1565,7 @@
     const/4 v0, 0x1
 
     .line 561
-    iput-boolean v0, p0, Landroidx/fragment/app/c;->e:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/c;->e_:Z
 
     .line 562
     invoke-direct {p0}, Landroidx/fragment/app/c;->e()V
@@ -1573,11 +1576,11 @@
     invoke-virtual {v0}, Landroidx/fragment/app/e;->i()V
 
     .line 565
-    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method

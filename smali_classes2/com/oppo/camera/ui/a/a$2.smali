@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/a/a;Lcom/a/a/f;)V
     .locals 0
 
-    .line 151
+    .line 150
     iput-object p1, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
 
     iput-object p2, p0, Lcom/oppo/camera/ui/a/a$2;->a:Lcom/a/a/f;
@@ -39,17 +39,17 @@
 .method public a(Lcom/a/a/f;)V
     .locals 2
 
-    .line 154
+    .line 153
     invoke-super {p0, p1}, Lcom/a/a/e;->a(Lcom/a/a/f;)V
 
-    .line 155
+    .line 154
     invoke-virtual {p1}, Lcom/a/a/f;->c()D
 
     move-result-wide v0
 
     double-to-float p1, v0
 
-    .line 157
+    .line 156
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -66,16 +66,16 @@
 
     const-string v1, "CameraSuperTextUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 159
+    .line 158
     iget-object v0, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/a/a;->b(Lcom/oppo/camera/ui/a/a;)Lcom/oppo/camera/ui/widget/a;
+    invoke-static {v0}, Lcom/oppo/camera/ui/a/a;->b(Lcom/oppo/camera/ui/a/a;)Lcom/oppo/camera/ui/widget/RoundImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/widget/a;->setAlpha(F)V
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/widget/RoundImageView;->setAlpha(F)V
 
     const v0, 0x3ec28f5c    # 0.38f
 
@@ -85,23 +85,23 @@
 
     add-float/2addr p1, v0
 
+    .line 160
+    iget-object v0, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/a/a;->b(Lcom/oppo/camera/ui/a/a;)Lcom/oppo/camera/ui/widget/RoundImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/widget/RoundImageView;->setScaleX(F)V
+
     .line 161
     iget-object v0, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/a/a;->b(Lcom/oppo/camera/ui/a/a;)Lcom/oppo/camera/ui/widget/a;
+    invoke-static {v0}, Lcom/oppo/camera/ui/a/a;->b(Lcom/oppo/camera/ui/a/a;)Lcom/oppo/camera/ui/widget/RoundImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/widget/a;->setScaleX(F)V
-
-    .line 162
-    iget-object v0, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/a/a;->b(Lcom/oppo/camera/ui/a/a;)Lcom/oppo/camera/ui/widget/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/widget/a;->setScaleY(F)V
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/widget/RoundImageView;->setScaleY(F)V
 
     return-void
 .end method
@@ -109,15 +109,15 @@
 .method public b(Lcom/a/a/f;)V
     .locals 3
 
-    .line 167
+    .line 166
     invoke-super {p0, p1}, Lcom/a/a/e;->b(Lcom/a/a/f;)V
 
-    .line 168
+    .line 167
     iget-object p1, p0, Lcom/oppo/camera/ui/a/a$2;->a:Lcom/a/a/f;
 
     invoke-virtual {p1}, Lcom/a/a/f;->a()V
 
-    .line 170
+    .line 169
     iget-object p1, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/a/a;->c(Lcom/oppo/camera/ui/a/a;)Landroid/os/Handler;
@@ -126,7 +126,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 171
+    .line 170
     iget-object p1, p0, Lcom/oppo/camera/ui/a/a$2;->b:Lcom/oppo/camera/ui/a/a;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/a/a;->c(Lcom/oppo/camera/ui/a/a;)Landroid/os/Handler;

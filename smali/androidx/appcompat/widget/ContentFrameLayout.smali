@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/widget/ContentFrameLayout$a;
@@ -72,6 +75,8 @@
 # virtual methods
 .method public a(IIII)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 94
     iget-object v0, p0, Landroidx/appcompat/widget/ContentFrameLayout;->g:Landroid/graphics/Rect;
@@ -79,7 +84,7 @@
     invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 95
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result p1
 
@@ -94,6 +99,8 @@
 
 .method public a(Landroid/graphics/Rect;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 79
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ContentFrameLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z

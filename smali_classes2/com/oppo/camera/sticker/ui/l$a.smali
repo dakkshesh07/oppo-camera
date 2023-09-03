@@ -1,6 +1,6 @@
 .class public interface abstract Lcom/oppo/camera/sticker/ui/l$a;
 .super Ljava/lang/Object;
-.source "StickerRecycleBinAdapter.java"
+.source "StickerRecycleBinDialog.java"
 
 
 # annotations
@@ -15,8 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(I)V
+.method public abstract a()V
 .end method
 
-.method public abstract a(Lcom/oppo/camera/sticker/ui/l;)V
+.method public abstract a(IZ)V
+.end method
+
+.method public abstract b(IZ)V
 .end method

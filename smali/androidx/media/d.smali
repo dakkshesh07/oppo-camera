@@ -3,6 +3,11 @@
 .source "MediaBrowserCompatUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public static a(Landroid/os/Bundle;Landroid/os/Bundle;)Z
     .locals 6

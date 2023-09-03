@@ -1,9 +1,14 @@
 .class final Lokio/OutputStreamSink;
 .super Ljava/lang/Object;
-.source "Okio.kt"
+.source "JvmOkio.kt"
 
 # interfaces
 .implements Lokio/Sink;
+
+
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
 
 
 # instance fields
@@ -18,13 +23,13 @@
 
     const-string v0, "out"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "timeout"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 44
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lokio/OutputStreamSink;->out:Ljava/io/OutputStream;
@@ -39,7 +44,7 @@
 .method public close()V
     .locals 1
 
-    .line 71
+    .line 68
     iget-object v0, p0, Lokio/OutputStreamSink;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
@@ -50,7 +55,7 @@
 .method public flush()V
     .locals 1
 
-    .line 69
+    .line 66
     iget-object v0, p0, Lokio/OutputStreamSink;->out:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
@@ -61,7 +66,7 @@
 .method public timeout()Lokio/Timeout;
     .locals 1
 
-    .line 73
+    .line 70
     iget-object v0, p0, Lokio/OutputStreamSink;->timeout:Lokio/Timeout;
 
     return-object v0
@@ -70,7 +75,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 75
+    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -99,9 +104,9 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 50
+    .line 47
     invoke-virtual {p1}, Lokio/Buffer;->size()J
 
     move-result-wide v1
@@ -120,19 +125,19 @@
 
     if-lez v0, :cond_2
 
-    .line 53
+    .line 50
     iget-object v0, p0, Lokio/OutputStreamSink;->timeout:Lokio/Timeout;
 
     invoke-virtual {v0}, Lokio/Timeout;->throwIfReached()V
 
-    .line 54
+    .line 51
     iget-object v0, p1, Lokio/Buffer;->head:Lokio/Segment;
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
-    .line 55
+    .line 52
     :cond_1
     iget v1, v0, Lokio/Segment;->limit:I
 
@@ -142,14 +147,14 @@
 
     int-to-long v1, v1
 
-    .line 206
+    .line 200
     invoke-static {p2, p3, v1, v2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v1
 
     long-to-int v1, v1
 
-    .line 56
+    .line 53
     iget-object v2, p0, Lokio/OutputStreamSink;->out:Ljava/io/OutputStream;
 
     iget-object v3, v0, Lokio/Segment;->data:[B
@@ -158,7 +163,7 @@
 
     invoke-virtual {v2, v3, v4, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 58
+    .line 55
     iget v2, v0, Lokio/Segment;->pos:I
 
     add-int/2addr v2, v1
@@ -169,7 +174,7 @@
 
     sub-long/2addr p2, v1
 
-    .line 60
+    .line 57
     invoke-virtual {p1}, Lokio/Buffer;->size()J
 
     move-result-wide v3
@@ -178,21 +183,21 @@
 
     invoke-virtual {p1, v3, v4}, Lokio/Buffer;->setSize$okio(J)V
 
-    .line 62
+    .line 59
     iget v1, v0, Lokio/Segment;->pos:I
 
     iget v2, v0, Lokio/Segment;->limit:I
 
     if-ne v1, v2, :cond_0
 
-    .line 63
+    .line 60
     invoke-virtual {v0}, Lokio/Segment;->pop()Lokio/Segment;
 
     move-result-object v1
 
     iput-object v1, p1, Lokio/Buffer;->head:Lokio/Segment;
 
-    .line 64
+    .line 61
     sget-object v1, Lokio/SegmentPool;->INSTANCE:Lokio/SegmentPool;
 
     invoke-virtual {v1, v0}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V

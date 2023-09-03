@@ -3,7 +3,7 @@
 .source "AppCompatSpinner.java"
 
 # interfaces
-.implements Landroidx/core/g/v;
+.implements Landroidx/core/f/v;
 
 
 # annotations
@@ -31,7 +31,7 @@
 
 .field private final e:Landroid/content/Context;
 
-.field private f:Landroidx/appcompat/widget/ae;
+.field private f:Landroidx/appcompat/widget/ad;
 
 .field private g:Landroid/widget/SpinnerAdapter;
 
@@ -121,14 +121,14 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, v0}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 213
     sget-object v0, Landroidx/appcompat/R$styleable;->Spinner:[I
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object v0
 
@@ -154,7 +154,7 @@
     :cond_0
     sget p5, Landroidx/appcompat/R$styleable;->Spinner_popupTheme:I
 
-    invoke-virtual {v0, p5, v1}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v0, p5, v1}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p5
 
@@ -284,7 +284,7 @@
 
     sget-object v4, Landroidx/appcompat/R$styleable;->Spinner:[I
 
-    invoke-static {v3, p2, v4, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {v3, p2, v4, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object v1
 
@@ -293,7 +293,7 @@
 
     const/4 v4, -0x2
 
-    invoke-virtual {v1, v3, v4}, Landroidx/appcompat/widget/as;->f(II)I
+    invoke-virtual {v1, v3, v4}, Landroidx/appcompat/widget/ar;->f(II)I
 
     move-result v3
 
@@ -303,7 +303,7 @@
     sget v3, Landroidx/appcompat/R$styleable;->Spinner_android_popupBackground:I
 
     .line 259
-    invoke-virtual {v1, v3}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1, v3}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
@@ -313,14 +313,14 @@
     .line 260
     sget v3, Landroidx/appcompat/R$styleable;->Spinner_android_prompt:I
 
-    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/as;->d(I)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Landroidx/appcompat/widget/ar;->d(I)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {p4, v3}, Landroidx/appcompat/widget/AppCompatSpinner$c;->a(Ljava/lang/CharSequence;)V
 
     .line 261
-    invoke-virtual {v1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v1}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 263
     iput-object p4, p0, Landroidx/appcompat/widget/AppCompatSpinner;->i:Landroidx/appcompat/widget/AppCompatSpinner$d;
@@ -330,7 +330,7 @@
 
     invoke-direct {v1, p0, p0, p4}, Landroidx/appcompat/widget/AppCompatSpinner$1;-><init>(Landroidx/appcompat/widget/AppCompatSpinner;Landroid/view/View;Landroidx/appcompat/widget/AppCompatSpinner$c;)V
 
-    iput-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->f:Landroidx/appcompat/widget/ae;
+    iput-object v1, p0, Landroidx/appcompat/widget/AppCompatSpinner;->f:Landroidx/appcompat/widget/ad;
 
     goto :goto_5
 
@@ -347,7 +347,7 @@
 
     sget v1, Landroidx/appcompat/R$styleable;->Spinner_android_prompt:I
 
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/as;->d(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ar;->d(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -357,7 +357,7 @@
     :goto_5
     sget p4, Landroidx/appcompat/R$styleable;->Spinner_android_entries:I
 
-    invoke-virtual {v0, p4}, Landroidx/appcompat/widget/as;->f(I)[Ljava/lang/CharSequence;
+    invoke-virtual {v0, p4}, Landroidx/appcompat/widget/ar;->f(I)[Ljava/lang/CharSequence;
 
     move-result-object p4
 
@@ -380,7 +380,7 @@
 
     .line 290
     :cond_7
-    invoke-virtual {v0}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 292
     iput-boolean p5, p0, Landroidx/appcompat/widget/AppCompatSpinner;->h:Z
@@ -790,6 +790,8 @@
 
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 516
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->d:Landroidx/appcompat/widget/e;
@@ -812,6 +814,8 @@
 
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 545
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->d:Landroidx/appcompat/widget/e;
@@ -1000,11 +1004,11 @@
     .locals 1
 
     .line 428
-    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->f:Landroidx/appcompat/widget/ae;
+    iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->f:Landroidx/appcompat/widget/ad;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/widget/ae;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p0, p1}, Landroidx/appcompat/widget/ad;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -1312,6 +1316,8 @@
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 501
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->d:Landroidx/appcompat/widget/e;
@@ -1327,6 +1333,8 @@
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 530
     iget-object v0, p0, Landroidx/appcompat/widget/AppCompatSpinner;->d:Landroidx/appcompat/widget/e;

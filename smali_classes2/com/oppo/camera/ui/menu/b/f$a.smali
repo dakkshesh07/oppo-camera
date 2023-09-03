@@ -15,6 +15,9 @@
 
 
 # virtual methods
+.method public abstract a()Lcom/oppo/camera/ui/menu/b/c;
+.end method
+
 .method public abstract a(IIF)V
 .end method
 

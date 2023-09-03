@@ -3,7 +3,7 @@
 .source "StickerDataRequest.java"
 
 # interfaces
-.implements Lcom/oppo/camera/sticker/c/a$c;
+.implements Lcom/oppo/camera/sticker/net/HttpRequestHelper$b;
 
 
 # annotations
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public a(ILjava/lang/String;)V
+.method public a(Ljava/lang/String;)V
     .locals 2
 
     .line 144
@@ -43,25 +43,19 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onFail errorCode: "
+    const-string v1, "onFail errorMsg: "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ", errorMsg: "
-
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const-string p2, "StickerDataRequest"
+    const-string v0, "StickerDataRequest"
 
-    invoke-static {p2, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -117,7 +111,7 @@
 
     const-string v0, "StickerDataRequest"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

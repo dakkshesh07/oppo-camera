@@ -73,7 +73,7 @@
     return-object v0
 .end method
 
-.method protected createRadioButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/r;
+.method protected createRadioButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/q;
     .locals 1
 
     .line 104
@@ -97,6 +97,8 @@
 
 .method protected shouldInflateAppCompatButton(Landroid/content/Context;Landroid/util/AttributeSet;)Z
     .locals 5
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 68
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

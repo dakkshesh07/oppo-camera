@@ -3,7 +3,7 @@
 .source "AppCompatAutoCompleteTextView.java"
 
 # interfaces
-.implements Landroidx/core/g/v;
+.implements Landroidx/core/f/v;
 
 
 # static fields
@@ -13,7 +13,7 @@
 # instance fields
 .field private final mBackgroundTintHelper:Landroidx/appcompat/widget/e;
 
-.field private final mTextHelper:Landroidx/appcompat/widget/w;
+.field private final mTextHelper:Landroidx/appcompat/widget/v;
 
 
 # direct methods
@@ -62,7 +62,7 @@
     .locals 2
 
     .line 76
-    invoke-static {p1}, Landroidx/appcompat/widget/ap;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/ao;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 80
     invoke-virtual {p0}, Landroidx/appcompat/widget/d;->getContext()Landroid/content/Context;
@@ -84,19 +84,19 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object p1
 
     .line 82
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 83
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
 
     .line 85
     :cond_0
-    invoke-virtual {p1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 87
     new-instance p1, Landroidx/appcompat/widget/e;
@@ -119,21 +119,21 @@
     invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/e;->a(Landroid/util/AttributeSet;I)V
 
     .line 90
-    new-instance p1, Landroidx/appcompat/widget/w;
+    new-instance p1, Landroidx/appcompat/widget/v;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/w;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/v;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/w;
+    iput-object p1, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/v;
 
     .line 91
-    iget-object p1, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object p1, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/v;
 
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/w;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/v;->a(Landroid/util/AttributeSet;I)V
 
     .line 92
-    iget-object p1, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object p1, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/v;
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/w;->b()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/v;->b()V
 
     return-void
 .end method
@@ -156,12 +156,12 @@
 
     .line 178
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_1
 
     .line 179
-    invoke-virtual {v0}, Landroidx/appcompat/widget/w;->b()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/v;->b()V
 
     :cond_1
     return-void
@@ -169,6 +169,8 @@
 
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 140
     iget-object v0, p0, Landroidx/appcompat/widget/d;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -191,6 +193,8 @@
 
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 168
     iget-object v0, p0, Landroidx/appcompat/widget/d;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -295,6 +299,8 @@
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 125
     iget-object v0, p0, Landroidx/appcompat/widget/d;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -310,6 +316,8 @@
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 153
     iget-object v0, p0, Landroidx/appcompat/widget/d;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -330,12 +338,12 @@
     invoke-super {p0, p1, p2}, Landroid/widget/AutoCompleteTextView;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 186
-    iget-object v0, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/d;->mTextHelper:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_0
 
     .line 187
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/w;->a(Landroid/content/Context;I)V
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/v;->a(Landroid/content/Context;I)V
 
     :cond_0
     return-void

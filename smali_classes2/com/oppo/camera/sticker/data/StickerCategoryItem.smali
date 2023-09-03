@@ -35,6 +35,8 @@
 
 .field private mIconUrl:Ljava/lang/String;
 
+.field private mIconVersion:J
+
 .field private mIsNew:Z
 
 .field private mIsValid:Z
@@ -50,7 +52,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 161
+    .line 172
     new-instance v0, Lcom/oppo/camera/sticker/data/StickerCategoryItem$1;
 
     invoke-direct {v0}, Lcom/oppo/camera/sticker/data/StickerCategoryItem$1;-><init>()V
@@ -110,6 +112,9 @@
     .line 44
     iput-boolean v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
 
+    .line 46
+    iput-wide v2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
+
     return-void
 .end method
 
@@ -147,6 +152,15 @@
     iput-boolean p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
 
     return p1
+.end method
+
+.method static synthetic access$1202(Lcom/oppo/camera/sticker/data/StickerCategoryItem;J)J
+    .locals 0
+
+    .line 19
+    iput-wide p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
+
+    return-wide p1
 .end method
 
 .method static synthetic access$202(Lcom/oppo/camera/sticker/data/StickerCategoryItem;Ljava/lang/String;)Ljava/lang/String;
@@ -226,7 +240,7 @@
 
     const-string v0, "my_category_e5a3fe9c"
 
-    .line 158
+    .line 169
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -239,65 +253,70 @@
 .method public copy(Lcom/oppo/camera/sticker/data/StickerCategoryItem;)V
     .locals 2
 
-    .line 143
+    .line 153
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mReadableId:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mReadableId:Ljava/lang/String;
 
-    .line 144
+    .line 154
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mCategoryName:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mCategoryName:Ljava/lang/String;
 
-    .line 145
+    .line 155
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconUrl:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconUrl:Ljava/lang/String;
 
-    .line 146
+    .line 156
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconMd5:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconMd5:Ljava/lang/String;
 
-    .line 147
+    .line 157
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconFileUri:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconFileUri:Ljava/lang/String;
 
-    .line 148
+    .line 158
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightUrl:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightUrl:Ljava/lang/String;
 
-    .line 149
+    .line 159
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightMd5:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightMd5:Ljava/lang/String;
 
-    .line 150
+    .line 160
     iget-object v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightFileUri:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightFileUri:Ljava/lang/String;
 
-    .line 151
+    .line 161
     iget-wide v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mLastRequestTime:J
 
     iput-wide v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mLastRequestTime:J
 
-    .line 152
+    .line 162
     iget v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mPosition:I
 
     iput v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mPosition:I
 
-    .line 153
+    .line 163
     iget-boolean v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsNew:Z
 
     iput-boolean v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsNew:Z
 
-    .line 154
-    iget-boolean p1, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
+    .line 164
+    iget-boolean v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
 
-    iput-boolean p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
+    iput-boolean v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
+
+    .line 165
+    iget-wide v0, p1, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
+
+    iput-wide v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
 
     return-void
 .end method
@@ -313,7 +332,7 @@
 .method public getCategoryName()Ljava/lang/String;
     .locals 1
 
-    .line 55
+    .line 57
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mCategoryName:Ljava/lang/String;
 
     return-object v0
@@ -322,7 +341,7 @@
 .method public getIconFileUri()Ljava/lang/String;
     .locals 1
 
-    .line 71
+    .line 73
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconFileUri:Ljava/lang/String;
 
     return-object v0
@@ -331,7 +350,7 @@
 .method public getIconHighlightFileUri()Ljava/lang/String;
     .locals 1
 
-    .line 95
+    .line 97
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightFileUri:Ljava/lang/String;
 
     return-object v0
@@ -340,7 +359,7 @@
 .method public getIconHighlightMd5()Ljava/lang/String;
     .locals 1
 
-    .line 103
+    .line 105
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightMd5:Ljava/lang/String;
 
     return-object v0
@@ -349,7 +368,7 @@
 .method public getIconHighlightUrl()Ljava/lang/String;
     .locals 1
 
-    .line 87
+    .line 89
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightUrl:Ljava/lang/String;
 
     return-object v0
@@ -358,7 +377,7 @@
 .method public getIconMd5()Ljava/lang/String;
     .locals 1
 
-    .line 79
+    .line 81
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconMd5:Ljava/lang/String;
 
     return-object v0
@@ -367,16 +386,25 @@
 .method public getIconUrl()Ljava/lang/String;
     .locals 1
 
-    .line 63
+    .line 65
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconUrl:Ljava/lang/String;
 
     return-object v0
 .end method
 
+.method public getIconVersion()J
+    .locals 2
+
+    .line 145
+    iget-wide v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
+
+    return-wide v0
+.end method
+
 .method public getLastRequestTime()J
     .locals 2
 
-    .line 111
+    .line 113
     iget-wide v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mLastRequestTime:J
 
     return-wide v0
@@ -385,7 +413,7 @@
 .method public getPosition()I
     .locals 1
 
-    .line 119
+    .line 121
     iget v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mPosition:I
 
     return v0
@@ -394,7 +422,7 @@
 .method public getReadableId()Ljava/lang/String;
     .locals 1
 
-    .line 47
+    .line 49
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mReadableId:Ljava/lang/String;
 
     return-object v0
@@ -403,7 +431,7 @@
 .method public isCategoryNew()Z
     .locals 1
 
-    .line 127
+    .line 129
     iget-boolean v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsNew:Z
 
     return v0
@@ -412,7 +440,7 @@
 .method public isCategoryValid()Z
     .locals 1
 
-    .line 135
+    .line 137
     iget-boolean v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
 
     return v0
@@ -421,7 +449,7 @@
 .method public setCategoryName(Ljava/lang/String;)V
     .locals 0
 
-    .line 59
+    .line 61
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mCategoryName:Ljava/lang/String;
 
     return-void
@@ -430,7 +458,7 @@
 .method public setCategoryNew(Z)V
     .locals 0
 
-    .line 131
+    .line 133
     iput-boolean p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsNew:Z
 
     return-void
@@ -439,7 +467,7 @@
 .method public setCategoryValid(Z)V
     .locals 0
 
-    .line 139
+    .line 141
     iput-boolean p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
 
     return-void
@@ -448,7 +476,7 @@
 .method public setIconFileUri(Ljava/lang/String;)V
     .locals 0
 
-    .line 75
+    .line 77
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconFileUri:Ljava/lang/String;
 
     return-void
@@ -457,7 +485,7 @@
 .method public setIconHighlightFileUri(Ljava/lang/String;)V
     .locals 0
 
-    .line 99
+    .line 101
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightFileUri:Ljava/lang/String;
 
     return-void
@@ -466,7 +494,7 @@
 .method public setIconHighlightMd5(Ljava/lang/String;)V
     .locals 0
 
-    .line 107
+    .line 109
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightMd5:Ljava/lang/String;
 
     return-void
@@ -475,7 +503,7 @@
 .method public setIconHighlightUrl(Ljava/lang/String;)V
     .locals 0
 
-    .line 91
+    .line 93
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightUrl:Ljava/lang/String;
 
     return-void
@@ -484,7 +512,7 @@
 .method public setIconMd5(Ljava/lang/String;)V
     .locals 0
 
-    .line 83
+    .line 85
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconMd5:Ljava/lang/String;
 
     return-void
@@ -493,8 +521,17 @@
 .method public setIconUrl(Ljava/lang/String;)V
     .locals 0
 
-    .line 67
+    .line 69
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconUrl:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setIconVersion(J)V
+    .locals 0
+
+    .line 149
+    iput-wide p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
 
     return-void
 .end method
@@ -502,7 +539,7 @@
 .method public setLastRequestTime(J)V
     .locals 0
 
-    .line 115
+    .line 117
     iput-wide p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mLastRequestTime:J
 
     return-void
@@ -511,7 +548,7 @@
 .method public setPosition(I)V
     .locals 0
 
-    .line 123
+    .line 125
     iput p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mPosition:I
 
     return-void
@@ -520,16 +557,16 @@
 .method public setReadableId(Ljava/lang/String;)V
     .locals 0
 
-    .line 51
+    .line 53
     iput-object p1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mReadableId:Ljava/lang/String;
 
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    .line 209
+    .line 222
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -582,6 +619,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    const-string v1, ", iVersion: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
     const-string v1, "]"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -596,65 +641,70 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .line 193
+    .line 205
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mReadableId:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 194
+    .line 206
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mCategoryName:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 195
+    .line 207
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconUrl:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 196
+    .line 208
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconFileUri:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 197
+    .line 209
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconMd5:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 198
+    .line 210
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightUrl:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 199
+    .line 211
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightFileUri:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 200
+    .line 212
     iget-object p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconHighlightMd5:Ljava/lang/String;
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 201
+    .line 213
     iget-wide v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mLastRequestTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 202
+    .line 214
     iget p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mPosition:I
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
+    .line 215
     iget-boolean p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsNew:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 204
+    .line 216
     iget-boolean p2, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIsValid:Z
 
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 217
+    iget-wide v0, p0, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->mIconVersion:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
     return-void
 .end method

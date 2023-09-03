@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/oppo/camera/ui/control/e;Z)V
+.method public abstract a(Lcom/oppo/camera/ui/control/e;)V
 .end method

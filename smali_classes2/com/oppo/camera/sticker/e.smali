@@ -111,7 +111,7 @@
     const-string p1, "getUnstableContentProviderCursor, client is null"
 
     .line 85
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
@@ -141,7 +141,7 @@
     const-string v3, "getUnstableContentProviderCursor, RemoteException! e: "
 
     .line 88
-    invoke-static {v0, v3, p1}, Lcom/oppo/camera/e;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v3, p1}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     if-eqz v2, :cond_1
 
@@ -199,7 +199,7 @@
     const-string p1, "getUnstableContentProviderCursor2, client is null"
 
     .line 107
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
@@ -216,7 +216,7 @@
     const-string p2, "getUnstableContentProviderCursor, RemoteException again! "
 
     .line 110
-    invoke-static {v0, p2, p1}, Lcom/oppo/camera/e;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p2, p1}, Lcom/oppo/camera/c;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 

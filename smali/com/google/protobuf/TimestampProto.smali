@@ -22,20 +22,19 @@
 
     move-result-object v0
 
+    const/4 v1, 0x0
+
     .line 38
-    new-instance v1, Lcom/google/protobuf/TimestampProto$1;
+    new-array v2, v1, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    invoke-direct {v1}, Lcom/google/protobuf/TimestampProto$1;-><init>()V
+    .line 39
+    invoke-static {v0, v2}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    .line 46
-    new-array v3, v2, [Lcom/google/protobuf/Descriptors$FileDescriptor;
+    sput-object v0, Lcom/google/protobuf/TimestampProto;->descriptor:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 47
-    invoke-static {v0, v3, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
-
-    .line 51
+    .line 43
     invoke-static {}, Lcom/google/protobuf/TimestampProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -44,7 +43,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -52,7 +51,7 @@
 
     sput-object v0, Lcom/google/protobuf/TimestampProto;->internal_static_google_protobuf_Timestamp_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 52
+    .line 44
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/google/protobuf/TimestampProto;->internal_static_google_protobuf_Timestamp_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -79,15 +78,6 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic access$002(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
-    .locals 0
-
-    .line 6
-    sput-object p0, Lcom/google/protobuf/TimestampProto;->descriptor:Lcom/google/protobuf/Descriptors$FileDescriptor;
-
-    return-object p0
 .end method
 
 .method public static getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;

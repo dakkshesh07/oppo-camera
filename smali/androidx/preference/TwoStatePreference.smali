@@ -162,6 +162,8 @@
 
 .method protected b(Landroid/view/View;)V
     .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 220
     instance-of v0, p1, Landroid/widget/TextView;

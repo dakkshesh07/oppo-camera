@@ -3,6 +3,11 @@
 .source "Throttler.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # instance fields
 .field private allocatedUntil:J
 
@@ -357,7 +362,7 @@
     invoke-virtual {p1}, Ljava/lang/Object;->notifyAll()V
 
     .line 67
-    sget-object p1, Lc/f;->a:Lc/f;
+    sget-object p1, Lkotlin/u;->a:Lkotlin/u;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -430,7 +435,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 151
     new-instance v0, Lokio/Throttler$sink$1;
@@ -447,7 +452,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 136
     new-instance v0, Lokio/Throttler$source$1;

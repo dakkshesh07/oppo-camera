@@ -43,7 +43,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->d(Landroid/view/View;Z)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->d(Landroid/view/View;Z)V
 
     .line 81
     sget v0, Lcom/google/android/material/R$id;->month_grid:I

@@ -3,8 +3,8 @@
 .source "AppCompatImageButton.java"
 
 # interfaces
-.implements Landroidx/core/g/v;
-.implements Landroidx/core/widget/l;
+.implements Landroidx/core/f/v;
+.implements Landroidx/core/widget/m;
 
 
 # instance fields
@@ -40,7 +40,7 @@
     .locals 0
 
     .line 75
-    invoke-static {p1}, Landroidx/appcompat/widget/ap;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/ao;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -51,7 +51,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 79
     new-instance p1, Landroidx/appcompat/widget/e;
@@ -111,6 +111,8 @@
 
 .method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 156
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -133,6 +135,8 @@
 
 .method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 184
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -155,6 +159,8 @@
 
 .method public getSupportImageTintList()Landroid/content/res/ColorStateList;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 211
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mImageHelper:Landroidx/appcompat/widget/m;
@@ -177,6 +183,8 @@
 
 .method public getSupportImageTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 239
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mImageHelper:Landroidx/appcompat/widget/m;
@@ -329,6 +337,8 @@
 
 .method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 141
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -344,6 +354,8 @@
 
 .method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 169
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mBackgroundTintHelper:Landroidx/appcompat/widget/e;
@@ -359,6 +371,8 @@
 
 .method public setSupportImageTintList(Landroid/content/res/ColorStateList;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 196
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mImageHelper:Landroidx/appcompat/widget/m;
@@ -374,6 +388,8 @@
 
 .method public setSupportImageTintMode(Landroid/graphics/PorterDuff$Mode;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 224
     iget-object v0, p0, Landroidx/appcompat/widget/l;->mImageHelper:Landroidx/appcompat/widget/m;

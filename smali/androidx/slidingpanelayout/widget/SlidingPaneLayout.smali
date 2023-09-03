@@ -317,7 +317,7 @@
     invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 982
-    invoke-static {p0, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p0, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     :cond_4
     :goto_0
@@ -845,7 +845,7 @@
     invoke-virtual {p0}, Landroidx/slidingpanelayout/widget/SlidingPaneLayout;->a()V
 
     .line 1089
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     const/4 p1, 0x1
 
@@ -874,7 +874,7 @@
 
     iget-object v0, v0, Landroidx/slidingpanelayout/widget/SlidingPaneLayout$b;->d:Landroid/graphics/Paint;
 
-    invoke-static {p1, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/Paint;)V
+    invoke-static {p1, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/Paint;)V
 
     return-void
 
@@ -1025,7 +1025,7 @@
     move-result p1
 
     .line 1058
-    invoke-static {p0, v0, v1, v2, p1}, Landroidx/core/g/w;->a(Landroid/view/View;IIII)V
+    invoke-static {p0, v0, v1, v2, p1}, Landroidx/core/f/w;->a(Landroid/view/View;IIII)V
 
     return-void
 .end method
@@ -1153,7 +1153,7 @@
 
     .line 1103
     :cond_0
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_1
     return-void
@@ -1404,7 +1404,7 @@
     .locals 2
 
     .line 1617
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -3331,7 +3331,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -3348,7 +3348,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

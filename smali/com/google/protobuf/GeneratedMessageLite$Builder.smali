@@ -55,16 +55,16 @@
         }
     .end annotation
 
-    .line 316
+    .line 340
     invoke-direct {p0}, Lcom/google/protobuf/AbstractMessageLite$Builder;-><init>()V
 
-    .line 317
+    .line 341
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 318
+    .line 342
     sget-object v0, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->NEW_MUTABLE_INSTANCE:Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;
 
-    .line 319
+    .line 343
     invoke-virtual {p1, v0}, Lcom/google/protobuf/GeneratedMessageLite;->dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;)Ljava/lang/Object;
 
     move-result-object p1
@@ -75,8 +75,30 @@
 
     const/4 p1, 0x0
 
-    .line 320
+    .line 344
     iput-boolean p1, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->isBuilt:Z
+
+    return-void
+.end method
+
+.method private mergeFromInstance(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/GeneratedMessageLite;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TMessageType;TMessageType;)V"
+        }
+    .end annotation
+
+    .line 414
+    invoke-static {}, Lcom/google/protobuf/Protobuf;->getInstance()Lcom/google/protobuf/Protobuf;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/google/protobuf/Protobuf;->schemaFor(Ljava/lang/Object;)Lcom/google/protobuf/Schema;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1, p2}, Lcom/google/protobuf/Schema;->mergeFrom(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -91,12 +113,12 @@
         }
     .end annotation
 
-    .line 371
+    .line 394
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->buildPartial()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object v0
 
-    .line 372
+    .line 395
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite;->isInitialized()Z
 
     move-result v1
@@ -105,7 +127,7 @@
 
     return-object v0
 
-    .line 373
+    .line 396
     :cond_0
     invoke-static {v0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->newUninitializedMessageException(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/UninitializedMessageException;
 
@@ -117,7 +139,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->build()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object v0
@@ -133,17 +155,17 @@
         }
     .end annotation
 
-    .line 359
+    .line 382
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->isBuilt:Z
 
     if-eqz v0, :cond_0
 
-    .line 360
+    .line 383
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     return-object v0
 
-    .line 363
+    .line 386
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
@@ -151,10 +173,10 @@
 
     const/4 v0, 0x1
 
-    .line 365
+    .line 388
     iput-boolean v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->isBuilt:Z
 
-    .line 366
+    .line 389
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     return-object v0
@@ -163,7 +185,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->buildPartial()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object v0
@@ -179,7 +201,7 @@
         }
     .end annotation
 
-    .line 345
+    .line 369
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     sget-object v1, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->NEW_MUTABLE_INSTANCE:Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;
@@ -198,7 +220,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->clear()Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object v0
@@ -209,7 +231,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 1
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->clone()Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object v0
@@ -225,7 +247,7 @@
         }
     .end annotation
 
-    .line 352
+    .line 375
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object v0
@@ -234,7 +256,7 @@
 
     move-result-object v0
 
-    .line 353
+    .line 376
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->buildPartial()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object v1
@@ -247,7 +269,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->clone()Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object v0
@@ -263,7 +285,7 @@
         }
     .end annotation
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->clone()Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object v0
@@ -272,38 +294,36 @@
 .end method
 
 .method protected copyOnWrite()V
-    .locals 3
+    .locals 2
 
-    .line 328
+    .line 352
     iget-boolean v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->isBuilt:Z
 
     if-eqz v0, :cond_0
 
-    .line 329
+    .line 353
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     sget-object v1, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->NEW_MUTABLE_INSTANCE:Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;
 
-    .line 330
+    .line 354
     invoke-virtual {v0, v1}, Lcom/google/protobuf/GeneratedMessageLite;->dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/protobuf/GeneratedMessageLite;
 
-    .line 331
-    sget-object v1, Lcom/google/protobuf/GeneratedMessageLite$MergeFromVisitor;->INSTANCE:Lcom/google/protobuf/GeneratedMessageLite$MergeFromVisitor;
+    .line 355
+    iget-object v1, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
-    iget-object v2, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+    invoke-direct {p0, v0, v1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFromInstance(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/GeneratedMessageLite;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageLite;->visit(Lcom/google/protobuf/GeneratedMessageLite$Visitor;Lcom/google/protobuf/GeneratedMessageLite;)V
-
-    .line 332
+    .line 356
     iput-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     const/4 v0, 0x0
 
-    .line 333
+    .line 357
     iput-boolean v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->isBuilt:Z
 
     :cond_0
@@ -318,7 +338,7 @@
         }
     .end annotation
 
-    .line 392
+    .line 419
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->defaultInstance:Lcom/google/protobuf/GeneratedMessageLite;
 
     return-object v0
@@ -327,7 +347,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 306
+    .line 330
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/GeneratedMessageLite;
 
     move-result-object v0
@@ -338,7 +358,7 @@
 .method protected bridge synthetic internalMergeFrom(Lcom/google/protobuf/AbstractMessageLite;)Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 0
 
-    .line 306
+    .line 330
     check-cast p1, Lcom/google/protobuf/GeneratedMessageLite;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->internalMergeFrom(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
@@ -356,7 +376,7 @@
         }
     .end annotation
 
-    .line 380
+    .line 403
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object p1
@@ -367,7 +387,7 @@
 .method public final isInitialized()Z
     .locals 2
 
-    .line 339
+    .line 363
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
     const/4 v1, 0x0
@@ -387,8 +407,40 @@
         }
     .end annotation
 
-    .line 306
+    .line 330
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom([BII)Lcom/google/protobuf/AbstractMessageLite$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 330
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom([BII)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/AbstractMessageLite$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 330
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object p1
 
@@ -412,16 +464,30 @@
         }
     .end annotation
 
-    .line 400
+    .line 453
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
-    .line 402
+    .line 457
     :try_start_0
-    iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+    invoke-static {}, Lcom/google/protobuf/Protobuf;->getInstance()Lcom/google/protobuf/Protobuf;
 
-    sget-object v1, Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;->MERGE_FROM_STREAM:Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;
+    move-result-object v0
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/google/protobuf/GeneratedMessageLite;->dynamicMethod(Lcom/google/protobuf/GeneratedMessageLite$MethodToInvoke;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    invoke-virtual {v0, v1}, Lcom/google/protobuf/Protobuf;->schemaFor(Ljava/lang/Object;)Lcom/google/protobuf/Schema;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    .line 458
+    invoke-static {p1}, Lcom/google/protobuf/CodedInputStreamReader;->forCodedInput(Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/CodedInputStreamReader;
+
+    move-result-object p1
+
+    .line 457
+    invoke-interface {v0, v1, p1, p2}, Lcom/google/protobuf/Schema;->mergeFrom(Ljava/lang/Object;Lcom/google/protobuf/Reader;Lcom/google/protobuf/ExtensionRegistryLite;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -430,7 +496,7 @@
     :catch_0
     move-exception p1
 
-    .line 404
+    .line 460
     invoke-virtual {p1}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p2
@@ -439,7 +505,7 @@
 
     if-eqz p2, :cond_0
 
-    .line 405
+    .line 461
     invoke-virtual {p1}, Ljava/lang/RuntimeException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p1
@@ -448,30 +514,132 @@
 
     throw p1
 
-    .line 407
+    .line 463
     :cond_0
     throw p1
 .end method
 
 .method public mergeFrom(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TMessageType;)TBuilderType;"
         }
     .end annotation
 
-    .line 385
+    .line 408
     invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
 
-    .line 386
+    .line 409
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
 
-    sget-object v1, Lcom/google/protobuf/GeneratedMessageLite$MergeFromVisitor;->INSTANCE:Lcom/google/protobuf/GeneratedMessageLite$MergeFromVisitor;
-
-    invoke-virtual {v0, v1, p1}, Lcom/google/protobuf/GeneratedMessageLite;->visit(Lcom/google/protobuf/GeneratedMessageLite$Visitor;Lcom/google/protobuf/GeneratedMessageLite;)V
+    invoke-direct {p0, v0, p1}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFromInstance(Lcom/google/protobuf/GeneratedMessageLite;Lcom/google/protobuf/GeneratedMessageLite;)V
 
     return-object p0
+.end method
+
+.method public mergeFrom([BII)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([BII)TBuilderType;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 445
+    invoke-static {}, Lcom/google/protobuf/ExtensionRegistryLite;->getEmptyRegistry()Lcom/google/protobuf/ExtensionRegistryLite;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, p2, p3, v0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public mergeFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "([BII",
+            "Lcom/google/protobuf/ExtensionRegistryLite;",
+            ")TBuilderType;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 426
+    invoke-virtual {p0}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->copyOnWrite()V
+
+    .line 428
+    :try_start_0
+    invoke-static {}, Lcom/google/protobuf/Protobuf;->getInstance()Lcom/google/protobuf/Protobuf;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    invoke-virtual {v0, v1}, Lcom/google/protobuf/Protobuf;->schemaFor(Ljava/lang/Object;)Lcom/google/protobuf/Schema;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/google/protobuf/GeneratedMessageLite$Builder;->instance:Lcom/google/protobuf/GeneratedMessageLite;
+
+    add-int v6, p2, p3
+
+    new-instance v7, Lcom/google/protobuf/ArrayDecoders$Registers;
+
+    invoke-direct {v7, p4}, Lcom/google/protobuf/ArrayDecoders$Registers;-><init>(Lcom/google/protobuf/ExtensionRegistryLite;)V
+
+    move-object v4, p1
+
+    move v5, p2
+
+    invoke-interface/range {v2 .. v7}, Lcom/google/protobuf/Schema;->mergeFrom(Ljava/lang/Object;[BIILcom/google/protobuf/ArrayDecoders$Registers;)V
+    :try_end_0
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p1
+
+    .line 436
+    new-instance p2, Ljava/lang/RuntimeException;
+
+    const-string p3, "Reading from byte array should not throw IOException."
+
+    invoke-direct {p2, p3, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p2
+
+    .line 434
+    :catch_1
+    invoke-static {}, Lcom/google/protobuf/InvalidProtocolBufferException;->truncatedMessage()Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+
+    :catch_2
+    move-exception p1
+
+    .line 432
+    throw p1
 .end method
 
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite$Builder;
@@ -482,8 +650,40 @@
         }
     .end annotation
 
-    .line 306
+    .line 330
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom([BII)Lcom/google/protobuf/MessageLite$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 330
+    invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom([BII)Lcom/google/protobuf/GeneratedMessageLite$Builder;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic mergeFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite$Builder;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 330
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessageLite$Builder;->mergeFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/GeneratedMessageLite$Builder;
 
     move-result-object p1
 

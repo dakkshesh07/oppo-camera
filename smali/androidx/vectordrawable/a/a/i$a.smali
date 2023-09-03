@@ -59,11 +59,11 @@
     if-eqz v1, :cond_1
 
     .line 1801
-    invoke-static {v1}, Landroidx/core/graphics/f;->b(Ljava/lang/String;)[Landroidx/core/graphics/f$b;
+    invoke-static {v1}, Landroidx/core/graphics/e;->b(Ljava/lang/String;)[Landroidx/core/graphics/e$b;
 
     move-result-object v1
 
-    iput-object v1, p0, Landroidx/vectordrawable/a/a/i$a;->l:[Landroidx/core/graphics/f$b;
+    iput-object v1, p0, Landroidx/vectordrawable/a/a/i$a;->l:[Landroidx/core/graphics/e$b;
 
     :cond_1
     const/4 v1, 0x2
@@ -71,7 +71,7 @@
     const-string v2, "fillType"
 
     .line 1803
-    invoke-static {p1, p2, v2, v1, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v2, v1, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p1
 
@@ -88,7 +88,7 @@
     const-string v0, "pathData"
 
     .line 1778
-    invoke-static {p4, v0}, Landroidx/core/content/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {p4, v0}, Landroidx/core/a/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -100,7 +100,7 @@
     :cond_0
     sget-object v0, Landroidx/vectordrawable/a/a/a;->d:[I
 
-    invoke-static {p1, p3, p2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p3, p2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

@@ -85,14 +85,14 @@
 
     .line 277
     :cond_0
-    invoke-static {}, Landroidx/transition/o;->a()Landroidx/b/a;
+    invoke-static {}, Landroidx/transition/o;->a()Landroidx/collection/ArrayMap;
 
     move-result-object v0
 
     .line 278
     iget-object v2, p0, Landroidx/transition/o$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v2}, Landroidx/b/a;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -110,7 +110,7 @@
     .line 282
     iget-object v4, p0, Landroidx/transition/o$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {v0, v4, v2}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v4, v2}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
@@ -139,7 +139,7 @@
 
     new-instance v4, Landroidx/transition/o$a$1;
 
-    invoke-direct {v4, p0, v0}, Landroidx/transition/o$a$1;-><init>(Landroidx/transition/o$a;Landroidx/b/a;)V
+    invoke-direct {v4, p0, v0}, Landroidx/transition/o$a$1;-><init>(Landroidx/transition/o$a;Landroidx/collection/ArrayMap;)V
 
     invoke-virtual {v2, v4}, Landroidx/transition/m;->addListener(Landroidx/transition/m$d;)Landroidx/transition/m;
 
@@ -210,13 +210,13 @@
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     .line 257
-    invoke-static {}, Landroidx/transition/o;->a()Landroidx/b/a;
+    invoke-static {}, Landroidx/transition/o;->a()Landroidx/collection/ArrayMap;
 
     move-result-object p1
 
     iget-object v0, p0, Landroidx/transition/o$a;->b:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1, v0}, Landroidx/b/a;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

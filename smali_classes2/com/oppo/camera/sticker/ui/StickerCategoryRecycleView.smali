@@ -4,11 +4,23 @@
 
 
 # instance fields
-.field private a:F
+.field private a:Landroid/graphics/Rect;
 
-.field private b:Landroidx/recyclerview/widget/LinearLayoutManager;
+.field private b:Ljava/lang/String;
 
-.field private c:Lcom/oppo/camera/sticker/ui/h;
+.field private c:F
+
+.field private d:Landroidx/recyclerview/widget/LinearLayoutManager;
+
+.field private e:Lcom/oppo/camera/sticker/ui/g;
+
+.field private f:Landroid/content/Context;
+
+.field private g:I
+
+.field private h:I
+
+.field private i:I
 
 
 # direct methods
@@ -17,7 +29,7 @@
 
     const/4 v0, 0x0
 
-    .line 17
+    .line 35
     invoke-direct {p0, p1, v0}, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -28,7 +40,7 @@
 
     const/4 v0, -0x1
 
-    .line 21
+    .line 39
     invoke-direct {p0, p1, p2, v0}, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -37,21 +49,84 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 25
+    .line 43
     invoke-direct {p0, p1, p2, p3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/4 p1, 0x0
+    .line 24
+    new-instance p2, Landroid/graphics/Rect;
 
-    .line 12
-    iput p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->a:F
+    invoke-direct {p2}, Landroid/graphics/Rect;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->a:Landroid/graphics/Rect;
 
-    .line 13
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->b:Landroidx/recyclerview/widget/LinearLayoutManager;
+    const-string p2, "NONE"
 
-    .line 14
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->c:Lcom/oppo/camera/sticker/ui/h;
+    .line 25
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->b:Ljava/lang/String;
+
+    const/4 p2, 0x0
+
+    .line 26
+    iput p2, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->c:F
+
+    const/4 p2, 0x0
+
+    .line 27
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->d:Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    .line 28
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->e:Lcom/oppo/camera/sticker/ui/g;
+
+    .line 29
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->f:Landroid/content/Context;
+
+    .line 45
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->f:Landroid/content/Context;
+
+    .line 46
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->f:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070745
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->g:I
+
+    .line 47
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->f:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f070747
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->h:I
+
+    .line 48
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->f:Landroid/content/Context;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    const p2, 0x7f07073e
+
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->i:I
 
     return-void
 .end method
@@ -61,12 +136,12 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 34
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->c:Lcom/oppo/camera/sticker/ui/h;
+    .line 57
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->e:Lcom/oppo/camera/sticker/ui/g;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/oppo/camera/sticker/ui/h;->a()Z
+    invoke-interface {v0}, Lcom/oppo/camera/sticker/ui/g;->a()Z
 
     move-result v0
 
@@ -76,7 +151,7 @@
 
     return p1
 
-    .line 38
+    .line 61
     :cond_0
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -88,21 +163,21 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    .line 43
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->b:Landroidx/recyclerview/widget/LinearLayoutManager;
+    .line 66
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->d:Landroidx/recyclerview/widget/LinearLayoutManager;
 
     if-nez v0, :cond_0
 
-    .line 44
+    .line 67
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$i;
 
     move-result-object v0
 
     check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->b:Landroidx/recyclerview/widget/LinearLayoutManager;
+    iput-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->d:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    .line 47
+    .line 70
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -110,14 +185,14 @@
 
     if-nez v0, :cond_1
 
-    .line 48
+    .line 71
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
-    iput v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->a:F
+    iput v0, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->c:F
 
-    .line 51
+    .line 74
     :cond_1
     invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -126,11 +201,11 @@
     return p1
 .end method
 
-.method public setStickerCategoryInterface(Lcom/oppo/camera/sticker/ui/h;)V
+.method public setStickerCategoryInterface(Lcom/oppo/camera/sticker/ui/g;)V
     .locals 0
 
-    .line 29
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->c:Lcom/oppo/camera/sticker/ui/h;
+    .line 52
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerCategoryRecycleView;->e:Lcom/oppo/camera/sticker/ui/g;
 
     return-void
 .end method

@@ -40,8 +40,14 @@
 .end field
 
 .field public static final DESCRIPTION_KEY_MEDIA_URI:Ljava/lang/String; = "android.support.v4.media.description.MEDIA_URI"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final DESCRIPTION_KEY_NULL_BUNDLE_FLAG:Ljava/lang/String; = "android.support.v4.media.description.NULL_BUNDLE_FLAG"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final EXTRA_BT_FOLDER_TYPE:Ljava/lang/String; = "android.media.extra.BT_FOLDER_TYPE"
 

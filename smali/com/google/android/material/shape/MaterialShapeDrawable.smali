@@ -1489,7 +1489,7 @@
     :cond_0
     iget-object v2, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->tintFilter:Landroid/graphics/PorterDuffColorFilter;
 
-    invoke-static {v0, v2}, Landroidx/core/f/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Landroidx/core/util/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1498,7 +1498,7 @@
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->strokeTintFilter:Landroid/graphics/PorterDuffColorFilter;
 
     .line 1221
-    invoke-static {v1, v0}, Landroidx/core/f/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Landroidx/core/util/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1569,6 +1569,8 @@
 # virtual methods
 .method protected final calculatePathForSize(Landroid/graphics/RectF;Landroid/graphics/Path;)V
     .locals 6
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1132
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->pathProvider:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
@@ -1721,6 +1723,8 @@
 
 .method protected drawShape(Landroid/graphics/Canvas;Landroid/graphics/Paint;Landroid/graphics/Path;Landroid/graphics/RectF;)V
     .locals 7
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1020
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->drawableState:Lcom/google/android/material/shape/MaterialShapeDrawable$MaterialShapeDrawableState;
@@ -2138,6 +2142,8 @@
 
 .method public getShadowVerticalOffset()I
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 741
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->drawableState:Lcom/google/android/material/shape/MaterialShapeDrawable$MaterialShapeDrawableState;
@@ -2454,6 +2460,8 @@
 
 .method public isRoundRect()Z
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1360
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->drawableState:Lcom/google/android/material/shape/MaterialShapeDrawable$MaterialShapeDrawableState;
@@ -2788,6 +2796,8 @@
 
 .method public setEdgeIntersectionCheckEnable(Z)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 751
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->pathProvider:Lcom/google/android/material/shape/ShapeAppearancePathProvider;
@@ -2973,6 +2983,8 @@
 
 .method public setShadowBitmapDrawingEnable(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 746
     iput-boolean p1, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->shadowBitmapDrawingEnable:Z
@@ -3086,6 +3098,8 @@
 
 .method public setShadowVerticalOffset(I)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 765
     iget-object v0, p0, Lcom/google/android/material/shape/MaterialShapeDrawable;->drawableState:Lcom/google/android/material/shape/MaterialShapeDrawable$MaterialShapeDrawableState;

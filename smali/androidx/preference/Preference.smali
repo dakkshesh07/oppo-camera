@@ -142,7 +142,7 @@
 
     const v1, 0x101008e
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -237,7 +237,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_icon:I
 
-    invoke-static {p1, p2, p3, v1}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;III)I
+    invoke-static {p1, p2, p3, v1}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;III)I
 
     move-result p2
 
@@ -248,7 +248,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_key:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -259,7 +259,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_title:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->c(Landroid/content/res/TypedArray;II)Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->c(Landroid/content/res/TypedArray;II)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -270,7 +270,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_summary:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->c(Landroid/content/res/TypedArray;II)Ljava/lang/CharSequence;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->c(Landroid/content/res/TypedArray;II)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -281,7 +281,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_order:I
 
-    invoke-static {p1, p2, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;III)I
+    invoke-static {p1, p2, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;III)I
 
     move-result p2
 
@@ -292,7 +292,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_fragment:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -305,7 +305,7 @@
 
     sget p4, Landroidx/preference/R$layout;->preference:I
 
-    invoke-static {p1, p2, p3, p4}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;III)I
+    invoke-static {p1, p2, p3, p4}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;III)I
 
     move-result p2
 
@@ -316,7 +316,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_widgetLayout:I
 
-    invoke-static {p1, p2, p3, v1}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;III)I
+    invoke-static {p1, p2, p3, v1}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;III)I
 
     move-result p2
 
@@ -327,7 +327,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_enabled:I
 
-    invoke-static {p1, p2, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -338,7 +338,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_selectable:I
 
-    invoke-static {p1, p2, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -349,7 +349,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_persistent:I
 
-    invoke-static {p1, p2, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -360,7 +360,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_dependency:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -373,7 +373,7 @@
 
     iget-boolean p4, p0, Landroidx/preference/Preference;->s:Z
 
-    invoke-static {p1, p2, p3, p4}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, p4}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -386,7 +386,7 @@
 
     iget-boolean p4, p0, Landroidx/preference/Preference;->s:Z
 
-    invoke-static {p1, p2, p3, p4}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, p4}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -439,7 +439,7 @@
     sget p3, Landroidx/preference/R$styleable;->Preference_android_shouldDisableView:I
 
     .line 259
-    invoke-static {p1, p2, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -464,7 +464,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_singleLineTitle:I
 
-    invoke-static {p1, p2, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -476,7 +476,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_android_iconSpaceReserved:I
 
-    invoke-static {p1, p2, p3, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -487,7 +487,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_isPreferenceVisible:I
 
-    invoke-static {p1, p2, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -498,7 +498,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->Preference_enableCopying:I
 
-    invoke-static {p1, p2, p3, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -881,6 +881,8 @@
 
 .method public I()V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1178
     invoke-virtual {p0}, Landroidx/preference/Preference;->y()Z
@@ -1294,6 +1296,8 @@
 
 .method protected a(Landroid/view/View;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1166
     invoke-virtual {p0}, Landroidx/preference/Preference;->I()V
@@ -1301,7 +1305,7 @@
     return-void
 .end method
 
-.method public a(Landroidx/core/g/a/d;)V
+.method public a(Landroidx/core/f/a/d;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -1432,6 +1436,8 @@
 
 .method protected a(Landroidx/preference/j;J)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1323
     iput-wide p2, p0, Landroidx/preference/Preference;->d:J
@@ -1805,7 +1811,7 @@
     if-nez v1, :cond_12
 
     .line 591
-    invoke-static {v0, v2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0, v2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     :cond_12
     return-void

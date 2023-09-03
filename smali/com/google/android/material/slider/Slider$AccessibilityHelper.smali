@@ -323,7 +323,7 @@
     :cond_5
     iget-object p2, p0, Lcom/google/android/material/slider/Slider$AccessibilityHelper;->this$0:Lcom/google/android/material/slider/Slider;
 
-    invoke-static {p2}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p2}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p2
 
@@ -364,7 +364,7 @@
 
     move-result v0
 
-    invoke-static {p2, p3, v0}, Landroidx/core/b/a;->a(FFF)F
+    invoke-static {p2, p3, v0}, Landroidx/core/c/a;->a(FFF)F
 
     move-result p2
 
@@ -437,13 +437,13 @@
     return v1
 .end method
 
-.method protected onPopulateNodeForVirtualView(ILandroidx/core/g/a/d;)V
+.method protected onPopulateNodeForVirtualView(ILandroidx/core/f/a/d;)V
     .locals 8
 
     .line 2139
-    sget-object v0, Landroidx/core/g/a/d$a;->H:Landroidx/core/g/a/d$a;
+    sget-object v0, Landroidx/core/f/a/d$a;->H:Landroidx/core/f/a/d$a;
 
-    invoke-virtual {p2, v0}, Landroidx/core/g/a/d;->a(Landroidx/core/g/a/d$a;)V
+    invoke-virtual {p2, v0}, Landroidx/core/f/a/d;->a(Landroidx/core/f/a/d$a;)V
 
     .line 2141
     iget-object v0, p0, Lcom/google/android/material/slider/Slider$AccessibilityHelper;->this$0:Lcom/google/android/material/slider/Slider;
@@ -485,7 +485,7 @@
     const/16 v1, 0x2000
 
     .line 2145
-    invoke-virtual {p2, v1}, Landroidx/core/g/a/d;->a(I)V
+    invoke-virtual {p2, v1}, Landroidx/core/f/a/d;->a(I)V
 
     .line 2147
     :cond_0
@@ -502,7 +502,7 @@
     const/16 v1, 0x1000
 
     .line 2148
-    invoke-virtual {p2, v1}, Landroidx/core/g/a/d;->a(I)V
+    invoke-virtual {p2, v1}, Landroidx/core/f/a/d;->a(I)V
 
     .line 2152
     :cond_1
@@ -522,12 +522,12 @@
     const/4 v3, 0x1
 
     .line 2153
-    invoke-static {v3, v1, v2, v0}, Landroidx/core/g/a/d$d;->a(IFFF)Landroidx/core/g/a/d$d;
+    invoke-static {v3, v1, v2, v0}, Landroidx/core/f/a/d$d;->a(IFFF)Landroidx/core/f/a/d$d;
 
     move-result-object v0
 
     .line 2152
-    invoke-virtual {p2, v0}, Landroidx/core/g/a/d;->a(Landroidx/core/g/a/d$d;)V
+    invoke-virtual {p2, v0}, Landroidx/core/f/a/d;->a(Landroidx/core/f/a/d$d;)V
 
     .line 2156
     const-class v0, Landroid/widget/SeekBar;
@@ -536,7 +536,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroidx/core/g/a/d;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Landroidx/core/f/a/d;->b(Ljava/lang/CharSequence;)V
 
     .line 2157
     new-instance v0, Ljava/lang/StringBuilder;
@@ -635,7 +635,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Landroidx/core/g/a/d;->e(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, v0}, Landroidx/core/f/a/d;->e(Ljava/lang/CharSequence;)V
 
     .line 2173
     invoke-direct {p0, p1}, Lcom/google/android/material/slider/Slider$AccessibilityHelper;->updateBoundsForVirturalViewId(I)V
@@ -643,7 +643,7 @@
     .line 2174
     iget-object p1, p0, Lcom/google/android/material/slider/Slider$AccessibilityHelper;->bounds:Landroid/graphics/Rect;
 
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->b(Landroid/graphics/Rect;)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->b(Landroid/graphics/Rect;)V
 
     return-void
 .end method

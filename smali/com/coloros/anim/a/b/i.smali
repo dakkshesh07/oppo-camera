@@ -31,7 +31,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "Landroid/graphics/PointF;",
             ">;>;)V"
         }
@@ -66,23 +66,23 @@
 
 
 # virtual methods
-.method public synthetic a(Lcom/coloros/anim/g/c;F)Ljava/lang/Object;
+.method public synthetic a(Lcom/coloros/anim/e/c;F)Ljava/lang/Object;
     .locals 0
 
     .line 11
-    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/i;->b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/i;->b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+.method public b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "Landroid/graphics/PointF;",
             ">;F)",
             "Landroid/graphics/PointF;"
@@ -102,7 +102,7 @@
     if-nez v1, :cond_0
 
     .line 26
-    iget-object p1, p1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
     check-cast p1, Landroid/graphics/PointF;
 
@@ -110,12 +110,12 @@
 
     .line 29
     :cond_0
-    iget-object p1, p0, Lcom/coloros/anim/a/b/i;->b:Lcom/coloros/anim/g/b;
+    iget-object p1, p0, Lcom/coloros/anim/a/b/i;->b:Lcom/coloros/anim/e/b;
 
     if-eqz p1, :cond_1
 
     .line 30
-    iget-object v2, p0, Lcom/coloros/anim/a/b/i;->b:Lcom/coloros/anim/g/b;
+    iget-object v2, p0, Lcom/coloros/anim/a/b/i;->b:Lcom/coloros/anim/e/b;
 
     iget v3, v0, Lcom/coloros/anim/a/b/h;->c:F
 
@@ -142,7 +142,7 @@
     move v8, p2
 
     .line 30
-    invoke-virtual/range {v2 .. v9}, Lcom/coloros/anim/g/b;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
+    invoke-virtual/range {v2 .. v9}, Lcom/coloros/anim/e/b;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
 
     move-result-object p1
 

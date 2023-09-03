@@ -74,7 +74,7 @@
     .line 192
     iget-object p1, p0, Landroidx/transition/d$a;->a:Landroid/view/View;
 
-    invoke-static {p1}, Landroidx/core/g/w;->v(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->v(Landroid/view/View;)Z
 
     move-result p1
 

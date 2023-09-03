@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <plurals name="sticker_recycle_bin_title_has_selected">
-        <item quantity="other">pasirinkta lipdukų: %1$d</item>
-        <item quantity="one">Pasirinkta lipdukų: %1$d</item>
-    </plurals>
-</resources>

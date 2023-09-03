@@ -60,19 +60,19 @@
         }
     .end annotation
 
-    .line 56
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
+    .line 58
     iput-object p1, p0, Lcom/google/protobuf/MapEntryLite$Metadata;->keyType:Lcom/google/protobuf/WireFormat$FieldType;
 
-    .line 58
+    .line 59
     iput-object p2, p0, Lcom/google/protobuf/MapEntryLite$Metadata;->defaultKey:Ljava/lang/Object;
 
-    .line 59
+    .line 60
     iput-object p3, p0, Lcom/google/protobuf/MapEntryLite$Metadata;->valueType:Lcom/google/protobuf/WireFormat$FieldType;
 
-    .line 60
+    .line 61
     iput-object p4, p0, Lcom/google/protobuf/MapEntryLite$Metadata;->defaultValue:Ljava/lang/Object;
 
     return-void

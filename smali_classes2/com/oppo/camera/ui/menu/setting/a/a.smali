@@ -98,7 +98,7 @@
     :cond_0
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/a/a;->b:Lcom/oppo/camera/ui/menu/setting/a;
 
-    invoke-interface {p1}, Lcom/oppo/camera/ui/menu/setting/a;->j_()Z
+    invoke-interface {p1}, Lcom/oppo/camera/ui/menu/setting/a;->u_()Z
 
     move-result p1
 

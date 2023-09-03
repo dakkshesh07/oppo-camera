@@ -29,16 +29,16 @@
 .method public constructor <init>(ZLokio/BufferedSource;Lokio/BufferedSink;)V
     .locals 0
 
-    .line 579
+    .line 603
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 580
+    .line 604
     iput-boolean p1, p0, Lokhttp3/internal/ws/RealWebSocket$Streams;->client:Z
 
-    .line 581
+    .line 605
     iput-object p2, p0, Lokhttp3/internal/ws/RealWebSocket$Streams;->source:Lokio/BufferedSource;
 
-    .line 582
+    .line 606
     iput-object p3, p0, Lokhttp3/internal/ws/RealWebSocket$Streams;->sink:Lokio/BufferedSink;
 
     return-void

@@ -3,7 +3,7 @@
 .source "FrameworkSQLiteStatement.java"
 
 # interfaces
-.implements Landroidx/f/a/f;
+.implements Landroidx/f/a/g;
 
 
 # instance fields

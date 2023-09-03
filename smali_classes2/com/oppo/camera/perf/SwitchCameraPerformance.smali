@@ -1,0 +1,126 @@
+.class public Lcom/oppo/camera/perf/SwitchCameraPerformance;
+.super Ljava/lang/Object;
+.source "SwitchCameraPerformance.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/Keep;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;
+    }
+.end annotation
+
+
+# static fields
+.field private static final TAG:Ljava/lang/String; = "SwitchCameraPerformance"
+
+.field private static sSwitchCameraEndTime:J
+
+.field private static sSwitchCameraStartTime:J
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 19
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private static clear()V
+    .locals 2
+
+    const-wide/16 v0, -0x1
+
+    .line 58
+    sput-wide v0, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraStartTime:J
+
+    .line 59
+    sput-wide v0, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraEndTime:J
+
+    return-void
+.end method
+
+.method private static onEnd()V
+    .locals 5
+
+    .line 45
+    new-instance v0, Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;
+
+    invoke-direct {v0}, Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;-><init>()V
+
+    .line 46
+    sget-wide v1, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraEndTime:J
+
+    sget-wide v3, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraStartTime:J
+
+    sub-long/2addr v1, v3
+
+    invoke-static {v0, v1, v2}, Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;->access$002(Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;J)J
+
+    .line 48
+    invoke-static {v0}, Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;->access$100(Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    sget-wide v1, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraStartTime:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-lez v1, :cond_0
+
+    sget-wide v1, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraEndTime:J
+
+    cmp-long v1, v1, v3
+
+    if-lez v1, :cond_0
+
+    .line 49
+    invoke-static {v0}, Lcom/oppo/camera/perf/Performance;->add(Lcom/oppo/camera/perf/SwitchCameraPerformance$SwitchCameraPerformanceData;)V
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "SwitchCameraPerformance"
+
+    const-string v1, "onEnd, not valid"
+
+    .line 51
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 54
+    :goto_0
+    invoke-static {}, Lcom/oppo/camera/perf/SwitchCameraPerformance;->clear()V
+
+    return-void
+.end method
+
+.method public static setSwitchCameraEndTime(J)V
+    .locals 0
+
+    .line 39
+    sput-wide p0, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraEndTime:J
+
+    .line 41
+    invoke-static {}, Lcom/oppo/camera/perf/SwitchCameraPerformance;->onEnd()V
+
+    return-void
+.end method
+
+.method public static setSwitchCameraStartTime(J)V
+    .locals 0
+
+    .line 35
+    sput-wide p0, Lcom/oppo/camera/perf/SwitchCameraPerformance;->sSwitchCameraStartTime:J
+
+    return-void
+.end method

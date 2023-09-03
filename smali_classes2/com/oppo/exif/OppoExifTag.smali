@@ -6,7 +6,11 @@
 # static fields
 .field public static final EXIF_KEY_TAGFLAGS:Ljava/lang/String; = "tagflags"
 
+.field public static final EXIF_TAG_AI_ID_PHOTO:I = 0x4000
+
 .field public static final EXIF_TAG_BOKEH:I = 0x10
+
+.field public static final EXIF_TAG_DOUBLE_EXPOSURE:I = 0x8000
 
 .field public static final EXIF_TAG_ENHANCE_TEXT:I = 0x1000
 
@@ -152,7 +156,7 @@
     .line 105
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    const-string v1, "yyyy:MM:dd kk:mm:ss"
+    const-string v1, "yyyy:MM:dd HH:mm:ss"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
@@ -164,27 +168,27 @@
 .method constructor <init>(SSIIZ)V
     .locals 0
 
-    .line 143
+    .line 145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 144
+    .line 146
     iput-short p1, p0, Lcom/oppo/exif/OppoExifTag;->mTagId:S
 
-    .line 145
+    .line 147
     iput-short p2, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
-    .line 146
+    .line 148
     iput p3, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
 
-    .line 147
+    .line 149
     iput-boolean p5, p0, Lcom/oppo/exif/OppoExifTag;->mHasDefinedDefaultComponentCount:Z
 
-    .line 148
+    .line 150
     iput p4, p0, Lcom/oppo/exif/OppoExifTag;->mIfd:I
 
     const/4 p1, 0x0
 
-    .line 149
+    .line 151
     iput-object p1, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     return-void
@@ -193,7 +197,7 @@
 .method private checkBadComponentCount(I)Z
     .locals 1
 
-    .line 904
+    .line 906
     iget-boolean v0, p0, Lcom/oppo/exif/OppoExifTag;->mHasDefinedDefaultComponentCount:Z
 
     if-eqz v0, :cond_0
@@ -215,7 +219,7 @@
 .method private checkOverflowForRational([Lcom/oppo/exif/OppoRational;)Z
     .locals 8
 
-    .line 972
+    .line 974
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -227,7 +231,7 @@
 
     aget-object v3, p1, v2
 
-    .line 973
+    .line 975
     invoke-virtual {v3}, Lcom/oppo/exif/OppoRational;->getNumerator()J
 
     move-result-wide v4
@@ -284,7 +288,7 @@
 .method private checkOverflowForUnsignedLong([I)Z
     .locals 4
 
-    .line 952
+    .line 954
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -314,7 +318,7 @@
 .method private checkOverflowForUnsignedLong([J)Z
     .locals 7
 
-    .line 943
+    .line 945
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -358,7 +362,7 @@
 .method private checkOverflowForUnsignedRational([Lcom/oppo/exif/OppoRational;)Z
     .locals 8
 
-    .line 961
+    .line 963
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -370,7 +374,7 @@
 
     aget-object v3, p1, v2
 
-    .line 962
+    .line 964
     invoke-virtual {v3}, Lcom/oppo/exif/OppoRational;->getNumerator()J
 
     move-result-wide v4
@@ -427,7 +431,7 @@
 .method private checkOverflowForUnsignedShort([I)Z
     .locals 5
 
-    .line 934
+    .line 936
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -530,7 +534,7 @@
 .method public static getElementSize(S)I
     .locals 1
 
-    .line 165
+    .line 167
     sget-object v0, Lcom/oppo/exif/OppoExifTag;->TYPE_TO_SIZE_MAP:[I
 
     aget p0, v0, p0
@@ -625,16 +629,16 @@
 
     return v0
 
-    .line 986
+    .line 988
     :cond_0
     instance-of v1, p1, Lcom/oppo/exif/OppoExifTag;
 
     if-eqz v1, :cond_a
 
-    .line 987
+    .line 989
     check-cast p1, Lcom/oppo/exif/OppoExifTag;
 
-    .line 988
+    .line 990
     iget-short v1, p1, Lcom/oppo/exif/OppoExifTag;->mTagId:S
 
     iget-short v2, p0, Lcom/oppo/exif/OppoExifTag;->mTagId:S
@@ -655,33 +659,33 @@
 
     goto :goto_0
 
-    .line 993
+    .line 995
     :cond_1
     iget-object v1, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     if-eqz v1, :cond_9
 
-    .line 994
+    .line 996
     iget-object p1, p1, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     if-nez p1, :cond_2
 
     return v0
 
-    .line 996
+    .line 998
     :cond_2
     instance-of v2, v1, [J
 
     if-eqz v2, :cond_4
 
-    .line 997
+    .line 999
     instance-of v2, p1, [J
 
     if-nez v2, :cond_3
 
     return v0
 
-    .line 1000
+    .line 1002
     :cond_3
     check-cast v1, [J
 
@@ -697,20 +701,20 @@
 
     return p1
 
-    .line 1001
+    .line 1003
     :cond_4
     instance-of v2, v1, [Lcom/oppo/exif/OppoRational;
 
     if-eqz v2, :cond_6
 
-    .line 1002
+    .line 1004
     instance-of v2, p1, [Lcom/oppo/exif/OppoRational;
 
     if-nez v2, :cond_5
 
     return v0
 
-    .line 1005
+    .line 1007
     :cond_5
     check-cast v1, [Lcom/oppo/exif/OppoRational;
 
@@ -726,20 +730,20 @@
 
     return p1
 
-    .line 1006
+    .line 1008
     :cond_6
     instance-of v2, v1, [B
 
     if-eqz v2, :cond_8
 
-    .line 1007
+    .line 1009
     instance-of v2, p1, [B
 
     if-nez v2, :cond_7
 
     return v0
 
-    .line 1010
+    .line 1012
     :cond_7
     check-cast v1, [B
 
@@ -755,7 +759,7 @@
 
     return p1
 
-    .line 1012
+    .line 1014
     :cond_8
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -763,7 +767,7 @@
 
     return p1
 
-    .line 1015
+    .line 1017
     :cond_9
     iget-object p1, p1, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
@@ -779,7 +783,7 @@
 .method public forceGetValueAsLong(J)J
     .locals 7
 
-    .line 744
+    .line 746
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsLongs()[J
 
     move-result-object v0
@@ -790,17 +794,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 745
+    .line 747
     array-length v3, v0
 
     if-lt v3, v1, :cond_0
 
-    .line 746
+    .line 748
     aget-wide p1, v0, v2
 
     return-wide p1
 
-    .line 748
+    .line 750
     :cond_0
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsBytes()[B
 
@@ -808,19 +812,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 749
+    .line 751
     array-length v3, v0
 
     if-lt v3, v1, :cond_1
 
-    .line 750
+    .line 752
     aget-byte p1, v0, v2
 
     int-to-long p1, p1
 
     return-wide p1
 
-    .line 752
+    .line 754
     :cond_1
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsRationals()[Lcom/oppo/exif/OppoRational;
 
@@ -828,7 +832,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 753
+    .line 755
     array-length v3, v0
 
     if-lt v3, v1, :cond_2
@@ -845,7 +849,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 754
+    .line 756
     aget-object p1, v0, v2
 
     invoke-virtual {p1}, Lcom/oppo/exif/OppoRational;->toDouble()D
@@ -861,7 +865,7 @@
 .method public forceGetValueAsString()Ljava/lang/String;
     .locals 5
 
-    .line 763
+    .line 765
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     const-string v1, ""
@@ -870,20 +874,20 @@
 
     return-object v1
 
-    .line 765
+    .line 767
     :cond_0
     instance-of v2, v0, [B
 
     if-eqz v2, :cond_2
 
-    .line 766
+    .line 768
     iget-short v1, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
     const/4 v2, 0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 767
+    .line 769
     new-instance v1, Ljava/lang/String;
 
     check-cast v0, [B
@@ -896,7 +900,7 @@
 
     return-object v1
 
-    .line 769
+    .line 771
     :cond_1
     check-cast v0, [B
 
@@ -908,7 +912,7 @@
 
     return-object v0
 
-    .line 771
+    .line 773
     :cond_2
     instance-of v2, v0, [J
 
@@ -918,7 +922,7 @@
 
     if-eqz v2, :cond_4
 
-    .line 772
+    .line 774
     move-object v1, v0
 
     check-cast v1, [J
@@ -929,7 +933,7 @@
 
     if-ne v1, v4, :cond_3
 
-    .line 773
+    .line 775
     check-cast v0, [J
 
     check-cast v0, [J
@@ -942,7 +946,7 @@
 
     return-object v0
 
-    .line 775
+    .line 777
     :cond_3
     check-cast v0, [J
 
@@ -954,13 +958,13 @@
 
     return-object v0
 
-    .line 777
+    .line 779
     :cond_4
     instance-of v2, v0, [Ljava/lang/Object;
 
     if-eqz v2, :cond_7
 
-    .line 778
+    .line 780
     move-object v2, v0
 
     check-cast v2, [Ljava/lang/Object;
@@ -971,7 +975,7 @@
 
     if-ne v2, v4, :cond_6
 
-    .line 779
+    .line 781
     check-cast v0, [Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
@@ -982,7 +986,7 @@
 
     return-object v1
 
-    .line 783
+    .line 785
     :cond_5
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -990,7 +994,7 @@
 
     return-object v0
 
-    .line 786
+    .line 788
     :cond_6
     check-cast v0, [Ljava/lang/Object;
 
@@ -1002,7 +1006,7 @@
 
     return-object v0
 
-    .line 789
+    .line 791
     :cond_7
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -1014,7 +1018,7 @@
 .method protected forceSetComponentCount(I)V
     .locals 0
 
-    .line 229
+    .line 231
     iput p1, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
 
     return-void
@@ -1023,7 +1027,7 @@
 .method protected getBytes([B)V
     .locals 2
 
-    .line 854
+    .line 856
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1036,7 +1040,7 @@
 .method protected getBytes([BII)V
     .locals 3
 
-    .line 872
+    .line 874
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
     const/4 v1, 0x7
@@ -1049,7 +1053,7 @@
 
     goto :goto_0
 
-    .line 873
+    .line 875
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1077,7 +1081,7 @@
 
     throw p1
 
-    .line 876
+    .line 878
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
@@ -1099,7 +1103,7 @@
 .method public getComponentCount()I
     .locals 1
 
-    .line 221
+    .line 223
     iget v0, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
 
     return v0
@@ -1108,7 +1112,7 @@
 .method public getDataSize()I
     .locals 2
 
-    .line 212
+    .line 214
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getComponentCount()I
 
     move-result v0
@@ -1129,7 +1133,7 @@
 .method public getDataType()S
     .locals 1
 
-    .line 205
+    .line 207
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
     return v0
@@ -1138,7 +1142,7 @@
 .method public getIfd()I
     .locals 1
 
-    .line 178
+    .line 180
     iget v0, p0, Lcom/oppo/exif/OppoExifTag;->mIfd:I
 
     return v0
@@ -1147,7 +1151,7 @@
 .method protected getOffset()I
     .locals 1
 
-    .line 885
+    .line 887
     iget v0, p0, Lcom/oppo/exif/OppoExifTag;->mOffset:I
 
     return v0
@@ -1156,7 +1160,7 @@
 .method protected getRational(I)Lcom/oppo/exif/OppoRational;
     .locals 2
 
-    .line 843
+    .line 845
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
     const/16 v1, 0xa
@@ -1169,7 +1173,7 @@
 
     goto :goto_0
 
-    .line 844
+    .line 846
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1197,7 +1201,7 @@
 
     throw p1
 
-    .line 847
+    .line 849
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
@@ -1214,14 +1218,14 @@
 .method protected getString()Ljava/lang/String;
     .locals 3
 
-    .line 821
+    .line 823
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 825
+    .line 827
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
@@ -1236,7 +1240,7 @@
 
     return-object v0
 
-    .line 822
+    .line 824
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1268,7 +1272,7 @@
 .method protected getStringByte()[B
     .locals 1
 
-    .line 832
+    .line 834
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     check-cast v0, [B
@@ -1281,7 +1285,7 @@
 .method public getTagId()S
     .locals 1
 
-    .line 189
+    .line 191
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mTagId:S
 
     return v0
@@ -1290,7 +1294,7 @@
 .method public getValue()Ljava/lang/Object;
     .locals 1
 
-    .line 731
+    .line 733
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     return-object v0
@@ -1299,14 +1303,14 @@
 .method public getValueAsByte(B)B
     .locals 3
 
-    .line 601
+    .line 603
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsBytes()[B
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 602
+    .line 604
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -1318,7 +1322,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 605
+    .line 607
     aget-byte p1, v0, p1
 
     :cond_1
@@ -1329,14 +1333,14 @@
 .method public getValueAsBytes()[B
     .locals 2
 
-    .line 584
+    .line 586
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     instance-of v1, v0, [B
 
     if-eqz v1, :cond_0
 
-    .line 585
+    .line 587
     check-cast v0, [B
 
     check-cast v0, [B
@@ -1352,14 +1356,14 @@
 .method public getValueAsInt(I)I
     .locals 3
 
-    .line 688
+    .line 690
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsInts()[I
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 689
+    .line 691
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -1371,7 +1375,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 692
+    .line 694
     aget p1, v0, p1
 
     :cond_1
@@ -1382,7 +1386,7 @@
 .method public getValueAsInts()[I
     .locals 5
 
-    .line 664
+    .line 666
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -1391,31 +1395,31 @@
 
     return-object v1
 
-    .line 666
+    .line 668
     :cond_0
     instance-of v2, v0, [J
 
     if-eqz v2, :cond_1
 
-    .line 667
+    .line 669
     check-cast v0, [J
 
     check-cast v0, [J
 
-    .line 668
+    .line 670
     array-length v1, v0
 
     new-array v1, v1, [I
 
     const/4 v2, 0x0
 
-    .line 669
+    .line 671
     :goto_0
     array-length v3, v0
 
     if-ge v2, v3, :cond_1
 
-    .line 670
+    .line 672
     aget-wide v3, v0, v2
 
     long-to-int v3, v3
@@ -1433,14 +1437,14 @@
 .method public getValueAsLong(J)J
     .locals 3
 
-    .line 720
+    .line 722
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsLongs()[J
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 721
+    .line 723
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -1452,7 +1456,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 724
+    .line 726
     aget-wide p1, v0, p1
 
     :cond_1
@@ -1463,14 +1467,14 @@
 .method public getValueAsLongs()[J
     .locals 2
 
-    .line 703
+    .line 705
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     instance-of v1, v0, [J
 
     if-eqz v1, :cond_0
 
-    .line 704
+    .line 706
     check-cast v0, [J
 
     check-cast v0, [J
@@ -1486,14 +1490,14 @@
 .method public getValueAsRational(J)Lcom/oppo/exif/OppoRational;
     .locals 3
 
-    .line 652
+    .line 654
     new-instance v0, Lcom/oppo/exif/OppoRational;
 
     const-wide/16 v1, 0x1
 
     invoke-direct {v0, p1, p2, v1, v2}, Lcom/oppo/exif/OppoRational;-><init>(JJ)V
 
-    .line 653
+    .line 655
     invoke-virtual {p0, v0}, Lcom/oppo/exif/OppoExifTag;->getValueAsRational(Lcom/oppo/exif/OppoRational;)Lcom/oppo/exif/OppoRational;
 
     move-result-object p1
@@ -1504,14 +1508,14 @@
 .method public getValueAsRational(Lcom/oppo/exif/OppoRational;)Lcom/oppo/exif/OppoRational;
     .locals 3
 
-    .line 633
+    .line 635
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsRationals()[Lcom/oppo/exif/OppoRational;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 634
+    .line 636
     array-length v1, v0
 
     const/4 v2, 0x1
@@ -1523,7 +1527,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 637
+    .line 639
     aget-object p1, v0, p1
 
     :cond_1
@@ -1534,14 +1538,14 @@
 .method public getValueAsRationals()[Lcom/oppo/exif/OppoRational;
     .locals 2
 
-    .line 616
+    .line 618
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     instance-of v1, v0, [Lcom/oppo/exif/OppoRational;
 
     if-eqz v1, :cond_0
 
-    .line 617
+    .line 619
     check-cast v0, [Lcom/oppo/exif/OppoRational;
 
     check-cast v0, [Lcom/oppo/exif/OppoRational;
@@ -1557,7 +1561,7 @@
 .method public getValueAsString()Ljava/lang/String;
     .locals 3
 
-    .line 549
+    .line 551
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     const/4 v1, 0x0
@@ -1566,24 +1570,24 @@
 
     return-object v1
 
-    .line 551
+    .line 553
     :cond_0
     instance-of v2, v0, Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 552
+    .line 554
     check-cast v0, Ljava/lang/String;
 
     return-object v0
 
-    .line 553
+    .line 555
     :cond_1
     instance-of v2, v0, [B
 
     if-eqz v2, :cond_2
 
-    .line 554
+    .line 556
     new-instance v1, Ljava/lang/String;
 
     check-cast v0, [B
@@ -1601,7 +1605,7 @@
 .method public getValueAsString(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 569
+    .line 571
     invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->getValueAsString()Ljava/lang/String;
 
     move-result-object v0
@@ -1617,14 +1621,14 @@
 .method protected getValueAt(I)J
     .locals 2
 
-    .line 805
+    .line 807
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     instance-of v1, v0, [J
 
     if-eqz v1, :cond_0
 
-    .line 806
+    .line 808
     check-cast v0, [J
 
     check-cast v0, [J
@@ -1633,13 +1637,13 @@
 
     return-wide v0
 
-    .line 807
+    .line 809
     :cond_0
     instance-of v1, v0, [B
 
     if-eqz v1, :cond_1
 
-    .line 808
+    .line 810
     check-cast v0, [B
 
     check-cast v0, [B
@@ -1650,7 +1654,7 @@
 
     return-wide v0
 
-    .line 810
+    .line 812
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -1682,7 +1686,7 @@
 .method protected hasDefinedCount()Z
     .locals 1
 
-    .line 900
+    .line 902
     iget-boolean v0, p0, Lcom/oppo/exif/OppoExifTag;->mHasDefinedDefaultComponentCount:Z
 
     return v0
@@ -1691,7 +1695,7 @@
 .method public hasValue()Z
     .locals 1
 
-    .line 237
+    .line 239
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -1707,10 +1711,25 @@
     return v0
 .end method
 
+.method public hashCode()I
+    .locals 1
+
+    .line 1025
+    invoke-virtual {p0}, Lcom/oppo/exif/OppoExifTag;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method protected setHasDefinedCount(Z)V
     .locals 0
 
-    .line 896
+    .line 898
     iput-boolean p1, p0, Lcom/oppo/exif/OppoExifTag;->mHasDefinedDefaultComponentCount:Z
 
     return-void
@@ -1719,7 +1738,7 @@
 .method protected setIfd(I)V
     .locals 0
 
-    .line 182
+    .line 184
     iput p1, p0, Lcom/oppo/exif/OppoExifTag;->mIfd:I
 
     return-void
@@ -1728,7 +1747,7 @@
 .method protected setOffset(I)V
     .locals 0
 
-    .line 892
+    .line 894
     iput p1, p0, Lcom/oppo/exif/OppoExifTag;->mOffset:I
 
     return-void
@@ -1737,12 +1756,12 @@
 .method public setTimeValue(J)Z
     .locals 3
 
-    .line 536
+    .line 538
     sget-object v0, Lcom/oppo/exif/OppoExifTag;->TIME_FORMAT:Ljava/text/SimpleDateFormat;
 
     monitor-enter v0
 
-    .line 537
+    .line 539
     :try_start_0
     sget-object v1, Lcom/oppo/exif/OppoExifTag;->TIME_FORMAT:Ljava/text/SimpleDateFormat;
 
@@ -1765,7 +1784,7 @@
     :catchall_0
     move-exception p1
 
-    .line 538
+    .line 540
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1778,7 +1797,7 @@
 
     const/4 v0, 0x1
 
-    .line 451
+    .line 453
     new-array v0, v0, [B
 
     const/4 v1, 0x0
@@ -1797,7 +1816,7 @@
 
     const/4 v0, 0x1
 
-    .line 286
+    .line 288
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -1816,7 +1835,7 @@
 
     const/4 v0, 0x1
 
-    .line 321
+    .line 323
     new-array v0, v0, [J
 
     const/4 v1, 0x0
@@ -1835,7 +1854,7 @@
 
     const/4 v0, 0x1
 
-    .line 406
+    .line 408
     new-array v0, v0, [Lcom/oppo/exif/OppoRational;
 
     const/4 v1, 0x0
@@ -1858,7 +1877,7 @@
 
     return v0
 
-    .line 467
+    .line 469
     :cond_0
     instance-of v1, p1, Ljava/lang/Short;
 
@@ -1866,7 +1885,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 468
+    .line 470
     check-cast p1, Ljava/lang/Short;
 
     invoke-virtual {p1}, Ljava/lang/Short;->shortValue()S
@@ -1881,13 +1900,13 @@
 
     return p1
 
-    .line 469
+    .line 471
     :cond_1
     instance-of v1, p1, Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    .line 470
+    .line 472
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/oppo/exif/OppoExifTag;->setValue(Ljava/lang/String;)Z
@@ -1896,13 +1915,13 @@
 
     return p1
 
-    .line 471
+    .line 473
     :cond_2
     instance-of v1, p1, [I
 
     if-eqz v1, :cond_3
 
-    .line 472
+    .line 474
     check-cast p1, [I
 
     check-cast p1, [I
@@ -1913,13 +1932,13 @@
 
     return p1
 
-    .line 473
+    .line 475
     :cond_3
     instance-of v1, p1, [J
 
     if-eqz v1, :cond_4
 
-    .line 474
+    .line 476
     check-cast p1, [J
 
     check-cast p1, [J
@@ -1930,13 +1949,13 @@
 
     return p1
 
-    .line 475
+    .line 477
     :cond_4
     instance-of v1, p1, Lcom/oppo/exif/OppoRational;
 
     if-eqz v1, :cond_5
 
-    .line 476
+    .line 478
     check-cast p1, Lcom/oppo/exif/OppoRational;
 
     invoke-virtual {p0, p1}, Lcom/oppo/exif/OppoExifTag;->setValue(Lcom/oppo/exif/OppoRational;)Z
@@ -1945,13 +1964,13 @@
 
     return p1
 
-    .line 477
+    .line 479
     :cond_5
     instance-of v1, p1, [Lcom/oppo/exif/OppoRational;
 
     if-eqz v1, :cond_6
 
-    .line 478
+    .line 480
     check-cast p1, [Lcom/oppo/exif/OppoRational;
 
     check-cast p1, [Lcom/oppo/exif/OppoRational;
@@ -1962,13 +1981,13 @@
 
     return p1
 
-    .line 479
+    .line 481
     :cond_6
     instance-of v1, p1, [B
 
     if-eqz v1, :cond_7
 
-    .line 480
+    .line 482
     check-cast p1, [B
 
     check-cast p1, [B
@@ -1979,13 +1998,13 @@
 
     return p1
 
-    .line 481
+    .line 483
     :cond_7
     instance-of v1, p1, Ljava/lang/Integer;
 
     if-eqz v1, :cond_8
 
-    .line 482
+    .line 484
     check-cast p1, Ljava/lang/Integer;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -1998,13 +2017,13 @@
 
     return p1
 
-    .line 483
+    .line 485
     :cond_8
     instance-of v1, p1, Ljava/lang/Long;
 
     if-eqz v1, :cond_9
 
-    .line 484
+    .line 486
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -2017,13 +2036,13 @@
 
     return p1
 
-    .line 485
+    .line 487
     :cond_9
     instance-of v1, p1, Ljava/lang/Byte;
 
     if-eqz v1, :cond_a
 
-    .line 486
+    .line 488
     check-cast p1, Ljava/lang/Byte;
 
     invoke-virtual {p1}, Ljava/lang/Byte;->byteValue()B
@@ -2036,31 +2055,31 @@
 
     return p1
 
-    .line 487
+    .line 489
     :cond_a
     instance-of v1, p1, [Ljava/lang/Short;
 
     if-eqz v1, :cond_d
 
-    .line 489
+    .line 491
     check-cast p1, [Ljava/lang/Short;
 
     check-cast p1, [Ljava/lang/Short;
 
-    .line 490
+    .line 492
     array-length v1, p1
 
     new-array v1, v1, [I
 
     move v3, v0
 
-    .line 491
+    .line 493
     :goto_0
     array-length v4, p1
 
     if-ge v3, v4, :cond_c
 
-    .line 492
+    .line 494
     aget-object v4, p1, v3
 
     if-nez v4, :cond_b
@@ -2085,7 +2104,7 @@
 
     goto :goto_0
 
-    .line 494
+    .line 496
     :cond_c
     invoke-virtual {p0, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([I)Z
 
@@ -2093,31 +2112,31 @@
 
     return p1
 
-    .line 495
+    .line 497
     :cond_d
     instance-of v1, p1, [Ljava/lang/Integer;
 
     if-eqz v1, :cond_10
 
-    .line 497
+    .line 499
     check-cast p1, [Ljava/lang/Integer;
 
     check-cast p1, [Ljava/lang/Integer;
 
-    .line 498
+    .line 500
     array-length v1, p1
 
     new-array v1, v1, [I
 
     move v2, v0
 
-    .line 499
+    .line 501
     :goto_2
     array-length v3, p1
 
     if-ge v2, v3, :cond_f
 
-    .line 500
+    .line 502
     aget-object v3, p1, v2
 
     if-nez v3, :cond_e
@@ -2140,7 +2159,7 @@
 
     goto :goto_2
 
-    .line 502
+    .line 504
     :cond_f
     invoke-virtual {p0, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([I)Z
 
@@ -2148,29 +2167,29 @@
 
     return p1
 
-    .line 503
+    .line 505
     :cond_10
     instance-of v1, p1, [Ljava/lang/Long;
 
     if-eqz v1, :cond_13
 
-    .line 505
+    .line 507
     check-cast p1, [Ljava/lang/Long;
 
     check-cast p1, [Ljava/lang/Long;
 
-    .line 506
+    .line 508
     array-length v1, p1
 
     new-array v1, v1, [J
 
-    .line 507
+    .line 509
     :goto_4
     array-length v2, p1
 
     if-ge v0, v2, :cond_12
 
-    .line 508
+    .line 510
     aget-object v2, p1, v0
 
     if-nez v2, :cond_11
@@ -2193,7 +2212,7 @@
 
     goto :goto_4
 
-    .line 510
+    .line 512
     :cond_12
     invoke-virtual {p0, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([J)Z
 
@@ -2201,31 +2220,31 @@
 
     return p1
 
-    .line 511
+    .line 513
     :cond_13
     instance-of v1, p1, [Ljava/lang/Byte;
 
     if-eqz v1, :cond_16
 
-    .line 513
+    .line 515
     check-cast p1, [Ljava/lang/Byte;
 
     check-cast p1, [Ljava/lang/Byte;
 
-    .line 514
+    .line 516
     array-length v1, p1
 
     new-array v1, v1, [B
 
     move v2, v0
 
-    .line 515
+    .line 517
     :goto_6
     array-length v3, p1
 
     if-ge v2, v3, :cond_15
 
-    .line 516
+    .line 518
     aget-object v3, p1, v2
 
     if-nez v3, :cond_14
@@ -2248,7 +2267,7 @@
 
     goto :goto_6
 
-    .line 518
+    .line 520
     :cond_15
     invoke-virtual {p0, v1}, Lcom/oppo/exif/OppoExifTag;->setValue([B)Z
 
@@ -2263,7 +2282,7 @@
 .method public setValue(Ljava/lang/String;)Z
     .locals 5
 
-    .line 339
+    .line 341
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
     const/4 v1, 0x7
@@ -2278,7 +2297,7 @@
 
     return v3
 
-    .line 343
+    .line 345
     :cond_0
     sget-object v0, Lcom/oppo/exif/OppoExifTag;->US_ASCII:Ljava/nio/charset/Charset;
 
@@ -2286,14 +2305,14 @@
 
     move-result-object p1
 
-    .line 345
+    .line 347
     array-length v0, p1
 
     const/4 v4, 0x1
 
     if-lez v0, :cond_2
 
-    .line 346
+    .line 348
     array-length v0, p1
 
     sub-int/2addr v0, v4
@@ -2319,7 +2338,7 @@
 
     goto :goto_0
 
-    .line 348
+    .line 350
     :cond_2
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2329,17 +2348,17 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 349
+    .line 351
     new-array p1, v4, [B
 
     aput-byte v3, p1, v3
 
-    .line 351
+    .line 353
     :cond_3
     :goto_0
     array-length v0, p1
 
-    .line 352
+    .line 354
     invoke-direct {p0, v0}, Lcom/oppo/exif/OppoExifTag;->checkBadComponentCount(I)Z
 
     move-result v1
@@ -2348,11 +2367,11 @@
 
     return v3
 
-    .line 355
+    .line 357
     :cond_4
     iput v0, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
 
-    .line 356
+    .line 358
     iput-object p1, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     return v4
@@ -2361,7 +2380,7 @@
 .method public setValue([B)Z
     .locals 2
 
-    .line 437
+    .line 439
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -2376,7 +2395,7 @@
 .method public setValue([BII)Z
     .locals 4
 
-    .line 421
+    .line 423
     invoke-direct {p0, p3}, Lcom/oppo/exif/OppoExifTag;->checkBadComponentCount(I)Z
 
     move-result v0
@@ -2387,7 +2406,7 @@
 
     return v1
 
-    .line 424
+    .line 426
     :cond_0
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2401,18 +2420,18 @@
 
     return v1
 
-    .line 427
+    .line 429
     :cond_1
     new-array v0, p3, [B
 
     iput-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
-    .line 428
+    .line 430
     iget-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 429
+    .line 431
     iput p3, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
 
     return v2
@@ -2421,7 +2440,7 @@
 .method public setValue([I)Z
     .locals 5
 
-    .line 252
+    .line 254
     array-length v0, p1
 
     invoke-direct {p0, v0}, Lcom/oppo/exif/OppoExifTag;->checkBadComponentCount(I)Z
@@ -2434,7 +2453,7 @@
 
     return v1
 
-    .line 255
+    .line 257
     :cond_0
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2452,7 +2471,7 @@
 
     return v1
 
-    .line 259
+    .line 261
     :cond_1
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2466,7 +2485,7 @@
 
     return v1
 
-    .line 261
+    .line 263
     :cond_2
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2480,19 +2499,19 @@
 
     return v1
 
-    .line 265
+    .line 267
     :cond_3
     array-length v0, p1
 
     new-array v0, v0, [J
 
-    .line 266
+    .line 268
     :goto_0
     array-length v2, p1
 
     if-ge v1, v2, :cond_4
 
-    .line 267
+    .line 269
     aget v2, p1, v1
 
     int-to-long v2, v2
@@ -2503,11 +2522,11 @@
 
     goto :goto_0
 
-    .line 269
+    .line 271
     :cond_4
     iput-object v0, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
-    .line 270
+    .line 272
     array-length p1, p1
 
     iput p1, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
@@ -2520,7 +2539,7 @@
 .method public setValue([J)Z
     .locals 3
 
-    .line 300
+    .line 302
     array-length v0, p1
 
     invoke-direct {p0, v0}, Lcom/oppo/exif/OppoExifTag;->checkBadComponentCount(I)Z
@@ -2539,7 +2558,7 @@
 
     goto :goto_0
 
-    .line 303
+    .line 305
     :cond_0
     invoke-direct {p0, p1}, Lcom/oppo/exif/OppoExifTag;->checkOverflowForUnsignedLong([J)Z
 
@@ -2549,11 +2568,11 @@
 
     return v1
 
-    .line 306
+    .line 308
     :cond_1
     iput-object p1, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
-    .line 307
+    .line 309
     array-length p1, p1
 
     iput p1, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
@@ -2570,7 +2589,7 @@
 .method public setValue([Lcom/oppo/exif/OppoRational;)Z
     .locals 4
 
-    .line 375
+    .line 377
     array-length v0, p1
 
     invoke-direct {p0, v0}, Lcom/oppo/exif/OppoExifTag;->checkBadComponentCount(I)Z
@@ -2583,7 +2602,7 @@
 
     return v1
 
-    .line 378
+    .line 380
     :cond_0
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2597,7 +2616,7 @@
 
     return v1
 
-    .line 381
+    .line 383
     :cond_1
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2611,7 +2630,7 @@
 
     return v1
 
-    .line 383
+    .line 385
     :cond_2
     iget-short v0, p0, Lcom/oppo/exif/OppoExifTag;->mDataType:S
 
@@ -2625,11 +2644,11 @@
 
     return v1
 
-    .line 387
+    .line 389
     :cond_3
     iput-object p1, p0, Lcom/oppo/exif/OppoExifTag;->mValue:Ljava/lang/Object;
 
-    .line 388
+    .line 390
     array-length p1, p1
 
     iput p1, p0, Lcom/oppo/exif/OppoExifTag;->mComponentCountActual:I
@@ -2642,7 +2661,7 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 1023
+    .line 1030
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

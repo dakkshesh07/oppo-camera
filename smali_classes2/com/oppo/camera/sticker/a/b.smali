@@ -24,7 +24,7 @@
 
     const-string v1, "StickerItemTableHelper"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 451
     new-instance v0, Landroid/content/ContentValues;
@@ -66,7 +66,7 @@
     const-string v1, "updateStickerItem"
 
     .line 459
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 461
     new-instance v0, Ljava/lang/StringBuilder;
@@ -259,7 +259,7 @@
 
     const-string p2, "StickerItemTableHelper"
 
-    invoke-static {p2, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     :goto_3
@@ -1099,7 +1099,7 @@
 
     const-string v0, "StickerItemTableHelper"
 
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     :goto_4
@@ -1190,7 +1190,7 @@
 
     const-string p1, "StickerItemTableHelper"
 
-    invoke-static {p1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1246,7 +1246,7 @@
 
     const-string v1, "StickerItemTableHelper"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p0, :cond_1
 
@@ -1324,7 +1324,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 151
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getCategoryId()Ljava/lang/String;
@@ -1340,7 +1340,7 @@
     const-string v0, "updateOrAddToStickerItemTable, single mode. no category id!"
 
     .line 152
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v3
 
@@ -1716,7 +1716,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 216
     invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getVersion()J
@@ -1963,7 +1963,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -2433,7 +2433,7 @@
     move-object/from16 v1, v17
 
     :try_start_4
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
@@ -2561,7 +2561,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -2576,7 +2576,7 @@
     const-string v0, "updateOrAddToStickerItemTable, context or category is null!"
 
     .line 144
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 .end method
@@ -2609,7 +2609,7 @@
     const-string p0, "updateOrAddToAniMojiExtendTable, animojiStickerExtendedInfo color is empty!"
 
     .line 712
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -2624,7 +2624,7 @@
     const-string p0, "updateOrAddToAniMojiExtendTable, uuid is empty!"
 
     .line 718
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -2715,7 +2715,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2752,7 +2752,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2840,7 +2840,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -2849,7 +2849,7 @@
     const-string p0, "updateOrAddToAniMojiExtendTable, context or category is null!"
 
     .line 706
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -2895,7 +2895,7 @@
     const-string p0, "addToMultiStickerExtendTable, uuid is empty!"
 
     .line 763
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
@@ -2938,7 +2938,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 779
     new-instance v2, Ljava/util/ArrayList;
@@ -3159,7 +3159,7 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3192,7 +3192,7 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 
@@ -3201,7 +3201,7 @@
     const-string p0, "addToMultiStickerExtendTable, context or category is null!"
 
     .line 757
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 .end method
@@ -3321,7 +3321,7 @@
 
     move-result-object v6
 
-    invoke-static {v1, v6}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -3367,7 +3367,7 @@
 
     move-result-object v6
 
-    invoke-static {v1, v6}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v6}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 313
     invoke-virtual {v14}, Landroid/content/ContentValues;->clear()V
@@ -3760,7 +3760,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 375
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -3941,7 +3941,7 @@
 
     move-result-object v5
 
-    invoke-static {v1, v5}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -4460,7 +4460,7 @@
     move-object/from16 v4, v20
 
     :try_start_9
-    invoke-static {v4, v3}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_9
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_4
     .catchall {:try_start_9 .. :try_end_9} :catchall_4
@@ -4675,7 +4675,7 @@
 
     move-result-object v2
 
-    invoke-static {v4, v2}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_a
 
@@ -4717,7 +4717,7 @@
     const-string v1, "updateOrAddToStickerItemTable, categoryList is empty!"
 
     .line 290
-    invoke-static {v4, v1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -4984,7 +4984,7 @@
 
     const-string v0, "StickerItemTableHelper"
 
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5091,7 +5091,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
@@ -5112,7 +5112,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -5174,7 +5174,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -5205,7 +5205,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -5340,7 +5340,7 @@
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     :goto_3
@@ -5482,7 +5482,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -5491,7 +5491,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -5522,7 +5522,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -5549,7 +5549,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5618,7 +5618,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
@@ -5639,7 +5639,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method

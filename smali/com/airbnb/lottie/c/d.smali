@@ -1,138 +1,66 @@
 .class public Lcom/airbnb/lottie/c/d;
 .super Ljava/lang/Object;
-.source "FontCharacter.java"
+.source "Logger.java"
 
 
-# instance fields
-.field private final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/b/n;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final b:C
-
-.field private final c:D
-
-.field private final d:D
-
-.field private final e:Ljava/lang/String;
-
-.field private final f:Ljava/lang/String;
+# static fields
+.field private static a:Lcom/airbnb/lottie/i;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;CDDLjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/b/n;",
-            ">;CDD",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 30
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 11
+    new-instance v0, Lcom/airbnb/lottie/c/c;
 
-    .line 31
-    iput-object p1, p0, Lcom/airbnb/lottie/c/d;->a:Ljava/util/List;
+    invoke-direct {v0}, Lcom/airbnb/lottie/c/c;-><init>()V
 
-    .line 32
-    iput-char p2, p0, Lcom/airbnb/lottie/c/d;->b:C
-
-    .line 33
-    iput-wide p3, p0, Lcom/airbnb/lottie/c/d;->c:D
-
-    .line 34
-    iput-wide p5, p0, Lcom/airbnb/lottie/c/d;->d:D
-
-    .line 35
-    iput-object p7, p0, Lcom/airbnb/lottie/c/d;->e:Ljava/lang/String;
-
-    .line 36
-    iput-object p8, p0, Lcom/airbnb/lottie/c/d;->f:Ljava/lang/String;
+    sput-object v0, Lcom/airbnb/lottie/c/d;->a:Lcom/airbnb/lottie/i;
 
     return-void
 .end method
 
-.method public static a(CLjava/lang/String;Ljava/lang/String;)I
+.method public static a(Ljava/lang/String;)V
     .locals 1
-
-    const/4 v0, 0x0
-
-    add-int/2addr v0, p0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    .line 17
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr v0, p0
-
-    mul-int/lit8 v0, v0, 0x1f
 
     .line 18
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    sget-object v0, Lcom/airbnb/lottie/c/d;->a:Lcom/airbnb/lottie/i;
 
-    move-result p0
+    invoke-interface {v0, p0}, Lcom/airbnb/lottie/i;->a(Ljava/lang/String;)V
 
-    add-int/2addr v0, p0
-
-    return v0
+    return-void
 .end method
 
-
-# virtual methods
-.method public a()Ljava/util/List;
+.method public static a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/b/n;",
-            ">;"
-        }
-    .end annotation
 
-    .line 40
-    iget-object v0, p0, Lcom/airbnb/lottie/c/d;->a:Ljava/util/List;
+    .line 30
+    sget-object v0, Lcom/airbnb/lottie/c/d;->a:Lcom/airbnb/lottie/i;
 
-    return-object v0
+    invoke-interface {v0, p0, p1}, Lcom/airbnb/lottie/i;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method
 
-.method public b()D
-    .locals 2
+.method public static b(Ljava/lang/String;)V
+    .locals 1
 
-    .line 48
-    iget-wide v0, p0, Lcom/airbnb/lottie/c/d;->d:D
+    .line 26
+    sget-object v0, Lcom/airbnb/lottie/c/d;->a:Lcom/airbnb/lottie/i;
 
-    return-wide v0
+    invoke-interface {v0, p0}, Lcom/airbnb/lottie/i;->b(Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public hashCode()I
-    .locals 3
+.method public static b(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    .line 56
-    iget-char v0, p0, Lcom/airbnb/lottie/c/d;->b:C
+    .line 34
+    sget-object v0, Lcom/airbnb/lottie/c/d;->a:Lcom/airbnb/lottie/i;
 
-    iget-object v1, p0, Lcom/airbnb/lottie/c/d;->f:Ljava/lang/String;
+    invoke-interface {v0, p0, p1}, Lcom/airbnb/lottie/i;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v2, p0, Lcom/airbnb/lottie/c/d;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/airbnb/lottie/c/d;->a(CLjava/lang/String;Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

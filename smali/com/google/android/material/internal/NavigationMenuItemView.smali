@@ -6,12 +6,17 @@
 .implements Landroidx/appcompat/view/menu/o$a;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final CHECKED_STATE_SET:[I
 
 
 # instance fields
-.field private final accessibilityDelegate:Landroidx/core/g/a;
+.field private final accessibilityDelegate:Landroidx/core/f/a;
 
 .field private actionArea:Landroid/widget/FrameLayout;
 
@@ -85,7 +90,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/internal/NavigationMenuItemView$1;-><init>(Lcom/google/android/material/internal/NavigationMenuItemView;)V
 
-    iput-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Landroidx/core/g/a;
+    iput-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Landroidx/core/f/a;
 
     const/4 p2, 0x0
 
@@ -135,9 +140,9 @@
     .line 102
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->textView:Landroid/widget/CheckedTextView;
 
-    iget-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Landroidx/core/g/a;
+    iget-object p2, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Landroidx/core/f/a;
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     return-void
 .end method
@@ -427,7 +432,7 @@
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 118
     :cond_2
@@ -484,7 +489,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/au;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/at;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 126
     invoke-direct {p0}, Lcom/google/android/material/internal/NavigationMenuItemView;->adjustAppearance()V
@@ -575,13 +580,13 @@
     iput-boolean p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->checkable:Z
 
     .line 202
-    iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Landroidx/core/g/a;
+    iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->accessibilityDelegate:Landroidx/core/f/a;
 
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuItemView;->textView:Landroid/widget/CheckedTextView;
 
     const/16 v1, 0x800
 
-    invoke-virtual {p1, v0, v1}, Landroidx/core/g/a;->sendAccessibilityEvent(Landroid/view/View;I)V
+    invoke-virtual {p1, v0, v1}, Landroidx/core/f/a;->sendAccessibilityEvent(Landroid/view/View;I)V
 
     :cond_0
     return-void
@@ -688,7 +693,7 @@
     move-result-object v2
 
     .line 228
-    invoke-static {p1, v1, v2}, Landroidx/core/content/a/f;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v1, v2}, Landroidx/core/a/a/f;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

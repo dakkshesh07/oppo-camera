@@ -4,6 +4,8 @@
 
 
 # instance fields
+.field private A:I
+
 .field private a:Ljava/lang/String;
 
 .field private b:Ljava/util/List;
@@ -20,17 +22,25 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
+            "Lcom/oppo/camera/ui/preview/effect/j;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private d:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private d:Landroid/graphics/Bitmap;
+.field private e:Landroid/graphics/Bitmap;
 
-.field private e:I
-
-.field private f:I
+.field private f:Landroid/graphics/Bitmap;
 
 .field private g:I
 
@@ -40,9 +50,9 @@
 
 .field private j:I
 
-.field private k:F
+.field private k:I
 
-.field private l:F
+.field private l:I
 
 .field private m:F
 
@@ -50,76 +60,128 @@
 
 .field private o:F
 
-.field private p:Z
+.field private p:F
 
-.field private q:Z
+.field private q:F
+
+.field private r:F
+
+.field private s:Z
+
+.field private t:Z
+
+.field private u:Z
+
+.field private v:I
+
+.field private w:I
+
+.field private x:I
+
+.field private y:I
+
+.field private z:I
 
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    .line 29
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 11
+    .line 13
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a:Ljava/lang/String;
 
-    .line 12
+    .line 14
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->b:Ljava/util/List;
 
-    .line 13
+    .line 15
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->c:Ljava/util/List;
 
-    .line 14
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Landroid/graphics/Bitmap;
+    .line 16
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Ljava/util/List;
+
+    .line 17
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:Landroid/graphics/Bitmap;
+
+    .line 18
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:Landroid/graphics/Bitmap;
 
     const/4 v0, 0x0
 
-    .line 15
-    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:I
-
-    .line 16
-    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:I
-
-    .line 17
+    .line 19
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
 
-    .line 18
+    .line 20
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h:I
 
-    .line 19
+    .line 21
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i:I
 
-    .line 20
+    .line 22
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->j:I
+
+    .line 23
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:I
+
+    .line 24
+    sget v1, Lcom/oppo/camera/ui/preview/effect/i;->a:I
+
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:I
 
     const/4 v1, 0x0
 
-    .line 21
-    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:F
-
-    .line 22
-    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:F
-
-    .line 23
+    .line 25
     iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
 
-    .line 24
+    .line 26
     iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
 
-    .line 25
+    .line 27
     iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->o:F
 
-    .line 26
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:Z
+    .line 28
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:F
 
-    .line 27
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:Z
+    .line 29
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:F
 
     .line 30
+    iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->r:F
+
+    .line 31
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->s:Z
+
+    .line 32
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->t:Z
+
+    .line 33
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->u:Z
+
+    const/4 v0, -0x1
+
+    .line 34
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->v:I
+
+    .line 35
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->w:I
+
+    .line 36
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->x:I
+
+    .line 37
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->y:I
+
+    .line 38
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->z:I
+
+    .line 39
+    iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->A:I
+
+    .line 42
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a:Ljava/lang/String;
 
     return-void
@@ -130,7 +192,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 206
+    .line 314
     invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const-string p2, ": "
@@ -149,6 +211,194 @@
 
 
 # virtual methods
+.method public a(Ljava/lang/String;)I
+    .locals 2
+
+    .line 210
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "tree-green.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x4
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v0, "sky-blue.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x5
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "red-red.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x3
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "portrait_retention"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "neon-2020.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x6
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "portrait_streamer"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x2
+
+    goto :goto_1
+
+    :sswitch_6
+    const-string v0, "oppo_video_filter_portrait_retention"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :sswitch_7
+    const-string v0, "oplus_video_filter_neon"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x7
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    move p1, v1
+
+    :goto_1
+    packed-switch p1, :pswitch_data_0
+
+    return v1
+
+    .line 231
+    :pswitch_0
+    iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->A:I
+
+    return p1
+
+    .line 226
+    :pswitch_1
+    iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->z:I
+
+    return p1
+
+    .line 223
+    :pswitch_2
+    iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->y:I
+
+    return p1
+
+    .line 220
+    :pswitch_3
+    iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->x:I
+
+    return p1
+
+    .line 217
+    :pswitch_4
+    iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->w:I
+
+    return p1
+
+    .line 214
+    :pswitch_5
+    iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->v:I
+
+    return p1
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7ccd13bd -> :sswitch_7
+        -0x618283c2 -> :sswitch_6
+        -0x37592faf -> :sswitch_5
+        -0x1816d0d8 -> :sswitch_4
+        0xc440f7a -> :sswitch_3
+        0x3566c7a6 -> :sswitch_2
+        0x47fc7315 -> :sswitch_1
+        0x5d090347 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
 .method public a()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -160,7 +410,7 @@
         }
     .end annotation
 
-    .line 38
+    .line 50
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->b:Ljava/util/List;
 
     return-object v0
@@ -169,8 +419,8 @@
 .method public a(F)V
     .locals 0
 
-    .line 122
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:F
+    .line 158
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
 
     return-void
 .end method
@@ -178,8 +428,8 @@
 .method public a(I)V
     .locals 0
 
-    .line 66
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:I
+    .line 94
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
 
     return-void
 .end method
@@ -187,10 +437,199 @@
 .method public a(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 58
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Landroid/graphics/Bitmap;
+    .line 78
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:Landroid/graphics/Bitmap;
 
     return-void
+.end method
+
+.method public a(Ljava/lang/String;I)V
+    .locals 1
+
+    .line 238
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sparse-switch v0, :sswitch_data_0
+
+    goto :goto_0
+
+    :sswitch_0
+    const-string v0, "tree-green.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x4
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v0, "sky-blue.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x5
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v0, "red-red.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x3
+
+    goto :goto_1
+
+    :sswitch_3
+    const-string v0, "portrait_retention"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :sswitch_4
+    const-string v0, "neon-2020.cube.rgb.bin"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x6
+
+    goto :goto_1
+
+    :sswitch_5
+    const-string v0, "portrait_streamer"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x2
+
+    goto :goto_1
+
+    :sswitch_6
+    const-string v0, "oppo_video_filter_portrait_retention"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :sswitch_7
+    const-string v0, "oplus_video_filter_neon"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x7
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    const/4 p1, -0x1
+
+    :goto_1
+    packed-switch p1, :pswitch_data_0
+
+    goto :goto_2
+
+    .line 264
+    :pswitch_0
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->A:I
+
+    goto :goto_2
+
+    .line 258
+    :pswitch_1
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->z:I
+
+    goto :goto_2
+
+    .line 254
+    :pswitch_2
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->y:I
+
+    goto :goto_2
+
+    .line 250
+    :pswitch_3
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->x:I
+
+    goto :goto_2
+
+    .line 246
+    :pswitch_4
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->w:I
+
+    goto :goto_2
+
+    .line 242
+    :pswitch_5
+    iput p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->v:I
+
+    :goto_2
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x7ccd13bd -> :sswitch_7
+        -0x618283c2 -> :sswitch_6
+        -0x37592faf -> :sswitch_5
+        -0x1816d0d8 -> :sswitch_4
+        0xc440f7a -> :sswitch_3
+        0x3566c7a6 -> :sswitch_2
+        0x47fc7315 -> :sswitch_1
+        0x5d090347 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method public a(Ljava/util/List;)V
@@ -204,7 +643,7 @@
         }
     .end annotation
 
-    .line 42
+    .line 54
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->b:Ljava/util/List;
 
     return-void
@@ -213,8 +652,8 @@
 .method public a(Z)V
     .locals 0
 
-    .line 114
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:Z
+    .line 142
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->s:Z
 
     return-void
 .end method
@@ -224,79 +663,46 @@
 
     if-eqz p1, :cond_0
 
-    .line 166
+    .line 273
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->b:Ljava/util/List;
 
-    .line 167
+    .line 274
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a()Ljava/util/List;
 
     move-result-object v1
 
     if-ne v0, v1, :cond_0
 
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:I
-
-    .line 168
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:I
-
-    .line 169
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
 
-    .line 170
+    .line 275
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:F
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h:I
 
-    .line 171
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k()F
-
-    move-result v1
-
-    cmpl-float v0, v0, v1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:F
-
-    .line 172
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l()F
+    .line 276
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g()I
 
     move-result v1
 
-    cmpl-float v0, v0, v1
+    if-ne v0, v1, :cond_0
 
-    if-nez v0, :cond_0
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i:I
+
+    .line 277
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
 
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
 
-    .line 173
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m()F
-
-    move-result v1
-
-    cmpl-float v0, v0, v1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
-
-    .line 174
+    .line 278
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n()F
 
     move-result v1
@@ -305,19 +711,52 @@
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:Z
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->o:F
 
-    .line 175
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->j()Z
+    .line 279
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p()F
+
+    move-result v1
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:F
+
+    .line 280
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q()F
+
+    move-result v1
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:F
+
+    .line 281
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->r()F
+
+    move-result v1
+
+    cmpl-float v0, v0, v1
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->s:Z
+
+    .line 282
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l()Z
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:Z
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->t:Z
 
-    .line 176
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p()Z
+    .line 283
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->t()Z
 
     move-result p1
 
@@ -339,12 +778,12 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Landroid/graphics/Bitmap;",
+            "Lcom/oppo/camera/ui/preview/effect/j;",
             ">;"
         }
     .end annotation
 
-    .line 46
+    .line 58
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->c:Ljava/util/List;
 
     return-object v0
@@ -353,8 +792,8 @@
 .method public b(F)V
     .locals 0
 
-    .line 130
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:F
+    .line 166
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
 
     return-void
 .end method
@@ -362,8 +801,17 @@
 .method public b(I)V
     .locals 0
 
-    .line 74
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:I
+    .line 102
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h:I
+
+    return-void
+.end method
+
+.method public b(Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    .line 86
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:Landroid/graphics/Bitmap;
 
     return-void
 .end method
@@ -374,12 +822,12 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Landroid/graphics/Bitmap;",
+            "Lcom/oppo/camera/ui/preview/effect/j;",
             ">;)V"
         }
     .end annotation
 
-    .line 50
+    .line 62
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->c:Ljava/util/List;
 
     return-void
@@ -388,17 +836,25 @@
 .method public b(Z)V
     .locals 0
 
-    .line 162
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:Z
+    .line 150
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->u:Z
 
     return-void
 .end method
 
-.method public c()Landroid/graphics/Bitmap;
+.method public c()Ljava/util/List;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List<",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
 
-    .line 54
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Landroid/graphics/Bitmap;
+    .line 66
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Ljava/util/List;
 
     return-object v0
 .end method
@@ -406,8 +862,8 @@
 .method public c(F)V
     .locals 0
 
-    .line 138
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
+    .line 174
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->o:F
 
     return-void
 .end method
@@ -415,26 +871,52 @@
 .method public c(I)V
     .locals 0
 
-    .line 82
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
+    .line 110
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i:I
 
     return-void
 .end method
 
-.method public d()I
+.method public c(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Landroid/graphics/Bitmap;",
+            ">;)V"
+        }
+    .end annotation
+
+    .line 70
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public c(Z)V
+    .locals 0
+
+    .line 206
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->t:Z
+
+    return-void
+.end method
+
+.method public d()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 62
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:I
+    .line 74
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:Landroid/graphics/Bitmap;
 
-    return v0
+    return-object v0
 .end method
 
 .method public d(F)V
     .locals 0
 
-    .line 146
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
+    .line 182
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:F
 
     return-void
 .end method
@@ -442,26 +924,26 @@
 .method public d(I)V
     .locals 0
 
-    .line 90
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h:I
+    .line 118
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->j:I
 
     return-void
 .end method
 
-.method public e()I
+.method public e()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 70
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:I
+    .line 82
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:Landroid/graphics/Bitmap;
 
-    return v0
+    return-object v0
 .end method
 
 .method public e(F)V
     .locals 0
 
-    .line 154
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->o:F
+    .line 190
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:F
 
     return-void
 .end method
@@ -469,8 +951,8 @@
 .method public e(I)V
     .locals 0
 
-    .line 98
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i:I
+    .line 126
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:I
 
     return-void
 .end method
@@ -478,17 +960,26 @@
 .method public f()I
     .locals 1
 
-    .line 78
+    .line 90
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
 
     return v0
 .end method
 
+.method public f(F)V
+    .locals 0
+
+    .line 198
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->r:F
+
+    return-void
+.end method
+
 .method public f(I)V
     .locals 0
 
-    .line 106
-    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->j:I
+    .line 134
+    iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:I
 
     return-void
 .end method
@@ -496,7 +987,7 @@
 .method public g()I
     .locals 1
 
-    .line 86
+    .line 98
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h:I
 
     return v0
@@ -505,7 +996,7 @@
 .method public h()I
     .locals 1
 
-    .line 94
+    .line 106
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i:I
 
     return v0
@@ -514,44 +1005,44 @@
 .method public i()I
     .locals 1
 
-    .line 102
+    .line 114
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->j:I
 
     return v0
 .end method
 
-.method public j()Z
+.method public j()I
     .locals 1
 
-    .line 110
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:Z
+    .line 122
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:I
 
     return v0
 .end method
 
-.method public k()F
+.method public k()I
     .locals 1
 
-    .line 118
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:F
+    .line 130
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:I
 
     return v0
 .end method
 
-.method public l()F
+.method public l()Z
     .locals 1
 
-    .line 126
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:F
+    .line 138
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->s:Z
 
     return v0
 .end method
 
-.method public m()F
+.method public m()Z
     .locals 1
 
-    .line 134
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
+    .line 146
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->u:Z
 
     return v0
 .end method
@@ -559,8 +1050,8 @@
 .method public n()F
     .locals 1
 
-    .line 142
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
+    .line 154
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
 
     return v0
 .end method
@@ -568,17 +1059,53 @@
 .method public o()F
     .locals 1
 
-    .line 150
+    .line 162
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
+
+    return v0
+.end method
+
+.method public p()F
+    .locals 1
+
+    .line 170
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->o:F
 
     return v0
 .end method
 
-.method public p()Z
+.method public q()F
     .locals 1
 
-    .line 158
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:Z
+    .line 178
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:F
+
+    return v0
+.end method
+
+.method public r()F
+    .locals 1
+
+    .line 186
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:F
+
+    return v0
+.end method
+
+.method public s()F
+    .locals 1
+
+    .line 194
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->r:F
+
+    return v0
+.end method
+
+.method public t()Z
+    .locals 1
+
+    .line 202
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->t:Z
 
     return v0
 .end method
@@ -586,34 +1113,41 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .line 185
+    .line 292
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 187
+    .line 294
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a:Ljava/lang/String;
 
     const-string v2, "mModelName"
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 188
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->c:Ljava/util/List;
+    .line 295
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Ljava/util/List;
 
     const-string v2, "mBitmaps"
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 189
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->d:Landroid/graphics/Bitmap;
+    .line 296
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:Landroid/graphics/Bitmap;
 
     const-string v2, "mHighlightBmp"
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 190
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->e:I
+    .line 297
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:Landroid/graphics/Bitmap;
+
+    const-string v2, "mHighlightBmpInverse"
+
+    invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 298
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -623,8 +1157,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 191
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->f:I
+    .line 299
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->h:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -634,8 +1168,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 192
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->g:I
+    .line 300
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -645,8 +1179,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 193
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->j:I
+    .line 301
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -656,8 +1190,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 194
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k:F
+    .line 302
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -667,8 +1201,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 195
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->l:F
+    .line 303
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->o:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -678,8 +1212,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 196
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->m:F
+    .line 304
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -689,8 +1223,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 197
-    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->n:F
+    .line 305
+    iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -700,8 +1234,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 198
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->p:Z
+    .line 306
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->s:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -711,8 +1245,8 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 199
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->q:Z
+    .line 307
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/f;->t:Z
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -722,7 +1256,7 @@
 
     invoke-direct {p0, v0, v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->a(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 201
+    .line 309
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

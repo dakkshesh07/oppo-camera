@@ -353,9 +353,9 @@
     .line 67
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mOldMaxLifecycleStates:[I
 
-    iget-object v4, v3, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/e$b;
+    iget-object v4, v3, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v4}, Landroidx/lifecycle/e$b;->ordinal()I
+    invoke-virtual {v4}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
 
     move-result v4
 
@@ -364,9 +364,9 @@
     .line 68
     iget-object v2, p0, Landroidx/fragment/app/BackStackState;->mCurrentMaxLifecycleStates:[I
 
-    iget-object v3, v3, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/e$b;
+    iget-object v3, v3, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v3}, Landroidx/lifecycle/e$b;->ordinal()I
+    invoke-virtual {v3}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
 
     move-result v3
 
@@ -564,7 +564,7 @@
 
     .line 117
     :goto_1
-    invoke-static {}, Landroidx/lifecycle/e$b;->values()[Landroidx/lifecycle/e$b;
+    invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v1
 
@@ -574,10 +574,10 @@
 
     aget-object v1, v1, v4
 
-    iput-object v1, v3, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/e$b;
+    iput-object v1, v3, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/Lifecycle$State;
 
     .line 118
-    invoke-static {}, Landroidx/lifecycle/e$b;->values()[Landroidx/lifecycle/e$b;
+    invoke-static {}, Landroidx/lifecycle/Lifecycle$State;->values()[Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v1
 
@@ -587,7 +587,7 @@
 
     aget-object v1, v1, v4
 
-    iput-object v1, v3, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/e$b;
+    iput-object v1, v3, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/Lifecycle$State;
 
     .line 119
     iget-object v1, p0, Landroidx/fragment/app/BackStackState;->mOps:[I

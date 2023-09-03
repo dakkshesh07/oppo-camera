@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/FaceView;->i()V
+    value = Lcom/oppo/camera/ui/preview/FaceView;->k()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/FaceView;)V
     .locals 0
 
-    .line 735
+    .line 847
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 738
+    .line 850
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
@@ -49,7 +49,7 @@
 
     move-result p1
 
-    .line 740
+    .line 852
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/preview/FaceView;->a(Lcom/oppo/camera/ui/preview/FaceView;)Z
@@ -66,7 +66,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 741
+    .line 853
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/preview/FaceView;->b(Lcom/oppo/camera/ui/preview/FaceView;)Landroid/animation/ValueAnimator;
@@ -77,7 +77,7 @@
 
     return-void
 
-    .line 745
+    .line 857
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
@@ -103,7 +103,7 @@
 
     goto :goto_0
 
-    .line 749
+    .line 861
     :cond_1
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
@@ -121,7 +121,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 750
+    .line 862
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/preview/FaceView;->b(Lcom/oppo/camera/ui/preview/FaceView;)Landroid/animation/ValueAnimator;
@@ -132,13 +132,13 @@
 
     return-void
 
-    .line 754
+    .line 866
     :cond_2
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-static {v0, p1}, Lcom/oppo/camera/ui/preview/FaceView;->a(Lcom/oppo/camera/ui/preview/FaceView;I)V
 
-    .line 755
+    .line 867
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$1;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/preview/FaceView;->invalidate()V

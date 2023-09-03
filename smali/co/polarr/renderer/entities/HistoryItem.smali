@@ -59,7 +59,7 @@
 
     iput-object p3, p0, Lco/polarr/renderer/entities/HistoryItem;->changed:Ljava/lang/String;
 
-    invoke-static {p2}, La/a/a/e/g;->b(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, La/a/b/e/g;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

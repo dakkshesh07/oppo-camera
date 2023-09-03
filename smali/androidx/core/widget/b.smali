@@ -3,8 +3,16 @@
 .source "AutoSizeableTextView.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field public static final d:Z
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 
 # direct methods

@@ -28,7 +28,7 @@
 
     const v1, 0x1010092
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -68,7 +68,7 @@
 
     const/4 p4, 0x0
 
-    invoke-static {p1, p2, p3, p4}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, p4}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 

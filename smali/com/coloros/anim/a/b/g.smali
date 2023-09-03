@@ -9,7 +9,7 @@
         value = {
             "Ljava/util/List<",
             "Lcom/coloros/anim/a/b/a<",
-            "Lcom/coloros/anim/c/b/l;",
+            "Lcom/coloros/anim/model/content/h;",
             "Landroid/graphics/Path;",
             ">;>;"
         }
@@ -32,7 +32,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/b/g;",
+            "Lcom/coloros/anim/model/content/Mask;",
             ">;"
         }
     .end annotation
@@ -46,7 +46,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/b/g;",
+            "Lcom/coloros/anim/model/content/Mask;",
             ">;)V"
         }
     .end annotation
@@ -96,13 +96,13 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/coloros/anim/c/b/g;
+    check-cast v2, Lcom/coloros/anim/model/content/Mask;
 
-    invoke-virtual {v2}, Lcom/coloros/anim/c/b/g;->b()Lcom/coloros/anim/c/a/h;
+    invoke-virtual {v2}, Lcom/coloros/anim/model/content/Mask;->b()Lcom/coloros/anim/model/a/h;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/coloros/anim/c/a/h;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v2}, Lcom/coloros/anim/model/a/h;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v2
 
@@ -113,16 +113,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/coloros/anim/c/b/g;
+    check-cast v1, Lcom/coloros/anim/model/content/Mask;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/b/g;->c()Lcom/coloros/anim/c/a/d;
+    invoke-virtual {v1}, Lcom/coloros/anim/model/content/Mask;->c()Lcom/coloros/anim/model/a/d;
 
     move-result-object v1
 
     .line 24
     iget-object v2, p0, Lcom/coloros/anim/a/b/g;->b:Ljava/util/List;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/a/d;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v1}, Lcom/coloros/anim/model/a/d;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v1
 
@@ -144,7 +144,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/b/g;",
+            "Lcom/coloros/anim/model/content/Mask;",
             ">;"
         }
     .end annotation
@@ -162,7 +162,7 @@
             "()",
             "Ljava/util/List<",
             "Lcom/coloros/anim/a/b/a<",
-            "Lcom/coloros/anim/c/b/l;",
+            "Lcom/coloros/anim/model/content/h;",
             "Landroid/graphics/Path;",
             ">;>;"
         }

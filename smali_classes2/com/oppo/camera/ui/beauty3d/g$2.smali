@@ -3,7 +3,7 @@
 .source "Beauty3DUI.java"
 
 # interfaces
-.implements Lcom/oppo/camera/ui/beauty3d/h;
+.implements Lcom/oppo/camera/ui/beauty3d/i;
 
 
 # annotations
@@ -98,12 +98,12 @@
     const-string v1, "onSave"
 
     .line 106
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 108
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/g$2;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/g;->b(Lcom/oppo/camera/ui/beauty3d/g;)Lcom/oppo/camera/c/a;
+    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/g;->b(Lcom/oppo/camera/ui/beauty3d/g;)Lcom/oppo/camera/d/a;
 
     move-result-object v0
 
@@ -112,11 +112,11 @@
     .line 109
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/g$2;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/g;->b(Lcom/oppo/camera/ui/beauty3d/g;)Lcom/oppo/camera/c/a;
+    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/g;->b(Lcom/oppo/camera/ui/beauty3d/g;)Lcom/oppo/camera/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oppo/camera/c/a;->d()V
+    invoke-virtual {v0}, Lcom/oppo/camera/d/a;->d()V
 
     .line 112
     :cond_0

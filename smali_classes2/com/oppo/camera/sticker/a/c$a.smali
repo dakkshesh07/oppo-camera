@@ -29,7 +29,7 @@
 
     const-string v0, "content://com.oppo.camera.sticker.db.provider/animoji_info"
 
-    .line 87
+    .line 88
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -38,7 +38,7 @@
 
     const-string v0, "content://com.oppo.camera.sticker.db.provider/animoji_info?notify=true"
 
-    .line 88
+    .line 89
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

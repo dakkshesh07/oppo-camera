@@ -1,5 +1,5 @@
 .class Landroidx/room/MultiInstanceInvalidationService$2;
-.super Landroidx/room/d$a;
+.super Landroidx/room/IMultiInstanceInvalidationService$Stub;
 .source "MultiInstanceInvalidationService.java"
 
 
@@ -25,14 +25,14 @@
     .line 61
     iput-object p1, p0, Landroidx/room/MultiInstanceInvalidationService$2;->a:Landroidx/room/MultiInstanceInvalidationService;
 
-    invoke-direct {p0}, Landroidx/room/d$a;-><init>()V
+    invoke-direct {p0}, Landroidx/room/IMultiInstanceInvalidationService$Stub;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/room/c;Ljava/lang/String;)I
+.method public a(Landroidx/room/IMultiInstanceInvalidationCallback;Ljava/lang/String;)I
     .locals 5
 
     const/4 v0, 0x0
@@ -229,10 +229,10 @@
 
     move-result-object v4
 
-    check-cast v4, Landroidx/room/c;
+    check-cast v4, Landroidx/room/IMultiInstanceInvalidationCallback;
 
     .line 117
-    invoke-interface {v4, p2}, Landroidx/room/c;->a([Ljava/lang/String;)V
+    invoke-interface {v4, p2}, Landroidx/room/IMultiInstanceInvalidationCallback;->a([Ljava/lang/String;)V
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -295,7 +295,7 @@
     throw p1
 .end method
 
-.method public a(Landroidx/room/c;I)V
+.method public a(Landroidx/room/IMultiInstanceInvalidationCallback;I)V
     .locals 2
 
     .line 89

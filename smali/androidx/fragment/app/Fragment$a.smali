@@ -43,13 +43,13 @@
 
 .field n:Ljava/lang/Boolean;
 
-.field o:Landroidx/core/app/l;
+.field o:Landroidx/core/app/m;
 
-.field p:Landroidx/core/app/l;
+.field p:Landroidx/core/app/m;
 
 .field q:Z
 
-.field r:Landroidx/fragment/app/Fragment$c;
+.field r:Landroidx/fragment/app/Fragment$b;
 
 .field s:Z
 
@@ -88,10 +88,10 @@
     iput-object v1, p0, Landroidx/fragment/app/Fragment$a;->l:Ljava/lang/Object;
 
     .line 3027
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$a;->o:Landroidx/core/app/l;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$a;->o:Landroidx/core/app/m;
 
     .line 3028
-    iput-object v0, p0, Landroidx/fragment/app/Fragment$a;->p:Landroidx/core/app/l;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment$a;->p:Landroidx/core/app/m;
 
     return-void
 .end method

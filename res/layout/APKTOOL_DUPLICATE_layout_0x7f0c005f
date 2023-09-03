@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coui.appcompat.widget.popupwindow.RoundFrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:APKTOOL_DUPLICATE_attr_0x7f0404ce="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070249"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.coui.appcompat.widget.COUIForegroundListView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900d0" android:background="@android:color/transparent" android:scrollbars="none" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080299" android:divider="@null" android:overScrollMode="ifContentScrolls" />
+</com.coui.appcompat.widget.popupwindow.RoundFrameLayout>

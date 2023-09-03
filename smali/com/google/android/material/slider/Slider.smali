@@ -449,7 +449,7 @@
     .line 400
     iget-object p1, p0, Lcom/google/android/material/slider/Slider;->accessibilityHelper:Lcom/google/android/material/slider/Slider$AccessibilityHelper;
 
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 403
     invoke-virtual {p0}, Lcom/google/android/material/slider/Slider;->getContext()Landroid/content/Context;
@@ -1679,7 +1679,7 @@
     move-result v2
 
     .line 1408
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v3
 
@@ -1739,7 +1739,7 @@
     move-result-wide v0
 
     .line 1706
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v2
 
@@ -2019,7 +2019,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0}, Landroidx/core/b/a;->a(III)I
+    invoke-static {p1, v1, v0}, Landroidx/core/c/a;->a(III)I
 
     move-result p1
 
@@ -2062,7 +2062,7 @@
     div-float/2addr p1, v1
 
     .line 1435
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -4446,7 +4446,7 @@
     if-eqz v0, :cond_a
 
     .line 1892
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p1
 
@@ -4490,7 +4490,7 @@
 
     iget v0, p0, Lcom/google/android/material/slider/Slider;->valueTo:F
 
-    invoke-static {p1, p2, v0}, Landroidx/core/b/a;->a(FFF)F
+    invoke-static {p1, p2, v0}, Landroidx/core/c/a;->a(FFF)F
 
     move-result p1
 

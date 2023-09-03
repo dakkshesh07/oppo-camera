@@ -13,6 +13,9 @@
     }
 .end annotation
 
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 
 # static fields
 .field public static final CREATOR:Landroid/os/Parcelable$Creator;
@@ -27,7 +30,7 @@
 
 
 # instance fields
-.field private final mParcel:Landroidx/versionedparcelable/c;
+.field private final mParcel:Landroidx/versionedparcelable/b;
 
 
 # direct methods
@@ -51,27 +54,27 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 39
-    new-instance v0, Landroidx/versionedparcelable/b;
+    new-instance v0, Landroidx/versionedparcelable/a;
 
-    invoke-direct {v0, p1}, Landroidx/versionedparcelable/b;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Landroidx/versionedparcelable/a;-><init>(Landroid/os/Parcel;)V
 
-    invoke-virtual {v0}, Landroidx/versionedparcelable/b;->j()Landroidx/versionedparcelable/c;
+    invoke-virtual {v0}, Landroidx/versionedparcelable/a;->j()Landroidx/versionedparcelable/b;
 
     move-result-object p1
 
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/c;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/b;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/versionedparcelable/c;)V
+.method public constructor <init>(Landroidx/versionedparcelable/b;)V
     .locals 0
 
     .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 35
-    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/c;
+    iput-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/b;
 
     return-void
 .end method
@@ -86,18 +89,18 @@
     return v0
 .end method
 
-.method public getVersionedParcel()Landroidx/versionedparcelable/c;
+.method public getVersionedParcel()Landroidx/versionedparcelable/b;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
-            "Landroidx/versionedparcelable/c;",
+            "Landroidx/versionedparcelable/b;",
             ">()TT;"
         }
     .end annotation
 
     .line 46
-    iget-object v0, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/c;
+    iget-object v0, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/b;
 
     return-object v0
 .end method
@@ -106,14 +109,14 @@
     .locals 0
 
     .line 56
-    new-instance p2, Landroidx/versionedparcelable/b;
+    new-instance p2, Landroidx/versionedparcelable/a;
 
-    invoke-direct {p2, p1}, Landroidx/versionedparcelable/b;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {p2, p1}, Landroidx/versionedparcelable/a;-><init>(Landroid/os/Parcel;)V
 
     .line 57
-    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/c;
+    iget-object p1, p0, Landroidx/versionedparcelable/ParcelImpl;->mParcel:Landroidx/versionedparcelable/b;
 
-    invoke-virtual {p2, p1}, Landroidx/versionedparcelable/b;->a(Landroidx/versionedparcelable/c;)V
+    invoke-virtual {p2, p1}, Landroidx/versionedparcelable/a;->a(Landroidx/versionedparcelable/b;)V
 
     return-void
 .end method

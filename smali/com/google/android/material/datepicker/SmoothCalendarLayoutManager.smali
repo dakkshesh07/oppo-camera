@@ -33,7 +33,7 @@
     invoke-direct {p2, p0, p1}, Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager$1;-><init>(Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager;Landroid/content/Context;)V
 
     .line 48
-    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/j;->setTargetPosition(I)V
+    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/m;->setTargetPosition(I)V
 
     .line 49
     invoke-virtual {p0, p2}, Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager;->startSmoothScroll(Landroidx/recyclerview/widget/RecyclerView$s;)V

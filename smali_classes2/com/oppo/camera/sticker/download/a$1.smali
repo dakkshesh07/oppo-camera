@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/sticker/download/a;Landroid/content/Context;)V
     .locals 0
 
-    .line 373
+    .line 389
     iput-object p1, p0, Lcom/oppo/camera/sticker/download/a$1;->b:Lcom/oppo/camera/sticker/download/a;
 
     iput-object p2, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 7
 
-    .line 376
+    .line 392
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/a$1;->b:Lcom/oppo/camera/sticker/download/a;
 
     invoke-static {v0}, Lcom/oppo/camera/sticker/download/a;->a(Lcom/oppo/camera/sticker/download/a;)Ljava/lang/Object;
@@ -51,7 +51,7 @@
 
     monitor-enter v0
 
-    .line 377
+    .line 393
     :try_start_0
     iget-object v1, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
@@ -61,7 +61,7 @@
 
     const-string v2, "DownloadManagerHelper"
 
-    .line 379
+    .line 395
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -80,9 +80,9 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 381
+    .line 397
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -101,7 +101,7 @@
 
     check-cast v2, Lcom/oppo/camera/sticker/data/StickerItem;
 
-    .line 382
+    .line 398
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerItem;->getDownloadUid()Ljava/lang/String;
 
     move-result-object v3
@@ -114,7 +114,7 @@
 
     const-string v3, "DownloadManagerHelper"
 
-    .line 383
+    .line 399
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -129,9 +129,9 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 386
+    .line 402
     iget-object v3, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
     invoke-static {v3, v2}, Lcom/oppo/camera/sticker/a/b;->b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItem;)V
@@ -141,7 +141,7 @@
     :cond_1
     const-string v3, "DownloadManagerHelper"
 
-    .line 389
+    .line 405
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,27 +156,27 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
+    .line 408
     iget-object v3, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/oppo/providers/downloads/DownloadManager;->getDownloadManagerInstance(Landroid/content/Context;)Lcom/oppo/providers/downloads/DownloadManager;
+    invoke-static {v3}, Lcom/oplus/b/a/a;->a(Landroid/content/Context;)Lcom/oplus/b/a/a;
 
     move-result-object v3
 
-    .line 393
+    .line 409
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerItem;->getDownloadUid()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/oppo/providers/downloads/DownloadManager;->getDownloadDataWithUuid(Ljava/lang/String;)Lcom/android/providers/downloads/DownloadInfoData;
+    invoke-virtual {v3, v4}, Lcom/oplus/b/a/a;->a(Ljava/lang/String;)Lcom/android/providers/downloads/DownloadInfoData;
 
     move-result-object v3
 
     const-string v4, "DownloadManagerHelper"
 
-    .line 396
+    .line 412
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,18 +191,18 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v3, :cond_3
 
-    .line 400
+    .line 416
     iget v4, v3, Lcom/android/providers/downloads/DownloadInfoData;->mStatus:I
 
     const/16 v5, 0x8
 
     if-ne v4, v5, :cond_2
 
-    .line 401
+    .line 417
     iget-object v4, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
     move-object v5, v2
@@ -217,14 +217,14 @@
 
     if-nez v3, :cond_0
 
-    .line 403
+    .line 419
     iget-object v3, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
     invoke-static {v3, v2}, Lcom/oppo/camera/sticker/a/b;->b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItem;)V
 
     goto/16 :goto_0
 
-    .line 406
+    .line 422
     :cond_2
     new-instance v4, Landroid/content/ContentValues;
 
@@ -232,7 +232,7 @@
 
     const-string v5, "download_state"
 
-    .line 407
+    .line 423
     iget v3, v3, Lcom/android/providers/downloads/DownloadInfoData;->mStatus:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -241,17 +241,17 @@
 
     invoke-virtual {v4, v5, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 408
+    .line 424
     iget-object v3, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
     const-string v5, "uuid"
 
-    .line 409
+    .line 425
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 408
+    .line 424
     invoke-static {v3, v5, v2, v4}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)I
 
     goto/16 :goto_0
@@ -259,7 +259,7 @@
     :cond_3
     const-string v3, "DownloadManagerHelper"
 
-    .line 412
+    .line 428
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -274,16 +274,16 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 415
+    .line 431
     iget-object v3, p0, Lcom/oppo/camera/sticker/download/a$1;->a:Landroid/content/Context;
 
     invoke-static {v3, v2}, Lcom/oppo/camera/sticker/a/b;->b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItem;)V
 
     goto/16 :goto_0
 
-    .line 419
+    .line 435
     :cond_4
     monitor-exit v0
 

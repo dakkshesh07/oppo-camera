@@ -549,7 +549,7 @@
     .line 510
     sget-object v0, Landroidx/appcompat/resources/R$styleable;->AnimatedStateListDrawableTransition:[I
 
-    invoke-static {p2, p5, p4, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p2, p5, p4, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -579,11 +579,11 @@
     if-lez v4, :cond_0
 
     .line 520
-    invoke-static {}, Landroidx/appcompat/widget/ai;->a()Landroidx/appcompat/widget/ai;
+    invoke-static {}, Landroidx/appcompat/widget/ah;->a()Landroidx/appcompat/widget/ah;
 
     move-result-object v5
 
-    invoke-virtual {v5, p1, v4}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v5, p1, v4}, Landroidx/appcompat/widget/ah;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -776,7 +776,7 @@
     .line 564
     sget-object v0, Landroidx/appcompat/resources/R$styleable;->AnimatedStateListDrawableItem:[I
 
-    invoke-static {p2, p5, p4, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p2, p5, p4, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -802,11 +802,11 @@
     if-lez v2, :cond_0
 
     .line 572
-    invoke-static {}, Landroidx/appcompat/widget/ai;->a()Landroidx/appcompat/widget/ai;
+    invoke-static {}, Landroidx/appcompat/widget/ah;->a()Landroidx/appcompat/widget/ah;
 
     move-result-object v3
 
-    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/ah;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1034,7 +1034,7 @@
     .line 201
     sget-object v0, Landroidx/appcompat/resources/R$styleable;->AnimatedStateListDrawableCompat:[I
 
-    invoke-static {p2, p5, p4, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p2, p5, p4, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

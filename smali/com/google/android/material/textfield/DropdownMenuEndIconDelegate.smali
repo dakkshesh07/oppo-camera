@@ -353,7 +353,7 @@
     invoke-direct {p3, p2, p4, p4}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     .line 323
-    invoke-static {p1, p3}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, p3}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -388,7 +388,7 @@
     invoke-direct {p2, p3}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
     .line 330
-    invoke-static {p1}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {p1}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result p3
 
@@ -398,7 +398,7 @@
     move-result p4
 
     .line 332
-    invoke-static {p1}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {p1}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v0
 
@@ -408,10 +408,10 @@
     move-result v1
 
     .line 334
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 335
-    invoke-static {p1, p3, p4, v0, v1}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {p1, p3, p4, v0, v1}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     :goto_0
     return-void
@@ -533,7 +533,7 @@
 
     .line 307
     :goto_0
-    invoke-static {p1, p3}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, p3}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1086,7 +1086,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 208
     iget-object v0, p0, Lcom/google/android/material/textfield/DropdownMenuEndIconDelegate;->context:Landroid/content/Context;

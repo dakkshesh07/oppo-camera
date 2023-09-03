@@ -27,22 +27,22 @@
     .line 67
     iget v0, p6, Landroid/graphics/Rect;->left:I
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(I)I
+    invoke-static {v0}, Landroidx/core/util/g;->a(I)I
 
     .line 68
     iget v0, p6, Landroid/graphics/Rect;->top:I
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(I)I
+    invoke-static {v0}, Landroidx/core/util/g;->a(I)I
 
     .line 69
     iget v0, p6, Landroid/graphics/Rect;->right:I
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(I)I
+    invoke-static {v0}, Landroidx/core/util/g;->a(I)I
 
     .line 70
     iget v0, p6, Landroid/graphics/Rect;->bottom:I
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(I)I
+    invoke-static {v0}, Landroidx/core/util/g;->a(I)I
 
     .line 72
     iput-object p6, p0, Lcom/google/android/material/datepicker/CalendarItemStyle;->insets:Landroid/graphics/Rect;
@@ -83,7 +83,7 @@
     const-string v2, "Cannot create a CalendarItemStyle with a styleResId of 0"
 
     .line 87
-    invoke-static {v1, v2}, Landroidx/core/f/f;->a(ZLjava/lang/Object;)V
+    invoke-static {v1, v2}, Landroidx/core/util/g;->a(ZLjava/lang/Object;)V
 
     .line 90
     sget-object v1, Lcom/google/android/material/R$styleable;->MaterialCalendarItem:[I
@@ -340,7 +340,7 @@
 
     invoke-direct/range {v4 .. v9}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
 
-    invoke-static {p1, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method

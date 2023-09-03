@@ -39,10 +39,10 @@
 
 .field j:Ljava/lang/Boolean;
 
-.field final k:Landroidx/b/a;
+.field final k:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Ljava/lang/String;",
             "Ljava/lang/Object;",
             ">;"
@@ -116,11 +116,11 @@
     iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->j:Ljava/lang/Boolean;
 
     .line 1189
-    new-instance v0, Landroidx/b/a;
+    new-instance v0, Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/a;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
     .line 1192
     new-instance v0, Landroidx/vectordrawable/a/a/i$c;
@@ -187,20 +187,20 @@
     iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->j:Ljava/lang/Boolean;
 
     .line 1189
-    new-instance v0, Landroidx/b/a;
+    new-instance v0, Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/a;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
     .line 1217
     new-instance v0, Landroidx/vectordrawable/a/a/i$c;
 
     iget-object v1, p1, Landroidx/vectordrawable/a/a/i$f;->c:Landroidx/vectordrawable/a/a/i$c;
 
-    iget-object v2, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object v2, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0, v1, v2}, Landroidx/vectordrawable/a/a/i$c;-><init>(Landroidx/vectordrawable/a/a/i$c;Landroidx/b/a;)V
+    invoke-direct {v0, v1, v2}, Landroidx/vectordrawable/a/a/i$c;-><init>(Landroidx/vectordrawable/a/a/i$c;Landroidx/collection/ArrayMap;)V
 
     iput-object v0, p0, Landroidx/vectordrawable/a/a/i$f;->c:Landroidx/vectordrawable/a/a/i$c;
 
@@ -263,9 +263,9 @@
     if-eqz v0, :cond_0
 
     .line 1228
-    iget-object v1, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object v1, p0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v1, v0, p0}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p0}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 1230
     :cond_0
@@ -700,9 +700,9 @@
     invoke-virtual {p4, p5, v1}, Landroid/graphics/Path;->addPath(Landroid/graphics/Path;Landroid/graphics/Matrix;)V
 
     .line 1318
-    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->e()Z
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->e()Z
 
     move-result p4
 
@@ -715,7 +715,7 @@
     if-eqz p4, :cond_a
 
     .line 1319
-    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
     .line 1320
     iget-object v4, p0, Landroidx/vectordrawable/a/a/i$f;->b:Landroid/graphics/Paint;
@@ -741,14 +741,14 @@
     iget-object v4, p0, Landroidx/vectordrawable/a/a/i$f;->b:Landroid/graphics/Paint;
 
     .line 1326
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->c()Z
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->c()Z
 
     move-result v5
 
     if-eqz v5, :cond_8
 
     .line 1327
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->a()Landroid/graphics/Shader;
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->a()Landroid/graphics/Shader;
 
     move-result-object p4
 
@@ -781,7 +781,7 @@
     invoke-virtual {v4, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 1334
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->b()I
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->b()I
 
     move-result p4
 
@@ -821,16 +821,16 @@
 
     .line 1342
     :cond_a
-    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->e()Z
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->e()Z
 
     move-result p4
 
     if-eqz p4, :cond_f
 
     .line 1343
-    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object p4, p2, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
     .line 1344
     iget-object v4, p0, Landroidx/vectordrawable/a/a/i$f;->a:Landroid/graphics/Paint;
@@ -883,14 +883,14 @@
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStrokeMiter(F)V
 
     .line 1359
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->c()Z
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->c()Z
 
     move-result v4
 
     if-eqz v4, :cond_e
 
     .line 1360
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->a()Landroid/graphics/Shader;
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->a()Landroid/graphics/Shader;
 
     move-result-object p4
 
@@ -923,7 +923,7 @@
     invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 1367
-    invoke-virtual {p4}, Landroidx/core/content/a/b;->b()I
+    invoke-virtual {p4}, Landroidx/core/a/a/b;->b()I
 
     move-result p4
 

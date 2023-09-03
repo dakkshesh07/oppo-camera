@@ -52,7 +52,7 @@
 .method static constructor <clinit>()V
     .locals 12
 
-    .line 84
+    .line 85
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const/4 v1, 0x0
@@ -67,7 +67,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->INT:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 85
+    .line 86
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const-wide/16 v2, 0x0
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->LONG:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 86
+    .line 87
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const/4 v2, 0x0
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->FLOAT:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 87
+    .line 88
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const-wide/16 v5, 0x0
@@ -118,7 +118,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->DOUBLE:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 88
+    .line 89
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -133,7 +133,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->BOOLEAN:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 89
+    .line 90
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const/4 v2, 0x5
@@ -146,7 +146,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->STRING:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 90
+    .line 91
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     sget-object v7, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
@@ -159,7 +159,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->BYTE_STRING:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 91
+    .line 92
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const/4 v7, 0x0
@@ -172,7 +172,7 @@
 
     sput-object v0, Lcom/google/protobuf/WireFormat$JavaType;->ENUM:Lcom/google/protobuf/WireFormat$JavaType;
 
-    .line 92
+    .line 93
     new-instance v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     const/16 v10, 0x8
@@ -185,7 +185,7 @@
 
     const/16 v0, 0x9
 
-    .line 83
+    .line 84
     new-array v0, v0, [Lcom/google/protobuf/WireFormat$JavaType;
 
     sget-object v7, Lcom/google/protobuf/WireFormat$JavaType;->INT:Lcom/google/protobuf/WireFormat$JavaType;
@@ -239,10 +239,10 @@
         }
     .end annotation
 
-    .line 94
+    .line 95
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 95
+    .line 96
     iput-object p3, p0, Lcom/google/protobuf/WireFormat$JavaType;->defaultDefault:Ljava/lang/Object;
 
     return-void
@@ -251,7 +251,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/WireFormat$JavaType;
     .locals 1
 
-    .line 83
+    .line 84
     const-class v0, Lcom/google/protobuf/WireFormat$JavaType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -266,7 +266,7 @@
 .method public static values()[Lcom/google/protobuf/WireFormat$JavaType;
     .locals 1
 
-    .line 83
+    .line 84
     sget-object v0, Lcom/google/protobuf/WireFormat$JavaType;->$VALUES:[Lcom/google/protobuf/WireFormat$JavaType;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/WireFormat$JavaType;->clone()Ljava/lang/Object;
@@ -283,7 +283,7 @@
 .method getDefaultDefault()Ljava/lang/Object;
     .locals 1
 
-    .line 103
+    .line 101
     iget-object v0, p0, Lcom/google/protobuf/WireFormat$JavaType;->defaultDefault:Ljava/lang/Object;
 
     return-object v0

@@ -3,7 +3,7 @@
 .source "BaseTransientBottomBar.java"
 
 # interfaces
-.implements Landroidx/core/g/r;
+.implements Landroidx/core/f/r;
 
 
 # annotations
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 1
 
     .line 389
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$3;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->d()I
 
     move-result v0
 
@@ -50,7 +50,7 @@
     .line 390
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$3;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->a()I
 
     move-result v0
 
@@ -59,7 +59,7 @@
     .line 391
     iget-object p1, p0, Lcom/google/android/material/snackbar/BaseTransientBottomBar$3;->this$0:Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->c()I
 
     move-result v0
 

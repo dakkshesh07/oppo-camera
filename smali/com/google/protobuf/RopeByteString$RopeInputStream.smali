@@ -34,12 +34,12 @@
 .method public constructor <init>(Lcom/google/protobuf/RopeByteString;)V
     .locals 0
 
-    .line 773
+    .line 810
     iput-object p1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->this$0:Lcom/google/protobuf/RopeByteString;
 
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 774
+    .line 811
     invoke-direct {p0}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->initialize()V
 
     return-void
@@ -48,7 +48,7 @@
 .method private advanceIfCurrentPieceFullyRead()V
     .locals 2
 
-    .line 882
+    .line 917
     iget-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
     if-eqz v0, :cond_1
@@ -59,7 +59,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 885
+    .line 920
     iget v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceOffsetInRope:I
 
     add-int/2addr v0, v1
@@ -68,10 +68,10 @@
 
     const/4 v0, 0x0
 
-    .line 886
+    .line 921
     iput v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
 
-    .line 887
+    .line 922
     iget-object v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->pieceIterator:Lcom/google/protobuf/RopeByteString$PieceIterator;
 
     invoke-virtual {v1}, Lcom/google/protobuf/RopeByteString$PieceIterator;->hasNext()Z
@@ -80,7 +80,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 888
+    .line 923
     iget-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->pieceIterator:Lcom/google/protobuf/RopeByteString$PieceIterator;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RopeByteString$PieceIterator;->next()Lcom/google/protobuf/ByteString$LeafByteString;
@@ -89,7 +89,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
-    .line 889
+    .line 924
     iget-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString$LeafByteString;->size()I
@@ -103,10 +103,10 @@
     :cond_0
     const/4 v1, 0x0
 
-    .line 891
+    .line 926
     iput-object v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
-    .line 892
+    .line 927
     iput v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceSize:I
 
     :cond_1
@@ -117,7 +117,7 @@
 .method private initialize()V
     .locals 3
 
-    .line 869
+    .line 905
     new-instance v0, Lcom/google/protobuf/RopeByteString$PieceIterator;
 
     iget-object v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->this$0:Lcom/google/protobuf/RopeByteString;
@@ -128,7 +128,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->pieceIterator:Lcom/google/protobuf/RopeByteString$PieceIterator;
 
-    .line 870
+    .line 906
     iget-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->pieceIterator:Lcom/google/protobuf/RopeByteString$PieceIterator;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RopeByteString$PieceIterator;->next()Lcom/google/protobuf/ByteString$LeafByteString;
@@ -137,7 +137,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
-    .line 871
+    .line 907
     iget-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
     invoke-virtual {v0}, Lcom/google/protobuf/ByteString$LeafByteString;->size()I
@@ -148,10 +148,10 @@
 
     const/4 v0, 0x0
 
-    .line 872
+    .line 908
     iput v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
 
-    .line 873
+    .line 909
     iput v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceOffsetInRope:I
 
     return-void
@@ -167,10 +167,10 @@
     :goto_0
     if-lez p2, :cond_2
 
-    .line 810
+    .line 846
     invoke-direct {p0}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->advanceIfCurrentPieceFullyRead()V
 
-    .line 811
+    .line 847
     iget-object v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
     if-nez v1, :cond_0
@@ -181,7 +181,7 @@
 
     return p1
 
-    .line 819
+    .line 855
     :cond_0
     iget v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceSize:I
 
@@ -189,14 +189,14 @@
 
     sub-int/2addr v1, v2
 
-    .line 820
+    .line 856
     invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result v1
 
     if-eqz p1, :cond_1
 
-    .line 822
+    .line 858
     iget-object v2, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
     iget v3, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
@@ -205,7 +205,7 @@
 
     add-int/2addr v0, v1
 
-    .line 825
+    .line 861
     :cond_1
     iget v2, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
 
@@ -233,14 +233,14 @@
         }
     .end annotation
 
-    .line 845
+    .line 881
     iget v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceOffsetInRope:I
 
     iget v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
 
     add-int/2addr v0, v1
 
-    .line 846
+    .line 882
     iget-object v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->this$0:Lcom/google/protobuf/RopeByteString;
 
     invoke-virtual {v1}, Lcom/google/protobuf/RopeByteString;->size()I
@@ -255,7 +255,7 @@
 .method public mark(I)V
     .locals 1
 
-    .line 857
+    .line 893
     iget p1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceOffsetInRope:I
 
     iget v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
@@ -283,10 +283,10 @@
         }
     .end annotation
 
-    .line 835
+    .line 871
     invoke-direct {p0}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->advanceIfCurrentPieceFullyRead()V
 
-    .line 836
+    .line 872
     iget-object v0, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPiece:Lcom/google/protobuf/ByteString$LeafByteString;
 
     if-nez v0, :cond_0
@@ -295,7 +295,7 @@
 
     return v0
 
-    .line 839
+    .line 875
     :cond_0
     iget v1, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->currentPieceIndex:I
 
@@ -321,21 +321,21 @@
 
     if-ltz p3, :cond_0
 
-    .line 781
+    .line 818
     array-length v0, p1
 
     sub-int/2addr v0, p2
 
     if-gt p3, v0, :cond_0
 
-    .line 784
+    .line 821
     invoke-direct {p0, p1, p2, p3}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->readSkipInternal([BII)I
 
     move-result p1
 
     return p1
 
-    .line 782
+    .line 819
     :cond_0
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -343,7 +343,7 @@
 
     throw p1
 
-    .line 780
+    .line 817
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -357,7 +357,7 @@
 
     monitor-enter p0
 
-    .line 863
+    .line 899
     :try_start_0
     invoke-direct {p0}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->initialize()V
 
@@ -365,14 +365,14 @@
 
     const/4 v1, 0x0
 
-    .line 864
+    .line 900
     iget v2, p0, Lcom/google/protobuf/RopeByteString$RopeInputStream;->mark:I
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->readSkipInternal([BII)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 865
+    .line 901
     monitor-exit p0
 
     return-void
@@ -409,7 +409,7 @@
 
     long-to-int p1, p1
 
-    .line 794
+    .line 831
     invoke-direct {p0, v0, v1, p1}, Lcom/google/protobuf/RopeByteString$RopeInputStream;->readSkipInternal([BII)I
 
     move-result p1
@@ -418,7 +418,7 @@
 
     return-wide p1
 
-    .line 790
+    .line 827
     :cond_1
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 

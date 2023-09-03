@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f09012f" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070499" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070499"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.ui.inverse.InverseMakeupItemView android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09012d" android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080382" android:padding="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070496" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070499" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070499" />
+    <TextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060344" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09012e" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070498" android:layout_centerHorizontal="true" style="@style/APKTOOL_DUPLICATE_style_0x7f11014f" />
+</RelativeLayout>

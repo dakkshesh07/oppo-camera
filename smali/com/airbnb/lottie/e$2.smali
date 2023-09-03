@@ -34,7 +34,7 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 494
+    .line 534
     iput-object p1, p0, Lcom/airbnb/lottie/e$2;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public a(Lcom/airbnb/lottie/d;)V
     .locals 1
 
-    .line 497
+    .line 537
     invoke-static {}, Lcom/airbnb/lottie/e;->a()Ljava/util/Map;
 
     move-result-object p1
@@ -62,7 +62,7 @@
 .method public bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .line 494
+    .line 534
     check-cast p1, Lcom/airbnb/lottie/d;
 
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/e$2;->a(Lcom/airbnb/lottie/d;)V

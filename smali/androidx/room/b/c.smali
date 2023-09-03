@@ -3,6 +3,11 @@
 .source "DBUtil.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public static a(Ljava/io/File;)I
     .locals 10
@@ -109,11 +114,11 @@
     throw v0
 .end method
 
-.method public static a(Landroidx/room/i;Landroidx/f/a/e;ZLandroid/os/CancellationSignal;)Landroid/database/Cursor;
+.method public static a(Landroidx/room/RoomDatabase;Landroidx/f/a/e;ZLandroid/os/CancellationSignal;)Landroid/database/Cursor;
     .locals 2
 
     .line 83
-    invoke-virtual {p0, p1, p3}, Landroidx/room/i;->a(Landroidx/f/a/e;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
+    invoke-virtual {p0, p1, p3}, Landroidx/room/RoomDatabase;->a(Landroidx/f/a/e;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 
     move-result-object p0
 

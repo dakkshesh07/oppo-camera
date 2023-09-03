@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 184
+    .line 295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,7 +46,7 @@
         }
     .end annotation
 
-    .line 184
+    .line 295
     invoke-virtual {p0}, Lcom/google/protobuf/UnsafeUtil$1;->run()Lsun/misc/Unsafe;
 
     move-result-object v0
@@ -62,10 +62,10 @@
         }
     .end annotation
 
-    .line 187
+    .line 298
     const-class v0, Lsun/misc/Unsafe;
 
-    .line 189
+    .line 300
     invoke-virtual {v0}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v1
@@ -83,22 +83,22 @@
 
     const/4 v6, 0x1
 
-    .line 190
+    .line 301
     invoke-virtual {v5, v6}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 191
+    .line 302
     invoke-virtual {v5, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
-    .line 192
+    .line 303
     invoke-virtual {v0, v4}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 193
+    .line 304
     invoke-virtual {v0, v4}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

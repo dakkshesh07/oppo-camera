@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="drawable" name="notification_template_icon_bg">#3333b5e5</item>
-    <item type="drawable" name="notification_template_icon_low_bg">#0cffffff</item>
-    <item type="drawable" name="oppo_edittext_background">@drawable/color_edittext_default_background</item>
+    <item type="drawable" name="APKTOOL_DUPLICATE_drawable_0x7f08025f">@drawable/APKTOOL_DUPLICATE_drawable_0x7f080260</item>
+    <item type="drawable" name="APKTOOL_DUPLICATE_drawable_0x7f0804b9">#3333b5e5</item>
+    <item type="drawable" name="APKTOOL_DUPLICATE_drawable_0x7f0804ba">#0cffffff</item>
 </resources>

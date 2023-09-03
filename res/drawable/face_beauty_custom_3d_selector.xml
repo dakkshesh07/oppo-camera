@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
-    <item android:state_selected="true" android:drawable="@drawable/face_beauty_custom_3d_light" />
-    <item android:drawable="@drawable/face_beauty_custom_3d_inverse" camera:state_inverse_color="true" />
-    <item android:drawable="@drawable/face_beauty_custom_3d_dark" />
-</selector>

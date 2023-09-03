@@ -3,6 +3,11 @@
 .source "ShowableListMenu.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # virtual methods
 .method public abstract a_()V
 .end method

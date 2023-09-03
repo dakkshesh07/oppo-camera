@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuViewAccessibilityDelegate;,
@@ -185,11 +188,11 @@
     return p1
 .end method
 
-.method public dispatchApplyWindowInsets(Landroidx/core/g/ae;)V
+.method public dispatchApplyWindowInsets(Landroidx/core/f/ae;)V
     .locals 4
 
     .line 349
-    invoke-virtual {p1}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {p1}, Landroidx/core/f/ae;->b()I
 
     move-result v0
 
@@ -212,7 +215,7 @@
 
     move-result v1
 
-    invoke-virtual {p1}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {p1}, Landroidx/core/f/ae;->d()I
 
     move-result v2
 
@@ -223,7 +226,7 @@
     .line 358
     iget-object v0, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->headerLayout:Landroid/widget/LinearLayout;
 
-    invoke-static {v0, p1}, Landroidx/core/g/w;->b(Landroid/view/View;Landroidx/core/g/ae;)Landroidx/core/g/ae;
+    invoke-static {v0, p1}, Landroidx/core/f/w;->b(Landroid/view/View;Landroidx/core/f/ae;)Landroidx/core/f/ae;
 
     return-void
 .end method
@@ -377,7 +380,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuViewAccessibilityDelegate;-><init>(Lcom/google/android/material/internal/NavigationMenuPresenter;Landroidx/recyclerview/widget/RecyclerView;)V
 
-    invoke-virtual {p1, v0}, Lcom/google/android/material/internal/NavigationMenuView;->setAccessibilityDelegateCompat(Landroidx/recyclerview/widget/p;)V
+    invoke-virtual {p1, v0}, Lcom/google/android/material/internal/NavigationMenuView;->setAccessibilityDelegateCompat(Landroidx/recyclerview/widget/s;)V
 
     .line 111
     iget-object p1, p0, Lcom/google/android/material/internal/NavigationMenuPresenter;->adapter:Lcom/google/android/material/internal/NavigationMenuPresenter$NavigationMenuAdapter;

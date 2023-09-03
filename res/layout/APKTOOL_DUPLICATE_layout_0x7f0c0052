@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout android:gravity="center_vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900d1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701ac">
+        <TextView android:id="@android:id/title" android:paddingTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701af" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701ab" app:APKTOOL_DUPLICATE_attr_0x7f0403f9="APKTOOL_DUPLICATE_id_0x7f090218" app:APKTOOL_DUPLICATE_attr_0x7f0403fc="APKTOOL_DUPLICATE_id_0x7f090218" style="@style/APKTOOL_DUPLICATE_style_0x7f110125" />
+        <LinearLayout android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09010d" android:layout_width="0.0dip" android:layout_height="wrap_content" app:APKTOOL_DUPLICATE_attr_0x7f0403e0="APKTOOL_DUPLICATE_id_0x7f090218" app:APKTOOL_DUPLICATE_attr_0x7f0403e6="APKTOOL_DUPLICATE_id_0x7f090218" app:APKTOOL_DUPLICATE_attr_0x7f0403f9="APKTOOL_DUPLICATE_id_0x7f090218" app:APKTOOL_DUPLICATE_attr_0x7f0403fb="@android:id/title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

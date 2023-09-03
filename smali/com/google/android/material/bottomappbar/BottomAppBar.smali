@@ -364,7 +364,7 @@
     .line 272
     iget-object p1, p0, Lcom/google/android/material/bottomappbar/BottomAppBar;->materialShapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 274
     sget p1, Lcom/google/android/material/bottomappbar/BottomAppBar;->DEF_STYLE_RES:I
@@ -1244,7 +1244,7 @@
     .locals 3
 
     .line 619
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1320,7 +1320,7 @@
 
     if-eq v0, p1, :cond_3
 
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 

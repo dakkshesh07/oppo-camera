@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/internal/ViewUtils$RelativePadding;,
@@ -94,7 +97,7 @@
     new-instance v0, Lcom/google/android/material/internal/ViewUtils$RelativePadding;
 
     .line 216
-    invoke-static {p0}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result v1
 
@@ -104,7 +107,7 @@
     move-result v2
 
     .line 218
-    invoke-static {p0}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v3
 
@@ -120,7 +123,7 @@
 
     invoke-direct {v1, p1, v0}, Lcom/google/android/material/internal/ViewUtils$3;-><init>(Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)V
 
-    invoke-static {p0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     .line 231
     invoke-static {p0}, Lcom/google/android/material/internal/ViewUtils;->requestApplyInsetsWhenAttached(Landroid/view/View;)V
@@ -279,7 +282,7 @@
 
     check-cast v1, Landroid/view/View;
 
-    invoke-static {v1}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {v1}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result v1
 
@@ -300,7 +303,7 @@
     .locals 1
 
     .line 73
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p0
 
@@ -384,14 +387,14 @@
     .locals 1
 
     .line 236
-    invoke-static {p0}, Landroidx/core/g/w;->E(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->E(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 238
-    invoke-static {p0}, Landroidx/core/g/w;->s(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->s(Landroid/view/View;)V
 
     goto :goto_0
 

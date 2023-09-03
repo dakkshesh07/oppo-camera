@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.ui.beauty3d.BorderRoundImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f09010b" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07009c" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07009c" android:scaleType="center" android:layout_centerVertical="true" app:APKTOOL_DUPLICATE_attr_0x7f04007d="?APKTOOL_DUPLICATE_attr_0x7f040281" app:APKTOOL_DUPLICATE_attr_0x7f04007e="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07009a" />
+    <TextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700fa" android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:gravity="center" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09010a" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07009c" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700c3" />
+</LinearLayout>

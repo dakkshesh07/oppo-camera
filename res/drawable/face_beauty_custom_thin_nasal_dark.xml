@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:name="vector" android:height="@dimen/svg_icon_more_height" android:width="@dimen/svg_icon_more_width" android:viewportWidth="72.0" android:viewportHeight="72.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:name="path_width" android:pathData="M 29.073 12.013 C 29.207 22.075 27.994 29.149 25.434 33.235 C 23.24 36.124 20.492 38.468 20.109 38.906 C 19.727 39.345 16.719 41.579 17.69 46.562 C 18.337 49.883 20.433 52.21 23.978 53.541 C 24.949 53.734 25.843 53.802 26.661 53.745 C 27.888 53.659 27.82 55.234 28.256 55.886 C 28.692 56.537 31.068 58.79 36.154 59.039 C 42.505 58.967 44.214 54.828 44.522 54.253 C 44.83 53.677 45.353 53.802 46.257 53.745 C 47.162 53.688 52.515 52.769 53.827 48.955 C 55.14 45.141 53.8 40.373 50.146 37.46 C 46.628 34.7 45.419 30.558 45.158 29.679 C 44.898 28.8 42.415 24.026 42.896 12.013" android:strokeColor="@color/camera_white" android:strokeWidth="@integer/svg_icon_strokeWidth_four" />
-    <path android:name="path_width" android:pathData="M 12.387 25.211 L 17.69 30.514 L 12.387 35.817 M 4.962 30.514 L 16.983 30.514 M 59.668 35.821 L 54.365 30.517 L 59.668 25.214 M 67.093 30.517 L 55.072 30.517" android:strokeColor="@color/camera_white" android:strokeWidth="@integer/svg_icon_strokeWidth_three" />
-</vector>

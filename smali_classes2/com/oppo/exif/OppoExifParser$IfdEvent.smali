@@ -24,13 +24,13 @@
 .method constructor <init>(IZ)V
     .locals 0
 
-    .line 887
+    .line 891
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 888
+    .line 892
     iput p1, p0, Lcom/oppo/exif/OppoExifParser$IfdEvent;->ifd:I
 
-    .line 889
+    .line 893
     iput-boolean p2, p0, Lcom/oppo/exif/OppoExifParser$IfdEvent;->isRequested:Z
 
     return-void

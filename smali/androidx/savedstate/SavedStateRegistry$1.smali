@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/savedstate/a;->a(Landroidx/lifecycle/e;Landroid/os/Bundle;)V
+    value = Landroidx/savedstate/a;->a(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,11 +35,11 @@
 
 
 # virtual methods
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     .line 200
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 
@@ -54,7 +54,7 @@
 
     .line 202
     :cond_0
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_1
 

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070168" android:textColor="?APKTOOL_DUPLICATE_attr_0x7f040130" android:ellipsize="marquee" android:gravity="center" android:id="@android:id/text1" android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080206" android:paddingLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070148" android:paddingRight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070148" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070164" android:lineSpacingMultiplier="1.2"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

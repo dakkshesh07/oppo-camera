@@ -1,14 +1,14 @@
 .class Lcom/oppo/camera/ui/preview/p$2;
 .super Ljava/lang/Object;
-.source "VideoRecordingTimeUI.java"
+.source "NormalAISceneUI.java"
 
 # interfaces
-.implements Lcom/oppo/camera/ui/preview/CameraTimeView$a;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/p;->h()V
+    value = Lcom/oppo/camera/ui/preview/p;->k()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/p;)V
     .locals 0
 
-    .line 94
+    .line 131
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/p$2;->a:Lcom/oppo/camera/ui/preview/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,31 +35,33 @@
 
 
 # virtual methods
-.method public a(I)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 98
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p$2;->a:Lcom/oppo/camera/ui/preview/p;
+    .line 139
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/p$2;->a:Lcom/oppo/camera/ui/preview/p;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/p;->b(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+    const/16 v0, 0x8
 
-    move-result-object v0
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/p;->a(Lcom/oppo/camera/ui/preview/p;I)V
 
-    if-eqz v0, :cond_0
+    return-void
+.end method
 
-    .line 99
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/p$2;->a:Lcom/oppo/camera/ui/preview/p;
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/p;->b(Lcom/oppo/camera/ui/preview/p;)Lcom/oppo/camera/ui/preview/CameraTimeView;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
-    neg-int p1, p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/preview/CameraTimeView;->a(I)V
-
-    :cond_0
     return-void
 .end method

@@ -3,7 +3,12 @@
 .source "ActionMenuItem.java"
 
 # interfaces
-.implements Landroidx/core/a/a/b;
+.implements Landroidx/core/b/a/b;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
 
 
 # instance fields
@@ -168,7 +173,7 @@
 
 
 # virtual methods
-.method public a(I)Landroidx/core/a/a/b;
+.method public a(I)Landroidx/core/b/a/b;
     .locals 0
 
     .line 345
@@ -179,7 +184,7 @@
     throw p1
 .end method
 
-.method public a(Landroid/view/View;)Landroidx/core/a/a/b;
+.method public a(Landroid/view/View;)Landroidx/core/b/a/b;
     .locals 0
 
     .line 325
@@ -190,7 +195,7 @@
     throw p1
 .end method
 
-.method public a(Landroidx/core/g/b;)Landroidx/core/a/a/b;
+.method public a(Landroidx/core/f/b;)Landroidx/core/b/a/b;
     .locals 0
 
     .line 355
@@ -201,7 +206,7 @@
     throw p1
 .end method
 
-.method public a(Ljava/lang/CharSequence;)Landroidx/core/a/a/b;
+.method public a(Ljava/lang/CharSequence;)Landroidx/core/b/a/b;
     .locals 0
 
     .line 386
@@ -210,7 +215,7 @@
     return-object p0
 .end method
 
-.method public a()Landroidx/core/g/b;
+.method public a()Landroidx/core/f/b;
     .locals 1
 
     const/4 v0, 0x0
@@ -218,7 +223,7 @@
     return-object v0
 .end method
 
-.method public b(I)Landroidx/core/a/a/b;
+.method public b(I)Landroidx/core/b/a/b;
     .locals 0
 
     .line 360
@@ -227,7 +232,7 @@
     return-object p0
 .end method
 
-.method public b(Ljava/lang/CharSequence;)Landroidx/core/a/a/b;
+.method public b(Ljava/lang/CharSequence;)Landroidx/core/b/a/b;
     .locals 0
 
     .line 397
@@ -545,7 +550,7 @@
     .locals 0
 
     .line 42
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->a(I)Landroidx/core/a/a/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->a(I)Landroidx/core/b/a/b;
 
     move-result-object p1
 
@@ -556,7 +561,7 @@
     .locals 0
 
     .line 42
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->a(Landroid/view/View;)Landroidx/core/a/a/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->a(Landroid/view/View;)Landroidx/core/b/a/b;
 
     move-result-object p1
 
@@ -640,7 +645,7 @@
     .locals 0
 
     .line 42
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->a(Ljava/lang/CharSequence;)Landroidx/core/a/a/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->a(Ljava/lang/CharSequence;)Landroidx/core/b/a/b;
 
     move-result-object p1
 
@@ -678,7 +683,7 @@
     .line 223
     iget-object v0, p0, Landroidx/appcompat/view/menu/a;->l:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -846,7 +851,7 @@
     .locals 0
 
     .line 42
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->b(I)Landroidx/core/a/a/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->b(I)Landroidx/core/b/a/b;
 
     move-result-object p1
 
@@ -894,7 +899,7 @@
     .locals 0
 
     .line 42
-    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->b(Ljava/lang/CharSequence;)Landroidx/core/a/a/b;
+    invoke-virtual {p0, p1}, Landroidx/appcompat/view/menu/a;->b(Ljava/lang/CharSequence;)Landroidx/core/b/a/b;
 
     move-result-object p1
 

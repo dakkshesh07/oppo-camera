@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroid/os/RemoteCallbackList<",
-        "Landroidx/room/c;",
+        "Landroidx/room/IMultiInstanceInvalidationCallback;",
         ">;"
     }
 .end annotation
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method public a(Landroidx/room/c;Ljava/lang/Object;)V
+.method public a(Landroidx/room/IMultiInstanceInvalidationCallback;Ljava/lang/Object;)V
     .locals 0
 
     .line 56
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 52
-    check-cast p1, Landroidx/room/c;
+    check-cast p1, Landroidx/room/IMultiInstanceInvalidationCallback;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/room/MultiInstanceInvalidationService$1;->a(Landroidx/room/c;Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/room/MultiInstanceInvalidationService$1;->a(Landroidx/room/IMultiInstanceInvalidationCallback;Ljava/lang/Object;)V
 
     return-void
 .end method

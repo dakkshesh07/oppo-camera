@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private final b:Landroidx/appcompat/widget/w;
+.field private final b:Landroidx/appcompat/widget/v;
 
 
 # direct methods
@@ -46,7 +46,7 @@
     .locals 2
 
     .line 58
-    invoke-static {p1}, Landroidx/appcompat/widget/ap;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/ao;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -57,24 +57,24 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 62
-    new-instance p1, Landroidx/appcompat/widget/w;
+    new-instance p1, Landroidx/appcompat/widget/v;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/w;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/v;-><init>(Landroid/widget/TextView;)V
 
-    iput-object p1, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/w;
+    iput-object p1, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/v;
 
     .line 63
-    iget-object p1, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/w;
+    iget-object p1, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/v;
 
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/w;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/v;->a(Landroid/util/AttributeSet;I)V
 
     .line 64
-    iget-object p1, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/w;
+    iget-object p1, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/v;
 
-    invoke-virtual {p1}, Landroidx/appcompat/widget/w;->b()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/v;->b()V
 
     .line 66
     invoke-virtual {p0}, Landroidx/appcompat/widget/g;->getContext()Landroid/content/Context;
@@ -85,19 +85,19 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object p1
 
     .line 68
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
     invoke-virtual {p0, p2}, Landroidx/appcompat/widget/g;->setCheckMarkDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 69
-    invoke-virtual {p1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 .end method
@@ -111,12 +111,12 @@
     invoke-super {p0}, Landroid/widget/CheckedTextView;->drawableStateChanged()V
 
     .line 88
-    iget-object v0, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_0
 
     .line 89
-    invoke-virtual {v0}, Landroidx/appcompat/widget/w;->b()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/v;->b()V
 
     :cond_0
     return-void
@@ -175,12 +175,12 @@
     invoke-super {p0, p1, p2}, Landroid/widget/CheckedTextView;->setTextAppearance(Landroid/content/Context;I)V
 
     .line 80
-    iget-object v0, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/g;->b:Landroidx/appcompat/widget/v;
 
     if-eqz v0, :cond_0
 
     .line 81
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/w;->a(Landroid/content/Context;I)V
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/v;->a(Landroid/content/Context;I)V
 
     :cond_0
     return-void

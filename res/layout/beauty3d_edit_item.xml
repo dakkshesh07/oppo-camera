@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="wrap_content" android:layout_height="@dimen/beauty3d_recycler_height"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <com.oppo.camera.ui.beauty3d.BorderRoundImageView android:id="@id/edit_item_view" android:layout_width="@dimen/beauty3d_edit_recyclerview_item_width_height" android:layout_height="@dimen/beauty3d_edit_recyclerview_item_width_height" android:scaleType="center" android:layout_centerVertical="true" app:border_color="@color/camera_white" app:border_radius="@dimen/beauty3d_edit_recyclerview_item_border_radius" app:border_width="@dimen/beauty3d_edit_recyclerview_item_border_width" />
-        <ImageView android:layout_gravity="center" android:id="@id/edit_item_select_image" android:layout_width="@dimen/beauty3d_edit_recyclerview_item_width_height" android:layout_height="@dimen/beauty3d_edit_recyclerview_item_width_height" android:src="@drawable/beauty3d_edit_item_select" android:scaleType="fitXY" android:forceDarkAllowed="false" />
-    </FrameLayout>
-    <TextView android:textSize="@dimen/camera_text_size_smallest" android:textColor="@color/camera_white" android:gravity="center" android:id="@id/edit_item_title" android:layout_width="@dimen/beauty3d_edit_recyclerview_item_width_height" android:layout_height="wrap_content" android:layout_marginTop="@dimen/beauty3d_style_text_margin_top" />
-</LinearLayout>

@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroidx/activity/a;
-.implements Landroidx/lifecycle/f;
+.implements Landroidx/lifecycle/e;
 
 
 # annotations
@@ -21,7 +21,7 @@
 # instance fields
 .field final synthetic a:Landroidx/activity/OnBackPressedDispatcher;
 
-.field private final b:Landroidx/lifecycle/e;
+.field private final b:Landroidx/lifecycle/Lifecycle;
 
 .field private final c:Landroidx/activity/c;
 
@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/e;Landroidx/activity/c;)V
+.method constructor <init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/Lifecycle;Landroidx/activity/c;)V
     .locals 0
 
     .line 220
@@ -38,13 +38,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 221
-    iput-object p2, p0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;->b:Landroidx/lifecycle/e;
+    iput-object p2, p0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;->b:Landroidx/lifecycle/Lifecycle;
 
     .line 222
     iput-object p3, p0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;->c:Landroidx/activity/c;
 
     .line 223
-    invoke-virtual {p2, p0}, Landroidx/lifecycle/e;->a(Landroidx/lifecycle/g;)V
+    invoke-virtual {p2, p0}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/f;)V
 
     return-void
 .end method
@@ -55,9 +55,9 @@
     .locals 1
 
     .line 243
-    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;->b:Landroidx/lifecycle/e;
+    iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;->b:Landroidx/lifecycle/Lifecycle;
 
-    invoke-virtual {v0, p0}, Landroidx/lifecycle/e;->b(Landroidx/lifecycle/g;)V
+    invoke-virtual {v0, p0}, Landroidx/lifecycle/Lifecycle;->b(Landroidx/lifecycle/f;)V
 
     .line 244
     iget-object v0, p0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;->c:Landroidx/activity/c;
@@ -81,11 +81,11 @@
     return-void
 .end method
 
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     .line 229
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 
@@ -104,7 +104,7 @@
 
     .line 231
     :cond_0
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_1
 
@@ -120,7 +120,7 @@
 
     .line 236
     :cond_1
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_DESTROY:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_2
 

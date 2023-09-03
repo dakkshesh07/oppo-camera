@@ -138,7 +138,7 @@
 .method public static writerForAppendable(Ljava/lang/Appendable;)Ljava/io/Writer;
     .locals 1
 
-    .line 77
+    .line 76
     instance-of v0, p0, Ljava/io/Writer;
 
     if-eqz v0, :cond_0

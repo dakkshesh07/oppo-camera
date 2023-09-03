@@ -30,7 +30,7 @@
 .method constructor <init>(Lcom/google/protobuf/DynamicMessage;)V
     .locals 0
 
-    .line 289
+    .line 284
     iput-object p1, p0, Lcom/google/protobuf/DynamicMessage$1;->this$0:Lcom/google/protobuf/DynamicMessage;
 
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
@@ -48,7 +48,7 @@
         }
     .end annotation
 
-    .line 294
+    .line 289
     iget-object v0, p0, Lcom/google/protobuf/DynamicMessage$1;->this$0:Lcom/google/protobuf/DynamicMessage;
 
     invoke-static {v0}, Lcom/google/protobuf/DynamicMessage;->access$200(Lcom/google/protobuf/DynamicMessage;)Lcom/google/protobuf/Descriptors$Descriptor;
@@ -59,14 +59,14 @@
 
     move-result-object v0
 
-    .line 296
+    .line 291
     :try_start_0
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/DynamicMessage$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/AbstractMessage$Builder;
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
+    .line 297
     invoke-virtual {v0}, Lcom/google/protobuf/DynamicMessage$Builder;->buildPartial()Lcom/google/protobuf/DynamicMessage;
 
     move-result-object p1
@@ -76,16 +76,11 @@
     :catch_0
     move-exception p1
 
-    .line 300
+    .line 295
     new-instance p2, Lcom/google/protobuf/InvalidProtocolBufferException;
 
-    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/lang/String;)V
-
-    .line 301
     invoke-virtual {v0}, Lcom/google/protobuf/DynamicMessage$Builder;->buildPartial()Lcom/google/protobuf/DynamicMessage;
 
     move-result-object p1
@@ -99,7 +94,7 @@
     :catch_1
     move-exception p1
 
-    .line 298
+    .line 293
     invoke-virtual {v0}, Lcom/google/protobuf/DynamicMessage$Builder;->buildPartial()Lcom/google/protobuf/DynamicMessage;
 
     move-result-object p2
@@ -119,7 +114,7 @@
         }
     .end annotation
 
-    .line 289
+    .line 284
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DynamicMessage$1;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DynamicMessage;
 
     move-result-object p1

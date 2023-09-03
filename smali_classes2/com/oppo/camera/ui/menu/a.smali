@@ -12,6 +12,8 @@
 
 .field public static final GROUP_TYPE_SHARE_RESOURCE:I = 0x1
 
+.field public static final GROUP_TYPE_TIME_LAPSE_SPEED:I = 0x4
+
 
 # instance fields
 .field private mDrawerType:I
@@ -55,73 +57,73 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 42
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 25
+    .line 26
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionKey:Ljava/lang/String;
 
-    .line 26
+    .line 27
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionTitle:Ljava/lang/String;
 
-    .line 27
+    .line 28
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionDefaultValue:Ljava/lang/String;
 
-    .line 28
+    .line 29
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
-    .line 29
+    .line 30
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mbOptionOnOff:Z
 
-    .line 30
+    .line 31
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionSingleIcon:Landroid/graphics/Bitmap;
 
-    .line 31
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOnAnimationIcon:Landroid/graphics/Bitmap;
-
     .line 32
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOffAnimationIcon:Landroid/graphics/Bitmap;
-
-    .line 33
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionExpandIcon:Landroid/graphics/drawable/Drawable;
 
+    .line 33
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOffAnimationIcon:Landroid/graphics/Bitmap;
+
     .line 34
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mbSwitchIconNeedAnim:Z
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOnAnimationIcon:Landroid/graphics/Bitmap;
 
     .line 35
-    iput v1, p0, Lcom/oppo/camera/ui/menu/a;->mGroupType:I
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mbSwitchIconNeedAnim:Z
 
     .line 36
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleMode:Z
+    iput v1, p0, Lcom/oppo/camera/ui/menu/a;->mGroupType:I
 
     .line 37
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleMode:Z
+
+    .line 38
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleColorChangeable:Z
 
-    .line 40
+    .line 41
     iput v1, p0, Lcom/oppo/camera/ui/menu/a;->mDrawerType:I
 
-    .line 43
+    .line 44
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionKey:Ljava/lang/String;
 
-    .line 44
+    .line 45
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionTitle:Ljava/lang/String;
 
-    .line 45
+    .line 46
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionDefaultValue:Ljava/lang/String;
 
-    .line 46
+    .line 47
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
-    .line 47
+    .line 48
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/a;->mbOptionOnOff:Z
 
     const/4 v0, -0x1
 
-    .line 48
+    .line 49
     iput v0, p0, Lcom/oppo/camera/ui/menu/a;->mDrawerType:I
 
     return-void
@@ -132,7 +134,7 @@
 .method public getGroupType()I
     .locals 1
 
-    .line 92
+    .line 93
     iget v0, p0, Lcom/oppo/camera/ui/menu/a;->mGroupType:I
 
     return v0
@@ -141,7 +143,7 @@
 .method public getImageTitleColorChangeable()Z
     .locals 1
 
-    .line 112
+    .line 113
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleColorChangeable:Z
 
     return v0
@@ -150,7 +152,7 @@
 .method public getImageTitleMode()Z
     .locals 1
 
-    .line 108
+    .line 109
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleMode:Z
 
     return v0
@@ -159,7 +161,7 @@
 .method public getOffAnimationIcon()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 183
+    .line 157
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOffAnimationIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -168,7 +170,7 @@
 .method public getOnAnimationIcon()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 148
+    .line 141
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOnAnimationIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -177,7 +179,7 @@
 .method public getOptionDefaultValue()Ljava/lang/String;
     .locals 1
 
-    .line 76
+    .line 77
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionDefaultValue:Ljava/lang/String;
 
     return-object v0
@@ -186,7 +188,7 @@
 .method public getOptionExpandIcon()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 124
+    .line 125
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionExpandIcon:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -203,7 +205,7 @@
         }
     .end annotation
 
-    .line 152
+    .line 133
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
     return-object v0
@@ -212,7 +214,7 @@
 .method public getOptionKey()Ljava/lang/String;
     .locals 1
 
-    .line 60
+    .line 61
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionKey:Ljava/lang/String;
 
     return-object v0
@@ -221,7 +223,7 @@
 .method public getOptionOnOff()Z
     .locals 1
 
-    .line 84
+    .line 85
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/a;->mbOptionOnOff:Z
 
     return v0
@@ -230,7 +232,7 @@
 .method public getOptionSingleIcon()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 116
+    .line 117
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionSingleIcon:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -239,7 +241,7 @@
 .method public getOptionTitle()Ljava/lang/String;
     .locals 1
 
-    .line 68
+    .line 69
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionTitle:Ljava/lang/String;
 
     return-object v0
@@ -248,7 +250,7 @@
 .method public getOptionType()I
     .locals 1
 
-    .line 52
+    .line 53
     iget v0, p0, Lcom/oppo/camera/ui/menu/a;->mDrawerType:I
 
     return v0
@@ -257,7 +259,7 @@
 .method public getSwitchIconNeedAnim()Z
     .locals 1
 
-    .line 136
+    .line 153
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/a;->mbSwitchIconNeedAnim:Z
 
     return v0
@@ -266,14 +268,14 @@
 .method public release()V
     .locals 3
 
-    .line 160
+    .line 166
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    .line 161
+    .line 167
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -294,21 +296,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 163
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/d;->e()V
+    .line 169
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/d;->f()V
 
     goto :goto_0
 
-    .line 168
+    .line 174
     :cond_1
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 169
+    .line 175
     iput-object v1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
-    .line 172
+    .line 178
     :cond_2
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionSingleIcon:Landroid/graphics/Bitmap;
 
@@ -320,22 +322,22 @@
 
     if-nez v0, :cond_3
 
-    .line 173
+    .line 179
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a;->mOptionSingleIcon:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 174
+    .line 180
     iput-object v1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionSingleIcon:Landroid/graphics/Bitmap;
 
-    .line 177
+    .line 183
     :cond_3
     iput-object v1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionDefaultValue:Ljava/lang/String;
 
-    .line 178
+    .line 184
     iput-object v1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionKey:Ljava/lang/String;
 
-    .line 179
+    .line 185
     iput-object v1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionTitle:Ljava/lang/String;
 
     return-void
@@ -344,7 +346,7 @@
 .method public setCloseAnimationIcon(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 144
+    .line 161
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOffAnimationIcon:Landroid/graphics/Bitmap;
 
     return-void
@@ -353,7 +355,7 @@
 .method public setGroupType(I)V
     .locals 0
 
-    .line 88
+    .line 89
     iput p1, p0, Lcom/oppo/camera/ui/menu/a;->mGroupType:I
 
     return-void
@@ -362,7 +364,7 @@
 .method public setImageTitleColorChangeable(Z)V
     .locals 0
 
-    .line 104
+    .line 105
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleColorChangeable:Z
 
     return-void
@@ -371,7 +373,7 @@
 .method public setImageTitleMode(Z)V
     .locals 0
 
-    .line 100
+    .line 101
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/a;->mImageTitleMode:Z
 
     return-void
@@ -380,7 +382,7 @@
 .method public setOpenAnimationIcon(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 140
+    .line 145
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOnAnimationIcon:Landroid/graphics/Bitmap;
 
     return-void
@@ -389,7 +391,7 @@
 .method public setOptionDefaultValue(Ljava/lang/String;)V
     .locals 0
 
-    .line 80
+    .line 81
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionDefaultValue:Ljava/lang/String;
 
     return-void
@@ -398,7 +400,7 @@
 .method public setOptionExpandIcon(Landroid/graphics/drawable/Drawable;)V
     .locals 0
 
-    .line 128
+    .line 129
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionExpandIcon:Landroid/graphics/drawable/Drawable;
 
     return-void
@@ -415,7 +417,7 @@
         }
     .end annotation
 
-    .line 156
+    .line 137
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionItems:Ljava/util/ArrayList;
 
     return-void
@@ -424,7 +426,7 @@
 .method public setOptionKey(Ljava/lang/String;)V
     .locals 0
 
-    .line 64
+    .line 65
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionKey:Ljava/lang/String;
 
     return-void
@@ -433,7 +435,7 @@
 .method public setOptionOnOff(Z)V
     .locals 0
 
-    .line 96
+    .line 97
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/a;->mbOptionOnOff:Z
 
     return-void
@@ -442,7 +444,7 @@
 .method public setOptionSingleIcon(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .line 120
+    .line 121
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionSingleIcon:Landroid/graphics/Bitmap;
 
     return-void
@@ -451,7 +453,7 @@
 .method public setOptionTitle(Ljava/lang/String;)V
     .locals 0
 
-    .line 72
+    .line 73
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a;->mOptionTitle:Ljava/lang/String;
 
     return-void
@@ -460,7 +462,7 @@
 .method public setOptionType(I)V
     .locals 0
 
-    .line 56
+    .line 57
     iput p1, p0, Lcom/oppo/camera/ui/menu/a;->mDrawerType:I
 
     return-void
@@ -469,7 +471,7 @@
 .method public setSwitchIconNeedAnim(Z)V
     .locals 0
 
-    .line 132
+    .line 149
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/a;->mbSwitchIconNeedAnim:Z
 
     return-void

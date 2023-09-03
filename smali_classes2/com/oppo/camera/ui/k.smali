@@ -1,105 +1,147 @@
 .class public Lcom/oppo/camera/ui/k;
-.super Landroid/widget/ImageView;
-.source "TwoStateImageView.java"
-
-
-# instance fields
-.field private final a:F
+.super Lcom/oppo/camera/ui/h;
+.source "LongExposureCountDownUI.java"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Lcom/oppo/camera/ui/c;Lcom/oppo/camera/ui/h$a;)V
     .locals 0
 
-    .line 32
-    invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
-
-    const p1, 0x3ecccccd    # 0.4f
-
-    .line 29
-    iput p1, p0, Lcom/oppo/camera/ui/k;->a:F
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
-
-    .line 36
-    invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    const p1, 0x3ecccccd    # 0.4f
-
-    .line 29
-    iput p1, p0, Lcom/oppo/camera/ui/k;->a:F
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
-
-    .line 40
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    const p1, 0x3ecccccd    # 0.4f
-
-    .line 29
-    iput p1, p0, Lcom/oppo/camera/ui/k;->a:F
+    .line 14
+    invoke-direct {p0, p1, p2}, Lcom/oppo/camera/ui/h;-><init>(Lcom/oppo/camera/ui/c;Lcom/oppo/camera/ui/h$a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ZZ)V
-    .locals 0
+.method public e()V
+    .locals 10
 
-    .line 55
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    .line 19
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    if-eqz p1, :cond_0
+    move-result-wide v0
 
-    const/high16 p1, 0x3f800000    # 1.0f
+    .line 20
+    iget-wide v2, p0, Lcom/oppo/camera/ui/k;->a:J
 
-    .line 58
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/k;->setAlpha(F)V
+    sub-long v2, v0, v2
 
-    goto :goto_0
+    .line 21
+    iget-wide v4, p0, Lcom/oppo/camera/ui/k;->c:J
 
+    sub-long/2addr v4, v2
+
+    iput-wide v4, p0, Lcom/oppo/camera/ui/k;->c:J
+
+    .line 22
+    iget-wide v4, p0, Lcom/oppo/camera/ui/k;->b:J
+
+    add-long/2addr v4, v2
+
+    iput-wide v4, p0, Lcom/oppo/camera/ui/k;->b:J
+
+    .line 23
+    iput-wide v0, p0, Lcom/oppo/camera/ui/k;->a:J
+
+    .line 25
+    iget-wide v0, p0, Lcom/oppo/camera/ui/k;->c:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v6, v0, v4
+
+    if-gez v6, :cond_0
+
+    move-wide v0, v4
+
+    .line 31
     :cond_0
-    if-eqz p2, :cond_1
+    iget-wide v6, p0, Lcom/oppo/camera/ui/k;->b:J
 
-    const p1, 0x3ecccccd    # 0.4f
+    const-wide/16 v8, 0x64
 
-    .line 60
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/k;->setAlpha(F)V
+    cmp-long v6, v6, v8
+
+    if-ltz v6, :cond_1
+
+    .line 32
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "updateCountdownTime, currentTime: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v7, ", delta: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mCountDownTemp: "
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Lcom/oppo/camera/ui/k;->b:J
+
+    invoke-virtual {v6, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "LongExposureCountDownUI"
+
+    invoke-static {v3, v2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 35
+    iget-wide v2, p0, Lcom/oppo/camera/ui/k;->b:J
+
+    sub-long/2addr v2, v8
+
+    .line 36
+    iget-wide v6, p0, Lcom/oppo/camera/ui/k;->c:J
+
+    add-long/2addr v6, v2
+
+    iput-wide v6, p0, Lcom/oppo/camera/ui/k;->c:J
+
+    .line 37
+    iput-wide v4, p0, Lcom/oppo/camera/ui/k;->b:J
+
+    .line 38
+    iget-object v6, p0, Lcom/oppo/camera/ui/k;->d:Lcom/oppo/camera/ui/c;
+
+    add-long/2addr v2, v0
+
+    invoke-interface {v6, v2, v3}, Lcom/oppo/camera/ui/c;->a(J)V
 
     :cond_1
-    :goto_0
-    return-void
-.end method
+    cmp-long v0, v0, v4
 
-.method public setEnabled(Z)V
-    .locals 0
+    if-lez v0, :cond_2
 
-    .line 45
-    invoke-super {p0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    .line 42
+    iget-object v0, p0, Lcom/oppo/camera/ui/k;->e:Landroid/os/Handler;
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x2
 
-    const/high16 p1, 0x3f800000    # 1.0f
-
-    .line 48
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/k;->setAlpha(F)V
+    invoke-virtual {v0, v1, v8, v9}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 
-    :cond_0
-    const p1, 0x3ecccccd    # 0.4f
+    .line 44
+    :cond_2
+    iget-object v0, p0, Lcom/oppo/camera/ui/k;->e:Landroid/os/Handler;
 
-    .line 50
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/k;->setAlpha(F)V
+    const/4 v1, 0x3
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :goto_0
     return-void

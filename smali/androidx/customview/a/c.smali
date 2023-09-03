@@ -1045,7 +1045,7 @@
 
     sub-int v3, p1, v0
 
-    invoke-static {v2, v3}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {v2, v3}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     :cond_0
     move v6, p1
@@ -1066,7 +1066,7 @@
 
     sub-int v2, p2, v1
 
-    invoke-static {p1, v2}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     :cond_1
     move v7, p2
@@ -2211,7 +2211,7 @@
     .line 743
     iget-object v4, p0, Landroidx/customview/a/c;->s:Landroid/view/View;
 
-    invoke-static {v4, v8}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {v4, v8}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     :cond_0
     if-eqz v9, :cond_1
@@ -2219,7 +2219,7 @@
     .line 746
     iget-object v4, p0, Landroidx/customview/a/c;->s:Landroid/view/View;
 
-    invoke-static {v4, v9}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {v4, v9}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     :cond_1
     if-nez v8, :cond_2

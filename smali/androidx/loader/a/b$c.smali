@@ -19,10 +19,10 @@
 
 
 # instance fields
-.field private b:Landroidx/b/h;
+.field private b:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/h<",
+            "Landroidx/collection/SparseArrayCompat<",
             "Landroidx/loader/a/b$a;",
             ">;"
         }
@@ -53,11 +53,11 @@
     invoke-direct {p0}, Landroidx/lifecycle/q;-><init>()V
 
     .line 295
-    new-instance v0, Landroidx/b/h;
+    new-instance v0, Landroidx/collection/SparseArrayCompat;
 
-    invoke-direct {v0}, Landroidx/b/h;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SparseArrayCompat;-><init>()V
 
-    iput-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iput-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
     const/4 v0, 0x0
 
@@ -97,9 +97,9 @@
     invoke-super {p0}, Landroidx/lifecycle/q;->a()V
 
     .line 345
-    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->b()I
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
 
@@ -109,9 +109,9 @@
     if-ge v1, v0, :cond_0
 
     .line 347
-    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v2, v1}, Landroidx/b/h;->d(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -120,7 +120,7 @@
     const/4 v3, 0x1
 
     .line 348
-    invoke-virtual {v2, v3}, Landroidx/loader/a/b$a;->a(Z)Landroidx/loader/b/a;
+    invoke-virtual {v2, v3}, Landroidx/loader/a/b$a;->a(Z)Landroidx/loader/content/a;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -128,9 +128,9 @@
 
     .line 350
     :cond_0
-    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->c()V
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->clear()V
 
     return-void
 .end method
@@ -139,9 +139,9 @@
     .locals 4
 
     .line 354
-    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->b()I
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
 
@@ -173,18 +173,18 @@
 
     .line 357
     :goto_0
-    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v2}, Landroidx/b/h;->b()I
+    invoke-virtual {v2}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v2
 
     if-ge v1, v2, :cond_0
 
     .line 358
-    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v2, v1}, Landroidx/b/h;->d(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -197,9 +197,9 @@
 
     invoke-virtual {p3, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v3, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v3, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v3, v1}, Landroidx/b/h;->c(I)I
+    invoke-virtual {v3, v1}, Landroidx/collection/SparseArrayCompat;->keyAt(I)I
 
     move-result v3
 
@@ -231,9 +231,9 @@
     .locals 3
 
     .line 335
-    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->b()I
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result v0
 
@@ -243,16 +243,16 @@
     if-ge v1, v0, :cond_0
 
     .line 337
-    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/b/h;
+    iget-object v2, p0, Landroidx/loader/a/b$c;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v2, v1}, Landroidx/b/h;->d(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroidx/loader/a/b$a;
 
     .line 338
-    invoke-virtual {v2}, Landroidx/loader/a/b$a;->f()V
+    invoke-virtual {v2}, Landroidx/loader/a/b$a;->b()V
 
     add-int/lit8 v1, v1, 0x1
 

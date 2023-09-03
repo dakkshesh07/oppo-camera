@@ -1,5 +1,5 @@
 .class public abstract Lcom/oppo/camera/ui/menu/setting/c;
-.super Lcom/color/support/preference/e;
+.super Lcom/coui/appcompat/preference/e;
 .source "BasePreferenceFragment.java"
 
 # interfaces
@@ -8,19 +8,19 @@
 
 
 # instance fields
-.field public b:Z
+.field public b:Ljava/lang/String;
 
-.field c:Ljava/lang/String;
+.field public c:I
 
-.field d:I
+.field public d:I
 
-.field e:I
+.field public e:I
 
-.field f:I
+.field private f:Ljava/lang/Boolean;
 
-.field private g:Lcolor/support/v7/widget/Toolbar;
+.field private g:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
-.field private h:Lcolor/support/design/widget/ColorAppBarLayout;
+.field private h:Lcom/google/android/material/appbar/AppBarLayout;
 
 .field private i:Landroid/content/Context;
 
@@ -29,109 +29,147 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 41
-    invoke-direct {p0}, Lcom/color/support/preference/e;-><init>()V
+    .line 40
+    invoke-direct {p0}, Lcom/coui/appcompat/preference/e;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 43
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Z
-
-    const/4 v1, 0x0
-
-    .line 45
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:Ljava/lang/String;
+    .line 42
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Ljava/lang/String;
 
     const/4 v1, 0x2
 
-    .line 46
+    .line 43
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:I
+
+    const/4 v1, 0x0
+
+    .line 44
     iput v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->d:I
 
-    .line 47
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->e:I
+    .line 45
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->e:I
 
-    .line 48
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:I
+    .line 47
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 .method static a(Landroidx/preference/Preference;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 3
 
-    .line 136
+    .line 143
     invoke-virtual {p0}, Landroidx/preference/Preference;->B()Ljava/lang/String;
 
     move-result-object p0
 
     const-string v0, "pref_camera_tap_shutter_key"
 
-    .line 138
+    .line 145
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     const-string v1, "off"
 
-    if-nez v0, :cond_2
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_3
 
     const-string v0, "pref_camera_gesture_shutter_key"
 
-    .line 139
+    .line 146
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     const-string v0, "pref_camera_sound_key"
 
-    .line 140
+    .line 147
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     const-string v0, "pref_camera_recordlocation_key"
 
-    .line 141
+    .line 148
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    const-string v0, "pref_camera_slogan_key"
+    const-string v0, "pref_face_rectify_key"
 
-    .line 142
+    .line 149
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    const-string v0, "pref_assist_gradienter"
+    const-string v0, "pref_watermark_function_key"
 
-    .line 143
+    .line 150
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    const-string v0, "pref_share_and_edit_key"
+    const-string v0, "pref_track_focus_key"
 
-    .line 144
+    .line 151
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     const-string v0, "pref_inertial_zoom_key"
 
-    .line 145
+    .line 152
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "pref_assist_gradienter"
+
+    .line 153
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "pref_share_and_edit_key"
+
+    .line 154
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "pref_super_clear_portrait"
+
+    .line 155
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const-string v0, "pref_10bits_heic_encode_key"
+
+    .line 156
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -143,89 +181,189 @@
     :cond_0
     const-string v0, "pref_camera_quick_launch_key"
 
-    .line 151
+    .line 164
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_4
+    if-eqz p0, :cond_5
 
-    const/4 p0, 0x0
+    .line 167
+    instance-of p0, p1, Ljava/lang/Boolean;
 
-    .line 154
-    instance-of v0, p1, Ljava/lang/Boolean;
+    if-eqz p0, :cond_1
 
-    if-eqz v0, :cond_1
-
-    .line 155
+    .line 168
     check-cast p1, Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result p0
+    move-result v2
 
     :cond_1
-    if-eqz p0, :cond_3
+    if-eqz v2, :cond_2
 
     const-string p1, "only_start"
 
     goto :goto_1
 
-    .line 146
     :cond_2
-    :goto_0
-    invoke-static {p1}, Lcom/oppo/camera/ui/menu/setting/c;->a(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    const-string p1, "on"
+    move-object p1, v1
 
     goto :goto_1
 
+    .line 159
     :cond_3
-    move-object p1, v1
+    :goto_0
+    instance-of p0, p1, Ljava/lang/Boolean;
+
+    if-eqz p0, :cond_4
+
+    .line 160
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
 
     :cond_4
+    if-eqz v2, :cond_2
+
+    const-string p0, "on"
+
+    move-object p1, p0
+
+    :cond_5
     :goto_1
     return-object p1
 .end method
 
-.method static a(Ljava/lang/Object;)Z
-    .locals 1
 
-    .line 169
-    instance-of v0, p0, Ljava/lang/Boolean;
+# virtual methods
+.method public a(Ljava/lang/String;)I
+    .locals 6
+
+    const-string v0, "pref_sound_types_key_rear"
+
+    .line 199
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_7
+
+    const-string v0, "pref_sound_types_key_front"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 170
-    check-cast p0, Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    const-string v0, "pref_help_and_feedback_key"
 
-    return p0
+    .line 201
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_6
+
+    .line 202
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Ljava/lang/String;
+
+    const/4 v2, -0x1
+
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    const v4, -0x733d8ab0
+
+    const/4 v5, 0x2
+
+    if-eq v3, v4, :cond_3
+
+    const v4, -0x21dda81
+
+    if-eq v3, v4, :cond_2
+
+    const v4, 0x2d8e52fa
+
+    if-eq v3, v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v3, "slowVideo"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    move v2, v5
+
+    goto :goto_0
+
+    :cond_2
+    const-string v3, "fastVideo"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_3
+    const-string v3, "commonVideo"
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    move v2, v0
+
+    :cond_4
+    :goto_0
+    if-eqz v2, :cond_5
+
+    if-eq v2, v1, :cond_5
+
+    if-eq v2, v5, :cond_5
+
+    return v0
+
+    :cond_5
+    return v1
+
+    :cond_6
+    return v0
+
+    :cond_7
+    :goto_1
+    return v1
 .end method
 
-
-# virtual methods
 .method public a(Landroid/os/Bundle;Ljava/lang/String;)V
     .locals 1
 
     .line 64
-    invoke-super {p0, p1, p2}, Lcom/color/support/preference/e;->a(Landroid/os/Bundle;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Lcom/coui/appcompat/preference/e;->a(Landroid/os/Bundle;Ljava/lang/String;)V
 
     .line 66
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->getArguments()Landroid/os/Bundle;
@@ -243,20 +381,18 @@
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:Ljava/lang/String;
+    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Ljava/lang/String;
 
-    const/4 p2, 0x0
-
-    const-string v0, "camera_support_video_ultra_wide_angel"
+    const-string p2, "camera_enter_type"
 
     .line 70
-    invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result p2
 
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Z
+    iput p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:I
 
-    const-string p2, "camera_enter_type"
+    const-string p2, "pref_camera_id_key"
 
     .line 71
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -265,7 +401,7 @@
 
     iput p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->d:I
 
-    const-string p2, "pref_camera_id_key"
+    const-string p2, "camera_property_camera_id"
 
     .line 72
     invoke-virtual {p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -274,16 +410,7 @@
 
     iput p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->e:I
 
-    const-string p2, "camera_property_camera_id"
-
-    .line 73
-    invoke-virtual {p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result p2
-
-    iput p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:I
-
-    .line 76
+    .line 75
     :cond_0
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/c;->c(Landroid/os/Bundle;)V
 
@@ -293,27 +420,29 @@
 .method a(Ljava/lang/String;Ljava/lang/Object;)V
     .locals 2
 
-    .line 179
+    .line 182
     new-instance v0, Lcom/oppo/camera/statistics/model/MenuClickMsgData;
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->m()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->o()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/oppo/camera/statistics/model/MenuClickMsgData;-><init>(Landroid/content/Context;)V
 
-    .line 180
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:Ljava/lang/String;
+    .line 183
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->mCaptureMode:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    .line 184
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/c;->a(Ljava/lang/String;)I
 
-    .line 181
+    move-result v1
+
     iput v1, v0, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->mCaptureType:I
 
-    .line 182
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->d:I
+    .line 185
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:I
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -321,13 +450,15 @@
 
     iput-object v1, v0, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->mCameraEnterType:Ljava/lang/String;
 
-    .line 183
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:I
+    .line 186
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/c;->e:I
 
     iput v1, v0, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->mCameraId:I
 
-    .line 184
-    invoke-static {v1}, Lcom/oppo/camera/e/a;->c(I)Z
+    if-eqz p2, :cond_1
+
+    .line 189
+    invoke-static {v1}, Lcom/oppo/camera/device/a;->c(I)Z
 
     move-result v1
 
@@ -343,10 +474,17 @@
     :goto_0
     iput-object v1, v0, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->mRearOrFront:Ljava/lang/String;
 
-    .line 185
+    .line 190
     invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->buildSettingMenuItem(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 186
+    goto :goto_1
+
+    .line 192
+    :cond_1
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->buildSettingJumpItem(Ljava/lang/String;)V
+
+    .line 195
+    :goto_1
     invoke-virtual {v0}, Lcom/oppo/camera/statistics/model/MenuClickMsgData;->report()V
 
     return-void
@@ -355,8 +493,8 @@
 .method b(Landroidx/preference/Preference;Ljava/lang/Object;)V
     .locals 1
 
-    .line 216
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->c:Ljava/lang/String;
+    .line 245
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->b:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -364,18 +502,18 @@
 
     const-string p2, "report Msg data failed, current mode is null!"
 
-    .line 217
-    invoke-static {p1, p2}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 246
+    invoke-static {p1, p2}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 222
+    .line 251
     :cond_0
     invoke-static {p1, p2}, Lcom/oppo/camera/ui/menu/setting/c;->a(Landroidx/preference/Preference;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 223
+    .line 252
     invoke-virtual {p1}, Landroidx/preference/Preference;->B()Ljava/lang/String;
 
     move-result-object p1
@@ -388,28 +526,54 @@
 .method protected abstract c(Landroid/os/Bundle;)V
 .end method
 
-.method public m()Landroid/content/Context;
+.method protected n()Z
     .locals 1
 
-    .line 132
+    .line 79
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:Ljava/lang/Boolean;
+
+    if-nez v0, :cond_0
+
+    .line 80
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->d:I
+
+    invoke-static {v0}, Lcom/oppo/camera/device/a;->c(I)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:Ljava/lang/Boolean;
+
+    .line 83
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->f:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public o()Landroid/content/Context;
+    .locals 1
+
+    .line 139
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/c;->i:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method public abstract n()Ljava/lang/String;
-.end method
-
-.method protected abstract o()V
-.end method
-
 .method public onAttach(Landroid/content/Context;)V
     .locals 0
 
-    .line 122
-    invoke-super {p0, p1}, Lcom/color/support/preference/e;->onAttach(Landroid/content/Context;)V
+    .line 129
+    invoke-super {p0, p1}, Lcom/coui/appcompat/preference/e;->onAttach(Landroid/content/Context;)V
 
-    .line 123
+    .line 130
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p1
@@ -422,61 +586,61 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    .line 81
-    invoke-super {p0, p1, p2, p3}, Lcom/color/support/preference/e;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .line 88
+    invoke-super {p0, p1, p2, p3}, Lcom/coui/appcompat/preference/e;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p1
 
-    const p2, 0x7f0902af
+    const p2, 0x7f090311
 
-    .line 82
+    .line 89
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
-    check-cast p2, Lcolor/support/v7/widget/Toolbar;
+    check-cast p2, Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
-    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcolor/support/v7/widget/Toolbar;
+    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
-    .line 84
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcolor/support/v7/widget/Toolbar;
+    .line 91
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
     if-nez p2, :cond_0
 
     return-object p1
 
     :cond_0
-    const p3, 0x7f0801d7
+    const p3, 0x7f080213
 
-    .line 88
-    invoke-virtual {p2, p3}, Lcolor/support/v7/widget/Toolbar;->setNavigationIcon(I)V
+    .line 95
+    invoke-virtual {p2, p3}, Lcom/coui/appcompat/widget/toolbar/COUIToolbar;->setNavigationIcon(I)V
 
-    .line 89
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcolor/support/v7/widget/Toolbar;
+    .line 96
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
     const p3, 0x7f100001
 
-    invoke-virtual {p2, p3}, Lcolor/support/v7/widget/Toolbar;->setNavigationContentDescription(I)V
+    invoke-virtual {p2, p3}, Lcom/coui/appcompat/widget/toolbar/COUIToolbar;->setNavigationContentDescription(I)V
 
-    .line 90
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcolor/support/v7/widget/Toolbar;
+    .line 97
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
     new-instance p3, Lcom/oppo/camera/ui/menu/setting/c$1;
 
     invoke-direct {p3, p0}, Lcom/oppo/camera/ui/menu/setting/c$1;-><init>(Lcom/oppo/camera/ui/menu/setting/c;)V
 
-    invoke-virtual {p2, p3}, Lcolor/support/v7/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, p3}, Lcom/coui/appcompat/widget/toolbar/COUIToolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 96
+    .line 103
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->e()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p2
 
     const/4 p3, 0x1
 
-    invoke-static {p2, p3}, Landroidx/core/g/w;->c(Landroid/view/View;Z)V
+    invoke-static {p2, p3}, Landroidx/core/f/w;->c(Landroid/view/View;Z)V
 
-    .line 97
+    .line 104
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->e()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object p2
@@ -485,7 +649,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f0601bb
+    const v0, 0x7f060200
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -493,40 +657,42 @@
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setBackgroundColor(I)V
 
-    .line 98
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcolor/support/v7/widget/Toolbar;
+    .line 105
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->g:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->n()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->p()Ljava/lang/String;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lcolor/support/v7/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p3}, Lcom/coui/appcompat/widget/toolbar/COUIToolbar;->setTitle(Ljava/lang/CharSequence;)V
 
     const p2, 0x7f090052
 
-    .line 99
+    .line 106
     invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p2
 
-    check-cast p2, Lcolor/support/design/widget/ColorAppBarLayout;
+    check-cast p2, Lcom/google/android/material/appbar/AppBarLayout;
 
-    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->h:Lcolor/support/design/widget/ColorAppBarLayout;
+    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->h:Lcom/google/android/material/appbar/AppBarLayout;
 
-    .line 100
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->h:Lcolor/support/design/widget/ColorAppBarLayout;
+    .line 107
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/c;->h:Lcom/google/android/material/appbar/AppBarLayout;
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->getActivity()Landroidx/fragment/app/c;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    invoke-static {p3}, Lcom/oppo/camera/util/g;->a(Landroid/content/Context;)I
+    const v0, 0x7f070666
+
+    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p3
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0, p3, v0, v0}, Lcolor/support/design/widget/ColorAppBarLayout;->setPadding(IIII)V
+    invoke-virtual {p2, v0, p3, v0, v0}, Lcom/google/android/material/appbar/AppBarLayout;->setPadding(IIII)V
 
     return-object p1
 .end method
@@ -534,8 +700,8 @@
 .method public onDetach()V
     .locals 0
 
-    .line 128
-    invoke-super {p0}, Lcom/color/support/preference/e;->onDetach()V
+    .line 135
+    invoke-super {p0}, Lcom/coui/appcompat/preference/e;->onDetach()V
 
     return-void
 .end method
@@ -543,11 +709,11 @@
 .method public onPause()V
     .locals 0
 
-    .line 115
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->q()V
+    .line 122
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->s()V
 
-    .line 117
-    invoke-super {p0}, Lcom/color/support/preference/e;->onPause()V
+    .line 124
+    invoke-super {p0}, Lcom/coui/appcompat/preference/e;->onPause()V
 
     return-void
 .end method
@@ -555,20 +721,26 @@
 .method public onResume()V
     .locals 0
 
-    .line 107
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->p()V
+    .line 114
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->r()V
 
-    .line 108
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->o()V
+    .line 115
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/c;->q()V
 
-    .line 110
-    invoke-super {p0}, Lcom/color/support/preference/e;->onResume()V
+    .line 117
+    invoke-super {p0}, Lcom/coui/appcompat/preference/e;->onResume()V
 
     return-void
 .end method
 
-.method protected abstract p()V
+.method public abstract p()Ljava/lang/String;
 .end method
 
 .method protected abstract q()V
+.end method
+
+.method protected abstract r()V
+.end method
+
+.method protected abstract s()V
 .end method

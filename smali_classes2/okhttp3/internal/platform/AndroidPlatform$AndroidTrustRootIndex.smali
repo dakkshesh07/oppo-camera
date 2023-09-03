@@ -27,13 +27,13 @@
 .method constructor <init>(Ljavax/net/ssl/X509TrustManager;Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .line 392
+    .line 393
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 393
+    .line 394
     iput-object p2, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->findByIssuerAndSignatureMethod:Ljava/lang/reflect/Method;
 
-    .line 394
+    .line 395
     iput-object p1, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->trustManager:Ljavax/net/ssl/X509TrustManager;
 
     return-void
@@ -50,7 +50,7 @@
 
     return v0
 
-    .line 416
+    .line 417
     :cond_0
     instance-of v1, p1, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;
 
@@ -60,11 +60,11 @@
 
     return v2
 
-    .line 419
+    .line 420
     :cond_1
     check-cast p1, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;
 
-    .line 420
+    .line 421
     iget-object v1, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->trustManager:Ljavax/net/ssl/X509TrustManager;
 
     iget-object v3, p1, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->trustManager:Ljavax/net/ssl/X509TrustManager;
@@ -79,7 +79,7 @@
 
     iget-object p1, p1, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->findByIssuerAndSignatureMethod:Ljava/lang/reflect/Method;
 
-    .line 421
+    .line 422
     invoke-virtual {v1, p1}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
 
     move-result p1
@@ -100,7 +100,7 @@
 
     const/4 v0, 0x0
 
-    .line 399
+    .line 400
     :try_start_0
     iget-object v1, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->findByIssuerAndSignatureMethod:Ljava/lang/reflect/Method;
 
@@ -122,7 +122,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 402
+    .line 403
     invoke-virtual {p1}, Ljava/security/cert/TrustAnchor;->getTrustedCert()Ljava/security/cert/X509Certificate;
 
     move-result-object v0
@@ -139,7 +139,7 @@
 
     const-string v0, "unable to get issues and signature"
 
-    .line 405
+    .line 406
     invoke-static {v0, p1}, Lokhttp3/internal/Util;->assertionError(Ljava/lang/String;Ljava/lang/Exception;)Ljava/lang/AssertionError;
 
     move-result-object p1
@@ -150,7 +150,7 @@
 .method public hashCode()I
     .locals 2
 
-    .line 426
+    .line 427
     iget-object v0, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidTrustRootIndex;->trustManager:Ljavax/net/ssl/X509TrustManager;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

@@ -121,7 +121,7 @@
     .line 162
     sget-object v3, Landroidx/appcompat/R$styleable;->LinearLayoutCompat:[I
 
-    invoke-static {p1, p2, v3, p3, v2}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v3, p3, v2}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object v3
 
@@ -129,7 +129,7 @@
     sget-object v6, Landroidx/appcompat/R$styleable;->LinearLayoutCompat:[I
 
     .line 166
-    invoke-virtual {v3}, Landroidx/appcompat/widget/as;->a()Landroid/content/res/TypedArray;
+    invoke-virtual {v3}, Landroidx/appcompat/widget/ar;->a()Landroid/content/res/TypedArray;
 
     move-result-object v8
 
@@ -144,12 +144,12 @@
     move v9, p3
 
     .line 164
-    invoke-static/range {v4 .. v10}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static/range {v4 .. v10}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     .line 168
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_android_orientation:I
 
-    invoke-virtual {v3, p1, v1}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v3, p1, v1}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result p1
 
@@ -162,7 +162,7 @@
     :cond_0
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_android_gravity:I
 
-    invoke-virtual {v3, p1, v1}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v3, p1, v1}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result p1
 
@@ -175,7 +175,7 @@
     :cond_1
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_android_baselineAligned:I
 
-    invoke-virtual {v3, p1, v0}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v3, p1, v0}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result p1
 
@@ -190,7 +190,7 @@
 
     const/high16 p2, -0x40800000    # -1.0f
 
-    invoke-virtual {v3, p1, p2}, Landroidx/appcompat/widget/as;->a(IF)F
+    invoke-virtual {v3, p1, p2}, Landroidx/appcompat/widget/ar;->a(IF)F
 
     move-result p1
 
@@ -200,7 +200,7 @@
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_android_baselineAlignedChildIndex:I
 
     .line 186
-    invoke-virtual {v3, p1, v1}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v3, p1, v1}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result p1
 
@@ -209,7 +209,7 @@
     .line 188
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_measureWithLargestChild:I
 
-    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result p1
 
@@ -218,7 +218,7 @@
     .line 190
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_divider:I
 
-    invoke-virtual {v3, p1}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3, p1}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -227,7 +227,7 @@
     .line 191
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_showDividers:I
 
-    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result p1
 
@@ -236,14 +236,14 @@
     .line 192
     sget p1, Landroidx/appcompat/R$styleable;->LinearLayoutCompat_dividerPadding:I
 
-    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {v3, p1, v2}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result p1
 
     iput p1, p0, Landroidx/appcompat/widget/LinearLayoutCompat;->mDividerPadding:I
 
     .line 194
-    invoke-virtual {v3}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v3}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 .end method
@@ -449,7 +449,7 @@
     move-result v0
 
     .line 333
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v1
 
@@ -1125,6 +1125,8 @@
 
 .method public getDividerWidth()I
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 288
     iget v0, p0, Landroidx/appcompat/widget/LinearLayoutCompat;->mDividerWidth:I
@@ -1208,6 +1210,8 @@
 
 .method protected hasDividerBeforeChildAt(I)Z
     .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1311,7 +1315,7 @@
     move-object/from16 v6, p0
 
     .line 1531
-    invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static/range {p0 .. p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1362,12 +1366,12 @@
     iget-object v14, v6, Landroidx/appcompat/widget/LinearLayoutCompat;->mMaxDescent:[I
 
     .line 1554
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v1
 
     .line 1555
-    invoke-static {v2, v1}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v2, v1}, Landroidx/core/f/d;->a(II)I
 
     move-result v1
 
@@ -1906,12 +1910,12 @@
 
     .line 1485
     :cond_3
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v2
 
     .line 1486
-    invoke-static {v1, v2}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v1, v2}, Landroidx/core/f/d;->a(II)I
 
     move-result v1
 

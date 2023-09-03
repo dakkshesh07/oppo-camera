@@ -5,7 +5,7 @@
 # interfaces
 .implements Landroid/content/ComponentCallbacks;
 .implements Landroid/view/View$OnCreateContextMenuListener;
-.implements Landroidx/lifecycle/h;
+.implements Landroidx/lifecycle/g;
 .implements Landroidx/lifecycle/t;
 .implements Landroidx/savedstate/c;
 
@@ -14,8 +14,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/fragment/app/Fragment$a;,
-        Landroidx/fragment/app/Fragment$c;,
         Landroidx/fragment/app/Fragment$b;,
+        Landroidx/fragment/app/Fragment$InstantiationException;,
         Landroidx/fragment/app/Fragment$SavedState;
     }
 .end annotation
@@ -84,9 +84,9 @@
 
 .field mLayoutInflater:Landroid/view/LayoutInflater;
 
-.field mLifecycleRegistry:Landroidx/lifecycle/i;
+.field mLifecycleRegistry:Landroidx/lifecycle/h;
 
-.field mMaxState:Landroidx/lifecycle/e$b;
+.field mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
 .field mMenuVisible:Z
 
@@ -142,7 +142,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/lifecycle/m<",
-            "Landroidx/lifecycle/h;",
+            "Landroidx/lifecycle/g;",
             ">;"
         }
     .end annotation
@@ -218,9 +218,9 @@
     iput-object v0, p0, Landroidx/fragment/app/Fragment;->mPostponedDurationRunnable:Ljava/lang/Runnable;
 
     .line 260
-    sget-object v0, Landroidx/lifecycle/e$b;->RESUMED:Landroidx/lifecycle/e$b;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->RESUMED:Landroidx/lifecycle/Lifecycle$State;
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/e$b;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
     .line 267
     new-instance v0, Landroidx/lifecycle/m;
@@ -273,11 +273,11 @@
     .locals 2
 
     .line 468
-    new-instance v0, Landroidx/lifecycle/i;
+    new-instance v0, Landroidx/lifecycle/h;
 
-    invoke-direct {v0, p0}, Landroidx/lifecycle/i;-><init>(Landroidx/lifecycle/h;)V
+    invoke-direct {v0, p0}, Landroidx/lifecycle/h;-><init>(Landroidx/lifecycle/g;)V
 
-    iput-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iput-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
     .line 469
     invoke-static {p0}, Landroidx/savedstate/b;->a(Landroidx/savedstate/c;)Landroidx/savedstate/b;
@@ -294,13 +294,13 @@
     if-lt v0, v1, :cond_0
 
     .line 471
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
     new-instance v1, Landroidx/fragment/app/Fragment$2;
 
     invoke-direct {v1, p0}, Landroidx/fragment/app/Fragment$2;-><init>(Landroidx/fragment/app/Fragment;)V
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/g;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/f;)V
 
     :cond_0
     return-void
@@ -386,7 +386,7 @@
     move-exception p0
 
     .line 541
-    new-instance p2, Landroidx/fragment/app/Fragment$b;
+    new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -404,7 +404,7 @@
 
     move-result-object p1
 
-    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw p2
 
@@ -412,7 +412,7 @@
     move-exception p0
 
     .line 538
-    new-instance p2, Landroidx/fragment/app/Fragment$b;
+    new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -430,7 +430,7 @@
 
     move-result-object p1
 
-    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw p2
 
@@ -438,7 +438,7 @@
     move-exception p0
 
     .line 534
-    new-instance p2, Landroidx/fragment/app/Fragment$b;
+    new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -454,7 +454,7 @@
 
     move-result-object p1
 
-    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw p2
 
@@ -462,7 +462,7 @@
     move-exception p0
 
     .line 530
-    new-instance p2, Landroidx/fragment/app/Fragment$b;
+    new-instance p2, Landroidx/fragment/app/Fragment$InstantiationException;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -478,7 +478,7 @@
 
     move-result-object p1
 
-    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+    invoke-direct {p2, p1, p0}, Landroidx/fragment/app/Fragment$InstantiationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
     throw p2
 .end method
@@ -506,18 +506,18 @@
     iput-boolean v2, v0, Landroidx/fragment/app/Fragment$a;->q:Z
 
     .line 2455
-    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$c;
+    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$b;
 
     .line 2456
     iget-object v2, p0, Landroidx/fragment/app/Fragment;->mAnimationInfo:Landroidx/fragment/app/Fragment$a;
 
-    iput-object v1, v2, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$c;
+    iput-object v1, v2, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$b;
 
     :goto_0
     if-eqz v0, :cond_1
 
     .line 2459
-    invoke-interface {v0}, Landroidx/fragment/app/Fragment$c;->a()V
+    invoke-interface {v0}, Landroidx/fragment/app/Fragment$b;->a()V
 
     :cond_1
     return-void
@@ -942,7 +942,7 @@
     if-eqz v0, :cond_c
 
     .line 2542
-    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/h;)Landroidx/loader/a/a;
+    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/g;)Landroidx/loader/a/a;
 
     move-result-object v0
 
@@ -1251,7 +1251,7 @@
     return-object v0
 .end method
 
-.method getEnterTransitionCallback()Landroidx/core/app/l;
+.method getEnterTransitionCallback()Landroidx/core/app/m;
     .locals 1
 
     .line 2917
@@ -1265,7 +1265,7 @@
 
     .line 2920
     :cond_0
-    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->o:Landroidx/core/app/l;
+    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->o:Landroidx/core/app/m;
 
     return-object v0
 .end method
@@ -1289,7 +1289,7 @@
     return-object v0
 .end method
 
-.method getExitTransitionCallback()Landroidx/core/app/l;
+.method getExitTransitionCallback()Landroidx/core/app/m;
     .locals 1
 
     .line 2924
@@ -1303,7 +1303,7 @@
 
     .line 2927
     :cond_0
-    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->p:Landroidx/core/app/l;
+    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->p:Landroidx/core/app/m;
 
     return-object v0
 .end method
@@ -1368,6 +1368,9 @@
 
 .method public getLayoutInflater(Landroid/os/Bundle;)Landroid/view/LayoutInflater;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
@@ -1388,7 +1391,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Landroidx/core/g/f;->a(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
+    invoke-static {p1, v0}, Landroidx/core/f/f;->a(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
 
     return-object p1
 
@@ -1403,11 +1406,11 @@
     throw p1
 .end method
 
-.method public getLifecycle()Landroidx/lifecycle/e;
+.method public getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 1
 
     .line 283
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
     return-object v0
 .end method
@@ -1418,7 +1421,7 @@
     .end annotation
 
     .line 1165
-    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/h;)Landroidx/loader/a/a;
+    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/g;)Landroidx/loader/a/a;
 
     move-result-object v0
 
@@ -1794,7 +1797,7 @@
     return-object v0
 .end method
 
-.method public getViewLifecycleOwner()Landroidx/lifecycle/h;
+.method public getViewLifecycleOwner()Landroidx/lifecycle/g;
     .locals 2
 
     .line 324
@@ -1821,7 +1824,7 @@
         value = {
             "()",
             "Landroidx/lifecycle/LiveData<",
-            "Landroidx/lifecycle/h;",
+            "Landroidx/lifecycle/g;",
             ">;"
         }
     .end annotation
@@ -1860,6 +1863,8 @@
 
 .method public final hasOptionsMenu()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1028
     iget-boolean v0, p0, Landroidx/fragment/app/Fragment;->mHasMenu:Z
@@ -2038,6 +2043,8 @@
 
 .method public final isMenuVisible()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1034
     iget-boolean v0, p0, Landroidx/fragment/app/Fragment;->mMenuVisible:Z
@@ -2614,7 +2621,7 @@
 
     .line 2621
     :cond_0
-    new-instance p1, Landroidx/fragment/app/p;
+    new-instance p1, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2634,7 +2641,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
@@ -2676,7 +2683,7 @@
 
     .line 2576
     :cond_0
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2696,7 +2703,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -2787,17 +2794,17 @@
     if-eqz p1, :cond_0
 
     .line 2592
-    iget-object p1, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object p1, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_CREATE:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {p1, v0}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 
     .line 2589
     :cond_0
-    new-instance p1, Landroidx/fragment/app/p;
+    new-instance p1, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2817,7 +2824,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
@@ -2902,7 +2909,7 @@
 
     iget-object p2, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    invoke-virtual {p1, p2}, Landroidx/lifecycle/m;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Landroidx/lifecycle/m;->setValue(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -2944,11 +2951,11 @@
     invoke-virtual {v0}, Landroidx/fragment/app/i;->x()V
 
     .line 2826
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_DESTROY:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     const/4 v0, 0x0
 
@@ -2973,7 +2980,7 @@
 
     .line 2832
     :cond_0
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2993,7 +3000,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -3014,9 +3021,9 @@
     .line 2807
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_DESTROY:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_0
     const/4 v0, 0x1
@@ -3038,7 +3045,7 @@
     if-eqz v1, :cond_1
 
     .line 2820
-    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/h;)Landroidx/loader/a/a;
+    invoke-static {p0}, Landroidx/loader/a/a;->a(Landroidx/lifecycle/g;)Landroidx/loader/a/a;
 
     move-result-object v1
 
@@ -3051,7 +3058,7 @@
 
     .line 2813
     :cond_1
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3071,7 +3078,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -3123,7 +3130,7 @@
 
     .line 2842
     :cond_1
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3143,7 +3150,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -3285,17 +3292,17 @@
     .line 2777
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_PAUSE:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 2779
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_PAUSE:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     const/4 v0, 0x3
 
@@ -3319,7 +3326,7 @@
 
     .line 2784
     :cond_1
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3339,7 +3346,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -3470,11 +3477,11 @@
     if-eqz v0, :cond_1
 
     .line 2654
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_RESUME:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 2655
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
@@ -3484,9 +3491,9 @@
     .line 2656
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_RESUME:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 2658
     :cond_0
@@ -3503,7 +3510,7 @@
 
     .line 2651
     :cond_1
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3523,7 +3530,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -3589,11 +3596,11 @@
     if-eqz v0, :cond_1
 
     .line 2637
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 2638
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mView:Landroid/view/View;
@@ -3603,9 +3610,9 @@
     .line 2639
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 2641
     :cond_0
@@ -3617,7 +3624,7 @@
 
     .line 2634
     :cond_1
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3637,7 +3644,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -3658,17 +3665,17 @@
     .line 2792
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     .line 2794
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/i;
+    iget-object v0, p0, Landroidx/fragment/app/Fragment;->mLifecycleRegistry:Landroidx/lifecycle/h;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     const/4 v0, 0x2
 
@@ -3692,7 +3699,7 @@
 
     .line 2799
     :cond_1
-    new-instance v0, Landroidx/fragment/app/p;
+    new-instance v0, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3712,7 +3719,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -4214,16 +4221,16 @@
     .line 558
     iget-object p1, p0, Landroidx/fragment/app/Fragment;->mViewLifecycleOwner:Landroidx/fragment/app/o;
 
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_CREATE:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {p1, v0}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/o;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     return-void
 
     .line 554
     :cond_2
-    new-instance p1, Landroidx/fragment/app/p;
+    new-instance p1, Landroidx/fragment/app/SuperNotCalledException;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -4243,7 +4250,7 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Landroidx/fragment/app/p;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Landroidx/fragment/app/SuperNotCalledException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
@@ -4342,7 +4349,7 @@
     return-void
 .end method
 
-.method public setEnterSharedElementCallback(Landroidx/core/app/l;)V
+.method public setEnterSharedElementCallback(Landroidx/core/app/m;)V
     .locals 1
 
     .line 2056
@@ -4350,7 +4357,7 @@
 
     move-result-object v0
 
-    iput-object p1, v0, Landroidx/fragment/app/Fragment$a;->o:Landroidx/core/app/l;
+    iput-object p1, v0, Landroidx/fragment/app/Fragment$a;->o:Landroidx/core/app/m;
 
     return-void
 .end method
@@ -4368,7 +4375,7 @@
     return-void
 .end method
 
-.method public setExitSharedElementCallback(Landroidx/core/app/l;)V
+.method public setExitSharedElementCallback(Landroidx/core/app/m;)V
     .locals 1
 
     .line 2067
@@ -4376,7 +4383,7 @@
 
     move-result-object v0
 
-    iput-object p1, v0, Landroidx/fragment/app/Fragment$a;->p:Landroidx/core/app/l;
+    iput-object p1, v0, Landroidx/fragment/app/Fragment$a;->p:Landroidx/core/app/m;
 
     return-void
 .end method
@@ -4567,7 +4574,7 @@
     return-void
 .end method
 
-.method setOnStartEnterTransitionListener(Landroidx/fragment/app/Fragment$c;)V
+.method setOnStartEnterTransitionListener(Landroidx/fragment/app/Fragment$b;)V
     .locals 2
 
     .line 2856
@@ -4576,7 +4583,7 @@
     .line 2857
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mAnimationInfo:Landroidx/fragment/app/Fragment$a;
 
-    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$c;
+    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$b;
 
     if-ne p1, v0, :cond_0
 
@@ -4588,7 +4595,7 @@
     .line 2860
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mAnimationInfo:Landroidx/fragment/app/Fragment$a;
 
-    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$c;
+    iget-object v0, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$b;
 
     if-nez v0, :cond_1
 
@@ -4628,13 +4635,13 @@
     .line 2865
     iget-object v0, p0, Landroidx/fragment/app/Fragment;->mAnimationInfo:Landroidx/fragment/app/Fragment$a;
 
-    iput-object p1, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$c;
+    iput-object p1, v0, Landroidx/fragment/app/Fragment$a;->r:Landroidx/fragment/app/Fragment$b;
 
     :cond_3
     if-eqz p1, :cond_4
 
     .line 2868
-    invoke-interface {p1}, Landroidx/fragment/app/Fragment$c;->b()V
+    invoke-interface {p1}, Landroidx/fragment/app/Fragment$b;->b()V
 
     :cond_4
     return-void
@@ -5270,7 +5277,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 583
-    invoke-static {p0, v0}, Landroidx/core/f/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
+    invoke-static {p0, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string v1, " ("
 

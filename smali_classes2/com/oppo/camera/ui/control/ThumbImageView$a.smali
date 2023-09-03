@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/control/ThumbImageView;)V
     .locals 0
 
-    .line 358
+    .line 410
     iput-object p1, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     invoke-direct {p0}, Lcom/a/a/e;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/control/ThumbImageView;Lcom/oppo/camera/ui/control/ThumbImageView$1;)V
     .locals 0
 
-    .line 358
+    .line 410
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/control/ThumbImageView$a;-><init>(Lcom/oppo/camera/ui/control/ThumbImageView;)V
 
     return-void
@@ -44,14 +44,14 @@
 .method public a(Lcom/a/a/f;)V
     .locals 3
 
-    .line 361
+    .line 413
     iget-object v0, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     const/4 v1, 0x2
 
     invoke-static {v0, v1}, Lcom/oppo/camera/ui/control/ThumbImageView;->a(Lcom/oppo/camera/ui/control/ThumbImageView;I)I
 
-    .line 362
+    .line 414
     iget-object v0, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     invoke-virtual {p1}, Lcom/a/a/f;->c()D
@@ -62,7 +62,7 @@
 
     invoke-static {v0, v1}, Lcom/oppo/camera/ui/control/ThumbImageView;->a(Lcom/oppo/camera/ui/control/ThumbImageView;F)F
 
-    .line 364
+    .line 416
     iget-object v0, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/control/ThumbImageView;->a(Lcom/oppo/camera/ui/control/ThumbImageView;)F
@@ -77,15 +77,15 @@
 
     if-lez v0, :cond_0
 
-    .line 365
+    .line 417
     iget-object v0, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     invoke-static {v0, v1}, Lcom/oppo/camera/ui/control/ThumbImageView;->a(Lcom/oppo/camera/ui/control/ThumbImageView;F)F
 
-    .line 366
+    .line 418
     invoke-virtual {p1}, Lcom/a/a/f;->j()Lcom/a/a/f;
 
-    .line 369
+    .line 421
     :cond_0
     iget-object p1, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
@@ -101,17 +101,17 @@
 
     const-string v0, "ThumbReboundListener, onSpringAtRest, endNewThumbAnimation"
 
-    .line 374
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 426
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 376
+    .line 428
     iget-object p1, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/control/ThumbImageView;->a(Lcom/oppo/camera/ui/control/ThumbImageView;I)I
 
-    .line 378
+    .line 430
     iget-object p1, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/control/ThumbImageView;->b(Lcom/oppo/camera/ui/control/ThumbImageView;)Landroid/graphics/drawable/Drawable;
@@ -120,7 +120,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 379
+    .line 431
     iget-object p1, p0, Lcom/oppo/camera/ui/control/ThumbImageView$a;->a:Lcom/oppo/camera/ui/control/ThumbImageView;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/control/ThumbImageView;->b(Lcom/oppo/camera/ui/control/ThumbImageView;)Landroid/graphics/drawable/Drawable;

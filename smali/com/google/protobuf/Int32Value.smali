@@ -42,14 +42,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 420
+    .line 474
     new-instance v0, Lcom/google/protobuf/Int32Value;
 
     invoke-direct {v0}, Lcom/google/protobuf/Int32Value;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/Int32Value;->DEFAULT_INSTANCE:Lcom/google/protobuf/Int32Value;
 
-    .line 428
+    .line 486
     new-instance v0, Lcom/google/protobuf/Int32Value$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/Int32Value$1;-><init>()V
@@ -62,69 +62,71 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 22
+    .line 23
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3;-><init>()V
 
     const/4 v0, -0x1
 
-    .line 92
+    .line 107
     iput-byte v0, p0, Lcom/google/protobuf/Int32Value;->memoizedIsInitialized:B
-
-    const/4 v0, 0x0
-
-    .line 23
-    iput v0, p0, Lcom/google/protobuf/Int32Value;->value_:I
 
     return-void
 .end method
 
 .method private constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)V
-    .locals 3
+    .locals 5
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Lcom/google/protobuf/InvalidProtocolBufferException;
         }
     .end annotation
 
-    .line 35
+    .line 42
     invoke-direct {p0}, Lcom/google/protobuf/Int32Value;-><init>()V
 
-    const/4 p2, 0x0
+    if-eqz p2, :cond_4
+
+    .line 47
+    invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->newBuilder()Lcom/google/protobuf/UnknownFieldSet$Builder;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
 
     :cond_0
     :goto_0
-    if-nez p2, :cond_3
+    if-nez v1, :cond_3
 
-    .line 40
+    .line 51
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readTag()I
 
-    move-result v0
+    move-result v2
 
-    const/4 v1, 0x1
+    const/4 v3, 0x1
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_2
 
-    const/16 v2, 0x8
+    const/16 v4, 0x8
 
-    if-eq v0, v2, :cond_1
+    if-eq v2, v4, :cond_1
 
-    .line 46
-    invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->skipField(I)Z
+    .line 62
+    invoke-virtual {p0, p1, v0, p2, v2}, Lcom/google/protobuf/Int32Value;->parseUnknownField(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/UnknownFieldSet$Builder;Lcom/google/protobuf/ExtensionRegistryLite;I)Z
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_0
+    if-nez v2, :cond_0
 
     goto :goto_1
 
-    .line 53
+    .line 58
     :cond_1
     invoke-virtual {p1}, Lcom/google/protobuf/CodedInputStream;->readInt32()I
 
-    move-result v0
+    move-result v2
 
-    iput v0, p0, Lcom/google/protobuf/Int32Value;->value_:I
+    iput v2, p0, Lcom/google/protobuf/Int32Value;->value_:I
     :try_end_0
     .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -134,7 +136,7 @@
 
     :cond_2
     :goto_1
-    move p2, v1
+    move v1, v3
 
     goto :goto_0
 
@@ -146,13 +148,13 @@
     :catch_0
     move-exception p1
 
-    .line 61
+    .line 73
     :try_start_1
     new-instance p2, Lcom/google/protobuf/InvalidProtocolBufferException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
-    .line 62
+    .line 74
     invoke-virtual {p2, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -162,7 +164,7 @@
     :catch_1
     move-exception p1
 
-    .line 59
+    .line 71
     invoke-virtual {p1, p0}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -171,16 +173,40 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 64
+    .line 76
     :goto_2
+    invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    .line 77
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value;->makeExtensionsImmutable()V
 
+    .line 78
     throw p1
 
+    .line 76
     :cond_3
+    invoke-virtual {v0}, Lcom/google/protobuf/UnknownFieldSet$Builder;->build()Lcom/google/protobuf/UnknownFieldSet;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    .line 77
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value;->makeExtensionsImmutable()V
 
     return-void
+
+    .line 44
+    :cond_4
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
+
+    throw p1
 .end method
 
 .method synthetic constructor <init>(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;Lcom/google/protobuf/Int32Value$1;)V
@@ -207,12 +233,12 @@
         }
     .end annotation
 
-    .line 20
+    .line 21
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;)V
 
     const/4 p1, -0x1
 
-    .line 92
+    .line 107
     iput-byte p1, p0, Lcom/google/protobuf/Int32Value;->memoizedIsInitialized:B
 
     return-void
@@ -248,7 +274,7 @@
 .method public static getDefaultInstance()Lcom/google/protobuf/Int32Value;
     .locals 1
 
-    .line 424
+    .line 478
     sget-object v0, Lcom/google/protobuf/Int32Value;->DEFAULT_INSTANCE:Lcom/google/protobuf/Int32Value;
 
     return-object v0
@@ -257,7 +283,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 69
+    .line 82
     sget-object v0, Lcom/google/protobuf/WrappersProto;->internal_static_google_protobuf_Int32Value_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -266,7 +292,7 @@
 .method public static newBuilder()Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 214
+    .line 245
     sget-object v0, Lcom/google/protobuf/Int32Value;->DEFAULT_INSTANCE:Lcom/google/protobuf/Int32Value;
 
     invoke-virtual {v0}, Lcom/google/protobuf/Int32Value;->toBuilder()Lcom/google/protobuf/Int32Value$Builder;
@@ -279,7 +305,7 @@
 .method public static newBuilder(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 217
+    .line 248
     sget-object v0, Lcom/google/protobuf/Int32Value;->DEFAULT_INSTANCE:Lcom/google/protobuf/Int32Value;
 
     invoke-virtual {v0}, Lcom/google/protobuf/Int32Value;->toBuilder()Lcom/google/protobuf/Int32Value$Builder;
@@ -287,6 +313,25 @@
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static of(I)Lcom/google/protobuf/Int32Value;
+    .locals 1
+
+    .line 482
+    invoke-static {}, Lcom/google/protobuf/Int32Value;->newBuilder()Lcom/google/protobuf/Int32Value$Builder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/google/protobuf/Int32Value$Builder;->setValue(I)Lcom/google/protobuf/Int32Value$Builder;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->build()Lcom/google/protobuf/Int32Value;
 
     move-result-object p0
 
@@ -301,10 +346,10 @@
         }
     .end annotation
 
-    .line 188
+    .line 218
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 189
+    .line 219
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -322,10 +367,10 @@
         }
     .end annotation
 
-    .line 195
+    .line 225
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 196
+    .line 226
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseDelimitedWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -343,7 +388,7 @@
         }
     .end annotation
 
-    .line 156
+    .line 186
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;)Ljava/lang/Object;
@@ -363,7 +408,7 @@
         }
     .end annotation
 
-    .line 162
+    .line 192
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -383,10 +428,10 @@
         }
     .end annotation
 
-    .line 201
+    .line 231
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 202
+    .line 232
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -404,10 +449,10 @@
         }
     .end annotation
 
-    .line 208
+    .line 238
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 209
+    .line 239
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -425,10 +470,10 @@
         }
     .end annotation
 
-    .line 176
+    .line 206
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 177
+    .line 207
     invoke-static {v0, p0}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;)Lcom/google/protobuf/Message;
 
     move-result-object p0
@@ -446,11 +491,51 @@
         }
     .end annotation
 
-    .line 183
+    .line 213
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
-    .line 184
+    .line 214
     invoke-static {v0, p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->parseWithIOException(Lcom/google/protobuf/Parser;Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Message;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/Int32Value;
+
+    return-object p0
+.end method
+
+.method public static parseFrom(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/Int32Value;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 175
+    sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcom/google/protobuf/Int32Value;
+
+    return-object p0
+.end method
+
+.method public static parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Int32Value;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 181
+    sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
+
+    invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -467,7 +552,7 @@
         }
     .end annotation
 
-    .line 166
+    .line 196
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0}, Lcom/google/protobuf/Parser;->parseFrom([B)Ljava/lang/Object;
@@ -487,7 +572,7 @@
         }
     .end annotation
 
-    .line 172
+    .line 202
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
     invoke-interface {v0, p0, p1}, Lcom/google/protobuf/Parser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -510,7 +595,7 @@
         }
     .end annotation
 
-    .line 438
+    .line 497
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -519,7 +604,7 @@
 
 # virtual methods
 .method public equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -527,48 +612,61 @@
 
     return v0
 
-    .line 128
+    .line 147
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/Int32Value;
 
     if-nez v1, :cond_1
 
-    .line 129
+    .line 148
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 131
+    .line 150
     :cond_1
     check-cast p1, Lcom/google/protobuf/Int32Value;
 
-    .line 134
+    .line 152
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value;->getValue()I
 
     move-result v1
 
-    .line 135
+    .line 153
     invoke-virtual {p1}, Lcom/google/protobuf/Int32Value;->getValue()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-eq v1, v2, :cond_2
+
+    return v3
+
+    .line 154
+    :cond_2
+    iget-object v1, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    iget-object p1, p1, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    invoke-virtual {v1, p1}, Lcom/google/protobuf/UnknownFieldSet;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-ne v1, p1, :cond_2
+    if-nez p1, :cond_3
 
-    goto :goto_0
+    return v3
 
-    :cond_2
-    const/4 v0, 0x0
-
-    :goto_0
+    :cond_3
     return v0
 .end method
 
 .method public getDefaultInstanceForType()Lcom/google/protobuf/Int32Value;
     .locals 1
 
-    .line 447
+    .line 507
     sget-object v0, Lcom/google/protobuf/Int32Value;->DEFAULT_INSTANCE:Lcom/google/protobuf/Int32Value;
 
     return-object v0
@@ -607,7 +705,7 @@
         }
     .end annotation
 
-    .line 443
+    .line 502
     sget-object v0, Lcom/google/protobuf/Int32Value;->PARSER:Lcom/google/protobuf/Parser;
 
     return-object v0
@@ -616,7 +714,7 @@
 .method public getSerializedSize()I
     .locals 3
 
-    .line 110
+    .line 129
     iget v0, p0, Lcom/google/protobuf/Int32Value;->memoizedSize:I
 
     const/4 v1, -0x1
@@ -628,22 +726,31 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 114
+    .line 133
     iget v1, p0, Lcom/google/protobuf/Int32Value;->value_:I
 
     if-eqz v1, :cond_1
 
     const/4 v2, 0x1
 
-    .line 116
+    .line 135
     invoke-static {v2, v1}, Lcom/google/protobuf/CodedOutputStream;->computeInt32Size(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 118
+    .line 137
     :cond_1
+    iget-object v1, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->getSerializedSize()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 138
     iput v0, p0, Lcom/google/protobuf/Int32Value;->memoizedSize:I
 
     return v0
@@ -652,10 +759,8 @@
 .method public final getUnknownFields()Lcom/google/protobuf/UnknownFieldSet;
     .locals 1
 
-    .line 29
-    invoke-static {}, Lcom/google/protobuf/UnknownFieldSet;->getDefaultInstance()Lcom/google/protobuf/UnknownFieldSet;
-
-    move-result-object v0
+    .line 36
+    iget-object v0, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     return-object v0
 .end method
@@ -663,7 +768,7 @@
 .method public getValue()I
     .locals 1
 
-    .line 89
+    .line 104
     iget v0, p0, Lcom/google/protobuf/Int32Value;->value_:I
 
     return v0
@@ -672,12 +777,12 @@
 .method public hashCode()I
     .locals 2
 
-    .line 141
+    .line 160
     iget v0, p0, Lcom/google/protobuf/Int32Value;->memoizedHashCode:I
 
     if-eqz v0, :cond_0
 
-    .line 142
+    .line 161
     iget v0, p0, Lcom/google/protobuf/Int32Value;->memoizedHashCode:I
 
     return v0
@@ -685,8 +790,8 @@
     :cond_0
     const/16 v0, 0x30b
 
-    .line 145
-    invoke-virtual {p0}, Lcom/google/protobuf/Int32Value;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 164
+    invoke-static {}, Lcom/google/protobuf/Int32Value;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v1
 
@@ -702,7 +807,7 @@
 
     mul-int/lit8 v0, v0, 0x35
 
-    .line 147
+    .line 166
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value;->getValue()I
 
     move-result v1
@@ -711,7 +816,7 @@
 
     mul-int/lit8 v0, v0, 0x1d
 
-    .line 148
+    .line 167
     iget-object v1, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {v1}, Lcom/google/protobuf/UnknownFieldSet;->hashCode()I
@@ -720,7 +825,7 @@
 
     add-int/2addr v0, v1
 
-    .line 149
+    .line 168
     iput v0, p0, Lcom/google/protobuf/Int32Value;->memoizedHashCode:I
 
     return v0
@@ -729,14 +834,14 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 74
+    .line 88
     sget-object v0, Lcom/google/protobuf/WrappersProto;->internal_static_google_protobuf_Int32Value_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     const-class v1, Lcom/google/protobuf/Int32Value;
 
     const-class v2, Lcom/google/protobuf/Int32Value$Builder;
 
-    .line 75
+    .line 89
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -747,7 +852,7 @@
 .method public final isInitialized()Z
     .locals 2
 
-    .line 94
+    .line 110
     iget-byte v0, p0, Lcom/google/protobuf/Int32Value;->memoizedIsInitialized:B
 
     const/4 v1, 0x1
@@ -763,7 +868,7 @@
 
     return v0
 
-    .line 98
+    .line 114
     :cond_1
     iput-byte v1, p0, Lcom/google/protobuf/Int32Value;->memoizedIsInitialized:B
 
@@ -773,7 +878,7 @@
 .method public newBuilderForType()Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 212
+    .line 243
     invoke-static {}, Lcom/google/protobuf/Int32Value;->newBuilder()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -784,7 +889,7 @@
 .method protected newBuilderForType(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 2
 
-    .line 227
+    .line 259
     new-instance v0, Lcom/google/protobuf/Int32Value$Builder;
 
     const/4 v1, 0x0
@@ -827,10 +932,21 @@
     return-object v0
 .end method
 
+.method protected newInstance(Lcom/google/protobuf/GeneratedMessageV3$UnusedPrivateParameter;)Ljava/lang/Object;
+    .locals 0
+
+    .line 30
+    new-instance p1, Lcom/google/protobuf/Int32Value;
+
+    invoke-direct {p1}, Lcom/google/protobuf/Int32Value;-><init>()V
+
+    return-object p1
+.end method
+
 .method public toBuilder()Lcom/google/protobuf/Int32Value$Builder;
     .locals 2
 
-    .line 220
+    .line 252
     sget-object v0, Lcom/google/protobuf/Int32Value;->DEFAULT_INSTANCE:Lcom/google/protobuf/Int32Value;
 
     const/4 v1, 0x0
@@ -848,7 +964,7 @@
 
     invoke-direct {v0, v1}, Lcom/google/protobuf/Int32Value$Builder;-><init>(Lcom/google/protobuf/Int32Value$1;)V
 
-    .line 221
+    .line 253
     invoke-virtual {v0, p0}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -887,16 +1003,21 @@
         }
     .end annotation
 
-    .line 104
+    .line 121
     iget v0, p0, Lcom/google/protobuf/Int32Value;->value_:I
 
     if-eqz v0, :cond_0
 
     const/4 v1, 0x1
 
-    .line 105
+    .line 122
     invoke-virtual {p1, v1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
 
+    .line 124
     :cond_0
+    iget-object v0, p0, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    invoke-virtual {v0, p1}, Lcom/google/protobuf/UnknownFieldSet;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V
+
     return-void
 .end method

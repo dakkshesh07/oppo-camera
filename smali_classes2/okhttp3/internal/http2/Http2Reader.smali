@@ -910,6 +910,10 @@
 
     move-result v2
 
+    const v3, 0xffff
+
+    and-int/2addr v2, v3
+
     .line 258
     iget-object v3, p0, Lokhttp3/internal/http2/Http2Reader;->source:Lokio/BufferedSource;
 

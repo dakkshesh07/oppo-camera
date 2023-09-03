@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/c;)V
     .locals 0
 
-    .line 90
+    .line 97
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/c$1;->a:Lcom/oppo/camera/ui/menu/setting/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 93
+    .line 100
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/c$1;->a:Lcom/oppo/camera/ui/menu/setting/c;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/c;->getActivity()Landroidx/fragment/app/c;

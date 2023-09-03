@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/c/a;Lcom/coloros/anim/c/b/o;)V
+.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/layer/a;Lcom/coloros/anim/model/content/k;)V
     .locals 1
 
     .line 24
@@ -54,14 +54,14 @@
     iput-object v0, p0, Lcom/coloros/anim/a/a/q;->g:Lcom/coloros/anim/a/a/b;
 
     .line 25
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/o;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/k;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/coloros/anim/a/a/q;->b:Ljava/lang/String;
 
     .line 26
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/o;->c()Z
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/k;->c()Z
 
     move-result v0
 
@@ -71,11 +71,11 @@
     iput-object p1, p0, Lcom/coloros/anim/a/a/q;->d:Lcom/coloros/anim/b;
 
     .line 28
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/o;->b()Lcom/coloros/anim/c/a/h;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/k;->b()Lcom/coloros/anim/model/a/h;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/h;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/h;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
     .line 29
     iget-object p1, p0, Lcom/coloros/anim/a/a/q;->e:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 30
     iget-object p1, p0, Lcom/coloros/anim/a/a/q;->e:Lcom/coloros/anim/a/b/a;
@@ -160,11 +160,11 @@
     check-cast v0, Lcom/coloros/anim/a/a/s;
 
     .line 48
-    invoke-virtual {v0}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/c/b/q$a;
+    invoke-virtual {v0}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     move-result-object v1
 
-    sget-object v2, Lcom/coloros/anim/c/b/q$a;->SIMULTANEOUSLY:Lcom/coloros/anim/c/b/q$a;
+    sget-object v2, Lcom/coloros/anim/model/content/ShapeTrimPath$Type;->SIMULTANEOUSLY:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     if-ne v1, v2, :cond_0
 

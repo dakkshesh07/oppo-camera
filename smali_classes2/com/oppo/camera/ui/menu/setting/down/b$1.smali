@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/down/b;)V
     .locals 0
 
-    .line 69
+    .line 74
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/b$1;->a:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 0
 
-    .line 72
+    .line 77
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/b$1;->a:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(Lcom/oppo/camera/ui/menu/setting/down/b;)Lcom/oppo/camera/ui/menu/setting/down/b$a;
@@ -47,7 +47,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 73
+    .line 78
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/b$1;->a:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(Lcom/oppo/camera/ui/menu/setting/down/b;)Lcom/oppo/camera/ui/menu/setting/down/b$a;

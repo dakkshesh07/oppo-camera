@@ -26,16 +26,16 @@
 .method constructor <init>(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .line 330
+    .line 331
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 331
+    .line 332
     iput-object p1, p0, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->getMethod:Ljava/lang/reflect/Method;
 
-    .line 332
+    .line 333
     iput-object p2, p0, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->openMethod:Ljava/lang/reflect/Method;
 
-    .line 333
+    .line 334
     iput-object p3, p0, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->warnIfOpenMethod:Ljava/lang/reflect/Method;
 
     return-void
@@ -49,7 +49,7 @@
     :try_start_0
     const-string v1, "dalvik.system.CloseGuard"
 
-    .line 366
+    .line 367
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -58,7 +58,7 @@
 
     const/4 v3, 0x0
 
-    .line 367
+    .line 368
     new-array v4, v3, [Ljava/lang/Class;
 
     invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -69,7 +69,7 @@
 
     const/4 v5, 0x1
 
-    .line 368
+    .line 369
     new-array v5, v5, [Ljava/lang/Class;
 
     const-class v6, Ljava/lang/String;
@@ -82,7 +82,7 @@
 
     const-string v5, "warnIfOpen"
 
-    .line 369
+    .line 370
     new-array v3, v3, [Ljava/lang/Class;
 
     invoke-virtual {v1, v5, v3}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
@@ -102,7 +102,7 @@
 
     move-object v4, v1
 
-    .line 375
+    .line 376
     :goto_0
     new-instance v2, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;
 
@@ -116,7 +116,7 @@
 .method createAndOpen(Ljava/lang/String;)Ljava/lang/Object;
     .locals 5
 
-    .line 337
+    .line 338
     iget-object v0, p0, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->getMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -125,7 +125,7 @@
 
     const/4 v2, 0x0
 
-    .line 339
+    .line 340
     :try_start_0
     new-array v3, v2, [Ljava/lang/Object;
 
@@ -133,7 +133,7 @@
 
     move-result-object v0
 
-    .line 340
+    .line 341
     iget-object v3, p0, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->openMethod:Ljava/lang/reflect/Method;
 
     const/4 v4, 0x1
@@ -160,7 +160,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 352
+    .line 353
     :try_start_0
     iget-object v1, p0, Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->warnIfOpenMethod:Ljava/lang/reflect/Method;
 

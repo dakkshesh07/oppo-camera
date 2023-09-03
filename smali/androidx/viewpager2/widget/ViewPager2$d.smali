@@ -75,18 +75,18 @@
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$p;Landroidx/recyclerview/widget/RecyclerView$t;Landroidx/core/g/a/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$p;Landroidx/recyclerview/widget/RecyclerView$t;Landroidx/core/f/a/d;)V
     .locals 0
 
     .line 1017
-    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$p;Landroidx/recyclerview/widget/RecyclerView$t;Landroidx/core/g/a/d;)V
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/LinearLayoutManager;->onInitializeAccessibilityNodeInfo(Landroidx/recyclerview/widget/RecyclerView$p;Landroidx/recyclerview/widget/RecyclerView$t;Landroidx/core/f/a/d;)V
 
     .line 1018
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2$d;->a:Landroidx/viewpager2/widget/ViewPager2;
 
     iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->f:Landroidx/viewpager2/widget/ViewPager2$a;
 
-    invoke-virtual {p1, p3}, Landroidx/viewpager2/widget/ViewPager2$a;->a(Landroidx/core/g/a/d;)V
+    invoke-virtual {p1, p3}, Landroidx/viewpager2/widget/ViewPager2$a;->a(Landroidx/core/f/a/d;)V
 
     return-void
 .end method

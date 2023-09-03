@@ -13,29 +13,28 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 3
 
-    const-string v0, "\n google/protobuf/field_mask.proto\u0012\u000fgoogle.protobuf\"\u001a\n\tFieldMask\u0012\r\n\u0005paths\u0018\u0001 \u0003(\tBN\n\u0013com.google.protobufB\u000eFieldMaskProtoP\u0001\u00a2\u0002\u0003GPB\u00aa\u0002\u001eGoogle.Protobuf.WellKnownTypesb\u0006proto3"
+    const-string v0, "\n google/protobuf/field_mask.proto\u0012\u000fgoogle.protobuf\"\u001a\n\tFieldMask\u0012\r\n\u0005paths\u0018\u0001 \u0003(\tB\u008c\u0001\n\u0013com.google.protobufB\u000eFieldMaskProtoP\u0001Z9google.golang.org/genproto/protobuf/field_mask;field_mask\u00f8\u0001\u0001\u00a2\u0002\u0003GPB\u00aa\u0002\u001eGoogle.Protobuf.WellKnownTypesb\u0006proto3"
 
     .line 30
     filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    .line 37
-    new-instance v1, Lcom/google/protobuf/FieldMaskProto$1;
+    const/4 v1, 0x0
 
-    invoke-direct {v1}, Lcom/google/protobuf/FieldMaskProto$1;-><init>()V
+    .line 38
+    new-array v2, v1, [Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    const/4 v2, 0x0
+    .line 39
+    invoke-static {v0, v2}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 45
-    new-array v3, v2, [Lcom/google/protobuf/Descriptors$FileDescriptor;
+    move-result-object v0
 
-    .line 46
-    invoke-static {v0, v3, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->internalBuildGeneratedFileFrom([Ljava/lang/String;[Lcom/google/protobuf/Descriptors$FileDescriptor;Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;)V
+    sput-object v0, Lcom/google/protobuf/FieldMaskProto;->descriptor:Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 50
+    .line 43
     invoke-static {}, Lcom/google/protobuf/FieldMaskProto;->getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;
 
     move-result-object v0
@@ -44,7 +43,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -52,7 +51,7 @@
 
     sput-object v0, Lcom/google/protobuf/FieldMaskProto;->internal_static_google_protobuf_FieldMask_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 51
+    .line 44
     new-instance v0, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     sget-object v1, Lcom/google/protobuf/FieldMaskProto;->internal_static_google_protobuf_FieldMask_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -77,15 +76,6 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic access$002(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
-    .locals 0
-
-    .line 6
-    sput-object p0, Lcom/google/protobuf/FieldMaskProto;->descriptor:Lcom/google/protobuf/Descriptors$FileDescriptor;
-
-    return-object p0
 .end method
 
 .method public static getDescriptor()Lcom/google/protobuf/Descriptors$FileDescriptor;

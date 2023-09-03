@@ -32,11 +32,11 @@
     .end annotation
 .end field
 
-.field private final f:Lcom/coloros/anim/c/b/h;
+.field private final f:Lcom/coloros/anim/model/content/MergePaths;
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/c/b/h;)V
+.method public constructor <init>(Lcom/coloros/anim/model/content/MergePaths;)V
     .locals 2
 
     .line 23
@@ -78,14 +78,14 @@
     if-lt v0, v1, :cond_0
 
     .line 27
-    invoke-virtual {p1}, Lcom/coloros/anim/c/b/h;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/content/MergePaths;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/coloros/anim/a/a/l;->d:Ljava/lang/String;
 
     .line 28
-    iput-object p1, p0, Lcom/coloros/anim/a/a/l;->f:Lcom/coloros/anim/c/b/h;
+    iput-object p1, p0, Lcom/coloros/anim/a/a/l;->f:Lcom/coloros/anim/model/content/MergePaths;
 
     return-void
 
@@ -454,9 +454,9 @@
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
     .line 57
-    iget-object v0, p0, Lcom/coloros/anim/a/a/l;->f:Lcom/coloros/anim/c/b/h;
+    iget-object v0, p0, Lcom/coloros/anim/a/a/l;->f:Lcom/coloros/anim/model/content/MergePaths;
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/b/h;->c()Z
+    invoke-virtual {v0}, Lcom/coloros/anim/model/content/MergePaths;->c()Z
 
     move-result v0
 
@@ -471,13 +471,13 @@
     :cond_0
     sget-object v0, Lcom/coloros/anim/a/a/l$1;->a:[I
 
-    iget-object v1, p0, Lcom/coloros/anim/a/a/l;->f:Lcom/coloros/anim/c/b/h;
+    iget-object v1, p0, Lcom/coloros/anim/a/a/l;->f:Lcom/coloros/anim/model/content/MergePaths;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/b/h;->b()Lcom/coloros/anim/c/b/h$a;
+    invoke-virtual {v1}, Lcom/coloros/anim/model/content/MergePaths;->b()Lcom/coloros/anim/model/content/MergePaths$MergePathsMode;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/coloros/anim/c/b/h$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/model/content/MergePaths$MergePathsMode;->ordinal()I
 
     move-result v1
 

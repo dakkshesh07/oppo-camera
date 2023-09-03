@@ -21,7 +21,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ljava/lang/Class;",
+            "Ljava/lang/Class<",
+            "*>;",
             "Landroidx/lifecycle/a$a;",
             ">;"
         }
@@ -32,7 +33,8 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Ljava/lang/Class;",
+            "Ljava/lang/Class<",
+            "*>;",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -79,6 +81,16 @@
 
 .method private a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Landroidx/lifecycle/a$a;
     .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;[",
+            "Ljava/lang/reflect/Method;",
+            ")",
+            "Landroidx/lifecycle/a$a;"
+        }
+    .end annotation
 
     .line 105
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
@@ -163,9 +175,9 @@
 
     move-result-object v6
 
-    check-cast v6, Landroidx/lifecycle/e$a;
+    check-cast v6, Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, v1, v7, v6, p1}, Landroidx/lifecycle/a;->a(Ljava/util/Map;Landroidx/lifecycle/a$b;Landroidx/lifecycle/e$a;Ljava/lang/Class;)V
+    invoke-direct {p0, v1, v7, v6, p1}, Landroidx/lifecycle/a;->a(Ljava/util/Map;Landroidx/lifecycle/a$b;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Class;)V
 
     goto :goto_1
 
@@ -227,7 +239,7 @@
     .line 134
     aget-object v8, v4, v3
 
-    const-class v9, Landroidx/lifecycle/h;
+    const-class v9, Landroidx/lifecycle/g;
 
     invoke-virtual {v8, v9}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -254,7 +266,7 @@
 
     .line 139
     :goto_4
-    invoke-interface {v6}, Landroidx/lifecycle/o;->a()Landroidx/lifecycle/e$a;
+    invoke-interface {v6}, Landroidx/lifecycle/o;->a()Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v6
 
@@ -268,7 +280,7 @@
     .line 143
     aget-object v8, v4, v7
 
-    const-class v9, Landroidx/lifecycle/e$a;
+    const-class v9, Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-virtual {v8, v9}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -277,7 +289,7 @@
     if-eqz v8, :cond_8
 
     .line 147
-    sget-object v8, Landroidx/lifecycle/e$a;->ON_ANY:Landroidx/lifecycle/e$a;
+    sget-object v8, Landroidx/lifecycle/Lifecycle$Event;->ON_ANY:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne v6, v8, :cond_7
 
@@ -318,7 +330,7 @@
     invoke-direct {v4, v8, v5}, Landroidx/lifecycle/a$b;-><init>(ILjava/lang/reflect/Method;)V
 
     .line 156
-    invoke-direct {p0, v1, v4, v6, p1}, Landroidx/lifecycle/a;->a(Ljava/util/Map;Landroidx/lifecycle/a$b;Landroidx/lifecycle/e$a;Ljava/lang/Class;)V
+    invoke-direct {p0, v1, v4, v6, p1}, Landroidx/lifecycle/a;->a(Ljava/util/Map;Landroidx/lifecycle/a$b;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Class;)V
 
     move v4, v7
 
@@ -360,19 +372,19 @@
     return-object p2
 .end method
 
-.method private a(Ljava/util/Map;Landroidx/lifecycle/a$b;Landroidx/lifecycle/e$a;Ljava/lang/Class;)V
+.method private a(Ljava/util/Map;Landroidx/lifecycle/a$b;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Class;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Map<",
             "Landroidx/lifecycle/a$b;",
-            "Landroidx/lifecycle/e$a;",
+            "Landroidx/lifecycle/Lifecycle$Event;",
             ">;",
             "Landroidx/lifecycle/a$b;",
-            "Landroidx/lifecycle/e$a;",
-            "Ljava/lang/Class;",
-            ")V"
+            "Landroidx/lifecycle/Lifecycle$Event;",
+            "Ljava/lang/Class<",
+            "*>;)V"
         }
     .end annotation
 
@@ -381,7 +393,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroidx/lifecycle/e$a;
+    check-cast v0, Landroidx/lifecycle/Lifecycle$Event;
 
     if-eqz v0, :cond_1
 
@@ -454,6 +466,14 @@
 
 .method private c(Ljava/lang/Class;)[Ljava/lang/reflect/Method;
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)[",
+            "Ljava/lang/reflect/Method;"
+        }
+    .end annotation
 
     .line 70
     :try_start_0
@@ -482,6 +502,13 @@
 # virtual methods
 .method a(Ljava/lang/Class;)Z
     .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)Z"
+        }
+    .end annotation
 
     .line 45
     iget-object v0, p0, Landroidx/lifecycle/a;->c:Ljava/util/Map;
@@ -557,6 +584,14 @@
 
 .method b(Ljava/lang/Class;)Landroidx/lifecycle/a$a;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)",
+            "Landroidx/lifecycle/a$a;"
+        }
+    .end annotation
 
     .line 81
     iget-object v0, p0, Landroidx/lifecycle/a;->b:Ljava/util/Map;

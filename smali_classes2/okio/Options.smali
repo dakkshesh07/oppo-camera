@@ -1,5 +1,5 @@
 .class public final Lokio/Options;
-.super Lc/a/b;
+.super Lkotlin/collections/d;
 .source "Options.kt"
 
 # interfaces
@@ -15,11 +15,14 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/b<",
+        "Lkotlin/collections/d<",
         "Lokio/ByteString;",
         ">;",
         "Ljava/util/RandomAccess;"
     }
+.end annotation
+
+.annotation runtime Lkotlin/i;
 .end annotation
 
 
@@ -41,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokio/Options$Companion;-><init>(Lc/d/b/f;)V
+    invoke-direct {v0, v1}, Lokio/Options$Companion;-><init>(Lkotlin/jvm/internal/o;)V
 
     sput-object v0, Lokio/Options;->Companion:Lokio/Options$Companion;
 
@@ -52,7 +55,7 @@
     .locals 0
 
     .line 24
-    invoke-direct {p0}, Lc/a/b;-><init>()V
+    invoke-direct {p0}, Lkotlin/collections/d;-><init>()V
 
     iput-object p1, p0, Lokio/Options;->byteStrings:[Lokio/ByteString;
 
@@ -61,7 +64,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>([Lokio/ByteString;[ILc/d/b/f;)V
+.method public synthetic constructor <init>([Lokio/ByteString;[ILkotlin/jvm/internal/o;)V
     .locals 0
 
     .line 21
@@ -110,7 +113,7 @@
     .locals 0
 
     .line 21
-    invoke-super {p0, p1}, Lc/a/b;->contains(Ljava/lang/Object;)Z
+    invoke-super {p0, p1}, Lkotlin/collections/d;->contains(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -194,7 +197,7 @@
     .locals 0
 
     .line 21
-    invoke-super {p0, p1}, Lc/a/b;->indexOf(Ljava/lang/Object;)I
+    invoke-super {p0, p1}, Lkotlin/collections/d;->indexOf(Ljava/lang/Object;)I
 
     move-result p1
 
@@ -227,7 +230,7 @@
     .locals 0
 
     .line 21
-    invoke-super {p0, p1}, Lc/a/b;->lastIndexOf(Ljava/lang/Object;)I
+    invoke-super {p0, p1}, Lkotlin/collections/d;->lastIndexOf(Ljava/lang/Object;)I
 
     move-result p1
 

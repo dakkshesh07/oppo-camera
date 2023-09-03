@@ -14,10 +14,10 @@
 
 
 # static fields
-.field static final a:Landroidx/b/e;
+.field static final a:Landroidx/collection/LruCache;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/e<",
+            "Landroidx/collection/LruCache<",
             "Ljava/lang/String;",
             "Landroid/graphics/Typeface;",
             ">;"
@@ -27,10 +27,10 @@
 
 .field static final b:Ljava/lang/Object;
 
-.field static final c:Landroidx/b/g;
+.field static final c:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "Ljava/util/ArrayList<",
             "Landroidx/core/d/c$a<",
@@ -57,13 +57,13 @@
     .locals 4
 
     .line 172
-    new-instance v0, Landroidx/b/e;
+    new-instance v0, Landroidx/collection/LruCache;
 
     const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Landroidx/b/e;-><init>(I)V
+    invoke-direct {v0, v1}, Landroidx/collection/LruCache;-><init>(I)V
 
-    sput-object v0, Landroidx/core/d/b;->a:Landroidx/b/e;
+    sput-object v0, Landroidx/core/d/b;->a:Landroidx/collection/LruCache;
 
     .line 175
     new-instance v0, Landroidx/core/d/c;
@@ -86,11 +86,11 @@
     sput-object v0, Landroidx/core/d/b;->b:Ljava/lang/Object;
 
     .line 204
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    sput-object v0, Landroidx/core/d/b;->c:Landroidx/b/g;
+    sput-object v0, Landroidx/core/d/b;->c:Landroidx/collection/SimpleArrayMap;
 
     .line 784
     new-instance v0, Landroidx/core/d/b$4;
@@ -104,6 +104,9 @@
 
 .method public static a(Landroid/content/pm/PackageManager;Landroidx/core/d/a;Landroid/content/res/Resources;)Landroid/content/pm/ProviderInfo;
     .locals 5
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Landroid/content/pm/PackageManager$NameNotFoundException;
@@ -262,8 +265,10 @@
     throw p0
 .end method
 
-.method public static a(Landroid/content/Context;Landroidx/core/d/a;Landroidx/core/content/a/f$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+.method public static a(Landroid/content/Context;Landroidx/core/d/a;Landroidx/core/a/a/f$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 232
     new-instance v0, Ljava/lang/StringBuilder;
@@ -287,9 +292,9 @@
     move-result-object v0
 
     .line 233
-    sget-object v1, Landroidx/core/d/b;->a:Landroidx/b/e;
+    sget-object v1, Landroidx/core/d/b;->a:Landroidx/collection/LruCache;
 
-    invoke-virtual {v1, v0}, Landroidx/b/e;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -300,7 +305,7 @@
     if-eqz p2, :cond_0
 
     .line 236
-    invoke-virtual {p2, v1}, Landroidx/core/content/a/f$a;->onFontRetrieved(Landroid/graphics/Typeface;)V
+    invoke-virtual {p2, v1}, Landroidx/core/a/a/f$a;->onFontRetrieved(Landroid/graphics/Typeface;)V
 
     :cond_0
     return-object v1
@@ -327,7 +332,7 @@
     .line 246
     iget-object p1, p0, Landroidx/core/d/b$c;->a:Landroid/graphics/Typeface;
 
-    invoke-virtual {p2, p1, p3}, Landroidx/core/content/a/f$a;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
+    invoke-virtual {p2, p1, p3}, Landroidx/core/a/a/f$a;->callbackSuccessAsync(Landroid/graphics/Typeface;Landroid/os/Handler;)V
 
     goto :goto_0
 
@@ -335,7 +340,7 @@
     :cond_2
     iget p1, p0, Landroidx/core/d/b$c;->b:I
 
-    invoke-virtual {p2, p1, p3}, Landroidx/core/content/a/f$a;->callbackFailAsync(ILandroid/os/Handler;)V
+    invoke-virtual {p2, p1, p3}, Landroidx/core/a/a/f$a;->callbackFailAsync(ILandroid/os/Handler;)V
 
     .line 251
     :cond_3
@@ -382,7 +387,7 @@
     :cond_6
     new-instance p1, Landroidx/core/d/b$2;
 
-    invoke-direct {p1, p2, p3}, Landroidx/core/d/b$2;-><init>(Landroidx/core/content/a/f$a;Landroid/os/Handler;)V
+    invoke-direct {p1, p2, p3}, Landroidx/core/d/b$2;-><init>(Landroidx/core/a/a/f$a;Landroid/os/Handler;)V
 
     .line 287
     :goto_1
@@ -392,9 +397,9 @@
 
     .line 288
     :try_start_1
-    sget-object p3, Landroidx/core/d/b;->c:Landroidx/b/g;
+    sget-object p3, Landroidx/core/d/b;->c:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p3, v0}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p3, v0}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
 
@@ -425,9 +430,9 @@
     invoke-virtual {p3, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 300
-    sget-object p1, Landroidx/core/d/b;->c:Landroidx/b/g;
+    sget-object p1, Landroidx/core/d/b;->c:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p1, v0, p3}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p3}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 302
     :cond_9
@@ -539,7 +544,7 @@
     move-result-object p1
 
     .line 189
-    invoke-static {p0, v0, p1, p2}, Landroidx/core/graphics/g;->a(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/d/b$b;I)Landroid/graphics/Typeface;
+    invoke-static {p0, v0, p1, p2}, Landroidx/core/graphics/f;->a(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/d/b$b;I)Landroid/graphics/Typeface;
 
     move-result-object p0
 
@@ -622,7 +627,7 @@
     move-result p0
 
     .line 781
-    invoke-static {p1, p0}, Landroidx/core/content/a/c;->a(Landroid/content/res/Resources;I)Ljava/util/List;
+    invoke-static {p1, p0}, Landroidx/core/a/a/c;->a(Landroid/content/res/Resources;I)Ljava/util/List;
 
     move-result-object p0
 
@@ -673,6 +678,9 @@
 
 .method public static a(Landroid/content/Context;[Landroidx/core/d/b$b;Landroid/os/CancellationSignal;)Ljava/util/Map;
     .locals 5
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -729,7 +737,7 @@
 
     .line 701
     :cond_1
-    invoke-static {p0, p2, v3}, Landroidx/core/graphics/n;->a(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
+    invoke-static {p0, p2, v3}, Landroidx/core/graphics/m;->a(Landroid/content/Context;Landroid/os/CancellationSignal;Landroid/net/Uri;)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 

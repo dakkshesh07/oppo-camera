@@ -56,9 +56,9 @@
     .line 595
     iget-object v0, p0, Landroidx/appcompat/app/j$b;->a:Landroidx/appcompat/app/j;
 
-    iget-object v0, v0, Landroidx/appcompat/app/j;->a:Landroidx/appcompat/widget/aa;
+    iget-object v0, v0, Landroidx/appcompat/app/j;->a:Landroidx/appcompat/widget/z;
 
-    invoke-interface {v0}, Landroidx/appcompat/widget/aa;->i()Z
+    invoke-interface {v0}, Landroidx/appcompat/widget/z;->i()Z
 
     move-result v0
 

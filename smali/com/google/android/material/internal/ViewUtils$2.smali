@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/g/ae;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/f/ae;
     .locals 3
 
     .line 181
@@ -58,7 +58,7 @@
     .line 182
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->d()I
 
     move-result v1
 
@@ -82,7 +82,7 @@
     .line 187
     iget v1, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->a()I
 
     move-result v2
 
@@ -96,7 +96,7 @@
     :cond_1
     iget v1, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->a()I
 
     move-result v2
 
@@ -116,7 +116,7 @@
     .line 194
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->start:I
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->c()I
 
     move-result v1
 
@@ -130,7 +130,7 @@
     :cond_3
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->end:I
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->c()I
 
     move-result v1
 
@@ -149,7 +149,7 @@
     if-eqz v0, :cond_5
 
     .line 201
-    invoke-interface {v0, p1, p2, p3}, Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/g/ae;
+    invoke-interface {v0, p1, p2, p3}, Lcom/google/android/material/internal/ViewUtils$OnApplyWindowInsetsListener;->onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/f/ae;
 
     move-result-object p2
 

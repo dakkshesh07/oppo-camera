@@ -23,7 +23,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "TT;>;>;)V"
         }
     .end annotation

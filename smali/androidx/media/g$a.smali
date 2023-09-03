@@ -101,7 +101,7 @@
 
     aput-object v1, v0, v2
 
-    invoke-static {v0}, Landroidx/core/f/c;->a([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/d;->a([Ljava/lang/Object;)I
 
     move-result v0
 

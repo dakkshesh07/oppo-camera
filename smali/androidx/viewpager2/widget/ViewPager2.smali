@@ -50,7 +50,7 @@
 
 .field private m:Landroid/os/Parcelable;
 
-.field private n:Landroidx/recyclerview/widget/o;
+.field private n:Landroidx/recyclerview/widget/r;
 
 .field private o:Landroidx/viewpager2/widget/b;
 
@@ -378,7 +378,7 @@
     .line 184
     iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-static {}, Landroidx/core/g/w;->a()I
+    invoke-static {}, Landroidx/core/f/w;->a()I
 
     move-result v1
 
@@ -458,14 +458,14 @@
 
     invoke-direct {p1, p0}, Landroidx/viewpager2/widget/ViewPager2$h;-><init>(Landroidx/viewpager2/widget/ViewPager2;)V
 
-    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/recyclerview/widget/o;
+    iput-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/recyclerview/widget/r;
 
     .line 202
-    iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/recyclerview/widget/o;
+    iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/recyclerview/widget/r;
 
     iget-object p2, p0, Landroidx/viewpager2/widget/ViewPager2;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/o;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/r;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 205
     iget-object p1, p0, Landroidx/viewpager2/widget/ViewPager2;->d:Landroidx/recyclerview/widget/RecyclerView;
@@ -766,14 +766,14 @@
     .locals 2
 
     .line 537
-    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/recyclerview/widget/o;
+    iget-object v0, p0, Landroidx/viewpager2/widget/ViewPager2;->n:Landroidx/recyclerview/widget/r;
 
     if-eqz v0, :cond_2
 
     .line 541
     iget-object v1, p0, Landroidx/viewpager2/widget/ViewPager2;->k:Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/o;->a(Landroidx/recyclerview/widget/RecyclerView$i;)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/r;->a(Landroidx/recyclerview/widget/RecyclerView$i;)Landroid/view/View;
 
     move-result-object v0
 

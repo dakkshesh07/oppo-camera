@@ -41,7 +41,7 @@
     .line 104
     iget-object p1, p0, Lcom/coloros/anim/b$1;->a:Lcom/coloros/anim/b;
 
-    invoke-static {p1}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/b;)Lcom/coloros/anim/c/c/b;
+    invoke-static {p1}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/b;)Lcom/coloros/anim/model/layer/b;
 
     move-result-object p1
 
@@ -50,21 +50,21 @@
     .line 105
     iget-object p1, p0, Lcom/coloros/anim/b$1;->a:Lcom/coloros/anim/b;
 
-    invoke-static {p1}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/b;)Lcom/coloros/anim/c/c/b;
+    invoke-static {p1}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/b;)Lcom/coloros/anim/model/layer/b;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/coloros/anim/b$1;->a:Lcom/coloros/anim/b;
 
-    invoke-static {v0}, Lcom/coloros/anim/b;->b(Lcom/coloros/anim/b;)Lcom/coloros/anim/f/c;
+    invoke-static {v0}, Lcom/coloros/anim/b;->b(Lcom/coloros/anim/b;)Lcom/coloros/anim/d/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/f/c;->d()F
+    invoke-virtual {v0}, Lcom/coloros/anim/d/c;->d()F
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/coloros/anim/c/c/b;->a(F)V
+    invoke-virtual {p1, v0}, Lcom/coloros/anim/model/layer/b;->a(F)V
 
     :cond_0
     return-void

@@ -3,6 +3,11 @@
 .source "MaterialCardViewHelper.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final CARD_VIEW_SHADOW_MULTIPLIER:F = 1.5f
 
@@ -1456,7 +1461,7 @@
     .line 411
     iget-object v0, p0, Lcom/google/android/material/card/MaterialCardViewHelper;->materialCardView:Lcom/google/android/material/card/MaterialCardView;
 
-    invoke-static {v0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {v0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 

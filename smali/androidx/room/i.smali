@@ -1,547 +1,468 @@
-.class public abstract Landroidx/room/i;
+.class public Landroidx/room/i;
 .super Ljava/lang/Object;
-.source "RoomDatabase.java"
+.source "RoomSQLiteQuery.java"
+
+# interfaces
+.implements Landroidx/f/a/d;
+.implements Landroidx/f/a/e;
 
 
 # annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroidx/room/i$b;,
-        Landroidx/room/i$d;,
-        Landroidx/room/i$a;,
-        Landroidx/room/i$c;
-    }
+.annotation build Landroidx/annotation/RestrictTo;
 .end annotation
 
 
-# instance fields
-.field protected volatile a:Landroidx/f/a/b;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field b:Z
-
-.field protected c:Ljava/util/List;
+# static fields
+.field static final g:Ljava/util/TreeMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List<",
-            "Landroidx/room/i$b;",
-            ">;"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
-
-.field private d:Ljava/util/concurrent/Executor;
-
-.field private e:Ljava/util/concurrent/Executor;
-
-.field private f:Landroidx/f/a/c;
-
-.field private final g:Landroidx/room/f;
-
-.field private h:Z
-
-.field private final i:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-.field private final j:Ljava/lang/ThreadLocal;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ThreadLocal<",
+            "Ljava/util/TreeMap<",
             "Ljava/lang/Integer;",
+            "Landroidx/room/i;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final k:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
+
+# instance fields
+.field final a:[J
+
+.field final b:[D
+
+.field final c:[Ljava/lang/String;
+
+.field final d:[[B
+
+.field final e:I
+
+.field f:I
+
+.field private volatile h:Ljava/lang/String;
+
+.field private final i:[I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 150
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 79
+    new-instance v0, Ljava/util/TreeMap;
 
-    .line 98
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;-><init>()V
-
-    iput-object v0, p0, Landroidx/room/i;->i:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    .line 118
-    new-instance v0, Ljava/lang/ThreadLocal;
-
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    iput-object v0, p0, Landroidx/room/i;->j:Ljava/lang/ThreadLocal;
-
-    .line 131
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Landroidx/room/i;->k:Ljava/util/Map;
-
-    .line 151
-    invoke-virtual {p0}, Landroidx/room/i;->c()Landroidx/room/f;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroidx/room/i;->g:Landroidx/room/f;
+    sput-object v0, Landroidx/room/i;->g:Ljava/util/TreeMap;
 
     return-void
 .end method
 
-.method private static l()Z
-    .locals 2
+.method private constructor <init>(I)V
+    .locals 1
 
-    .line 1051
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    .line 156
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    .line 157
+    iput p1, p0, Landroidx/room/i;->e:I
 
-    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
+    add-int/lit8 p1, p1, 0x1
 
-    move-result-object v0
+    .line 161
+    new-array v0, p1, [I
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    iput-object v0, p0, Landroidx/room/i;->i:[I
+
+    .line 162
+    new-array v0, p1, [J
+
+    iput-object v0, p0, Landroidx/room/i;->a:[J
+
+    .line 163
+    new-array v0, p1, [D
+
+    iput-object v0, p0, Landroidx/room/i;->b:[D
+
+    .line 164
+    new-array v0, p1, [Ljava/lang/String;
+
+    iput-object v0, p0, Landroidx/room/i;->c:[Ljava/lang/String;
+
+    .line 165
+    new-array p1, p1, [[B
+
+    iput-object p1, p0, Landroidx/room/i;->d:[[B
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;I)Landroidx/room/i;
+    .locals 4
+
+    .line 141
+    sget-object v0, Landroidx/room/i;->g:Ljava/util/TreeMap;
+
+    monitor-enter v0
+
+    .line 142
+    :try_start_0
+    sget-object v1, Landroidx/room/i;->g:Ljava/util/TreeMap;
+
+    .line 143
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/TreeMap;->ceilingEntry(Ljava/lang/Object;)Ljava/util/Map$Entry;
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x1
+    .line 145
+    sget-object v2, Landroidx/room/i;->g:Ljava/util/TreeMap;
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/util/TreeMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 146
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/room/i;
+
+    .line 147
+    invoke-virtual {v1, p0, p1}, Landroidx/room/i;->b(Ljava/lang/String;I)V
+
+    .line 148
+    monitor-exit v0
+
+    return-object v1
+
+    .line 150
+    :cond_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 151
+    new-instance v0, Landroidx/room/i;
+
+    invoke-direct {v0, p1}, Landroidx/room/i;-><init>(I)V
+
+    .line 152
+    invoke-virtual {v0, p0, p1}, Landroidx/room/i;->b(Ljava/lang/String;I)V
+
+    return-object v0
+
+    :catchall_0
+    move-exception p0
+
+    .line 150
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method private static c()V
+    .locals 3
+
+    .line 189
+    sget-object v0, Landroidx/room/i;->g:Ljava/util/TreeMap;
+
+    invoke-virtual {v0}, Ljava/util/TreeMap;->size()I
+
+    move-result v0
+
+    const/16 v1, 0xf
+
+    if-le v0, v1, :cond_0
+
+    .line 190
+    sget-object v0, Landroidx/room/i;->g:Ljava/util/TreeMap;
+
+    invoke-virtual {v0}, Ljava/util/TreeMap;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0xa
+
+    .line 191
+    sget-object v1, Landroidx/room/i;->g:Ljava/util/TreeMap;
+
+    invoke-virtual {v1}, Ljava/util/TreeMap;->descendingKeySet()Ljava/util/NavigableSet;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/NavigableSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    add-int/lit8 v2, v0, -0x1
+
+    if-lez v0, :cond_0
+
+    .line 193
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 194
+    invoke-interface {v1}, Ljava/util/Iterator;->remove()V
+
+    move v0, v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/f/a/e;)Landroid/database/Cursor;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    .line 311
-    invoke-virtual {p0, p1, v0}, Landroidx/room/i;->a(Landroidx/f/a/e;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public a(Landroidx/f/a/e;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
-    .locals 2
-
-    .line 323
-    invoke-virtual {p0}, Landroidx/room/i;->e()V
-
-    .line 324
-    invoke-virtual {p0}, Landroidx/room/i;->f()V
-
-    if-eqz p2, :cond_0
-
-    .line 325
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    .line 326
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {v0}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1, p2}, Landroidx/f/a/b;->a(Landroidx/f/a/e;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 328
-    :cond_0
-    iget-object p2, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {p2}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object p2
-
-    invoke-interface {p2, p1}, Landroidx/f/a/b;->a(Landroidx/f/a/e;)Landroid/database/Cursor;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public a(Ljava/lang/String;)Landroidx/f/a/f;
-    .locals 1
-
-    .line 339
-    invoke-virtual {p0}, Landroidx/room/i;->e()V
-
-    .line 340
-    invoke-virtual {p0}, Landroidx/room/i;->f()V
-
-    .line 341
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {v0}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroidx/f/a/b;->a(Ljava/lang/String;)Landroidx/f/a/f;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method a()Ljava/util/concurrent/locks/Lock;
-    .locals 1
-
-    .line 111
-    iget-object v0, p0, Landroidx/room/i;->i:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected a(Landroidx/f/a/b;)V
-    .locals 1
-
-    .line 452
-    iget-object v0, p0, Landroidx/room/i;->g:Landroidx/room/f;
-
-    invoke-virtual {v0, p1}, Landroidx/room/f;->a(Landroidx/f/a/b;)V
-
-    return-void
-.end method
-
-.method public a(Landroidx/room/a;)V
+.method public a()V
     .locals 3
 
-    .line 161
-    invoke-virtual {p0, p1}, Landroidx/room/i;->b(Landroidx/room/a;)Landroidx/f/a/c;
+    .line 182
+    sget-object v0, Landroidx/room/i;->g:Ljava/util/TreeMap;
 
-    move-result-object v0
+    monitor-enter v0
 
-    iput-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
+    .line 183
+    :try_start_0
+    sget-object v1, Landroidx/room/i;->g:Ljava/util/TreeMap;
 
-    .line 162
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
+    iget v2, p0, Landroidx/room/i;->e:I
 
-    instance-of v1, v0, Landroidx/room/m;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz v1, :cond_0
+    move-result-object v2
 
-    .line 163
-    check-cast v0, Landroidx/room/m;
+    invoke-virtual {v1, v2, p0}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
-    invoke-virtual {v0, p1}, Landroidx/room/m;->a(Landroidx/room/a;)V
+    .line 184
+    invoke-static {}, Landroidx/room/i;->c()V
 
-    .line 167
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 185
+    monitor-exit v0
 
-    const/16 v1, 0x10
-
-    const/4 v2, 0x0
-
-    if-lt v0, v1, :cond_2
-
-    .line 168
-    iget-object v0, p1, Landroidx/room/a;->g:Landroidx/room/i$c;
-
-    sget-object v1, Landroidx/room/i$c;->WRITE_AHEAD_LOGGING:Landroidx/room/i$c;
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    move v2, v0
-
-    .line 169
-    :cond_1
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {v0, v2}, Landroidx/f/a/c;->a(Z)V
-
-    .line 171
-    :cond_2
-    iget-object v0, p1, Landroidx/room/a;->e:Ljava/util/List;
-
-    iput-object v0, p0, Landroidx/room/i;->c:Ljava/util/List;
-
-    .line 172
-    iget-object v0, p1, Landroidx/room/a;->h:Ljava/util/concurrent/Executor;
-
-    iput-object v0, p0, Landroidx/room/i;->d:Ljava/util/concurrent/Executor;
-
-    .line 173
-    new-instance v0, Landroidx/room/p;
-
-    iget-object v1, p1, Landroidx/room/a;->i:Ljava/util/concurrent/Executor;
-
-    invoke-direct {v0, v1}, Landroidx/room/p;-><init>(Ljava/util/concurrent/Executor;)V
-
-    iput-object v0, p0, Landroidx/room/i;->e:Ljava/util/concurrent/Executor;
-
-    .line 174
-    iget-boolean v0, p1, Landroidx/room/a;->f:Z
-
-    iput-boolean v0, p0, Landroidx/room/i;->h:Z
-
-    .line 175
-    iput-boolean v2, p0, Landroidx/room/i;->b:Z
-
-    .line 176
-    iget-boolean v0, p1, Landroidx/room/a;->j:Z
-
-    if-eqz v0, :cond_3
-
-    .line 177
-    iget-object v0, p0, Landroidx/room/i;->g:Landroidx/room/f;
-
-    iget-object v1, p1, Landroidx/room/a;->b:Landroid/content/Context;
-
-    iget-object p1, p1, Landroidx/room/a;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p1}, Landroidx/room/f;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    :cond_3
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method
 
-.method public b()Landroidx/f/a/c;
-    .locals 1
-
-    .line 189
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    return-object v0
-.end method
-
-.method protected abstract b(Landroidx/room/a;)Landroidx/f/a/c;
-.end method
-
-.method protected abstract c()Landroidx/room/f;
-.end method
-
-.method public d()Z
-    .locals 1
+.method public a(I)V
+    .locals 2
 
     .line 234
-    iget-object v0, p0, Landroidx/room/i;->a:Landroidx/f/a/b;
+    iget-object v0, p0, Landroidx/room/i;->i:[I
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x1
 
-    .line 235
-    invoke-interface {v0}, Landroidx/f/a/b;->e()Z
+    aput v1, v0, p1
 
-    move-result v0
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public a(ID)V
+    .locals 2
+
+    .line 245
+    iget-object v0, p0, Landroidx/room/i;->i:[I
+
+    const/4 v1, 0x3
+
+    aput v1, v0, p1
+
+    .line 246
+    iget-object v0, p0, Landroidx/room/i;->b:[D
+
+    aput-wide p2, v0, p1
+
+    return-void
+.end method
+
+.method public a(IJ)V
+    .locals 2
+
+    .line 239
+    iget-object v0, p0, Landroidx/room/i;->i:[I
+
+    const/4 v1, 0x2
+
+    aput v1, v0, p1
+
+    .line 240
+    iget-object v0, p0, Landroidx/room/i;->a:[J
+
+    aput-wide p2, v0, p1
+
+    return-void
+.end method
+
+.method public a(ILjava/lang/String;)V
+    .locals 2
+
+    .line 251
+    iget-object v0, p0, Landroidx/room/i;->i:[I
+
+    const/4 v1, 0x4
+
+    aput v1, v0, p1
+
+    .line 252
+    iget-object v0, p0, Landroidx/room/i;->c:[Ljava/lang/String;
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method
+
+.method public a(I[B)V
+    .locals 2
+
+    .line 257
+    iget-object v0, p0, Landroidx/room/i;->i:[I
+
+    const/4 v1, 0x5
+
+    aput v1, v0, p1
+
+    .line 258
+    iget-object v0, p0, Landroidx/room/i;->d:[[B
+
+    aput-object p2, v0, p1
+
+    return-void
+.end method
+
+.method public a(Landroidx/f/a/d;)V
+    .locals 4
 
     const/4 v0, 0x1
 
+    move v1, v0
+
+    .line 211
+    :goto_0
+    iget v2, p0, Landroidx/room/i;->f:I
+
+    if-gt v1, v2, :cond_5
+
+    .line 212
+    iget-object v2, p0, Landroidx/room/i;->i:[I
+
+    aget v2, v2, v1
+
+    if-eq v2, v0, :cond_4
+
+    const/4 v3, 0x2
+
+    if-eq v2, v3, :cond_3
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_2
+
+    const/4 v3, 0x4
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v3, 0x5
+
+    if-eq v2, v3, :cond_0
+
+    goto :goto_1
+
+    .line 226
+    :cond_0
+    iget-object v2, p0, Landroidx/room/i;->d:[[B
+
+    aget-object v2, v2, v1
+
+    invoke-interface {p1, v1, v2}, Landroidx/f/a/d;->a(I[B)V
+
+    goto :goto_1
+
+    .line 223
+    :cond_1
+    iget-object v2, p0, Landroidx/room/i;->c:[Ljava/lang/String;
+
+    aget-object v2, v2, v1
+
+    invoke-interface {p1, v1, v2}, Landroidx/f/a/d;->a(ILjava/lang/String;)V
+
+    goto :goto_1
+
+    .line 220
+    :cond_2
+    iget-object v2, p0, Landroidx/room/i;->b:[D
+
+    aget-wide v2, v2, v1
+
+    invoke-interface {p1, v1, v2, v3}, Landroidx/f/a/d;->a(ID)V
+
+    goto :goto_1
+
+    .line 217
+    :cond_3
+    iget-object v2, p0, Landroidx/room/i;->a:[J
+
+    aget-wide v2, v2, v1
+
+    invoke-interface {p1, v1, v2, v3}, Landroidx/f/a/d;->a(IJ)V
+
+    goto :goto_1
+
+    .line 214
+    :cond_4
+    invoke-interface {p1, v1}, Landroidx/f/a/d;->a(I)V
+
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
+
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-.end method
-
-.method public e()V
-    .locals 2
-
-    .line 263
-    iget-boolean v0, p0, Landroidx/room/i;->h:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 266
-    :cond_0
-    invoke-static {}, Landroidx/room/i;->l()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    return-void
-
-    .line 267
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot access database on the main thread since it may potentially lock the UI for a long period of time."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public f()V
-    .locals 2
-
-    .line 281
-    invoke-virtual {p0}, Landroidx/room/i;->k()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Landroidx/room/i;->j:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    .line 282
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Cannot access database on a different coroutine context inherited from a suspending transaction."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    :goto_0
+    :cond_5
     return-void
 .end method
 
-.method public g()V
-    .locals 2
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 351
-    invoke-virtual {p0}, Landroidx/room/i;->e()V
-
-    .line 352
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {v0}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object v0
-
-    .line 353
-    iget-object v1, p0, Landroidx/room/i;->g:Landroidx/room/f;
-
-    invoke-virtual {v1, v0}, Landroidx/room/f;->b(Landroidx/f/a/b;)V
-
-    .line 354
-    invoke-interface {v0}, Landroidx/f/a/b;->a()V
-
-    return-void
-.end method
-
-.method public h()V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-
-    .line 364
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {v0}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroidx/f/a/b;->b()V
-
-    .line 365
-    invoke-virtual {p0}, Landroidx/room/i;->k()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 368
-    iget-object v0, p0, Landroidx/room/i;->g:Landroidx/room/f;
-
-    invoke-virtual {v0}, Landroidx/room/f;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public i()Ljava/util/concurrent/Executor;
+.method public b()Ljava/lang/String;
     .locals 1
 
-    .line 377
-    iget-object v0, p0, Landroidx/room/i;->d:Ljava/util/concurrent/Executor;
+    .line 201
+    iget-object v0, p0, Landroidx/room/i;->h:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public j()V
-    .locals 1
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
+.method b(Ljava/lang/String;I)V
+    .locals 0
 
-    .line 395
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
+    .line 170
+    iput-object p1, p0, Landroidx/room/i;->h:Ljava/lang/String;
 
-    invoke-interface {v0}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroidx/f/a/b;->c()V
+    .line 171
+    iput p2, p0, Landroidx/room/i;->f:I
 
     return-void
 .end method
 
-.method public k()Z
-    .locals 1
+.method public close()V
+    .locals 0
 
-    .line 476
-    iget-object v0, p0, Landroidx/room/i;->f:Landroidx/f/a/c;
-
-    invoke-interface {v0}, Landroidx/f/a/c;->b()Landroidx/f/a/b;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroidx/f/a/b;->d()Z
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

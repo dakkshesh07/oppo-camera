@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroidx/coordinatorlayout/widget/CoordinatorLayout$a;
-.implements Landroidx/core/g/v;
-.implements Landroidx/core/widget/l;
+.implements Landroidx/core/f/v;
+.implements Landroidx/core/widget/m;
 .implements Lcom/google/android/material/expandable/ExpandableTransformationWidget;
 .implements Lcom/google/android/material/shape/Shapeable;
 
@@ -963,7 +963,7 @@
     .end annotation
 
     .line 873
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1096,7 +1096,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1417,16 +1417,16 @@
     .line 859
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->expandableWidgetHelper:Lcom/google/android/material/expandable/ExpandableWidgetHelper;
 
-    iget-object p1, p1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/b/g;
+    iget-object p1, p1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/collection/SimpleArrayMap;
 
     const-string v1, "expandableWidgetHelper"
 
     .line 860
-    invoke-virtual {p1, v1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1460,7 +1460,7 @@
     invoke-direct {v1, v0}, Lcom/google/android/material/stateful/ExtendableSavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 841
-    iget-object v0, v1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/b/g;
+    iget-object v0, v1, Lcom/google/android/material/stateful/ExtendableSavedState;->extendableStates:Landroidx/collection/SimpleArrayMap;
 
     iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->expandableWidgetHelper:Lcom/google/android/material/expandable/ExpandableWidgetHelper;
 
@@ -1472,7 +1472,7 @@
     const-string v3, "expandableWidgetHelper"
 
     .line 841
-    invoke-virtual {v0, v3, v2}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v3, v2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v1
 .end method
@@ -1999,6 +1999,8 @@
 
 .method public setShadowPaddingEnabled(Z)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1437
     invoke-direct {p0}, Lcom/google/android/material/floatingactionbutton/FloatingActionButton;->getImpl()Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImpl;

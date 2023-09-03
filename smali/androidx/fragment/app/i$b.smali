@@ -96,7 +96,7 @@
     .line 3451
     iget-object p1, p0, Landroidx/fragment/app/i$b;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1, p0}, Landroidx/core/g/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/g/s;
+    invoke-static {p1, p0}, Landroidx/core/f/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/f/s;
 
     :cond_1
     return v0
@@ -136,7 +136,7 @@
     .line 3466
     iget-object p1, p0, Landroidx/fragment/app/i$b;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p1, p0}, Landroidx/core/g/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/g/s;
+    invoke-static {p1, p0}, Landroidx/core/f/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/f/s;
 
     :cond_1
     return v0

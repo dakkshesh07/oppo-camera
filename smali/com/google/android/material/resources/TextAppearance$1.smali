@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/resources/TextAppearance$1;
-.super Landroidx/core/content/a/f$a;
+.super Landroidx/core/a/a/f$a;
 .source "TextAppearance.java"
 
 
@@ -29,7 +29,7 @@
 
     iput-object p2, p0, Lcom/google/android/material/resources/TextAppearance$1;->val$callback:Lcom/google/android/material/resources/TextAppearanceFontCallback;
 
-    invoke-direct {p0}, Landroidx/core/content/a/f$a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/a/a/f$a;-><init>()V
 
     return-void
 .end method

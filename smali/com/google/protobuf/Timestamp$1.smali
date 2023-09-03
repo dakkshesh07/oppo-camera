@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 593
+    .line 699
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 598
+    .line 705
     new-instance v0, Lcom/google/protobuf/Timestamp;
 
     const/4 v1, 0x0
@@ -60,7 +60,7 @@
         }
     .end annotation
 
-    .line 593
+    .line 699
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Timestamp$1;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Timestamp;
 
     move-result-object p1

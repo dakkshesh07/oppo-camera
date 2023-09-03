@@ -211,7 +211,7 @@
     const/4 p1, 0x1
 
     .line 148
-    invoke-static {p0, p1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -830,7 +830,7 @@
     invoke-super {p0, p1}, Lcom/google/android/material/internal/FlowLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 154
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -874,12 +874,12 @@
 
     .line 158
     :goto_1
-    invoke-static {v1, v0, v2, v3}, Landroidx/core/g/a/d$b;->a(IIZI)Landroidx/core/g/a/d$b;
+    invoke-static {v1, v0, v2, v3}, Landroidx/core/f/a/d$b;->a(IIZI)Landroidx/core/f/a/d$b;
 
     move-result-object v0
 
     .line 157
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

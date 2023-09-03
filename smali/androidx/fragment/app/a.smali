@@ -110,9 +110,9 @@
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 306
-    new-instance v0, Landroidx/core/f/b;
+    new-instance v0, Landroidx/core/util/b;
 
-    invoke-direct {v0, v1}, Landroidx/core/f/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/core/util/b;-><init>(Ljava/lang/String;)V
 
     .line 307
     new-instance v1, Ljava/io/PrintWriter;
@@ -494,7 +494,7 @@
     return-object p1
 .end method
 
-.method public a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)Landroidx/fragment/app/k;
+.method public a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/k;
     .locals 2
 
     .line 243
@@ -505,16 +505,16 @@
     if-ne v0, v1, :cond_1
 
     .line 247
-    sget-object v0, Landroidx/lifecycle/e$b;->CREATED:Landroidx/lifecycle/e$b;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {p2, v0}, Landroidx/lifecycle/e$b;->isAtLeast(Landroidx/lifecycle/e$b;)Z
+    invoke-virtual {p2, v0}, Landroidx/lifecycle/Lifecycle$State;->isAtLeast(Landroidx/lifecycle/Lifecycle$State;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 251
-    invoke-super {p0, p1, p2}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)Landroidx/fragment/app/k;
+    invoke-super {p0, p1, p2}, Landroidx/fragment/app/k;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)Landroidx/fragment/app/k;
 
     move-result-object p1
 
@@ -532,7 +532,7 @@
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Landroidx/lifecycle/e$b;->CREATED:Landroidx/lifecycle/e$b;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -746,7 +746,7 @@
     return-void
 .end method
 
-.method a(Landroidx/fragment/app/Fragment$c;)V
+.method a(Landroidx/fragment/app/Fragment$b;)V
     .locals 3
 
     const/4 v0, 0x0
@@ -780,7 +780,7 @@
     .line 646
     iget-object v1, v1, Landroidx/fragment/app/k$a;->b:Landroidx/fragment/app/Fragment;
 
-    invoke-virtual {v1, p1}, Landroidx/fragment/app/Fragment;->setOnStartEnterTransitionListener(Landroidx/fragment/app/Fragment$c;)V
+    invoke-virtual {v1, p1}, Landroidx/fragment/app/Fragment;->setOnStartEnterTransitionListener(Landroidx/fragment/app/Fragment$b;)V
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -1545,9 +1545,9 @@
 
     .line 625
     :pswitch_0
-    iget-object v3, v2, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/e$b;
+    iget-object v3, v2, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/Lifecycle$State;
 
-    iput-object v3, v2, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/e$b;
+    iput-object v3, v2, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/Lifecycle$State;
 
     goto :goto_1
 
@@ -1729,9 +1729,9 @@
     :pswitch_1
     iget-object v4, p0, Landroidx/fragment/app/a;->a:Landroidx/fragment/app/i;
 
-    iget-object v5, v2, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/e$b;
+    iget-object v5, v2, Landroidx/fragment/app/k$a;->g:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v4, v3, v5}, Landroidx/fragment/app/i;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)V
+    invoke-virtual {v4, v3, v5}, Landroidx/fragment/app/i;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
 
     goto :goto_1
 
@@ -2049,9 +2049,9 @@
     :pswitch_1
     iget-object v6, p0, Landroidx/fragment/app/a;->a:Landroidx/fragment/app/i;
 
-    iget-object v7, v4, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/e$b;
+    iget-object v7, v4, Landroidx/fragment/app/k$a;->h:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v6, v5, v7}, Landroidx/fragment/app/i;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)V
+    invoke-virtual {v6, v5, v7}, Landroidx/fragment/app/i;->a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
 
     goto :goto_1
 

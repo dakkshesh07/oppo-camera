@@ -6,10 +6,10 @@
 # static fields
 .field private static a:I = -0x64
 
-.field private static final b:Landroidx/b/b;
+.field private static final b:Landroidx/collection/ArraySet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/b<",
+            "Landroidx/collection/ArraySet<",
             "Ljava/lang/ref/WeakReference<",
             "Landroidx/appcompat/app/e;",
             ">;>;"
@@ -25,11 +25,11 @@
     .locals 1
 
     .line 173
-    new-instance v0, Landroidx/b/b;
+    new-instance v0, Landroidx/collection/ArraySet;
 
-    invoke-direct {v0}, Landroidx/b/b;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
 
-    sput-object v0, Landroidx/appcompat/app/e;->b:Landroidx/b/b;
+    sput-object v0, Landroidx/appcompat/app/e;->b:Landroidx/collection/ArraySet;
 
     .line 175
     new-instance v0, Ljava/lang/Object;
@@ -85,13 +85,13 @@
     invoke-static {p0}, Landroidx/appcompat/app/e;->c(Landroidx/appcompat/app/e;)V
 
     .line 657
-    sget-object v1, Landroidx/appcompat/app/e;->b:Landroidx/b/b;
+    sget-object v1, Landroidx/appcompat/app/e;->b:Landroidx/collection/ArraySet;
 
     new-instance v2, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v2, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v2}, Landroidx/b/b;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
 
     .line 658
     monitor-exit v0
@@ -145,9 +145,9 @@
 
     .line 670
     :try_start_0
-    sget-object v1, Landroidx/appcompat/app/e;->b:Landroidx/b/b;
+    sget-object v1, Landroidx/appcompat/app/e;->b:Landroidx/collection/ArraySet;
 
-    invoke-virtual {v1}, Landroidx/b/b;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1}, Landroidx/collection/ArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 

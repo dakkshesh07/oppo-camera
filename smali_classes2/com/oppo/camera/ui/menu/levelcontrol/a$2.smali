@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/levelcontrol/a;->a(ZZZ)V
+    value = Lcom/oppo/camera/ui/menu/levelcontrol/a;->a(ZZZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/a;)V
     .locals 0
 
-    .line 242
+    .line 254
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/a$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,10 +44,10 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    .line 250
+    .line 262
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/a$2;->a:Lcom/oppo/camera/ui/menu/levelcontrol/a;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/a;->c(Lcom/oppo/camera/ui/menu/levelcontrol/a;)V
+    invoke-static {p1}, Lcom/oppo/camera/ui/menu/levelcontrol/a;->b(Lcom/oppo/camera/ui/menu/levelcontrol/a;)V
 
     return-void
 .end method

@@ -23,7 +23,7 @@
     .locals 3
 
     .line 120
-    invoke-static {}, Lcom/airbnb/lottie/c/b/i$a;->values()[Lcom/airbnb/lottie/c/b/i$a;
+    invoke-static {}, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->values()[Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
     move-result-object v0
 
@@ -36,9 +36,9 @@
     :try_start_0
     sget-object v0, Lcom/airbnb/lottie/a/a/n$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/i$a;->STAR:Lcom/airbnb/lottie/c/b/i$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->STAR:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/i$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->ordinal()I
 
     move-result v1
 
@@ -52,9 +52,9 @@
     :try_start_1
     sget-object v0, Lcom/airbnb/lottie/a/a/n$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/i$a;->POLYGON:Lcom/airbnb/lottie/c/b/i$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->POLYGON:Lcom/airbnb/lottie/model/content/PolystarShape$Type;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/i$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/PolystarShape$Type;->ordinal()I
 
     move-result v1
 

@@ -10,5 +10,5 @@
 .method public abstract c()I
 .end method
 
-.method public abstract j_()Z
+.method public abstract u_()Z
 .end method

@@ -20,15 +20,11 @@
 
 .field static final B1_MASK_LENGTH:I = 0x7f
 
-.field static final CLOSE_ABNORMAL_TERMINATION:I = 0x3ee
-
 .field static final CLOSE_CLIENT_GOING_AWAY:I = 0x3e9
 
 .field static final CLOSE_MESSAGE_MAX:J = 0x7bL
 
 .field static final CLOSE_NO_STATUS_CODE:I = 0x3ed
-
-.field static final CLOSE_PROTOCOL_EXCEPTION:I = 0x3ea
 
 .field static final OPCODE_BINARY:I = 0x2
 
@@ -57,10 +53,10 @@
 .method private constructor <init>()V
     .locals 2
 
-    .line 127
+    .line 126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
+    .line 127
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "No instances."
@@ -73,7 +69,7 @@
 .method public static acceptHeader(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .line 124
+    .line 123
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +130,7 @@
 
     if-gt p0, v0, :cond_3
 
-    .line 112
+    .line 111
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -161,7 +157,7 @@
 
     return-object p0
 
-    .line 110
+    .line 109
     :cond_4
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -181,55 +177,63 @@
     return-object p0
 .end method
 
-.method static toggleMask([BJ[BJ)V
-    .locals 4
+.method static toggleMask(Lokio/Buffer$UnsafeCursor;[B)V
+    .locals 7
 
-    .line 101
-    array-length v0, p3
+    .line 97
+    array-length v0, p1
 
     const/4 v1, 0x0
 
+    .line 99
+    :cond_0
+    iget-object v2, p0, Lokio/Buffer$UnsafeCursor;->data:[B
+
+    .line 100
+    iget v3, p0, Lokio/Buffer$UnsafeCursor;->start:I
+
+    iget v4, p0, Lokio/Buffer$UnsafeCursor;->end:I
+
     :goto_0
-    int-to-long v2, v1
+    if-ge v3, v4, :cond_1
 
-    cmp-long v2, v2, p1
+    .line 101
+    rem-int/2addr v1, v0
 
-    if-gez v2, :cond_0
+    .line 102
+    aget-byte v5, v2, v3
 
-    int-to-long v2, v0
+    aget-byte v6, p1, v1
 
-    .line 103
-    rem-long v2, p4, v2
+    xor-int/2addr v5, v6
 
-    long-to-int v2, v2
+    int-to-byte v5, v5
 
-    .line 104
-    aget-byte v3, p0, v1
+    aput-byte v5, v2, v3
 
-    aget-byte v2, p3, v2
-
-    xor-int/2addr v2, v3
-
-    int-to-byte v2, v2
-
-    aput-byte v2, p0, v1
+    add-int/lit8 v3, v3, 0x1
 
     add-int/lit8 v1, v1, 0x1
 
-    const-wide/16 v2, 0x1
-
-    add-long/2addr p4, v2
-
     goto :goto_0
 
-    :cond_0
+    .line 104
+    :cond_1
+    invoke-virtual {p0}, Lokio/Buffer$UnsafeCursor;->next()I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    if-ne v2, v3, :cond_0
+
     return-void
 .end method
 
 .method static validateCloseCode(I)V
     .locals 1
 
-    .line 119
+    .line 118
     invoke-static {p0}, Lokhttp3/internal/ws/WebSocketProtocol;->closeCodeExceptionMessage(I)Ljava/lang/String;
 
     move-result-object p0
@@ -238,7 +242,7 @@
 
     return-void
 
-    .line 120
+    .line 119
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 

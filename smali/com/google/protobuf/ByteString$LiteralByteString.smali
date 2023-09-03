@@ -26,13 +26,23 @@
 .method constructor <init>([B)V
     .locals 0
 
-    .line 1266
+    .line 1294
     invoke-direct {p0}, Lcom/google/protobuf/ByteString$LeafByteString;-><init>()V
 
-    .line 1267
+    if-eqz p1, :cond_0
+
+    .line 1298
     iput-object p1, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     return-void
+
+    .line 1296
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
+
+    throw p1
 .end method
 
 
@@ -40,7 +50,7 @@
 .method public final asReadOnlyByteBuffer()Ljava/nio/ByteBuffer;
     .locals 3
 
-    .line 1316
+    .line 1352
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
@@ -73,7 +83,7 @@
         }
     .end annotation
 
-    .line 1321
+    .line 1357
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->asReadOnlyByteBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -88,7 +98,7 @@
 .method public byteAt(I)B
     .locals 1
 
-    .line 1275
+    .line 1306
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     aget-byte p1, v0, p1
@@ -99,7 +109,7 @@
 .method public final copyTo(Ljava/nio/ByteBuffer;)V
     .locals 3
 
-    .line 1311
+    .line 1347
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
@@ -118,7 +128,7 @@
 .method protected copyToInternal([BIII)V
     .locals 1
 
-    .line 1306
+    .line 1342
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-static {v0, p2, p1, p3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
@@ -135,7 +145,7 @@
 
     return v0
 
-    .line 1368
+    .line 1404
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/ByteString;
 
@@ -145,7 +155,7 @@
 
     return v2
 
-    .line 1372
+    .line 1408
     :cond_1
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->size()I
 
@@ -163,7 +173,7 @@
 
     return v2
 
-    .line 1375
+    .line 1411
     :cond_2
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->size()I
 
@@ -173,21 +183,21 @@
 
     return v0
 
-    .line 1379
+    .line 1415
     :cond_3
     instance-of v0, p1, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     if-eqz v0, :cond_5
 
-    .line 1380
+    .line 1416
     check-cast p1, Lcom/google/protobuf/ByteString$LiteralByteString;
 
-    .line 1383
+    .line 1419
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->peekCachedHashCode()I
 
     move-result v0
 
-    .line 1384
+    .line 1420
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString$LiteralByteString;->peekCachedHashCode()I
 
     move-result v1
@@ -200,7 +210,7 @@
 
     return v2
 
-    .line 1389
+    .line 1425
     :cond_4
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->size()I
 
@@ -212,7 +222,7 @@
 
     return p1
 
-    .line 1392
+    .line 1428
     :cond_5
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -224,7 +234,7 @@
 .method final equalsRange(Lcom/google/protobuf/ByteString;II)Z
     .locals 5
 
-    .line 1407
+    .line 1443
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -233,42 +243,42 @@
 
     add-int v0, p2, p3
 
-    .line 1410
+    .line 1446
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v1
 
     if-gt v0, v1, :cond_3
 
-    .line 1415
+    .line 1451
     instance-of v1, p1, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_2
 
-    .line 1416
+    .line 1452
     check-cast p1, Lcom/google/protobuf/ByteString$LiteralByteString;
 
-    .line 1417
+    .line 1453
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
-    .line 1418
+    .line 1454
     iget-object v1, p1, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
-    .line 1419
+    .line 1455
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
 
     move-result v3
 
     add-int/2addr v3, p3
 
-    .line 1421
+    .line 1456
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
 
     move-result p3
 
-    .line 1422
+    .line 1457
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
 
     move-result p1
@@ -278,7 +288,7 @@
     :goto_0
     if-ge p3, v3, :cond_1
 
-    .line 1424
+    .line 1460
     aget-byte p2, v0, p3
 
     aget-byte v4, v1, p1
@@ -299,7 +309,7 @@
 
     return p1
 
-    .line 1431
+    .line 1467
     :cond_2
     invoke-virtual {p1, p2, v0}, Lcom/google/protobuf/ByteString;->substring(II)Lcom/google/protobuf/ByteString;
 
@@ -315,7 +325,7 @@
 
     return p1
 
-    .line 1411
+    .line 1447
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -337,7 +347,7 @@
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1412
+    .line 1448
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result p1
@@ -352,7 +362,7 @@
 
     throw v0
 
-    .line 1408
+    .line 1444
     :cond_4
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -389,15 +399,26 @@
     return v0
 .end method
 
+.method internalByteAt(I)B
+    .locals 1
+
+    .line 1311
+    iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
+
+    aget-byte p1, v0, p1
+
+    return p1
+.end method
+
 .method public final isValidUtf8()Z
     .locals 3
 
-    .line 1350
+    .line 1386
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
 
     move-result v0
 
-    .line 1351
+    .line 1387
     iget-object v1, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->size()I
@@ -416,10 +437,10 @@
 .method public final newCodedInput()Lcom/google/protobuf/CodedInputStream;
     .locals 4
 
-    .line 1451
+    .line 1487
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
-    .line 1452
+    .line 1488
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
 
     move-result v1
@@ -430,7 +451,7 @@
 
     const/4 v3, 0x1
 
-    .line 1451
+    .line 1487
     invoke-static {v0, v1, v2, v3}, Lcom/google/protobuf/CodedInputStream;->newInstance([BIIZ)Lcom/google/protobuf/CodedInputStream;
 
     move-result-object v0
@@ -441,7 +462,7 @@
 .method public final newInput()Ljava/io/InputStream;
     .locals 4
 
-    .line 1444
+    .line 1480
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     iget-object v1, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
@@ -462,7 +483,7 @@
 .method protected final partialHash(III)I
     .locals 2
 
-    .line 1436
+    .line 1472
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
@@ -481,14 +502,14 @@
 .method protected final partialIsValidUtf8(III)I
     .locals 1
 
-    .line 1356
+    .line 1392
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
 
     move-result v0
 
     add-int/2addr v0, p2
 
-    .line 1357
+    .line 1393
     iget-object p2, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     add-int/2addr p3, v0
@@ -503,7 +524,7 @@
 .method public size()I
     .locals 1
 
-    .line 1280
+    .line 1316
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     array-length v0, v0
@@ -514,7 +535,7 @@
 .method public final substring(II)Lcom/google/protobuf/ByteString;
     .locals 3
 
-    .line 1288
+    .line 1324
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->size()I
 
     move-result v0
@@ -525,12 +546,12 @@
 
     if-nez p2, :cond_0
 
-    .line 1291
+    .line 1327
     sget-object p1, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     return-object p1
 
-    .line 1294
+    .line 1330
     :cond_0
     new-instance v0, Lcom/google/protobuf/ByteString$BoundedByteString;
 
@@ -550,7 +571,7 @@
 .method protected final toStringInternal(Ljava/nio/charset/Charset;)Ljava/lang/String;
     .locals 4
 
-    .line 1342
+    .line 1378
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
@@ -576,7 +597,7 @@
         }
     .end annotation
 
-    .line 1337
+    .line 1373
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I
@@ -600,7 +621,7 @@
         }
     .end annotation
 
-    .line 1326
+    .line 1362
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->toByteArray()[B
 
     move-result-object v0
@@ -618,7 +639,7 @@
         }
     .end annotation
 
-    .line 1332
+    .line 1368
     iget-object v0, p0, Lcom/google/protobuf/ByteString$LiteralByteString;->bytes:[B
 
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$LiteralByteString;->getOffsetIntoBytes()I

@@ -45,6 +45,8 @@
 
 .method public a(Landroidx/core/app/g;)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 2238
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I

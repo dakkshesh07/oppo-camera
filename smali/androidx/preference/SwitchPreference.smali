@@ -39,7 +39,7 @@
 
     const v1, 0x101036d
 
-    invoke-static {p1, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/Context;II)I
+    invoke-static {p1, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/Context;II)I
 
     move-result v0
 
@@ -84,7 +84,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_summaryOn:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -95,7 +95,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_summaryOff:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -106,7 +106,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_switchTextOn:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -117,7 +117,7 @@
 
     sget p3, Landroidx/preference/R$styleable;->SwitchPreference_android_switchTextOff:I
 
-    invoke-static {p1, p2, p3}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;II)Ljava/lang/String;
 
     move-result-object p2
 
@@ -130,7 +130,7 @@
 
     const/4 p4, 0x0
 
-    invoke-static {p1, p2, p3, p4}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
+    invoke-static {p1, p2, p3, p4}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;IIZ)Z
 
     move-result p2
 
@@ -253,6 +253,8 @@
 # virtual methods
 .method protected a(Landroid/view/View;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 195
     invoke-super {p0, p1}, Landroidx/preference/TwoStatePreference;->a(Landroid/view/View;)V

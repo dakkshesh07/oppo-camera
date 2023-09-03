@@ -24,13 +24,13 @@
 .method constructor <init>(Lcom/oppo/exif/OppoExifTag;Z)V
     .locals 0
 
-    .line 897
+    .line 901
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 898
+    .line 902
     iput-object p1, p0, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;->tag:Lcom/oppo/exif/OppoExifTag;
 
-    .line 899
+    .line 903
     iput-boolean p2, p0, Lcom/oppo/exif/OppoExifParser$ExifTagEvent;->isRequested:Z
 
     return-void

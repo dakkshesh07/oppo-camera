@@ -38,7 +38,7 @@
 .method constructor <init>(Ljava/lang/Class;Lcom/google/protobuf/Message;Lcom/google/protobuf/RpcCallback;)V
     .locals 0
 
-    .line 73
+    .line 70
     iput-object p1, p0, Lcom/google/protobuf/RpcUtil$1;->val$originalClass:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/protobuf/RpcUtil$1;->val$defaultInstance:Lcom/google/protobuf/Message;
@@ -55,7 +55,7 @@
 .method public run(Lcom/google/protobuf/Message;)V
     .locals 1
 
-    .line 78
+    .line 75
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/RpcUtil$1;->val$originalClass:Ljava/lang/Class;
 
@@ -69,7 +69,7 @@
 
     goto :goto_0
 
-    .line 80
+    .line 77
     :catch_0
     iget-object v0, p0, Lcom/google/protobuf/RpcUtil$1;->val$defaultInstance:Lcom/google/protobuf/Message;
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    .line 82
+    .line 79
     :goto_0
     iget-object p1, p0, Lcom/google/protobuf/RpcUtil$1;->val$originalCallback:Lcom/google/protobuf/RpcCallback;
 
@@ -89,7 +89,7 @@
 .method public bridge synthetic run(Ljava/lang/Object;)V
     .locals 0
 
-    .line 73
+    .line 70
     check-cast p1, Lcom/google/protobuf/Message;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/RpcUtil$1;->run(Lcom/google/protobuf/Message;)V

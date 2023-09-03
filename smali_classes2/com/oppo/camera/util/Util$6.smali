@@ -3,12 +3,12 @@
 .source "Util.java"
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/util/Util;->a(Landroid/view/View;IIZZLandroid/view/animation/Animation$AnimationListener;)Z
+    value = Lcom/oppo/camera/util/Util;->g(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,25 +17,11 @@
 .end annotation
 
 
-# instance fields
-.field final synthetic a:Landroid/view/animation/Animation$AnimationListener;
-
-.field final synthetic b:I
-
-.field final synthetic c:Landroid/view/View;
-
-
 # direct methods
-.method constructor <init>(Landroid/view/animation/Animation$AnimationListener;ILandroid/view/View;)V
+.method constructor <init>()V
     .locals 0
 
-    .line 3895
-    iput-object p1, p0, Lcom/oppo/camera/util/Util$6;->a:Landroid/view/animation/Animation$AnimationListener;
-
-    iput p2, p0, Lcom/oppo/camera/util/Util$6;->b:I
-
-    iput-object p3, p0, Lcom/oppo/camera/util/Util$6;->c:Landroid/view/View;
-
+    .line 4678
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,75 +29,45 @@
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 1
+.method public run()V
+    .locals 3
 
-    .line 3909
-    iget-object v0, p0, Lcom/oppo/camera/util/Util$6;->a:Landroid/view/animation/Animation$AnimationListener;
+    .line 4681
+    invoke-static {}, Lcom/oppo/camera/util/Util;->u()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3910
-    invoke-interface {v0, p1}, Landroid/view/animation/Animation$AnimationListener;->onAnimationEnd(Landroid/view/animation/Animation;)V
+    .line 4682
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aC()Landroid/content/Context;
+
+    move-result-object v0
+
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "oplus.intent.action.start.PINHOLE"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 3912
+    .line 4684
     :cond_0
-    iget p1, p0, Lcom/oppo/camera/util/Util$6;->b:I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aC()Landroid/content/Context;
 
-    if-eqz p1, :cond_1
+    move-result-object v0
 
-    .line 3913
-    iget-object v0, p0, Lcom/oppo/camera/util/Util$6;->c:Landroid/view/View;
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
+    const-string v2, "oppo.intent.action.start.PINHOLE"
 
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 1
+    invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 3920
-    iget-object v0, p0, Lcom/oppo/camera/util/Util$6;->a:Landroid/view/animation/Animation$AnimationListener;
-
-    if-eqz v0, :cond_0
-
-    .line 3921
-    invoke-interface {v0, p1}, Landroid/view/animation/Animation$AnimationListener;->onAnimationRepeat(Landroid/view/animation/Animation;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 1
-
-    .line 3898
-    iget-object v0, p0, Lcom/oppo/camera/util/Util$6;->a:Landroid/view/animation/Animation$AnimationListener;
-
-    if-eqz v0, :cond_0
-
-    .line 3899
-    invoke-interface {v0, p1}, Landroid/view/animation/Animation$AnimationListener;->onAnimationStart(Landroid/view/animation/Animation;)V
-
-    goto :goto_0
-
-    .line 3901
-    :cond_0
-    iget p1, p0, Lcom/oppo/camera/util/Util$6;->b:I
-
-    if-nez p1, :cond_1
-
-    .line 3902
-    iget-object v0, p0, Lcom/oppo/camera/util/Util$6;->c:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_1
     :goto_0
     return-void
 .end method

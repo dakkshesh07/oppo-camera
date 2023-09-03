@@ -4,10 +4,10 @@
 
 
 # instance fields
-.field final a:Landroidx/b/a;
+.field final a:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Landroid/view/View;",
             "Landroidx/transition/t;",
             ">;"
@@ -25,20 +25,20 @@
     .end annotation
 .end field
 
-.field final c:Landroidx/b/d;
+.field final c:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/d<",
+            "Landroidx/collection/LongSparseArray<",
             "Landroid/view/View;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final d:Landroidx/b/a;
+.field final d:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Ljava/lang/String;",
             "Landroid/view/View;",
             ">;"
@@ -55,11 +55,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    new-instance v0, Landroidx/b/a;
+    new-instance v0, Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/a;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/transition/u;->a:Landroidx/b/a;
+    iput-object v0, p0, Landroidx/transition/u;->a:Landroidx/collection/ArrayMap;
 
     .line 29
     new-instance v0, Landroid/util/SparseArray;
@@ -69,18 +69,18 @@
     iput-object v0, p0, Landroidx/transition/u;->b:Landroid/util/SparseArray;
 
     .line 31
-    new-instance v0, Landroidx/b/d;
+    new-instance v0, Landroidx/collection/LongSparseArray;
 
-    invoke-direct {v0}, Landroidx/b/d;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/LongSparseArray;-><init>()V
 
-    iput-object v0, p0, Landroidx/transition/u;->c:Landroidx/b/d;
+    iput-object v0, p0, Landroidx/transition/u;->c:Landroidx/collection/LongSparseArray;
 
     .line 33
-    new-instance v0, Landroidx/b/a;
+    new-instance v0, Landroidx/collection/ArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/a;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/transition/u;->d:Landroidx/b/a;
+    iput-object v0, p0, Landroidx/transition/u;->d:Landroidx/collection/ArrayMap;
 
     return-void
 .end method

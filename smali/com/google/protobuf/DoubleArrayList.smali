@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/google/protobuf/Internal$DoubleList;
+.implements Lcom/google/protobuf/PrimitiveNonBoxingCollection;
 .implements Ljava/util/RandomAccess;
 
 
@@ -14,6 +15,7 @@
         "Ljava/lang/Double;",
         ">;",
         "Lcom/google/protobuf/Internal$DoubleList;",
+        "Lcom/google/protobuf/PrimitiveNonBoxingCollection;",
         "Ljava/util/RandomAccess;"
     }
 .end annotation
@@ -31,12 +33,16 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .line 48
     new-instance v0, Lcom/google/protobuf/DoubleArrayList;
 
-    invoke-direct {v0}, Lcom/google/protobuf/DoubleArrayList;-><init>()V
+    const/4 v1, 0x0
+
+    new-array v2, v1, [D
+
+    invoke-direct {v0, v2, v1}, Lcom/google/protobuf/DoubleArrayList;-><init>([DI)V
 
     sput-object v0, Lcom/google/protobuf/DoubleArrayList;->EMPTY_LIST:Lcom/google/protobuf/DoubleArrayList;
 
@@ -53,7 +59,7 @@
 
     const/16 v0, 0xa
 
-    .line 72
+    .line 68
     new-array v0, v0, [D
 
     const/4 v1, 0x0
@@ -66,13 +72,13 @@
 .method private constructor <init>([DI)V
     .locals 0
 
-    .line 79
+    .line 74
     invoke-direct {p0}, Lcom/google/protobuf/AbstractProtobufList;-><init>()V
 
-    .line 80
+    .line 75
     iput-object p1, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
-    .line 81
+    .line 76
     iput p2, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     return-void
@@ -81,17 +87,17 @@
 .method private addDouble(ID)V
     .locals 4
 
-    .line 172
+    .line 191
     invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
 
     if-ltz p1, :cond_1
 
-    .line 173
+    .line 192
     iget v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     if-gt p1, v0, :cond_1
 
-    .line 177
+    .line 196
     iget-object v1, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     array-length v2, v1
@@ -102,7 +108,7 @@
 
     sub-int/2addr v0, p1
 
-    .line 179
+    .line 198
     invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_0
@@ -110,20 +116,20 @@
     :cond_0
     mul-int/lit8 v0, v0, 0x3
 
-    .line 182
+    .line 201
     div-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 183
+    .line 202
     new-array v0, v0, [D
 
     const/4 v2, 0x0
 
-    .line 186
+    .line 205
     invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 189
+    .line 208
     iget-object v1, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     add-int/lit8 v2, p1, 0x1
@@ -134,23 +140,23 @@
 
     invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 190
+    .line 209
     iput-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
-    .line 193
+    .line 212
     :goto_0
     iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aput-wide p2, v0, p1
 
-    .line 194
+    .line 213
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    .line 195
+    .line 214
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -159,7 +165,7 @@
 
     return-void
 
-    .line 174
+    .line 193
     :cond_1
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
@@ -186,14 +192,14 @@
 
     if-ltz p1, :cond_0
 
-    .line 265
+    .line 284
     iget v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     if-ge p1, v0, :cond_0
 
     return-void
 
-    .line 266
+    .line 285
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -209,7 +215,7 @@
 .method private makeOutOfBoundsExceptionMessage(I)Ljava/lang/String;
     .locals 2
 
-    .line 271
+    .line 290
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,7 +246,7 @@
 .method public add(ILjava/lang/Double;)V
     .locals 2
 
-    .line 157
+    .line 170
     invoke-virtual {p2}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -253,12 +259,40 @@
 .method public bridge synthetic add(ILjava/lang/Object;)V
     .locals 0
 
-    .line 44
+    .line 45
     check-cast p2, Ljava/lang/Double;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DoubleArrayList;->add(ILjava/lang/Double;)V
 
     return-void
+.end method
+
+.method public add(Ljava/lang/Double;)Z
+    .locals 2
+
+    .line 164
+    invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/google/protobuf/DoubleArrayList;->addDouble(D)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 45
+    check-cast p1, Ljava/lang/Double;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->add(Ljava/lang/Double;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
 .method public addAll(Ljava/util/Collection;)Z
@@ -273,28 +307,29 @@
         }
     .end annotation
 
-    .line 200
+    .line 219
     invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
 
-    if-eqz p1, :cond_4
+    .line 221
+    invoke-static {p1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
+    .line 224
     instance-of v0, p1, Lcom/google/protobuf/DoubleArrayList;
 
     if-nez v0, :cond_0
 
-    .line 208
+    .line 225
     invoke-super {p0, p1}, Lcom/google/protobuf/AbstractProtobufList;->addAll(Ljava/util/Collection;)Z
 
     move-result p1
 
     return p1
 
-    .line 211
+    .line 228
     :cond_0
     check-cast p1, Lcom/google/protobuf/DoubleArrayList;
 
-    .line 212
+    .line 229
     iget v0, p1, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     const/4 v1, 0x0
@@ -306,7 +341,7 @@
     :cond_1
     const v2, 0x7fffffff
 
-    .line 216
+    .line 233
     iget v3, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     sub-int/2addr v2, v3
@@ -315,21 +350,21 @@
 
     add-int/2addr v3, v0
 
-    .line 223
+    .line 240
     iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     array-length v2, v0
 
     if-le v3, v2, :cond_2
 
-    .line 224
+    .line 241
     invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([DI)[D
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
-    .line 227
+    .line 244
     :cond_2
     iget-object v0, p1, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
@@ -341,10 +376,10 @@
 
     invoke-static {v0, v1, v2, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 228
+    .line 245
     iput v3, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    .line 229
+    .line 246
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
 
     const/4 v0, 0x1
@@ -355,30 +390,59 @@
 
     return v0
 
-    .line 219
+    .line 236
     :cond_3
     new-instance p1, Ljava/lang/OutOfMemoryError;
 
     invoke-direct {p1}, Ljava/lang/OutOfMemoryError;-><init>()V
 
     throw p1
-
-    .line 203
-    :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p1
 .end method
 
 .method public addDouble(D)V
-    .locals 1
+    .locals 4
 
-    .line 165
+    .line 176
+    invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
+
+    .line 177
     iget v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    invoke-direct {p0, v0, p1, p2}, Lcom/google/protobuf/DoubleArrayList;->addDouble(ID)V
+    iget-object v1, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_0
+
+    mul-int/lit8 v2, v0, 0x3
+
+    .line 179
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 180
+    new-array v2, v2, [D
+
+    const/4 v3, 0x0
+
+    .line 182
+    invoke-static {v1, v3, v2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 183
+    iput-object v2, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
+
+    .line 186
+    :cond_0
+    iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
+
+    iget v1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
+
+    aput-wide p1, v0, v1
 
     return-void
 .end method
@@ -392,24 +456,24 @@
 
     return v0
 
-    .line 89
+    .line 96
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/DoubleArrayList;
 
     if-nez v1, :cond_1
 
-    .line 90
+    .line 97
     invoke-super {p0, p1}, Lcom/google/protobuf/AbstractProtobufList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 92
+    .line 99
     :cond_1
     check-cast p1, Lcom/google/protobuf/DoubleArrayList;
 
-    .line 93
+    .line 100
     iget v1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     iget v2, p1, Lcom/google/protobuf/DoubleArrayList;->size:I
@@ -420,26 +484,34 @@
 
     return v3
 
-    .line 97
+    .line 104
     :cond_2
     iget-object p1, p1, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     move v1, v3
 
-    .line 98
+    .line 105
     :goto_0
     iget v2, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     if-ge v1, v2, :cond_4
 
-    .line 99
+    .line 106
     iget-object v2, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aget-wide v4, v2, v1
 
+    invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v4
+
     aget-wide v6, p1, v1
 
-    cmpl-double v2, v4, v6
+    invoke-static {v6, v7}, Ljava/lang/Double;->doubleToLongBits(D)J
+
+    move-result-wide v6
+
+    cmp-long v2, v4, v6
 
     if-eqz v2, :cond_3
 
@@ -457,7 +529,7 @@
 .method public get(I)Ljava/lang/Double;
     .locals 2
 
-    .line 127
+    .line 134
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->getDouble(I)D
 
     move-result-wide v0
@@ -472,7 +544,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->get(I)Ljava/lang/Double;
 
     move-result-object p1
@@ -483,10 +555,10 @@
 .method public getDouble(I)D
     .locals 2
 
-    .line 132
+    .line 139
     invoke-direct {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->ensureIndexInRange(I)V
 
-    .line 133
+    .line 140
     iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aget-wide v0, v0, p1
@@ -501,13 +573,13 @@
 
     const/4 v1, 0x0
 
-    .line 110
+    .line 117
     :goto_0
     iget v2, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     if-ge v1, v2, :cond_0
 
-    .line 111
+    .line 118
     iget-object v2, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aget-wide v2, v2, v1
@@ -518,7 +590,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 112
+    .line 119
     invoke-static {v2, v3}, Lcom/google/protobuf/Internal;->hashLong(J)I
 
     move-result v2
@@ -536,12 +608,12 @@
 .method public mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$DoubleList;
     .locals 2
 
-    .line 119
+    .line 126
     iget v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     if-lt p1, v0, :cond_0
 
-    .line 122
+    .line 129
     new-instance v0, Lcom/google/protobuf/DoubleArrayList;
 
     iget-object v1, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
@@ -556,7 +628,7 @@
 
     return-object v0
 
-    .line 120
+    .line 127
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -568,7 +640,7 @@
 .method public bridge synthetic mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$ProtobufList;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$DoubleList;
 
     move-result-object p1
@@ -579,41 +651,49 @@
 .method public remove(I)Ljava/lang/Double;
     .locals 5
 
-    .line 249
+    .line 266
     invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
 
-    .line 250
+    .line 267
     invoke-direct {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->ensureIndexInRange(I)V
 
-    .line 251
+    .line 268
     iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aget-wide v1, v0, p1
 
-    add-int/lit8 v3, p1, 0x1
+    .line 269
+    iget v3, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    .line 252
-    iget v4, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
+    add-int/lit8 v4, v3, -0x1
 
-    sub-int/2addr v4, p1
+    if-ge p1, v4, :cond_0
 
-    invoke-static {v0, v3, v0, p1, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    add-int/lit8 v4, p1, 0x1
 
-    .line 253
+    sub-int/2addr v3, p1
+
+    add-int/lit8 v3, v3, -0x1
+
+    .line 270
+    invoke-static {v0, v4, v0, p1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 272
+    :cond_0
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    .line 254
+    .line 273
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
 
-    .line 255
+    .line 274
     invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object p1
@@ -624,7 +704,7 @@
 .method public bridge synthetic remove(I)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->remove(I)Ljava/lang/Double;
 
     move-result-object p1
@@ -635,20 +715,20 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 4
 
-    .line 235
+    .line 252
     invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 236
+    .line 253
     :goto_0
     iget v2, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     if-ge v1, v2, :cond_1
 
-    .line 237
+    .line 254
     iget-object v2, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aget-wide v2, v2, v1
@@ -663,7 +743,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 238
+    .line 255
     iget-object p1, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     add-int/lit8 v0, v1, 0x1
@@ -672,25 +752,27 @@
 
     sub-int/2addr v2, v1
 
+    const/4 v3, 0x1
+
+    sub-int/2addr v2, v3
+
     invoke-static {p1, v0, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 239
+    .line 256
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    const/4 v0, 0x1
-
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, v3
 
     iput p1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
-    .line 240
+    .line 257
     iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, v3
 
     iput p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
 
-    return v0
+    return v3
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -701,10 +783,56 @@
     return v0
 .end method
 
+.method protected removeRange(II)V
+    .locals 2
+
+    .line 81
+    invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
+
+    if-lt p2, p1, :cond_0
+
+    .line 86
+    iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
+
+    iget v1, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
+
+    sub-int/2addr v1, p2
+
+    invoke-static {v0, p2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 87
+    iget v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
+
+    sub-int/2addr p2, p1
+
+    sub-int/2addr v0, p2
+
+    iput v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
+
+    .line 88
+    iget p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/google/protobuf/DoubleArrayList;->modCount:I
+
+    return-void
+
+    .line 83
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string p2, "toIndex < fromIndex"
+
+    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
 .method public set(ILjava/lang/Double;)Ljava/lang/Double;
     .locals 2
 
-    .line 143
+    .line 150
     invoke-virtual {p2}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -723,7 +851,7 @@
 .method public bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     check-cast p2, Ljava/lang/Double;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DoubleArrayList;->set(ILjava/lang/Double;)Ljava/lang/Double;
@@ -736,18 +864,18 @@
 .method public setDouble(ID)D
     .locals 3
 
-    .line 148
+    .line 155
     invoke-virtual {p0}, Lcom/google/protobuf/DoubleArrayList;->ensureIsMutable()V
 
-    .line 149
+    .line 156
     invoke-direct {p0, p1}, Lcom/google/protobuf/DoubleArrayList;->ensureIndexInRange(I)V
 
-    .line 150
+    .line 157
     iget-object v0, p0, Lcom/google/protobuf/DoubleArrayList;->array:[D
 
     aget-wide v1, v0, p1
 
-    .line 151
+    .line 158
     aput-wide p2, v0, p1
 
     return-wide v1
@@ -756,7 +884,7 @@
 .method public size()I
     .locals 1
 
-    .line 138
+    .line 145
     iget v0, p0, Lcom/google/protobuf/DoubleArrayList;->size:I
 
     return v0

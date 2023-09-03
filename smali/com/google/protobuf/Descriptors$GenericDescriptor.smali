@@ -15,11 +15,20 @@
 
 
 # direct methods
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
-    .line 2029
+    .line 2126
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/google/protobuf/Descriptors$1;)V
+    .locals 0
+
+    .line 2123
+    invoke-direct {p0}, Lcom/google/protobuf/Descriptors$GenericDescriptor;-><init>()V
 
     return-void
 .end method

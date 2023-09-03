@@ -21,8 +21,5 @@
 .method public abstract a(IZZ)V
 .end method
 
-.method public abstract a()Z
-.end method
-
 .method public abstract b(I)V
 .end method

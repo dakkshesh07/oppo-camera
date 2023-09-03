@@ -627,7 +627,7 @@
     const-string v1, "initialize"
 
     .line 70
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     iget v0, p0, Lcom/oppo/camera/ui/menu/b/b;->q:F
@@ -676,7 +676,7 @@
 
     const-string v1, "headline_vertex.sh"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/k;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/oppo/camera/util/f;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -689,12 +689,12 @@
 
     const-string v2, "headline_frag.sh"
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/k;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v2, v1}, Lcom/oppo/camera/util/f;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 79
-    invoke-static {v0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/k;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/oppo/camera/util/f;->b(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
@@ -833,7 +833,7 @@
 
     const-string v1, "HeadlineDrawer"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 174
     iput p1, p0, Lcom/oppo/camera/ui/menu/b/b;->p:F
@@ -867,7 +867,7 @@
 
     const-string v1, "HeadlineDrawer"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 180
     iput p1, p0, Lcom/oppo/camera/ui/menu/b/b;->s:F
@@ -1030,7 +1030,7 @@
 
     const-string v1, "HeadlineDrawer"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 187
     iput p1, p0, Lcom/oppo/camera/ui/menu/b/b;->u:F
@@ -1064,7 +1064,7 @@
 
     const-string v1, "HeadlineDrawer"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 193
     iput p1, p0, Lcom/oppo/camera/ui/menu/b/b;->v:F
@@ -1095,7 +1095,7 @@
 
     const-string v1, "HeadlineDrawer"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 200
     iput p1, p0, Lcom/oppo/camera/ui/menu/b/b;->x:F

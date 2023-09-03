@@ -1,0 +1,217 @@
+.class final Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;
+.super Ljava/lang/Object;
+.source "MultiClientInputMethodPrivilegedOperations.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1a
+    name = "OpsHolder"
+.end annotation
+
+
+# instance fields
+.field private blacklist mPrivOps:Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+
+
+# direct methods
+.method private constructor blacklist <init>()V
+    .locals 0
+
+    .line 37
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor blacklist <init>(Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$1;)V
+    .locals 0
+    .param p1, "x0"    # Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$1;
+
+    .line 37
+    invoke-direct {p0}, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;-><init>()V
+
+    return-void
+.end method
+
+.method private static blacklist getCallerMethodName()Ljava/lang/String;
+    .locals 3
+
+    .line 66
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v0
+
+    .line 67
+    .local v0, "callStack":[Ljava/lang/StackTraceElement;
+    array-length v1, v0
+
+    const/4 v2, 0x4
+
+    if-gt v1, v2, :cond_0
+
+    .line 68
+    const-string v1, "<bottom of call stack>"
+
+    return-object v1
+
+    .line 70
+    :cond_0
+    aget-object v1, v0, v2
+
+    invoke-virtual {v1}, Ljava/lang/StackTraceElement;->getMethodName()Ljava/lang/String;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+
+# virtual methods
+.method public declared-synchronized blacklist dispose()V
+    .locals 1
+
+    monitor-enter p0
+
+    .line 75
+    const/4 v0, 0x0
+
+    :try_start_0
+    iput-object v0, p0, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;->mPrivOps:Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 76
+    monitor-exit p0
+
+    return-void
+
+    .line 74
+    .end local p0    # "this":Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized blacklist getAndWarnIfNull()Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+    .locals 3
+
+    monitor-enter p0
+
+    .line 81
+    :try_start_0
+    iget-object v0, p0, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;->mPrivOps:Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+
+    if-nez v0, :cond_0
+
+    .line 82
+    const-string v0, "MultiClientInputMethodPrivilegedOperations"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;->getCallerMethodName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, " is ignored. Call it within attachToken() and InputMethodService.onDestroy()"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 85
+    .end local p0    # "this":Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;
+    :cond_0
+    iget-object v0, p0, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;->mPrivOps:Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    .line 80
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public declared-synchronized blacklist set(Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;)V
+    .locals 3
+    .param p1, "privOps"    # Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+
+    monitor-enter p0
+
+    .line 51
+    :try_start_0
+    iget-object v0, p0, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;->mPrivOps:Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+
+    if-nez v0, :cond_0
+
+    .line 56
+    iput-object p1, p0, Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;->mPrivOps:Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 57
+    monitor-exit p0
+
+    return-void
+
+    .line 52
+    .end local p0    # "this":Lcom/android/internal/inputmethod/MultiClientInputMethodPrivilegedOperations$OpsHolder;
+    :cond_0
+    :try_start_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "IMultiClientInputMethodPrivilegedOperations must be set at most once. privOps="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 50
+    .end local p1    # "privOps":Lcom/android/internal/inputmethod/IMultiClientInputMethodPrivilegedOperations;
+    :catchall_0
+    move-exception p1
+
+    monitor-exit p0
+
+    throw p1
+.end method

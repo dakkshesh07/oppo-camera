@@ -3,12 +3,12 @@
 .source "HeadlineGLSurfaceView.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/b/c;->a(FFJJLandroid/animation/TimeInterpolator;Landroid/animation/Animator$AnimatorListener;)Landroid/animation/ValueAnimator;
+    value = Lcom/oppo/camera/ui/menu/b/c;->setCurrentIndex(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/b/c;)V
     .locals 0
 
-    .line 720
+    .line 675
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,43 +35,53 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public run()V
+    .locals 4
 
-    .line 723
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    .line 725
+    .line 678
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/menu/b/c;->d(Lcom/oppo/camera/ui/menu/b/c;)Lcom/oppo/camera/ui/menu/b/f;
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/b/c;->i(Lcom/oppo/camera/ui/menu/b/c;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    monitor-enter v0
 
-    .line 726
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
+    .line 679
+    :try_start_0
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/menu/b/c;->d(Lcom/oppo/camera/ui/menu/b/c;)Lcom/oppo/camera/ui/menu/b/f;
+    invoke-static {v1}, Lcom/oppo/camera/ui/menu/b/c;->a(Lcom/oppo/camera/ui/menu/b/c;)Lcom/oppo/camera/ui/menu/b/a;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/b/f;->c(F)V
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
 
-    .line 727
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
+    invoke-static {v2}, Lcom/oppo/camera/ui/menu/b/c;->e(Lcom/oppo/camera/ui/menu/b/c;)[Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/b/c;->requestRender()V
+    move-result-object v2
 
-    :cond_0
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/b/c$1;->a:Lcom/oppo/camera/ui/menu/b/c;
+
+    invoke-static {v3}, Lcom/oppo/camera/ui/menu/b/c;->h(Lcom/oppo/camera/ui/menu/b/c;)I
+
+    move-result v3
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/menu/b/a;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 680
+    monitor-exit v0
+
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v1
 .end method

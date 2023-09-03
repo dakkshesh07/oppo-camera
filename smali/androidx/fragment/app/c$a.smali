@@ -299,13 +299,13 @@
     return v0
 .end method
 
-.method public getLifecycle()Landroidx/lifecycle/e;
+.method public getLifecycle()Landroidx/lifecycle/Lifecycle;
     .locals 1
 
     .line 882
     iget-object v0, p0, Landroidx/fragment/app/c$a;->a:Landroidx/fragment/app/c;
 
-    iget-object v0, v0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/i;
+    iget-object v0, v0, Landroidx/fragment/app/c;->b_:Landroidx/lifecycle/h;
 
     return-object v0
 .end method

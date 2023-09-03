@@ -23,7 +23,7 @@
 
 .field private final b:Landroid/database/DataSetObservable;
 
-.field private c:Landroid/widget/ListAdapter;
+.field private c:Landroid/widget/BaseAdapter;
 
 .field private d:I
 
@@ -31,15 +31,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/oppo/camera/sticker/ui/FooterGridView;Landroid/widget/ListAdapter;)V
+.method public constructor <init>(Lcom/oppo/camera/sticker/ui/FooterGridView;Landroid/widget/BaseAdapter;)V
     .locals 0
 
-    .line 158
+    .line 154
     iput-object p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->a:Lcom/oppo/camera/sticker/ui/FooterGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
+    .line 149
     new-instance p1, Landroid/database/DataSetObservable;
 
     invoke-direct {p1}, Landroid/database/DataSetObservable;-><init>()V
@@ -48,21 +48,21 @@
 
     const/4 p1, 0x0
 
-    .line 154
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 150
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     const/4 p1, 0x1
 
-    .line 155
+    .line 151
     iput p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->d:I
 
     const/4 p1, 0x0
 
-    .line 156
+    .line 152
     iput p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->e:I
 
-    .line 159
-    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 155
+    iput-object p2, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 .method public a()V
     .locals 1
 
-    .line 178
+    .line 174
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->b:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
@@ -87,21 +87,21 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 167
+    .line 163
     iget v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->d:I
 
     if-eq v0, p1, :cond_0
 
-    .line 168
+    .line 164
     iput p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->d:I
 
-    .line 169
+    .line 165
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->a()V
 
     :cond_0
     return-void
 
-    .line 164
+    .line 160
     :cond_1
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -115,13 +115,13 @@
 .method public areAllItemsEnabled()Z
     .locals 1
 
-    .line 201
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 197
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 202
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
+    .line 198
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->areAllItemsEnabled()Z
 
     move-result v0
 
@@ -136,7 +136,7 @@
 .method public b(I)V
     .locals 0
 
-    .line 174
+    .line 170
     iput p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->e:I
 
     return-void
@@ -145,21 +145,21 @@
 .method public getCount()I
     .locals 2
 
-    .line 192
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 188
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v0
 
     if-lez v0, :cond_0
 
-    .line 193
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 189
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v0
 
@@ -180,14 +180,14 @@
 .method public getFilter()Landroid/widget/Filter;
     .locals 2
 
-    .line 319
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 318
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     instance-of v1, v0, Landroid/widget/Filterable;
 
     if-eqz v1, :cond_0
 
-    .line 320
+    .line 319
     check-cast v0, Landroid/widget/Filterable;
 
     invoke-interface {v0}, Landroid/widget/Filterable;->getFilter()Landroid/widget/Filter;
@@ -205,22 +205,22 @@
 .method public getItem(I)Ljava/lang/Object;
     .locals 1
 
-    .line 223
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 219
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 224
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+    .line 220
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
-    .line 227
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 223
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroid/widget/BaseAdapter;->getItem(I)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -235,13 +235,13 @@
 .method public getItemId(I)J
     .locals 2
 
-    .line 236
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 232
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 237
-    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->getItemId(I)J
+    .line 233
+    invoke-virtual {v0, p1}, Landroid/widget/BaseAdapter;->getItemId(I)J
 
     move-result-wide v0
 
@@ -256,22 +256,22 @@
 .method public getItemViewType(I)I
     .locals 1
 
-    .line 277
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 276
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_1
 
-    .line 278
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+    .line 277
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
-    .line 281
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 280
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->getItemViewType(I)I
+    invoke-virtual {v0, p1}, Landroid/widget/BaseAdapter;->getItemViewType(I)I
 
     move-result p1
 
@@ -291,22 +291,27 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 2
 
-    .line 254
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 250
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 255
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+    .line 251
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v0
 
-    if-ge p1, v0, :cond_0
+    if-ge p1, v0, :cond_1
 
-    .line 258
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 254
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    check-cast v0, Lcom/oppo/camera/sticker/ui/e;
+    instance-of v1, v0, Lcom/oppo/camera/sticker/ui/a;
+
+    if-eqz v1, :cond_0
+
+    .line 255
+    check-cast v0, Lcom/oppo/camera/sticker/ui/a;
 
     iget-object v1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->a:Lcom/oppo/camera/sticker/ui/FooterGridView;
 
@@ -314,21 +319,22 @@
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/oppo/camera/sticker/ui/e;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/ui/a;->a(Z)V
 
-    .line 259
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 258
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    invoke-interface {v0, p1, p2, p3}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v0, p1, p2, p3}, Landroid/widget/BaseAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     return-object p1
 
-    :cond_0
-    if-nez p2, :cond_1
+    :cond_1
+    if-nez p2, :cond_2
 
-    .line 262
+    .line 261
     new-instance p2, Landroid/view/View;
 
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -337,20 +343,20 @@
 
     invoke-direct {p2, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 265
-    :cond_1
+    .line 264
+    :cond_2
     iget p1, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->e:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setMinimumHeight(I)V
 
     const/4 p1, 0x4
 
-    .line 266
+    .line 265
     invoke-virtual {p2, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-object p2
 
-    :cond_2
+    :cond_3
     const/4 p1, 0x0
 
     return-object p1
@@ -359,13 +365,13 @@
 .method public getViewTypeCount()I
     .locals 1
 
-    .line 292
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 291
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 293
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
+    .line 292
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getViewTypeCount()I
 
     move-result v0
 
@@ -380,8 +386,8 @@
 .method public getWrappedAdapter()Landroid/widget/ListAdapter;
     .locals 1
 
-    .line 328
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 327
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     return-object v0
 .end method
@@ -389,13 +395,13 @@
 .method public hasStableIds()Z
     .locals 1
 
-    .line 245
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 241
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 246
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->hasStableIds()Z
+    .line 242
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->hasStableIds()Z
 
     move-result v0
 
@@ -410,13 +416,13 @@
 .method public isEmpty()Z
     .locals 1
 
-    .line 183
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 179
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 184
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->isEmpty()Z
+    .line 180
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->isEmpty()Z
 
     move-result v0
 
@@ -431,22 +437,22 @@
 .method public isEnabled(I)Z
     .locals 1
 
-    .line 210
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 206
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 211
-    invoke-interface {v0}, Landroid/widget/ListAdapter;->getCount()I
+    .line 207
+    invoke-virtual {v0}, Landroid/widget/BaseAdapter;->getCount()I
 
     move-result v0
 
     if-ge p1, v0, :cond_0
 
-    .line 214
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 210
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
-    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->isEnabled(I)Z
+    invoke-virtual {v0, p1}, Landroid/widget/BaseAdapter;->isEnabled(I)Z
 
     move-result p1
 
@@ -461,18 +467,18 @@
 .method public registerDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 1
 
-    .line 301
+    .line 300
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->b:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
-    .line 303
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 302
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 304
-    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+    .line 303
+    invoke-virtual {v0, p1}, Landroid/widget/BaseAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
     :cond_0
     return-void
@@ -481,18 +487,18 @@
 .method public unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
     .locals 1
 
-    .line 310
+    .line 309
     iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->b:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
-    .line 312
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/ListAdapter;
+    .line 311
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/FooterGridView$a;->c:Landroid/widget/BaseAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 313
-    invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+    .line 312
+    invoke-virtual {v0, p1}, Landroid/widget/BaseAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
     :cond_0
     return-void

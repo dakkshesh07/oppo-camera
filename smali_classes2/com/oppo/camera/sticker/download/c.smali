@@ -15,7 +15,7 @@
 
     goto :goto_0
 
-    .line 714
+    .line 728
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -31,9 +31,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 717
+    .line 731
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
     move-result v0
@@ -44,7 +44,7 @@
 
     return p0
 
-    .line 721
+    .line 735
     :cond_1
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
@@ -64,7 +64,7 @@
 
     return p0
 
-    .line 729
+    .line 743
     :cond_2
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/download/c;->d(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)I
 
@@ -72,7 +72,7 @@
 
     return p0
 
-    .line 726
+    .line 740
     :cond_3
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/download/c;->c(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)I
 
@@ -80,7 +80,7 @@
 
     return p0
 
-    .line 723
+    .line 737
     :cond_4
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/download/c;->b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)I
 
@@ -88,7 +88,7 @@
 
     return p0
 
-    .line 708
+    .line 722
     :cond_5
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
@@ -105,7 +105,7 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, -0x2
 
@@ -115,7 +115,7 @@
 .method private static a(Ljava/lang/String;)Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;
     .locals 4
 
-    .line 552
+    .line 566
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -128,12 +128,12 @@
 
     const-string p0, "parserAniMojiExtendInfo empty content"
 
-    .line 553
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 567
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 559
+    .line 573
     :cond_0
     :try_start_0
     new-instance v0, Lcom/google/gson/GsonBuilder;
@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    .line 560
+    .line 574
     const-class v3, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;
 
     invoke-virtual {v0, p0, v3}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -164,7 +164,7 @@
     :catch_0
     move-exception p0
 
-    .line 562
+    .line 576
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -179,7 +179,7 @@
 
     move-result-object p0
 
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 .end method
@@ -197,17 +197,17 @@
         }
     .end annotation
 
-    .line 592
+    .line 606
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 593
+    .line 607
     invoke-virtual {p0}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
     move-result-object p0
 
-    .line 595
+    .line 609
     :cond_0
     :goto_0
     invoke-interface {p0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -216,26 +216,26 @@
 
     if-eqz v1, :cond_1
 
-    .line 596
+    .line 610
     invoke-interface {p0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/zip/ZipEntry;
 
-    .line 598
+    .line 612
     invoke-virtual {v1}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 599
+    .line 613
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 603
+    .line 617
     :cond_1
     new-instance p0, Lcom/oppo/camera/sticker/download/c$2;
 
@@ -262,7 +262,7 @@
 
     if-eqz p1, :cond_7
 
-    .line 639
+    .line 653
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -271,13 +271,13 @@
 
     goto/16 :goto_2
 
-    .line 645
+    .line 659
     :cond_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 647
+    .line 661
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -300,23 +300,23 @@
 
     const-string v2, "deleteSticker, item is null!"
 
-    .line 649
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 663
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 654
+    .line 668
     :cond_2
     invoke-virtual {v1}, Landroid/content/ContentValues;->clear()V
 
-    .line 656
+    .line 670
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "uuid"
 
-    .line 655
+    .line 669
     invoke-static {p0, v4, v3}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/oppo/camera/sticker/data/StickerItemWrapper;
 
     move-result-object v3
@@ -325,7 +325,7 @@
 
     if-nez v3, :cond_3
 
-    .line 659
+    .line 673
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -342,7 +342,7 @@
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 660
+    .line 674
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v2
@@ -353,12 +353,12 @@
 
     move-result-object v2
 
-    .line 659
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 673
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 666
+    .line 680
     :cond_3
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -374,9 +374,9 @@
 
     move-result-object v6
 
-    invoke-static {v0, v6}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 669
+    .line 683
     invoke-virtual {v3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
     move-result v6
@@ -389,19 +389,19 @@
 
     if-eqz v6, :cond_4
 
-    .line 671
+    .line 685
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-virtual {v1, v9, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 672
+    .line 686
     invoke-virtual {v3, v7, v8}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadTime(J)V
 
     goto :goto_1
 
-    .line 674
+    .line 688
     :cond_4
     invoke-static {p0, v3}, Lcom/oppo/camera/sticker/download/c;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)I
 
@@ -409,14 +409,14 @@
 
     if-nez v6, :cond_5
 
-    .line 677
+    .line 691
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
     invoke-virtual {v1, v9, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 678
+    .line 692
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -429,15 +429,15 @@
 
     const-string v6, "file_path"
 
-    .line 679
+    .line 693
     invoke-virtual {v1, v6, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v6, "file_content_uri"
 
-    .line 680
+    .line 694
     invoke-virtual {v1, v6, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 681
+    .line 695
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -446,27 +446,27 @@
 
     invoke-virtual {v1, v6, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 682
+    .line 696
     invoke-virtual {v3, v7, v8}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadTime(J)V
 
-    .line 683
+    .line 697
     invoke-virtual {v3, v10}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setNeedUpdate(Z)V
 
-    .line 684
+    .line 698
     invoke-virtual {v3, v10}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadState(I)V
 
-    .line 694
+    .line 708
     :goto_1
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/StickerItem;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 693
+    .line 707
     invoke-static {p0, v4, v2, v1}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)I
 
     move-result v2
 
-    .line 697
+    .line 711
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -481,11 +481,11 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_1
 
-    .line 701
+    .line 715
     invoke-static {p0}, Lcom/oppo/camera/sticker/h;->a(Landroid/content/Context;)Lcom/oppo/camera/sticker/h;
 
     move-result-object v2
@@ -494,7 +494,7 @@
 
     goto/16 :goto_0
 
-    .line 686
+    .line 700
     :cond_5
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -510,7 +510,7 @@
 
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 687
+    .line 701
     invoke-virtual {v3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerName()Ljava/lang/String;
 
     move-result-object v3
@@ -529,8 +529,8 @@
 
     move-result-object v2
 
-    .line 686
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 700
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -541,8 +541,8 @@
     :goto_2
     const-string p0, "deleteSticker, list is empty!"
 
-    .line 640
-    invoke-static {v0, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 654
+    invoke-static {v0, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -560,7 +560,7 @@
 
     goto/16 :goto_1
 
-    .line 76
+    .line 78
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -576,23 +576,23 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 82
     :try_start_0
-    sget-object v2, Lcom/oppo/camera/sticker/d/b;->l:Ljava/lang/String;
+    sget-object v2, Lcom/oppo/camera/sticker/b/b;->l:Ljava/lang/String;
 
-    .line 81
+    .line 83
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInSticker;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 80
-    invoke-static {p0, v2, v3}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 82
+    invoke-static {p0, v2, v3}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 82
+    .line 84
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v3
@@ -607,7 +607,7 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v3, v2, v4, v4}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
+    invoke-static {v3, v2, v4, v4}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
 
     move-result v3
 
@@ -615,7 +615,7 @@
 
     const-string v3, "com.oppo.camera.providers.sticker.file.provider"
 
-    .line 86
+    .line 88
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -624,25 +624,25 @@
 
     move-result-object v3
 
-    .line 87
+    .line 89
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInSticker;->obtainStickerItem()Lcom/oppo/camera/sticker/data/StickerItemWrapper;
 
     move-result-object v5
 
-    .line 88
+    .line 90
     invoke-virtual {v5, v4}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setIsBuildIn(Z)V
 
-    .line 89
+    .line 91
     invoke-virtual {v5, v2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setThumbnailPath(Ljava/lang/String;)V
 
-    .line 90
+    .line 92
     invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v5, v2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setThumbnailFileUri(Ljava/lang/String;)V
 
-    .line 92
+    .line 94
     invoke-virtual {v5}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
     move-result v2
@@ -657,30 +657,30 @@
 
     const-string p0, "installBuildInSticker, can not supported material type!"
 
-    .line 104
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 106
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 100
+    .line 102
     :cond_1
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInSticker;->getAssetFilePath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 101
+    .line 103
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInSticker;->getBackgroundColor()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 100
+    .line 102
     invoke-static {p0, v5, v2, p1}, Lcom/oppo/camera/sticker/download/c;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
     return p0
 
-    .line 97
+    .line 99
     :cond_2
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInSticker;->getAssetFilePath()Ljava/lang/String;
 
@@ -692,7 +692,7 @@
 
     return p0
 
-    .line 94
+    .line 96
     :cond_3
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/BuildInSticker;->getAssetFilePath()Ljava/lang/String;
 
@@ -707,8 +707,8 @@
     :cond_4
     const-string p0, "installBuildInSticker, saveThumb fail!"
 
-    .line 109
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 111
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -717,7 +717,7 @@
     :catch_0
     move-exception p0
 
-    .line 112
+    .line 114
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -732,12 +732,12 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return v0
 
-    .line 70
+    .line 72
     :cond_5
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -754,7 +754,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -772,7 +772,7 @@
 
     goto :goto_0
 
-    .line 126
+    .line 128
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -794,9 +794,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 129
+    .line 131
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
     move-result v2
@@ -813,22 +813,22 @@
 
     const-string p0, "installBuildInSticker, can not supported material type!"
 
-    .line 140
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 142
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
     :cond_1
     const/4 v0, 0x0
 
-    .line 137
+    .line 139
     invoke-static {p0, p1, p2, v0}, Lcom/oppo/camera/sticker/download/c;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result p0
 
     return p0
 
-    .line 134
+    .line 136
     :cond_2
     invoke-static {p0, p1, p2}, Lcom/oppo/camera/sticker/download/c;->c(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;Ljava/lang/String;)Z
 
@@ -836,7 +836,7 @@
 
     return p0
 
-    .line 131
+    .line 133
     :cond_3
     invoke-static {p0, p1, p2}, Lcom/oppo/camera/sticker/download/c;->b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;Ljava/lang/String;)Z
 
@@ -844,7 +844,7 @@
 
     return p0
 
-    .line 120
+    .line 122
     :cond_4
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
@@ -861,690 +861,830 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
 
 .method private static a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 12
+    .locals 17
 
-    const-string v0, "installAnimojiSticker close zip file exception: "
+    move-object/from16 v0, p0
 
-    .line 426
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-object/from16 v1, p1
 
-    move-result v1
+    move-object/from16 v2, p2
 
-    const/4 v2, 0x0
+    const-string v3, "sticker/material"
 
-    const-string v3, "StickerInstaller"
+    const-string v4, "installAnimojiSticker close zip file exception: "
 
-    if-eqz v1, :cond_0
+    .line 428
+    invoke-static/range {p2 .. p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const-string p0, "installAnimojiSticker, file path is empty!"
+    move-result v5
 
-    .line 427
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v6, 0x0
 
-    return v2
+    const-string v7, "StickerInstaller"
+
+    if-eqz v5, :cond_0
+
+    const-string v0, "installAnimojiSticker, file path is empty!"
+
+    .line 429
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v6
 
     :cond_0
-    if-eqz p0, :cond_16
+    if-eqz v0, :cond_1c
 
-    if-nez p1, :cond_1
+    if-nez v1, :cond_1
 
-    goto/16 :goto_8
+    goto/16 :goto_14
 
-    .line 438
+    .line 440
     :cond_1
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
-    move-result v1
+    move-result v5
 
-    const/4 v4, 0x2
+    const/4 v8, 0x2
 
-    if-eq v1, v4, :cond_2
+    if-eq v5, v8, :cond_2
 
-    .line 439
-    new-instance p0, Ljava/lang/StringBuilder;
+    .line 441
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p2, "installAnimojiSticker, not a animoji type! item: "
+    const-string v2, "installAnimojiSticker, not a animoji type! item: "
 
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    return v2
+    return v6
 
+    .line 451
     :cond_2
-    const/4 v1, 0x0
-
-    .line 448
     :try_start_0
-    new-instance v4, Ljava/util/ArrayList;
+    new-instance v8, Ljava/util/ArrayList;
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    .line 450
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-eqz v5, :cond_4
-
-    const-string v5, "sticker/material"
-
-    invoke-virtual {p2, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
-
-    .line 452
-    new-instance v5, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;
-
-    invoke-direct {v5}, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;-><init>()V
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
     .line 453
-    invoke-virtual {v5, p3}, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;->setBackgroundColor(Ljava/lang/String;)V
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+
+    move-result v9
+
+    const/4 v10, 0x1
+
+    if-eqz v9, :cond_6
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_3
+
+    const-string v9, "/odm/etc/camera/sticker/material"
 
     .line 454
-    sget-object p3, Lcom/oppo/camera/sticker/d/b;->j:Ljava/lang/String;
-
-    .line 455
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
-
-    move-result-object v7
-
-    .line 454
-    invoke-static {p0, p3, v7}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p3
-
-    .line 456
-    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object v7
-
-    invoke-virtual {v7, p2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-
-    move-result-object v7
-
-    invoke-static {v7, p3, v6, v6}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    .line 460
-    invoke-interface {v4, p3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_1
-
-    .line 462
-    :cond_3
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "installAnimojiSticker, save inputStream Fail! stickerFileSrcPath: "
-
-    invoke-virtual {p3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {v3, p3}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    .line 466
-    :cond_4
-    new-instance p3, Ljava/util/zip/ZipFile;
-
-    invoke-direct {p3, p2}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    .line 467
-    :try_start_1
-    invoke-virtual {p3}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
-
-    move-result-object v5
-
-    .line 469
-    :cond_5
-    :goto_0
-    invoke-interface {v5}, Ljava/util/Enumeration;->hasMoreElements()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_a
-
-    .line 470
-    invoke-interface {v5}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/util/zip/ZipEntry;
-
-    .line 471
-    invoke-virtual {v7}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v9, "../"
-
-    .line 473
-    invoke-virtual {v8, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v2, v9}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v9
 
     if-eqz v9, :cond_6
 
-    goto :goto_0
+    .line 456
+    :cond_3
+    new-instance v9, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;
 
-    .line 478
-    :cond_6
-    new-instance v9, Ljava/lang/StringBuilder;
+    invoke-direct {v9}, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;-><init>()V
 
-    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
+    move-object/from16 v11, p3
 
-    const-string v10, "installAnimojiSticker entryName: "
+    .line 457
+    invoke-virtual {v9, v11}, Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;->setBackgroundColor(Ljava/lang/String;)V
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 458
+    sget-object v11, Lcom/oppo/camera/sticker/b/b;->j:Ljava/lang/String;
 
-    invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 459
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
 
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v12
 
-    move-result-object v9
+    .line 458
+    invoke-static {v0, v11, v12}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v3, v9}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v11
 
-    const-string v9, "ConfigInfo.json"
+    .line 461
+    invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    .line 481
-    invoke-virtual {v9}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    move-result v3
 
-    move-result-object v9
+    if-eqz v3, :cond_4
 
-    invoke-virtual {v8, v9}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    .line 462
+    invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
-    move-result v9
+    move-result-object v3
 
-    if-eqz v9, :cond_7
+    invoke-virtual {v3, v2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
-    .line 482
-    invoke-static {p3, v7}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 483
-    invoke-static {v1}, Lcom/oppo/camera/sticker/download/c;->a(Ljava/lang/String;)Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;
-
-    move-result-object v1
+    move-result-object v3
 
     goto :goto_0
 
-    :cond_7
-    const-string v9, ".zip"
+    .line 464
+    :cond_4
+    new-instance v3, Ljava/io/FileInputStream;
 
-    .line 484
-    invoke-virtual {v8, v9}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-direct {v3, v2}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    move-result v9
-
-    if-eqz v9, :cond_5
-
-    .line 485
-    invoke-static {v8}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 487
-    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 467
+    :goto_0
+    :try_start_1
+    invoke-static {v3, v11, v10, v10}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
 
     move-result v10
 
-    if-nez v10, :cond_8
+    if-eqz v10, :cond_5
 
-    .line 488
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    .line 470
+    invoke-interface {v8, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    move-result-object v9
+    goto :goto_1
 
-    invoke-virtual {v9}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 490
+    .line 472
+    :cond_5
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v11, "installAnimojiSticker, parse name fail, use uuid instead! entryName: "
+    const-string v11, "installAnimojiSticker, save inputStream Fail! stickerFileSrcPath: "
 
     invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v8, ", fileName: "
-
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v10
 
-    invoke-static {v3, v8}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v10}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 494
-    :cond_8
-    sget-object v8, Lcom/oppo/camera/sticker/d/b;->j:Ljava/lang/String;
+    :goto_1
+    move-object/from16 v16, v3
 
-    invoke-static {p0, v8, v9}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v5, 0x0
 
-    move-result-object v8
+    goto/16 :goto_3
 
-    .line 496
-    invoke-virtual {p3, v7}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
+    :catchall_0
+    move-exception v0
+
+    move-object/from16 v16, v3
+
+    const/4 v5, 0x0
+
+    goto/16 :goto_f
+
+    :catch_0
+    move-exception v0
+
+    move-object/from16 v16, v3
+
+    const/4 v5, 0x0
+
+    goto/16 :goto_b
+
+    .line 476
+    :cond_6
+    :try_start_2
+    new-instance v3, Ljava/util/zip/ZipFile;
+
+    invoke-direct {v3, v2}, Ljava/util/zip/ZipFile;-><init>(Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 477
+    :try_start_3
+    invoke-virtual {v3}, Ljava/util/zip/ZipFile;->entries()Ljava/util/Enumeration;
 
     move-result-object v9
 
-    invoke-static {v9, v8, v6, v6}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
+    const/4 v11, 0x0
 
-    move-result v9
+    .line 479
+    :cond_7
+    :goto_2
+    invoke-interface {v9}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    if-eqz v9, :cond_9
+    move-result v12
 
-    .line 500
-    invoke-interface {v4, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    if-eqz v12, :cond_c
 
-    goto/16 :goto_0
+    .line 480
+    invoke-interface {v9}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
-    .line 502
-    :cond_9
-    new-instance v8, Ljava/lang/StringBuilder;
+    move-result-object v12
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    check-cast v12, Ljava/util/zip/ZipEntry;
 
-    const-string v9, "installAnimojiSticker, save zip entry fail! entry: "
+    .line 481
+    invoke-virtual {v12}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v13
 
-    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v13}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v13
 
-    move-result-object v7
+    const-string v14, "../"
 
-    invoke-static {v3, v7}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .line 483
+    invoke-virtual {v13, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    goto/16 :goto_0
+    move-result v14
 
-    :cond_a
-    move-object v5, v1
-
-    move-object v1, p3
-
-    .line 508
-    :goto_1
-    :try_start_2
-    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
-
-    move-result p3
-
-    if-eqz p3, :cond_d
-
-    const-string p0, "installAnimojiSticker can not find any zip file!"
-
-    .line 509
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    if-eqz v1, :cond_b
-
-    .line 537
-    :try_start_3
-    invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    if-eqz v14, :cond_8
 
     goto :goto_2
 
-    :catch_0
-    move-exception p0
+    .line 488
+    :cond_8
+    new-instance v14, Ljava/lang/StringBuilder;
 
-    .line 540
-    new-instance p3, Ljava/lang/StringBuilder;
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v15, "installAnimojiSticker entryName: "
 
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object v14
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v14}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 543
+    const-string v14, "ConfigInfo.json"
+
+    .line 491
+    invoke-virtual {v14}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-virtual {v13, v14}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_9
+
+    .line 492
+    invoke-static {v3, v12}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 493
+    invoke-static {v11}, Lcom/oppo/camera/sticker/download/c;->a(Ljava/lang/String;)Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;
+
+    move-result-object v11
+
+    goto :goto_2
+
+    :cond_9
+    const-string v14, ".zip"
+
+    .line 494
+    invoke-virtual {v13, v14}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_7
+
+    .line 495
+    invoke-static {v13}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    .line 497
+    invoke-static {v14}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v15
+
+    if-nez v15, :cond_a
+
+    .line 498
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    .line 500
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "installAnimojiSticker, parse name fail, use uuid instead! entryName: "
+
+    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", fileName: "
+
+    invoke-virtual {v15, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v7, v5}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 504
+    :cond_a
+    sget-object v5, Lcom/oppo/camera/sticker/b/b;->j:Ljava/lang/String;
+
+    invoke-static {v0, v5, v14}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 506
+    invoke-virtual {v3, v12}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
+
+    move-result-object v13
+
+    invoke-static {v13, v5, v10, v10}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
+
+    move-result v13
+
+    if-eqz v13, :cond_b
+
+    .line 510
+    invoke-interface {v8, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_2
+
+    .line 512
     :cond_b
-    :goto_2
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    move-result p0
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez p0, :cond_c
+    const-string v13, "installAnimojiSticker, save zip entry fail! entry: "
 
-    .line 544
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-virtual {v5, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v7, v5}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    goto/16 :goto_2
 
     :cond_c
-    return v2
+    move-object v5, v3
 
-    :cond_d
-    :try_start_4
-    const-string p3, "com.oppo.camera.providers.sticker.file.provider"
+    move-object v9, v11
 
-    .line 515
-    new-instance v6, Ljava/io/File;
-
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/String;
-
-    invoke-direct {v6, v7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0, p3, v6}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object p3
-
-    .line 516
-    invoke-virtual {p3}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setFileContentUri(Ljava/lang/String;)V
-
-    .line 517
-    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ljava/lang/String;
-
-    invoke-virtual {p1, p3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setFilePath(Ljava/lang/String;)V
-
-    const/16 p3, 0x8
+    const/16 v16, 0x0
 
     .line 518
-    invoke-virtual {p1, p3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadState(I)V
+    :goto_3
+    :try_start_4
+    invoke-interface {v8}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_10
+
+    const-string v0, "installAnimojiSticker can not find any zip file!"
 
     .line 519
-    invoke-virtual {p1, v2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setNeedUpdate(Z)V
-
-    .line 522
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
-
-    move-result p3
-
-    if-nez p3, :cond_e
-
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getDownloadTime()J
-
-    move-result-wide v6
-
-    const-wide/16 v8, 0x0
-
-    cmp-long p3, v6, v8
-
-    if-nez p3, :cond_e
-
-    .line 523
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v6
-
-    invoke-virtual {p1, v6, v7}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadTime(J)V
-
-    .line 527
-    :cond_e
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {p0, p3, v5}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Ljava/lang/String;Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_f
-
-    const-string p3, "installAnimojiSticker update extend info fail!"
-
-    .line 528
-    invoke-static {v3, p3}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 531
-    :cond_f
-    invoke-static {p0, p1}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)Z
-
-    move-result p0
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
-    if-eqz v1, :cond_10
+    if-eqz v5, :cond_d
 
-    .line 537
+    .line 547
     :try_start_5
-    invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
-
-    goto :goto_3
-
-    :catch_1
-    move-exception p3
-
-    .line 540
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-static {v3, p3}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 543
-    :cond_10
-    :goto_3
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
-
-    move-result p1
-
-    if-nez p1, :cond_11
-
-    .line 544
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
-
-    :cond_11
-    return p0
-
-    :catchall_0
-    move-exception p0
-
-    move-object v1, p3
-
-    goto :goto_6
-
-    :catch_2
-    move-exception p0
-
-    move-object v1, p3
+    invoke-virtual {v5}, Ljava/util/zip/ZipFile;->close()V
 
     goto :goto_4
 
-    :catchall_1
-    move-exception p0
-
-    goto :goto_6
-
-    :catch_3
-    move-exception p0
-
-    .line 533
-    :goto_4
-    :try_start_6
-    invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    if-eqz v1, :cond_12
-
-    .line 537
-    :try_start_7
-    invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
-    :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
+    :catch_1
+    move-exception v0
 
     goto :goto_5
 
-    :catch_4
-    move-exception p0
+    :cond_d
+    :goto_4
+    if-eqz v16, :cond_e
 
-    .line 540
-    new-instance p3, Ljava/lang/StringBuilder;
+    .line 551
+    invoke-virtual/range {v16 .. v16}, Ljava/io/InputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
 
-    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+    goto :goto_6
 
-    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 543
-    :cond_12
+    .line 554
     :goto_5
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result p0
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-nez p0, :cond_13
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 544
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_13
-    return v2
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object v0
+
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 557
+    :cond_e
     :goto_6
-    if-eqz v1, :cond_14
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+
+    move-result v0
+
+    if-nez v0, :cond_f
+
+    .line 558
+    invoke-static/range {p2 .. p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
+
+    :cond_f
+    return v6
+
+    :cond_10
+    :try_start_6
+    const-string v3, "com.oppo.camera.providers.sticker.file.provider"
+
+    .line 525
+    new-instance v10, Ljava/io/File;
+
+    invoke-interface {v8, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Ljava/lang/String;
+
+    invoke-direct {v10, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0, v3, v10}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    .line 526
+    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setFileContentUri(Ljava/lang/String;)V
+
+    .line 527
+    invoke-interface {v8, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setFilePath(Ljava/lang/String;)V
+
+    const/16 v3, 0x8
+
+    .line 528
+    invoke-virtual {v1, v3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadState(I)V
+
+    .line 529
+    invoke-virtual {v1, v6}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setNeedUpdate(Z)V
+
+    .line 532
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+
+    move-result v3
+
+    if-nez v3, :cond_11
+
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getDownloadTime()J
+
+    move-result-wide v10
+
+    const-wide/16 v12, 0x0
+
+    cmp-long v3, v10, v12
+
+    if-nez v3, :cond_11
+
+    .line 533
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v10
+
+    invoke-virtual {v1, v10, v11}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadTime(J)V
 
     .line 537
-    :try_start_8
-    invoke-virtual {v1}, Ljava/util/zip/ZipFile;->close()V
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
+    :cond_11
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3, v9}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Ljava/lang/String;Lcom/oppo/camera/sticker/data/AnimojiStickerExtendedInfo;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_12
+
+    const-string v3, "installAnimojiSticker update extend info fail!"
+
+    .line 538
+    invoke-static {v7, v3}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 541
+    :cond_12
+    invoke-static/range {p0 .. p1}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)Z
+
+    move-result v3
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    if-eqz v5, :cond_13
+
+    .line 547
+    :try_start_7
+    invoke-virtual {v5}, Ljava/util/zip/ZipFile;->close()V
 
     goto :goto_7
 
-    :catch_5
-    move-exception p3
+    :catch_2
+    move-exception v0
 
-    .line 540
+    goto :goto_8
+
+    :cond_13
+    :goto_7
+    if-eqz v16, :cond_14
+
+    .line 551
+    invoke-virtual/range {v16 .. v16}, Ljava/io/InputStream;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
+
+    goto :goto_9
+
+    .line 554
+    :goto_8
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 557
+    :cond_14
+    :goto_9
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+
+    move-result v0
+
+    if-nez v0, :cond_15
+
+    .line 558
+    invoke-static/range {p2 .. p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
+
+    :cond_15
+    return v3
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_b
+
+    :catchall_1
+    move-exception v0
+
+    move-object v5, v3
+
+    const/16 v16, 0x0
+
+    goto :goto_f
+
+    :catch_4
+    move-exception v0
+
+    move-object v5, v3
+
+    goto :goto_a
+
+    :catchall_2
+    move-exception v0
+
+    move-object v3, v0
+
+    const/4 v5, 0x0
+
+    const/16 v16, 0x0
+
+    goto :goto_10
+
+    :catch_5
+    move-exception v0
+
+    const/4 v5, 0x0
+
+    :goto_a
+    const/16 v16, 0x0
+
+    .line 543
+    :goto_b
+    :try_start_8
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    if-eqz v5, :cond_16
+
+    .line 547
+    :try_start_9
+    invoke-virtual {v5}, Ljava/util/zip/ZipFile;->close()V
+
+    goto :goto_c
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_d
+
+    :cond_16
+    :goto_c
+    if-eqz v16, :cond_17
+
+    .line 551
+    invoke-virtual/range {v16 .. v16}, Ljava/io/InputStream;->close()V
+    :try_end_9
+    .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_6
+
+    goto :goto_e
+
+    .line 554
+    :goto_d
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 557
+    :cond_17
+    :goto_e
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+
+    move-result v0
+
+    if-nez v0, :cond_18
+
+    .line 558
+    invoke-static/range {p2 .. p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
+
+    :cond_18
+    return v6
+
+    :catchall_3
+    move-exception v0
+
+    :goto_f
+    move-object v3, v0
+
+    :goto_10
+    if-eqz v5, :cond_19
+
+    .line 547
+    :try_start_a
+    invoke-virtual {v5}, Ljava/util/zip/ZipFile;->close()V
+
+    goto :goto_11
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_12
+
+    :cond_19
+    :goto_11
+    if-eqz v16, :cond_1a
+
+    .line 551
+    invoke-virtual/range {v16 .. v16}, Ljava/io/InputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_7
+
+    goto :goto_13
+
+    .line 554
+    :goto_12
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 557
+    :cond_1a
+    :goto_13
+    invoke-virtual/range {p1 .. p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1b
+
+    .line 558
+    invoke-static/range {p2 .. p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
+
+    .line 560
+    :cond_1b
+    throw v3
+
+    .line 435
+    :cond_1c
+    :goto_14
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "installAnimojiSticker, null parameter! context: "
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p3
+    move-result-object v0
 
-    invoke-static {v3, p3}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 543
-    :cond_14
-    :goto_7
-    invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
-
-    move-result p1
-
-    if-nez p1, :cond_15
-
-    .line 544
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
-
-    .line 546
-    :cond_15
-    throw p0
-
-    .line 433
-    :cond_16
-    :goto_8
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string p2, "installAnimojiSticker, null parameter! context: "
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v2
+    return v6
 .end method
 
 .method public static b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)I
@@ -1556,7 +1696,7 @@
 
     goto :goto_1
 
-    .line 744
+    .line 758
     :cond_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
@@ -1568,13 +1708,13 @@
 
     return p0
 
-    .line 748
+    .line 762
     :cond_1
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFilePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 752
+    .line 766
     :try_start_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFilePath()Ljava/lang/String;
 
@@ -1586,12 +1726,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 753
+    .line 767
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFileContentUri()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 754
+    .line 768
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p1
@@ -1602,7 +1742,7 @@
 
     goto :goto_0
 
-    .line 756
+    .line 770
     :cond_2
     new-instance p0, Ljava/io/File;
 
@@ -1615,9 +1755,9 @@
 
     return p0
 
-    .line 763
+    .line 777
     :cond_3
-    invoke-static {p0}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/File;)Z
+    invoke-static {p0}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/File;)Z
 
     move-result p0
     :try_end_0
@@ -1637,7 +1777,7 @@
     :catch_0
     move-exception p0
 
-    .line 769
+    .line 783
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1654,7 +1794,7 @@
 
     const-string p1, "StickerInstaller"
 
-    invoke-static {p1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, -0x1
 
@@ -1680,7 +1820,7 @@
         }
     .end annotation
 
-    .line 569
+    .line 583
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -1693,12 +1833,12 @@
 
     const-string p0, "parserMultiStickerExtendInfo empty content"
 
-    .line 570
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 584
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 
-    .line 576
+    .line 590
     :cond_0
     :try_start_0
     new-instance v0, Lcom/google/gson/GsonBuilder;
@@ -1713,7 +1853,7 @@
 
     move-result-object v0
 
-    .line 577
+    .line 591
     new-instance v3, Lcom/oppo/camera/sticker/download/c$1;
 
     invoke-direct {v3}, Lcom/oppo/camera/sticker/download/c$1;-><init>()V
@@ -1735,7 +1875,7 @@
     :catch_0
     move-exception p0
 
-    .line 579
+    .line 593
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1750,7 +1890,7 @@
 
     move-result-object p0
 
-    invoke-static {v2, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 .end method
@@ -1768,7 +1908,7 @@
 
     goto/16 :goto_1
 
-    .line 163
+    .line 165
     :cond_0
     :try_start_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
@@ -1777,7 +1917,7 @@
 
     if-eqz v2, :cond_1
 
-    .line 164
+    .line 166
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1792,23 +1932,23 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    .line 170
+    .line 172
     :cond_1
-    sget-object v2, Lcom/oppo/camera/sticker/d/b;->h:Ljava/lang/String;
+    sget-object v2, Lcom/oppo/camera/sticker/b/b;->h:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p0, v2, v3}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v2, v3}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 172
+    .line 174
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isRecycleBin()Z
 
     move-result v3
@@ -1819,7 +1959,7 @@
 
     goto :goto_0
 
-    .line 175
+    .line 177
     :cond_2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1829,12 +1969,12 @@
 
     const-string p0, "installNormalSticker, file path is empty!"
 
-    .line 176
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 178
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
-    .line 181
+    .line 183
     :cond_3
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
@@ -1850,7 +1990,7 @@
 
     if-eqz v3, :cond_4
 
-    .line 182
+    .line 184
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v3
@@ -1859,32 +1999,32 @@
 
     move-result-object p2
 
-    invoke-static {p2, v2, v4, v4}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
+    invoke-static {p2, v2, v4, v4}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
 
     move-result v4
 
     goto :goto_0
 
-    .line 185
+    .line 187
     :cond_4
-    invoke-static {p2, v2}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p2, v2}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_5
 
-    .line 188
+    .line 190
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFileMd5()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-static {v2, p2}, Lcom/oppo/camera/sticker/d/c;->a(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {v2, p2}, Lcom/oppo/camera/sticker/b/c;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_5
 
-    .line 191
+    .line 193
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1899,7 +2039,7 @@
 
     move-result-object p2
 
-    invoke-static {v1, p2}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     :goto_0
@@ -1907,7 +2047,7 @@
 
     const-string p2, "com.oppo.camera.providers.sticker.file.provider"
 
-    .line 198
+    .line 200
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -1916,25 +2056,25 @@
 
     move-result-object p2
 
-    .line 199
+    .line 201
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object p2
 
     invoke-virtual {p1, p2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setFileContentUri(Ljava/lang/String;)V
 
-    .line 200
+    .line 202
     invoke-virtual {p1, v2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setFilePath(Ljava/lang/String;)V
 
     const/16 p2, 0x8
 
-    .line 201
+    .line 203
     invoke-virtual {p1, p2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadState(I)V
 
-    .line 202
+    .line 204
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setNeedUpdate(Z)V
 
-    .line 205
+    .line 207
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
     move-result p2
@@ -1951,14 +2091,14 @@
 
     if-nez p2, :cond_6
 
-    .line 206
+    .line 208
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     invoke-virtual {p1, v2, v3}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadTime(J)V
 
-    .line 209
+    .line 211
     :cond_6
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)Z
 
@@ -1969,12 +2109,12 @@
     :cond_7
     const-string p0, "installNormalSticker, save saveFile!"
 
-    .line 211
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 213
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
-    .line 158
+    .line 160
     :cond_8
     :goto_1
     new-instance p1, Ljava/lang/StringBuilder;
@@ -1991,7 +2131,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2000,7 +2140,7 @@
     :catch_0
     move-exception p0
 
-    .line 214
+    .line 216
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2015,7 +2155,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_2
     return v0
@@ -2030,7 +2170,7 @@
 
     goto :goto_2
 
-    .line 780
+    .line 794
     :cond_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
@@ -2044,7 +2184,7 @@
 
     return p0
 
-    .line 784
+    .line 798
     :cond_1
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/a/b;->c(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItem;)Ljava/util/List;
 
@@ -2052,7 +2192,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 787
+    .line 801
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
@@ -2061,7 +2201,7 @@
 
     goto :goto_1
 
-    .line 793
+    .line 807
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2080,34 +2220,34 @@
 
     check-cast v2, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;
 
-    .line 794
+    .line 808
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;->getFileContentUri16x9()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p0, v3}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v3}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
     and-int/2addr v1, v3
 
-    .line 795
+    .line 809
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;->getFileContentUri4x3()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {p0, v3}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v3}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v3
 
     and-int/2addr v1, v3
 
-    .line 796
+    .line 810
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;->getFileContentUri1x1()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p0, v2}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p0, v2}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -2118,7 +2258,7 @@
     :cond_3
     if-eqz v1, :cond_5
 
-    .line 800
+    .line 814
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/a/b;->d(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItem;)Z
 
     move-result p0
@@ -2157,7 +2297,7 @@
 
     const-string v0, "installMultiSticker close zip file exception: "
 
-    .line 229
+    .line 231
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -2170,8 +2310,8 @@
 
     const-string p0, "installMultiSticker, file path is empty!"
 
-    .line 230
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 232
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
@@ -2182,7 +2322,7 @@
 
     goto/16 :goto_d
 
-    .line 241
+    .line 243
     :cond_1
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
@@ -2192,7 +2332,7 @@
 
     if-eq v1, v4, :cond_2
 
-    .line 242
+    .line 244
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2207,11 +2347,11 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 
-    .line 250
+    .line 252
     :cond_2
     new-instance v1, Ljava/util/ArrayList;
 
@@ -2219,7 +2359,7 @@
 
     const/4 v5, 0x0
 
-    .line 253
+    .line 255
     :try_start_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
@@ -2235,19 +2375,19 @@
 
     if-eqz v6, :cond_5
 
-    .line 255
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 257
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 257
+    .line 259
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 258
+    .line 260
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2262,9 +2402,9 @@
 
     move-result-object v6
 
-    invoke-static {v3, v6}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v6}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 260
+    .line 262
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v6
@@ -2273,18 +2413,18 @@
 
     move-result-object v6
 
-    .line 263
+    .line 265
     :cond_3
-    sget-object v7, Lcom/oppo/camera/sticker/d/b;->k:Ljava/lang/String;
+    sget-object v7, Lcom/oppo/camera/sticker/b/b;->k:Ljava/lang/String;
 
-    invoke-static {p0, v7, v6}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v7, v6}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_6
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 264
+    .line 266
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -2294,13 +2434,13 @@
 
     move-result-object v7
 
-    invoke-static {v7, v6, v4, v4}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
+    invoke-static {v7, v6, v4, v4}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
 
     move-result v7
 
     if-nez v7, :cond_4
 
-    .line 268
+    .line 270
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2321,13 +2461,13 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 404
-    invoke-static {v6}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    .line 406
+    invoke-static {v6}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     return v2
 
@@ -2350,7 +2490,7 @@
 
     goto/16 :goto_8
 
-    .line 278
+    .line 280
     :cond_5
     :goto_0
     :try_start_2
@@ -2361,13 +2501,13 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 281
+    .line 283
     :try_start_3
     invoke-static {v6}, Lcom/oppo/camera/sticker/download/c;->a(Ljava/util/zip/ZipFile;)Ljava/util/List;
 
     move-result-object v7
 
-    .line 283
+    .line 285
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -2385,7 +2525,7 @@
 
     check-cast v8, Ljava/util/zip/ZipEntry;
 
-    .line 284
+    .line 286
     invoke-virtual {v8}, Ljava/util/zip/ZipEntry;->isDirectory()Z
 
     move-result v9
@@ -2394,7 +2534,7 @@
 
     goto :goto_1
 
-    .line 288
+    .line 290
     :cond_6
     invoke-virtual {v8}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
@@ -2402,7 +2542,7 @@
 
     const-string v10, "../"
 
-    .line 290
+    .line 292
     invoke-virtual {v9, v10}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v10
@@ -2411,7 +2551,7 @@
 
     goto :goto_1
 
-    .line 294
+    .line 296
     :cond_7
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -2427,23 +2567,23 @@
 
     move-result-object v10
 
-    invoke-static {v3, v10}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v10}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v10, "StickerMultiCfg.json"
 
-    .line 296
+    .line 298
     invoke-virtual {v9, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v10
 
     if-eqz v10, :cond_8
 
-    .line 297
-    invoke-static {v6, v8}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)Ljava/lang/String;
+    .line 299
+    invoke-static {v6, v8}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 298
+    .line 300
     invoke-static {v5}, Lcom/oppo/camera/sticker/download/c;->b(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v5
@@ -2453,7 +2593,7 @@
     :cond_8
     if-eqz v5, :cond_c
 
-    .line 300
+    .line 302
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
     move-result v10
@@ -2465,14 +2605,14 @@
     :cond_9
     const-string v10, ".zip"
 
-    .line 307
+    .line 309
     invoke-virtual {v9, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v10
 
     if-nez v10, :cond_a
 
-    .line 308
+    .line 310
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2487,13 +2627,13 @@
 
     move-result-object v8
 
-    invoke-static {v3, v8}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v8}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 313
+    .line 315
     :cond_a
-    sget-object v10, Lcom/oppo/camera/sticker/d/b;->i:Ljava/lang/String;
+    sget-object v10, Lcom/oppo/camera/sticker/b/b;->i:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -2503,7 +2643,7 @@
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 314
+    .line 316
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v12
@@ -2520,28 +2660,28 @@
 
     move-result-object v11
 
-    .line 313
-    invoke-static {p0, v10, v11}, Lcom/oppo/camera/sticker/d/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .line 315
+    invoke-static {p0, v10, v11}, Lcom/oppo/camera/sticker/b/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 316
+    .line 318
     invoke-virtual {v6, v8}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
     move-result-object v8
 
-    invoke-static {v8, v10, v4, v4}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
+    invoke-static {v8, v10, v4, v4}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/InputStream;Ljava/lang/String;ZZ)Z
 
     move-result v8
 
     if-eqz v8, :cond_b
 
-    .line 319
+    .line 321
     invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
-    .line 321
+    .line 323
     :cond_b
     new-instance p0, Ljava/lang/StringBuilder;
 
@@ -2557,12 +2697,12 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 398
+    .line 400
     :try_start_4
     invoke-virtual {v6}, Ljava/util/zip/ZipFile;->close()V
     :try_end_4
@@ -2573,7 +2713,7 @@
     :catch_1
     move-exception p0
 
-    .line 401
+    .line 403
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2586,11 +2726,11 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
+    .line 406
     :goto_2
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     return v2
 
@@ -2599,13 +2739,13 @@
     :try_start_5
     const-string p0, "installMultiSticker, parse config file fail!"
 
-    .line 301
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 303
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 398
+    .line 400
     :try_start_6
     invoke-virtual {v6}, Ljava/util/zip/ZipFile;->close()V
     :try_end_6
@@ -2616,7 +2756,7 @@
     :catch_2
     move-exception p0
 
-    .line 401
+    .line 403
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2629,18 +2769,18 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
+    .line 406
     :goto_4
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     return v2
 
     :cond_d
     if-eqz v5, :cond_14
 
-    .line 335
+    .line 337
     :try_start_7
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2660,7 +2800,7 @@
 
     check-cast v7, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;
 
-    .line 339
+    .line 341
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2675,9 +2815,9 @@
 
     move-result-object v8
 
-    invoke-static {v3, v8}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v8}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
+    .line 344
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -2697,7 +2837,7 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 344
+    .line 346
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -2712,9 +2852,9 @@
 
     move-result-object v11
 
-    invoke-static {v3, v11}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v11}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 347
+    .line 349
     invoke-virtual {v7}, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;->getIsFitToSize()Z
 
     move-result v11
@@ -2725,7 +2865,7 @@
 
     const-string v11, "/16_9/"
 
-    .line 348
+    .line 350
     invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v11
@@ -2742,7 +2882,7 @@
 
     if-eqz v11, :cond_10
 
-    .line 349
+    .line 351
     new-instance v11, Ljava/io/File;
 
     invoke-direct {v11, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2751,7 +2891,7 @@
 
     move-result-object v10
 
-    .line 350
+    .line 352
     invoke-virtual {v10}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -2765,7 +2905,7 @@
     :cond_10
     const-string v11, "/4_3/"
 
-    .line 352
+    .line 354
     invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v11
@@ -2782,7 +2922,7 @@
 
     if-eqz v11, :cond_11
 
-    .line 353
+    .line 355
     new-instance v11, Ljava/io/File;
 
     invoke-direct {v11, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2791,7 +2931,7 @@
 
     move-result-object v10
 
-    .line 354
+    .line 356
     invoke-virtual {v10}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -2805,7 +2945,7 @@
     :cond_11
     const-string v11, "/1_1/"
 
-    .line 356
+    .line 358
     invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v11
@@ -2822,7 +2962,7 @@
 
     if-eqz v11, :cond_13
 
-    .line 357
+    .line 359
     new-instance v11, Ljava/io/File;
 
     invoke-direct {v11, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2831,7 +2971,7 @@
 
     move-result-object v10
 
-    .line 358
+    .line 360
     invoke-virtual {v10}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -2845,7 +2985,7 @@
     :cond_12
     const-string v11, "/Default/"
 
-    .line 362
+    .line 364
     invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v11
@@ -2862,7 +3002,7 @@
 
     if-eqz v11, :cond_13
 
-    .line 363
+    .line 365
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, v10}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -2871,21 +3011,21 @@
 
     move-result-object v9
 
-    .line 364
+    .line 366
     invoke-virtual {v9}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v7, v10}, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;->setFileContentUri16x9(Ljava/lang/String;)V
 
-    .line 365
+    .line 367
     invoke-virtual {v9}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-virtual {v7, v10}, Lcom/oppo/camera/sticker/data/MultiStickerExtendedInfo;->setFileContentUri4x3(Ljava/lang/String;)V
 
-    .line 366
+    .line 368
     invoke-virtual {v9}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v9
@@ -2900,13 +3040,13 @@
 
     goto/16 :goto_5
 
-    .line 380
+    .line 382
     :cond_14
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getStickerUUID()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 379
+    .line 381
     invoke-static {p0, v1, v5}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)Z
 
     move-result v1
@@ -2915,13 +3055,13 @@
 
     const/16 v1, 0x8
 
-    .line 383
+    .line 385
     invoke-virtual {p1, v1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadState(I)V
 
-    .line 384
+    .line 386
     invoke-virtual {p1, v2}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setNeedUpdate(Z)V
 
-    .line 387
+    .line 389
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->isBuildIn()Z
 
     move-result v1
@@ -2938,14 +3078,14 @@
 
     if-nez v1, :cond_15
 
-    .line 388
+    .line 390
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     invoke-virtual {p1, v4, v5}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->setDownloadTime(J)V
 
-    .line 392
+    .line 394
     :cond_15
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/a/b;->a(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)Z
 
@@ -2954,7 +3094,7 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 398
+    .line 400
     :try_start_8
     invoke-virtual {v6}, Ljava/util/zip/ZipFile;->close()V
     :try_end_8
@@ -2965,7 +3105,7 @@
     :catch_3
     move-exception p1
 
-    .line 401
+    .line 403
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2978,11 +3118,11 @@
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
+    .line 406
     :goto_7
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     return p0
 
@@ -3017,7 +3157,7 @@
 
     move-object p2, v5
 
-    .line 394
+    .line 396
     :goto_8
     :try_start_9
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3034,13 +3174,13 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
     if-eqz v5, :cond_16
 
-    .line 398
+    .line 400
     :try_start_a
     invoke-virtual {v5}, Ljava/util/zip/ZipFile;->close()V
     :try_end_a
@@ -3051,7 +3191,7 @@
     :catch_7
     move-exception p0
 
-    .line 401
+    .line 403
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3064,12 +3204,12 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
+    .line 406
     :cond_16
     :goto_9
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
     return v2
 
@@ -3082,7 +3222,7 @@
     :goto_b
     if-eqz v6, :cond_17
 
-    .line 398
+    .line 400
     :try_start_b
     invoke-virtual {v6}, Ljava/util/zip/ZipFile;->close()V
     :try_end_b
@@ -3093,7 +3233,7 @@
     :catch_8
     move-exception p1
 
-    .line 401
+    .line 403
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3106,17 +3246,17 @@
 
     move-result-object p1
 
-    invoke-static {v3, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
+    .line 406
     :cond_17
     :goto_c
-    invoke-static {p2}, Lcom/oppo/camera/sticker/d/b;->b(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/oppo/camera/sticker/b/b;->c(Ljava/lang/String;)Z
 
-    .line 405
+    .line 407
     throw p0
 
-    .line 236
+    .line 238
     :cond_18
     :goto_d
     new-instance p1, Ljava/lang/StringBuilder;
@@ -3133,7 +3273,7 @@
 
     move-result-object p0
 
-    invoke-static {v3, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return v2
 .end method
@@ -3147,7 +3287,7 @@
 
     goto :goto_1
 
-    .line 815
+    .line 829
     :cond_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getMaterialType()I
 
@@ -3161,13 +3301,13 @@
 
     return p0
 
-    .line 819
+    .line 833
     :cond_1
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFilePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 823
+    .line 837
     :try_start_0
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFilePath()Ljava/lang/String;
 
@@ -3179,12 +3319,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 824
+    .line 838
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItemWrapper;->getFileContentUri()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 825
+    .line 839
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -3195,7 +3335,7 @@
 
     goto :goto_0
 
-    .line 827
+    .line 841
     :cond_2
     new-instance v1, Ljava/io/File;
 
@@ -3210,15 +3350,15 @@
 
     return p0
 
-    .line 834
+    .line 848
     :cond_3
-    invoke-static {v0}, Lcom/oppo/camera/sticker/d/b;->a(Ljava/io/File;)Z
+    invoke-static {v0}, Lcom/oppo/camera/sticker/b/b;->a(Ljava/io/File;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 835
+    .line 849
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/a/b;->b(Landroid/content/Context;Lcom/oppo/camera/sticker/data/StickerItemWrapper;)Z
 
     move-result p0
@@ -3244,7 +3384,7 @@
     :catch_0
     move-exception p0
 
-    .line 844
+    .line 858
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3261,7 +3401,7 @@
 
     const-string p1, "StickerInstaller"
 
-    invoke-static {p1, p0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p0, -0x1
 

@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;
-.super Landroidx/core/g/a;
+.super Landroidx/core/f/a;
 .source "BottomSheetDialog.java"
 
 
@@ -25,18 +25,18 @@
     .line 228
     iput-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
 
-    invoke-direct {p0}, Landroidx/core/g/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/f/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
     .locals 0
 
     .line 232
-    invoke-super {p0, p1, p2}, Landroidx/core/g/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/f/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
 
     .line 233
     iget-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialog$2;->this$0:Lcom/google/android/material/bottomsheet/BottomSheetDialog;
@@ -48,12 +48,12 @@
     const/high16 p1, 0x100000
 
     .line 234
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->a(I)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->a(I)V
 
     const/4 p1, 0x1
 
     .line 235
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->k(Z)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->k(Z)V
 
     goto :goto_0
 
@@ -61,7 +61,7 @@
     const/4 p1, 0x0
 
     .line 237
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->k(Z)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->k(Z)V
 
     :goto_0
     return-void
@@ -92,7 +92,7 @@
 
     .line 247
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Landroidx/core/g/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    invoke-super {p0, p1, p2, p3}, Landroidx/core/f/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p1
 

@@ -1,13 +1,14 @@
 .class public abstract Lcom/squareup/wire/ProtoAdapter;
 .super Ljava/lang/Object;
-.source "ProtoAdapter.kt"
+.source "ProtoAdapter.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/squareup/wire/ProtoAdapter$EnumConstantNotFoundException;,
-        Lcom/squareup/wire/ProtoAdapter$Companion;
+        Lcom/squareup/wire/ProtoAdapter$MapEntryProtoAdapter;,
+        Lcom/squareup/wire/ProtoAdapter$MapProtoAdapter;,
+        Lcom/squareup/wire/ProtoAdapter$EnumConstantNotFoundException;
     }
 .end annotation
 
@@ -42,8 +43,6 @@
     .end annotation
 .end field
 
-.field public static final Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
-
 .field public static final DOUBLE:Lcom/squareup/wire/ProtoAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -73,6 +72,12 @@
         }
     .end annotation
 .end field
+
+.field private static final FIXED_32_SIZE:I = 0x4
+
+.field private static final FIXED_64_SIZE:I = 0x8
+
+.field private static final FIXED_BOOL_SIZE:I = 0x1
 
 .field public static final FLOAT:Lcom/squareup/wire/ProtoAdapter;
     .annotation system Ldalvik/annotation/Signature;
@@ -178,31 +183,31 @@
 # instance fields
 .field private final fieldEncoding:Lcom/squareup/wire/FieldEncoding;
 
-.field private packedAdapter:Lcom/squareup/wire/ProtoAdapter;
+.field final javaType:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/squareup/wire/ProtoAdapter<",
-            "Ljava/util/List<",
-            "TE;>;>;"
-        }
-    .end annotation
-.end field
-
-.field private repeatedAdapter:Lcom/squareup/wire/ProtoAdapter;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/squareup/wire/ProtoAdapter<",
-            "Ljava/util/List<",
-            "TE;>;>;"
-        }
-    .end annotation
-.end field
-
-.field private final type:Lc/f/a;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lc/f/a<",
+            "Ljava/lang/Class<",
             "*>;"
+        }
+    .end annotation
+.end field
+
+.field packedAdapter:Lcom/squareup/wire/ProtoAdapter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/squareup/wire/ProtoAdapter<",
+            "Ljava/util/List<",
+            "TE;>;>;"
+        }
+    .end annotation
+.end field
+
+.field repeatedAdapter:Lcom/squareup/wire/ProtoAdapter;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/squareup/wire/ProtoAdapter<",
+            "Ljava/util/List<",
+            "TE;>;>;"
         }
     .end annotation
 .end field
@@ -210,121 +215,166 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lcom/squareup/wire/ProtoAdapter$Companion;
+    .line 203
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$1;
 
-    const/4 v1, 0x0
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
 
-    invoke-direct {v0, v1}, Lcom/squareup/wire/ProtoAdapter$Companion;-><init>(Lc/d/b/f;)V
+    const-class v2, Ljava/lang/Boolean;
 
-    sput-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
-
-    .line 171
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_BOOL:Lcom/squareup/wire/ProtoAdapter;
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$1;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->BOOL:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 172
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_INT32:Lcom/squareup/wire/ProtoAdapter;
+    .line 220
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$2;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Integer;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$2;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->INT32:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 173
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_UINT32:Lcom/squareup/wire/ProtoAdapter;
+    .line 234
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$3;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Integer;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$3;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->UINT32:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 174
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_SINT32:Lcom/squareup/wire/ProtoAdapter;
+    .line 248
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$4;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Integer;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$4;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->SINT32:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 175
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_FIXED32:Lcom/squareup/wire/ProtoAdapter;
+    .line 262
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$5;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->FIXED32:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Integer;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$5;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->FIXED32:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 176
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_SFIXED32:Lcom/squareup/wire/ProtoAdapter;
+    .line 276
+    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->FIXED32:Lcom/squareup/wire/ProtoAdapter;
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->SFIXED32:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 177
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_INT64:Lcom/squareup/wire/ProtoAdapter;
+    .line 277
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$6;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Long;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$6;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->INT64:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 178
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_UINT64:Lcom/squareup/wire/ProtoAdapter;
+    .line 295
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$7;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Long;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$7;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->UINT64:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 179
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_SINT64:Lcom/squareup/wire/ProtoAdapter;
+    .line 309
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$8;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->VARINT:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Long;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$8;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->SINT64:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 180
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_FIXED64:Lcom/squareup/wire/ProtoAdapter;
+    .line 323
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$9;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->FIXED64:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Long;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$9;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->FIXED64:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 181
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_SFIXED64:Lcom/squareup/wire/ProtoAdapter;
+    .line 337
+    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->FIXED64:Lcom/squareup/wire/ProtoAdapter;
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->SFIXED64:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 182
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_FLOAT:Lcom/squareup/wire/ProtoAdapter;
+    .line 338
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$10;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->FIXED32:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Float;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$10;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->FLOAT:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 183
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_DOUBLE:Lcom/squareup/wire/ProtoAdapter;
+    .line 352
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$11;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->FIXED64:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/lang/Double;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$11;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->DOUBLE:Lcom/squareup/wire/ProtoAdapter;
 
-    .line 184
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_BYTES:Lcom/squareup/wire/ProtoAdapter;
+    .line 366
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$12;
 
-    sput-object v0, Lcom/squareup/wire/ProtoAdapter;->BYTES:Lcom/squareup/wire/ProtoAdapter;
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
 
-    .line 185
-    sget-object v0, Lcom/squareup/wire/ProtoAdapterKt;->COMMON_STRING:Lcom/squareup/wire/ProtoAdapter;
+    const-class v2, Ljava/lang/String;
+
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$12;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
     sput-object v0, Lcom/squareup/wire/ProtoAdapter;->STRING:Lcom/squareup/wire/ProtoAdapter;
 
-    return-void
-.end method
+    .line 380
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$13;
 
-.method public constructor <init>(Lcom/squareup/wire/FieldEncoding;Lc/f/a;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/squareup/wire/FieldEncoding;",
-            "Lc/f/a<",
-            "*>;)V"
-        }
-    .end annotation
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
 
-    const-string v0, "fieldEncoding"
+    const-class v2, Lokio/ByteString;
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$13;-><init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
 
-    .line 30
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
-
-    iput-object p2, p0, Lcom/squareup/wire/ProtoAdapter;->type:Lc/f/a;
+    sput-object v0, Lcom/squareup/wire/ProtoAdapter;->BYTES:Lcom/squareup/wire/ProtoAdapter;
 
     return-void
 .end method
 
 .method public constructor <init>(Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -334,47 +384,107 @@
         }
     .end annotation
 
-    const-string v0, "fieldEncoding"
+    .line 54
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 55
+    iput-object p1, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
 
-    const-string v0, "type"
-
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 37
-    invoke-static {p2}, Lc/d/a;->a(Ljava/lang/Class;)Lc/f/a;
-
-    move-result-object p2
-
-    invoke-direct {p0, p1, p2}, Lcom/squareup/wire/ProtoAdapter;-><init>(Lcom/squareup/wire/FieldEncoding;Lc/f/a;)V
+    .line 56
+    iput-object p2, p0, Lcom/squareup/wire/ProtoAdapter;->javaType:Ljava/lang/Class;
 
     return-void
 .end method
 
-.method public static final get(Lcom/squareup/wire/Message;)Lcom/squareup/wire/ProtoAdapter;
-    .locals 1
+.method private createPacked()Lcom/squareup/wire/ProtoAdapter;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/squareup/wire/ProtoAdapter<",
+            "Ljava/util/List<",
+            "TE;>;>;"
+        }
+    .end annotation
+
+    .line 423
+    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
+
+    if-eq v0, v1, :cond_0
+
+    .line 426
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$14;
+
+    sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/util/List;
+
+    invoke-direct {v0, p0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$14;-><init>(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
+
+    return-object v0
+
+    .line 424
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Unable to pack a length-delimited type."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method private createRepeated()Lcom/squareup/wire/ProtoAdapter;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/squareup/wire/ProtoAdapter<",
+            "Ljava/util/List<",
+            "TE;>;>;"
+        }
+    .end annotation
+
+    .line 464
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$15;
+
+    iget-object v1, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
+
+    const-class v2, Ljava/util/List;
+
+    invoke-direct {v0, p0, v1, v2}, Lcom/squareup/wire/ProtoAdapter$15;-><init>(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/FieldEncoding;Ljava/lang/Class;)V
+
+    return-object v0
+.end method
+
+.method public static get(Lcom/squareup/wire/Message;)Lcom/squareup/wire/ProtoAdapter;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<M:",
-            "Lcom/squareup/wire/Message<",
-            "**>;>(TM;)",
+            "Lcom/squareup/wire/Message;",
+            ">(TM;)",
             "Lcom/squareup/wire/ProtoAdapter<",
             "TM;>;"
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
+    .line 84
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter$Companion;->get(Lcom/squareup/wire/Message;)Lcom/squareup/wire/ProtoAdapter;
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/squareup/wire/ProtoAdapter;->get(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final get(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
-    .locals 1
+.method public static get(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<M:",
@@ -387,17 +497,68 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
+    :try_start_0
+    const-string v0, "ADAPTER"
 
-    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter$Companion;->get(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
+    .line 90
+    invoke-virtual {p0, v0}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/squareup/wire/ProtoAdapter;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    .line 92
+    :goto_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "failed to access "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "#ADAPTER"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public static final get(Ljava/lang/String;)Lcom/squareup/wire/ProtoAdapter;
-    .locals 1
+.method static get(Ljava/lang/String;)Lcom/squareup/wire/ProtoAdapter;
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -408,16 +569,88 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
+    const/16 v0, 0x23
 
-    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter$Companion;->get(Ljava/lang/String;)Lcom/squareup/wire/ProtoAdapter;
+    .line 99
+    :try_start_0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    .line 100
+    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    add-int/lit8 v0, v0, 0x1
+
+    .line 101
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 102
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/squareup/wire/ProtoAdapter;
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    .line 104
+    :goto_0
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "failed to access "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-direct {v1, p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-.method public static final newEnumAdapter(Ljava/lang/Class;)Lcom/squareup/wire/EnumAdapter;
+.method public static newEnumAdapter(Ljava/lang/Class;)Lcom/squareup/wire/RuntimeEnumAdapter;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -426,21 +659,20 @@
             ">(",
             "Ljava/lang/Class<",
             "TE;>;)",
-            "Lcom/squareup/wire/EnumAdapter<",
+            "Lcom/squareup/wire/RuntimeEnumAdapter<",
             "TE;>;"
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
+    .line 67
+    new-instance v0, Lcom/squareup/wire/RuntimeEnumAdapter;
 
-    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter$Companion;->newEnumAdapter(Ljava/lang/Class;)Lcom/squareup/wire/EnumAdapter;
+    invoke-direct {v0, p0}, Lcom/squareup/wire/RuntimeEnumAdapter;-><init>(Ljava/lang/Class;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static final newMapAdapter(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/ProtoAdapter;)Lcom/squareup/wire/ProtoAdapter;
+.method public static newMapAdapter(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/ProtoAdapter;)Lcom/squareup/wire/ProtoAdapter;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -459,17 +691,16 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
+    .line 79
+    new-instance v0, Lcom/squareup/wire/ProtoAdapter$MapProtoAdapter;
 
-    invoke-virtual {v0, p0, p1}, Lcom/squareup/wire/ProtoAdapter$Companion;->newMapAdapter(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/ProtoAdapter;)Lcom/squareup/wire/ProtoAdapter;
+    invoke-direct {v0, p0, p1}, Lcom/squareup/wire/ProtoAdapter$MapProtoAdapter;-><init>(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/ProtoAdapter;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static final newMessageAdapter(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
-    .locals 1
+.method public static newMessageAdapter(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<M:",
@@ -484,9 +715,8 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/ProtoAdapter;->Companion:Lcom/squareup/wire/ProtoAdapter$Companion;
-
-    invoke-virtual {v0, p0}, Lcom/squareup/wire/ProtoAdapter$Companion;->newMessageAdapter(Ljava/lang/Class;)Lcom/squareup/wire/ProtoAdapter;
+    .line 62
+    invoke-static {p0}, Lcom/squareup/wire/RuntimeMessageAdapter;->create(Ljava/lang/Class;)Lcom/squareup/wire/RuntimeMessageAdapter;
 
     move-result-object p0
 
@@ -496,7 +726,7 @@
 
 # virtual methods
 .method public final asPacked()Lcom/squareup/wire/ProtoAdapter;
-    .locals 3
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -506,75 +736,27 @@
         }
     .end annotation
 
-    .line 215
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getPackedAdapter$wire_runtime()Lcom/squareup/wire/ProtoAdapter;
-
-    move-result-object v0
+    .line 406
+    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->packedAdapter:Lcom/squareup/wire/ProtoAdapter;
 
     if-eqz v0, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 222
+    .line 407
     :cond_0
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getFieldEncoding$wire_runtime()Lcom/squareup/wire/FieldEncoding;
+    invoke-direct {p0}, Lcom/squareup/wire/ProtoAdapter;->createPacked()Lcom/squareup/wire/ProtoAdapter;
 
     move-result-object v0
 
-    sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
+    iput-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->packedAdapter:Lcom/squareup/wire/ProtoAdapter;
 
     :goto_0
-    if-eqz v0, :cond_2
-
-    .line 226
-    new-instance v0, Lcom/squareup/wire/ProtoAdapterKt$commonCreatePacked$2;
-
-    sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
-
-    const-class v2, Ljava/util/List;
-
-    invoke-static {v2}, Lc/d/b/m;->a(Ljava/lang/Class;)Lc/f/a;
-
-    move-result-object v2
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/squareup/wire/ProtoAdapterKt$commonCreatePacked$2;-><init>(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/FieldEncoding;Lc/f/a;)V
-
-    check-cast v0, Lcom/squareup/wire/ProtoAdapter;
-
-    .line 227
-    invoke-virtual {p0, v0}, Lcom/squareup/wire/ProtoAdapter;->setPackedAdapter$wire_runtime(Lcom/squareup/wire/ProtoAdapter;)V
-
-    :goto_1
     return-object v0
-
-    .line 222
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unable to pack a length-delimited type."
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    check-cast v0, Ljava/lang/Throwable;
-
-    throw v0
 .end method
 
 .method public final asRepeated()Lcom/squareup/wire/ProtoAdapter;
-    .locals 3
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -584,35 +766,20 @@
         }
     .end annotation
 
-    .line 229
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getRepeatedAdapter$wire_runtime()Lcom/squareup/wire/ProtoAdapter;
-
-    move-result-object v0
+    .line 418
+    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->repeatedAdapter:Lcom/squareup/wire/ProtoAdapter;
 
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 237
+    .line 419
     :cond_0
-    new-instance v0, Lcom/squareup/wire/ProtoAdapterKt$commonCreateRepeated$1;
+    invoke-direct {p0}, Lcom/squareup/wire/ProtoAdapter;->createRepeated()Lcom/squareup/wire/ProtoAdapter;
 
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getFieldEncoding$wire_runtime()Lcom/squareup/wire/FieldEncoding;
+    move-result-object v0
 
-    move-result-object v1
-
-    const-class v2, Ljava/util/List;
-
-    invoke-static {v2}, Lc/d/b/m;->a(Ljava/lang/Class;)Lc/f/a;
-
-    move-result-object v2
-
-    invoke-direct {v0, p0, p0, v1, v2}, Lcom/squareup/wire/ProtoAdapterKt$commonCreateRepeated$1;-><init>(Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/ProtoAdapter;Lcom/squareup/wire/FieldEncoding;Lc/f/a;)V
-
-    check-cast v0, Lcom/squareup/wire/ProtoAdapter;
-
-    .line 238
-    invoke-virtual {p0, v0}, Lcom/squareup/wire/ProtoAdapter;->setRepeatedAdapter$wire_runtime(Lcom/squareup/wire/ProtoAdapter;)V
+    iput-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->repeatedAdapter:Lcom/squareup/wire/ProtoAdapter;
 
     :goto_0
     return-object v0
@@ -650,11 +817,12 @@
         }
     .end annotation
 
-    const-string v0, "stream"
+    const-string v0, "stream == null"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 188
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 90
+    .line 189
     invoke-static {p1}, Lokio/Okio;->source(Ljava/io/InputStream;)Lokio/Source;
 
     move-result-object p1
@@ -686,11 +854,12 @@
         }
     .end annotation
 
-    const-string v0, "source"
+    const-string v0, "source == null"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 194
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 209
+    .line 195
     new-instance v0, Lcom/squareup/wire/ProtoReader;
 
     invoke-direct {v0, p1}, Lcom/squareup/wire/ProtoReader;-><init>(Lokio/BufferedSource;)V
@@ -718,11 +887,12 @@
         }
     .end annotation
 
-    const-string v0, "bytes"
+    const-string v0, "bytes == null"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 182
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 208
+    .line 183
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
@@ -730,8 +900,6 @@
     invoke-virtual {v0, p1}, Lokio/Buffer;->write(Lokio/ByteString;)Lokio/Buffer;
 
     move-result-object p1
-
-    check-cast p1, Lokio/BufferedSource;
 
     invoke-virtual {p0, p1}, Lcom/squareup/wire/ProtoAdapter;->decode(Lokio/BufferedSource;)Ljava/lang/Object;
 
@@ -754,11 +922,12 @@
         }
     .end annotation
 
-    const-string v0, "bytes"
+    const-string v0, "bytes == null"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 176
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 207
+    .line 177
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
@@ -766,8 +935,6 @@
     invoke-virtual {v0, p1}, Lokio/Buffer;->write([B)Lokio/Buffer;
 
     move-result-object p1
-
-    check-cast p1, Lokio/BufferedSource;
 
     invoke-virtual {p0, p1}, Lcom/squareup/wire/ProtoAdapter;->decode(Lokio/BufferedSource;)Ljava/lang/Object;
 
@@ -808,11 +975,17 @@
         }
     .end annotation
 
-    const-string v0, "stream"
+    const-string v0, "value == null"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 164
+    invoke-static {p2, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 66
+    const-string v0, "stream == null"
+
+    .line 165
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 166
     invoke-static {p1}, Lokio/Okio;->sink(Ljava/io/OutputStream;)Lokio/Sink;
 
     move-result-object p1
@@ -821,10 +994,10 @@
 
     move-result-object p1
 
-    .line 67
+    .line 167
     invoke-virtual {p0, p1, p2}, Lcom/squareup/wire/ProtoAdapter;->encode(Lokio/BufferedSink;Ljava/lang/Object;)V
 
-    .line 68
+    .line 168
     invoke-interface {p1}, Lokio/BufferedSink;->emit()Lokio/BufferedSink;
 
     return-void
@@ -846,11 +1019,17 @@
         }
     .end annotation
 
-    const-string v0, "sink"
+    const-string v0, "value == null"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    .line 145
+    invoke-static {p2, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 202
+    const-string v0, "sink == null"
+
+    .line 146
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 147
     new-instance v0, Lcom/squareup/wire/ProtoWriter;
 
     invoke-direct {v0, p1}, Lcom/squareup/wire/ProtoWriter;-><init>(Lokio/BufferedSink;)V
@@ -861,31 +1040,45 @@
 .end method
 
 .method public final encode(Ljava/lang/Object;)[B
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)[B"
         }
     .end annotation
 
-    .line 204
+    const-string v0, "value == null"
+
+    .line 152
+    invoke-static {p1, v0}, Lcom/squareup/wire/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 153
     new-instance v0, Lokio/Buffer;
 
     invoke-direct {v0}, Lokio/Buffer;-><init>()V
 
-    .line 205
-    move-object v1, v0
+    .line 155
+    :try_start_0
+    invoke-virtual {p0, v0, p1}, Lcom/squareup/wire/ProtoAdapter;->encode(Lokio/BufferedSink;Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    check-cast v1, Lokio/BufferedSink;
-
-    invoke-virtual {p0, v1, p1}, Lcom/squareup/wire/ProtoAdapter;->encode(Lokio/BufferedSink;Ljava/lang/Object;)V
-
-    .line 206
+    .line 159
     invoke-virtual {v0}, Lokio/Buffer;->readByteArray()[B
 
     move-result-object p1
 
     return-object p1
+
+    :catch_0
+    move-exception p1
+
+    .line 157
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
 .end method
 
 .method public encodeWithTag(Lcom/squareup/wire/ProtoWriter;ILjava/lang/Object;)V
@@ -904,43 +1097,29 @@
         }
     .end annotation
 
-    const-string v0, "writer"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    if-nez p3, :cond_0
-
-    goto :goto_0
-
-    .line 196
-    :cond_0
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getFieldEncoding$wire_runtime()Lcom/squareup/wire/FieldEncoding;
-
-    move-result-object v0
+    .line 136
+    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
 
     invoke-virtual {p1, p2, v0}, Lcom/squareup/wire/ProtoWriter;->writeTag(ILcom/squareup/wire/FieldEncoding;)V
 
-    .line 197
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getFieldEncoding$wire_runtime()Lcom/squareup/wire/FieldEncoding;
-
-    move-result-object p2
+    .line 137
+    iget-object p2, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
 
     sget-object v0, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
 
-    if-ne p2, v0, :cond_1
+    if-ne p2, v0, :cond_0
 
-    .line 198
+    .line 138
     invoke-virtual {p0, p3}, Lcom/squareup/wire/ProtoAdapter;->encodedSize(Ljava/lang/Object;)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Lcom/squareup/wire/ProtoWriter;->writeVarint32(I)V
 
-    .line 200
-    :cond_1
+    .line 140
+    :cond_0
     invoke-virtual {p0, p1, p3}, Lcom/squareup/wire/ProtoAdapter;->encode(Lcom/squareup/wire/ProtoWriter;Ljava/lang/Object;)V
 
-    :goto_0
     return-void
 .end method
 
@@ -960,149 +1139,47 @@
         }
     .end annotation
 
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    .line 190
-    :cond_0
+    .line 124
     invoke-virtual {p0, p2}, Lcom/squareup/wire/ProtoAdapter;->encodedSize(Ljava/lang/Object;)I
 
     move-result p2
 
-    .line 191
-    invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->getFieldEncoding$wire_runtime()Lcom/squareup/wire/FieldEncoding;
-
-    move-result-object v0
+    .line 125
+    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
 
     sget-object v1, Lcom/squareup/wire/FieldEncoding;->LENGTH_DELIMITED:Lcom/squareup/wire/FieldEncoding;
 
-    if-ne v0, v1, :cond_1
+    if-ne v0, v1, :cond_0
 
-    .line 192
-    sget-object v0, Lcom/squareup/wire/ProtoWriter;->Companion:Lcom/squareup/wire/ProtoWriter$Companion;
-
-    invoke-virtual {v0, p2}, Lcom/squareup/wire/ProtoWriter$Companion;->varint32Size$wire_runtime(I)I
+    .line 126
+    invoke-static {p2}, Lcom/squareup/wire/ProtoWriter;->varint32Size(I)I
 
     move-result v0
 
     add-int/2addr p2, v0
 
-    .line 194
-    :cond_1
-    sget-object v0, Lcom/squareup/wire/ProtoWriter;->Companion:Lcom/squareup/wire/ProtoWriter$Companion;
-
-    invoke-virtual {v0, p1}, Lcom/squareup/wire/ProtoWriter$Companion;->tagSize$wire_runtime(I)I
+    .line 128
+    :cond_0
+    invoke-static {p1}, Lcom/squareup/wire/ProtoWriter;->tagSize(I)I
 
     move-result p1
 
-    add-int/2addr p1, p2
+    add-int/2addr p2, p1
 
-    :goto_0
-    return p1
+    return p2
 .end method
 
-.method public final getFieldEncoding$wire_runtime()Lcom/squareup/wire/FieldEncoding;
-    .locals 1
-
-    .line 31
-    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->fieldEncoding:Lcom/squareup/wire/FieldEncoding;
-
-    return-object v0
-.end method
-
-.method public final getPackedAdapter$wire_runtime()Lcom/squareup/wire/ProtoAdapter;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/squareup/wire/ProtoAdapter<",
-            "Ljava/util/List<",
-            "TE;>;>;"
-        }
-    .end annotation
-
-    .line 34
-    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->packedAdapter:Lcom/squareup/wire/ProtoAdapter;
-
-    return-object v0
-.end method
-
-.method public final getRepeatedAdapter$wire_runtime()Lcom/squareup/wire/ProtoAdapter;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/squareup/wire/ProtoAdapter<",
-            "Ljava/util/List<",
-            "TE;>;>;"
-        }
-    .end annotation
-
-    .line 35
-    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->repeatedAdapter:Lcom/squareup/wire/ProtoAdapter;
-
-    return-object v0
-.end method
-
-.method public final getType()Lc/f/a;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lc/f/a<",
-            "*>;"
-        }
-    .end annotation
-
-    .line 32
-    iget-object v0, p0, Lcom/squareup/wire/ProtoAdapter;->type:Lc/f/a;
-
-    return-object v0
-.end method
-
-.method public abstract redact(Ljava/lang/Object;)Ljava/lang/Object;
+.method public redact(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;)TE;"
         }
     .end annotation
-.end method
 
-.method public final setPackedAdapter$wire_runtime(Lcom/squareup/wire/ProtoAdapter;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/squareup/wire/ProtoAdapter<",
-            "Ljava/util/List<",
-            "TE;>;>;)V"
-        }
-    .end annotation
+    const/4 p1, 0x0
 
-    .line 34
-    iput-object p1, p0, Lcom/squareup/wire/ProtoAdapter;->packedAdapter:Lcom/squareup/wire/ProtoAdapter;
-
-    return-void
-.end method
-
-.method public final setRepeatedAdapter$wire_runtime(Lcom/squareup/wire/ProtoAdapter;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/squareup/wire/ProtoAdapter<",
-            "Ljava/util/List<",
-            "TE;>;>;)V"
-        }
-    .end annotation
-
-    .line 35
-    iput-object p1, p0, Lcom/squareup/wire/ProtoAdapter;->repeatedAdapter:Lcom/squareup/wire/ProtoAdapter;
-
-    return-void
+    return-object p1
 .end method
 
 .method public toString(Ljava/lang/Object;)Ljava/lang/String;
@@ -1114,15 +1191,15 @@
         }
     .end annotation
 
-    .line 210
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    .line 200
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final withLabel$wire_runtime(Lcom/squareup/wire/WireField$Label;)Lcom/squareup/wire/ProtoAdapter;
+.method withLabel(Lcom/squareup/wire/WireField$Label;)Lcom/squareup/wire/ProtoAdapter;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1134,40 +1211,36 @@
         }
     .end annotation
 
-    const-string v0, "label"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 211
+    .line 396
     invoke-virtual {p1}, Lcom/squareup/wire/WireField$Label;->isRepeated()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 212
+    .line 397
     invoke-virtual {p1}, Lcom/squareup/wire/WireField$Label;->isPacked()Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
+    .line 398
     invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->asPacked()Lcom/squareup/wire/ProtoAdapter;
 
     move-result-object p1
 
     goto :goto_0
 
+    .line 399
     :cond_0
     invoke-virtual {p0}, Lcom/squareup/wire/ProtoAdapter;->asRepeated()Lcom/squareup/wire/ProtoAdapter;
 
     move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
-    move-object p1, p0
-
     :goto_0
     return-object p1
+
+    :cond_1
+    return-object p0
 .end method

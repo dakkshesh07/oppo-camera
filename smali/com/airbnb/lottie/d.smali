@@ -22,7 +22,7 @@
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;>;"
         }
     .end annotation
@@ -44,7 +44,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/airbnb/lottie/c/c;",
+            "Lcom/airbnb/lottie/model/b;",
             ">;"
         }
     .end annotation
@@ -54,27 +54,27 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/h;",
+            "Lcom/airbnb/lottie/model/g;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private g:Landroidx/b/h;
+.field private g:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/h<",
-            "Lcom/airbnb/lottie/c/d;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Lcom/airbnb/lottie/model/c;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private h:Landroidx/b/d;
+.field private h:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/d<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Landroidx/collection/LongSparseArray<",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;"
         }
     .end annotation
@@ -84,7 +84,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;"
         }
     .end annotation
@@ -107,17 +107,17 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 40
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
+    .line 40
     new-instance v0, Lcom/airbnb/lottie/n;
 
     invoke-direct {v0}, Lcom/airbnb/lottie/n;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/d;->a:Lcom/airbnb/lottie/n;
 
-    .line 43
+    .line 41
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -126,7 +126,7 @@
 
     const/4 v0, 0x0
 
-    .line 66
+    .line 64
     iput v0, p0, Lcom/airbnb/lottie/d;->o:I
 
     return-void
@@ -134,25 +134,29 @@
 
 
 # virtual methods
-.method public a(J)Lcom/airbnb/lottie/c/c/d;
+.method public a(J)Lcom/airbnb/lottie/model/layer/Layer;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 133
-    iget-object v0, p0, Lcom/airbnb/lottie/d;->h:Landroidx/b/d;
+    .line 131
+    iget-object v0, p0, Lcom/airbnb/lottie/d;->h:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/b/d;->a(J)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/LongSparseArray;->get(J)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/airbnb/lottie/c/c/d;
+    check-cast p1, Lcom/airbnb/lottie/model/layer/Layer;
 
     return-object p1
 .end method
 
 .method public a(I)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 100
+    .line 98
     iget v0, p0, Lcom/airbnb/lottie/d;->o:I
 
     add-int/2addr v0, p1
@@ -162,72 +166,75 @@
     return-void
 .end method
 
-.method public a(Landroid/graphics/Rect;FFFLjava/util/List;Landroidx/b/d;Ljava/util/Map;Ljava/util/Map;Landroidx/b/h;Ljava/util/Map;Ljava/util/List;)V
+.method public a(Landroid/graphics/Rect;FFFLjava/util/List;Landroidx/collection/LongSparseArray;Ljava/util/Map;Ljava/util/Map;Landroidx/collection/SparseArrayCompat;Ljava/util/Map;Ljava/util/List;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/graphics/Rect;",
             "FFF",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;",
-            "Landroidx/b/d<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Landroidx/collection/LongSparseArray<",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;>;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Lcom/airbnb/lottie/g;",
             ">;",
-            "Landroidx/b/h<",
-            "Lcom/airbnb/lottie/c/d;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Lcom/airbnb/lottie/model/c;",
             ">;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/airbnb/lottie/c/c;",
+            "Lcom/airbnb/lottie/model/b;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/h;",
+            "Lcom/airbnb/lottie/model/g;",
             ">;)V"
         }
     .end annotation
 
-    .line 74
+    .line 72
     iput-object p1, p0, Lcom/airbnb/lottie/d;->j:Landroid/graphics/Rect;
 
-    .line 75
+    .line 73
     iput p2, p0, Lcom/airbnb/lottie/d;->k:F
 
-    .line 76
+    .line 74
     iput p3, p0, Lcom/airbnb/lottie/d;->l:F
 
-    .line 77
+    .line 75
     iput p4, p0, Lcom/airbnb/lottie/d;->m:F
 
-    .line 78
+    .line 76
     iput-object p5, p0, Lcom/airbnb/lottie/d;->i:Ljava/util/List;
 
-    .line 79
-    iput-object p6, p0, Lcom/airbnb/lottie/d;->h:Landroidx/b/d;
+    .line 77
+    iput-object p6, p0, Lcom/airbnb/lottie/d;->h:Landroidx/collection/LongSparseArray;
 
-    .line 80
+    .line 78
     iput-object p7, p0, Lcom/airbnb/lottie/d;->c:Ljava/util/Map;
 
-    .line 81
+    .line 79
     iput-object p8, p0, Lcom/airbnb/lottie/d;->d:Ljava/util/Map;
 
-    .line 82
-    iput-object p9, p0, Lcom/airbnb/lottie/d;->g:Landroidx/b/h;
+    .line 80
+    iput-object p9, p0, Lcom/airbnb/lottie/d;->g:Landroidx/collection/SparseArrayCompat;
 
-    .line 83
+    .line 81
     iput-object p10, p0, Lcom/airbnb/lottie/d;->e:Ljava/util/Map;
 
-    .line 84
+    .line 82
     iput-object p11, p0, Lcom/airbnb/lottie/d;->f:Ljava/util/List;
 
     return-void
@@ -235,11 +242,13 @@
 
 .method public a(Ljava/lang/String;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 89
-    invoke-static {p1}, Lcom/airbnb/lottie/f/d;->b(Ljava/lang/String;)V
+    .line 87
+    invoke-static {p1}, Lcom/airbnb/lottie/c/d;->b(Ljava/lang/String;)V
 
-    .line 90
+    .line 88
     iget-object v0, p0, Lcom/airbnb/lottie/d;->b:Ljava/util/HashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
@@ -249,8 +258,10 @@
 
 .method public a(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 95
+    .line 93
     iput-boolean p1, p0, Lcom/airbnb/lottie/d;->n:Z
 
     return-void
@@ -258,8 +269,10 @@
 
 .method public a()Z
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 108
+    .line 106
     iget-boolean v0, p0, Lcom/airbnb/lottie/d;->n:Z
 
     return v0
@@ -267,8 +280,10 @@
 
 .method public b()I
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
-    .line 116
+    .line 114
     iget v0, p0, Lcom/airbnb/lottie/d;->o:I
 
     return v0
@@ -276,18 +291,21 @@
 
 .method public b(Ljava/lang/String;)Ljava/util/List;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;"
         }
     .end annotation
 
-    .line 165
+    .line 161
     iget-object v0, p0, Lcom/airbnb/lottie/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -302,7 +320,7 @@
 .method public b(Z)V
     .locals 1
 
-    .line 124
+    .line 122
     iget-object v0, p0, Lcom/airbnb/lottie/d;->a:Lcom/airbnb/lottie/n;
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/n;->a(Z)V
@@ -310,46 +328,41 @@
     return-void
 .end method
 
-.method public c(Ljava/lang/String;)Lcom/airbnb/lottie/c/h;
-    .locals 3
+.method public c(Ljava/lang/String;)Lcom/airbnb/lottie/model/g;
+    .locals 4
 
-    .line 182
+    .line 178
     iget-object v0, p0, Lcom/airbnb/lottie/d;->f:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const/4 v0, 0x0
+    move-result v0
 
-    .line 183
+    const/4 v1, 0x0
+
     :goto_0
-    iget-object v1, p0, Lcom/airbnb/lottie/d;->f:Ljava/util/List;
+    if-ge v1, v0, :cond_1
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    .line 180
+    iget-object v2, p0, Lcom/airbnb/lottie/d;->f:Ljava/util/List;
 
-    move-result v1
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-ge v0, v1, :cond_1
+    move-result-object v2
 
-    .line 184
-    iget-object v1, p0, Lcom/airbnb/lottie/d;->f:Ljava/util/List;
+    check-cast v2, Lcom/airbnb/lottie/model/g;
 
-    invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    .line 181
+    invoke-virtual {v2, p1}, Lcom/airbnb/lottie/model/g;->a(Ljava/lang/String;)Z
 
-    move-result-object v1
+    move-result v3
 
-    check-cast v1, Lcom/airbnb/lottie/c/h;
+    if-eqz v3, :cond_0
 
-    .line 185
-    invoke-virtual {v1, p1}, Lcom/airbnb/lottie/c/h;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-object v1
+    return-object v2
 
     :cond_0
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
@@ -362,7 +375,7 @@
 .method public c()Lcom/airbnb/lottie/n;
     .locals 1
 
-    .line 128
+    .line 126
     iget-object v0, p0, Lcom/airbnb/lottie/d;->a:Lcom/airbnb/lottie/n;
 
     return-object v0
@@ -371,7 +384,7 @@
 .method public d()Landroid/graphics/Rect;
     .locals 1
 
-    .line 137
+    .line 135
     iget-object v0, p0, Lcom/airbnb/lottie/d;->j:Landroid/graphics/Rect;
 
     return-object v0
@@ -380,7 +393,7 @@
 .method public e()F
     .locals 2
 
-    .line 141
+    .line 139
     invoke-virtual {p0}, Lcom/airbnb/lottie/d;->m()F
 
     move-result v0
@@ -403,7 +416,7 @@
 .method public f()F
     .locals 1
 
-    .line 146
+    .line 143
     iget v0, p0, Lcom/airbnb/lottie/d;->k:F
 
     return v0
@@ -412,7 +425,7 @@
 .method public g()F
     .locals 1
 
-    .line 151
+    .line 147
     iget v0, p0, Lcom/airbnb/lottie/d;->l:F
 
     return v0
@@ -421,7 +434,7 @@
 .method public h()F
     .locals 1
 
-    .line 155
+    .line 151
     iget v0, p0, Lcom/airbnb/lottie/d;->m:F
 
     return v0
@@ -433,30 +446,30 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/airbnb/lottie/c/c/d;",
+            "Lcom/airbnb/lottie/model/layer/Layer;",
             ">;"
         }
     .end annotation
 
-    .line 159
+    .line 155
     iget-object v0, p0, Lcom/airbnb/lottie/d;->i:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public j()Landroidx/b/h;
+.method public j()Landroidx/collection/SparseArrayCompat;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Landroidx/b/h<",
-            "Lcom/airbnb/lottie/c/d;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Lcom/airbnb/lottie/model/c;",
             ">;"
         }
     .end annotation
 
-    .line 169
-    iget-object v0, p0, Lcom/airbnb/lottie/d;->g:Landroidx/b/h;
+    .line 165
+    iget-object v0, p0, Lcom/airbnb/lottie/d;->g:Landroidx/collection/SparseArrayCompat;
 
     return-object v0
 .end method
@@ -468,12 +481,12 @@
             "()",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/airbnb/lottie/c/c;",
+            "Lcom/airbnb/lottie/model/b;",
             ">;"
         }
     .end annotation
 
-    .line 173
+    .line 169
     iget-object v0, p0, Lcom/airbnb/lottie/d;->e:Ljava/util/Map;
 
     return-object v0
@@ -491,7 +504,7 @@
         }
     .end annotation
 
-    .line 197
+    .line 193
     iget-object v0, p0, Lcom/airbnb/lottie/d;->d:Ljava/util/Map;
 
     return-object v0
@@ -500,7 +513,7 @@
 .method public m()F
     .locals 2
 
-    .line 201
+    .line 197
     iget v0, p0, Lcom/airbnb/lottie/d;->l:F
 
     iget v1, p0, Lcom/airbnb/lottie/d;->k:F
@@ -513,14 +526,14 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .line 206
+    .line 202
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "LottieComposition:\n"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 207
+    .line 203
     iget-object v1, p0, Lcom/airbnb/lottie/d;->i:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -538,12 +551,12 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/airbnb/lottie/c/c/d;
+    check-cast v2, Lcom/airbnb/lottie/model/layer/Layer;
 
     const-string v3, "\t"
 
-    .line 208
-    invoke-virtual {v2, v3}, Lcom/airbnb/lottie/c/c/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 204
+    invoke-virtual {v2, v3}, Lcom/airbnb/lottie/model/layer/Layer;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -551,7 +564,7 @@
 
     goto :goto_0
 
-    .line 210
+    .line 206
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

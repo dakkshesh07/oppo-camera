@@ -288,7 +288,7 @@
     return-void
 .end method
 
-.method private a(Ljava/util/List;Landroidx/recyclerview/widget/l;III)V
+.method private a(Ljava/util/List;Landroidx/recyclerview/widget/o;III)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -296,7 +296,7 @@
             "Ljava/util/List<",
             "Landroidx/recyclerview/widget/f$c;",
             ">;",
-            "Landroidx/recyclerview/widget/l;",
+            "Landroidx/recyclerview/widget/o;",
             "III)V"
         }
     .end annotation
@@ -307,7 +307,7 @@
     if-nez v0, :cond_0
 
     .line 874
-    invoke-interface {p2, p3, p4}, Landroidx/recyclerview/widget/l;->a(II)V
+    invoke-interface {p2, p3, p4}, Landroidx/recyclerview/widget/o;->a(II)V
 
     return-void
 
@@ -404,7 +404,7 @@
     .line 893
     iget v5, v5, Landroidx/recyclerview/widget/f$c;->b:I
 
-    invoke-interface {p2, v5, p3}, Landroidx/recyclerview/widget/l;->c(II)V
+    invoke-interface {p2, v5, p3}, Landroidx/recyclerview/widget/o;->c(II)V
 
     if-ne v1, v3, :cond_4
 
@@ -417,13 +417,13 @@
     move-result-object v1
 
     .line 896
-    invoke-interface {p2, p3, v0, v1}, Landroidx/recyclerview/widget/l;->a(IILjava/lang/Object;)V
+    invoke-interface {p2, p3, v0, v1}, Landroidx/recyclerview/widget/o;->a(IILjava/lang/Object;)V
 
     goto :goto_2
 
     .line 881
     :cond_3
-    invoke-interface {p2, p3, v0}, Landroidx/recyclerview/widget/l;->a(II)V
+    invoke-interface {p2, p3, v0}, Landroidx/recyclerview/widget/o;->a(II)V
 
     .line 882
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -811,7 +811,7 @@
     return-void
 .end method
 
-.method private b(Ljava/util/List;Landroidx/recyclerview/widget/l;III)V
+.method private b(Ljava/util/List;Landroidx/recyclerview/widget/o;III)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -819,7 +819,7 @@
             "Ljava/util/List<",
             "Landroidx/recyclerview/widget/f$c;",
             ">;",
-            "Landroidx/recyclerview/widget/l;",
+            "Landroidx/recyclerview/widget/o;",
             "III)V"
         }
     .end annotation
@@ -830,7 +830,7 @@
     if-nez v0, :cond_0
 
     .line 914
-    invoke-interface {p2, p3, p4}, Landroidx/recyclerview/widget/l;->b(II)V
+    invoke-interface {p2, p3, p4}, Landroidx/recyclerview/widget/o;->b(II)V
 
     return-void
 
@@ -933,7 +933,7 @@
 
     sub-int/2addr v7, v0
 
-    invoke-interface {p2, v6, v7}, Landroidx/recyclerview/widget/l;->c(II)V
+    invoke-interface {p2, v6, v7}, Landroidx/recyclerview/widget/o;->c(II)V
 
     if-ne v1, v3, :cond_4
 
@@ -950,7 +950,7 @@
     move-result-object v2
 
     .line 937
-    invoke-interface {p2, v1, v0, v2}, Landroidx/recyclerview/widget/l;->a(IILjava/lang/Object;)V
+    invoke-interface {p2, v1, v0, v2}, Landroidx/recyclerview/widget/o;->a(IILjava/lang/Object;)V
 
     goto :goto_2
 
@@ -958,7 +958,7 @@
     add-int v1, p3, p4
 
     .line 921
-    invoke-interface {p2, v1, v0}, Landroidx/recyclerview/widget/l;->b(II)V
+    invoke-interface {p2, v1, v0}, Landroidx/recyclerview/widget/o;->b(II)V
 
     .line 922
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1007,12 +1007,12 @@
 
     invoke-direct {v0, p1}, Landroidx/recyclerview/widget/b;-><init>(Landroidx/recyclerview/widget/RecyclerView$a;)V
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/f$b;->a(Landroidx/recyclerview/widget/l;)V
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/f$b;->a(Landroidx/recyclerview/widget/o;)V
 
     return-void
 .end method
 
-.method public a(Landroidx/recyclerview/widget/l;)V
+.method public a(Landroidx/recyclerview/widget/o;)V
     .locals 14
 
     .line 816
@@ -1029,7 +1029,7 @@
     :cond_0
     new-instance v0, Landroidx/recyclerview/widget/c;
 
-    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/c;-><init>(Landroidx/recyclerview/widget/l;)V
+    invoke-direct {v0, p1}, Landroidx/recyclerview/widget/c;-><init>(Landroidx/recyclerview/widget/o;)V
 
     move-object p1, v0
 
@@ -1102,7 +1102,7 @@
     move v6, v12
 
     .line 836
-    invoke-direct/range {v1 .. v6}, Landroidx/recyclerview/widget/f$b;->b(Ljava/util/List;Landroidx/recyclerview/widget/l;III)V
+    invoke-direct/range {v1 .. v6}, Landroidx/recyclerview/widget/f$b;->b(Ljava/util/List;Landroidx/recyclerview/widget/o;III)V
 
     :cond_1
     if-ge v13, v9, :cond_2
@@ -1120,7 +1120,7 @@
     move v6, v13
 
     .line 840
-    invoke-direct/range {v1 .. v6}, Landroidx/recyclerview/widget/f$b;->a(Ljava/util/List;Landroidx/recyclerview/widget/l;III)V
+    invoke-direct/range {v1 .. v6}, Landroidx/recyclerview/widget/f$b;->a(Ljava/util/List;Landroidx/recyclerview/widget/o;III)V
 
     :cond_2
     add-int/lit8 v11, v11, -0x1

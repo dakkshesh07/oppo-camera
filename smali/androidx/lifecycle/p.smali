@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/lifecycle/p$a;
@@ -64,7 +67,7 @@
     return-void
 .end method
 
-.method private a(Landroidx/lifecycle/e$a;)V
+.method private a(Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
 
     .line 114
@@ -73,43 +76,43 @@
     move-result-object v0
 
     .line 115
-    instance-of v1, v0, Landroidx/lifecycle/j;
+    instance-of v1, v0, Landroidx/lifecycle/i;
 
     if-eqz v1, :cond_0
 
     .line 116
-    check-cast v0, Landroidx/lifecycle/j;
+    check-cast v0, Landroidx/lifecycle/i;
 
-    invoke-interface {v0}, Landroidx/lifecycle/j;->a()Landroidx/lifecycle/i;
+    invoke-interface {v0}, Landroidx/lifecycle/i;->a()Landroidx/lifecycle/h;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 
     .line 120
     :cond_0
-    instance-of v1, v0, Landroidx/lifecycle/h;
+    instance-of v1, v0, Landroidx/lifecycle/g;
 
     if-eqz v1, :cond_1
 
     .line 121
-    check-cast v0, Landroidx/lifecycle/h;
+    check-cast v0, Landroidx/lifecycle/g;
 
-    invoke-interface {v0}, Landroidx/lifecycle/h;->getLifecycle()Landroidx/lifecycle/e;
+    invoke-interface {v0}, Landroidx/lifecycle/g;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object v0
 
     .line 122
-    instance-of v1, v0, Landroidx/lifecycle/i;
+    instance-of v1, v0, Landroidx/lifecycle/h;
 
     if-eqz v1, :cond_1
 
     .line 123
-    check-cast v0, Landroidx/lifecycle/i;
+    check-cast v0, Landroidx/lifecycle/h;
 
-    invoke-virtual {v0, p1}, Landroidx/lifecycle/i;->a(Landroidx/lifecycle/e$a;)V
+    invoke-virtual {v0, p1}, Landroidx/lifecycle/h;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_1
     return-void
@@ -165,9 +168,9 @@
     invoke-direct {p0, p1}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/p$a;)V
 
     .line 76
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_CREATE:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, p1}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/e$a;)V
+    invoke-direct {p0, p1}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -179,9 +182,9 @@
     invoke-super {p0}, Landroid/app/Fragment;->onDestroy()V
 
     .line 108
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_DESTROY:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/e$a;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     const/4 v0, 0x0
 
@@ -198,9 +201,9 @@
     invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
     .line 96
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_PAUSE:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/e$a;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -217,9 +220,9 @@
     invoke-direct {p0, v0}, Landroidx/lifecycle/p;->c(Landroidx/lifecycle/p$a;)V
 
     .line 90
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_RESUME:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/e$a;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -236,9 +239,9 @@
     invoke-direct {p0, v0}, Landroidx/lifecycle/p;->b(Landroidx/lifecycle/p$a;)V
 
     .line 83
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/e$a;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method
@@ -250,9 +253,9 @@
     invoke-super {p0}, Landroid/app/Fragment;->onStop()V
 
     .line 102
-    sget-object v0, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object v0, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/e$a;)V
+    invoke-direct {p0, v0}, Landroidx/lifecycle/p;->a(Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method

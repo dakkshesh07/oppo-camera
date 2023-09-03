@@ -22,7 +22,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 710
+    .line 786
     invoke-static {}, Lcom/google/protobuf/Value$KindCase;->values()[Lcom/google/protobuf/Value$KindCase;
 
     move-result-object v0

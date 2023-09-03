@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:name="vector" android:height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0707a4" android:width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0707a4" android:viewportWidth="96.0" android:viewportHeight="96.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:name="group">
+        <path android:name="path" android:pathData="M 48 23 C 41.372 23 35.009 25.636 30.322 30.322 C 25.636 35.009 23 41.372 23 48 C 23 54.628 25.636 60.991 30.322 65.678 C 35.009 70.364 41.372 73 48 73 C 54.628 73 60.991 70.364 65.678 65.678 C 70.364 60.991 73 54.628 73 48 C 73 41.372 70.364 35.009 65.678 30.322 C 60.991 25.636 54.628 23 48 23 Z" android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:strokeWidth="5.0" />
+        <path android:name="path_1" android:pathData="M 36.6 40 L 40.915 42.822 C 41.007 42.883 41.033 43.007 40.973 43.099 C 40.955 43.125 40.932 43.147 40.905 43.163 L 36 46 M 59.586 46 L 55.272 43.178 C 55.179 43.117 55.154 42.993 55.214 42.901 C 55.231 42.875 55.254 42.853 55.281 42.837 L 60.186 40" android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:strokeWidth="4.0" android:strokeLineCap="round" />
+        <path android:name="path_2" android:pathData="M 42 55 C 45.777 56.889 50.223 56.889 54 55" android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:strokeWidth="4.0" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    </group>
+</vector>

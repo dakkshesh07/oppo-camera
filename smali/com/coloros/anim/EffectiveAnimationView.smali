@@ -1,5 +1,5 @@
 .class public Lcom/coloros/anim/EffectiveAnimationView;
-.super Landroidx/appcompat/widget/n;
+.super Landroidx/appcompat/widget/AppCompatImageView;
 .source "EffectiveAnimationView.java"
 
 
@@ -38,7 +38,7 @@
 
 .field private h:Z
 
-.field private i:Lcom/coloros/anim/n;
+.field private i:Lcom/coloros/anim/RenderMode;
 
 .field private j:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
@@ -84,7 +84,7 @@
     .locals 0
 
     .line 90
-    invoke-direct {p0, p1}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;)V
 
     .line 60
     new-instance p1, Lcom/coloros/anim/EffectiveAnimationView$1;
@@ -112,9 +112,9 @@
     iput-boolean p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->h:Z
 
     .line 73
-    sget-object p1, Lcom/coloros/anim/n;->AUTOMATIC:Lcom/coloros/anim/n;
+    sget-object p1, Lcom/coloros/anim/RenderMode;->AUTOMATIC:Lcom/coloros/anim/RenderMode;
 
-    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
     .line 74
     new-instance p1, Ljava/util/HashSet;
@@ -142,7 +142,7 @@
     .locals 0
 
     .line 95
-    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 60
     new-instance p1, Lcom/coloros/anim/EffectiveAnimationView$1;
@@ -170,9 +170,9 @@
     iput-boolean p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->h:Z
 
     .line 73
-    sget-object p1, Lcom/coloros/anim/n;->AUTOMATIC:Lcom/coloros/anim/n;
+    sget-object p1, Lcom/coloros/anim/RenderMode;->AUTOMATIC:Lcom/coloros/anim/RenderMode;
 
-    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
     .line 74
     new-instance p1, Ljava/util/HashSet;
@@ -198,7 +198,7 @@
     .locals 0
 
     .line 100
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 60
     new-instance p1, Lcom/coloros/anim/EffectiveAnimationView$1;
@@ -226,9 +226,9 @@
     iput-boolean p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->h:Z
 
     .line 73
-    sget-object p1, Lcom/coloros/anim/n;->AUTOMATIC:Lcom/coloros/anim/n;
+    sget-object p1, Lcom/coloros/anim/RenderMode;->AUTOMATIC:Lcom/coloros/anim/RenderMode;
 
-    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
     .line 74
     new-instance p1, Ljava/util/HashSet;
@@ -495,7 +495,7 @@
     if-eqz v0, :cond_a
 
     .line 158
-    new-instance v0, Lcom/coloros/anim/o;
+    new-instance v0, Lcom/coloros/anim/n;
 
     sget v3, Lcom/coloros/anim/R$styleable;->EffectiveAnimationView_anim_colorFilter:I
 
@@ -504,10 +504,10 @@
 
     move-result v3
 
-    invoke-direct {v0, v3}, Lcom/coloros/anim/o;-><init>(I)V
+    invoke-direct {v0, v3}, Lcom/coloros/anim/n;-><init>(I)V
 
     .line 160
-    new-instance v3, Lcom/coloros/anim/c/f;
+    new-instance v3, Lcom/coloros/anim/model/e;
 
     const-string v4, "**"
 
@@ -515,17 +515,17 @@
 
     move-result-object v4
 
-    invoke-direct {v3, v4}, Lcom/coloros/anim/c/f;-><init>([Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Lcom/coloros/anim/model/e;-><init>([Ljava/lang/String;)V
 
     .line 161
-    new-instance v4, Lcom/coloros/anim/g/b;
+    new-instance v4, Lcom/coloros/anim/e/b;
 
-    invoke-direct {v4, v0}, Lcom/coloros/anim/g/b;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v4, v0}, Lcom/coloros/anim/e/b;-><init>(Ljava/lang/Object;)V
 
     .line 162
     sget-object v0, Lcom/coloros/anim/d;->z:Landroid/graphics/ColorFilter;
 
-    invoke-virtual {p0, v3, v0, v4}, Lcom/coloros/anim/EffectiveAnimationView;->a(Lcom/coloros/anim/c/f;Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p0, v3, v0, v4}, Lcom/coloros/anim/EffectiveAnimationView;->a(Lcom/coloros/anim/model/e;Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
 
     .line 164
     :cond_a
@@ -559,7 +559,7 @@
     if-eqz v0, :cond_c
 
     .line 168
-    invoke-static {}, Lcom/coloros/anim/n;->values()[Lcom/coloros/anim/n;
+    invoke-static {}, Lcom/coloros/anim/RenderMode;->values()[Lcom/coloros/anim/RenderMode;
 
     move-result-object v0
 
@@ -572,7 +572,7 @@
 
     aget-object v0, v0, v1
 
-    iput-object v0, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iput-object v0, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
     .line 172
     :cond_c
@@ -628,7 +628,7 @@
     .locals 7
 
     .line 832
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -641,9 +641,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iget-object v1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/n;->name()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/coloros/anim/RenderMode;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -653,15 +653,15 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->a(Ljava/lang/String;)V
 
     .line 835
     :cond_0
     sget-object v0, Lcom/coloros/anim/EffectiveAnimationView$3;->a:[I
 
-    iget-object v1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iget-object v1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/n;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/RenderMode;->ordinal()I
 
     move-result v1
 
@@ -826,16 +826,16 @@
     return-void
 .end method
 
-.method public a(Lcom/coloros/anim/c/f;Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+.method public a(Lcom/coloros/anim/model/e;Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             "TT;",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TT;>;)V"
         }
     .end annotation
@@ -843,7 +843,7 @@
     .line 715
     iget-object v0, p0, Lcom/coloros/anim/EffectiveAnimationView;->c:Lcom/coloros/anim/b;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/c/f;Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/model/e;Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
 
     return-void
 .end method
@@ -1106,13 +1106,13 @@
     if-ne v0, v1, :cond_0
 
     .line 200
-    invoke-super {p0, v1}, Landroidx/appcompat/widget/n;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, v1}, Landroidx/appcompat/widget/AppCompatImageView;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
     .line 203
     :cond_0
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/n;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :goto_0
     return-void
@@ -1122,7 +1122,7 @@
     .locals 1
 
     .line 264
-    invoke-super {p0}, Landroidx/appcompat/widget/n;->onAttachedToWindow()V
+    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageView;->onAttachedToWindow()V
 
     .line 265
     iget-boolean v0, p0, Lcom/coloros/anim/EffectiveAnimationView;->h:Z
@@ -1160,7 +1160,7 @@
 
     .line 276
     :cond_0
-    invoke-super {p0}, Landroidx/appcompat/widget/n;->onDetachedFromWindow()V
+    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageView;->onDetachedFromWindow()V
 
     return-void
 .end method
@@ -1174,7 +1174,7 @@
     if-nez v0, :cond_0
 
     .line 224
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/n;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     return-void
 
@@ -1187,7 +1187,7 @@
 
     move-result-object v0
 
-    invoke-super {p0, v0}, Landroidx/appcompat/widget/n;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+    invoke-super {p0, v0}, Landroidx/appcompat/widget/AppCompatImageView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
     .line 230
     iget-object v0, p1, Lcom/coloros/anim/EffectiveAnimationView$SavedState;->animationName:Ljava/lang/String;
@@ -1261,7 +1261,7 @@
     .locals 2
 
     .line 209
-    invoke-super {p0}, Landroidx/appcompat/widget/n;->onSaveInstanceState()Landroid/os/Parcelable;
+    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatImageView;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -1482,7 +1482,7 @@
     .locals 3
 
     .line 385
-    sget-boolean v0, Lcom/coloros/anim/f/b;->b:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -1501,7 +1501,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/coloros/anim/f/b;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/coloros/anim/d/b;->b(Ljava/lang/String;)V
 
     .line 388
     :cond_0
@@ -1629,7 +1629,7 @@
     invoke-direct {p0}, Lcom/coloros/anim/EffectiveAnimationView;->f()V
 
     .line 192
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/n;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method
@@ -1641,7 +1641,7 @@
     invoke-direct {p0}, Lcom/coloros/anim/EffectiveAnimationView;->f()V
 
     .line 186
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/n;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1653,7 +1653,7 @@
     invoke-direct {p0}, Lcom/coloros/anim/EffectiveAnimationView;->f()V
 
     .line 180
-    invoke-super {p0, p1}, Landroidx/appcompat/widget/n;->setImageResource(I)V
+    invoke-super {p0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageResource(I)V
 
     return-void
 .end method
@@ -1757,11 +1757,11 @@
     return-void
 .end method
 
-.method public setRenderMode(Lcom/coloros/anim/n;)V
+.method public setRenderMode(Lcom/coloros/anim/RenderMode;)V
     .locals 0
 
     .line 827
-    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/n;
+    iput-object p1, p0, Lcom/coloros/anim/EffectiveAnimationView;->i:Lcom/coloros/anim/RenderMode;
 
     .line 828
     invoke-direct {p0}, Lcom/coloros/anim/EffectiveAnimationView;->h()V
@@ -1833,13 +1833,13 @@
     return-void
 .end method
 
-.method public setTextDelegate(Lcom/coloros/anim/p;)V
+.method public setTextDelegate(Lcom/coloros/anim/o;)V
     .locals 1
 
     .line 692
     iget-object v0, p0, Lcom/coloros/anim/EffectiveAnimationView;->c:Lcom/coloros/anim/b;
 
-    invoke-virtual {v0, p1}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/p;)V
+    invoke-virtual {v0, p1}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/o;)V
 
     return-void
 .end method

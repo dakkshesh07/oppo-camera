@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002d0" android:key="camera_setting_menu_root_preference"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto" xmlns:coloros="http://schemas.android.com/apk/res-auto">
+    <androidx.preference.Preference android:layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c0039" android:selectable="false" />
+    <com.coui.appcompat.preference.COUIPreferenceCategory android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002a9" android:key="pref_common_function" coloros:APKTOOL_DUPLICATE_attr_0x7f0403a2="true">
+        <com.coui.appcompat.preference.COUIJumpPreference android:persistent="false" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002fc" android:selectable="true" android:key="pref_watermark_setting_key" />
+        <com.coui.appcompat.preference.COUIListPreference android:persistent="true" android:entries="@array/APKTOOL_DUPLICATE_array_0x7f0300ab" android:title="@string/APKTOOL_DUPLICATE_string_0x7f100413" android:selectable="true" android:key="pref_volume_key_function_key" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f100411" android:defaultValue="@string/APKTOOL_DUPLICATE_string_0x7f100410" android:dialogTitle="@string/APKTOOL_DUPLICATE_string_0x7f100413" android:entryValues="@array/APKTOOL_DUPLICATE_array_0x7f0300ac" />
+        <com.coui.appcompat.preference.COUIListPreference android:persistent="true" android:entries="@array/APKTOOL_DUPLICATE_array_0x7f03005e" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002bb" android:selectable="true" android:key="pref_long_process_choice_key" android:defaultValue="@string/APKTOOL_DUPLICATE_string_0x7f1002bc" android:dialogTitle="@string/APKTOOL_DUPLICATE_string_0x7f1002bb" android:entryValues="@array/APKTOOL_DUPLICATE_array_0x7f03005f" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f100170" android:key="pref_camera_fingerprint_shutter_key" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f10032c" android:key="pref_camera_sound_key" android:defaultValue="true" coloros:APKTOOL_DUPLICATE_attr_0x7f040583="@string/APKTOOL_DUPLICATE_string_0x7f100393" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f1001cf" android:key="pref_camera_recordlocation_key" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f1001ce" android:defaultValue="true" />
+        <com.coui.appcompat.preference.COUIJumpPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f1000da" android:key="pref_camera_code_key" />
+        <com.coui.appcompat.preference.COUIJumpPreference android:persistent="false" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002a6" android:selectable="true" android:key="pref_build_image_setting_key" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f1002a7" />
+        <com.coui.appcompat.preference.COUIJumpPreference android:persistent="false" android:title="@string/APKTOOL_DUPLICATE_string_0x7f10029f" android:selectable="true" android:key="pref_advance_setting_key" />
+    </com.coui.appcompat.preference.COUIPreferenceCategory>
+    <com.coui.appcompat.preference.COUIPreferenceCategory android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002d1" android:key="pref_capture_function" coloros:APKTOOL_DUPLICATE_attr_0x7f0403a2="false">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f1000db" android:key="pref_camera_countdown_effect_key" android:defaultValue="true" />
+        <com.coui.appcompat.preference.COUIJumpPreference android:persistent="false" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002a5" android:selectable="true" android:key="pref_shutter_help_key" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f100192" android:key="pref_10bits_heic_encode_key" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f100191" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f100081" android:key="pref_ai_scene_key" android:defaultValue="true" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f10011b" android:key="pref_face_rectify_key" android:defaultValue="true" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f10007d" android:key="pref_super_clear_portrait" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f10007c" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f100263" android:key="pref_raw_key" android:defaultValue="false" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f10027a" android:key="pref_qr_code_key" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f100278" android:defaultValue="true" />
+    </com.coui.appcompat.preference.COUIPreferenceCategory>
+    <com.coui.appcompat.preference.COUIPreferenceCategory android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002f6" android:key="pref_video_function" coloros:APKTOOL_DUPLICATE_attr_0x7f0403a2="false">
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002f1" android:key="pref_track_focus_key" android:summary="@string/APKTOOL_DUPLICATE_string_0x7f1002f4" android:defaultValue="true" />
+        <com.coui.appcompat.preference.COUIListPreference android:persistent="true" android:entries="@array/APKTOOL_DUPLICATE_array_0x7f030091" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002f7" android:key="pref_video_codec_key" android:defaultValue="@string/APKTOOL_DUPLICATE_string_0x7f1003c3" android:dialogTitle="@string/APKTOOL_DUPLICATE_string_0x7f1002f7" android:entryValues="@array/APKTOOL_DUPLICATE_array_0x7f030093" />
+        <com.coui.appcompat.preference.COUIJumpPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f100406" android:key="pref_video_sound_key" />
+        <com.coui.appcompat.preference.COUIListPreference android:persistent="true" android:entries="@array/APKTOOL_DUPLICATE_array_0x7f030063" android:title="@string/APKTOOL_DUPLICATE_string_0x7f100406" android:key="pref_video_sound_effect_key" android:defaultValue="@string/APKTOOL_DUPLICATE_string_0x7f1003cc" android:dialogTitle="@string/APKTOOL_DUPLICATE_string_0x7f100406" android:entryValues="@array/APKTOOL_DUPLICATE_array_0x7f030065" />
+        <com.android.ui.menu.CameraSwitchPreference android:title="@string/APKTOOL_DUPLICATE_string_0x7f1003ce" android:key="pref_video_sell_eis" android:defaultValue="true" />
+    </com.coui.appcompat.preference.COUIPreferenceCategory>
+    <com.coui.appcompat.preference.COUIPreferenceCategory android:key="pref_restore_function" coloros:APKTOOL_DUPLICATE_attr_0x7f0403a2="false">
+        <Preference android:persistent="false" android:layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c003a" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002dd" android:selectable="true" android:key="pref_restore_key" />
+    </com.coui.appcompat.preference.COUIPreferenceCategory>
+    <com.coui.appcompat.preference.COUIPreferenceCategory android:key="pref_help_and_feedback_function" coloros:APKTOOL_DUPLICATE_attr_0x7f0403a2="false">
+        <Preference android:persistent="false" android:layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c003a" android:title="@string/APKTOOL_DUPLICATE_string_0x7f1002b2" android:selectable="true" android:key="pref_help_and_feedback_key" />
+    </com.coui.appcompat.preference.COUIPreferenceCategory>
+    <Preference android:layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c0038" android:selectable="false" android:key="pref_bottom_line" />
+</androidx.preference.PreferenceScreen>

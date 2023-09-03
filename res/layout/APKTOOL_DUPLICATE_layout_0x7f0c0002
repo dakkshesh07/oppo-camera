@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coui.appcompat.widget.toolbar.COUIActionMenuItemView android:textAppearance="?APKTOOL_DUPLICATE_attr_0x7f04000f" android:textColor="?APKTOOL_DUPLICATE_attr_0x7f040010" android:gravity="center" android:layout_gravity="center" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" style="?APKTOOL_DUPLICATE_attr_0x7f04000c"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

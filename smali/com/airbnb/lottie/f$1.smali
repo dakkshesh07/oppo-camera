@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/f;)V
     .locals 0
 
-    .line 70
+    .line 66
     iput-object p1, p0, Lcom/airbnb/lottie/f$1;->a:Lcom/airbnb/lottie/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,33 +38,33 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 73
+    .line 69
     iget-object p1, p0, Lcom/airbnb/lottie/f$1;->a:Lcom/airbnb/lottie/f;
 
-    invoke-static {p1}, Lcom/airbnb/lottie/f;->a(Lcom/airbnb/lottie/f;)Lcom/airbnb/lottie/c/c/b;
+    invoke-static {p1}, Lcom/airbnb/lottie/f;->a(Lcom/airbnb/lottie/f;)Lcom/airbnb/lottie/model/layer/b;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 74
+    .line 70
     iget-object p1, p0, Lcom/airbnb/lottie/f$1;->a:Lcom/airbnb/lottie/f;
 
-    invoke-static {p1}, Lcom/airbnb/lottie/f;->a(Lcom/airbnb/lottie/f;)Lcom/airbnb/lottie/c/c/b;
+    invoke-static {p1}, Lcom/airbnb/lottie/f;->a(Lcom/airbnb/lottie/f;)Lcom/airbnb/lottie/model/layer/b;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/airbnb/lottie/f$1;->a:Lcom/airbnb/lottie/f;
 
-    invoke-static {v0}, Lcom/airbnb/lottie/f;->b(Lcom/airbnb/lottie/f;)Lcom/airbnb/lottie/f/e;
+    invoke-static {v0}, Lcom/airbnb/lottie/f;->b(Lcom/airbnb/lottie/f;)Lcom/airbnb/lottie/c/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/airbnb/lottie/f/e;->d()F
+    invoke-virtual {v0}, Lcom/airbnb/lottie/c/e;->d()F
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/airbnb/lottie/c/c/b;->a(F)V
+    invoke-virtual {p1, v0}, Lcom/airbnb/lottie/model/layer/b;->a(F)V
 
     :cond_0
     return-void

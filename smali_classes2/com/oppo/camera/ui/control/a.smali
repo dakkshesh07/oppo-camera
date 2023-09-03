@@ -13,7 +13,13 @@
 .method public abstract b()V
 .end method
 
+.method public abstract b(Z)V
+.end method
+
 .method public abstract c()V
+.end method
+
+.method public abstract c(Z)V
 .end method
 
 .method public abstract d()V
@@ -46,8 +52,11 @@
 .method public abstract m()V
 .end method
 
-.method public abstract n()Z
+.method public abstract n()V
 .end method
 
 .method public abstract o()Z
+.end method
+
+.method public abstract p()Z
 .end method

@@ -1,14 +1,11 @@
 .class Lcom/oppo/camera/ui/preview/m$1;
-.super Ljava/lang/Object;
-.source "PIAISceneUI.java"
-
-# interfaces
-.implements Lcom/oppo/camera/ui/preview/AISceneView$a;
+.super Landroid/hardware/SensorEventCallback;
+.source "GradienterAssistView.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/m;->i()V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/oppo/camera/ui/preview/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,83 +22,221 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/m;)V
     .locals 0
 
-    .line 110
+    .line 96
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/hardware/SensorEventCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method public onSensorChanged(Landroid/hardware/SensorEvent;)V
+    .locals 11
 
-    const-string v0, "PIAISceneUI"
+    .line 99
+    iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
-    const-string v1, "mAISceneTextView, aiSceneViewActionUp"
-
-    .line 113
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 115
-    sget-object v1, Lcom/oppo/camera/config/ConfigDataBase;->KEY_DEAL_CLICK_AI_SCENE_SUPPORT:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-static {v1}, Lcom/oppo/camera/config/CameraConfig;->getConfigBooleanValue(Landroid/hardware/camera2/CameraCharacteristics$Key;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "mAISceneTextView, aiSceneViewActionUp, not support deal click AI Scene"
-
-    .line 116
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    const-string v1, "mAISceneTextView, aiSceneViewActionUp, support deal click AI Scene"
-
-    .line 120
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 122
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;)V
-
-    return-void
-.end method
-
-.method public b()Z
-    .locals 1
-
-    .line 128
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;)Lcom/oppo/camera/ui/preview/a$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 129
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
-
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;)Lcom/oppo/camera/ui/preview/a$a;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/oppo/camera/ui/preview/a$a;->a()Z
+    invoke-virtual {v0}, Landroid/hardware/Sensor;->getType()I
 
     move-result v0
 
-    return v0
+    const/16 v1, 0x9
 
+    if-ne v1, v0, :cond_0
+
+    .line 100
+    iget-object v0, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+
+    invoke-virtual {v1}, [F->clone()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [F
+
+    invoke-static {v0, v1}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;[F)[F
+
+    .line 103
     :cond_0
-    const/4 v0, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return v0
+    move-result-wide v0
+
+    .line 104
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    aget v4, v2, v3
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v2
+
+    const/4 v10, 0x1
+
+    aget v5, v2, v10
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    .line 105
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v2
+
+    const/4 v6, 0x2
+
+    aget v6, v2, v6
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v7
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->c(Lcom/oppo/camera/ui/preview/m;)[I
+
+    move-result-object v8
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->d(Lcom/oppo/camera/ui/preview/m;)[I
+
+    move-result-object v9
+
+    .line 104
+    invoke-static/range {v4 .. v9}, Lcom/coloros/gradientereffects/GradienterNative;->processGravity(FFF[F[I[I)V
+
+    .line 107
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->e(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v4
+
+    invoke-static {v2, v4}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;[F)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    .line 109
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v2
+
+    aget v2, v2, v3
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v4}, Lcom/oppo/camera/ui/preview/m;->e(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v4
+
+    aget v4, v4, v3
+
+    sub-float/2addr v2, v4
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    const v4, 0x3d4ccccd    # 0.05f
+
+    cmpl-float v2, v4, v2
+
+    if-lez v2, :cond_1
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    .line 111
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v2
+
+    aget v2, v2, v10
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v5}, Lcom/oppo/camera/ui/preview/m;->e(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v5
+
+    aget v5, v5, v10
+
+    sub-float/2addr v2, v5
+
+    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
+
+    move-result v2
+
+    cmpl-float v2, v4, v2
+
+    if-lez v2, :cond_1
+
+    .line 112
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->f(Lcom/oppo/camera/ui/preview/m;)I
+
+    goto :goto_0
+
+    .line 114
+    :cond_1
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2, v3}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;I)I
+
+    .line 117
+    :goto_0
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/preview/m;->b(Lcom/oppo/camera/ui/preview/m;)[F
+
+    move-result-object v3
+
+    invoke-virtual {v3}, [F->clone()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, [F
+
+    invoke-static {v2, v3}, Lcom/oppo/camera/ui/preview/m;->c(Lcom/oppo/camera/ui/preview/m;[F)[F
+
+    const/16 v2, 0xa
+
+    .line 119
+    iget-object v3, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v3}, Lcom/oppo/camera/ui/preview/m;->g(Lcom/oppo/camera/ui/preview/m;)I
+
+    move-result v3
+
+    if-gt v2, v3, :cond_2
+
+    return-void
+
+    .line 129
+    :cond_2
+    iget-object v2, p0, Lcom/oppo/camera/ui/preview/m$1;->a:Lcom/oppo/camera/ui/preview/m;
+
+    invoke-static {v2, v0, v1}, Lcom/oppo/camera/ui/preview/m;->a(Lcom/oppo/camera/ui/preview/m;J)V
+
+    .line 131
+    invoke-super {p0, p1}, Landroid/hardware/SensorEventCallback;->onSensorChanged(Landroid/hardware/SensorEvent;)V
+
+    return-void
 .end method

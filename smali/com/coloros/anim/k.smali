@@ -54,7 +54,7 @@
     .locals 1
 
     .line 28
-    sget-boolean v0, Lcom/coloros/anim/f/b;->a:Z
+    sget-boolean v0, Lcom/coloros/anim/d/b;->a:Z
 
     if-eqz v0, :cond_0
 
@@ -137,7 +137,7 @@
     aput-wide v2, v1, v0
 
     .line 64
-    invoke-static {p0}, Landroidx/core/c/a;->a(Ljava/lang/String;)V
+    invoke-static {p0}, Landroidx/core/os/a;->a(Ljava/lang/String;)V
 
     .line 65
     sget p0, Lcom/coloros/anim/k;->e:I
@@ -201,7 +201,7 @@
     if-eqz v0, :cond_2
 
     .line 85
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     .line 86
     invoke-static {}, Ljava/lang/System;->nanoTime()J

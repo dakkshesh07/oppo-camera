@@ -22,10 +22,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .line 127
+    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
+    .line 131
     iput p1, p0, Landroidx/f/a/c$a;->a:I
 
     return-void
@@ -36,7 +36,7 @@
 
     const-string v0, ":memory:"
 
-    .line 274
+    .line 278
     invoke-virtual {p1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -55,7 +55,7 @@
 
     goto :goto_0
 
-    .line 277
+    .line 281
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -75,7 +75,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
+    .line 283
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -83,7 +83,7 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 280
+    .line 284
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -94,7 +94,7 @@
 
     goto :goto_0
 
-    .line 283
+    .line 287
     :cond_1
     :try_start_1
     new-instance v0, Ljava/io/File;
@@ -107,7 +107,7 @@
 
     if-nez v0, :cond_2
 
-    .line 285
+    .line 289
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -134,7 +134,7 @@
     :try_start_2
     const-string v0, "error while deleting corrupted database file"
 
-    .line 288
+    .line 292
     invoke-static {v1, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -146,7 +146,7 @@
 
     const-string v0, "delete failed: "
 
-    .line 293
+    .line 297
     invoke-static {v1, v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_2
@@ -171,7 +171,7 @@
 .method public b(Landroidx/f/a/b;II)V
     .locals 2
 
-    .line 201
+    .line 205
     new-instance p1, Landroid/database/sqlite/SQLiteException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -208,7 +208,7 @@
 .method public d(Landroidx/f/a/b;)V
     .locals 2
 
-    .line 232
+    .line 236
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -231,14 +231,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
+    .line 238
     invoke-interface {p1}, Landroidx/f/a/b;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 241
+    .line 245
     invoke-interface {p1}, Landroidx/f/a/b;->f()Ljava/lang/String;
 
     move-result-object p1
@@ -250,7 +250,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 250
+    .line 254
     :try_start_0
     invoke-interface {p1}, Landroidx/f/a/b;->g()Ljava/util/List;
 
@@ -266,7 +266,7 @@
 
     goto :goto_1
 
-    .line 255
+    .line 259
     :catch_0
     :goto_0
     :try_start_1
@@ -280,7 +280,7 @@
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 262
+    .line 266
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -298,7 +298,7 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 263
+    .line 267
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -307,7 +307,7 @@
 
     goto :goto_2
 
-    .line 268
+    .line 272
     :cond_1
     invoke-interface {p1}, Landroidx/f/a/b;->f()Ljava/lang/String;
 
@@ -315,6 +315,7 @@
 
     invoke-direct {p0, p1}, Landroidx/f/a/c$a;->a(Ljava/lang/String;)V
 
+    .line 274
     :cond_2
     throw v1
 
@@ -322,7 +323,7 @@
     :goto_3
     if-eqz v0, :cond_3
 
-    .line 262
+    .line 266
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
@@ -340,7 +341,7 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 263
+    .line 267
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/String;
@@ -349,7 +350,7 @@
 
     goto :goto_4
 
-    .line 268
+    .line 272
     :cond_3
     invoke-interface {p1}, Landroidx/f/a/b;->f()Ljava/lang/String;
 

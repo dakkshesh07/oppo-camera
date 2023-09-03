@@ -3,7 +3,7 @@
 .source "ViewPager2.java"
 
 # interfaces
-.implements Landroidx/core/g/a/g;
+.implements Landroidx/core/f/a/g;
 
 
 # annotations
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public perform(Landroid/view/View;Landroidx/core/g/a/g$a;)Z
+.method public perform(Landroid/view/View;Landroidx/core/f/a/g$a;)Z
     .locals 1
 
     .line 1345

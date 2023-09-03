@@ -26,16 +26,16 @@
 .method constructor <init>(ILokio/ByteString;J)V
     .locals 0
 
-    .line 567
+    .line 591
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 568
+    .line 592
     iput p1, p0, Lokhttp3/internal/ws/RealWebSocket$Close;->code:I
 
-    .line 569
+    .line 593
     iput-object p2, p0, Lokhttp3/internal/ws/RealWebSocket$Close;->reason:Lokio/ByteString;
 
-    .line 570
+    .line 594
     iput-wide p3, p0, Lokhttp3/internal/ws/RealWebSocket$Close;->cancelAfterCloseMillis:J
 
     return-void

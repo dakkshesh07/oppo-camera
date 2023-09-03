@@ -111,7 +111,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -136,7 +136,7 @@
 
     const-string v1, "StickerDataManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 167
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerCategoryItem;->isCategoryNew()Z
@@ -191,7 +191,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -262,7 +262,7 @@
 
     const-string v1, "StickerDataManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 180
     invoke-virtual {p1}, Lcom/oppo/camera/sticker/data/StickerItem;->isBuildIn()Z
@@ -303,7 +303,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v0, :cond_0
 
@@ -346,7 +346,7 @@
 
     const-string v1, "StickerDataManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_4
 
@@ -436,7 +436,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -498,7 +498,7 @@
     const-string v0, "deleteStickerItemsByThread, list is null or empty."
 
     .line 230
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -532,10 +532,10 @@
     const-string v1, "StickerDataManager"
 
     .line 116
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 118
-    invoke-static {v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;)V
 
     .line 120
     iget-object v1, p0, Lcom/oppo/camera/sticker/data/b;->a:Landroid/content/Context;
@@ -546,7 +546,7 @@
     invoke-virtual {p0}, Lcom/oppo/camera/sticker/data/b;->c()V
 
     .line 123
-    invoke-static {v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -559,10 +559,10 @@
     const-string v1, "StickerDataManager"
 
     .line 135
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 137
-    invoke-static {v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;)V
 
     .line 139
     iget-object v1, p0, Lcom/oppo/camera/sticker/data/b;->d:Lcom/oppo/camera/sticker/f;
@@ -570,7 +570,7 @@
     invoke-virtual {v1}, Lcom/oppo/camera/sticker/f;->c()V
 
     .line 141
-    invoke-static {v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -620,7 +620,7 @@
 
     const-string v1, "StickerDataManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
     invoke-static {}, Lcom/oppo/camera/sticker/download/a;->a()Lcom/oppo/camera/sticker/download/a;
@@ -689,7 +689,7 @@
 
     const-string v2, "StickerDataManager"
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 158
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/b;->b:Lcom/oppo/camera/sticker/data/b$b;
@@ -741,7 +741,7 @@
 
     const-string v2, "StickerDataManager"
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 195
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/b;->b:Lcom/oppo/camera/sticker/data/b$b;
@@ -813,7 +813,7 @@
 
     const-string v2, "StickerDataManager"
 
-    invoke-static {v2, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 222
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/b;->b:Lcom/oppo/camera/sticker/data/b$b;
@@ -854,7 +854,7 @@
 
     const-string v1, "StickerDataManager"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
     invoke-static {}, Lcom/oppo/camera/sticker/download/a;->a()Lcom/oppo/camera/sticker/download/a;
@@ -919,7 +919,7 @@
     const-string v2, "checkBuildInData"
 
     .line 109
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 111
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/b;->b:Lcom/oppo/camera/sticker/data/b$b;
@@ -949,7 +949,7 @@
     const-string v2, "requestSticker"
 
     .line 128
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 130
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/b;->b:Lcom/oppo/camera/sticker/data/b$b;
@@ -979,7 +979,7 @@
     const-string v2, "autoClearClickNewStatus"
 
     .line 241
-    invoke-static {v0, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 243
     iget-object v0, p0, Lcom/oppo/camera/sticker/data/b;->b:Lcom/oppo/camera/sticker/data/b$b;

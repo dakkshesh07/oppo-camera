@@ -3,6 +3,11 @@
 .source "CursorUtil.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public static a(Landroid/database/Cursor;Ljava/lang/String;)I
     .locals 2

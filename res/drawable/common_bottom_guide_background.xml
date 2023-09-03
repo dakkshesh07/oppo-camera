@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:topLeftRadius="@dimen/common_bottom_guide_background_radius" android:topRightRadius="@dimen/common_bottom_guide_background_radius" android:bottomLeftRadius="@dimen/common_bottom_guide_background_radius" android:bottomRightRadius="@dimen/common_bottom_guide_background_radius" />
-</shape>

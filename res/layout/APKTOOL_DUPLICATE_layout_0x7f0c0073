@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center" android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09006c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:baselineAligned="false">
+        <com.coui.appcompat.widget.COUILoadingView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090236" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@null" style="?APKTOOL_DUPLICATE_attr_0x7f0401d0" />
+    </LinearLayout>
+</FrameLayout>

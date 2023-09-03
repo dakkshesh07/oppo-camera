@@ -89,7 +89,7 @@
     const-string v0, "RV OnBindView"
 
     .line 7106
-    invoke-static {v0}, Landroidx/core/c/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Landroidx/core/os/a;->a(Ljava/lang/String;)V
 
     .line 7107
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$w;->getUnmodifiedPayloads()Ljava/util/List;
@@ -120,7 +120,7 @@
 
     .line 7113
     :cond_1
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     return-void
 .end method
@@ -139,7 +139,7 @@
     const-string v0, "RV CreateView"
 
     .line 7077
-    invoke-static {v0}, Landroidx/core/c/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Landroidx/core/os/a;->a(Ljava/lang/String;)V
 
     .line 7078
     invoke-virtual {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView$a;->onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$w;
@@ -161,7 +161,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 7087
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     return-object p1
 
@@ -182,7 +182,7 @@
     move-exception p1
 
     .line 7087
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     .line 7088
     throw p1

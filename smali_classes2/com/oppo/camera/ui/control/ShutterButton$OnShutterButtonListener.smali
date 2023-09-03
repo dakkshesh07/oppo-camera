@@ -15,6 +15,9 @@
 
 
 # virtual methods
+.method public abstract H()Z
+.end method
+
 .method public abstract a(Lcom/oppo/camera/ui/control/ShutterButton;)V
 .end method
 
@@ -31,7 +34,4 @@
 .end method
 
 .method public abstract e(Lcom/oppo/camera/ui/control/ShutterButton;)V
-.end method
-
-.method public abstract w()Z
 .end method

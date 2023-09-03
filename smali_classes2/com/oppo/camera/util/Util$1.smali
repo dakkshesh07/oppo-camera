@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/util/Util;->f()V
+    value = Lcom/oppo/camera/util/Util;->j()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -21,7 +21,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 475
+    .line 610
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,21 +36,29 @@
 
     const-string v1, "intRenderScript"
 
-    .line 478
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 613
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 480
-    invoke-static {}, Lcom/oppo/camera/util/Util;->al()Landroid/content/Context;
+    .line 615
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aC()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
     return-void
 
-    .line 484
+    .line 619
     :cond_0
-    invoke-static {}, Lcom/oppo/camera/util/Util;->al()Landroid/content/Context;
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aD()Ljava/lang/Object;
+
+    move-result-object v0
+
+    monitor-enter v0
+
+    .line 620
+    :try_start_0
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aC()Landroid/content/Context;
 
     move-result-object v1
 
@@ -60,12 +68,12 @@
 
     invoke-static {v1}, Lcom/oppo/camera/util/Util;->a(Landroid/renderscript/RenderScript;)Landroid/renderscript/RenderScript;
 
-    .line 485
-    invoke-static {}, Lcom/oppo/camera/util/Util;->am()Landroid/renderscript/RenderScript;
+    .line 621
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aE()Landroid/renderscript/RenderScript;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->am()Landroid/renderscript/RenderScript;
+    invoke-static {}, Lcom/oppo/camera/util/Util;->aE()Landroid/renderscript/RenderScript;
 
     move-result-object v2
 
@@ -79,10 +87,28 @@
 
     invoke-static {v1}, Lcom/oppo/camera/util/Util;->a(Landroid/renderscript/ScriptIntrinsicBlur;)Landroid/renderscript/ScriptIntrinsicBlur;
 
+    .line 622
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const-string v0, "Util"
+
     const-string v1, "intRenderScript X"
 
-    .line 487
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 624
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    .line 622
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method

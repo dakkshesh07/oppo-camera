@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901ad" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oppo.camera.ui.RotateImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902b7" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070745" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070745" android:scaleType="fitXY" android:layout_centerVertical="true" />
+    <View android:id="@id/APKTOOL_DUPLICATE_id_0x7f090196" android:background="@color/APKTOOL_DUPLICATE_color_0x7f060073" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07073b" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070738" android:layout_centerVertical="true" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07073e" android:layout_toEndOf="@id/APKTOOL_DUPLICATE_id_0x7f0902b7" />
+    <com.oppo.camera.sticker.ui.StickerCategoryRecycleView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090006" android:fadingEdgeLength="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070743" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true" android:requiresFadingEdge="horizontal" android:layout_toEndOf="@id/APKTOOL_DUPLICATE_id_0x7f090196" />
+</RelativeLayout>

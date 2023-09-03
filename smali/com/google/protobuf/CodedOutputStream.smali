@@ -19,8 +19,6 @@
 
 
 # static fields
-.field private static final ARRAY_BASE_OFFSET:J
-
 .field public static final DEFAULT_BUFFER_SIZE:I = 0x1000
 
 .field private static final HAS_UNSAFE_ARRAY_OPERATIONS:Z
@@ -36,10 +34,12 @@
 # instance fields
 .field private serializationDeterministic:Z
 
+.field wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     .line 60
     const-class v0, Lcom/google/protobuf/CodedOutputStream;
@@ -61,20 +61,13 @@
 
     sput-boolean v0, Lcom/google/protobuf/CodedOutputStream;->HAS_UNSAFE_ARRAY_OPERATIONS:Z
 
-    .line 62
-    invoke-static {}, Lcom/google/protobuf/UnsafeUtil;->getArrayBaseOffset()J
-
-    move-result-wide v0
-
-    sput-wide v0, Lcom/google/protobuf/CodedOutputStream;->ARRAY_BASE_OFFSET:J
-
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .line 229
+    .line 224
     invoke-direct {p0}, Lcom/google/protobuf/ByteOutput;-><init>()V
 
     return-void
@@ -98,19 +91,10 @@
     return v0
 .end method
 
-.method static synthetic access$200()J
-    .locals 2
-
-    .line 59
-    sget-wide v0, Lcom/google/protobuf/CodedOutputStream;->ARRAY_BASE_OFFSET:J
-
-    return-wide v0
-.end method
-
 .method public static computeBoolSize(IZ)I
     .locals 0
 
-    .line 610
+    .line 604
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -135,7 +119,7 @@
 .method public static computeByteArraySize(I[B)I
     .locals 0
 
-    .line 643
+    .line 637
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -152,7 +136,7 @@
 .method public static computeByteArraySizeNoTag([B)I
     .locals 0
 
-    .line 898
+    .line 867
     array-length p0, p0
 
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
@@ -165,7 +149,7 @@
 .method public static computeByteBufferSize(ILjava/nio/ByteBuffer;)I
     .locals 0
 
-    .line 651
+    .line 645
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -182,7 +166,7 @@
 .method public static computeByteBufferSizeNoTag(Ljava/nio/ByteBuffer;)I
     .locals 0
 
-    .line 906
+    .line 872
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result p0
@@ -197,7 +181,7 @@
 .method public static computeBytesSize(ILcom/google/protobuf/ByteString;)I
     .locals 0
 
-    .line 635
+    .line 629
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -214,7 +198,7 @@
 .method public static computeBytesSizeNoTag(Lcom/google/protobuf/ByteString;)I
     .locals 0
 
-    .line 890
+    .line 862
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result p0
@@ -229,7 +213,7 @@
 .method public static computeDoubleSize(ID)I
     .locals 0
 
-    .line 602
+    .line 597
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -254,7 +238,7 @@
 .method public static computeEnumSize(II)I
     .locals 0
 
-    .line 619
+    .line 613
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -271,7 +255,7 @@
 .method public static computeEnumSizeNoTag(I)I
     .locals 0
 
-    .line 857
+    .line 835
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
 
     move-result p0
@@ -282,7 +266,7 @@
 .method public static computeFixed32Size(II)I
     .locals 0
 
-    .line 538
+    .line 533
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -307,7 +291,7 @@
 .method public static computeFixed64Size(IJ)I
     .locals 0
 
-    .line 578
+    .line 573
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -332,7 +316,7 @@
 .method public static computeFloatSize(IF)I
     .locals 0
 
-    .line 594
+    .line 589
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -359,7 +343,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1071
+    .line 1059
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -375,13 +359,49 @@
     return p0
 .end method
 
+.method static computeGroupSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1070
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/lit8 p0, p0, 0x2
+
+    invoke-static {p1, p2}, Lcom/google/protobuf/CodedOutputStream;->computeGroupSizeNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+
+    move-result p1
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
 .method public static computeGroupSizeNoTag(Lcom/google/protobuf/MessageLite;)I
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1080
+    .line 1076
     invoke-interface {p0}, Lcom/google/protobuf/MessageLite;->getSerializedSize()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static computeGroupSizeNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .locals 0
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1082
+    check-cast p0, Lcom/google/protobuf/AbstractMessageLite;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
 
     move-result p0
 
@@ -391,7 +411,7 @@
 .method public static computeInt32Size(II)I
     .locals 0
 
-    .line 514
+    .line 509
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -410,7 +430,7 @@
 
     if-ltz p0, :cond_0
 
-    .line 718
+    .line 719
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
 
     move-result p0
@@ -426,7 +446,7 @@
 .method public static computeInt64Size(IJ)I
     .locals 0
 
-    .line 554
+    .line 549
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -443,7 +463,7 @@
 .method public static computeInt64SizeNoTag(J)I
     .locals 0
 
-    .line 774
+    .line 763
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
 
     move-result p0
@@ -456,7 +476,7 @@
 
     const/4 v0, 0x1
 
-    .line 700
+    .line 701
     invoke-static {v0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result v0
@@ -465,7 +485,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 701
+    .line 702
     invoke-static {v1, p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
 
     move-result p0
@@ -474,7 +494,7 @@
 
     const/4 p0, 0x3
 
-    .line 702
+    .line 703
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeLazyFieldSize(ILcom/google/protobuf/LazyFieldLite;)I
 
     move-result p0
@@ -487,7 +507,7 @@
 .method public static computeLazyFieldSize(ILcom/google/protobuf/LazyFieldLite;)I
     .locals 0
 
-    .line 659
+    .line 653
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -504,7 +524,7 @@
 .method public static computeLazyFieldSizeNoTag(Lcom/google/protobuf/LazyFieldLite;)I
     .locals 0
 
-    .line 882
+    .line 857
     invoke-virtual {p0}, Lcom/google/protobuf/LazyFieldLite;->getSerializedSize()I
 
     move-result p0
@@ -519,7 +539,7 @@
 .method static computeLengthDelimitedFieldSize(I)I
     .locals 1
 
-    .line 918
+    .line 886
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
 
     move-result v0
@@ -534,7 +554,7 @@
 
     const/4 v0, 0x1
 
-    .line 676
+    .line 678
     invoke-static {v0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result v0
@@ -543,7 +563,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 677
+    .line 679
     invoke-static {v1, p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
 
     move-result p0
@@ -552,7 +572,7 @@
 
     const/4 p0, 0x3
 
-    .line 678
+    .line 680
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSize(ILcom/google/protobuf/MessageLite;)I
 
     move-result p0
@@ -565,7 +585,7 @@
 .method public static computeMessageSize(ILcom/google/protobuf/MessageLite;)I
     .locals 0
 
-    .line 667
+    .line 661
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -579,11 +599,45 @@
     return p0
 .end method
 
+.method static computeMessageSize(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .locals 0
+
+    .line 670
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1, p2}, Lcom/google/protobuf/CodedOutputStream;->computeMessageSizeNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+
+    move-result p1
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
 .method public static computeMessageSizeNoTag(Lcom/google/protobuf/MessageLite;)I
     .locals 0
 
-    .line 914
+    .line 877
     invoke-interface {p0}, Lcom/google/protobuf/MessageLite;->getSerializedSize()I
+
+    move-result p0
+
+    invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method static computeMessageSizeNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)I
+    .locals 0
+
+    .line 882
+    check-cast p0, Lcom/google/protobuf/AbstractMessageLite;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractMessageLite;->getSerializedSize(Lcom/google/protobuf/Schema;)I
 
     move-result p0
 
@@ -612,7 +666,7 @@
 
     const/4 v0, 0x1
 
-    .line 688
+    .line 689
     invoke-static {v0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result v0
@@ -621,7 +675,7 @@
 
     mul-int/2addr v0, v1
 
-    .line 689
+    .line 690
     invoke-static {v1, p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32Size(II)I
 
     move-result p0
@@ -630,7 +684,7 @@
 
     const/4 p0, 0x3
 
-    .line 690
+    .line 691
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeBytesSize(ILcom/google/protobuf/ByteString;)I
 
     move-result p0
@@ -645,7 +699,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1113
+    .line 1114
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
 
     move-result p0
@@ -658,7 +712,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1123
+    .line 1124
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
 
     move-result p0
@@ -669,7 +723,7 @@
 .method public static computeSFixed32Size(II)I
     .locals 0
 
-    .line 546
+    .line 541
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -694,7 +748,7 @@
 .method public static computeSFixed64Size(IJ)I
     .locals 0
 
-    .line 586
+    .line 581
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -719,7 +773,7 @@
 .method public static computeSInt32Size(II)I
     .locals 0
 
-    .line 530
+    .line 525
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -736,7 +790,7 @@
 .method public static computeSInt32SizeNoTag(I)I
     .locals 0
 
-    .line 750
+    .line 745
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->encodeZigZag32(I)I
 
     move-result p0
@@ -751,7 +805,7 @@
 .method public static computeSInt64Size(IJ)I
     .locals 0
 
-    .line 570
+    .line 565
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -768,7 +822,7 @@
 .method public static computeSInt64SizeNoTag(J)I
     .locals 0
 
-    .line 808
+    .line 796
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->encodeZigZag64(J)J
 
     move-result-wide p0
@@ -783,7 +837,7 @@
 .method public static computeStringSize(ILjava/lang/String;)I
     .locals 0
 
-    .line 627
+    .line 621
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -800,7 +854,7 @@
 .method public static computeStringSizeNoTag(Ljava/lang/String;)I
     .locals 1
 
-    .line 867
+    .line 842
     :try_start_0
     invoke-static {p0}, Lcom/google/protobuf/Utf8;->encodedLength(Ljava/lang/CharSequence;)I
 
@@ -810,7 +864,7 @@
 
     goto :goto_0
 
-    .line 870
+    .line 845
     :catch_0
     sget-object v0, Lcom/google/protobuf/Internal;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -818,10 +872,10 @@
 
     move-result-object p0
 
-    .line 871
+    .line 846
     array-length p0, p0
 
-    .line 874
+    .line 849
     :goto_0
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
 
@@ -835,7 +889,7 @@
 
     const/4 v0, 0x0
 
-    .line 709
+    .line 710
     invoke-static {p0, v0}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result p0
@@ -850,7 +904,7 @@
 .method public static computeUInt32Size(II)I
     .locals 0
 
-    .line 522
+    .line 517
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -915,7 +969,7 @@
 .method public static computeUInt64Size(IJ)I
     .locals 0
 
-    .line 562
+    .line 557
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeTagSize(I)I
 
     move-result p0
@@ -1038,14 +1092,14 @@
 
     if-ltz p1, :cond_0
 
-    .line 225
+    .line 220
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$ByteOutputEncoder;
 
     invoke-direct {v0, p0, p1}, Lcom/google/protobuf/CodedOutputStream$ByteOutputEncoder;-><init>(Lcom/google/protobuf/ByteOutput;I)V
 
     return-object v0
 
-    .line 222
+    .line 217
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1061,7 +1115,7 @@
 
     const/16 v0, 0x1000
 
-    .line 97
+    .line 93
     invoke-static {p0, v0}, Lcom/google/protobuf/CodedOutputStream;->newInstance(Ljava/io/OutputStream;I)Lcom/google/protobuf/CodedOutputStream;
 
     move-result-object p0
@@ -1072,7 +1126,7 @@
 .method public static newInstance(Ljava/io/OutputStream;I)Lcom/google/protobuf/CodedOutputStream;
     .locals 1
 
-    .line 109
+    .line 105
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$OutputStreamEncoder;
 
     invoke-direct {v0, p0, p1}, Lcom/google/protobuf/CodedOutputStream$OutputStreamEncoder;-><init>(Ljava/io/OutputStream;I)V
@@ -1083,21 +1137,21 @@
 .method public static newInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedOutputStream;
     .locals 1
 
-    .line 137
+    .line 131
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 138
+    .line 132
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$HeapNioEncoder;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/CodedOutputStream$HeapNioEncoder;-><init>(Ljava/nio/ByteBuffer;)V
 
     return-object v0
 
-    .line 140
+    .line 134
     :cond_0
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->isDirect()Z
 
@@ -1111,21 +1165,21 @@
 
     if-nez v0, :cond_2
 
-    .line 141
+    .line 135
     invoke-static {}, Lcom/google/protobuf/CodedOutputStream$UnsafeDirectNioEncoder;->isSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 142
+    .line 136
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->newUnsafeInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedOutputStream;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 143
+    .line 137
     :cond_1
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->newSafeInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedOutputStream;
 
@@ -1134,7 +1188,7 @@
     :goto_0
     return-object p0
 
-    .line 145
+    .line 139
     :cond_2
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -1150,7 +1204,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 206
+    .line 201
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->newInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedOutputStream;
 
     move-result-object p0
@@ -1161,7 +1215,7 @@
 .method public static newInstance([B)Lcom/google/protobuf/CodedOutputStream;
     .locals 2
 
-    .line 120
+    .line 115
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -1176,7 +1230,7 @@
 .method public static newInstance([BII)Lcom/google/protobuf/CodedOutputStream;
     .locals 1
 
-    .line 132
+    .line 126
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream$ArrayEncoder;-><init>([BII)V
@@ -1187,7 +1241,7 @@
 .method static newSafeInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedOutputStream;
     .locals 1
 
-    .line 155
+    .line 149
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/CodedOutputStream$SafeDirectNioEncoder;-><init>(Ljava/nio/ByteBuffer;)V
@@ -1198,7 +1252,7 @@
 .method static newUnsafeInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedOutputStream;
     .locals 1
 
-    .line 150
+    .line 144
     new-instance v0, Lcom/google/protobuf/CodedOutputStream$UnsafeDirectNioEncoder;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/CodedOutputStream$UnsafeDirectNioEncoder;-><init>(Ljava/nio/ByteBuffer;)V
@@ -1211,7 +1265,7 @@
 .method public final checkNoSpaceLeft()V
     .locals 2
 
-    .line 973
+    .line 938
     invoke-virtual {p0}, Lcom/google/protobuf/CodedOutputStream;->spaceLeft()I
 
     move-result v0
@@ -1220,7 +1274,7 @@
 
     return-void
 
-    .line 974
+    .line 939
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1250,7 +1304,7 @@
         }
     .end annotation
 
-    .line 1021
+    .line 984
     sget-object v0, Lcom/google/protobuf/CodedOutputStream;->logger:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -1259,14 +1313,14 @@
 
     invoke-virtual {v0, v1, v2, p2}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 1028
+    .line 993
     sget-object p2, Lcom/google/protobuf/Internal;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p1, p2}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
     move-result-object p1
 
-    .line 1030
+    .line 995
     :try_start_0
     array-length p2, p1
 
@@ -1274,7 +1328,7 @@
 
     const/4 p2, 0x0
 
-    .line 1031
+    .line 996
     array-length v0, p1
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/google/protobuf/CodedOutputStream;->writeLazy([BII)V
@@ -1287,13 +1341,13 @@
     :catch_0
     move-exception p1
 
-    .line 1035
+    .line 1000
     throw p1
 
     :catch_1
     move-exception p1
 
-    .line 1033
+    .line 998
     new-instance p2, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/CodedOutputStream$OutOfSpaceException;-><init>(Ljava/lang/Throwable;)V
@@ -1304,7 +1358,7 @@
 .method isSerializationDeterministic()Z
     .locals 1
 
-    .line 192
+    .line 186
     iget-boolean v0, p0, Lcom/google/protobuf/CodedOutputStream;->serializationDeterministic:Z
 
     return v0
@@ -1313,12 +1367,12 @@
 .method public abstract spaceLeft()I
 .end method
 
-.method useDeterministicSerialization()V
+.method public useDeterministicSerialization()V
     .locals 1
 
     const/4 v0, 0x1
 
-    .line 188
+    .line 182
     iput-boolean v0, p0, Lcom/google/protobuf/CodedOutputStream;->serializationDeterministic:Z
 
     return-void
@@ -1366,7 +1420,7 @@
 
     int-to-byte p1, p1
 
-    .line 456
+    .line 447
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->write(B)V
 
     return-void
@@ -1396,7 +1450,7 @@
         }
     .end annotation
 
-    .line 478
+    .line 469
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1446,7 +1500,7 @@
         }
     .end annotation
 
-    .line 290
+    .line 284
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p2
@@ -1464,7 +1518,7 @@
         }
     .end annotation
 
-    .line 451
+    .line 442
     invoke-static {p1, p2}, Ljava/lang/Double;->doubleToRawLongBits(D)J
 
     move-result-wide p1
@@ -1482,7 +1536,7 @@
         }
     .end annotation
 
-    .line 302
+    .line 296
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeInt32(II)V
 
     return-void
@@ -1496,7 +1550,7 @@
         }
     .end annotation
 
-    .line 464
+    .line 455
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeInt32NoTag(I)V
 
     return-void
@@ -1542,7 +1596,7 @@
         }
     .end annotation
 
-    .line 285
+    .line 279
     invoke-static {p2}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
     move-result p2
@@ -1560,7 +1614,7 @@
         }
     .end annotation
 
-    .line 446
+    .line 437
     invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
     move-result p1
@@ -1583,15 +1637,42 @@
 
     const/4 v0, 0x3
 
-    .line 1048
+    .line 1013
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
 
-    .line 1049
+    .line 1014
     invoke-virtual {p0, p2}, Lcom/google/protobuf/CodedOutputStream;->writeGroupNoTag(Lcom/google/protobuf/MessageLite;)V
 
     const/4 p2, 0x4
 
-    .line 1050
+    .line 1015
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+
+    return-void
+.end method
+
+.method final writeGroup(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    const/4 v0, 0x3
+
+    .line 1026
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
+
+    .line 1027
+    invoke-virtual {p0, p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeGroupNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+
+    const/4 p2, 0x4
+
+    .line 1028
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeTag(II)V
 
     return-void
@@ -1608,8 +1689,27 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1060
+    .line 1038
     invoke-interface {p1, p0}, Lcom/google/protobuf/MessageLite;->writeTo(Lcom/google/protobuf/CodedOutputStream;)V
+
+    return-void
+.end method
+
+.method final writeGroupNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+
+    .line 1048
+    iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream;->wrapper:Lcom/google/protobuf/CodedOutputStreamWriter;
+
+    invoke-interface {p2, p1, v0}, Lcom/google/protobuf/Schema;->writeTo(Ljava/lang/Object;Lcom/google/protobuf/Writer;)V
 
     return-void
 .end method
@@ -1638,7 +1738,7 @@
         }
     .end annotation
 
-    .line 262
+    .line 256
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64(IJ)V
 
     return-void
@@ -1652,7 +1752,7 @@
         }
     .end annotation
 
-    .line 423
+    .line 414
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64NoTag(J)V
 
     return-void
@@ -1682,7 +1782,23 @@
     .end annotation
 .end method
 
+.method abstract writeMessage(ILcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
 .method public abstract writeMessageNoTag(Lcom/google/protobuf/MessageLite;)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method abstract writeMessageNoTag(Lcom/google/protobuf/MessageLite;Lcom/google/protobuf/Schema;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
@@ -1706,7 +1822,7 @@
         }
     .end annotation
 
-    .line 339
+    .line 329
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->write(B)V
 
     return-void
@@ -1722,7 +1838,7 @@
 
     int-to-byte p1, p1
 
-    .line 344
+    .line 334
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->write(B)V
 
     return-void
@@ -1736,7 +1852,7 @@
         }
     .end annotation
 
-    .line 361
+    .line 349
     invoke-virtual {p1, p0}, Lcom/google/protobuf/ByteString;->writeTo(Lcom/google/protobuf/ByteOutput;)V
 
     return-void
@@ -1758,7 +1874,7 @@
         }
     .end annotation
 
-    .line 349
+    .line 339
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1776,7 +1892,7 @@
         }
     .end annotation
 
-    .line 356
+    .line 344
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/CodedOutputStream;->write([BII)V
 
     return-void
@@ -1793,7 +1909,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1133
+    .line 1134
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32NoTag(I)V
 
     return-void
@@ -1810,7 +1926,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1143
+    .line 1144
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64NoTag(J)V
 
     return-void
@@ -1835,7 +1951,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1091
+    .line 1093
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeUInt32NoTag(I)V
 
     return-void
@@ -1852,7 +1968,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 1101
+    .line 1103
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeUInt64NoTag(J)V
 
     return-void
@@ -1866,7 +1982,7 @@
         }
     .end annotation
 
-    .line 257
+    .line 251
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32(II)V
 
     return-void
@@ -1880,7 +1996,7 @@
         }
     .end annotation
 
-    .line 418
+    .line 409
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeFixed32NoTag(I)V
 
     return-void
@@ -1894,7 +2010,7 @@
         }
     .end annotation
 
-    .line 280
+    .line 274
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64(IJ)V
 
     return-void
@@ -1908,7 +2024,7 @@
         }
     .end annotation
 
-    .line 441
+    .line 432
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeFixed64NoTag(J)V
 
     return-void
@@ -1922,7 +2038,7 @@
         }
     .end annotation
 
-    .line 248
+    .line 242
     invoke-static {p2}, Lcom/google/protobuf/CodedOutputStream;->encodeZigZag32(I)I
 
     move-result p2
@@ -1940,7 +2056,7 @@
         }
     .end annotation
 
-    .line 409
+    .line 400
     invoke-static {p1}, Lcom/google/protobuf/CodedOutputStream;->encodeZigZag32(I)I
 
     move-result p1
@@ -1958,7 +2074,7 @@
         }
     .end annotation
 
-    .line 271
+    .line 265
     invoke-static {p2, p3}, Lcom/google/protobuf/CodedOutputStream;->encodeZigZag64(J)J
 
     move-result-wide p2
@@ -1976,7 +2092,7 @@
         }
     .end annotation
 
-    .line 432
+    .line 423
     invoke-static {p1, p2}, Lcom/google/protobuf/CodedOutputStream;->encodeZigZag64(J)J
 
     move-result-wide p1

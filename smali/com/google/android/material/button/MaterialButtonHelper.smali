@@ -3,6 +3,11 @@
 .source "MaterialButtonHelper.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final IS_LOLLIPOP:Z
 
@@ -833,7 +838,7 @@
     .line 114
     iget-object v1, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-static {v1}, Landroidx/core/g/w;->j(Landroid/view/View;)I
+    invoke-static {v1}, Landroidx/core/f/w;->j(Landroid/view/View;)I
 
     move-result v1
 
@@ -847,7 +852,7 @@
     .line 116
     iget-object v3, p0, Lcom/google/android/material/button/MaterialButtonHelper;->materialButton:Lcom/google/android/material/button/MaterialButton;
 
-    invoke-static {v3}, Landroidx/core/g/w;->k(Landroid/view/View;)I
+    invoke-static {v3}, Landroidx/core/f/w;->k(Landroid/view/View;)I
 
     move-result v3
 
@@ -915,7 +920,7 @@
 
     add-int/2addr v4, v0
 
-    invoke-static {p1, v1, v2, v3, v4}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {p1, v1, v2, v3, v4}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     return-void
 .end method

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080318" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oplus.anim.EffectiveAnimationView android:layout_gravity="start|center" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09030a" android:visibility="visible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:scaleType="centerInside" android:layout_marginStart="10.0dip" />
+    <ScrollView android:layout_gravity="center_vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090271" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:overScrollMode="never">
+        <TextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f0602eb" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900bc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingMultiplier="1.2" android:textAlignment="viewStart" android:fallbackLineSpacing="false" />
+    </ScrollView>
+</FrameLayout>

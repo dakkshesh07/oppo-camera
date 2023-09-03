@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07077e" android:paddingEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07077f"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:coui="http://schemas.android.com/apk/res-auto">
+    <com.coui.appcompat.widget.COUIRoundImageView android:layout_gravity="center" android:id="@android:id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" coui:APKTOOL_DUPLICATE_attr_0x7f0402a3="APKTOOL_DUPLICATE_id_0x7f090257" />
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/APKTOOL_DUPLICATE_style_0x7f110196">
+        <TextView android:ellipsize="marquee" android:id="@android:id/title" android:fadingEdge="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="false" style="@style/APKTOOL_DUPLICATE_style_0x7f110125" />
+        <TextView android:textSize="12.0sp" android:id="@android:id/summary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07078e" android:layout_below="@android:id/title" android:layout_alignStart="@android:id/title" style="@style/APKTOOL_DUPLICATE_style_0x7f110124" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@android:id/widget_frame" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+</LinearLayout>

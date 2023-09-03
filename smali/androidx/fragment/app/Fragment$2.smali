@@ -3,7 +3,7 @@
 .source "Fragment.java"
 
 # interfaces
-.implements Landroidx/lifecycle/f;
+.implements Landroidx/lifecycle/e;
 
 
 # annotations
@@ -35,11 +35,11 @@
 
 
 # virtual methods
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 0
 
     .line 475
-    sget-object p1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object p1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
     if-ne p2, p1, :cond_0
 

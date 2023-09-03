@@ -27,7 +27,7 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 949
+    .line 1116
     iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraSettingMenuPanel$1;->a:Z
 
     if-eqz p1, :cond_0
@@ -36,8 +36,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 950
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q()I
+    .line 1117
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u()I
 
     move-result v0
 

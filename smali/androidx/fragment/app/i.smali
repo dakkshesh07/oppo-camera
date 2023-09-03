@@ -549,7 +549,7 @@
     return-void
 .end method
 
-.method private a(Ljava/util/ArrayList;Ljava/util/ArrayList;IILandroidx/b/b;)I
+.method private a(Ljava/util/ArrayList;Ljava/util/ArrayList;IILandroidx/collection/ArraySet;)I
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -560,7 +560,7 @@
             "Ljava/util/ArrayList<",
             "Ljava/lang/Boolean;",
             ">;II",
-            "Landroidx/b/b<",
+            "Landroidx/collection/ArraySet<",
             "Landroidx/fragment/app/Fragment;",
             ">;)I"
         }
@@ -643,7 +643,7 @@
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 1948
-    invoke-virtual {v2, v4}, Landroidx/fragment/app/a;->a(Landroidx/fragment/app/Fragment$c;)V
+    invoke-virtual {v2, v4}, Landroidx/fragment/app/a;->a(Landroidx/fragment/app/Fragment$b;)V
 
     if-eqz v3, :cond_2
 
@@ -669,7 +669,7 @@
 
     .line 1965
     :cond_3
-    invoke-direct {p0, p5}, Landroidx/fragment/app/i;->b(Landroidx/b/b;)V
+    invoke-direct {p0, p5}, Landroidx/fragment/app/i;->b(Landroidx/collection/ArraySet;)V
 
     :cond_4
     add-int/lit8 v0, v0, -0x1
@@ -776,19 +776,19 @@
     return-object p0
 .end method
 
-.method private a(Landroidx/b/b;)V
+.method private a(Landroidx/collection/ArraySet;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/b/b<",
+            "Landroidx/collection/ArraySet<",
             "Landroidx/fragment/app/Fragment;",
             ">;)V"
         }
     .end annotation
 
     .line 1909
-    invoke-virtual {p1}, Landroidx/b/b;->size()I
+    invoke-virtual {p1}, Landroidx/collection/ArraySet;->size()I
 
     move-result v0
 
@@ -798,7 +798,7 @@
     if-ge v1, v0, :cond_1
 
     .line 1911
-    invoke-virtual {p1, v1}, Landroidx/b/b;->b(I)Ljava/lang/Object;
+    invoke-virtual {p1, v1}, Landroidx/collection/ArraySet;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -927,9 +927,9 @@
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 157
-    new-instance v0, Landroidx/core/f/b;
+    new-instance v0, Landroidx/core/util/b;
 
-    invoke-direct {v0, v1}, Landroidx/core/f/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Landroidx/core/util/b;-><init>(Ljava/lang/String;)V
 
     .line 158
     new-instance v2, Ljava/io/PrintWriter;
@@ -1330,12 +1330,12 @@
     if-eqz v11, :cond_6
 
     .line 1873
-    new-instance v14, Landroidx/b/b;
+    new-instance v14, Landroidx/collection/ArraySet;
 
-    invoke-direct {v14}, Landroidx/b/b;-><init>()V
+    invoke-direct {v14}, Landroidx/collection/ArraySet;-><init>()V
 
     .line 1874
-    invoke-direct {p0, v14}, Landroidx/fragment/app/i;->b(Landroidx/b/b;)V
+    invoke-direct {p0, v14}, Landroidx/fragment/app/i;->b(Landroidx/collection/ArraySet;)V
 
     move-object v0, p0
 
@@ -1350,12 +1350,12 @@
     move-object v5, v14
 
     .line 1875
-    invoke-direct/range {v0 .. v5}, Landroidx/fragment/app/i;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;IILandroidx/b/b;)I
+    invoke-direct/range {v0 .. v5}, Landroidx/fragment/app/i;->a(Ljava/util/ArrayList;Ljava/util/ArrayList;IILandroidx/collection/ArraySet;)I
 
     move-result v0
 
     .line 1877
-    invoke-direct {p0, v14}, Landroidx/fragment/app/i;->a(Landroidx/b/b;)V
+    invoke-direct {p0, v14}, Landroidx/fragment/app/i;->a(Landroidx/collection/ArraySet;)V
 
     move v4, v0
 
@@ -1595,12 +1595,12 @@
     return p0
 .end method
 
-.method private b(Landroidx/b/b;)V
+.method private b(Landroidx/collection/ArraySet;)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/b/b<",
+            "Landroidx/collection/ArraySet<",
             "Landroidx/fragment/app/Fragment;",
             ">;)V"
         }
@@ -1686,7 +1686,7 @@
     if-eqz v2, :cond_1
 
     .line 2103
-    invoke-virtual {p1, v9}, Landroidx/b/b;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v9}, Landroidx/collection/ArraySet;->add(Ljava/lang/Object;)Z
 
     :cond_1
     add-int/lit8 v8, v8, 0x1
@@ -4019,11 +4019,11 @@
     invoke-static {v4, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 2528
-    new-instance v2, Landroidx/core/f/b;
+    new-instance v2, Landroidx/core/util/b;
 
     const-string v4, "FragmentManager"
 
-    invoke-direct {v2, v4}, Landroidx/core/f/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v4}, Landroidx/core/util/b;-><init>(Ljava/lang/String;)V
 
     .line 2529
     new-instance v4, Ljava/io/PrintWriter;
@@ -4180,9 +4180,9 @@
 
     .line 744
     :cond_5
-    iget-object v1, v7, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/e$b;
+    iget-object v1, v7, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    sget-object v2, Landroidx/lifecycle/e$b;->CREATED:Landroidx/lifecycle/e$b;
+    sget-object v2, Landroidx/lifecycle/Lifecycle$State;->CREATED:Landroidx/lifecycle/Lifecycle$State;
 
     if-ne v1, v2, :cond_6
 
@@ -4195,9 +4195,9 @@
 
     .line 747
     :cond_6
-    iget-object v1, v7, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/e$b;
+    iget-object v1, v7, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$b;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$State;->ordinal()I
 
     move-result v1
 
@@ -5329,7 +5329,7 @@
     .line 981
     iget-object v0, v7, Landroidx/fragment/app/Fragment;->mViewLifecycleOwnerLiveData:Landroidx/lifecycle/m;
 
-    invoke-virtual {v0, v14}, Landroidx/lifecycle/m;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v14}, Landroidx/lifecycle/m;->setValue(Ljava/lang/Object;)V
 
     .line 982
     iput-object v14, v7, Landroidx/fragment/app/Fragment;->mInnerView:Landroid/view/View;
@@ -5850,7 +5850,7 @@
     return-void
 .end method
 
-.method public a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/e$b;)V
+.method public a(Landroidx/fragment/app/Fragment;Landroidx/lifecycle/Lifecycle$State;)V
     .locals 2
 
     .line 2825
@@ -5877,7 +5877,7 @@
 
     .line 2830
     :cond_0
-    iput-object p2, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/e$b;
+    iput-object p2, p1, Landroidx/fragment/app/Fragment;->mMaxState:Landroidx/lifecycle/Lifecycle$State;
 
     return-void
 
@@ -6243,7 +6243,7 @@
 
     iget-object v1, p0, Landroidx/fragment/app/i;->G:Landroidx/activity/c;
 
-    invoke-virtual {v0, p2, v1}, Landroidx/activity/OnBackPressedDispatcher;->a(Landroidx/lifecycle/h;Landroidx/activity/c;)V
+    invoke-virtual {v0, p2, v1}, Landroidx/activity/OnBackPressedDispatcher;->a(Landroidx/lifecycle/g;Landroidx/activity/c;)V
 
     :cond_2
     if-eqz p3, :cond_3
@@ -11922,7 +11922,7 @@
     if-eqz v1, :cond_0
 
     .line 464
-    invoke-static {v1, v0}, Landroidx/core/f/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     goto :goto_0
 
@@ -11930,7 +11930,7 @@
     :cond_0
     iget-object v1, p0, Landroidx/fragment/app/i;->n:Landroidx/fragment/app/g;
 
-    invoke-static {v1, v0}, Landroidx/core/f/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     :goto_0
     const-string v1, "}}"

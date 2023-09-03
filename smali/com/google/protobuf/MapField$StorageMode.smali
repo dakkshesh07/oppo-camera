@@ -36,7 +36,7 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .line 76
+    .line 81
     new-instance v0, Lcom/google/protobuf/MapField$StorageMode;
 
     const/4 v1, 0x0
@@ -47,6 +47,7 @@
 
     sput-object v0, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
 
+    .line 82
     new-instance v0, Lcom/google/protobuf/MapField$StorageMode;
 
     const/4 v2, 0x1
@@ -57,6 +58,7 @@
 
     sput-object v0, Lcom/google/protobuf/MapField$StorageMode;->LIST:Lcom/google/protobuf/MapField$StorageMode;
 
+    .line 83
     new-instance v0, Lcom/google/protobuf/MapField$StorageMode;
 
     const/4 v3, 0x2
@@ -69,6 +71,7 @@
 
     const/4 v0, 0x3
 
+    .line 80
     new-array v0, v0, [Lcom/google/protobuf/MapField$StorageMode;
 
     sget-object v4, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
@@ -96,7 +99,7 @@
         }
     .end annotation
 
-    .line 76
+    .line 80
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -105,7 +108,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/MapField$StorageMode;
     .locals 1
 
-    .line 76
+    .line 80
     const-class v0, Lcom/google/protobuf/MapField$StorageMode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -120,7 +123,7 @@
 .method public static values()[Lcom/google/protobuf/MapField$StorageMode;
     .locals 1
 
-    .line 76
+    .line 80
     sget-object v0, Lcom/google/protobuf/MapField$StorageMode;->$VALUES:[Lcom/google/protobuf/MapField$StorageMode;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/MapField$StorageMode;->clone()Ljava/lang/Object;

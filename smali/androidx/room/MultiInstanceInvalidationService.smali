@@ -3,6 +3,11 @@
 .source "MultiInstanceInvalidationService.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field a:I
 
@@ -21,13 +26,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/RemoteCallbackList<",
-            "Landroidx/room/c;",
+            "Landroidx/room/IMultiInstanceInvalidationCallback;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Landroidx/room/d$a;
+.field private final d:Landroidx/room/IMultiInstanceInvalidationService$Stub;
 
 
 # direct methods
@@ -61,7 +66,7 @@
 
     invoke-direct {v0, p0}, Landroidx/room/MultiInstanceInvalidationService$2;-><init>(Landroidx/room/MultiInstanceInvalidationService;)V
 
-    iput-object v0, p0, Landroidx/room/MultiInstanceInvalidationService;->d:Landroidx/room/d$a;
+    iput-object v0, p0, Landroidx/room/MultiInstanceInvalidationService;->d:Landroidx/room/IMultiInstanceInvalidationService$Stub;
 
     return-void
 .end method
@@ -72,7 +77,7 @@
     .locals 0
 
     .line 132
-    iget-object p1, p0, Landroidx/room/MultiInstanceInvalidationService;->d:Landroidx/room/d$a;
+    iget-object p1, p0, Landroidx/room/MultiInstanceInvalidationService;->d:Landroidx/room/IMultiInstanceInvalidationService$Stub;
 
     return-object p1
 .end method

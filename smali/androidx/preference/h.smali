@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/preference/h$a;
@@ -616,7 +619,7 @@
     if-nez v1, :cond_1
 
     .line 400
-    invoke-static {p1, v2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, v2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
     const v1, 0x1020018

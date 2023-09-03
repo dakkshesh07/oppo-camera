@@ -20,10 +20,10 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/customview/a/b$b<",
-        "Landroidx/b/h<",
-        "Landroidx/core/g/a/d;",
+        "Landroidx/collection/SparseArrayCompat<",
+        "Landroidx/core/f/a/d;",
         ">;",
-        "Landroidx/core/g/a/d;",
+        "Landroidx/core/f/a/d;",
         ">;"
     }
 .end annotation
@@ -41,19 +41,19 @@
 
 
 # virtual methods
-.method public a(Landroidx/b/h;)I
+.method public a(Landroidx/collection/SparseArrayCompat;)I
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/b/h<",
-            "Landroidx/core/g/a/d;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Landroidx/core/f/a/d;",
             ">;)I"
         }
     .end annotation
 
     .line 358
-    invoke-virtual {p1}, Landroidx/b/h;->b()I
+    invoke-virtual {p1}, Landroidx/collection/SparseArrayCompat;->size()I
 
     move-result p1
 
@@ -64,33 +64,33 @@
     .locals 0
 
     .line 349
-    check-cast p1, Landroidx/b/h;
+    check-cast p1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {p0, p1}, Landroidx/customview/a/a$2;->a(Landroidx/b/h;)I
+    invoke-virtual {p0, p1}, Landroidx/customview/a/a$2;->a(Landroidx/collection/SparseArrayCompat;)I
 
     move-result p1
 
     return p1
 .end method
 
-.method public a(Landroidx/b/h;I)Landroidx/core/g/a/d;
+.method public a(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/f/a/d;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroidx/b/h<",
-            "Landroidx/core/g/a/d;",
+            "Landroidx/collection/SparseArrayCompat<",
+            "Landroidx/core/f/a/d;",
             ">;I)",
-            "Landroidx/core/g/a/d;"
+            "Landroidx/core/f/a/d;"
         }
     .end annotation
 
     .line 353
-    invoke-virtual {p1, p2}, Landroidx/b/h;->d(I)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroidx/collection/SparseArrayCompat;->valueAt(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Landroidx/core/g/a/d;
+    check-cast p1, Landroidx/core/f/a/d;
 
     return-object p1
 .end method
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 349
-    check-cast p1, Landroidx/b/h;
+    check-cast p1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/a/a$2;->a(Landroidx/b/h;I)Landroidx/core/g/a/d;
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/a/a$2;->a(Landroidx/collection/SparseArrayCompat;I)Landroidx/core/f/a/d;
 
     move-result-object p1
 

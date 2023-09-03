@@ -3,6 +3,11 @@
 .source "DescendantOffsetUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final matrix:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;

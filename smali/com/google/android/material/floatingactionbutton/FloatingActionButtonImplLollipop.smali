@@ -104,7 +104,7 @@
 
     iget-object v2, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;->shapeAppearance:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-    invoke-static {v2}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v2}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -116,28 +116,28 @@
     sget v2, Lcom/google/android/material/R$color;->design_fab_stroke_top_outer_color:I
 
     .line 219
-    invoke-static {v0, v2}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v2
 
     sget v3, Lcom/google/android/material/R$color;->design_fab_stroke_top_inner_color:I
 
     .line 220
-    invoke-static {v0, v3}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v0, v3}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v3
 
     sget v4, Lcom/google/android/material/R$color;->design_fab_stroke_end_inner_color:I
 
     .line 221
-    invoke-static {v0, v4}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v0, v4}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v4
 
     sget v5, Lcom/google/android/material/R$color;->design_fab_stroke_end_outer_color:I
 
     .line 222
-    invoke-static {v0, v5}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {v0, v5}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -161,7 +161,7 @@
     .line 231
     iget-object v0, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;->shapeAppearance:Lcom/google/android/material/shape/ShapeAppearanceModel;
 
-    invoke-static {v0}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -298,7 +298,7 @@
     iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;->borderDrawable:Lcom/google/android/material/floatingactionbutton/BorderDrawable;
 
     .line 74
-    invoke-static {v1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -310,7 +310,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/floatingactionbutton/FloatingActionButtonImplLollipop;->shapeDrawable:Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 

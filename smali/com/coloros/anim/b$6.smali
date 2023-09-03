@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/coloros/anim/b;->a(Lcom/coloros/anim/c/f;Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+    value = Lcom/coloros/anim/b;->a(Lcom/coloros/anim/model/e;Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,27 +18,27 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/coloros/anim/c/f;
+.field final synthetic a:Lcom/coloros/anim/model/e;
 
 .field final synthetic b:Ljava/lang/Object;
 
-.field final synthetic c:Lcom/coloros/anim/g/b;
+.field final synthetic c:Lcom/coloros/anim/e/b;
 
 .field final synthetic d:Lcom/coloros/anim/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/f;Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+.method constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/e;Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
     .locals 0
 
     .line 852
     iput-object p1, p0, Lcom/coloros/anim/b$6;->d:Lcom/coloros/anim/b;
 
-    iput-object p2, p0, Lcom/coloros/anim/b$6;->a:Lcom/coloros/anim/c/f;
+    iput-object p2, p0, Lcom/coloros/anim/b$6;->a:Lcom/coloros/anim/model/e;
 
     iput-object p3, p0, Lcom/coloros/anim/b$6;->b:Ljava/lang/Object;
 
-    iput-object p4, p0, Lcom/coloros/anim/b$6;->c:Lcom/coloros/anim/g/b;
+    iput-object p4, p0, Lcom/coloros/anim/b$6;->c:Lcom/coloros/anim/e/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,13 +53,13 @@
     .line 855
     iget-object p1, p0, Lcom/coloros/anim/b$6;->d:Lcom/coloros/anim/b;
 
-    iget-object v0, p0, Lcom/coloros/anim/b$6;->a:Lcom/coloros/anim/c/f;
+    iget-object v0, p0, Lcom/coloros/anim/b$6;->a:Lcom/coloros/anim/model/e;
 
     iget-object v1, p0, Lcom/coloros/anim/b$6;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/coloros/anim/b$6;->c:Lcom/coloros/anim/g/b;
+    iget-object v2, p0, Lcom/coloros/anim/b$6;->c:Lcom/coloros/anim/e/b;
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/c/f;Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/coloros/anim/b;->a(Lcom/coloros/anim/model/e;Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
 
     return-void
 .end method

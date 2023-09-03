@@ -13,6 +13,9 @@
     name = null
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # instance fields
 .field final synthetic $source:Lokio/Source;
@@ -49,7 +52,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 139
     :try_start_0

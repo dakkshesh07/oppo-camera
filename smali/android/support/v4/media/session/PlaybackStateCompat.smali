@@ -652,6 +652,8 @@
 
 .method public getCurrentPosition(Ljava/lang/Long;)J
     .locals 7
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 670
     iget-wide v0, p0, Landroid/support/v4/media/session/PlaybackStateCompat;->mPosition:J

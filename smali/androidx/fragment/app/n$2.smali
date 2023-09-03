@@ -68,7 +68,7 @@
     check-cast v2, Landroid/view/View;
 
     .line 243
-    invoke-static {v2}, Landroidx/core/g/w;->q(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v2}, Landroidx/core/f/w;->q(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -82,7 +82,7 @@
     move-result-object v3
 
     .line 246
-    invoke-static {v2, v3}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/String;)V
 
     :cond_0
     add-int/lit8 v1, v1, 0x1

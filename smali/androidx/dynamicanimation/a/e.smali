@@ -1,697 +1,492 @@
 .class public final Landroidx/dynamicanimation/a/e;
-.super Ljava/lang/Object;
-.source "SpringForce.java"
+.super Landroidx/dynamicanimation/a/b;
+.source "SpringAnimation.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroidx/dynamicanimation/a/b<",
+        "Landroidx/dynamicanimation/a/e;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field a:D
+.field private w:Landroidx/dynamicanimation/a/f;
 
-.field b:D
+.field private x:F
 
-.field private c:Z
-
-.field private d:D
-
-.field private e:D
-
-.field private f:D
-
-.field private g:D
-
-.field private h:D
-
-.field private i:D
-
-.field private final j:Landroidx/dynamicanimation/a/b$a;
+.field private y:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroidx/dynamicanimation/a/d;)V
+    .locals 0
 
-    .line 113
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 80
+    invoke-direct {p0, p1}, Landroidx/dynamicanimation/a/b;-><init>(Landroidx/dynamicanimation/a/d;)V
 
-    const-wide v0, 0x4097700000000000L    # 1500.0
+    const/4 p1, 0x0
 
-    .line 83
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+    .line 62
+    iput-object p1, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
 
-    move-result-wide v0
+    const p1, 0x7f7fffff    # Float.MAX_VALUE
 
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->a:D
+    .line 63
+    iput p1, p0, Landroidx/dynamicanimation/a/e;->x:F
 
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+    const/4 p1, 0x0
 
-    .line 85
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->b:D
-
-    const/4 v0, 0x0
-
-    .line 91
-    iput-boolean v0, p0, Landroidx/dynamicanimation/a/e;->c:Z
-
-    const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
-
-    .line 104
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->i:D
-
-    .line 107
-    new-instance v0, Landroidx/dynamicanimation/a/b$a;
-
-    invoke-direct {v0}, Landroidx/dynamicanimation/a/b$a;-><init>()V
-
-    iput-object v0, p0, Landroidx/dynamicanimation/a/e;->j:Landroidx/dynamicanimation/a/b$a;
+    .line 65
+    iput-boolean p1, p0, Landroidx/dynamicanimation/a/e;->y:Z
 
     return-void
 .end method
 
-.method public constructor <init>(F)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Object;Landroidx/dynamicanimation/a/c;F)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<K:",
+            "Ljava/lang/Object;",
+            ">(TK;",
+            "Landroidx/dynamicanimation/a/c<",
+            "TK;>;F)V"
+        }
+    .end annotation
 
-    .line 122
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 129
+    invoke-direct {p0, p1, p2}, Landroidx/dynamicanimation/a/b;-><init>(Ljava/lang/Object;Landroidx/dynamicanimation/a/c;)V
 
-    const-wide v0, 0x4097700000000000L    # 1500.0
+    const/4 p1, 0x0
 
-    .line 83
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+    .line 62
+    iput-object p1, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
 
-    move-result-wide v0
+    const p1, 0x7f7fffff    # Float.MAX_VALUE
 
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->a:D
+    .line 63
+    iput p1, p0, Landroidx/dynamicanimation/a/e;->x:F
 
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+    const/4 p1, 0x0
 
-    .line 85
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->b:D
+    .line 65
+    iput-boolean p1, p0, Landroidx/dynamicanimation/a/e;->y:Z
 
-    const/4 v0, 0x0
+    .line 130
+    new-instance p1, Landroidx/dynamicanimation/a/f;
 
-    .line 91
-    iput-boolean v0, p0, Landroidx/dynamicanimation/a/e;->c:Z
+    invoke-direct {p1, p3}, Landroidx/dynamicanimation/a/f;-><init>(F)V
 
-    const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
-
-    .line 104
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->i:D
-
-    .line 107
-    new-instance v0, Landroidx/dynamicanimation/a/b$a;
-
-    invoke-direct {v0}, Landroidx/dynamicanimation/a/b$a;-><init>()V
-
-    iput-object v0, p0, Landroidx/dynamicanimation/a/e;->j:Landroidx/dynamicanimation/a/b$a;
-
-    float-to-double v0, p1
-
-    .line 123
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->i:D
+    iput-object p1, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
 
     return-void
 .end method
 
-.method private b()V
-    .locals 8
+.method private f()V
+    .locals 4
+
+    .line 241
+    iget-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    if-eqz v0, :cond_2
+
+    .line 245
+    invoke-virtual {v0}, Landroidx/dynamicanimation/a/f;->a()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    .line 246
+    iget v2, p0, Landroidx/dynamicanimation/a/e;->u:F
+
+    float-to-double v2, v2
+
+    cmpl-double v2, v0, v2
+
+    if-gtz v2, :cond_1
+
+    .line 249
+    iget v2, p0, Landroidx/dynamicanimation/a/e;->v:F
+
+    float-to-double v2, v2
+
+    cmpg-double v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    return-void
+
+    .line 250
+    :cond_0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Final position of the spring cannot be less than the min value."
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     .line 247
-    iget-boolean v0, p0, Landroidx/dynamicanimation/a/e;->c:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 251
-    :cond_0
-    iget-wide v0, p0, Landroidx/dynamicanimation/a/e;->i:D
-
-    const-wide v2, 0x7fefffffffffffffL    # Double.MAX_VALUE
-
-    cmpl-double v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    .line 256
-    iget-wide v0, p0, Landroidx/dynamicanimation/a/e;->b:D
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    cmpl-double v4, v0, v2
-
-    if-lez v4, :cond_1
-
-    neg-double v4, v0
-
-    .line 258
-    iget-wide v6, p0, Landroidx/dynamicanimation/a/e;->a:D
-
-    mul-double/2addr v4, v6
-
-    mul-double/2addr v0, v0
-
-    sub-double/2addr v0, v2
-
-    .line 259
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    mul-double/2addr v6, v0
-
-    add-double/2addr v4, v6
-
-    iput-wide v4, p0, Landroidx/dynamicanimation/a/e;->f:D
-
-    .line 260
-    iget-wide v0, p0, Landroidx/dynamicanimation/a/e;->b:D
-
-    neg-double v4, v0
-
-    iget-wide v6, p0, Landroidx/dynamicanimation/a/e;->a:D
-
-    mul-double/2addr v4, v6
-
-    mul-double/2addr v0, v0
-
-    sub-double/2addr v0, v2
-
-    .line 261
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    mul-double/2addr v6, v0
-
-    sub-double/2addr v4, v6
-
-    iput-wide v4, p0, Landroidx/dynamicanimation/a/e;->g:D
-
-    goto :goto_0
-
     :cond_1
-    const-wide/16 v4, 0x0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    cmpl-double v4, v0, v4
+    const-string v1, "Final position of the spring cannot be greater than the max value."
 
-    if-ltz v4, :cond_2
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    cmpg-double v4, v0, v2
+    throw v0
 
-    if-gez v4, :cond_2
-
-    .line 264
-    iget-wide v4, p0, Landroidx/dynamicanimation/a/e;->a:D
-
-    mul-double/2addr v0, v0
-
-    sub-double/2addr v2, v0
-
-    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    mul-double/2addr v4, v0
-
-    iput-wide v4, p0, Landroidx/dynamicanimation/a/e;->h:D
-
+    .line 242
     :cond_2
-    :goto_0
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    .line 267
-    iput-boolean v0, p0, Landroidx/dynamicanimation/a/e;->c:Z
+    const-string v1, "Incomplete SpringAnimation: Either final position or a spring force needs to be set."
 
-    return-void
-
-    .line 252
-    :cond_3
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Error: Final position of the spring must be set before the animation starts"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
 
 # virtual methods
-.method public a()F
-    .locals 2
-
-    .line 206
-    iget-wide v0, p0, Landroidx/dynamicanimation/a/e;->i:D
-
-    double-to-float v0, v0
-
-    return v0
-.end method
-
-.method a(DDJ)Landroidx/dynamicanimation/a/b$a;
-    .locals 16
-
-    move-object/from16 v0, p0
-
-    .line 276
-    invoke-direct/range {p0 .. p0}, Landroidx/dynamicanimation/a/e;->b()V
-
-    move-wide/from16 v1, p5
-
-    long-to-double v1, v1
-
-    const-wide v3, 0x408f400000000000L    # 1000.0
-
-    div-double/2addr v1, v3
-
-    .line 279
-    iget-wide v3, v0, Landroidx/dynamicanimation/a/e;->i:D
-
-    sub-double v3, p1, v3
-
-    .line 282
-    iget-wide v5, v0, Landroidx/dynamicanimation/a/e;->b:D
-
-    const-wide/high16 v7, 0x3ff0000000000000L    # 1.0
-
-    cmpl-double v9, v5, v7
-
-    const-wide v10, 0x4005bf0a8b145769L    # Math.E
-
-    if-lez v9, :cond_0
-
-    .line 284
-    iget-wide v5, v0, Landroidx/dynamicanimation/a/e;->g:D
-
-    mul-double v7, v5, v3
-
-    sub-double v7, v7, p3
-
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->f:D
-
-    sub-double v14, v5, v12
-
-    div-double/2addr v7, v14
-
-    sub-double v7, v3, v7
-
-    mul-double/2addr v3, v5
-
-    sub-double v3, v3, p3
-
-    sub-double v12, v5, v12
-
-    div-double/2addr v3, v12
-
-    mul-double/2addr v5, v1
-
-    .line 288
-    invoke-static {v10, v11, v5, v6}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v5
-
-    mul-double/2addr v5, v7
-
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->f:D
-
-    mul-double/2addr v12, v1
-
-    .line 289
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v12
-
-    mul-double/2addr v12, v3
-
-    add-double/2addr v5, v12
-
-    .line 290
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->g:D
-
-    mul-double/2addr v7, v12
-
-    mul-double/2addr v12, v1
-
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v12
-
-    mul-double/2addr v7, v12
-
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->f:D
-
-    mul-double/2addr v3, v12
-
-    mul-double/2addr v12, v1
-
-    .line 291
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    mul-double/2addr v3, v1
-
-    add-double/2addr v7, v3
-
-    goto/16 :goto_0
-
-    :cond_0
-    cmpl-double v9, v5, v7
-
-    if-nez v9, :cond_1
-
-    .line 295
-    iget-wide v5, v0, Landroidx/dynamicanimation/a/e;->a:D
-
-    mul-double v7, v5, v3
-
-    add-double v7, p3, v7
-
-    mul-double v12, v7, v1
-
-    add-double/2addr v3, v12
-
-    neg-double v5, v5
-
-    mul-double/2addr v5, v1
-
-    .line 296
-    invoke-static {v10, v11, v5, v6}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v5
-
-    mul-double/2addr v5, v3
-
-    .line 297
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->a:D
-
-    neg-double v12, v12
-
-    mul-double/2addr v12, v1
-
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v12
-
-    mul-double/2addr v3, v12
-
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->a:D
-
-    neg-double v14, v12
-
-    mul-double/2addr v3, v14
-
-    neg-double v12, v12
-
-    mul-double/2addr v12, v1
-
-    .line 298
-    invoke-static {v10, v11, v12, v13}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v1
-
-    mul-double/2addr v7, v1
-
-    add-double/2addr v7, v3
-
-    goto :goto_0
-
-    .line 302
-    :cond_1
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->h:D
-
-    div-double/2addr v7, v12
-
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->a:D
-
-    mul-double v14, v5, v12
-
-    mul-double/2addr v14, v3
-
-    add-double v14, v14, p3
-
-    mul-double/2addr v7, v14
-
-    neg-double v5, v5
-
-    mul-double/2addr v5, v12
-
-    mul-double/2addr v5, v1
-
-    .line 304
-    invoke-static {v10, v11, v5, v6}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v5
-
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->h:D
-
-    mul-double/2addr v12, v1
-
-    .line 305
-    invoke-static {v12, v13}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v12
-
-    mul-double/2addr v12, v3
-
-    iget-wide v14, v0, Landroidx/dynamicanimation/a/e;->h:D
-
-    mul-double/2addr v14, v1
-
-    .line 306
-    invoke-static {v14, v15}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v14
-
-    mul-double/2addr v14, v7
-
-    add-double/2addr v12, v14
-
-    mul-double/2addr v5, v12
-
-    .line 307
-    iget-wide v12, v0, Landroidx/dynamicanimation/a/e;->a:D
-
-    neg-double v14, v12
-
-    mul-double/2addr v14, v5
-
-    iget-wide v10, v0, Landroidx/dynamicanimation/a/e;->b:D
-
-    mul-double/2addr v14, v10
-
-    neg-double v9, v10
-
-    mul-double/2addr v9, v12
-
-    mul-double/2addr v9, v1
-
-    const-wide v11, 0x4005bf0a8b145769L    # Math.E
-
-    .line 308
-    invoke-static {v11, v12, v9, v10}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v9
-
-    iget-wide v11, v0, Landroidx/dynamicanimation/a/e;->h:D
-
-    move-wide/from16 p1, v5
-
-    neg-double v5, v11
-
-    mul-double/2addr v5, v3
-
-    mul-double/2addr v11, v1
-
-    .line 309
-    invoke-static {v11, v12}, Ljava/lang/Math;->sin(D)D
-
-    move-result-wide v3
-
-    mul-double/2addr v5, v3
-
-    iget-wide v3, v0, Landroidx/dynamicanimation/a/e;->h:D
-
-    mul-double/2addr v7, v3
-
-    mul-double/2addr v3, v1
-
-    .line 310
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v1
-
-    mul-double/2addr v7, v1
-
-    add-double/2addr v5, v7
-
-    mul-double/2addr v9, v5
-
-    add-double v7, v14, v9
-
-    move-wide/from16 v5, p1
-
-    .line 313
-    :goto_0
-    iget-object v1, v0, Landroidx/dynamicanimation/a/e;->j:Landroidx/dynamicanimation/a/b$a;
-
-    iget-wide v2, v0, Landroidx/dynamicanimation/a/e;->i:D
-
-    add-double/2addr v5, v2
-
-    double-to-float v2, v5
-
-    iput v2, v1, Landroidx/dynamicanimation/a/b$a;->a:F
-
-    double-to-float v2, v7
-
-    .line 314
-    iput v2, v1, Landroidx/dynamicanimation/a/b$a;->b:F
-
-    return-object v1
-.end method
-
-.method public a(F)Landroidx/dynamicanimation/a/e;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    cmpg-float v0, p1, v0
-
-    if-lez v0, :cond_0
-
-    float-to-double v0, p1
-
-    .line 140
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->a:D
-
-    const/4 p1, 0x0
-
-    .line 142
-    iput-boolean p1, p0, Landroidx/dynamicanimation/a/e;->c:Z
+.method public a(Landroidx/dynamicanimation/a/f;)Landroidx/dynamicanimation/a/e;
+    .locals 0
+
+    .line 151
+    iput-object p1, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
 
     return-object p0
-
-    .line 138
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Spring stiffness constant must be positive."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method a(D)V
-    .locals 2
+.method public a()V
+    .locals 3
 
-    .line 329
-    invoke-static {p1, p2}, Ljava/lang/Math;->abs(D)D
+    .line 158
+    invoke-direct {p0}, Landroidx/dynamicanimation/a/e;->f()V
 
-    move-result-wide p1
+    .line 159
+    iget-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
 
-    iput-wide p1, p0, Landroidx/dynamicanimation/a/e;->d:D
+    invoke-virtual {p0}, Landroidx/dynamicanimation/a/e;->d()F
 
-    .line 330
-    iget-wide p1, p0, Landroidx/dynamicanimation/a/e;->d:D
+    move-result v1
 
-    const-wide v0, 0x404f400000000000L    # 62.5
+    float-to-double v1, v1
 
-    mul-double/2addr p1, v0
+    invoke-virtual {v0, v1, v2}, Landroidx/dynamicanimation/a/f;->a(D)V
 
-    iput-wide p1, p0, Landroidx/dynamicanimation/a/e;->e:D
+    .line 160
+    invoke-super {p0}, Landroidx/dynamicanimation/a/b;->a()V
 
     return-void
 .end method
 
-.method public a(FF)Z
-    .locals 4
+.method a(FF)Z
+    .locals 1
 
-    .line 232
-    invoke-static {p2}, Ljava/lang/Math;->abs(F)F
+    .line 305
+    iget-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
 
-    move-result p2
-
-    float-to-double v0, p2
-
-    iget-wide v2, p0, Landroidx/dynamicanimation/a/e;->e:D
-
-    cmpg-double p2, v0, v2
-
-    if-gez p2, :cond_0
-
-    .line 233
-    invoke-virtual {p0}, Landroidx/dynamicanimation/a/e;->a()F
-
-    move-result p2
-
-    sub-float/2addr p1, p2
-
-    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
+    invoke-virtual {v0, p1, p2}, Landroidx/dynamicanimation/a/f;->a(FF)Z
 
     move-result p1
 
-    float-to-double p1, p1
-
-    iget-wide v0, p0, Landroidx/dynamicanimation/a/e;->d:D
-
-    cmpg-double p1, p1, v0
-
-    if-gez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
     return p1
 .end method
 
-.method public b(F)Landroidx/dynamicanimation/a/e;
-    .locals 2
-
-    const/4 v0, 0x0
-
-    cmpg-float v0, p1, v0
-
-    if-ltz v0, :cond_0
-
-    float-to-double v0, p1
-
-    .line 174
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->b:D
-
-    const/4 p1, 0x0
-
-    .line 176
-    iput-boolean p1, p0, Landroidx/dynamicanimation/a/e;->c:Z
-
-    return-object p0
-
-    .line 172
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Damping ratio must be non-negative"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public c(F)Landroidx/dynamicanimation/a/e;
-    .locals 2
-
-    float-to-double v0, p1
+.method public b()V
+    .locals 3
 
     .line 196
-    iput-wide v0, p0, Landroidx/dynamicanimation/a/e;->i:D
+    invoke-super {p0}, Landroidx/dynamicanimation/a/b;->b()V
 
-    return-object p0
+    .line 197
+    iget v0, p0, Landroidx/dynamicanimation/a/e;->x:F
+
+    const v1, 0x7f7fffff    # Float.MAX_VALUE
+
+    cmpl-float v2, v0, v1
+
+    if-eqz v2, :cond_1
+
+    .line 198
+    iget-object v2, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    if-nez v2, :cond_0
+
+    .line 199
+    new-instance v2, Landroidx/dynamicanimation/a/f;
+
+    invoke-direct {v2, v0}, Landroidx/dynamicanimation/a/f;-><init>(F)V
+
+    iput-object v2, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    goto :goto_0
+
+    .line 201
+    :cond_0
+    invoke-virtual {v2, v0}, Landroidx/dynamicanimation/a/f;->c(F)Landroidx/dynamicanimation/a/f;
+
+    .line 203
+    :goto_0
+    iput v1, p0, Landroidx/dynamicanimation/a/e;->x:F
+
+    :cond_1
+    return-void
+.end method
+
+.method b(J)Z
+    .locals 20
+
+    move-object/from16 v0, p0
+
+    .line 259
+    iget-boolean v1, v0, Landroidx/dynamicanimation/a/e;->y:Z
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const v5, 0x7f7fffff    # Float.MAX_VALUE
+
+    if-eqz v1, :cond_1
+
+    .line 260
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->x:F
+
+    cmpl-float v6, v1, v5
+
+    if-eqz v6, :cond_0
+
+    .line 261
+    iget-object v6, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    invoke-virtual {v6, v1}, Landroidx/dynamicanimation/a/f;->c(F)Landroidx/dynamicanimation/a/f;
+
+    .line 262
+    iput v5, v0, Landroidx/dynamicanimation/a/e;->x:F
+
+    .line 264
+    :cond_0
+    iget-object v1, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    invoke-virtual {v1}, Landroidx/dynamicanimation/a/f;->a()F
+
+    move-result v1
+
+    iput v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    .line 265
+    iput v4, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    .line 266
+    iput-boolean v3, v0, Landroidx/dynamicanimation/a/e;->y:Z
+
+    return v2
+
+    .line 270
+    :cond_1
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->x:F
+
+    cmpl-float v1, v1, v5
+
+    if-eqz v1, :cond_2
+
+    .line 273
+    iget-object v6, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    float-to-double v7, v1
+
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    float-to-double v9, v1
+
+    const-wide/16 v11, 0x2
+
+    div-long v18, p1, v11
+
+    move-wide/from16 v11, v18
+
+    invoke-virtual/range {v6 .. v12}, Landroidx/dynamicanimation/a/f;->a(DDJ)Landroidx/dynamicanimation/a/b$a;
+
+    move-result-object v1
+
+    .line 274
+    iget-object v6, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    iget v7, v0, Landroidx/dynamicanimation/a/e;->x:F
+
+    invoke-virtual {v6, v7}, Landroidx/dynamicanimation/a/f;->c(F)Landroidx/dynamicanimation/a/f;
+
+    .line 275
+    iput v5, v0, Landroidx/dynamicanimation/a/e;->x:F
+
+    .line 277
+    iget-object v13, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    iget v5, v1, Landroidx/dynamicanimation/a/b$a;->a:F
+
+    float-to-double v14, v5
+
+    iget v1, v1, Landroidx/dynamicanimation/a/b$a;->b:F
+
+    float-to-double v5, v1
+
+    move-wide/from16 v16, v5
+
+    invoke-virtual/range {v13 .. v19}, Landroidx/dynamicanimation/a/f;->a(DDJ)Landroidx/dynamicanimation/a/b$a;
+
+    move-result-object v1
+
+    .line 278
+    iget v5, v1, Landroidx/dynamicanimation/a/b$a;->a:F
+
+    iput v5, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    .line 279
+    iget v1, v1, Landroidx/dynamicanimation/a/b$a;->b:F
+
+    iput v1, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    goto :goto_0
+
+    .line 282
+    :cond_2
+    iget-object v13, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    float-to-double v14, v1
+
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    float-to-double v5, v1
+
+    move-wide/from16 v16, v5
+
+    move-wide/from16 v18, p1
+
+    invoke-virtual/range {v13 .. v19}, Landroidx/dynamicanimation/a/f;->a(DDJ)Landroidx/dynamicanimation/a/b$a;
+
+    move-result-object v1
+
+    .line 283
+    iget v5, v1, Landroidx/dynamicanimation/a/b$a;->a:F
+
+    iput v5, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    .line 284
+    iget v1, v1, Landroidx/dynamicanimation/a/b$a;->b:F
+
+    iput v1, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    .line 287
+    :goto_0
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    iget v5, v0, Landroidx/dynamicanimation/a/e;->v:F
+
+    invoke-static {v1, v5}, Ljava/lang/Math;->max(FF)F
+
+    move-result v1
+
+    iput v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    .line 288
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    iget v5, v0, Landroidx/dynamicanimation/a/e;->u:F
+
+    invoke-static {v1, v5}, Ljava/lang/Math;->min(FF)F
+
+    move-result v1
+
+    iput v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    .line 290
+    iget v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    iget v5, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    invoke-virtual {v0, v1, v5}, Landroidx/dynamicanimation/a/e;->a(FF)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 291
+    iget-object v1, v0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    invoke-virtual {v1}, Landroidx/dynamicanimation/a/f;->a()F
+
+    move-result v1
+
+    iput v1, v0, Landroidx/dynamicanimation/a/e;->p:F
+
+    .line 292
+    iput v4, v0, Landroidx/dynamicanimation/a/e;->o:F
+
+    return v2
+
+    :cond_3
+    return v3
+.end method
+
+.method public e()Landroidx/dynamicanimation/a/f;
+    .locals 1
+
+    .line 139
+    iget-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    return-object v0
+.end method
+
+.method public e(F)V
+    .locals 1
+
+    .line 176
+    invoke-virtual {p0}, Landroidx/dynamicanimation/a/e;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 177
+    iput p1, p0, Landroidx/dynamicanimation/a/e;->x:F
+
+    goto :goto_0
+
+    .line 179
+    :cond_0
+    iget-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    if-nez v0, :cond_1
+
+    .line 180
+    new-instance v0, Landroidx/dynamicanimation/a/f;
+
+    invoke-direct {v0, p1}, Landroidx/dynamicanimation/a/f;-><init>(F)V
+
+    iput-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    .line 182
+    :cond_1
+    iget-object v0, p0, Landroidx/dynamicanimation/a/e;->w:Landroidx/dynamicanimation/a/f;
+
+    invoke-virtual {v0, p1}, Landroidx/dynamicanimation/a/f;->c(F)Landroidx/dynamicanimation/a/f;
+
+    .line 183
+    invoke-virtual {p0}, Landroidx/dynamicanimation/a/e;->a()V
+
+    :goto_0
+    return-void
 .end method

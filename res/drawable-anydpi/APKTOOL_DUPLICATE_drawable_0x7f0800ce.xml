@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="72.0" android:viewportHeight="72.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <group android:name="_R_G">
+        <group android:name="_R_G_L_2_G" android:scaleX="1.0" android:scaleY="1.0" android:translateX="36.0" android:translateY="36.0">
+            <path android:name="_R_G_L_2_G_D_0_P_0" android:pathData=" M22 -10 C22,-10 22,10 22,10 C22,16.62 16.62,22 10,22 C10,22 -10,22 -10,22 C-16.62,22 -22,16.62 -22,10 C-22,10 -22,-10 -22,-10 C-22,-16.62 -16.62,-22 -10,-22 C-10,-22 10,-22 10,-22 C16.62,-22 22,-16.62 22,-10c " android:strokeColor="?APKTOOL_DUPLICATE_attr_0x7f040136" android:strokeWidth="4.0" android:strokeLineCap="square" android:strokeLineJoin="round" />
+        </group>
+        <group android:name="_R_G_L_1_G" android:translateX="36.0" android:translateY="36.0" />
+        <group android:name="_R_G_L_0_G" android:translateX="36.0" android:translateY="36.0">
+            <path android:name="_R_G_L_0_G_D_0_P_0" android:pathData=" M-11.14 0 C-10.02,0 9.96,0 11.07,0 C12.19,0 -12.25,0 -11.14,0c " android:strokeColor="@color/APKTOOL_DUPLICATE_color_0x7f0601b4" android:strokeWidth="4.0" android:trimPathStart="0.51" android:trimPathEnd="0.99" android:trimPathOffset="0.0" android:strokeLineCap="square" android:strokeLineJoin="round" android:strokeAlpha="1.0" />
+        </group>
+    </group>
+    <group android:name="time_group" />
+</vector>

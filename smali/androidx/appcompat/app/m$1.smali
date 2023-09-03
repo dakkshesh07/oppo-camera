@@ -1,5 +1,5 @@
 .class Landroidx/appcompat/app/m$1;
-.super Landroidx/core/g/ac;
+.super Landroidx/core/f/ac;
 .source "WindowDecorActionBar.java"
 
 
@@ -25,7 +25,7 @@
     .line 135
     iput-object p1, p0, Landroidx/appcompat/app/m$1;->a:Landroidx/appcompat/app/m;
 
-    invoke-direct {p0}, Landroidx/core/g/ac;-><init>()V
+    invoke-direct {p0}, Landroidx/core/f/ac;-><init>()V
 
     return-void
 .end method
@@ -105,7 +105,7 @@
 
     iget-object p1, p1, Landroidx/appcompat/app/m;->b:Landroidx/appcompat/widget/ActionBarOverlayLayout;
 
-    invoke-static {p1}, Landroidx/core/g/w;->s(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->s(Landroid/view/View;)V
 
     :cond_1
     return-void

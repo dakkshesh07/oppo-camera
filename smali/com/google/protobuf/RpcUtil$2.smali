@@ -35,14 +35,14 @@
 .method constructor <init>(Lcom/google/protobuf/RpcCallback;)V
     .locals 0
 
-    .line 108
+    .line 101
     iput-object p1, p0, Lcom/google/protobuf/RpcUtil$2;->val$originalCallback:Lcom/google/protobuf/RpcCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 109
+    .line 102
     iput-boolean p1, p0, Lcom/google/protobuf/RpcUtil$2;->alreadyCalled:Z
 
     return-void
@@ -58,10 +58,10 @@
         }
     .end annotation
 
-    .line 113
+    .line 106
     monitor-enter p0
 
-    .line 114
+    .line 107
     :try_start_0
     iget-boolean v0, p0, Lcom/google/protobuf/RpcUtil$2;->alreadyCalled:Z
 
@@ -69,22 +69,22 @@
 
     const/4 v0, 0x1
 
-    .line 117
+    .line 110
     iput-boolean v0, p0, Lcom/google/protobuf/RpcUtil$2;->alreadyCalled:Z
 
-    .line 118
+    .line 111
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 120
+    .line 113
     iget-object v0, p0, Lcom/google/protobuf/RpcUtil$2;->val$originalCallback:Lcom/google/protobuf/RpcCallback;
 
     invoke-interface {v0, p1}, Lcom/google/protobuf/RpcCallback;->run(Ljava/lang/Object;)V
 
     return-void
 
-    .line 115
+    .line 108
     :cond_0
     :try_start_1
     new-instance p1, Lcom/google/protobuf/RpcUtil$AlreadyCalledException;
@@ -96,7 +96,7 @@
     :catchall_0
     move-exception p1
 
-    .line 118
+    .line 111
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

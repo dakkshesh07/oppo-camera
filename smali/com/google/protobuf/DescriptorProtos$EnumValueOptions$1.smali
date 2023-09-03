@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 27825
+    .line 33535
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 27830
+    .line 33541
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$EnumValueOptions;
 
     const/4 v1, 0x0
@@ -60,7 +60,7 @@
         }
     .end annotation
 
-    .line 27825
+    .line 33535
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$EnumValueOptions$1;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$EnumValueOptions;
 
     move-result-object p1

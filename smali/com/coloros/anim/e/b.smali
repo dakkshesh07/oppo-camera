@@ -1,261 +1,166 @@
 .class public Lcom/coloros/anim/e/b;
 .super Ljava/lang/Object;
-.source "AnimatableTextPropertiesParser.java"
+.source "EffectiveValueCallback.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# instance fields
+.field protected a:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
+
+.field private final b:Lcom/coloros/anim/e/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/coloros/anim/e/a<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+.field private c:Lcom/coloros/anim/a/b/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/coloros/anim/a/b/a<",
+            "**>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public static a(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/k;
-    .locals 6
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 21
-    invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
-
-    const/4 v0, 0x0
-
-    move-object v1, v0
-
-    .line 22
-    :goto_0
-    invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
+.method public constructor <init>()V
+    .locals 1
 
     .line 23
-    invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v2
+    .line 13
+    new-instance v0, Lcom/coloros/anim/e/a;
 
-    const/4 v3, -0x1
+    invoke-direct {v0}, Lcom/coloros/anim/e/a;-><init>()V
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v4
-
-    const/16 v5, 0x61
-
-    if-eq v4, v5, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const-string v4, "a"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v3, 0x0
-
-    :cond_1
-    :goto_1
-    if-eqz v3, :cond_2
-
-    .line 28
-    invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
-
-    goto :goto_0
-
-    .line 25
-    :cond_2
-    invoke-static {p0, p1}, Lcom/coloros/anim/e/b;->b(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/k;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    .line 31
-    :cond_3
-    invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
-
-    if-nez v1, :cond_4
-
-    .line 34
-    new-instance p0, Lcom/coloros/anim/c/a/k;
-
-    invoke-direct {p0, v0, v0, v0, v0}, Lcom/coloros/anim/c/a/k;-><init>(Lcom/coloros/anim/c/a/a;Lcom/coloros/anim/c/a/a;Lcom/coloros/anim/c/a/b;Lcom/coloros/anim/c/a/b;)V
-
-    return-object p0
-
-    :cond_4
-    return-object v1
-.end method
-
-.method private static b(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/k;
-    .locals 11
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;
-        }
-    .end annotation
-
-    .line 46
-    invoke-virtual {p0}, Landroid/util/JsonReader;->beginObject()V
+    iput-object v0, p0, Lcom/coloros/anim/e/b;->b:Lcom/coloros/anim/e/a;
 
     const/4 v0, 0x0
 
-    move-object v1, v0
+    .line 18
+    iput-object v0, p0, Lcom/coloros/anim/e/b;->a:Ljava/lang/Object;
 
-    move-object v2, v1
+    return-void
+.end method
 
-    move-object v3, v2
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 
-    .line 47
-    :goto_0
-    invoke-virtual {p0}, Landroid/util/JsonReader;->hasNext()Z
+    .line 26
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result v4
+    .line 13
+    new-instance v0, Lcom/coloros/anim/e/a;
 
-    if-eqz v4, :cond_9
+    invoke-direct {v0}, Lcom/coloros/anim/e/a;-><init>()V
 
-    .line 48
-    invoke-virtual {p0}, Landroid/util/JsonReader;->nextName()Ljava/lang/String;
+    iput-object v0, p0, Lcom/coloros/anim/e/b;->b:Lcom/coloros/anim/e/a;
 
-    move-result-object v4
+    const/4 v0, 0x0
 
-    const/4 v5, -0x1
+    .line 18
+    iput-object v0, p0, Lcom/coloros/anim/e/b;->a:Ljava/lang/Object;
 
-    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
+    .line 27
+    iput-object p1, p0, Lcom/coloros/anim/e/b;->a:Ljava/lang/Object;
 
-    move-result v6
+    return-void
+.end method
 
-    const/16 v7, 0x74
 
-    const/4 v8, 0x3
+# virtual methods
+.method public final a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
+    .locals 8
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(FFTT;TT;FFF)TT;"
+        }
+    .end annotation
 
-    const/4 v9, 0x2
+    .line 57
+    iget-object v0, p0, Lcom/coloros/anim/e/b;->b:Lcom/coloros/anim/e/a;
 
-    const/4 v10, 0x1
+    move v1, p1
 
-    if-eq v6, v7, :cond_3
+    move v2, p2
 
-    const/16 v7, 0xcbd
+    move-object v3, p3
 
-    if-eq v6, v7, :cond_2
+    move-object v4, p4
 
-    const/16 v7, 0xe50
+    move v5, p5
 
-    if-eq v6, v7, :cond_1
+    move v6, p6
 
-    const/16 v7, 0xe64
+    move v7, p7
 
-    if-eq v6, v7, :cond_0
+    .line 58
+    invoke-virtual/range {v0 .. v7}, Lcom/coloros/anim/e/a;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Lcom/coloros/anim/e/a;
 
-    goto :goto_1
+    move-result-object p1
 
-    :cond_0
-    const-string v6, "sw"
+    .line 57
+    invoke-virtual {p0, p1}, Lcom/coloros/anim/e/b;->a(Lcom/coloros/anim/e/a;)Ljava/lang/Object;
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v4
+    return-object p1
+.end method
 
-    if-eqz v4, :cond_4
+.method public a(Lcom/coloros/anim/e/a;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/coloros/anim/e/a<",
+            "TT;>;)TT;"
+        }
+    .end annotation
 
-    move v5, v9
+    .line 37
+    iget-object p1, p0, Lcom/coloros/anim/e/b;->a:Ljava/lang/Object;
 
-    goto :goto_1
+    return-object p1
+.end method
 
-    :cond_1
-    const-string v6, "sc"
+.method public final a(Lcom/coloros/anim/a/b/a;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/coloros/anim/a/b/a<",
+            "**>;)V"
+        }
+    .end annotation
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 71
+    iput-object p1, p0, Lcom/coloros/anim/e/b;->c:Lcom/coloros/anim/a/b/a;
 
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    move v5, v10
-
-    goto :goto_1
-
-    :cond_2
-    const-string v6, "fc"
-
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    const/4 v5, 0x0
-
-    goto :goto_1
-
-    :cond_3
-    const-string v6, "t"
-
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    move v5, v8
-
-    :cond_4
-    :goto_1
-    if-eqz v5, :cond_8
-
-    if-eq v5, v10, :cond_7
-
-    if-eq v5, v9, :cond_6
-
-    if-eq v5, v8, :cond_5
-
-    .line 62
-    invoke-virtual {p0}, Landroid/util/JsonReader;->skipValue()V
-
-    goto :goto_0
-
-    .line 59
-    :cond_5
-    invoke-static {p0, p1}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    .line 56
-    :cond_6
-    invoke-static {p0, p1}, Lcom/coloros/anim/e/d;->a(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/b;
-
-    move-result-object v2
-
-    goto :goto_0
-
-    .line 53
-    :cond_7
-    invoke-static {p0, p1}, Lcom/coloros/anim/e/d;->g(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/a;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    .line 50
-    :cond_8
-    invoke-static {p0, p1}, Lcom/coloros/anim/e/d;->g(Landroid/util/JsonReader;Lcom/coloros/anim/a;)Lcom/coloros/anim/c/a/a;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 65
-    :cond_9
-    invoke-virtual {p0}, Landroid/util/JsonReader;->endObject()V
-
-    .line 67
-    new-instance p0, Lcom/coloros/anim/c/a/k;
-
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/coloros/anim/c/a/k;-><init>(Lcom/coloros/anim/c/a/a;Lcom/coloros/anim/c/a/a;Lcom/coloros/anim/c/a/b;Lcom/coloros/anim/c/a/b;)V
-
-    return-object p0
+    return-void
 .end method

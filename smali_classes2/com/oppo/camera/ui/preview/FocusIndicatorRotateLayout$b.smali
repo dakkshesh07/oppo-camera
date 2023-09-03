@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;)V
     .locals 0
 
-    .line 119
+    .line 113
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout$b;->a:Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout$1;)V
     .locals 0
 
-    .line 119
+    .line 113
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout$b;-><init>(Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public run()V
     .locals 4
 
-    .line 123
+    .line 117
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout$b;->a:Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;->a(Lcom/oppo/camera/ui/preview/FocusIndicatorRotateLayout;)Ljava/lang/Runnable;

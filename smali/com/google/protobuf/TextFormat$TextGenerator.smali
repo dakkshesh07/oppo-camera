@@ -21,42 +21,49 @@
 
 .field private final output:Ljava/lang/Appendable;
 
+.field private final singleLineMode:Z
+
 
 # direct methods
-.method private constructor <init>(Ljava/lang/Appendable;)V
+.method private constructor <init>(Ljava/lang/Appendable;Z)V
     .locals 1
 
-    .line 532
+    .line 741
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 529
+    .line 734
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->indent:Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    .line 530
+    .line 739
     iput-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
 
-    .line 533
+    .line 742
     iput-object p1, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->output:Ljava/lang/Appendable;
 
+    .line 743
+    iput-boolean p2, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->singleLineMode:Z
+
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/Appendable;Lcom/google/protobuf/TextFormat$1;)V
+.method synthetic constructor <init>(Ljava/lang/Appendable;ZLcom/google/protobuf/TextFormat$1;)V
     .locals 0
 
-    .line 527
-    invoke-direct {p0, p1}, Lcom/google/protobuf/TextFormat$TextGenerator;-><init>(Ljava/lang/Appendable;)V
+    .line 732
+    invoke-direct {p0, p1, p2}, Lcom/google/protobuf/TextFormat$TextGenerator;-><init>(Ljava/lang/Appendable;Z)V
 
     return-void
 .end method
 
-.method private write(Ljava/lang/CharSequence;)V
+
+# virtual methods
+.method public eol()V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -64,48 +71,31 @@
         }
     .end annotation
 
-    .line 576
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
+    .line 782
+    iget-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->singleLineMode:Z
 
     if-nez v0, :cond_0
 
-    return-void
-
-    .line 579
-    :cond_0
-    iget-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    .line 580
-    iput-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
-
-    .line 581
+    .line 783
     iget-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->output:Ljava/lang/Appendable;
 
-    iget-object v1, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->indent:Ljava/lang/StringBuilder;
+    const-string v1, "\n"
 
     invoke-interface {v0, v1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 583
-    :cond_1
-    iget-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->output:Ljava/lang/Appendable;
+    :cond_0
+    const/4 v0, 0x1
 
-    invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+    .line 785
+    iput-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
 
     return-void
 .end method
 
-
-# virtual methods
 .method public indent()V
     .locals 2
 
-    .line 542
+    .line 752
     iget-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->indent:Ljava/lang/StringBuilder;
 
     const-string v1, "  "
@@ -116,9 +106,9 @@
 .end method
 
 .method public outdent()V
-    .locals 3
+    .locals 2
 
-    .line 550
+    .line 757
     iget-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->indent:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -127,16 +117,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 555
+    .line 761
     iget-object v1, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->indent:Ljava/lang/StringBuilder;
 
-    add-int/lit8 v2, v0, -0x2
+    add-int/lit8 v0, v0, -0x2
 
-    invoke-virtual {v1, v2, v0}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->setLength(I)V
 
     return-void
 
-    .line 552
+    .line 759
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -148,62 +138,47 @@
 .end method
 
 .method public print(Ljava/lang/CharSequence;)V
-    .locals 5
+    .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;
         }
     .end annotation
 
-    .line 562
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    .line 769
+    iget-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
 
-    move-result v0
+    if-eqz v0, :cond_1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    move v2, v1
+    .line 770
+    iput-boolean v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    .line 771
+    iget-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->output:Ljava/lang/Appendable;
 
-    .line 566
-    invoke-interface {p1, v1}, Ljava/lang/CharSequence;->charAt(I)C
+    iget-boolean v1, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->singleLineMode:Z
 
-    move-result v3
+    if-eqz v1, :cond_0
 
-    const/16 v4, 0xa
-
-    if-ne v3, v4, :cond_0
-
-    add-int/lit8 v3, v1, 0x1
-
-    .line 567
-    invoke-interface {p1, v2, v3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-direct {p0, v2}, Lcom/google/protobuf/TextFormat$TextGenerator;->write(Ljava/lang/CharSequence;)V
-
-    const/4 v2, 0x1
-
-    .line 569
-    iput-boolean v2, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->atStartOfLine:Z
-
-    move v2, v3
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
+    const-string v1, " "
 
     goto :goto_0
 
-    .line 572
+    :cond_0
+    iget-object v1, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->indent:Ljava/lang/StringBuilder;
+
+    :goto_0
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-interface {v0, v1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
+
+    .line 773
     :cond_1
-    invoke-interface {p1, v2, v0}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/google/protobuf/TextFormat$TextGenerator;->output:Ljava/lang/Appendable;
 
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lcom/google/protobuf/TextFormat$TextGenerator;->write(Ljava/lang/CharSequence;)V
+    invoke-interface {v0, p1}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
     return-void
 .end method

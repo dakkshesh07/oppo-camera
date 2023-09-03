@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/coloros/anim/g;->b(Landroid/content/Context;I)Lcom/coloros/anim/f;
+    value = Lcom/coloros/anim/g;->a(Landroid/content/Context;I)Lcom/coloros/anim/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,17 +28,17 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/ref/WeakReference;
+.field final synthetic a:Landroid/content/Context;
 
 .field final synthetic b:I
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/ref/WeakReference;I)V
+.method constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    .line 188
-    iput-object p1, p0, Lcom/coloros/anim/g$7;->a:Ljava/lang/ref/WeakReference;
+    .line 175
+    iput-object p1, p0, Lcom/coloros/anim/g$7;->a:Landroid/content/Context;
 
     iput p2, p0, Lcom/coloros/anim/g$7;->b:I
 
@@ -60,36 +60,14 @@
         }
     .end annotation
 
-    .line 191
-    iget-object v0, p0, Lcom/coloros/anim/g$7;->a:Ljava/lang/ref/WeakReference;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 192
-    iget-object v0, p0, Lcom/coloros/anim/g$7;->a:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
+    .line 178
+    iget-object v0, p0, Lcom/coloros/anim/g$7;->a:Landroid/content/Context;
 
     iget v1, p0, Lcom/coloros/anim/g$7;->b:I
 
     invoke-static {v0, v1}, Lcom/coloros/anim/g;->c(Landroid/content/Context;I)Lcom/coloros/anim/e;
 
     move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
 
     return-object v0
 .end method
@@ -102,7 +80,7 @@
         }
     .end annotation
 
-    .line 188
+    .line 175
     invoke-virtual {p0}, Lcom/coloros/anim/g$7;->a()Lcom/coloros/anim/e;
 
     move-result-object v0

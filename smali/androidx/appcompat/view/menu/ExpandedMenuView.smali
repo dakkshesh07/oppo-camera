@@ -8,6 +8,11 @@
 .implements Landroidx/appcompat/view/menu/o;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final a:[I
 
@@ -67,19 +72,19 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object p1
 
     .line 62
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
     .line 63
-    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, v1}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -89,14 +94,14 @@
     const/4 p2, 0x1
 
     .line 65
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p3
 
     if-eqz p3, :cond_1
 
     .line 66
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
@@ -104,7 +109,7 @@
 
     .line 68
     :cond_1
-    invoke-virtual {p1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 .end method

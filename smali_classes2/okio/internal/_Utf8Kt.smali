@@ -3,13 +3,18 @@
 .source "-Utf8.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # direct methods
 .method public static final commonAsUtf8ToByteArray(Ljava/lang/String;)[B
     .locals 12
 
     const-string v0, "$this$commonAsUtf8ToByteArray"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 42
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -283,7 +288,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v3}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v3}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 
@@ -307,7 +312,7 @@
 
     move-result-object p0
 
-    invoke-static {p0, v3}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v3}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -323,7 +328,7 @@
 
     const-string v3, "$this$commonToUtf8String"
 
-    invoke-static {v0, v3}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-ltz v1, :cond_27
 

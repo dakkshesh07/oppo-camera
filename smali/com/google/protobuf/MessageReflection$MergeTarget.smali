@@ -60,6 +60,9 @@
 .method public abstract hasOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Z
 .end method
 
+.method public abstract newEmptyTargetForField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Lcom/google/protobuf/Message;)Lcom/google/protobuf/MessageReflection$MergeTarget;
+.end method
+
 .method public abstract newMergeTargetForField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Lcom/google/protobuf/Message;)Lcom/google/protobuf/MessageReflection$MergeTarget;
 .end method
 

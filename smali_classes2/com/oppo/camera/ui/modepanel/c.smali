@@ -1,215 +1,474 @@
 .class public Lcom/oppo/camera/ui/modepanel/c;
 .super Ljava/lang/Object;
-.source "ModePanelUIControl.java"
+.source "DragHelperUtils.java"
 
 
-# instance fields
-.field private a:Landroid/app/Activity;
+# static fields
+.field protected static a:I = 0xf
 
-.field private b:Landroid/view/ViewGroup;
+.field protected static b:I = 0xa
 
-.field private c:Lcom/oppo/camera/ui/modepanel/d;
+.field protected static c:F = 100.0f
 
-.field private d:Lcom/oppo/camera/ui/modepanel/d$a;
+.field protected static d:F = 200.0f
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Activity;Landroid/view/ViewGroup;)V
-    .locals 1
-
-    .line 15
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 9
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->a:Landroid/app/Activity;
-
-    .line 10
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->b:Landroid/view/ViewGroup;
-
-    .line 12
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    .line 13
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->d:Lcom/oppo/camera/ui/modepanel/d$a;
-
-    .line 16
-    iput-object p1, p0, Lcom/oppo/camera/ui/modepanel/c;->a:Landroid/app/Activity;
-
-    .line 17
-    iput-object p2, p0, Lcom/oppo/camera/ui/modepanel/c;->b:Landroid/view/ViewGroup;
-
-    return-void
-.end method
-
-.method private c()V
-    .locals 3
-
-    .line 25
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    if-nez v0, :cond_0
-
-    .line 26
-    new-instance v0, Lcom/oppo/camera/ui/modepanel/d;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/modepanel/c;->a:Landroid/app/Activity;
-
-    iget-object v2, p0, Lcom/oppo/camera/ui/modepanel/c;->b:Landroid/view/ViewGroup;
-
-    invoke-direct {v0, v1, v2}, Lcom/oppo/camera/ui/modepanel/d;-><init>(Landroid/app/Activity;Landroid/view/ViewGroup;)V
-
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    .line 27
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/modepanel/c;->d:Lcom/oppo/camera/ui/modepanel/d$a;
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/modepanel/d;->a(Lcom/oppo/camera/ui/modepanel/d$a;)V
-
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public a(Landroid/view/animation/Animation;)V
-    .locals 2
-
-    .line 42
-    invoke-direct {p0}, Lcom/oppo/camera/ui/modepanel/c;->c()V
-
-    .line 43
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lcom/oppo/camera/ui/modepanel/d;->a(ILandroid/view/animation/Animation;)V
-
-    return-void
-.end method
-
-.method public a(Lcom/oppo/camera/ui/modepanel/d$a;)V
+.method static constructor <clinit>()V
     .locals 0
 
-    .line 21
-    iput-object p1, p0, Lcom/oppo/camera/ui/modepanel/c;->d:Lcom/oppo/camera/ui/modepanel/d$a;
-
     return-void
 .end method
 
-.method public a(Ljava/lang/String;)V
+.method public static a()F
     .locals 1
 
-    .line 32
-    invoke-direct {p0}, Lcom/oppo/camera/ui/modepanel/c;->c()V
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 33
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/modepanel/d;->a(Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method
 
-.method public a(Z)V
+.method public static a(FI)I
     .locals 2
 
-    .line 37
-    invoke-direct {p0}, Lcom/oppo/camera/ui/modepanel/c;->c()V
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 38
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
+    cmpl-float v1, p0, v0
 
-    const/4 v1, 0x0
+    if-lez v1, :cond_0
 
-    invoke-virtual {v0, v1, p1}, Lcom/oppo/camera/ui/modepanel/d;->a(IZ)V
+    move p0, v0
 
-    return-void
+    :cond_0
+    int-to-float p1, p1
+
+    mul-float/2addr p0, p1
+
+    float-to-int p0, p0
+
+    return p0
 .end method
 
-.method public a()Z
+.method public static a(II)I
     .locals 1
 
-    .line 59
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
+    int-to-float p0, p0
 
-    if-eqz v0, :cond_0
-
-    .line 60
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/modepanel/d;->a()Z
+    .line 44
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->c()F
 
     move-result v0
 
-    return v0
+    cmpg-float v0, p0, v0
+
+    if-gez v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
 
     :cond_0
-    const/4 v0, 0x0
+    int-to-float p1, p1
 
-    return v0
+    .line 46
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->c()F
+
+    move-result v0
+
+    sub-float/2addr p1, v0
+
+    cmpl-float p0, p0, p1
+
+    if-lez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public b()V
-    .locals 1
+.method public static a(Landroid/view/View;II)I
+    .locals 0
 
-    const/4 v0, 0x0
+    .line 29
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    .line 73
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->a:Landroid/app/Activity;
+    move-result p1
 
-    .line 74
-    iput-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->b:Landroid/view/ViewGroup;
+    invoke-static {p2, p1}, Lcom/oppo/camera/ui/modepanel/c;->a(II)I
 
-    return-void
+    move-result p1
+
+    if-gez p1, :cond_0
+
+    .line 33
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->c()F
+
+    move-result p0
+
+    int-to-float p1, p2
+
+    sub-float/2addr p0, p1
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->c()F
+
+    move-result p1
+
+    div-float/2addr p0, p1
+
+    .line 34
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->d()I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/oppo/camera/ui/modepanel/c;->a(FI)I
+
+    move-result p0
+
+    neg-int p0, p0
+
+    goto :goto_0
+
+    :cond_0
+    if-lez p1, :cond_1
+
+    .line 36
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result p0
+
+    sub-int/2addr p2, p0
+
+    int-to-float p0, p2
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->c()F
+
+    move-result p1
+
+    add-float/2addr p0, p1
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->c()F
+
+    move-result p1
+
+    div-float/2addr p0, p1
+
+    .line 37
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->d()I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/oppo/camera/ui/modepanel/c;->a(FI)I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
 .end method
 
-.method public b(Landroid/view/animation/Animation;)V
+.method public static a(Landroid/view/View;)Landroid/graphics/Rect;
+    .locals 8
+
+    const/4 v0, 0x2
+
+    .line 105
+    new-array v0, v0, [I
+
+    .line 106
+    invoke-virtual {p0, v0}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 108
+    new-instance v1, Landroid/graphics/Rect;
+
+    const/4 v2, 0x0
+
+    aget v3, v0, v2
+
+    const/4 v4, 0x1
+
+    aget v5, v0, v4
+
+    aget v2, v0, v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v6
+
+    int-to-float v6, v6
+
+    invoke-virtual {p0}, Landroid/view/View;->getScaleX()F
+
+    move-result v7
+
+    mul-float/2addr v6, v7
+
+    add-float/2addr v2, v6
+
+    float-to-int v2, v2
+
+    aget v0, v0, v4
+
+    int-to-float v0, v0
+
+    .line 109
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-virtual {p0}, Landroid/view/View;->getScaleY()F
+
+    move-result p0
+
+    mul-float/2addr v4, p0
+
+    add-float/2addr v0, v4
+
+    float-to-int p0, v0
+
+    invoke-direct {v1, v3, v5, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    return-object v1
+.end method
+
+.method public static a(Lcom/oppo/camera/ui/modepanel/k;)Z
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    .line 14
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/modepanel/k;->h()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static b()F
     .locals 2
 
-    .line 53
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
+    .line 58
+    sget v0, Lcom/oppo/camera/ui/modepanel/c;->c:F
 
-    if-eqz v0, :cond_0
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->a()F
 
-    const/16 v1, 0x8
+    move-result v1
 
-    .line 54
-    invoke-virtual {v0, v1, p1}, Lcom/oppo/camera/ui/modepanel/d;->a(ILandroid/view/animation/Animation;)V
+    div-float/2addr v0, v1
 
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public b(Z)V
-    .locals 2
-
-    .line 47
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
-
-    if-eqz v0, :cond_0
-
-    const/16 v1, 0x8
-
-    .line 48
-    invoke-virtual {v0, v1, p1}, Lcom/oppo/camera/ui/modepanel/d;->a(IZ)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public c(Z)V
+.method protected static b(II)I
     .locals 1
 
-    .line 67
-    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/c;->c:Lcom/oppo/camera/ui/modepanel/d;
+    int-to-float p0, p0
 
-    if-eqz v0, :cond_0
+    .line 95
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->b()F
 
-    .line 68
-    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/modepanel/d;->a(Z)V
+    move-result v0
+
+    cmpg-float v0, p0, v0
+
+    if-gez v0, :cond_0
+
+    const/4 p0, -0x1
+
+    return p0
 
     :cond_0
-    return-void
+    int-to-float p1, p1
+
+    .line 97
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->b()F
+
+    move-result v0
+
+    sub-float/2addr p1, v0
+
+    cmpl-float p0, p0, p1
+
+    if-lez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static b(Landroid/view/View;II)I
+    .locals 0
+
+    .line 80
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Lcom/oppo/camera/ui/modepanel/c;->b(II)I
+
+    move-result p2
+
+    if-gez p2, :cond_0
+
+    .line 84
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->b()F
+
+    move-result p0
+
+    int-to-float p1, p1
+
+    sub-float/2addr p0, p1
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->b()F
+
+    move-result p1
+
+    div-float/2addr p0, p1
+
+    .line 85
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->e()I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/oppo/camera/ui/modepanel/c;->a(FI)I
+
+    move-result p0
+
+    neg-int p0, p0
+
+    goto :goto_0
+
+    :cond_0
+    if-lez p2, :cond_1
+
+    .line 87
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result p0
+
+    sub-int/2addr p1, p0
+
+    int-to-float p0, p1
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->b()F
+
+    move-result p1
+
+    add-float/2addr p0, p1
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->b()F
+
+    move-result p1
+
+    div-float/2addr p0, p1
+
+    .line 88
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->e()I
+
+    move-result p1
+
+    invoke-static {p0, p1}, Lcom/oppo/camera/ui/modepanel/c;->a(FI)I
+
+    move-result p0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+.end method
+
+.method public static b(Lcom/oppo/camera/ui/modepanel/k;)Z
+    .locals 0
+
+    if-eqz p0, :cond_0
+
+    .line 22
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/modepanel/k;->f()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static c()F
+    .locals 2
+
+    .line 62
+    sget v0, Lcom/oppo/camera/ui/modepanel/c;->d:F
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->a()F
+
+    move-result v1
+
+    div-float/2addr v0, v1
+
+    return v0
+.end method
+
+.method public static d()I
+    .locals 2
+
+    .line 72
+    sget v0, Lcom/oppo/camera/ui/modepanel/c;->b:I
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->a()F
+
+    move-result v1
+
+    div-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    return v0
+.end method
+
+.method public static e()I
+    .locals 2
+
+    .line 76
+    sget v0, Lcom/oppo/camera/ui/modepanel/c;->a:I
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lcom/oppo/camera/ui/modepanel/c;->a()F
+
+    move-result v1
+
+    div-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    return v0
 .end method

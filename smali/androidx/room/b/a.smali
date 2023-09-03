@@ -3,6 +3,11 @@
 .source "CopyLock.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final a:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;

@@ -22,7 +22,7 @@
 .method constructor <init>(Lokio/Sink;)V
     .locals 0
 
-    .line 130
+    .line 145
     invoke-direct {p0, p1}, Lokio/ForwardingSink;-><init>(Lokio/Sink;)V
 
     return-void
@@ -38,10 +38,10 @@
         }
     .end annotation
 
-    .line 134
+    .line 149
     invoke-super {p0, p1, p2, p3}, Lokio/ForwardingSink;->write(Lokio/Buffer;J)V
 
-    .line 135
+    .line 150
     iget-wide v0, p0, Lokhttp3/internal/http/CallServerInterceptor$CountingSink;->successfulCount:J
 
     add-long/2addr v0, p2

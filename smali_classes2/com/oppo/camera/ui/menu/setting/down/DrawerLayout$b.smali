@@ -15,17 +15,23 @@
 
 
 # virtual methods
+.method public abstract a(F)V
+.end method
+
 .method public abstract a(Z)V
 .end method
 
-.method public abstract b()V
+.method public abstract d()V
 .end method
 
-.method public abstract c()V
+.method public abstract e()V
 .end method
 
-.method public abstract l()Z
+.method public abstract i()Z
 .end method
 
-.method public abstract m()Z
+.method public abstract j()V
+.end method
+
+.method public abstract r()Z
 .end method

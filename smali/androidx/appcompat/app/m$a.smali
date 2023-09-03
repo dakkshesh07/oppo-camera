@@ -7,6 +7,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Landroidx/appcompat/app/m;
 .end annotation
@@ -271,9 +274,9 @@
     .line 1033
     iget-object v1, p0, Landroidx/appcompat/app/m$a;->a:Landroidx/appcompat/app/m;
 
-    iget-object v1, v1, Landroidx/appcompat/app/m;->d:Landroidx/appcompat/widget/aa;
+    iget-object v1, v1, Landroidx/appcompat/app/m;->d:Landroidx/appcompat/widget/z;
 
-    invoke-interface {v1}, Landroidx/appcompat/widget/aa;->a()Landroid/view/ViewGroup;
+    invoke-interface {v1}, Landroidx/appcompat/widget/z;->a()Landroid/view/ViewGroup;
 
     move-result-object v1
 

@@ -3,12 +3,17 @@
 .source "SegmentedByteString.kt"
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # direct methods
-.method public static final synthetic access$forEachSegment(Lokio/SegmentedByteString;IILc/d/a/d;)V
+.method public static final synthetic access$forEachSegment(Lokio/SegmentedByteString;IILkotlin/jvm/a/q;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2, p3}, Lokio/internal/SegmentedByteStringKt;->forEachSegment(Lokio/SegmentedByteString;IILc/d/a/d;)V
+    invoke-static {p0, p1, p2, p3}, Lokio/internal/SegmentedByteStringKt;->forEachSegment(Lokio/SegmentedByteString;IILkotlin/jvm/a/q;)V
 
     return-void
 .end method
@@ -18,7 +23,7 @@
 
     const-string v0, "$this$binarySearch"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     add-int/lit8 p3, p3, -0x1
 
@@ -65,7 +70,7 @@
 
     const-string v0, "$this$commonEquals"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -117,7 +122,7 @@
 
     const-string v0, "$this$commonGetSize"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 137
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
@@ -144,7 +149,7 @@
 
     const-string v0, "$this$commonHashCode"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 208
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getHashCode$okio()I
@@ -155,7 +160,7 @@
 
     return v0
 
-    .line 277
+    .line 279
     :cond_0
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
 
@@ -174,7 +179,7 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 281
+    .line 283
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
     move-result-object v4
@@ -183,14 +188,14 @@
 
     aget v4, v4, v5
 
-    .line 282
+    .line 284
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
     move-result-object v5
 
     aget v5, v5, v1
 
-    .line 284
+    .line 286
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
 
     move-result-object v6
@@ -234,7 +239,7 @@
 
     const-string v0, "$this$commonInternalGet"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 130
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
@@ -321,11 +326,11 @@
 
     const-string v0, "$this$commonRangeEquals"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -345,7 +350,7 @@
     :cond_0
     add-int/2addr p4, p1
 
-    .line 249
+    .line 251
     invoke-static {p0, p1}, Lokio/internal/SegmentedByteStringKt;->segment(Lokio/SegmentedByteString;I)I
 
     move-result v1
@@ -359,7 +364,7 @@
 
     goto :goto_1
 
-    .line 252
+    .line 254
     :cond_1
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
@@ -369,7 +374,7 @@
 
     aget v2, v2, v3
 
-    .line 253
+    .line 255
     :goto_1
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
@@ -379,7 +384,7 @@
 
     sub-int/2addr v3, v2
 
-    .line 254
+    .line 256
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
     move-result-object v4
@@ -398,7 +403,7 @@
 
     add-int/2addr v3, v2
 
-    .line 256
+    .line 258
     invoke-static {p4, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v3
@@ -409,7 +414,7 @@
 
     add-int/2addr v4, v2
 
-    .line 258
+    .line 260
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
 
     move-result-object v2
@@ -449,11 +454,11 @@
 
     const-string v0, "$this$commonRangeEquals"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "other"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -482,7 +487,7 @@
     :cond_0
     add-int/2addr p4, p1
 
-    .line 263
+    .line 265
     invoke-static {p0, p1}, Lokio/internal/SegmentedByteStringKt;->segment(Lokio/SegmentedByteString;I)I
 
     move-result v1
@@ -496,7 +501,7 @@
 
     goto :goto_1
 
-    .line 266
+    .line 268
     :cond_1
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
@@ -506,7 +511,7 @@
 
     aget v2, v2, v3
 
-    .line 267
+    .line 269
     :goto_1
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
@@ -516,7 +521,7 @@
 
     sub-int/2addr v3, v2
 
-    .line 268
+    .line 270
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
     move-result-object v4
@@ -535,7 +540,7 @@
 
     add-int/2addr v3, v2
 
-    .line 270
+    .line 272
     invoke-static {p4, v3}, Ljava/lang/Math;->min(II)I
 
     move-result v3
@@ -546,7 +551,7 @@
 
     add-int/2addr v4, v2
 
-    .line 272
+    .line 274
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
 
     move-result-object v2
@@ -586,7 +591,7 @@
 
     const-string v0, "$this$commonSubstring"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -680,7 +685,7 @@
 
     add-int/lit8 v5, p2, 0x1
 
-    invoke-static {v4, v3, v5}, Lc/a/e;->a([Ljava/lang/Object;II)[Ljava/lang/Object;
+    invoke-static {v4, v3, v5}, Lkotlin/collections/g;->a([Ljava/lang/Object;II)[Ljava/lang/Object;
 
     move-result-object v4
 
@@ -898,7 +903,7 @@
 
     const-string v0, "$this$commonToByteArray"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 140
     invoke-virtual {p0}, Lokio/SegmentedByteString;->size()I
@@ -953,7 +958,7 @@
     add-int v8, v5, v3
 
     .line 143
-    invoke-static {v7, v0, v4, v5, v8}, Lc/a/e;->a([B[BIII)[B
+    invoke-static {v7, v0, v4, v5, v8}, Lkotlin/collections/g;->a([B[BIII)[B
 
     add-int/2addr v4, v3
 
@@ -967,148 +972,180 @@
     return-object v0
 .end method
 
-.method public static final commonWrite(Lokio/SegmentedByteString;Lokio/Buffer;)V
-    .locals 11
+.method public static final commonWrite(Lokio/SegmentedByteString;Lokio/Buffer;II)V
+    .locals 10
 
     const-string v0, "$this$commonWrite"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "buffer"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    add-int/2addr p3, p2
 
     .line 237
-    invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
+    invoke-static {p0, p2}, Lokio/internal/SegmentedByteStringKt;->segment(Lokio/SegmentedByteString;I)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, [Ljava/lang/Object;
+    :goto_0
+    if-ge p2, p3, :cond_4
 
-    array-length v0, v0
+    if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    move v2, v1
+    goto :goto_1
 
-    :goto_0
-    if-ge v1, v0, :cond_3
-
-    .line 241
+    .line 240
+    :cond_0
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
-    move-result-object v3
+    move-result-object v1
 
-    add-int v4, v0, v1
+    add-int/lit8 v2, v0, -0x1
 
-    aget v7, v3, v4
+    aget v1, v1, v2
+
+    .line 241
+    :goto_1
+    invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
+
+    move-result-object v2
+
+    aget v2, v2, v0
+
+    sub-int/2addr v2, v1
 
     .line 242
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I
 
     move-result-object v3
 
-    aget v3, v3, v1
-
-    .line 244
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
 
     move-result-object v4
 
-    aget-object v6, v4, v1
+    check-cast v4, [Ljava/lang/Object;
 
-    sub-int v2, v3, v2
+    array-length v4, v4
+
+    add-int/2addr v4, v0
+
+    aget v3, v3, v4
+
+    add-int/2addr v2, v1
+
+    .line 244
+    invoke-static {p3, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v2
+
+    sub-int/2addr v2, p2
+
+    sub-int v1, p2, v1
+
+    add-int v6, v3, v1
+
+    .line 246
+    invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
+
+    move-result-object v1
+
+    aget-object v5, v1, v0
 
     .line 152
-    new-instance v4, Lokio/Segment;
+    new-instance v1, Lokio/Segment;
 
-    add-int v8, v7, v2
+    add-int v7, v6, v2
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
-    move-object v5, v4
+    move-object v4, v1
 
-    invoke-direct/range {v5 .. v10}, Lokio/Segment;-><init>([BIIZZ)V
+    invoke-direct/range {v4 .. v9}, Lokio/Segment;-><init>([BIIZZ)V
 
     .line 153
-    iget-object v2, p1, Lokio/Buffer;->head:Lokio/Segment;
+    iget-object v3, p1, Lokio/Buffer;->head:Lokio/Segment;
 
-    if-nez v2, :cond_0
+    if-nez v3, :cond_1
 
     .line 154
-    iput-object v4, v4, Lokio/Segment;->prev:Lokio/Segment;
+    iput-object v1, v1, Lokio/Segment;->prev:Lokio/Segment;
 
     .line 155
-    iget-object v2, v4, Lokio/Segment;->prev:Lokio/Segment;
+    iget-object v3, v1, Lokio/Segment;->prev:Lokio/Segment;
 
-    iput-object v2, v4, Lokio/Segment;->next:Lokio/Segment;
+    iput-object v3, v1, Lokio/Segment;->next:Lokio/Segment;
 
     .line 156
-    iget-object v2, v4, Lokio/Segment;->next:Lokio/Segment;
+    iget-object v1, v1, Lokio/Segment;->next:Lokio/Segment;
 
-    iput-object v2, p1, Lokio/Buffer;->head:Lokio/Segment;
+    iput-object v1, p1, Lokio/Buffer;->head:Lokio/Segment;
 
-    goto :goto_1
+    goto :goto_2
 
     .line 158
-    :cond_0
-    iget-object v2, p1, Lokio/Buffer;->head:Lokio/Segment;
-
-    if-nez v2, :cond_1
-
-    invoke-static {}, Lc/d/b/k;->a()V
-
     :cond_1
-    iget-object v2, v2, Lokio/Segment;->prev:Lokio/Segment;
+    iget-object v3, p1, Lokio/Buffer;->head:Lokio/Segment;
 
-    if-nez v2, :cond_2
+    if-nez v3, :cond_2
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_2
-    invoke-virtual {v2, v4}, Lokio/Segment;->push(Lokio/Segment;)Lokio/Segment;
+    iget-object v3, v3, Lokio/Segment;->prev:Lokio/Segment;
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    if-nez v3, :cond_3
 
-    move v2, v3
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
+
+    :cond_3
+    invoke-virtual {v3, v1}, Lokio/Segment;->push(Lokio/Segment;)Lokio/Segment;
+
+    :goto_2
+    add-int/2addr p2, v2
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     .line 161
-    :cond_3
+    :cond_4
     invoke-virtual {p1}, Lokio/Buffer;->size()J
 
-    move-result-wide v0
+    move-result-wide p2
 
     invoke-virtual {p0}, Lokio/SegmentedByteString;->size()I
 
     move-result p0
 
-    int-to-long v2, p0
+    int-to-long v0, p0
 
-    add-long/2addr v0, v2
+    add-long/2addr p2, v0
 
-    invoke-virtual {p1, v0, v1}, Lokio/Buffer;->setSize$okio(J)V
+    invoke-virtual {p1, p2, p3}, Lokio/Buffer;->setSize$okio(J)V
 
     return-void
 .end method
 
-.method private static final forEachSegment(Lokio/SegmentedByteString;IILc/d/a/d;)V
+.method private static final forEachSegment(Lokio/SegmentedByteString;IILkotlin/jvm/a/q;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lokio/SegmentedByteString;",
             "II",
-            "Lc/d/a/d<",
+            "Lkotlin/jvm/a/q<",
             "-[B-",
             "Ljava/lang/Integer;",
             "-",
             "Ljava/lang/Integer;",
-            "Lc/f;",
+            "Lkotlin/u;",
             ">;)V"
         }
     .end annotation
@@ -1192,7 +1229,7 @@
 
     move-result-object v4
 
-    invoke-interface {p3, v1, v3, v4}, Lc/d/a/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v1, v3, v4}, Lkotlin/jvm/a/q;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/2addr p1, v2
 
@@ -1204,29 +1241,29 @@
     return-void
 .end method
 
-.method public static final forEachSegment(Lokio/SegmentedByteString;Lc/d/a/d;)V
+.method public static final forEachSegment(Lokio/SegmentedByteString;Lkotlin/jvm/a/q;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lokio/SegmentedByteString;",
-            "Lc/d/a/d<",
+            "Lkotlin/jvm/a/q<",
             "-[B-",
             "Ljava/lang/Integer;",
             "-",
             "Ljava/lang/Integer;",
-            "Lc/f;",
+            "Lkotlin/u;",
             ">;)V"
         }
     .end annotation
 
     const-string v0, "$this$forEachSegment"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "action"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 59
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getSegments$okio()[[B
@@ -1277,7 +1314,7 @@
 
     move-result-object v2
 
-    invoke-interface {p1, v5, v3, v2}, Lc/d/a/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v5, v3, v2}, Lkotlin/jvm/a/q;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -1294,7 +1331,7 @@
 
     const-string v0, "$this$segment"
 
-    invoke-static {p0, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 51
     invoke-virtual {p0}, Lokio/SegmentedByteString;->getDirectory$okio()[I

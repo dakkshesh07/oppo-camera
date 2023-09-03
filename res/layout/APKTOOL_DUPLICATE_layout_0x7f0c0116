@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.ui.RotateImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902b9" android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080509" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070711" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07070f" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090161" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07070d" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07070c" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08050a" android:scaleType="fitCenter" android:layout_centerInParent="true" />
+    <com.oppo.camera.ui.LoaddingProgress android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901a4" android:visibility="gone" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701e2" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0701e2" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08050b" android:layout_centerInParent="true" />
+</RelativeLayout>

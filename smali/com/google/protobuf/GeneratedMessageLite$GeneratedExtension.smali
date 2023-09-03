@@ -61,12 +61,12 @@
         }
     .end annotation
 
-    .line 1039
+    .line 1196
     invoke-direct {p0}, Lcom/google/protobuf/ExtensionLite;-><init>()V
 
     if-eqz p1, :cond_2
 
-    .line 1046
+    .line 1202
     invoke-virtual {p4}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getLiteType()Lcom/google/protobuf/WireFormat$FieldType;
 
     move-result-object p5
@@ -79,7 +79,7 @@
 
     goto :goto_0
 
-    .line 1048
+    .line 1204
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -89,23 +89,23 @@
 
     throw p1
 
-    .line 1051
+    .line 1206
     :cond_1
     :goto_0
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->containingTypeDefaultInstance:Lcom/google/protobuf/MessageLite;
 
-    .line 1052
+    .line 1207
     iput-object p2, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->defaultValue:Ljava/lang/Object;
 
-    .line 1053
+    .line 1208
     iput-object p3, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->messageDefaultInstance:Lcom/google/protobuf/MessageLite;
 
-    .line 1054
+    .line 1209
     iput-object p4, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     return-void
 
-    .line 1043
+    .line 1200
     :cond_2
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -121,7 +121,7 @@
 .method fromFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .line 1087
+    .line 1239
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->isRepeated()Z
@@ -130,7 +130,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1088
+    .line 1240
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getLiteJavaType()Lcom/google/protobuf/WireFormat$JavaType;
@@ -141,12 +141,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1089
+    .line 1241
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1090
+    .line 1242
     check-cast p1, Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -164,7 +164,7 @@
 
     move-result-object v1
 
-    .line 1091
+    .line 1243
     invoke-virtual {p0, v1}, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->singularFromFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -179,7 +179,7 @@
     :cond_1
     return-object p1
 
-    .line 1098
+    .line 1250
     :cond_2
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->singularFromFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -196,7 +196,7 @@
         }
     .end annotation
 
-    .line 1066
+    .line 1219
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->containingTypeDefaultInstance:Lcom/google/protobuf/MessageLite;
 
     return-object v0
@@ -210,7 +210,7 @@
         }
     .end annotation
 
-    .line 1147
+    .line 1299
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->defaultValue:Ljava/lang/Object;
 
     return-object v0
@@ -219,7 +219,7 @@
 .method public getLiteType()Lcom/google/protobuf/WireFormat$FieldType;
     .locals 1
 
-    .line 1137
+    .line 1289
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getLiteType()Lcom/google/protobuf/WireFormat$FieldType;
@@ -232,7 +232,7 @@
 .method public getMessageDefaultInstance()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 1082
+    .line 1234
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->messageDefaultInstance:Lcom/google/protobuf/MessageLite;
 
     return-object v0
@@ -241,7 +241,7 @@
 .method public getNumber()I
     .locals 1
 
-    .line 1072
+    .line 1225
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getNumber()I
@@ -254,7 +254,7 @@
 .method public isRepeated()Z
     .locals 1
 
-    .line 1142
+    .line 1294
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     iget-boolean v0, v0, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->isRepeated:Z
@@ -265,7 +265,7 @@
 .method singularFromFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .line 1103
+    .line 1255
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getLiteJavaType()Lcom/google/protobuf/WireFormat$JavaType;
@@ -276,7 +276,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1104
+    .line 1256
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     iget-object v0, v0, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->enumTypeMap:Lcom/google/protobuf/Internal$EnumLiteMap;
@@ -298,7 +298,7 @@
 .method singularToFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .line 1128
+    .line 1280
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getLiteJavaType()Lcom/google/protobuf/WireFormat$JavaType;
@@ -309,7 +309,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1129
+    .line 1281
     check-cast p1, Lcom/google/protobuf/Internal$EnumLite;
 
     invoke-interface {p1}, Lcom/google/protobuf/Internal$EnumLite;->getNumber()I
@@ -327,7 +327,7 @@
 .method toFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .line 1112
+    .line 1264
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->isRepeated()Z
@@ -336,7 +336,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1113
+    .line 1265
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->descriptor:Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;
 
     invoke-virtual {v0}, Lcom/google/protobuf/GeneratedMessageLite$ExtensionDescriptor;->getLiteJavaType()Lcom/google/protobuf/WireFormat$JavaType;
@@ -347,12 +347,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1114
+    .line 1266
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1115
+    .line 1267
     check-cast p1, Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -370,7 +370,7 @@
 
     move-result-object v1
 
-    .line 1116
+    .line 1268
     invoke-virtual {p0, v1}, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->singularToFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -385,7 +385,7 @@
     :cond_1
     return-object p1
 
-    .line 1123
+    .line 1275
     :cond_2
     invoke-virtual {p0, p1}, Lcom/google/protobuf/GeneratedMessageLite$GeneratedExtension;->singularToFieldSetType(Ljava/lang/Object;)Ljava/lang/Object;
 

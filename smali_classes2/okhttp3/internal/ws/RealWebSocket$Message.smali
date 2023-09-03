@@ -24,13 +24,13 @@
 .method constructor <init>(ILokio/ByteString;)V
     .locals 0
 
-    .line 556
+    .line 580
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 557
+    .line 581
     iput p1, p0, Lokhttp3/internal/ws/RealWebSocket$Message;->formatOpcode:I
 
-    .line 558
+    .line 582
     iput-object p2, p0, Lokhttp3/internal/ws/RealWebSocket$Message;->data:Lokio/ByteString;
 
     return-void

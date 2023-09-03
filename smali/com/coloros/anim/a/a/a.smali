@@ -29,7 +29,7 @@
 
 .field private final f:Lcom/coloros/anim/b;
 
-.field private final g:Lcom/coloros/anim/c/c/a;
+.field private final g:Lcom/coloros/anim/model/layer/a;
 
 .field private final h:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -101,22 +101,22 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/c/a;Landroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FLcom/coloros/anim/c/a/d;Lcom/coloros/anim/c/a/b;Ljava/util/List;Lcom/coloros/anim/c/a/b;)V
+.method constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/layer/a;Landroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FLcom/coloros/anim/model/a/d;Lcom/coloros/anim/model/a/b;Ljava/util/List;Lcom/coloros/anim/model/a/b;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/coloros/anim/b;",
-            "Lcom/coloros/anim/c/c/a;",
+            "Lcom/coloros/anim/model/layer/a;",
             "Landroid/graphics/Paint$Cap;",
             "Landroid/graphics/Paint$Join;",
             "F",
-            "Lcom/coloros/anim/c/a/d;",
-            "Lcom/coloros/anim/c/a/b;",
+            "Lcom/coloros/anim/model/a/d;",
+            "Lcom/coloros/anim/model/a/b;",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/a/b;",
+            "Lcom/coloros/anim/model/a/b;",
             ">;",
-            "Lcom/coloros/anim/c/a/b;",
+            "Lcom/coloros/anim/model/a/b;",
             ")V"
         }
     .end annotation
@@ -172,7 +172,7 @@
     iput-object p1, p0, Lcom/coloros/anim/a/a/a;->f:Lcom/coloros/anim/b;
 
     .line 61
-    iput-object p2, p0, Lcom/coloros/anim/a/a/a;->g:Lcom/coloros/anim/c/c/a;
+    iput-object p2, p0, Lcom/coloros/anim/a/a/a;->g:Lcom/coloros/anim/model/layer/a;
 
     .line 63
     iget-object p1, p0, Lcom/coloros/anim/a/a/a;->a:Landroid/graphics/Paint;
@@ -197,14 +197,14 @@
     invoke-virtual {p1, p5}, Landroid/graphics/Paint;->setStrokeMiter(F)V
 
     .line 68
-    invoke-virtual {p6}, Lcom/coloros/anim/c/a/d;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p6}, Lcom/coloros/anim/model/a/d;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/a;->k:Lcom/coloros/anim/a/b/a;
 
     .line 69
-    invoke-virtual {p7}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p7}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -221,7 +221,7 @@
 
     .line 74
     :cond_0
-    invoke-virtual {p9}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p9}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -267,9 +267,9 @@
 
     move-result-object p5
 
-    check-cast p5, Lcom/coloros/anim/c/a/b;
+    check-cast p5, Lcom/coloros/anim/model/a/b;
 
-    invoke-virtual {p5}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p5}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p5
 
@@ -283,12 +283,12 @@
     :cond_1
     iget-object p3, p0, Lcom/coloros/anim/a/a/a;->k:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p3}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 84
     iget-object p3, p0, Lcom/coloros/anim/a/a/a;->j:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p3}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     move p3, p1
 
@@ -311,7 +311,7 @@
 
     check-cast p4, Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p4}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p4}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     add-int/lit8 p3, p3, 0x1
 
@@ -324,7 +324,7 @@
     if-eqz p3, :cond_3
 
     .line 89
-    invoke-virtual {p2, p3}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 92
     :cond_3
@@ -650,7 +650,7 @@
     .line 220
     iget-object v10, p0, Lcom/coloros/anim/a/a/a;->d:Landroid/graphics/Path;
 
-    invoke-static {v10, v11, v9, v5}, Lcom/coloros/anim/f/g;->a(Landroid/graphics/Path;FFF)V
+    invoke-static {v10, v11, v9, v5}, Lcom/coloros/anim/d/g;->a(Landroid/graphics/Path;FFF)V
 
     .line 221
     iget-object v9, p0, Lcom/coloros/anim/a/a/a;->d:Landroid/graphics/Path;
@@ -722,7 +722,7 @@
     :goto_5
     iget-object v9, p0, Lcom/coloros/anim/a/a/a;->d:Landroid/graphics/Path;
 
-    invoke-static {v9, v11, v10, v5}, Lcom/coloros/anim/f/g;->a(Landroid/graphics/Path;FFF)V
+    invoke-static {v9, v11, v10, v5}, Lcom/coloros/anim/d/g;->a(Landroid/graphics/Path;FFF)V
 
     .line 242
     iget-object v9, p0, Lcom/coloros/anim/a/a/a;->d:Landroid/graphics/Path;
@@ -770,7 +770,7 @@
 
     .line 282
     :cond_0
-    invoke-static {p1}, Lcom/coloros/anim/f/g;->a(Landroid/graphics/Matrix;)F
+    invoke-static {p1}, Lcom/coloros/anim/d/g;->a(Landroid/graphics/Matrix;)F
 
     move-result p1
 
@@ -954,7 +954,7 @@
 
     const/16 v3, 0xff
 
-    invoke-static {p3, v2, v3}, Lcom/coloros/anim/f/f;->a(III)I
+    invoke-static {p3, v2, v3}, Lcom/coloros/anim/d/f;->a(III)I
 
     move-result p3
 
@@ -971,7 +971,7 @@
 
     move-result v1
 
-    invoke-static {p2}, Lcom/coloros/anim/f/g;->a(Landroid/graphics/Matrix;)F
+    invoke-static {p2}, Lcom/coloros/anim/d/g;->a(Landroid/graphics/Matrix;)F
 
     move-result v3
 
@@ -1286,35 +1286,35 @@
     return-void
 .end method
 
-.method public a(Lcom/coloros/anim/c/f;ILjava/util/List;Lcom/coloros/anim/c/f;)V
+.method public a(Lcom/coloros/anim/model/e;ILjava/util/List;Lcom/coloros/anim/model/e;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             "I",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             ">;",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             ")V"
         }
     .end annotation
 
     .line 308
-    invoke-static {p1, p2, p3, p4, p0}, Lcom/coloros/anim/f/f;->a(Lcom/coloros/anim/c/f;ILjava/util/List;Lcom/coloros/anim/c/f;Lcom/coloros/anim/a/a/k;)V
+    invoke-static {p1, p2, p3, p4, p0}, Lcom/coloros/anim/d/f;->a(Lcom/coloros/anim/model/e;ILjava/util/List;Lcom/coloros/anim/model/e;Lcom/coloros/anim/a/a/k;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+.method public a(Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TT;>;)V"
         }
     .end annotation
@@ -1327,7 +1327,7 @@
     .line 316
     iget-object p1, p0, Lcom/coloros/anim/a/a/a;->k:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1340,7 +1340,7 @@
     .line 318
     iget-object p1, p0, Lcom/coloros/anim/a/a/a;->j:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1363,7 +1363,7 @@
     :cond_2
     new-instance p1, Lcom/coloros/anim/a/b/p;
 
-    invoke-direct {p1, p2}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;)V
+    invoke-direct {p1, p2}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;)V
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/a;->n:Lcom/coloros/anim/a/b/a;
 
@@ -1373,11 +1373,11 @@
     invoke-virtual {p1, p0}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/a/b/a$a;)V
 
     .line 326
-    iget-object p1, p0, Lcom/coloros/anim/a/a/a;->g:Lcom/coloros/anim/c/c/a;
+    iget-object p1, p0, Lcom/coloros/anim/a/a/a;->g:Lcom/coloros/anim/model/layer/a;
 
     iget-object p2, p0, Lcom/coloros/anim/a/a/a;->n:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     :cond_3
     :goto_0
@@ -1427,11 +1427,11 @@
     check-cast v3, Lcom/coloros/anim/a/a/s;
 
     .line 114
-    invoke-virtual {v3}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/c/b/q$a;
+    invoke-virtual {v3}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     move-result-object v4
 
-    sget-object v5, Lcom/coloros/anim/c/b/q$a;->INDIVIDUALLY:Lcom/coloros/anim/c/b/q$a;
+    sget-object v5, Lcom/coloros/anim/model/content/ShapeTrimPath$Type;->INDIVIDUALLY:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     if-ne v4, v5, :cond_0
 
@@ -1478,11 +1478,11 @@
     check-cast v4, Lcom/coloros/anim/a/a/s;
 
     .line 126
-    invoke-virtual {v4}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/c/b/q$a;
+    invoke-virtual {v4}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     move-result-object v5
 
-    sget-object v6, Lcom/coloros/anim/c/b/q$a;->INDIVIDUALLY:Lcom/coloros/anim/c/b/q$a;
+    sget-object v6, Lcom/coloros/anim/model/content/ShapeTrimPath$Type;->INDIVIDUALLY:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     if-ne v5, v6, :cond_4
 

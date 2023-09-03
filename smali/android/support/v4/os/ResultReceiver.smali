@@ -13,6 +13,9 @@
     }
 .end annotation
 
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/os/ResultReceiver$MyResultReceiver;,

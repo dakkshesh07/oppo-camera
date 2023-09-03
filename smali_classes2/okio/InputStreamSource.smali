@@ -1,9 +1,14 @@
 .class final Lokio/InputStreamSource;
 .super Ljava/lang/Object;
-.source "Okio.kt"
+.source "JvmOkio.kt"
 
 # interfaces
 .implements Lokio/Source;
+
+
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
 
 
 # instance fields
@@ -18,13 +23,13 @@
 
     const-string v0, "input"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "timeout"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 81
+    .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lokio/InputStreamSource;->input:Ljava/io/InputStream;
@@ -39,7 +44,7 @@
 .method public close()V
     .locals 1
 
-    .line 104
+    .line 108
     iget-object v0, p0, Lokio/InputStreamSource;->input:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
@@ -52,7 +57,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -75,34 +80,34 @@
     const/4 v1, 0x0
 
     :goto_0
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
-    .line 90
+    .line 87
     :try_start_0
     iget-object v1, p0, Lokio/InputStreamSource;->timeout:Lokio/Timeout;
 
     invoke-virtual {v1}, Lokio/Timeout;->throwIfReached()V
 
-    .line 91
+    .line 88
     invoke-virtual {p1, v0}, Lokio/Buffer;->writableSegment$okio(I)Lokio/Segment;
 
     move-result-object v0
 
-    .line 92
+    .line 89
     iget v1, v0, Lokio/Segment;->limit:I
 
     rsub-int v1, v1, 0x2000
 
     int-to-long v1, v1
 
-    .line 206
+    .line 200
     invoke-static {p2, p3, v1, v2}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide p2
 
     long-to-int p2, p2
 
-    .line 93
+    .line 90
     iget-object p3, p0, Lokio/InputStreamSource;->input:Ljava/io/InputStream;
 
     iget-object v1, v0, Lokio/Segment;->data:[B
@@ -115,21 +120,41 @@
 
     const/4 p3, -0x1
 
+    if-ne p2, p3, :cond_3
+
+    .line 92
+    iget p2, v0, Lokio/Segment;->pos:I
+
+    iget p3, v0, Lokio/Segment;->limit:I
+
     if-ne p2, p3, :cond_2
 
+    .line 94
+    invoke-virtual {v0}, Lokio/Segment;->pop()Lokio/Segment;
+
+    move-result-object p2
+
+    iput-object p2, p1, Lokio/Buffer;->head:Lokio/Segment;
+
+    .line 95
+    sget-object p1, Lokio/SegmentPool;->INSTANCE:Lokio/SegmentPool;
+
+    invoke-virtual {p1, v0}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
+
+    :cond_2
     const-wide/16 p1, -0x1
 
     return-wide p1
 
-    .line 95
-    :cond_2
+    .line 99
+    :cond_3
     iget p3, v0, Lokio/Segment;->limit:I
 
     add-int/2addr p3, p2
 
     iput p3, v0, Lokio/Segment;->limit:I
 
-    .line 96
+    .line 100
     invoke-virtual {p1}, Lokio/Buffer;->size()J
 
     move-result-wide v0
@@ -147,12 +172,12 @@
     :catch_0
     move-exception p1
 
-    .line 99
+    .line 103
     invoke-static {p1}, Lokio/Okio;->isAndroidGetsocknameError(Ljava/lang/AssertionError;)Z
 
     move-result p2
 
-    if-eqz p2, :cond_3
+    if-eqz p2, :cond_4
 
     new-instance p2, Ljava/io/IOException;
 
@@ -164,14 +189,14 @@
 
     throw p2
 
-    .line 100
-    :cond_3
+    .line 104
+    :cond_4
     check-cast p1, Ljava/lang/Throwable;
 
     throw p1
 
-    .line 88
-    :cond_4
+    .line 85
+    :cond_5
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -202,7 +227,7 @@
 .method public timeout()Lokio/Timeout;
     .locals 1
 
-    .line 106
+    .line 110
     iget-object v0, p0, Lokio/InputStreamSource;->timeout:Lokio/Timeout;
 
     return-object v0
@@ -211,7 +236,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 108
+    .line 112
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

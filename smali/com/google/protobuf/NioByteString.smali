@@ -11,15 +11,15 @@
 .method constructor <init>(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 53
+    .line 51
     invoke-direct {p0}, Lcom/google/protobuf/ByteString$LeafByteString;-><init>()V
 
     const-string v0, "buffer"
 
-    .line 54
+    .line 52
     invoke-static {p1, v0}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 57
+    .line 55
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object p1
@@ -40,7 +40,7 @@
 .method static synthetic access$000(Lcom/google/protobuf/NioByteString;)Ljava/nio/ByteBuffer;
     .locals 0
 
-    .line 50
+    .line 48
     iget-object p0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     return-object p0
@@ -54,7 +54,7 @@
         }
     .end annotation
 
-    .line 74
+    .line 68
     new-instance p1, Ljava/io/InvalidObjectException;
 
     const-string v0, "NioByteString instances are not to be serialized directly"
@@ -67,7 +67,7 @@
 .method private slice(II)Ljava/nio/ByteBuffer;
     .locals 3
 
-    .line 281
+    .line 282
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->position()I
@@ -86,14 +86,14 @@
 
     if-gt p1, p2, :cond_0
 
-    .line 286
+    .line 287
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 287
+    .line 288
     iget-object v1, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->position()I
@@ -104,7 +104,7 @@
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 288
+    .line 289
     iget-object p1, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->position()I
@@ -117,7 +117,7 @@
 
     return-object v0
 
-    .line 282
+    .line 283
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -127,7 +127,7 @@
 
     const/4 v2, 0x0
 
-    .line 283
+    .line 284
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -156,7 +156,7 @@
 .method private writeReplace()Ljava/lang/Object;
     .locals 1
 
-    .line 67
+    .line 63
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -175,7 +175,7 @@
 .method public asReadOnlyByteBuffer()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .line 150
+    .line 151
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asReadOnlyBuffer()Ljava/nio/ByteBuffer;
@@ -196,7 +196,7 @@
         }
     .end annotation
 
-    .line 155
+    .line 156
     invoke-virtual {p0}, Lcom/google/protobuf/NioByteString;->asReadOnlyByteBuffer()Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -211,7 +211,7 @@
 .method public byteAt(I)B
     .locals 1
 
-    .line 82
+    .line 76
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
@@ -227,7 +227,7 @@
     :catch_0
     move-exception p1
 
-    .line 86
+    .line 80
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-virtual {p1}, Ljava/lang/IndexOutOfBoundsException;->getMessage()Ljava/lang/String;
@@ -241,14 +241,14 @@
     :catch_1
     move-exception p1
 
-    .line 84
+    .line 78
     throw p1
 .end method
 
 .method public copyTo(Ljava/nio/ByteBuffer;)V
     .locals 1
 
-    .line 117
+    .line 118
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -263,17 +263,17 @@
 .method protected copyToInternal([BIII)V
     .locals 1
 
-    .line 110
+    .line 111
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 111
+    .line 112
     invoke-virtual {v0, p2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 112
+    .line 113
     invoke-virtual {v0, p1, p3, p4}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
     return-void
@@ -288,7 +288,7 @@
 
     return v0
 
-    .line 191
+    .line 192
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/ByteString;
 
@@ -298,13 +298,13 @@
 
     return v2
 
-    .line 194
+    .line 195
     :cond_1
     move-object v1, p1
 
     check-cast v1, Lcom/google/protobuf/ByteString;
 
-    .line 195
+    .line 196
     invoke-virtual {p0}, Lcom/google/protobuf/NioByteString;->size()I
 
     move-result v3
@@ -317,7 +317,7 @@
 
     return v2
 
-    .line 198
+    .line 199
     :cond_2
     invoke-virtual {p0}, Lcom/google/protobuf/NioByteString;->size()I
 
@@ -327,13 +327,13 @@
 
     return v0
 
-    .line 201
+    .line 202
     :cond_3
     instance-of v0, p1, Lcom/google/protobuf/NioByteString;
 
     if-eqz v0, :cond_4
 
-    .line 202
+    .line 203
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     check-cast p1, Lcom/google/protobuf/NioByteString;
@@ -346,20 +346,20 @@
 
     return p1
 
-    .line 204
+    .line 205
     :cond_4
     instance-of v0, p1, Lcom/google/protobuf/RopeByteString;
 
     if-eqz v0, :cond_5
 
-    .line 205
+    .line 206
     invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 207
+    .line 208
     :cond_5
     iget-object p1, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
@@ -379,7 +379,7 @@
 
     const/4 v0, 0x0
 
-    .line 127
+    .line 128
     invoke-virtual {p0, v0, p3}, Lcom/google/protobuf/NioByteString;->substring(II)Lcom/google/protobuf/ByteString;
 
     move-result-object v0
@@ -397,10 +397,21 @@
     return p1
 .end method
 
+.method public internalByteAt(I)B
+    .locals 0
+
+    .line 88
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/NioByteString;->byteAt(I)B
+
+    move-result p1
+
+    return p1
+.end method
+
 .method public isValidUtf8()Z
     .locals 1
 
-    .line 178
+    .line 179
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-static {v0}, Lcom/google/protobuf/Utf8;->isValidUtf8(Ljava/nio/ByteBuffer;)Z
@@ -413,7 +424,7 @@
 .method public newCodedInput()Lcom/google/protobuf/CodedInputStream;
     .locals 2
 
-    .line 270
+    .line 271
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     const/4 v1, 0x1
@@ -428,7 +439,7 @@
 .method public newInput()Ljava/io/InputStream;
     .locals 1
 
-    .line 220
+    .line 221
     new-instance v0, Lcom/google/protobuf/NioByteString$1;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/NioByteString$1;-><init>(Lcom/google/protobuf/NioByteString;)V
@@ -450,7 +461,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 213
+    .line 214
     iget-object v1, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->get(I)B
@@ -470,7 +481,7 @@
 .method protected partialIsValidUtf8(III)I
     .locals 1
 
-    .line 183
+    .line 184
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     add-int/2addr p3, p2
@@ -485,7 +496,7 @@
 .method public size()I
     .locals 1
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -498,13 +509,13 @@
 .method public substring(II)Lcom/google/protobuf/ByteString;
     .locals 0
 
-    .line 98
+    .line 99
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/google/protobuf/NioByteString;->slice(II)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
-    .line 99
+    .line 100
     new-instance p2, Lcom/google/protobuf/NioByteString;
 
     invoke-direct {p2, p1}, Lcom/google/protobuf/NioByteString;-><init>(Ljava/nio/ByteBuffer;)V
@@ -517,7 +528,7 @@
     :catch_0
     move-exception p1
 
-    .line 103
+    .line 104
     new-instance p2, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-virtual {p1}, Ljava/lang/IndexOutOfBoundsException;->getMessage()Ljava/lang/String;
@@ -531,14 +542,14 @@
     :catch_1
     move-exception p1
 
-    .line 101
+    .line 102
     throw p1
 .end method
 
 .method protected toStringInternal(Ljava/nio/charset/Charset;)Ljava/lang/String;
     .locals 4
 
-    .line 163
+    .line 164
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasArray()Z
@@ -547,14 +558,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
+    .line 165
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
-    .line 165
+    .line 166
     iget-object v1, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->arrayOffset()I
@@ -569,7 +580,7 @@
 
     add-int/2addr v1, v2
 
-    .line 166
+    .line 167
     iget-object v2, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->remaining()I
@@ -578,7 +589,7 @@
 
     goto :goto_0
 
-    .line 169
+    .line 170
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/NioByteString;->toByteArray()[B
 
@@ -586,10 +597,10 @@
 
     const/4 v1, 0x0
 
-    .line 171
+    .line 172
     array-length v2, v0
 
-    .line 173
+    .line 174
     :goto_0
     new-instance v3, Ljava/lang/String;
 
@@ -606,7 +617,7 @@
         }
     .end annotation
 
-    .line 145
+    .line 146
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
@@ -626,7 +637,7 @@
         }
     .end annotation
 
-    .line 122
+    .line 123
     invoke-virtual {p0}, Lcom/google/protobuf/NioByteString;->toByteArray()[B
 
     move-result-object v0
@@ -644,7 +655,7 @@
         }
     .end annotation
 
-    .line 132
+    .line 133
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasArray()Z
@@ -653,7 +664,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 136
     iget-object v0, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->arrayOffset()I
@@ -670,7 +681,7 @@
 
     add-int/2addr v0, p2
 
-    .line 136
+    .line 137
     iget-object p2, p0, Lcom/google/protobuf/NioByteString;->buffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2}, Ljava/nio/ByteBuffer;->array()[B
@@ -684,7 +695,7 @@
     :cond_0
     add-int/2addr p3, p2
 
-    .line 140
+    .line 141
     invoke-direct {p0, p2, p3}, Lcom/google/protobuf/NioByteString;->slice(II)Ljava/nio/ByteBuffer;
 
     move-result-object p2

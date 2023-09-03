@@ -15,6 +15,7 @@
         Lcom/google/protobuf/ByteString$CodedBuilder;,
         Lcom/google/protobuf/ByteString$Output;,
         Lcom/google/protobuf/ByteString$LeafByteString;,
+        Lcom/google/protobuf/ByteString$AbstractByteIterator;,
         Lcom/google/protobuf/ByteString$ByteIterator;,
         Lcom/google/protobuf/ByteString$ArraysByteArrayCopier;,
         Lcom/google/protobuf/ByteString$SystemByteArrayCopier;,
@@ -34,8 +35,6 @@
 
 
 # static fields
-.field static final synthetic $assertionsDisabled:Z = false
-
 .field static final CONCATENATE_BY_COPY_SIZE:I = 0x80
 
 .field public static final EMPTY:Lcom/google/protobuf/ByteString;
@@ -43,6 +42,18 @@
 .field static final MAX_READ_FROM_CHUNK_SIZE:I = 0x2000
 
 .field static final MIN_READ_FROM_CHUNK_SIZE:I = 0x100
+
+.field private static final UNSIGNED_BYTE_MASK:I = 0xff
+
+.field private static final UNSIGNED_LEXICOGRAPHICAL_COMPARATOR:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator<",
+            "Lcom/google/protobuf/ByteString;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private static final byteArrayCopier:Lcom/google/protobuf/ByteString$ByteArrayCopier;
 
@@ -55,7 +66,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 89
+    .line 85
     new-instance v0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     sget-object v1, Lcom/google/protobuf/Internal;->EMPTY_BYTE_ARRAY:[B
@@ -64,40 +75,35 @@
 
     sput-object v0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
-    const/4 v0, 0x1
+    .line 125
+    invoke-static {}, Lcom/google/protobuf/Android;->isOnAndroidDevice()Z
 
-    :try_start_0
-    const-string v1, "android.content.Context"
+    move-result v0
 
-    .line 131
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-    :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 v0, 0x0
-
-    :goto_0
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 136
     new-instance v0, Lcom/google/protobuf/ByteString$SystemByteArrayCopier;
 
     invoke-direct {v0, v1}, Lcom/google/protobuf/ByteString$SystemByteArrayCopier;-><init>(Lcom/google/protobuf/ByteString$1;)V
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
     new-instance v0, Lcom/google/protobuf/ByteString$ArraysByteArrayCopier;
 
     invoke-direct {v0, v1}, Lcom/google/protobuf/ByteString$ArraysByteArrayCopier;-><init>(Lcom/google/protobuf/ByteString$1;)V
 
-    :goto_1
+    :goto_0
     sput-object v0, Lcom/google/protobuf/ByteString;->byteArrayCopier:Lcom/google/protobuf/ByteString$ByteArrayCopier;
+
+    .line 253
+    new-instance v0, Lcom/google/protobuf/ByteString$2;
+
+    invoke-direct {v0}, Lcom/google/protobuf/ByteString$2;-><init>()V
+
+    sput-object v0, Lcom/google/protobuf/ByteString;->UNSIGNED_LEXICOGRAPHICAL_COMPARATOR:Ljava/util/Comparator;
 
     return-void
 .end method
@@ -105,15 +111,26 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 147
+    .line 136
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 144
+    .line 133
     iput v0, p0, Lcom/google/protobuf/ByteString;->hash:I
 
     return-void
+.end method
+
+.method static synthetic access$200(B)I
+    .locals 0
+
+    .line 67
+    invoke-static {p0}, Lcom/google/protobuf/ByteString;->toInt(B)I
+
+    move-result p0
+
+    return p0
 .end method
 
 .method private static balancedConcat(Ljava/util/Iterator;I)Lcom/google/protobuf/ByteString;
@@ -130,9 +147,11 @@
 
     const/4 v0, 0x1
 
+    if-lt p1, v0, :cond_1
+
     if-ne p1, v0, :cond_0
 
-    .line 571
+    .line 608
     invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p0
@@ -144,25 +163,49 @@
     :cond_0
     ushr-int/lit8 v0, p1, 0x1
 
-    .line 574
+    .line 611
     invoke-static {p0, v0}, Lcom/google/protobuf/ByteString;->balancedConcat(Ljava/util/Iterator;I)Lcom/google/protobuf/ByteString;
 
     move-result-object v1
 
     sub-int/2addr p1, v0
 
-    .line 575
+    .line 612
     invoke-static {p0, p1}, Lcom/google/protobuf/ByteString;->balancedConcat(Ljava/util/Iterator;I)Lcom/google/protobuf/ByteString;
 
     move-result-object p0
 
-    .line 576
+    .line 613
     invoke-virtual {v1, p0}, Lcom/google/protobuf/ByteString;->concat(Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/ByteString;
 
     move-result-object p0
 
     :goto_0
     return-object p0
+
+    .line 604
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    aput-object p1, v0, v1
+
+    const-string p1, "length (%s) must be >= 1"
+
+    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 .method static checkIndex(II)V
@@ -178,7 +221,7 @@
 
     if-gez p0, :cond_0
 
-    .line 1207
+    .line 1237
     new-instance p1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -199,7 +242,7 @@
 
     throw p1
 
-    .line 1209
+    .line 1239
     :cond_0
     new-instance v0, Ljava/lang/ArrayIndexOutOfBoundsException;
 
@@ -250,7 +293,7 @@
 
     if-ge p1, p0, :cond_0
 
-    .line 1229
+    .line 1259
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -277,7 +320,7 @@
 
     throw p2
 
-    .line 1233
+    .line 1263
     :cond_0
     new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -305,7 +348,7 @@
 
     throw p0
 
-    .line 1226
+    .line 1256
     :cond_1
     new-instance p1, Ljava/lang/IndexOutOfBoundsException;
 
@@ -347,18 +390,19 @@
         }
     .end annotation
 
-    .line 547
+    .line 582
     instance-of v0, p0, Ljava/util/Collection;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 549
+    .line 584
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
+    .line 585
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -366,14 +410,14 @@
 
     if-eqz v2, :cond_1
 
-    .line 550
+    .line 586
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 554
+    .line 589
     :cond_0
     move-object v0, p0
 
@@ -386,12 +430,12 @@
     :cond_1
     if-nez v0, :cond_2
 
-    .line 558
+    .line 593
     sget-object p0, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
 
     return-object p0
 
-    .line 561
+    .line 596
     :cond_2
     invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
@@ -412,7 +456,7 @@
         }
     .end annotation
 
-    .line 379
+    .line 430
     new-instance v0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -427,7 +471,7 @@
 .method public static copyFrom(Ljava/lang/String;Ljava/nio/charset/Charset;)Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 391
+    .line 442
     new-instance v0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     invoke-virtual {p0, p1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
@@ -442,7 +486,7 @@
 .method public static copyFrom(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 365
+    .line 416
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v0
@@ -455,15 +499,24 @@
 .end method
 
 .method public static copyFrom(Ljava/nio/ByteBuffer;I)Lcom/google/protobuf/ByteString;
-    .locals 0
+    .locals 2
 
-    .line 352
+    .line 403
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->remaining()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1, p1, v0}, Lcom/google/protobuf/ByteString;->checkRange(III)I
+
+    .line 404
     new-array p1, p1, [B
 
-    .line 353
+    .line 405
     invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 354
+    .line 406
     new-instance p0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     invoke-direct {p0, p1}, Lcom/google/protobuf/ByteString$LiteralByteString;-><init>([B)V
@@ -474,7 +527,7 @@
 .method public static copyFrom([B)Lcom/google/protobuf/ByteString;
     .locals 2
 
-    .line 310
+    .line 363
     array-length v0, p0
 
     const/4 v1, 0x0
@@ -489,7 +542,14 @@
 .method public static copyFrom([BII)Lcom/google/protobuf/ByteString;
     .locals 2
 
-    .line 300
+    add-int v0, p1, p2
+
+    .line 352
+    array-length v1, p0
+
+    invoke-static {p1, v0, v1}, Lcom/google/protobuf/ByteString;->checkRange(III)I
+
+    .line 353
     new-instance v0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     sget-object v1, Lcom/google/protobuf/ByteString;->byteArrayCopier:Lcom/google/protobuf/ByteString$ByteArrayCopier;
@@ -506,7 +566,7 @@
 .method public static copyFromUtf8(Ljava/lang/String;)Lcom/google/protobuf/ByteString;
     .locals 2
 
-    .line 402
+    .line 453
     new-instance v0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     sget-object v1, Lcom/google/protobuf/Internal;->UTF_8:Ljava/nio/charset/Charset;
@@ -523,7 +583,7 @@
 .method static newCodedBuilder(I)Lcom/google/protobuf/ByteString$CodedBuilder;
     .locals 2
 
-    .line 1128
+    .line 1159
     new-instance v0, Lcom/google/protobuf/ByteString$CodedBuilder;
 
     const/4 v1, 0x0
@@ -536,7 +596,7 @@
 .method public static newOutput()Lcom/google/protobuf/ByteString$Output;
     .locals 2
 
-    .line 929
+    .line 968
     new-instance v0, Lcom/google/protobuf/ByteString$Output;
 
     const/16 v1, 0x80
@@ -549,7 +609,7 @@
 .method public static newOutput(I)Lcom/google/protobuf/ByteString$Output;
     .locals 1
 
-    .line 915
+    .line 954
     new-instance v0, Lcom/google/protobuf/ByteString$Output;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/ByteString$Output;-><init>(I)V
@@ -565,7 +625,7 @@
         }
     .end annotation
 
-    .line 492
+    .line 528
     new-array v0, p1, [B
 
     const/4 v1, 0x0
@@ -577,7 +637,7 @@
 
     sub-int v3, p1, v2
 
-    .line 495
+    .line 531
     invoke-virtual {p0, v0, v2, v3}, Ljava/io/InputStream;->read([BII)I
 
     move-result v3
@@ -601,7 +661,7 @@
 
     return-object p0
 
-    .line 507
+    .line 543
     :cond_2
     invoke-static {v0, v1, v2}, Lcom/google/protobuf/ByteString;->copyFrom([BII)Lcom/google/protobuf/ByteString;
 
@@ -622,7 +682,7 @@
 
     const/16 v1, 0x2000
 
-    .line 431
+    .line 476
     invoke-static {p0, v0, v1}, Lcom/google/protobuf/ByteString;->readFrom(Ljava/io/InputStream;II)Lcom/google/protobuf/ByteString;
 
     move-result-object p0
@@ -638,7 +698,7 @@
         }
     .end annotation
 
-    .line 457
+    .line 496
     invoke-static {p0, p1, p1}, Lcom/google/protobuf/ByteString;->readFrom(Ljava/io/InputStream;II)Lcom/google/protobuf/ByteString;
 
     move-result-object p0
@@ -654,12 +714,12 @@
         }
     .end annotation
 
-    .line 463
+    .line 502
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 469
+    .line 508
     :goto_0
     invoke-static {p0, p1}, Lcom/google/protobuf/ByteString;->readChunk(Ljava/io/InputStream;I)Lcom/google/protobuf/ByteString;
 
@@ -667,20 +727,20 @@
 
     if-nez v1, :cond_0
 
-    .line 477
+    .line 516
     invoke-static {v0}, Lcom/google/protobuf/ByteString;->copyFrom(Ljava/lang/Iterable;)Lcom/google/protobuf/ByteString;
 
     move-result-object p0
 
     return-object p0
 
-    .line 473
+    .line 512
     :cond_0
     invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     mul-int/lit8 p1, p1, 0x2
 
-    .line 474
+    .line 513
     invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
 
     move-result p1
@@ -688,22 +748,47 @@
     goto :goto_0
 .end method
 
+.method private static toInt(B)I
+    .locals 0
+
+    and-int/lit16 p0, p0, 0xff
+
+    return p0
+.end method
+
+.method public static unsignedLexicographicalComparator()Ljava/util/Comparator;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/Comparator<",
+            "Lcom/google/protobuf/ByteString;",
+            ">;"
+        }
+    .end annotation
+
+    .line 287
+    sget-object v0, Lcom/google/protobuf/ByteString;->UNSIGNED_LEXICOGRAPHICAL_COMPARATOR:Ljava/util/Comparator;
+
+    return-object v0
+.end method
+
 .method static wrap(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/ByteString;
     .locals 3
 
-    .line 317
+    .line 368
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->hasArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 318
+    .line 369
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
     move-result v0
 
-    .line 319
+    .line 370
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -724,7 +809,7 @@
 
     return-object p0
 
-    .line 321
+    .line 372
     :cond_0
     new-instance v0, Lcom/google/protobuf/NioByteString;
 
@@ -736,7 +821,7 @@
 .method static wrap([B)Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 331
+    .line 382
     new-instance v0, Lcom/google/protobuf/ByteString$LiteralByteString;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/ByteString$LiteralByteString;-><init>([B)V
@@ -747,7 +832,7 @@
 .method static wrap([BII)Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 340
+    .line 390
     new-instance v0, Lcom/google/protobuf/ByteString$BoundedByteString;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/protobuf/ByteString$BoundedByteString;-><init>([BII)V
@@ -777,7 +862,7 @@
 .method public final concat(Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/ByteString;
     .locals 3
 
-    .line 524
+    .line 560
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -792,14 +877,14 @@
 
     if-lt v1, v0, :cond_0
 
-    .line 529
+    .line 565
     invoke-static {p0, p1}, Lcom/google/protobuf/RopeByteString;->concatenate(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/ByteString;
 
     move-result-object p1
 
     return-object p1
 
-    .line 525
+    .line 561
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -811,7 +896,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 526
+    .line 562
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v2
@@ -843,7 +928,7 @@
 .method public copyTo([BI)V
     .locals 2
 
-    .line 592
+    .line 632
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -857,10 +942,12 @@
 
 .method public final copyTo([BIII)V
     .locals 2
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
 
     add-int v0, p2, p4
 
-    .line 607
+    .line 648
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v1
@@ -869,14 +956,14 @@
 
     add-int v0, p3, p4
 
-    .line 608
+    .line 649
     array-length v1, p1
 
     invoke-static {p3, v0, v1}, Lcom/google/protobuf/ByteString;->checkRange(III)I
 
     if-lez p4, :cond_0
 
-    .line 610
+    .line 651
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/ByteString;->copyToInternal([BIII)V
 
     :cond_0
@@ -889,7 +976,7 @@
 .method public final endsWith(Lcom/google/protobuf/ByteString;)Z
     .locals 2
 
-    .line 284
+    .line 336
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -900,7 +987,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 285
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -941,19 +1027,19 @@
 .method public final hashCode()I
     .locals 2
 
-    .line 857
+    .line 899
     iget v0, p0, Lcom/google/protobuf/ByteString;->hash:I
 
     if-nez v0, :cond_1
 
-    .line 860
+    .line 902
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 861
+    .line 903
     invoke-virtual {p0, v0, v1, v0}, Lcom/google/protobuf/ByteString;->partialHash(III)I
 
     move-result v0
@@ -962,12 +1048,15 @@
 
     const/4 v0, 0x1
 
-    .line 865
+    .line 907
     :cond_0
     iput v0, p0, Lcom/google/protobuf/ByteString;->hash:I
 
     :cond_1
     return v0
+.end method
+
+.method abstract internalByteAt(I)B
 .end method
 
 .method protected abstract isBalanced()Z
@@ -976,7 +1065,7 @@
 .method public final isEmpty()Z
     .locals 1
 
-    .line 229
+    .line 226
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -997,10 +1086,10 @@
 .method public abstract isValidUtf8()Z
 .end method
 
-.method public final iterator()Lcom/google/protobuf/ByteString$ByteIterator;
+.method public iterator()Lcom/google/protobuf/ByteString$ByteIterator;
     .locals 1
 
-    .line 170
+    .line 166
     new-instance v0, Lcom/google/protobuf/ByteString$1;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/ByteString$1;-><init>(Lcom/google/protobuf/ByteString;)V
@@ -1011,7 +1100,7 @@
 .method public bridge synthetic iterator()Ljava/util/Iterator;
     .locals 1
 
-    .line 68
+    .line 67
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->iterator()Lcom/google/protobuf/ByteString$ByteIterator;
 
     move-result-object v0
@@ -1034,7 +1123,7 @@
 .method protected final peekCachedHashCode()I
     .locals 1
 
-    .line 1181
+    .line 1212
     iget v0, p0, Lcom/google/protobuf/ByteString;->hash:I
 
     return v0
@@ -1046,7 +1135,7 @@
 .method public final startsWith(Lcom/google/protobuf/ByteString;)Z
     .locals 3
 
-    .line 270
+    .line 324
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -1059,7 +1148,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 271
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -1083,7 +1171,7 @@
 .method public final substring(I)Lcom/google/protobuf/ByteString;
     .locals 1
 
-    .line 245
+    .line 301
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -1101,25 +1189,25 @@
 .method public final toByteArray()[B
     .locals 3
 
-    .line 639
+    .line 681
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 641
+    .line 683
     sget-object v0, Lcom/google/protobuf/Internal;->EMPTY_BYTE_ARRAY:[B
 
     return-object v0
 
-    .line 643
+    .line 685
     :cond_0
     new-array v1, v0, [B
 
     const/4 v2, 0x0
 
-    .line 644
+    .line 686
     invoke-virtual {p0, v1, v2, v2, v0}, Lcom/google/protobuf/ByteString;->copyToInternal([BIII)V
 
     return-object v1
@@ -1130,10 +1218,10 @@
 
     const/4 v0, 0x2
 
-    .line 1240
+    .line 1270
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 1241
+    .line 1271
     invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
@@ -1160,7 +1248,7 @@
 
     const-string v1, "<ByteString@%s size=%d>"
 
-    .line 1240
+    .line 1270
     invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -1176,7 +1264,7 @@
         }
     .end annotation
 
-    .line 728
+    .line 775
     :try_start_0
     invoke-static {p1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
 
@@ -1193,22 +1281,22 @@
     :catch_0
     move-exception v0
 
-    .line 730
+    .line 777
     new-instance v1, Ljava/io/UnsupportedEncodingException;
 
     invoke-direct {v1, p1}, Ljava/io/UnsupportedEncodingException;-><init>(Ljava/lang/String;)V
 
-    .line 731
+    .line 778
     invoke-virtual {v1, v0}, Ljava/io/UnsupportedEncodingException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 732
+    .line 779
     throw v1
 .end method
 
 .method public final toString(Ljava/nio/charset/Charset;)Ljava/lang/String;
     .locals 1
 
-    .line 744
+    .line 791
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v0
@@ -1234,7 +1322,7 @@
 .method public final toStringUtf8()Ljava/lang/String;
     .locals 1
 
-    .line 765
+    .line 811
     sget-object v0, Lcom/google/protobuf/Internal;->UTF_8:Ljava/nio/charset/Charset;
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/ByteString;->toString(Ljava/nio/charset/Charset;)Ljava/lang/String;
@@ -1270,7 +1358,7 @@
 
     add-int v0, p2, p3
 
-    .line 667
+    .line 708
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString;->size()I
 
     move-result v1
@@ -1279,7 +1367,7 @@
 
     if-lez p3, :cond_0
 
-    .line 669
+    .line 710
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/ByteString;->writeToInternal(Ljava/io/OutputStream;II)V
 
     :cond_0
@@ -1287,6 +1375,14 @@
 .end method
 
 .method abstract writeToInternal(Ljava/io/OutputStream;II)V
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+.end method
+
+.method abstract writeToReverse(Lcom/google/protobuf/ByteOutput;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;

@@ -24,12 +24,12 @@
 .method constructor <init>(Lcom/google/protobuf/NioByteString;)V
     .locals 0
 
-    .line 220
+    .line 221
     iput-object p1, p0, Lcom/google/protobuf/NioByteString$1;->this$0:Lcom/google/protobuf/NioByteString;
 
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 221
+    .line 222
     iget-object p1, p0, Lcom/google/protobuf/NioByteString$1;->this$0:Lcom/google/protobuf/NioByteString;
 
     invoke-static {p1}, Lcom/google/protobuf/NioByteString;->access$000(Lcom/google/protobuf/NioByteString;)Ljava/nio/ByteBuffer;
@@ -55,7 +55,7 @@
         }
     .end annotation
 
-    .line 244
+    .line 245
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
@@ -68,7 +68,7 @@
 .method public mark(I)V
     .locals 0
 
-    .line 225
+    .line 226
     iget-object p1, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->mark()Ljava/nio/Buffer;
@@ -92,7 +92,7 @@
         }
     .end annotation
 
-    .line 249
+    .line 250
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -105,7 +105,7 @@
 
     return v0
 
-    .line 252
+    .line 253
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
@@ -126,7 +126,7 @@
         }
     .end annotation
 
-    .line 257
+    .line 258
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -139,7 +139,7 @@
 
     return p1
 
-    .line 261
+    .line 262
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
@@ -151,7 +151,7 @@
 
     move-result p3
 
-    .line 262
+    .line 263
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
@@ -167,7 +167,7 @@
         }
     .end annotation
 
-    .line 236
+    .line 237
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/NioByteString$1;->buf:Ljava/nio/ByteBuffer;
 
@@ -180,7 +180,7 @@
     :catch_0
     move-exception v0
 
-    .line 238
+    .line 239
     new-instance v1, Ljava/io/IOException;
 
     invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V

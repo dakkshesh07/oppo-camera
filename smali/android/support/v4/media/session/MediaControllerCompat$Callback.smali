@@ -91,6 +91,8 @@
 
 .method public getIControllerCallback()Landroid/support/v4/media/session/IMediaControllerCallback;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 818
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$Callback;->mIControllerCallback:Landroid/support/v4/media/session/IMediaControllerCallback;

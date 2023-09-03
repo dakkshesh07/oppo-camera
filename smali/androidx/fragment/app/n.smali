@@ -10,6 +10,9 @@
     }
 .end annotation
 
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
@@ -288,7 +291,7 @@
     check-cast v3, Landroid/view/View;
 
     .line 138
-    invoke-static {v3}, Landroidx/core/g/w;->q(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v3}, Landroidx/core/f/w;->q(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -297,7 +300,7 @@
     const/4 v4, 0x0
 
     .line 139
-    invoke-static {v3, v4}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/String;)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -395,7 +398,7 @@
     check-cast v3, Landroid/view/View;
 
     .line 158
-    invoke-static {v3}, Landroidx/core/g/w;->q(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {v3}, Landroidx/core/f/w;->q(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -410,7 +413,7 @@
     const/4 v5, 0x0
 
     .line 163
-    invoke-static {v3, v5}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/String;)V
 
     .line 164
     invoke-interface {p5, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -442,7 +445,7 @@
 
     check-cast v3, Landroid/view/View;
 
-    invoke-static {v3, v4}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -473,7 +476,7 @@
 
     invoke-direct/range {v0 .. v6}, Landroidx/fragment/app/n$1;-><init>(Landroidx/fragment/app/n;ILjava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    invoke-static {p1, p5}, Landroidx/core/g/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/g/s;
+    invoke-static {p1, p5}, Landroidx/core/f/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/f/s;
 
     return-void
 .end method
@@ -499,7 +502,7 @@
 
     invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/n$2;-><init>(Landroidx/fragment/app/n;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Landroidx/core/g/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/g/s;
+    invoke-static {p1, v0}, Landroidx/core/f/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/f/s;
 
     return-void
 .end method
@@ -528,7 +531,7 @@
 
     invoke-direct {v0, p0, p2, p3}, Landroidx/fragment/app/n$3;-><init>(Landroidx/fragment/app/n;Ljava/util/ArrayList;Ljava/util/Map;)V
 
-    invoke-static {p1, v0}, Landroidx/core/g/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/g/s;
+    invoke-static {p1, v0}, Landroidx/core/f/s;->a(Landroid/view/View;Ljava/lang/Runnable;)Landroidx/core/f/s;
 
     return-void
 .end method
@@ -629,7 +632,7 @@
     check-cast p2, Landroid/view/ViewGroup;
 
     .line 196
-    invoke-static {p2}, Landroidx/core/g/y;->a(Landroid/view/ViewGroup;)Z
+    invoke-static {p2}, Landroidx/core/f/y;->a(Landroid/view/ViewGroup;)Z
 
     move-result v0
 
@@ -694,7 +697,7 @@
     if-nez v0, :cond_1
 
     .line 217
-    invoke-static {p2}, Landroidx/core/g/w;->q(Landroid/view/View;)Ljava/lang/String;
+    invoke-static {p2}, Landroidx/core/f/w;->q(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v0
 

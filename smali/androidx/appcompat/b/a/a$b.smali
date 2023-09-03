@@ -15,20 +15,20 @@
 
 
 # instance fields
-.field a:Landroidx/b/d;
+.field a:Landroidx/collection/LongSparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/d<",
+            "Landroidx/collection/LongSparseArray<",
             "Ljava/lang/Long;",
             ">;"
         }
     .end annotation
 .end field
 
-.field b:Landroidx/b/h;
+.field b:Landroidx/collection/SparseArrayCompat;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/h<",
+            "Landroidx/collection/SparseArrayCompat<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -46,31 +46,31 @@
     if-eqz p1, :cond_0
 
     .line 637
-    iget-object p2, p1, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object p2, p1, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
-    iput-object p2, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iput-object p2, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     .line 638
-    iget-object p1, p1, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iget-object p1, p1, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
-    iput-object p1, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iput-object p1, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
     goto :goto_0
 
     .line 640
     :cond_0
-    new-instance p1, Landroidx/b/d;
+    new-instance p1, Landroidx/collection/LongSparseArray;
 
-    invoke-direct {p1}, Landroidx/b/d;-><init>()V
+    invoke-direct {p1}, Landroidx/collection/LongSparseArray;-><init>()V
 
-    iput-object p1, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iput-object p1, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     .line 641
-    new-instance p1, Landroidx/b/h;
+    new-instance p1, Landroidx/collection/SparseArrayCompat;
 
-    invoke-direct {p1}, Landroidx/b/h;-><init>()V
+    invoke-direct {p1}, Landroidx/collection/SparseArrayCompat;-><init>()V
 
-    iput-object p1, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iput-object p1, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
     :goto_0
     return-void
@@ -105,13 +105,13 @@
 
     .line 681
     :cond_0
-    iget-object v1, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iget-object v1, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-virtual {v1, p1, v0}, Landroidx/b/h;->a(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SparseArrayCompat;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -134,7 +134,7 @@
     move-result-wide p1
 
     .line 686
-    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     const-wide/16 v1, -0x1
 
@@ -142,7 +142,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, v1}, Landroidx/b/d;->a(JLjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2, v1}, Landroidx/collection/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -181,7 +181,7 @@
 
     .line 658
     :goto_0
-    iget-object v4, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object v4, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     int-to-long v5, p3
 
@@ -191,7 +191,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v4, v0, v1, v7}, Landroidx/b/d;->c(JLjava/lang/Object;)V
+    invoke-virtual {v4, v0, v1, v7}, Landroidx/collection/LongSparseArray;->append(JLjava/lang/Object;)V
 
     if-eqz p4, :cond_1
 
@@ -201,7 +201,7 @@
     move-result-wide p1
 
     .line 661
-    iget-object p4, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object p4, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     const-wide v0, 0x100000000L
 
@@ -213,7 +213,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p4, p1, p2, v0}, Landroidx/b/d;->c(JLjava/lang/Object;)V
+    invoke-virtual {p4, p1, p2, v0}, Landroidx/collection/LongSparseArray;->append(JLjava/lang/Object;)V
 
     :cond_1
     return p3
@@ -251,13 +251,13 @@
     move-result p1
 
     .line 668
-    iget-object p2, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iget-object p2, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p3
 
-    invoke-virtual {p2, p1, p3}, Landroidx/b/h;->b(ILjava/lang/Object;)V
+    invoke-virtual {p2, p1, p3}, Landroidx/collection/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
     return p1
 .end method
@@ -266,22 +266,22 @@
     .locals 1
 
     .line 647
-    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
-    invoke-virtual {v0}, Landroidx/b/d;->a()Landroidx/b/d;
+    invoke-virtual {v0}, Landroidx/collection/LongSparseArray;->clone()Landroidx/collection/LongSparseArray;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iput-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     .line 648
-    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
-    invoke-virtual {v0}, Landroidx/b/h;->a()Landroidx/b/h;
+    invoke-virtual {v0}, Landroidx/collection/SparseArrayCompat;->clone()Landroidx/collection/SparseArrayCompat;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/b/h;
+    iput-object v0, p0, Landroidx/appcompat/b/a/a$b;->b:Landroidx/collection/SparseArrayCompat;
 
     return-void
 .end method
@@ -295,7 +295,7 @@
     move-result-wide p1
 
     .line 691
-    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     const-wide/16 v1, -0x1
 
@@ -303,7 +303,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, v1}, Landroidx/b/d;->a(JLjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2, v1}, Landroidx/collection/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -343,7 +343,7 @@
     move-result-wide p1
 
     .line 696
-    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/b/d;
+    iget-object v0, p0, Landroidx/appcompat/b/a/a$b;->a:Landroidx/collection/LongSparseArray;
 
     const-wide/16 v1, -0x1
 
@@ -351,7 +351,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, v1}, Landroidx/b/d;->a(JLjava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2, v1}, Landroidx/collection/LongSparseArray;->get(JLjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

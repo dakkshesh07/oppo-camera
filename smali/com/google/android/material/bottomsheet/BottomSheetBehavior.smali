@@ -582,12 +582,12 @@
     return p0
 .end method
 
-.method private addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+.method private addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;",
-            "Landroidx/core/g/a/d$a;",
+            "Landroidx/core/f/a/d$a;",
             "I)V"
         }
     .end annotation
@@ -599,7 +599,7 @@
 
     const/4 p3, 0x0
 
-    invoke-static {p1, p2, p3, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a/d$a;Ljava/lang/CharSequence;Landroidx/core/g/a/g;)V
+    invoke-static {p1, p2, p3, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a/d$a;Ljava/lang/CharSequence;Landroidx/core/f/a/g;)V
 
     return-void
 .end method
@@ -1107,7 +1107,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v0}, Landroidx/core/g/w;->E(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->E(Landroid/view/View;)Z
 
     move-result v1
 
@@ -1156,17 +1156,17 @@
     const/high16 v1, 0x80000
 
     .line 1680
-    invoke-static {v0, v1}, Landroidx/core/g/w;->c(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->c(Landroid/view/View;I)V
 
     const/high16 v1, 0x40000
 
     .line 1681
-    invoke-static {v0, v1}, Landroidx/core/g/w;->c(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->c(Landroid/view/View;I)V
 
     const/high16 v1, 0x100000
 
     .line 1682
-    invoke-static {v0, v1}, Landroidx/core/g/w;->c(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->c(Landroid/view/View;I)V
 
     .line 1684
     iget-boolean v1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->hideable:Z
@@ -1180,9 +1180,9 @@
     if-eq v1, v2, :cond_2
 
     .line 1685
-    sget-object v1, Landroidx/core/g/a/d$a;->u:Landroidx/core/g/a/d$a;
+    sget-object v1, Landroidx/core/f/a/d$a;->u:Landroidx/core/f/a/d$a;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
 
     .line 1688
     :cond_2
@@ -1204,14 +1204,14 @@
 
     .line 1698
     :cond_3
-    sget-object v1, Landroidx/core/g/a/d$a;->t:Landroidx/core/g/a/d$a;
+    sget-object v1, Landroidx/core/f/a/d$a;->t:Landroidx/core/f/a/d$a;
 
-    invoke-direct {p0, v0, v1, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+    invoke-direct {p0, v0, v1, v3}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
 
     .line 1700
-    sget-object v1, Landroidx/core/g/a/d$a;->s:Landroidx/core/g/a/d$a;
+    sget-object v1, Landroidx/core/f/a/d$a;->s:Landroidx/core/f/a/d$a;
 
-    invoke-direct {p0, v0, v1, v4}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+    invoke-direct {p0, v0, v1, v4}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
 
     goto :goto_0
 
@@ -1225,9 +1225,9 @@
 
     .line 1707
     :cond_5
-    sget-object v1, Landroidx/core/g/a/d$a;->s:Landroidx/core/g/a/d$a;
+    sget-object v1, Landroidx/core/f/a/d$a;->s:Landroidx/core/f/a/d$a;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
 
     goto :goto_0
 
@@ -1241,9 +1241,9 @@
 
     .line 1692
     :cond_7
-    sget-object v1, Landroidx/core/g/a/d$a;->t:Landroidx/core/g/a/d$a;
+    sget-object v1, Landroidx/core/f/a/d$a;->t:Landroidx/core/f/a/d$a;
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/g/a/d$a;I)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->addAccessibilityActionForState(Landroid/view/View;Landroidx/core/f/a/d$a;I)V
 
     :goto_0
     return-void
@@ -1459,7 +1459,7 @@
     const/4 v5, 0x4
 
     .line 1654
-    invoke-static {v4, v5}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v4, v5}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -1493,7 +1493,7 @@
 
     move-result v5
 
-    invoke-static {v4, v5}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v4, v5}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     :cond_7
     :goto_2
@@ -1538,6 +1538,8 @@
 
 .method public disableShapeAnimations()V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -1655,7 +1657,7 @@
     .locals 3
 
     .line 1181
-    invoke-static {p1}, Landroidx/core/g/w;->z(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->z(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2162,7 +2164,7 @@
     .end annotation
 
     .line 365
-    invoke-static {p1}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2170,7 +2172,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p2}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p2}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2222,7 +2224,7 @@
     if-eqz v0, :cond_1
 
     .line 378
-    invoke-static {p2, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p2, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 381
     :cond_1
@@ -2240,7 +2242,7 @@
     if-nez v5, :cond_2
 
     .line 384
-    invoke-static {p2}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {p2}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result v4
 
@@ -2285,14 +2287,14 @@
     invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->updateAccessibilityActions()V
 
     .line 390
-    invoke-static {p2}, Landroidx/core/g/w;->f(Landroid/view/View;)I
+    invoke-static {p2}, Landroidx/core/f/w;->f(Landroid/view/View;)I
 
     move-result v0
 
     if-nez v0, :cond_6
 
     .line 392
-    invoke-static {p2, v1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p2, v1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 395
     :cond_6
@@ -2363,7 +2365,7 @@
 
     move-result p1
 
-    invoke-static {p2, p1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -2375,7 +2377,7 @@
     .line 412
     iget p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->halfExpandedOffset:I
 
-    invoke-static {p2, p1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -2392,7 +2394,7 @@
     .line 414
     iget p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->parentHeight:I
 
-    invoke-static {p2, p1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -2407,7 +2409,7 @@
     .line 416
     iget p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->collapsedOffset:I
 
-    invoke-static {p2, p1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -2426,7 +2428,7 @@
 
     sub-int/2addr v0, p1
 
-    invoke-static {p2, v0}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, v0}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     .line 421
     :cond_d
@@ -2561,7 +2563,7 @@
 
     neg-int p3, p3
 
-    invoke-static {p2, p3}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p3}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     const/4 p3, 0x3
 
@@ -2585,7 +2587,7 @@
     neg-int p3, p5
 
     .line 563
-    invoke-static {p2, p3}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p3}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     .line 564
     invoke-virtual {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setStateInternal(I)V
@@ -2626,7 +2628,7 @@
 
     neg-int p3, p3
 
-    invoke-static {p2, p3}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p3}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     const/4 p3, 0x4
 
@@ -2651,7 +2653,7 @@
     neg-int p3, p5
 
     .line 575
-    invoke-static {p2, p3}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p2, p3}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     .line 576
     invoke-virtual {p0, p1}, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->setStateInternal(I)V
@@ -3946,7 +3948,7 @@
     iput p2, p3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior$SettleRunnable;->targetState:I
 
     .line 1295
-    invoke-static {p1, p3}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p1, p3}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     .line 1296
     iget-object p1, p0, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->settleRunnable:Lcom/google/android/material/bottomsheet/BottomSheetBehavior$SettleRunnable;

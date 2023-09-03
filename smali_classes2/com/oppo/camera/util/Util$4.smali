@@ -3,12 +3,12 @@
 .source "Util.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/util/Util;->a(Landroid/content/Context;Z)V
+    value = Lcom/oppo/camera/util/Util;->a(Landroid/view/View;IILandroid/view/animation/Interpolator;Landroid/animation/Animator$AnimatorListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,27 @@
 
 
 # instance fields
-.field final synthetic a:Z
+.field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Landroid/content/Context;
+.field final synthetic b:I
+
+.field final synthetic c:I
+
+.field final synthetic d:I
 
 
 # direct methods
-.method constructor <init>(ZLandroid/content/Context;)V
+.method constructor <init>(Landroid/view/View;III)V
     .locals 0
 
-    .line 1593
-    iput-boolean p1, p0, Lcom/oppo/camera/util/Util$4;->a:Z
+    .line 1734
+    iput-object p1, p0, Lcom/oppo/camera/util/Util$4;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/oppo/camera/util/Util$4;->b:Landroid/content/Context;
+    iput p2, p0, Lcom/oppo/camera/util/Util$4;->b:I
+
+    iput p3, p0, Lcom/oppo/camera/util/Util$4;->c:I
+
+    iput p4, p0, Lcom/oppo/camera/util/Util$4;->d:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,58 +47,64 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    .line 1596
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 1737
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object p1
 
-    const-string v1, "broadcastRearCamera, enterRearCamera: "
+    check-cast p1, Ljava/lang/Float;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 1739
+    iget-object v0, p0, Lcom/oppo/camera/util/Util$4;->a:Landroid/view/View;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/util/Util$4;->a:Z
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 1740
+    iget v1, p0, Lcom/oppo/camera/util/Util$4;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v2, p0, Lcom/oppo/camera/util/Util$4;->c:I
 
-    move-result-object v0
+    int-to-float v2, v2
 
-    const-string v1, "Util"
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result p1
 
-    .line 1598
-    new-instance v0, Landroid/content/Intent;
+    mul-float/2addr v2, p1
 
-    const-string v1, "com.oppo.rearcamera"
+    float-to-int p1, v2
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    add-int/2addr v1, p1
 
-    .line 1599
-    iget-boolean v1, p0, Lcom/oppo/camera/util/Util$4;->a:Z
+    iget p1, p0, Lcom/oppo/camera/util/Util$4;->d:I
 
-    if-eqz v1, :cond_0
+    invoke-static {p1}, Landroid/graphics/Color;->red(I)I
 
-    const-string v1, "enterrear"
+    move-result p1
 
-    goto :goto_0
+    iget v2, p0, Lcom/oppo/camera/util/Util$4;->d:I
+
+    .line 1741
+    invoke-static {v2}, Landroid/graphics/Color;->green(I)I
+
+    move-result v2
+
+    iget v3, p0, Lcom/oppo/camera/util/Util$4;->d:I
+
+    invoke-static {v3}, Landroid/graphics/Color;->blue(I)I
+
+    move-result v3
+
+    .line 1740
+    invoke-static {v1, p1, v2, v3}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
     :cond_0
-    const-string v1, "exitrear"
-
-    :goto_0
-    const-string v2, "command"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 1600
-    iget-object v1, p0, Lcom/oppo/camera/util/Util$4;->b:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
-
     return-void
 .end method

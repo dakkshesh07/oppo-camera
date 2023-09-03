@@ -836,6 +836,8 @@
 
 .method protected cancel()V
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 581
     invoke-super {p0}, Landroidx/transition/m;->cancel()V
@@ -1090,6 +1092,9 @@
 
 .method protected createAnimators(Landroid/view/ViewGroup;Landroidx/transition/u;Landroidx/transition/u;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 12
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1399,6 +1404,8 @@
 
 .method forceToEnd(Landroid/view/ViewGroup;)V
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 592
     invoke-super {p0, p1}, Landroidx/transition/m;->forceToEnd(Landroid/view/ViewGroup;)V
@@ -1436,6 +1443,8 @@
 
 .method public pause(Landroid/view/View;)V
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 559
     invoke-super {p0, p1}, Landroidx/transition/m;->pause(Landroid/view/View;)V
@@ -1528,6 +1537,8 @@
 
 .method public resume(Landroid/view/View;)V
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 570
     invoke-super {p0, p1}, Landroidx/transition/m;->resume(Landroid/view/View;)V
@@ -1565,6 +1576,8 @@
 
 .method protected runAnimators()V
     .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 491
     iget-object v0, p0, Landroidx/transition/q;->c:Ljava/util/ArrayList;

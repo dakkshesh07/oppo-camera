@@ -39,7 +39,7 @@
 
 .field private expandedMarginTop:I
 
-.field lastInsets:Landroidx/core/g/ae;
+.field lastInsets:Landroidx/core/f/ae;
 
 .field private onOffsetChangedListener:Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;
 
@@ -453,7 +453,7 @@
 
     invoke-direct {p1, p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout$1;-><init>(Lcom/google/android/material/appbar/CollapsingToolbarLayout;)V
 
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     return-void
 .end method
@@ -958,13 +958,13 @@
     if-lez v0, :cond_3
 
     .line 325
-    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v0}, Landroidx/core/f/ae;->b()I
 
     move-result v0
 
@@ -1335,6 +1335,8 @@
 
 .method public getMaxLines()I
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1069
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
@@ -1415,11 +1417,11 @@
 
     .line 1104
     :cond_0
-    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v0}, Landroidx/core/f/ae;->b()I
 
     move-result v0
 
@@ -1430,7 +1432,7 @@
 
     .line 1106
     :goto_0
-    invoke-static {p0}, Landroidx/core/g/w;->m(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->m(Landroid/view/View;)I
 
     move-result v1
 
@@ -1524,11 +1526,11 @@
 
     check-cast v1, Landroid/view/View;
 
-    invoke-static {v1}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {v1}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v1
 
-    invoke-static {p0, v1}, Landroidx/core/g/w;->b(Landroid/view/View;Z)V
+    invoke-static {p0, v1}, Landroidx/core/f/w;->b(Landroid/view/View;Z)V
 
     .line 266
     iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->onOffsetChangedListener:Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;
@@ -1551,7 +1553,7 @@
     invoke-virtual {v0, v1}, Lcom/google/android/material/appbar/AppBarLayout;->addOnOffsetChangedListener(Lcom/google/android/material/appbar/AppBarLayout$OnOffsetChangedListener;)V
 
     .line 272
-    invoke-static {p0}, Landroidx/core/g/w;->s(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->s(Landroid/view/View;)V
 
     :cond_1
     return-void
@@ -1593,14 +1595,14 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
     .line 447
-    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1
 
     .line 449
-    invoke-virtual {p1}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {p1}, Landroidx/core/f/ae;->b()I
 
     move-result p1
 
@@ -1620,7 +1622,7 @@
     move-result-object v3
 
     .line 452
-    invoke-static {v3}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {v3}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v4
 
@@ -1634,7 +1636,7 @@
     if-ge v4, p1, :cond_0
 
     .line 456
-    invoke-static {v3, p1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {v3, p1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -1678,7 +1680,7 @@
     if-eqz p1, :cond_a
 
     .line 472
-    invoke-static {p1}, Landroidx/core/g/w;->E(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->E(Landroid/view/View;)Z
 
     move-result p1
 
@@ -1710,7 +1712,7 @@
     if-eqz p1, :cond_a
 
     .line 476
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p1
 
@@ -1989,11 +1991,11 @@
     move-result p2
 
     .line 433
-    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v0}, Landroidx/core/f/ae;->b()I
 
     move-result v0
 
@@ -2047,11 +2049,11 @@
     return-void
 .end method
 
-.method onWindowInsetChanged(Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method onWindowInsetChanged(Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 2
 
     .line 290
-    invoke-static {p0}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2066,23 +2068,23 @@
 
     .line 296
     :goto_0
-    iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
-    invoke-static {v1, v0}, Landroidx/core/f/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Landroidx/core/util/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
     .line 297
-    iput-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iput-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
     .line 298
     invoke-virtual {p0}, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->requestLayout()V
 
     .line 303
     :cond_1
-    invoke-virtual {p1}, Landroidx/core/g/ae;->g()Landroidx/core/g/ae;
+    invoke-virtual {p1}, Landroidx/core/f/ae;->g()Landroidx/core/f/ae;
 
     move-result-object p1
 
@@ -2204,7 +2206,7 @@
 
     .line 681
     :cond_2
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_3
     return-void
@@ -2231,7 +2233,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -2368,6 +2370,8 @@
 
 .method public setMaxLines(I)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1060
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->collapsingTextHelper:Lcom/google/android/material/internal/CollapsingTextHelper;
@@ -2396,14 +2400,14 @@
     if-eqz v0, :cond_0
 
     .line 651
-    invoke-static {v0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {v0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     .line 653
     :cond_0
     iput p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->scrimAlpha:I
 
     .line 654
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_1
     return-void
@@ -2440,7 +2444,7 @@
     .locals 1
 
     .line 600
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2563,7 +2567,7 @@
     :cond_2
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->statusBarScrim:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -2604,7 +2608,7 @@
 
     .line 743
     :cond_4
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_5
     return-void
@@ -2631,7 +2635,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

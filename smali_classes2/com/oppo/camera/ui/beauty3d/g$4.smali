@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/beauty3d/g;->j()V
+    value = Lcom/oppo/camera/ui/beauty3d/g;->i()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/beauty3d/g;)V
     .locals 0
 
-    .line 330
+    .line 326
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/g$4;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +42,15 @@
 
     const-string v0, "onClick, beauty3d data delete"
 
-    .line 333
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 329
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
+    .line 331
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/g$4;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/beauty3d/g;->k()V
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/beauty3d/g;->j()V
 
-    .line 337
+    .line 333
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/g$4;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/g;->a(Lcom/oppo/camera/ui/beauty3d/g;)Lcom/oppo/camera/ui/beauty3d/g$a;
@@ -59,7 +59,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 338
+    .line 334
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/g$4;->a:Lcom/oppo/camera/ui/beauty3d/g;
 
     invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/g;->a(Lcom/oppo/camera/ui/beauty3d/g;)Lcom/oppo/camera/ui/beauty3d/g$a;

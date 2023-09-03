@@ -39,10 +39,10 @@
         }
     .end annotation
 
-    .line 2945
+    .line 2949
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedFieldAccessor;-><init>(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 2947
+    .line 2951
     iget-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->type:Ljava/lang/Class;
 
     const/4 p3, 0x0
@@ -57,7 +57,7 @@
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
-    .line 2948
+    .line 2952
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +96,7 @@
 .method private coerceType(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .line 2956
+    .line 2960
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->type:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
@@ -107,7 +107,7 @@
 
     return-object p1
 
-    .line 2963
+    .line 2967
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
@@ -125,7 +125,7 @@
 
     check-cast p1, Lcom/google/protobuf/Message;
 
-    .line 2964
+    .line 2968
     invoke-interface {v0, p1}, Lcom/google/protobuf/Message$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
 
     move-result-object p1
@@ -142,7 +142,7 @@
 .method public addRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
     .locals 0
 
-    .line 2975
+    .line 2979
     invoke-direct {p0, p2}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->coerceType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -155,14 +155,14 @@
 .method public getRepeatedBuilder(Lcom/google/protobuf/GeneratedMessage$Builder;I)Lcom/google/protobuf/Message$Builder;
     .locals 3
 
-    .line 2984
+    .line 2988
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->getBuilderMethodBuilder:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    .line 2985
+    .line 2989
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
@@ -171,7 +171,7 @@
 
     aput-object p2, v1, v2
 
-    .line 2984
+    .line 2988
     invoke-static {v0, p1, v1}, Lcom/google/protobuf/GeneratedMessage;->access$1200(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -184,7 +184,7 @@
 .method public newBuilder()Lcom/google/protobuf/Message$Builder;
     .locals 3
 
-    .line 2979
+    .line 2983
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->newBuilderMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -205,7 +205,7 @@
 .method public setRepeated(Lcom/google/protobuf/GeneratedMessage$Builder;ILjava/lang/Object;)V
     .locals 0
 
-    .line 2971
+    .line 2975
     invoke-direct {p0, p3}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$RepeatedMessageFieldAccessor;->coerceType(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3

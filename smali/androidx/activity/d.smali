@@ -3,7 +3,7 @@
 .source "OnBackPressedDispatcherOwner.java"
 
 # interfaces
-.implements Landroidx/lifecycle/h;
+.implements Landroidx/lifecycle/g;
 
 
 # virtual methods

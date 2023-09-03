@@ -1,6 +1,6 @@
 .class public final enum Lcom/squareup/wire/WireField$Label;
 .super Ljava/lang/Enum;
-.source "WireField.kt"
+.source "WireField.java"
 
 
 # annotations
@@ -38,71 +38,84 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 7
 
-    const/4 v0, 0x5
+    .line 62
+    new-instance v0, Lcom/squareup/wire/WireField$Label;
 
-    new-array v0, v0, [Lcom/squareup/wire/WireField$Label;
+    const/4 v1, 0x0
 
-    new-instance v1, Lcom/squareup/wire/WireField$Label;
+    const-string v2, "REQUIRED"
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v2, v1}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
 
-    const-string v3, "REQUIRED"
+    sput-object v0, Lcom/squareup/wire/WireField$Label;->REQUIRED:Lcom/squareup/wire/WireField$Label;
 
-    invoke-direct {v1, v3, v2}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcom/squareup/wire/WireField$Label;->REQUIRED:Lcom/squareup/wire/WireField$Label;
-
-    aput-object v1, v0, v2
-
-    new-instance v1, Lcom/squareup/wire/WireField$Label;
+    new-instance v0, Lcom/squareup/wire/WireField$Label;
 
     const/4 v2, 0x1
 
     const-string v3, "OPTIONAL"
 
-    invoke-direct {v1, v3, v2}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v3, v2}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
 
-    sput-object v1, Lcom/squareup/wire/WireField$Label;->OPTIONAL:Lcom/squareup/wire/WireField$Label;
+    sput-object v0, Lcom/squareup/wire/WireField$Label;->OPTIONAL:Lcom/squareup/wire/WireField$Label;
+
+    new-instance v0, Lcom/squareup/wire/WireField$Label;
+
+    const/4 v3, 0x2
+
+    const-string v4, "REPEATED"
+
+    invoke-direct {v0, v4, v3}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/squareup/wire/WireField$Label;->REPEATED:Lcom/squareup/wire/WireField$Label;
+
+    new-instance v0, Lcom/squareup/wire/WireField$Label;
+
+    const/4 v4, 0x3
+
+    const-string v5, "ONE_OF"
+
+    invoke-direct {v0, v5, v4}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/squareup/wire/WireField$Label;->ONE_OF:Lcom/squareup/wire/WireField$Label;
+
+    .line 64
+    new-instance v0, Lcom/squareup/wire/WireField$Label;
+
+    const/4 v5, 0x4
+
+    const-string v6, "PACKED"
+
+    invoke-direct {v0, v6, v5}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
+
+    const/4 v0, 0x5
+
+    .line 61
+    new-array v0, v0, [Lcom/squareup/wire/WireField$Label;
+
+    sget-object v6, Lcom/squareup/wire/WireField$Label;->REQUIRED:Lcom/squareup/wire/WireField$Label;
+
+    aput-object v6, v0, v1
+
+    sget-object v1, Lcom/squareup/wire/WireField$Label;->OPTIONAL:Lcom/squareup/wire/WireField$Label;
 
     aput-object v1, v0, v2
 
-    new-instance v1, Lcom/squareup/wire/WireField$Label;
+    sget-object v1, Lcom/squareup/wire/WireField$Label;->REPEATED:Lcom/squareup/wire/WireField$Label;
 
-    const/4 v2, 0x2
+    aput-object v1, v0, v3
 
-    const-string v3, "REPEATED"
+    sget-object v1, Lcom/squareup/wire/WireField$Label;->ONE_OF:Lcom/squareup/wire/WireField$Label;
 
-    invoke-direct {v1, v3, v2}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
+    aput-object v1, v0, v4
 
-    sput-object v1, Lcom/squareup/wire/WireField$Label;->REPEATED:Lcom/squareup/wire/WireField$Label;
+    sget-object v1, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
 
-    aput-object v1, v0, v2
-
-    new-instance v1, Lcom/squareup/wire/WireField$Label;
-
-    const/4 v2, 0x3
-
-    const-string v3, "ONE_OF"
-
-    invoke-direct {v1, v3, v2}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcom/squareup/wire/WireField$Label;->ONE_OF:Lcom/squareup/wire/WireField$Label;
-
-    aput-object v1, v0, v2
-
-    new-instance v1, Lcom/squareup/wire/WireField$Label;
-
-    const/4 v2, 0x4
-
-    const-string v3, "PACKED"
-
-    invoke-direct {v1, v3, v2}, Lcom/squareup/wire/WireField$Label;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
-
-    aput-object v1, v0, v2
+    aput-object v1, v0, v5
 
     sput-object v0, Lcom/squareup/wire/WireField$Label;->$VALUES:[Lcom/squareup/wire/WireField$Label;
 
@@ -117,7 +130,7 @@
         }
     .end annotation
 
-    .line 51
+    .line 61
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -126,6 +139,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/squareup/wire/WireField$Label;
     .locals 1
 
+    .line 61
     const-class v0, Lcom/squareup/wire/WireField$Label;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -140,6 +154,7 @@
 .method public static values()[Lcom/squareup/wire/WireField$Label;
     .locals 1
 
+    .line 61
     sget-object v0, Lcom/squareup/wire/WireField$Label;->$VALUES:[Lcom/squareup/wire/WireField$Label;
 
     invoke-virtual {v0}, [Lcom/squareup/wire/WireField$Label;->clone()Ljava/lang/Object;
@@ -153,17 +168,13 @@
 
 
 # virtual methods
-.method public final isOneOf()Z
-    .locals 2
+.method isOneOf()Z
+    .locals 1
 
-    .line 66
-    move-object v0, p0
+    .line 75
+    sget-object v0, Lcom/squareup/wire/WireField$Label;->ONE_OF:Lcom/squareup/wire/WireField$Label;
 
-    check-cast v0, Lcom/squareup/wire/WireField$Label;
-
-    sget-object v1, Lcom/squareup/wire/WireField$Label;->ONE_OF:Lcom/squareup/wire/WireField$Label;
-
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -176,17 +187,13 @@
     return v0
 .end method
 
-.method public final isPacked()Z
-    .locals 2
+.method isPacked()Z
+    .locals 1
 
-    .line 63
-    move-object v0, p0
+    .line 71
+    sget-object v0, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
 
-    check-cast v0, Lcom/squareup/wire/WireField$Label;
-
-    sget-object v1, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
-
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -199,21 +206,17 @@
     return v0
 .end method
 
-.method public final isRepeated()Z
-    .locals 2
+.method isRepeated()Z
+    .locals 1
 
-    .line 60
-    move-object v0, p0
+    .line 67
+    sget-object v0, Lcom/squareup/wire/WireField$Label;->REPEATED:Lcom/squareup/wire/WireField$Label;
 
-    check-cast v0, Lcom/squareup/wire/WireField$Label;
+    if-eq p0, v0, :cond_1
 
-    sget-object v1, Lcom/squareup/wire/WireField$Label;->REPEATED:Lcom/squareup/wire/WireField$Label;
+    sget-object v0, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
 
-    if-eq v0, v1, :cond_1
-
-    sget-object v1, Lcom/squareup/wire/WireField$Label;->PACKED:Lcom/squareup/wire/WireField$Label;
-
-    if-ne v0, v1, :cond_0
+    if-ne p0, v0, :cond_0
 
     goto :goto_0
 

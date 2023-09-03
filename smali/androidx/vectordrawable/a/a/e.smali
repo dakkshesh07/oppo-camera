@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/vectordrawable/a/a/e$a;
@@ -18,7 +21,7 @@
     .line 636
     sget-object v0, Landroidx/vectordrawable/a/a/a;->j:[I
 
-    invoke-static {p0, p1, p2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p0, p1, p2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
@@ -27,7 +30,7 @@
     const-string p2, "value"
 
     .line 639
-    invoke-static {p0, p3, p2, p1}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
+    invoke-static {p0, p3, p2, p1}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
 
     move-result-object p2
 
@@ -496,14 +499,14 @@
 
     move-object/from16 v7, p4
 
-    invoke-static {v8, v9, v7, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {v8, v9, v7, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v6
 
     const-string v0, "ordering"
 
     .line 535
-    invoke-static {v6, v10, v0, v14, v14}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {v6, v10, v0, v14, v14}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v16
 
@@ -736,7 +739,7 @@
     .line 818
     sget-object v0, Landroidx/vectordrawable/a/a/a;->j:[I
 
-    invoke-static {p1, p2, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -747,7 +750,7 @@
     const/high16 v0, -0x40800000    # -1.0f
 
     .line 823
-    invoke-static {p1, p5, p3, p2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p5, p3, p2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -756,7 +759,7 @@
     const/4 v1, 0x0
 
     .line 826
-    invoke-static {p1, p5, v0, v1}, Landroidx/core/content/a/g;->b(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
+    invoke-static {p1, p5, v0, v1}, Landroidx/core/a/a/g;->b(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Landroid/util/TypedValue;
 
     move-result-object v2
 
@@ -810,7 +813,7 @@
 
     .line 848
     :cond_3
-    invoke-static {p1, p5, v0, v1, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p5, v0, v1, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
@@ -825,7 +828,7 @@
     const/4 p2, 0x0
 
     .line 842
-    invoke-static {p1, p5, v0, v1, p2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p5, v0, v1, p2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p2
 
@@ -856,7 +859,7 @@
     const-string p3, "interpolator"
 
     .line 858
-    invoke-static {p1, p5, p3, v3, v1}, Landroidx/core/content/a/g;->c(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p5, p3, v3, v1}, Landroidx/core/a/a/g;->c(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p3
 
@@ -1342,12 +1345,12 @@
     move-result-object p0
 
     .line 232
-    invoke-static {p1}, Landroidx/core/graphics/f;->b(Ljava/lang/String;)[Landroidx/core/graphics/f$b;
+    invoke-static {p1}, Landroidx/core/graphics/e;->b(Ljava/lang/String;)[Landroidx/core/graphics/e$b;
 
     move-result-object p2
 
     .line 234
-    invoke-static {p0}, Landroidx/core/graphics/f;->b(Ljava/lang/String;)[Landroidx/core/graphics/f$b;
+    invoke-static {p0}, Landroidx/core/graphics/e;->b(Ljava/lang/String;)[Landroidx/core/graphics/e$b;
 
     move-result-object p3
 
@@ -1366,7 +1369,7 @@
     if-eqz p3, :cond_b
 
     .line 239
-    invoke-static {p2, p3}, Landroidx/core/graphics/f;->a([Landroidx/core/graphics/f$b;[Landroidx/core/graphics/f$b;)Z
+    invoke-static {p2, p3}, Landroidx/core/graphics/e;->a([Landroidx/core/graphics/e$b;[Landroidx/core/graphics/e$b;)Z
 
     move-result v3
 
@@ -1725,14 +1728,14 @@
     .line 890
     sget-object v0, Landroidx/vectordrawable/a/a/a;->g:[I
 
-    invoke-static {p1, p2, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 892
     sget-object v1, Landroidx/vectordrawable/a/a/a;->k:[I
 
-    invoke-static {p1, p2, p3, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, p3, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -1752,7 +1755,7 @@
     const-string p3, "interpolator"
 
     .line 902
-    invoke-static {v0, p6, p3, p2, p2}, Landroidx/core/content/a/g;->c(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {v0, p6, p3, p2, p2}, Landroidx/core/a/a/g;->c(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p2
 
@@ -1790,7 +1793,7 @@
     const/4 v1, 0x1
 
     .line 391
-    invoke-static {p1, p4, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, p4, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1801,7 +1804,7 @@
     const-string v2, "propertyXName"
 
     .line 403
-    invoke-static {p1, p4, v2, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, p4, v2, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1810,7 +1813,7 @@
     const-string v4, "propertyYName"
 
     .line 405
-    invoke-static {p1, p4, v4, v3}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, p4, v4, v3}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p4
 
@@ -1854,7 +1857,7 @@
     .line 418
     :cond_2
     :goto_0
-    invoke-static {v0}, Landroidx/core/graphics/f;->a(Ljava/lang/String;)Landroid/graphics/Path;
+    invoke-static {v0}, Landroidx/core/graphics/e;->a(Ljava/lang/String;)Landroid/graphics/Path;
 
     move-result-object p1
 
@@ -1873,7 +1876,7 @@
     const-string p3, "propertyName"
 
     .line 423
-    invoke-static {p1, p4, p3, p2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {p1, p4, p3, p2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1894,7 +1897,7 @@
     const/16 v2, 0x12c
 
     .line 345
-    invoke-static {p1, p4, v1, v0, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p4, v1, v0, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v1
 
@@ -1907,7 +1910,7 @@
     const/4 v5, 0x2
 
     .line 347
-    invoke-static {p1, p4, v4, v5, v3}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p4, v4, v5, v3}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v4
 
@@ -1920,14 +1923,14 @@
     const/4 v8, 0x7
 
     .line 349
-    invoke-static {p1, p4, v7, v8, v6}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p4, v7, v8, v6}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v7
 
     const-string v8, "valueFrom"
 
     .line 353
-    invoke-static {p4, v8}, Landroidx/core/content/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {p4, v8}, Landroidx/core/a/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v8
 
@@ -1936,7 +1939,7 @@
     const-string v8, "valueTo"
 
     .line 354
-    invoke-static {p4, v8}, Landroidx/core/content/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {p4, v8}, Landroidx/core/a/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v8
 
@@ -1982,7 +1985,7 @@
     const-string v2, "repeatCount"
 
     .line 370
-    invoke-static {p1, p4, v2, v1, v3}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p4, v2, v1, v3}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v1
 
@@ -1991,7 +1994,7 @@
     const-string v1, "repeatMode"
 
     .line 372
-    invoke-static {p1, p4, v1, v6, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p4, v1, v6, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p1
 
@@ -2363,14 +2366,14 @@
 
     move-object/from16 v13, p4
 
-    invoke-static {v11, v12, v13, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {v11, v12, v13, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v14
 
     const-string v0, "propertyName"
 
     .line 593
-    invoke-static {v14, v6, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v14, v6, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v15
 
@@ -2379,7 +2382,7 @@
     const-string v1, "valueType"
 
     .line 595
-    invoke-static {v14, v6, v1, v2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {v14, v6, v1, v2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v5
 

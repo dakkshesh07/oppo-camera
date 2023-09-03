@@ -1,6 +1,6 @@
 .class public interface abstract Landroidx/core/f/e$a;
 .super Ljava/lang/Object;
-.source "Pools.java"
+.source "KeyEventDispatcher.java"
 
 
 # annotations
@@ -13,29 +13,7 @@
     name = "a"
 .end annotation
 
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;"
-    }
-.end annotation
-
 
 # virtual methods
-.method public abstract a()Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TT;"
-        }
-    .end annotation
-.end method
-
-.method public abstract a(Ljava/lang/Object;)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;)Z"
-        }
-    .end annotation
+.method public abstract a(Landroid/view/KeyEvent;)Z
 .end method

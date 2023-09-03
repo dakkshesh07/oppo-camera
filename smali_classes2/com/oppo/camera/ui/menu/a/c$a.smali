@@ -35,21 +35,28 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/menu/a/c;Landroid/view/View;)V
     .locals 0
 
-    .line 137
+    .line 210
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a/c$a;->a:Lcom/oppo/camera/ui/menu/a/c;
 
-    .line 138
+    .line 211
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$w;-><init>(Landroid/view/View;)V
 
-    .line 135
+    .line 208
     new-instance p1, Landroid/util/SparseArray;
 
     invoke-direct {p1}, Landroid/util/SparseArray;-><init>()V
 
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a/c$a;->b:Landroid/util/SparseArray;
 
-    .line 140
+    .line 213
     invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 214
+    new-instance p1, Lcom/oppo/camera/ui/menu/a/h;
+
+    invoke-direct {p1}, Lcom/oppo/camera/ui/menu/a/h;-><init>()V
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     return-void
 .end method
@@ -59,7 +66,7 @@
 .method public final a(I)Landroid/view/View;
     .locals 2
 
-    .line 145
+    .line 219
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a/c$a;->b:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -70,14 +77,14 @@
 
     if-nez v0, :cond_0
 
-    .line 148
+    .line 222
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a/c$a;->itemView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 149
+    .line 223
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/a/c$a;->b:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
@@ -89,10 +96,10 @@
 .method public onClick(Landroid/view/View;)V
     .locals 2
 
-    .line 157
+    .line 231
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a/c$a;->a:Lcom/oppo/camera/ui/menu/a/c;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/menu/a/c;->a(Lcom/oppo/camera/ui/menu/a/c;)Lcom/oppo/camera/ui/menu/a/c$b;
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/a/c;->a(Lcom/oppo/camera/ui/menu/a/c;)Lcom/oppo/camera/ui/menu/a/e$b;
 
     move-result-object v0
 
@@ -100,11 +107,11 @@
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a/c$a;->a:Lcom/oppo/camera/ui/menu/a/c;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/menu/a/c;->a(Lcom/oppo/camera/ui/menu/a/c;)Lcom/oppo/camera/ui/menu/a/c$b;
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/a/c;->a(Lcom/oppo/camera/ui/menu/a/c;)Lcom/oppo/camera/ui/menu/a/e$b;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/a/c$b;->a()Z
+    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/a/e$b;->a()Z
 
     move-result v0
 
@@ -112,19 +119,19 @@
 
     goto :goto_0
 
-    .line 161
+    .line 235
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/a/c$a;->a:Lcom/oppo/camera/ui/menu/a/c;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/menu/a/c;->a(Lcom/oppo/camera/ui/menu/a/c;)Lcom/oppo/camera/ui/menu/a/c$b;
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/a/c;->a(Lcom/oppo/camera/ui/menu/a/c;)Lcom/oppo/camera/ui/menu/a/e$b;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/a/c$a;->getPosition()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/a/c$a;->getLayoutPosition()I
 
     move-result v1
 
-    invoke-interface {v0, p1, v1}, Lcom/oppo/camera/ui/menu/a/c$b;->a(Landroid/view/View;I)V
+    invoke-interface {v0, p1, v1}, Lcom/oppo/camera/ui/menu/a/e$b;->a(Landroid/view/View;I)V
 
     :cond_1
     :goto_0

@@ -31,10 +31,10 @@
     .end annotation
 .end field
 
-.field e:Landroidx/b/a;
+.field e:Landroidx/collection/ArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/a<",
+            "Landroidx/collection/ArrayMap<",
             "Landroid/animation/Animator;",
             "Ljava/lang/String;",
             ">;"
@@ -144,11 +144,11 @@
     iput-object p3, p0, Landroidx/vectordrawable/a/a/c$a;->d:Ljava/util/ArrayList;
 
     .line 617
-    new-instance p3, Landroidx/b/a;
+    new-instance p3, Landroidx/collection/ArrayMap;
 
-    invoke-direct {p3, p1}, Landroidx/b/a;-><init>(I)V
+    invoke-direct {p3, p1}, Landroidx/collection/ArrayMap;-><init>(I)V
 
-    iput-object p3, p0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/b/a;
+    iput-object p3, p0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/collection/ArrayMap;
 
     :goto_1
     if-ge v0, p1, :cond_2
@@ -168,9 +168,9 @@
     move-result-object p4
 
     .line 621
-    iget-object v1, p2, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/b/a;
+    iget-object v1, p2, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v1, p3}, Landroidx/b/a;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p3}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
 
@@ -192,9 +192,9 @@
     invoke-virtual {v1, p4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 625
-    iget-object v1, p0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/b/a;
+    iget-object v1, p0, Landroidx/vectordrawable/a/a/c$a;->e:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v1, p4, p3}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p4, p3}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     add-int/lit8 v0, v0, 0x1
 

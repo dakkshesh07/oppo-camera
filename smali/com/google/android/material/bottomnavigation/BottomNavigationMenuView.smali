@@ -6,6 +6,11 @@
 .implements Landroidx/appcompat/view/menu/o;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final ACTIVE_ANIMATION_DURATION_MS:J = 0x73L
 
@@ -49,10 +54,10 @@
 
 .field private itemIconTint:Landroid/content/res/ColorStateList;
 
-.field private final itemPool:Landroidx/core/f/e$a;
+.field private final itemPool:Landroidx/core/util/f$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/f/e$a<",
+            "Landroidx/core/util/f$a<",
             "Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;",
             ">;"
         }
@@ -131,13 +136,13 @@
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 73
-    new-instance p1, Landroidx/core/f/e$c;
+    new-instance p1, Landroidx/core/util/f$c;
 
     const/4 p2, 0x5
 
-    invoke-direct {p1, p2}, Landroidx/core/f/e$c;-><init>(I)V
+    invoke-direct {p1, p2}, Landroidx/core/util/f$c;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemPool:Landroidx/core/f/e$a;
+    iput-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemPool:Landroidx/core/util/f$a;
 
     const/4 p1, 0x0
 
@@ -269,7 +274,7 @@
     const/4 p1, 0x1
 
     .line 134
-    invoke-static {p0, p1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -296,9 +301,9 @@
     .locals 2
 
     .line 604
-    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemPool:Landroidx/core/f/e$a;
+    iget-object v0, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemPool:Landroidx/core/util/f$a;
 
-    invoke-interface {v0}, Landroidx/core/f/e$a;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Landroidx/core/util/f$a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -551,9 +556,9 @@
     if-eqz v4, :cond_0
 
     .line 518
-    iget-object v5, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemPool:Landroidx/core/f/e$a;
+    iget-object v5, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationMenuView;->itemPool:Landroidx/core/util/f$a;
 
-    invoke-interface {v5, v4}, Landroidx/core/f/e$a;->a(Ljava/lang/Object;)Z
+    invoke-interface {v5, v4}, Landroidx/core/util/f$a;->a(Ljava/lang/Object;)Z
 
     .line 519
     invoke-virtual {v4}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->removeBadge()V
@@ -1170,7 +1175,7 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 248
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -1191,12 +1196,12 @@
     const/4 v2, 0x0
 
     .line 250
-    invoke-static {v1, v0, v2, v1}, Landroidx/core/g/a/d$b;->a(IIZI)Landroidx/core/g/a/d$b;
+    invoke-static {v1, v0, v2, v1}, Landroidx/core/f/a/d$b;->a(IIZI)Landroidx/core/f/a/d$b;
 
     move-result-object v0
 
     .line 249
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1240,7 +1245,7 @@
 
     .line 231
     :cond_0
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v2
 

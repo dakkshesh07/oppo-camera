@@ -24,42 +24,93 @@
 
 # static fields
 .field public static final ACTION_ARGUMENT_CAPTIONING_ENABLED:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_CAPTIONING_ENABLED"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_EXTRAS:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_EXTRAS"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_MEDIA_ID:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_MEDIA_ID"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_QUERY:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_QUERY"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_RATING:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_RATING"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_REPEAT_MODE:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_REPEAT_MODE"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_SHUFFLE_MODE:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_SHUFFLE_MODE"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_ARGUMENT_URI:Ljava/lang/String; = "android.support.v4.media.session.action.ARGUMENT_URI"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_FLAG_AS_INAPPROPRIATE:Ljava/lang/String; = "android.support.v4.media.session.action.FLAG_AS_INAPPROPRIATE"
 
 .field public static final ACTION_FOLLOW:Ljava/lang/String; = "android.support.v4.media.session.action.FOLLOW"
 
 .field public static final ACTION_PLAY_FROM_URI:Ljava/lang/String; = "android.support.v4.media.session.action.PLAY_FROM_URI"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_PREPARE:Ljava/lang/String; = "android.support.v4.media.session.action.PREPARE"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_PREPARE_FROM_MEDIA_ID:Ljava/lang/String; = "android.support.v4.media.session.action.PREPARE_FROM_MEDIA_ID"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_PREPARE_FROM_SEARCH:Ljava/lang/String; = "android.support.v4.media.session.action.PREPARE_FROM_SEARCH"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_PREPARE_FROM_URI:Ljava/lang/String; = "android.support.v4.media.session.action.PREPARE_FROM_URI"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_SET_CAPTIONING_ENABLED:Ljava/lang/String; = "android.support.v4.media.session.action.SET_CAPTIONING_ENABLED"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_SET_RATING:Ljava/lang/String; = "android.support.v4.media.session.action.SET_RATING"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_SET_REPEAT_MODE:Ljava/lang/String; = "android.support.v4.media.session.action.SET_REPEAT_MODE"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_SET_SHUFFLE_MODE:Ljava/lang/String; = "android.support.v4.media.session.action.SET_SHUFFLE_MODE"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final ACTION_SKIP_AD:Ljava/lang/String; = "android.support.v4.media.session.action.SKIP_AD"
 
@@ -84,10 +135,19 @@
 .field public static final FLAG_HANDLES_TRANSPORT_CONTROLS:I = 0x2
 
 .field public static final KEY_EXTRA_BINDER:Ljava/lang/String; = "android.support.v4.media.session.EXTRA_BINDER"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final KEY_SESSION_TOKEN2_BUNDLE:Ljava/lang/String; = "android.support.v4.media.session.SESSION_TOKEN2_BUNDLE"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public static final KEY_TOKEN:Ljava/lang/String; = "android.support.v4.media.session.TOKEN"
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field private static final MAX_BITMAP_SIZE_IN_DP:I = 0x140
 
@@ -428,6 +488,8 @@
 
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 6
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v3, 0x0
 
@@ -449,6 +511,8 @@
 
 .method public static ensureClassLoader(Landroid/os/Bundle;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     if-eqz p0, :cond_0
 
@@ -676,6 +740,8 @@
 
 .method public getCallingPackage()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 874
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat;->mImpl:Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;

@@ -135,7 +135,7 @@
 
     move-result-object p3
 
-    const v0, 0x7f07030a
+    const v0, 0x7f07038f
 
     .line 69
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -184,7 +184,7 @@
 
     new-array v3, v3, [F
 
-    const v4, 0x7f070333
+    const v4, 0x7f0703bc
 
     invoke-virtual {p3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -194,7 +194,7 @@
 
     aput v4, v3, p4
 
-    const p4, 0x7f070332
+    const p4, 0x7f0703bb
 
     .line 78
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -213,7 +213,7 @@
     .line 79
     iget-object p2, p0, Lcom/oppo/camera/ui/CommonComponent/SeekBar/ExposureControlSeekBar;->mLinePaint:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lcom/oppo/camera/util/Util;->l(Landroid/content/Context;)I
+    invoke-static {p1}, Lcom/oppo/camera/util/Util;->v(Landroid/content/Context;)I
 
     move-result p1
 
@@ -946,9 +946,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f0802c9
+    const v1, 0x7f08035b
 
-    invoke-static {v0, v1}, Lcom/oppo/camera/util/Util;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/oppo/camera/util/Util;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 

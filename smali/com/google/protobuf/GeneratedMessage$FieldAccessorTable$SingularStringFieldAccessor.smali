@@ -43,10 +43,10 @@
         }
     .end annotation
 
-    .line 2858
+    .line 2862
     invoke-direct/range {p0 .. p5}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;-><init>(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 2860
+    .line 2864
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,7 +75,7 @@
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularStringFieldAccessor;->getBytesMethod:Ljava/lang/reflect/Method;
 
-    .line 2862
+    .line 2866
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -98,7 +98,7 @@
 
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularStringFieldAccessor;->getBytesMethodBuilder:Ljava/lang/reflect/Method;
 
-    .line 2864
+    .line 2868
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +137,7 @@
 .method public getRaw(Lcom/google/protobuf/GeneratedMessage$Builder;)Ljava/lang/Object;
     .locals 2
 
-    .line 2879
+    .line 2883
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularStringFieldAccessor;->getBytesMethodBuilder:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -154,7 +154,7 @@
 .method public getRaw(Lcom/google/protobuf/GeneratedMessage;)Ljava/lang/Object;
     .locals 2
 
-    .line 2874
+    .line 2878
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularStringFieldAccessor;->getBytesMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -171,12 +171,12 @@
 .method public set(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
     .locals 3
 
-    .line 2884
+    .line 2888
     instance-of v0, p2, Lcom/google/protobuf/ByteString;
 
     if-eqz v0, :cond_0
 
-    .line 2885
+    .line 2889
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularStringFieldAccessor;->setBytesMethodBuilder:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -191,7 +191,7 @@
 
     goto :goto_0
 
-    .line 2887
+    .line 2891
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable$SingularFieldAccessor;->set(Lcom/google/protobuf/GeneratedMessage$Builder;Ljava/lang/Object;)V
 

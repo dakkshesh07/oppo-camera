@@ -53,13 +53,13 @@
     if-eqz v0, :cond_0
 
     .line 503
-    invoke-static {}, Lcom/coloros/anim/c/c;->a()Lcom/coloros/anim/c/c;
+    invoke-static {}, Lcom/coloros/anim/model/b;->a()Lcom/coloros/anim/model/b;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/coloros/anim/g$3;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lcom/coloros/anim/c/c;->a(Ljava/lang/String;Lcom/coloros/anim/a;)V
+    invoke-virtual {v0, v1, p1}, Lcom/coloros/anim/model/b;->a(Ljava/lang/String;Lcom/coloros/anim/a;)V
 
     .line 505
     :cond_0

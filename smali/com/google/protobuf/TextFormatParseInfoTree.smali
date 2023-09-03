@@ -56,15 +56,15 @@
         }
     .end annotation
 
-    .line 71
+    .line 68
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
+    .line 71
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 76
+    .line 73
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -86,7 +86,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 77
+    .line 74
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 79
+    .line 76
     :cond_0
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -113,12 +113,12 @@
 
     iput-object p1, p0, Lcom/google/protobuf/TextFormatParseInfoTree;->locationsFromField:Ljava/util/Map;
 
-    .line 81
+    .line 78
     new-instance p1, Ljava/util/HashMap;
 
     invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    .line 83
+    .line 80
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p2
@@ -140,12 +140,12 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 84
+    .line 81
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 85
+    .line 82
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -169,7 +169,7 @@
 
     check-cast v3, Lcom/google/protobuf/TextFormatParseInfoTree$Builder;
 
-    .line 86
+    .line 83
     invoke-virtual {v3}, Lcom/google/protobuf/TextFormatParseInfoTree$Builder;->build()Lcom/google/protobuf/TextFormatParseInfoTree;
 
     move-result-object v3
@@ -178,7 +178,7 @@
 
     goto :goto_2
 
-    .line 88
+    .line 85
     :cond_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -192,7 +192,7 @@
 
     goto :goto_1
 
-    .line 90
+    .line 87
     :cond_2
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
@@ -206,7 +206,7 @@
 .method synthetic constructor <init>(Ljava/util/Map;Ljava/util/Map;Lcom/google/protobuf/TextFormatParseInfoTree$1;)V
     .locals 0
 
-    .line 53
+    .line 50
     invoke-direct {p0, p1, p2}, Lcom/google/protobuf/TextFormatParseInfoTree;-><init>(Ljava/util/Map;Ljava/util/Map;)V
 
     return-void
@@ -215,7 +215,7 @@
 .method public static builder()Lcom/google/protobuf/TextFormatParseInfoTree$Builder;
     .locals 2
 
-    .line 150
+    .line 147
     new-instance v0, Lcom/google/protobuf/TextFormatParseInfoTree$Builder;
 
     const/4 v1, 0x0
@@ -239,7 +239,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 151
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -250,7 +250,7 @@
 
     goto :goto_0
 
-    .line 158
+    .line 157
     :cond_0
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -258,7 +258,7 @@
 
     return-object p0
 
-    .line 155
+    .line 152
     :cond_1
     :goto_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
@@ -275,7 +275,7 @@
 
     goto :goto_1
 
-    .line 156
+    .line 155
     :cond_2
     invoke-virtual {p2}, Lcom/google/protobuf/Descriptors$FieldDescriptor;->getName()Ljava/lang/String;
 
@@ -294,7 +294,7 @@
 
     const-string p1, "Illegal index field: %s, index %d"
 
-    .line 155
+    .line 153
     invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
@@ -309,7 +309,7 @@
 .method public getLocation(Lcom/google/protobuf/Descriptors$FieldDescriptor;I)Lcom/google/protobuf/TextFormatParseLocation;
     .locals 1
 
-    .line 117
+    .line 114
     invoke-virtual {p0, p1}, Lcom/google/protobuf/TextFormatParseInfoTree;->getLocations(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/util/List;
 
     move-result-object v0
@@ -336,7 +336,7 @@
         }
     .end annotation
 
-    .line 101
+    .line 98
     iget-object v0, p0, Lcom/google/protobuf/TextFormatParseInfoTree;->locationsFromField:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -347,7 +347,7 @@
 
     if-nez p1, :cond_0
 
-    .line 102
+    .line 99
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
@@ -359,7 +359,7 @@
 .method public getNestedTree(Lcom/google/protobuf/Descriptors$FieldDescriptor;I)Lcom/google/protobuf/TextFormatParseInfoTree;
     .locals 1
 
-    .line 141
+    .line 138
     invoke-virtual {p0, p1}, Lcom/google/protobuf/TextFormatParseInfoTree;->getNestedTrees(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Ljava/util/List;
 
     move-result-object v0
@@ -386,7 +386,7 @@
         }
     .end annotation
 
-    .line 127
+    .line 124
     iget-object v0, p0, Lcom/google/protobuf/TextFormatParseInfoTree;->subtreesFromField:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -397,7 +397,7 @@
 
     if-nez p1, :cond_0
 
-    .line 128
+    .line 125
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1

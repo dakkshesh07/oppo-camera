@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/control/ShutterButton;Z)V
     .locals 0
 
-    .line 140
+    .line 89
     iput-object p1, p0, Lcom/oppo/camera/ui/control/ShutterButton$1;->b:Lcom/oppo/camera/ui/control/ShutterButton;
 
     iput-boolean p2, p0, Lcom/oppo/camera/ui/control/ShutterButton$1;->a:Z
@@ -42,12 +42,12 @@
 .method public run()V
     .locals 2
 
-    .line 143
+    .line 92
     iget-object v0, p0, Lcom/oppo/camera/ui/control/ShutterButton$1;->b:Lcom/oppo/camera/ui/control/ShutterButton;
 
     iget-boolean v1, p0, Lcom/oppo/camera/ui/control/ShutterButton$1;->a:Z
 
-    invoke-static {v0, v1}, Lcom/oppo/camera/ui/control/ShutterButton;->b(Lcom/oppo/camera/ui/control/ShutterButton;Z)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/ui/control/ShutterButton;->a(Lcom/oppo/camera/ui/control/ShutterButton;Z)V
 
     return-void
 .end method

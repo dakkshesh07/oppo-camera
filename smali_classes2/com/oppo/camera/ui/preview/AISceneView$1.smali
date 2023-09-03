@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/AISceneView;)V
     .locals 0
 
-    .line 110
+    .line 112
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/AISceneView$1;->a:Lcom/oppo/camera/ui/preview/AISceneView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .line 113
+    .line 115
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/AISceneView$1;->a:Lcom/oppo/camera/ui/preview/AISceneView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -59,7 +59,7 @@
 
     invoke-static {v0, p1}, Lcom/oppo/camera/ui/preview/AISceneView;->a(Lcom/oppo/camera/ui/preview/AISceneView;I)I
 
-    .line 115
+    .line 117
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/AISceneView$1;->a:Lcom/oppo/camera/ui/preview/AISceneView;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/preview/AISceneView;->invalidate()V

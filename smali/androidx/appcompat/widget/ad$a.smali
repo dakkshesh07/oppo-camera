@@ -1,6 +1,9 @@
-.class public interface abstract Landroidx/appcompat/widget/ad$a;
+.class Landroidx/appcompat/widget/ad$a;
 .super Ljava/lang/Object;
-.source "FitWindowsViewGroup.java"
+.source "ForwardingListener.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # annotations
@@ -9,11 +12,48 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x2
     name = "a"
 .end annotation
 
 
+# instance fields
+.field final synthetic a:Landroidx/appcompat/widget/ad;
+
+
+# direct methods
+.method constructor <init>(Landroidx/appcompat/widget/ad;)V
+    .locals 0
+
+    .line 316
+    iput-object p1, p0, Landroidx/appcompat/widget/ad$a;->a:Landroidx/appcompat/widget/ad;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Landroid/graphics/Rect;)V
+.method public run()V
+    .locals 2
+
+    .line 321
+    iget-object v0, p0, Landroidx/appcompat/widget/ad$a;->a:Landroidx/appcompat/widget/ad;
+
+    iget-object v0, v0, Landroidx/appcompat/widget/ad;->c:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    .line 323
+    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+
+    :cond_0
+    return-void
 .end method

@@ -6,6 +6,11 @@
 .implements Lcom/google/android/material/shape/CornerSize;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private final adjustment:F
 

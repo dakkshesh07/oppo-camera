@@ -48,14 +48,14 @@
 .method private constructor <init>(Lcom/google/protobuf/SmallSortedMap;)V
     .locals 0
 
-    .line 532
+    .line 534
     iput-object p1, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 p1, -0x1
 
-    .line 534
+    .line 536
     iput p1, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->pos:I
 
     return-void
@@ -64,7 +64,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/SmallSortedMap;Lcom/google/protobuf/SmallSortedMap$1;)V
     .locals 0
 
-    .line 532
+    .line 534
     invoke-direct {p0, p1}, Lcom/google/protobuf/SmallSortedMap$EntryIterator;-><init>(Lcom/google/protobuf/SmallSortedMap;)V
 
     return-void
@@ -81,15 +81,15 @@
         }
     .end annotation
 
-    .line 577
+    .line 578
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->lazyOverflowIterator:Ljava/util/Iterator;
 
     if-nez v0, :cond_0
 
-    .line 578
+    .line 579
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
-    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$600(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$700(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->lazyOverflowIterator:Ljava/util/Iterator;
 
-    .line 580
+    .line 581
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->lazyOverflowIterator:Ljava/util/Iterator;
 
@@ -115,7 +115,7 @@
 .method public hasNext()Z
     .locals 3
 
-    .line 540
+    .line 542
     iget v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->pos:I
 
     const/4 v1, 0x1
@@ -124,7 +124,7 @@
 
     iget-object v2, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
-    invoke-static {v2}, Lcom/google/protobuf/SmallSortedMap;->access$400(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
+    invoke-static {v2}, Lcom/google/protobuf/SmallSortedMap;->access$600(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
 
     move-result-object v2
 
@@ -134,7 +134,19 @@
 
     if-lt v0, v2, :cond_1
 
-    .line 541
+    iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
+
+    .line 543
+    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$700(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     invoke-direct {p0}, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->getOverflowIterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -158,7 +170,7 @@
 .method public bridge synthetic next()Ljava/lang/Object;
     .locals 1
 
-    .line 532
+    .line 534
     invoke-virtual {p0}, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->next()Ljava/util/Map$Entry;
 
     move-result-object v0
@@ -178,10 +190,10 @@
 
     const/4 v0, 0x1
 
-    .line 546
+    .line 548
     iput-boolean v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->nextCalledBeforeRemove:Z
 
-    .line 549
+    .line 551
     iget v1, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->pos:I
 
     add-int/2addr v1, v0
@@ -190,7 +202,7 @@
 
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
-    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$400(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
+    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$600(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
 
     move-result-object v0
 
@@ -200,10 +212,10 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 550
+    .line 552
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
-    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$400(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
+    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$600(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
 
     move-result-object v0
 
@@ -217,7 +229,7 @@
 
     return-object v0
 
-    .line 552
+    .line 554
     :cond_0
     invoke-direct {p0}, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->getOverflowIterator()Ljava/util/Iterator;
 
@@ -235,27 +247,27 @@
 .method public remove()V
     .locals 3
 
-    .line 557
+    .line 559
     iget-boolean v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->nextCalledBeforeRemove:Z
 
     if-eqz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 560
+    .line 562
     iput-boolean v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->nextCalledBeforeRemove:Z
 
-    .line 561
+    .line 563
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
-    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$200(Lcom/google/protobuf/SmallSortedMap;)V
+    invoke-static {v0}, Lcom/google/protobuf/SmallSortedMap;->access$300(Lcom/google/protobuf/SmallSortedMap;)V
 
-    .line 563
+    .line 565
     iget v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->pos:I
 
     iget-object v1, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
-    invoke-static {v1}, Lcom/google/protobuf/SmallSortedMap;->access$400(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
+    invoke-static {v1}, Lcom/google/protobuf/SmallSortedMap;->access$600(Lcom/google/protobuf/SmallSortedMap;)Ljava/util/List;
 
     move-result-object v1
 
@@ -265,7 +277,7 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 564
+    .line 566
     iget-object v0, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->this$0:Lcom/google/protobuf/SmallSortedMap;
 
     iget v1, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->pos:I
@@ -274,11 +286,11 @@
 
     iput v2, p0, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->pos:I
 
-    invoke-static {v0, v1}, Lcom/google/protobuf/SmallSortedMap;->access$500(Lcom/google/protobuf/SmallSortedMap;I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/google/protobuf/SmallSortedMap;->access$800(Lcom/google/protobuf/SmallSortedMap;I)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 566
+    .line 568
     :cond_0
     invoke-direct {p0}, Lcom/google/protobuf/SmallSortedMap$EntryIterator;->getOverflowIterator()Ljava/util/Iterator;
 
@@ -289,7 +301,7 @@
     :goto_0
     return-void
 
-    .line 558
+    .line 560
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 

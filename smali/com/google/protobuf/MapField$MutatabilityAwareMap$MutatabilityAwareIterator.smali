@@ -53,13 +53,13 @@
         }
     .end annotation
 
-    .line 587
+    .line 579
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 588
+    .line 580
     iput-object p1, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
-    .line 589
+    .line 581
     iput-object p2, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     return-void
@@ -70,7 +70,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .line 610
+    .line 602
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -83,7 +83,7 @@
 .method public hasNext()Z
     .locals 1
 
-    .line 594
+    .line 586
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -96,7 +96,7 @@
 .method public hashCode()I
     .locals 1
 
-    .line 615
+    .line 607
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -114,7 +114,7 @@
         }
     .end annotation
 
-    .line 599
+    .line 591
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -127,12 +127,12 @@
 .method public remove()V
     .locals 1
 
-    .line 604
+    .line 596
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->mutabilityOracle:Lcom/google/protobuf/MutabilityOracle;
 
     invoke-interface {v0}, Lcom/google/protobuf/MutabilityOracle;->ensureMutable()V
 
-    .line 605
+    .line 597
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
@@ -143,7 +143,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .line 620
+    .line 612
     iget-object v0, p0, Lcom/google/protobuf/MapField$MutatabilityAwareMap$MutatabilityAwareIterator;->delegate:Ljava/util/Iterator;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

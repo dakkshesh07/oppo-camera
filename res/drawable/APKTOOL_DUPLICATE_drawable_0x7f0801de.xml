@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0801dd"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="ring_outer" android:animation="@anim/APKTOOL_DUPLICATE_anim_0x7f01003a" />
+    <target android:name="ring_outer_path" android:animation="@anim/APKTOOL_DUPLICATE_anim_0x7f01003b" />
+    <target android:name="dot_group" android:animation="@anim/APKTOOL_DUPLICATE_anim_0x7f010039" />
+</animated-vector>

@@ -1,5 +1,5 @@
 .class public Lcom/oppo/camera/ui/menu/OppoTextView;
-.super Landroid/widget/TextView;
+.super Lcom/oppo/camera/ui/inverse/InverseTextView;
 .source "OppoTextView.java"
 
 
@@ -48,30 +48,30 @@
     .locals 0
 
     .line 47
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/oppo/camera/ui/inverse/InverseTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const/4 p1, 0x0
+    const/4 p2, 0x0
 
     .line 27
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->a:Z
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->a:Z
 
     .line 28
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->b:Z
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->b:Z
 
     .line 29
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->c:Z
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->c:Z
 
     .line 34
-    iput p1, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->f:I
+    iput p2, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->f:I
 
     .line 35
-    iput p1, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->g:I
+    iput p2, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->g:I
 
     .line 36
-    iput p1, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->h:I
+    iput p2, p0, Lcom/oppo/camera/ui/menu/OppoTextView;->h:I
 
     .line 48
-    invoke-static {}, Lcom/oppo/camera/util/Util;->u()Landroid/graphics/Typeface;
+    invoke-static {p1}, Lcom/oppo/camera/util/Util;->j(Landroid/content/Context;)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -309,11 +309,11 @@
 
     .line 126
     :cond_0
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result v0
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->L()I
 
     move-result v1
 
@@ -388,11 +388,11 @@
 
     .line 111
     :cond_0
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result v0
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->L()I
 
     move-result v1
 
@@ -472,15 +472,15 @@
     if-eqz p1, :cond_0
 
     .line 160
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result p1
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->L()I
 
     move-result p2
 
-    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/oppo/camera/ui/inverse/InverseTextView;->onMeasure(II)V
 
     .line 161
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/OppoTextView;->getMeasuredWidth()I
@@ -500,15 +500,15 @@
 
     .line 164
     :cond_0
-    invoke-static {}, Lcom/oppo/camera/util/Util;->N()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
 
     move-result p1
 
-    invoke-static {}, Lcom/oppo/camera/util/Util;->M()I
+    invoke-static {}, Lcom/oppo/camera/util/Util;->L()I
 
     move-result p2
 
-    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/oppo/camera/ui/inverse/InverseTextView;->onMeasure(II)V
 
     .line 165
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/OppoTextView;->getMeasuredWidth()I
@@ -544,7 +544,7 @@
     if-eqz p1, :cond_0
 
     .line 73
-    invoke-super {p0, p1}, Landroid/widget/TextView;->onWindowFocusChanged(Z)V
+    invoke-super {p0, p1}, Lcom/oppo/camera/ui/inverse/InverseTextView;->onWindowFocusChanged(Z)V
 
     :cond_0
     return-void
@@ -590,7 +590,7 @@
     .locals 0
 
     .line 79
-    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
+    invoke-super {p0, p1, p2}, Lcom/oppo/camera/ui/inverse/InverseTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
     const/4 p1, 0x1
 

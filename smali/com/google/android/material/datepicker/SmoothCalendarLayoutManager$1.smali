@@ -1,5 +1,5 @@
 .class Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager$1;
-.super Landroidx/recyclerview/widget/j;
+.super Landroidx/recyclerview/widget/m;
 .source "SmoothCalendarLayoutManager.java"
 
 
@@ -25,7 +25,7 @@
     .line 41
     iput-object p1, p0, Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager$1;->this$0:Lcom/google/android/material/datepicker/SmoothCalendarLayoutManager;
 
-    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Landroidx/recyclerview/widget/m;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.COUIRecyclerView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090244" android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08027a" android:paddingTop="0.0dip" android:paddingBottom="0.0dip" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" style="?APKTOOL_DUPLICATE_attr_0x7f0404af"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

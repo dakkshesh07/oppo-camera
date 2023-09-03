@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <size android:height="12.0dip" android:width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07026c" />
+    <solid android:color="?APKTOOL_DUPLICATE_attr_0x7f04021b" />
+</shape>

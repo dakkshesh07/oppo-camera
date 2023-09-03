@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0801d7"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <target android:name="icon_null" android:animation="@anim/APKTOOL_DUPLICATE_anim_0x7f010038" />
+    <target android:name="check_path_merged" android:animation="@anim/APKTOOL_DUPLICATE_anim_0x7f010037" />
+    <target android:name="box_inner_merged" android:animation="@anim/APKTOOL_DUPLICATE_anim_0x7f010036" />
+</animated-vector>

@@ -95,12 +95,12 @@
 
     move-result-object p0
 
-    sget-object v0, Landroidx/core/graphics/b;->CLEAR:Landroidx/core/graphics/b;
+    sget-object v0, Landroidx/core/graphics/BlendModeCompat;->CLEAR:Landroidx/core/graphics/BlendModeCompat;
 
     const/4 v1, 0x0
 
     .line 232
-    invoke-static {v1, v0}, Landroidx/core/graphics/a;->a(ILandroidx/core/graphics/b;)Landroid/graphics/ColorFilter;
+    invoke-static {v1, v0}, Landroidx/core/graphics/a;->a(ILandroidx/core/graphics/BlendModeCompat;)Landroid/graphics/ColorFilter;
 
     move-result-object v0
 

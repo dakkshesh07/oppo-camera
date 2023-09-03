@@ -55,45 +55,41 @@
         }
     .end annotation
 
-    .line 86
+    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    .line 80
+    invoke-static {p1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
+    move-result-object p1
+
+    check-cast p1, Lcom/google/protobuf/AbstractMessage;
+
     iput-object p1, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
-    .line 91
+    .line 81
     iput-object p2, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->parent:Lcom/google/protobuf/AbstractMessage$BuilderParent;
 
-    .line 92
+    .line 82
     iput-boolean p3, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->isClean:Z
 
     return-void
-
-    .line 88
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p1
 .end method
 
 .method private onChanged()V
     .locals 1
 
-    .line 226
+    .line 212
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 227
+    .line 213
     iput-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
-    .line 229
+    .line 215
     :cond_0
     iget-boolean v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->isClean:Z
 
@@ -103,12 +99,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 230
+    .line 216
     invoke-interface {v0}, Lcom/google/protobuf/AbstractMessage$BuilderParent;->markDirty()V
 
     const/4 v0, 0x0
 
-    .line 233
+    .line 219
     iput-boolean v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->isClean:Z
 
     :cond_1
@@ -127,10 +123,10 @@
 
     const/4 v0, 0x1
 
-    .line 125
+    .line 114
     iput-boolean v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->isClean:Z
 
-    .line 126
+    .line 115
     invoke-virtual {p0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getMessage()Lcom/google/protobuf/AbstractMessage;
 
     move-result-object v0
@@ -148,12 +144,12 @@
         }
     .end annotation
 
-    .line 208
+    .line 192
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
     if-eqz v0, :cond_0
 
-    .line 209
+    .line 195
     invoke-virtual {v0}, Lcom/google/protobuf/AbstractMessage;->getDefaultInstanceForType()Lcom/google/protobuf/Message;
 
     move-result-object v0
@@ -163,7 +159,7 @@
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
-    .line 210
+    .line 196
     invoke-virtual {v0}, Lcom/google/protobuf/AbstractMessage$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/Message;
 
     move-result-object v0
@@ -175,20 +171,20 @@
 
     iput-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
-    .line 211
+    .line 197
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     if-eqz v0, :cond_1
 
-    .line 212
+    .line 198
     invoke-virtual {v0}, Lcom/google/protobuf/AbstractMessage$Builder;->dispose()V
 
     const/4 v0, 0x0
 
-    .line 213
+    .line 199
     iput-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
-    .line 215
+    .line 201
     :cond_1
     invoke-direct {p0}, Lcom/google/protobuf/SingleFieldBuilderV3;->onChanged()V
 
@@ -200,7 +196,7 @@
 
     const/4 v0, 0x0
 
-    .line 97
+    .line 87
     iput-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->parent:Lcom/google/protobuf/AbstractMessage$BuilderParent;
 
     return-void
@@ -214,12 +210,12 @@
         }
     .end annotation
 
-    .line 137
+    .line 126
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     if-nez v0, :cond_0
 
-    .line 142
+    .line 131
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
     invoke-virtual {v0, p0}, Lcom/google/protobuf/AbstractMessage;->newBuilderForType(Lcom/google/protobuf/AbstractMessage$BuilderParent;)Lcom/google/protobuf/Message$Builder;
@@ -230,19 +226,19 @@
 
     iput-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
-    .line 143
+    .line 132
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     iget-object v1, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/AbstractMessage$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
-    .line 144
+    .line 133
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     invoke-virtual {v0}, Lcom/google/protobuf/AbstractMessage$Builder;->markClean()V
 
-    .line 146
+    .line 135
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -257,12 +253,12 @@
         }
     .end annotation
 
-    .line 110
+    .line 99
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
     if-nez v0, :cond_0
 
-    .line 112
+    .line 101
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     invoke-virtual {v0}, Lcom/google/protobuf/AbstractMessage$Builder;->buildPartial()Lcom/google/protobuf/Message;
@@ -273,7 +269,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
-    .line 114
+    .line 103
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
@@ -288,14 +284,14 @@
         }
     .end annotation
 
-    .line 157
+    .line 146
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     if-eqz v0, :cond_0
 
     return-object v0
 
-    .line 160
+    .line 149
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
@@ -305,7 +301,7 @@
 .method public markDirty()V
     .locals 0
 
-    .line 239
+    .line 225
     invoke-direct {p0}, Lcom/google/protobuf/SingleFieldBuilderV3;->onChanged()V
 
     return-void
@@ -321,7 +317,7 @@
         }
     .end annotation
 
-    .line 192
+    .line 176
     iget-object v0, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     if-nez v0, :cond_0
@@ -334,12 +330,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 193
+    .line 177
     iput-object p1, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
     goto :goto_0
 
-    .line 195
+    .line 179
     :cond_0
     invoke-virtual {p0}, Lcom/google/protobuf/SingleFieldBuilderV3;->getBuilder()Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -347,7 +343,7 @@
 
     invoke-virtual {v0, p1}, Lcom/google/protobuf/AbstractMessage$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
-    .line 197
+    .line 181
     :goto_0
     invoke-direct {p0}, Lcom/google/protobuf/SingleFieldBuilderV3;->onChanged()V
 
@@ -364,35 +360,31 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_1
+    .line 160
+    invoke-static {p1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
+    move-result-object p1
+
+    check-cast p1, Lcom/google/protobuf/AbstractMessage;
+
     iput-object p1, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->message:Lcom/google/protobuf/AbstractMessage;
 
-    .line 176
+    .line 161
     iget-object p1, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
     if-eqz p1, :cond_0
 
-    .line 177
+    .line 162
     invoke-virtual {p1}, Lcom/google/protobuf/AbstractMessage$Builder;->dispose()V
 
     const/4 p1, 0x0
 
-    .line 178
+    .line 163
     iput-object p1, p0, Lcom/google/protobuf/SingleFieldBuilderV3;->builder:Lcom/google/protobuf/AbstractMessage$Builder;
 
-    .line 180
+    .line 165
     :cond_0
     invoke-direct {p0}, Lcom/google/protobuf/SingleFieldBuilderV3;->onChanged()V
 
     return-object p0
-
-    .line 173
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p1
 .end method

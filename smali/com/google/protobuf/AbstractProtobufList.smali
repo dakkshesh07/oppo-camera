@@ -32,12 +32,12 @@
 .method constructor <init>()V
     .locals 1
 
-    .line 59
+    .line 54
     invoke-direct {p0}, Ljava/util/AbstractList;-><init>()V
 
     const/4 v0, 0x1
 
-    .line 60
+    .line 55
     iput-boolean v0, p0, Lcom/google/protobuf/AbstractProtobufList;->isMutable:Z
 
     return-void
@@ -53,10 +53,10 @@
         }
     .end annotation
 
-    .line 109
+    .line 104
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 110
+    .line 105
     invoke-super {p0, p1, p2}, Ljava/util/AbstractList;->add(ILjava/lang/Object;)V
 
     return-void
@@ -70,10 +70,10 @@
         }
     .end annotation
 
-    .line 103
+    .line 98
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 104
+    .line 99
     invoke-super {p0, p1}, Ljava/util/AbstractList;->add(Ljava/lang/Object;)Z
 
     move-result p1
@@ -91,10 +91,10 @@
         }
     .end annotation
 
-    .line 121
+    .line 116
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 122
+    .line 117
     invoke-super {p0, p1, p2}, Ljava/util/AbstractList;->addAll(ILjava/util/Collection;)Z
 
     move-result p1
@@ -112,10 +112,10 @@
         }
     .end annotation
 
-    .line 115
+    .line 110
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 116
+    .line 111
     invoke-super {p0, p1}, Ljava/util/AbstractList;->addAll(Ljava/util/Collection;)Z
 
     move-result p1
@@ -126,10 +126,10 @@
 .method public clear()V
     .locals 0
 
-    .line 127
+    .line 122
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 128
+    .line 123
     invoke-super {p0}, Ljava/util/AbstractList;->clear()V
 
     return-void
@@ -138,14 +138,14 @@
 .method protected ensureIsMutable()V
     .locals 1
 
-    .line 176
+    .line 171
     iget-boolean v0, p0, Lcom/google/protobuf/AbstractProtobufList;->isMutable:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 177
+    .line 172
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -163,7 +163,7 @@
 
     return v0
 
-    .line 68
+    .line 63
     :cond_0
     instance-of v1, p1, Ljava/util/List;
 
@@ -173,29 +173,29 @@
 
     return v2
 
-    .line 74
+    .line 69
     :cond_1
     instance-of v1, p1, Ljava/util/RandomAccess;
 
     if-nez v1, :cond_2
 
-    .line 75
+    .line 70
     invoke-super {p0, p1}, Ljava/util/AbstractList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 78
+    .line 73
     :cond_2
     check-cast p1, Ljava/util/List;
 
-    .line 79
+    .line 74
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->size()I
 
     move-result v1
 
-    .line 80
+    .line 75
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v3
@@ -210,7 +210,7 @@
     :goto_0
     if-ge v3, v1, :cond_5
 
-    .line 84
+    .line 79
     invoke-virtual {p0, v3}, Lcom/google/protobuf/AbstractProtobufList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -239,7 +239,7 @@
 .method public hashCode()I
     .locals 4
 
-    .line 93
+    .line 88
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->size()I
 
     move-result v0
@@ -253,7 +253,7 @@
 
     mul-int/lit8 v1, v1, 0x1f
 
-    .line 96
+    .line 91
     invoke-virtual {p0, v2}, Lcom/google/protobuf/AbstractProtobufList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -275,7 +275,7 @@
 .method public isModifiable()Z
     .locals 1
 
-    .line 133
+    .line 128
     iget-boolean v0, p0, Lcom/google/protobuf/AbstractProtobufList;->isMutable:Z
 
     return v0
@@ -286,7 +286,7 @@
 
     const/4 v0, 0x0
 
-    .line 138
+    .line 133
     iput-boolean v0, p0, Lcom/google/protobuf/AbstractProtobufList;->isMutable:Z
 
     return-void
@@ -300,10 +300,10 @@
         }
     .end annotation
 
-    .line 143
+    .line 138
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 144
+    .line 139
     invoke-super {p0, p1}, Ljava/util/AbstractList;->remove(I)Ljava/lang/Object;
 
     move-result-object p1
@@ -314,10 +314,10 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 149
+    .line 144
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 150
+    .line 145
     invoke-super {p0, p1}, Ljava/util/AbstractList;->remove(Ljava/lang/Object;)Z
 
     move-result p1
@@ -335,10 +335,10 @@
         }
     .end annotation
 
-    .line 155
+    .line 150
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 156
+    .line 151
     invoke-super {p0, p1}, Ljava/util/AbstractList;->removeAll(Ljava/util/Collection;)Z
 
     move-result p1
@@ -356,10 +356,10 @@
         }
     .end annotation
 
-    .line 161
+    .line 156
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 162
+    .line 157
     invoke-super {p0, p1}, Ljava/util/AbstractList;->retainAll(Ljava/util/Collection;)Z
 
     move-result p1
@@ -375,10 +375,10 @@
         }
     .end annotation
 
-    .line 167
+    .line 162
     invoke-virtual {p0}, Lcom/google/protobuf/AbstractProtobufList;->ensureIsMutable()V
 
-    .line 168
+    .line 163
     invoke-super {p0, p1, p2}, Ljava/util/AbstractList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1

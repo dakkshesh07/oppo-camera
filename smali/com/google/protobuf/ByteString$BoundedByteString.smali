@@ -28,20 +28,20 @@
 .method constructor <init>([BII)V
     .locals 1
 
-    .line 1499
+    .line 1531
     invoke-direct {p0, p1}, Lcom/google/protobuf/ByteString$LiteralByteString;-><init>([B)V
 
     add-int v0, p2, p3
 
-    .line 1500
+    .line 1532
     array-length p1, p1
 
     invoke-static {p2, v0, p1}, Lcom/google/protobuf/ByteString$BoundedByteString;->checkRange(III)I
 
-    .line 1502
+    .line 1534
     iput p2, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytesOffset:I
 
-    .line 1503
+    .line 1535
     iput p3, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytesLength:I
 
     return-void
@@ -55,7 +55,7 @@
         }
     .end annotation
 
-    .line 1554
+    .line 1590
     new-instance p1, Ljava/io/InvalidObjectException;
 
     const-string v0, "BoundedByteStream instances are not to be serialized directly"
@@ -70,14 +70,14 @@
 .method public byteAt(I)B
     .locals 2
 
-    .line 1520
+    .line 1551
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$BoundedByteString;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lcom/google/protobuf/ByteString$BoundedByteString;->checkIndex(II)V
 
-    .line 1521
+    .line 1552
     iget-object v0, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytes:[B
 
     iget v1, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytesOffset:I
@@ -92,15 +92,17 @@
 .method protected copyToInternal([BIII)V
     .locals 2
 
-    .line 1540
+    .line 1576
     iget-object v0, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytes:[B
 
+    .line 1577
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$BoundedByteString;->getOffsetIntoBytes()I
 
     move-result v1
 
     add-int/2addr v1, p2
 
+    .line 1576
     invoke-static {v0, v1, p1, p3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-void
@@ -109,16 +111,31 @@
 .method protected getOffsetIntoBytes()I
     .locals 1
 
-    .line 1531
+    .line 1567
     iget v0, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytesOffset:I
 
     return v0
 .end method
 
+.method internalByteAt(I)B
+    .locals 2
+
+    .line 1557
+    iget-object v0, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytes:[B
+
+    iget v1, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytesOffset:I
+
+    add-int/2addr v1, p1
+
+    aget-byte p1, v0, v1
+
+    return p1
+.end method
+
 .method public size()I
     .locals 1
 
-    .line 1526
+    .line 1562
     iget v0, p0, Lcom/google/protobuf/ByteString$BoundedByteString;->bytesLength:I
 
     return v0
@@ -127,7 +144,7 @@
 .method writeReplace()Ljava/lang/Object;
     .locals 1
 
-    .line 1550
+    .line 1586
     invoke-virtual {p0}, Lcom/google/protobuf/ByteString$BoundedByteString;->toByteArray()[B
 
     move-result-object v0

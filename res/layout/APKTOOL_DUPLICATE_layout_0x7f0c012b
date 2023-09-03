@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070841" android:paddingRight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070841" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@color/APKTOOL_DUPLICATE_color_0x7f060465" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070831" />
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07082f" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070830" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0706b0" android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060403" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900f7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUPLICATE_string_0x7f1003cd" />
+        <com.coui.appcompat.widget.COUISwitch android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900f6" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

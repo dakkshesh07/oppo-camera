@@ -3,7 +3,7 @@
 .source "AdapterHelper.java"
 
 # interfaces
-.implements Landroidx/recyclerview/widget/m$a;
+.implements Landroidx/recyclerview/widget/p$a;
 
 
 # annotations
@@ -42,12 +42,12 @@
 
 .field final e:Z
 
-.field final f:Landroidx/recyclerview/widget/m;
+.field final f:Landroidx/recyclerview/widget/p;
 
-.field private g:Landroidx/core/f/e$a;
+.field private g:Landroidx/core/util/f$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/f/e$a<",
+            "Landroidx/core/util/f$a<",
             "Landroidx/recyclerview/widget/a$b;",
             ">;"
         }
@@ -76,13 +76,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 55
-    new-instance v0, Landroidx/core/f/e$b;
+    new-instance v0, Landroidx/core/util/f$b;
 
     const/16 v1, 0x1e
 
-    invoke-direct {v0, v1}, Landroidx/core/f/e$b;-><init>(I)V
+    invoke-direct {v0, v1}, Landroidx/core/util/f$b;-><init>(I)V
 
-    iput-object v0, p0, Landroidx/recyclerview/widget/a;->g:Landroidx/core/f/e$a;
+    iput-object v0, p0, Landroidx/recyclerview/widget/a;->g:Landroidx/core/util/f$a;
 
     .line 57
     new-instance v0, Ljava/util/ArrayList;
@@ -110,11 +110,11 @@
     iput-boolean p2, p0, Landroidx/recyclerview/widget/a;->e:Z
 
     .line 78
-    new-instance p1, Landroidx/recyclerview/widget/m;
+    new-instance p1, Landroidx/recyclerview/widget/p;
 
-    invoke-direct {p1, p0}, Landroidx/recyclerview/widget/m;-><init>(Landroidx/recyclerview/widget/m$a;)V
+    invoke-direct {p1, p0}, Landroidx/recyclerview/widget/p;-><init>(Landroidx/recyclerview/widget/p$a;)V
 
-    iput-object p1, p0, Landroidx/recyclerview/widget/a;->f:Landroidx/recyclerview/widget/m;
+    iput-object p1, p0, Landroidx/recyclerview/widget/a;->f:Landroidx/recyclerview/widget/p;
 
     return-void
 .end method
@@ -1229,9 +1229,9 @@
     .locals 1
 
     .line 727
-    iget-object v0, p0, Landroidx/recyclerview/widget/a;->g:Landroidx/core/f/e$a;
+    iget-object v0, p0, Landroidx/recyclerview/widget/a;->g:Landroidx/core/util/f$a;
 
-    invoke-interface {v0}, Landroidx/core/f/e$a;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Landroidx/core/util/f$a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1298,9 +1298,9 @@
     iput-object v0, p1, Landroidx/recyclerview/widget/a$b;->c:Ljava/lang/Object;
 
     .line 743
-    iget-object v0, p0, Landroidx/recyclerview/widget/a;->g:Landroidx/core/f/e$a;
+    iget-object v0, p0, Landroidx/recyclerview/widget/a;->g:Landroidx/core/util/f$a;
 
-    invoke-interface {v0, p1}, Landroidx/core/f/e$a;->a(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Landroidx/core/util/f$a;->a(Ljava/lang/Object;)Z
 
     :cond_0
     return-void
@@ -1541,11 +1541,11 @@
     .locals 5
 
     .line 93
-    iget-object v0, p0, Landroidx/recyclerview/widget/a;->f:Landroidx/recyclerview/widget/m;
+    iget-object v0, p0, Landroidx/recyclerview/widget/a;->f:Landroidx/recyclerview/widget/p;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/a;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/m;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/p;->a(Ljava/util/List;)V
 
     .line 94
     iget-object v0, p0, Landroidx/recyclerview/widget/a;->a:Ljava/util/ArrayList;

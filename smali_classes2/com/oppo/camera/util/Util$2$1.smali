@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/util/Util$2;)V
     .locals 0
 
-    .line 832
+    .line 935
     iput-object p1, p0, Lcom/oppo/camera/util/Util$2$1;->a:Lcom/oppo/camera/util/Util$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 835
+    .line 938
     iget-object p1, p0, Lcom/oppo/camera/util/Util$2$1;->a:Lcom/oppo/camera/util/Util$2;
 
     iget-object p1, p1, Lcom/oppo/camera/util/Util$2;->a:Landroid/app/Activity;

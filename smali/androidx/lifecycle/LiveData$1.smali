@@ -38,27 +38,27 @@
 .method public run()V
     .locals 4
 
-    .line 86
+    .line 87
     iget-object v0, p0, Landroidx/lifecycle/LiveData$1;->a:Landroidx/lifecycle/LiveData;
 
-    iget-object v0, v0, Landroidx/lifecycle/LiveData;->a:Ljava/lang/Object;
+    iget-object v0, v0, Landroidx/lifecycle/LiveData;->mDataLock:Ljava/lang/Object;
 
     monitor-enter v0
 
-    .line 87
+    .line 88
     :try_start_0
     iget-object v1, p0, Landroidx/lifecycle/LiveData$1;->a:Landroidx/lifecycle/LiveData;
 
-    iget-object v1, v1, Landroidx/lifecycle/LiveData;->d:Ljava/lang/Object;
-
-    .line 88
-    iget-object v2, p0, Landroidx/lifecycle/LiveData$1;->a:Landroidx/lifecycle/LiveData;
-
-    sget-object v3, Landroidx/lifecycle/LiveData;->b:Ljava/lang/Object;
-
-    iput-object v3, v2, Landroidx/lifecycle/LiveData;->d:Ljava/lang/Object;
+    iget-object v1, v1, Landroidx/lifecycle/LiveData;->mPendingData:Ljava/lang/Object;
 
     .line 89
+    iget-object v2, p0, Landroidx/lifecycle/LiveData$1;->a:Landroidx/lifecycle/LiveData;
+
+    sget-object v3, Landroidx/lifecycle/LiveData;->NOT_SET:Ljava/lang/Object;
+
+    iput-object v3, v2, Landroidx/lifecycle/LiveData;->mPendingData:Ljava/lang/Object;
+
+    .line 90
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -66,14 +66,14 @@
     .line 91
     iget-object v0, p0, Landroidx/lifecycle/LiveData$1;->a:Landroidx/lifecycle/LiveData;
 
-    invoke-virtual {v0, v1}, Landroidx/lifecycle/LiveData;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Landroidx/lifecycle/LiveData;->setValue(Ljava/lang/Object;)V
 
     return-void
 
     :catchall_0
     move-exception v1
 
-    .line 89
+    .line 90
     :try_start_1
     monitor-exit v0
     :try_end_1

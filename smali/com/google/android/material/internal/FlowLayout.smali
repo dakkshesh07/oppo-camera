@@ -3,6 +3,11 @@
 .source "FlowLayout.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private itemSpacing:I
 
@@ -230,7 +235,7 @@
     iput p1, p0, Lcom/google/android/material/internal/FlowLayout;->rowCount:I
 
     .line 197
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p5
 
@@ -339,12 +344,12 @@
     check-cast v5, Landroid/view/ViewGroup$MarginLayoutParams;
 
     .line 220
-    invoke-static {v5}, Landroidx/core/g/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Landroidx/core/f/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v6
 
     .line 221
-    invoke-static {v5}, Landroidx/core/g/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
+    invoke-static {v5}, Landroidx/core/f/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v5
 

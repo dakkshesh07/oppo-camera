@@ -19,9 +19,11 @@ void main() {
         finalColor.rgb *= uPreviousRatio;
     }
 
-
-    gl_FragColor = finalColor;
-
+    if ((vPosition.x >= 0.867) || (vPosition.x <= -0.867)) {
+        gl_FragColor = finalColor * (1.0 - ((abs(vPosition.x) - 0.867) / 0.133));
+    } else {
+        gl_FragColor = finalColor;
+    }
 
     gl_FragColor *= uAlpha;
 }

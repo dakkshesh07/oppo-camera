@@ -34,10 +34,10 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 255
+    .line 288
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 256
+    .line 289
     invoke-direct {p0}, Lcom/google/protobuf/Int32Value$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -46,10 +46,10 @@
 .method private constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
     .locals 0
 
-    .line 261
+    .line 294
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 262
+    .line 295
     invoke-direct {p0}, Lcom/google/protobuf/Int32Value$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -58,7 +58,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;Lcom/google/protobuf/Int32Value$1;)V
     .locals 0
 
-    .line 238
+    .line 270
     invoke-direct {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -67,7 +67,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/Int32Value$1;)V
     .locals 0
 
-    .line 238
+    .line 270
     invoke-direct {p0}, Lcom/google/protobuf/Int32Value$Builder;-><init>()V
 
     return-void
@@ -76,7 +76,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 244
+    .line 276
     sget-object v0, Lcom/google/protobuf/WrappersProto;->internal_static_google_protobuf_Int32Value_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -85,7 +85,7 @@
 .method private maybeForceBuilderInitialization()V
     .locals 1
 
-    .line 265
+    .line 298
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     return-void
@@ -96,7 +96,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -107,7 +107,7 @@
 .method public addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    .line 324
+    .line 368
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -120,7 +120,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -131,12 +131,12 @@
 .method public build()Lcom/google/protobuf/Int32Value;
     .locals 2
 
-    .line 286
+    .line 323
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->buildPartial()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
 
-    .line 287
+    .line 324
     invoke-virtual {v0}, Lcom/google/protobuf/Int32Value;->isInitialized()Z
 
     move-result v1
@@ -145,7 +145,7 @@
 
     return-object v0
 
-    .line 288
+    .line 325
     :cond_0
     invoke-static {v0}, Lcom/google/protobuf/Int32Value$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
@@ -157,7 +157,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->build()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -168,7 +168,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->build()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -179,19 +179,19 @@
 .method public buildPartial()Lcom/google/protobuf/Int32Value;
     .locals 2
 
-    .line 294
+    .line 332
     new-instance v0, Lcom/google/protobuf/Int32Value;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/google/protobuf/Int32Value;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/google/protobuf/Int32Value$1;)V
 
-    .line 295
+    .line 333
     iget v1, p0, Lcom/google/protobuf/Int32Value$Builder;->value_:I
 
     invoke-static {v0, v1}, Lcom/google/protobuf/Int32Value;->access$302(Lcom/google/protobuf/Int32Value;I)I
 
-    .line 296
+    .line 334
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->onBuilt()V
 
     return-object v0
@@ -200,7 +200,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->buildPartial()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -211,7 +211,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->buildPartial()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -222,7 +222,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clear()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -233,7 +233,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clear()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -244,12 +244,12 @@
 .method public clear()Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 270
+    .line 304
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     const/4 v0, 0x0
 
-    .line 271
+    .line 305
     iput v0, p0, Lcom/google/protobuf/Int32Value$Builder;->value_:I
 
     return-object p0
@@ -258,7 +258,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clear()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -269,7 +269,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clear()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -280,7 +280,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -291,7 +291,7 @@
 .method public clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    .line 310
+    .line 351
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -304,7 +304,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -315,7 +315,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -326,7 +326,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -337,7 +337,7 @@
 .method public clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    .line 314
+    .line 356
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -350,7 +350,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -363,10 +363,10 @@
 
     const/4 v0, 0x0
 
-    .line 399
+    .line 451
     iput v0, p0, Lcom/google/protobuf/Int32Value$Builder;->value_:I
 
-    .line 400
+    .line 452
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->onChanged()V
 
     return-object p0
@@ -375,7 +375,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clone()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -386,7 +386,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clone()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -397,7 +397,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clone()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -408,7 +408,7 @@
 .method public clone()Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 301
+    .line 340
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -421,7 +421,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clone()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -432,7 +432,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clone()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -448,7 +448,7 @@
         }
     .end annotation
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->clone()Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object v0
@@ -459,7 +459,7 @@
 .method public getDefaultInstanceForType()Lcom/google/protobuf/Int32Value;
     .locals 1
 
-    .line 282
+    .line 318
     invoke-static {}, Lcom/google/protobuf/Int32Value;->getDefaultInstance()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -470,7 +470,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -481,7 +481,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 238
+    .line 270
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -492,7 +492,7 @@
 .method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 278
+    .line 313
     sget-object v0, Lcom/google/protobuf/WrappersProto;->internal_static_google_protobuf_Int32Value_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -501,7 +501,7 @@
 .method public getValue()I
     .locals 1
 
-    .line 375
+    .line 424
     iget v0, p0, Lcom/google/protobuf/Int32Value$Builder;->value_:I
 
     return v0
@@ -510,14 +510,14 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 249
+    .line 282
     sget-object v0, Lcom/google/protobuf/WrappersProto;->internal_static_google_protobuf_Int32Value_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     const-class v1, Lcom/google/protobuf/Int32Value;
 
     const-class v2, Lcom/google/protobuf/Int32Value$Builder;
 
-    .line 250
+    .line 283
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -541,7 +541,7 @@
         }
     .end annotation
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -552,7 +552,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -568,7 +568,7 @@
         }
     .end annotation
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -586,7 +586,7 @@
 
     const/4 v0, 0x0
 
-    .line 354
+    .line 402
     :try_start_0
     invoke-static {}, Lcom/google/protobuf/Int32Value;->access$400()Lcom/google/protobuf/Parser;
 
@@ -603,7 +603,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 360
+    .line 408
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
 
     :cond_0
@@ -617,7 +617,7 @@
     :catch_0
     move-exception p1
 
-    .line 356
+    .line 404
     :try_start_1
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -627,7 +627,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 357
+    .line 405
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -645,9 +645,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 360
+    .line 408
     invoke-virtual {p0, v0}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
 
+    .line 410
     :cond_1
     throw p1
 .end method
@@ -655,7 +656,7 @@
 .method public mergeFrom(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 336
+    .line 381
     invoke-static {}, Lcom/google/protobuf/Int32Value;->getDefaultInstance()Lcom/google/protobuf/Int32Value;
 
     move-result-object v0
@@ -664,7 +665,7 @@
 
     return-object p0
 
-    .line 337
+    .line 382
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/Int32Value;->getValue()I
 
@@ -672,15 +673,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 338
+    .line 383
     invoke-virtual {p1}, Lcom/google/protobuf/Int32Value;->getValue()I
 
-    move-result p1
+    move-result v0
 
-    invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->setValue(I)Lcom/google/protobuf/Int32Value$Builder;
+    invoke-virtual {p0, v0}, Lcom/google/protobuf/Int32Value$Builder;->setValue(I)Lcom/google/protobuf/Int32Value$Builder;
 
-    .line 340
+    .line 385
     :cond_1
+    iget-object p1, p1, Lcom/google/protobuf/Int32Value;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
+
+    .line 386
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->onChanged()V
 
     return-object p0
@@ -689,12 +695,12 @@
 .method public mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 1
 
-    .line 327
+    .line 372
     instance-of v0, p1, Lcom/google/protobuf/Int32Value;
 
     if-eqz v0, :cond_0
 
-    .line 328
+    .line 373
     check-cast p1, Lcom/google/protobuf/Int32Value;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Int32Value;)Lcom/google/protobuf/Int32Value$Builder;
@@ -703,7 +709,7 @@
 
     return-object p1
 
-    .line 330
+    .line 375
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -718,7 +724,7 @@
         }
     .end annotation
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -729,7 +735,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -745,7 +751,7 @@
         }
     .end annotation
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -756,7 +762,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -767,7 +773,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -778,13 +784,20 @@
 .method public final mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    return-object p0
+    .line 464
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/protobuf/Int32Value$Builder;
+
+    return-object p1
 .end method
 
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -795,7 +808,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -806,7 +819,7 @@
 .method public setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    .line 306
+    .line 346
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -819,7 +832,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Int32Value$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -830,7 +843,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/Int32Value$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -841,7 +854,7 @@
 .method public setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    .line 319
+    .line 362
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -854,7 +867,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/Int32Value$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -865,7 +878,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -876,13 +889,20 @@
 .method public final setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    return-object p0
+    .line 458
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/protobuf/Int32Value$Builder;
+
+    return-object p1
 .end method
 
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 238
+    .line 270
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Int32Value$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Int32Value$Builder;
 
     move-result-object p1
@@ -893,10 +913,10 @@
 .method public setValue(I)Lcom/google/protobuf/Int32Value$Builder;
     .locals 0
 
-    .line 386
+    .line 437
     iput p1, p0, Lcom/google/protobuf/Int32Value$Builder;->value_:I
 
-    .line 387
+    .line 438
     invoke-virtual {p0}, Lcom/google/protobuf/Int32Value$Builder;->onChanged()V
 
     return-object p0

@@ -34,7 +34,7 @@
 .method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;)V
     .locals 0
 
-    .line 79
+    .line 83
     iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$2;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +47,7 @@
 .method public a(Lcom/airbnb/lottie/d;)V
     .locals 1
 
-    .line 81
+    .line 85
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$2;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/d;)V
@@ -58,7 +58,7 @@
 .method public bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .line 79
+    .line 83
     check-cast p1, Lcom/airbnb/lottie/d;
 
     invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$2;->a(Lcom/airbnb/lottie/d;)V

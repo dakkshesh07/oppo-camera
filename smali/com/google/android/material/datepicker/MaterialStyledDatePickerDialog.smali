@@ -3,6 +3,11 @@
 .source "MaterialStyledDatePickerDialog.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final DEF_STYLE_ATTR:I = 0x101035c
 

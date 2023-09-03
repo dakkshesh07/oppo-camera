@@ -40,7 +40,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .line 142
+    .line 157
     new-instance v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     const/4 v1, 0x0
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->UNKNOWN:Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
-    .line 143
+    .line 158
     new-instance v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     const/4 v2, 0x1
@@ -66,7 +66,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->PROTO2:Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
-    .line 144
+    .line 159
     new-instance v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     const/4 v3, 0x2
@@ -81,7 +81,7 @@
 
     const/4 v0, 0x3
 
-    .line 141
+    .line 156
     new-array v0, v0, [Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     sget-object v4, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->UNKNOWN:Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
@@ -111,10 +111,10 @@
         }
     .end annotation
 
-    .line 146
+    .line 161
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 147
+    .line 162
     iput-object p3, p0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->name:Ljava/lang/String;
 
     return-void
@@ -123,7 +123,7 @@
 .method static synthetic access$000(Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;)Ljava/lang/String;
     .locals 0
 
-    .line 141
+    .line 156
     iget-object p0, p0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->name:Ljava/lang/String;
 
     return-object p0
@@ -132,7 +132,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
     .locals 1
 
-    .line 141
+    .line 156
     const-class v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -147,7 +147,7 @@
 .method public static values()[Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
     .locals 1
 
-    .line 141
+    .line 156
     sget-object v0, Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->$VALUES:[Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/Descriptors$FileDescriptor$Syntax;->clone()Ljava/lang/Object;

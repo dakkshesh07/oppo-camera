@@ -1,6 +1,11 @@
 .class final Lokio/SocketAsyncTimeout;
 .super Lokio/AsyncTimeout;
-.source "Okio.kt"
+.source "JvmOkio.kt"
+
+
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
 
 
 # instance fields
@@ -15,16 +20,16 @@
 
     const-string v0, "socket"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 145
+    .line 139
     invoke-direct {p0}, Lokio/AsyncTimeout;-><init>()V
 
     iput-object p1, p0, Lokio/SocketAsyncTimeout;->socket:Ljava/net/Socket;
 
     const-string p1, "okio.Okio"
 
-    .line 146
+    .line 140
     invoke-static {p1}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
     move-result-object p1
@@ -39,7 +44,7 @@
 .method protected newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
     .locals 2
 
-    .line 149
+    .line 143
     new-instance v0, Ljava/net/SocketTimeoutException;
 
     const-string v1, "timeout"
@@ -48,12 +53,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 151
+    .line 145
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {v0, p1}, Ljava/net/SocketTimeoutException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 153
+    .line 147
     :cond_0
     check-cast v0, Ljava/io/IOException;
 
@@ -65,7 +70,7 @@
 
     const-string v0, "Failed to close timed out socket "
 
-    .line 158
+    .line 152
     :try_start_0
     iget-object v1, p0, Lokio/SocketAsyncTimeout;->socket:Ljava/net/Socket;
 
@@ -79,14 +84,14 @@
     :catch_0
     move-exception v1
 
-    .line 162
+    .line 156
     invoke-static {v1}, Lokio/Okio;->isAndroidGetsocknameError(Ljava/lang/AssertionError;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 165
+    .line 159
     iget-object v2, p0, Lokio/SocketAsyncTimeout;->logger:Ljava/util/logging/Logger;
 
     sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
@@ -111,7 +116,7 @@
 
     goto :goto_0
 
-    .line 167
+    .line 161
     :cond_0
     check-cast v1, Ljava/lang/Throwable;
 
@@ -120,7 +125,7 @@
     :catch_1
     move-exception v1
 
-    .line 160
+    .line 154
     iget-object v2, p0, Lokio/SocketAsyncTimeout;->logger:Ljava/util/logging/Logger;
 
     sget-object v3, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;

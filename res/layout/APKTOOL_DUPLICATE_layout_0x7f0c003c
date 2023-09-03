@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090072" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.oppo.camera.ui.widget.TextCenterView android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070340" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070341" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070342" />
+    <com.oppo.camera.doubleexposure.DoubleExposureVideoView android:layout_gravity="center_horizontal" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090353" android:visibility="visible" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070117" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070114" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070347" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070348" />
+</LinearLayout>

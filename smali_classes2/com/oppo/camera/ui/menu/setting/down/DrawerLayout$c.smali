@@ -30,24 +30,24 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;II)V
     .locals 0
 
-    .line 454
+    .line 509
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->e:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;
 
-    .line 455
+    .line 510
     invoke-direct {p0, p2, p3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     const/4 p1, 0x0
 
-    .line 445
+    .line 500
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
-    .line 446
+    .line 501
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->b:I
 
-    .line 447
+    .line 502
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->c:I
 
-    .line 448
+    .line 503
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->d:I
 
     return-void
@@ -56,24 +56,24 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 450
+    .line 505
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->e:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;
 
-    .line 451
+    .line 506
     invoke-direct {p0, p2, p3}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 p1, 0x0
 
-    .line 445
+    .line 500
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
-    .line 446
+    .line 501
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->b:I
 
-    .line 447
+    .line 502
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->c:I
 
-    .line 448
+    .line 503
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->d:I
 
     return-void
@@ -82,24 +82,24 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Landroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
-    .line 458
+    .line 513
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->e:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;
 
-    .line 459
+    .line 514
     invoke-direct {p0, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
     const/4 p1, 0x0
 
-    .line 445
+    .line 500
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
-    .line 446
+    .line 501
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->b:I
 
-    .line 447
+    .line 502
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->c:I
 
-    .line 448
+    .line 503
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->d:I
 
     return-void

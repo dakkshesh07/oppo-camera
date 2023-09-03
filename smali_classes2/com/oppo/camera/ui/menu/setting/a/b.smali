@@ -12,7 +12,7 @@
     if-ne p1, v0, :cond_0
 
     .line 25
-    invoke-static {p0}, Lcom/oppo/camera/util/c;->b(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/oppo/camera/util/h;->b(Landroid/app/Activity;)V
 
     goto :goto_0
 
@@ -22,7 +22,7 @@
     if-ne p1, v0, :cond_1
 
     .line 27
-    invoke-static {p0}, Lcom/oppo/camera/util/c;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/oppo/camera/util/h;->a(Landroid/app/Activity;)V
 
     :cond_1
     :goto_0

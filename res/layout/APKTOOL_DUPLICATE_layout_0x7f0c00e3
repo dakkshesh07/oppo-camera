@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902b3" android:layout_width="fill_parent" android:layout_height="128.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070602" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070601" layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00e8" />
+    <include android:layout_width="48.0dip" android:layout_height="48.0dip" android:layout_marginLeft="2.0dip" android:layout_marginRight="2.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00e2" />
+    <include android:layout_gravity="fill_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070602" android:layout_toLeftOf="@id/APKTOOL_DUPLICATE_id_0x7f09008e" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070602" android:layout_toStartOf="@id/APKTOOL_DUPLICATE_id_0x7f09008e" layout="@layout/APKTOOL_DUPLICATE_layout_0x7f0c00e9" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901b5" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_alignParentBottom="true" android:layoutDirection="ltr" />
+    <ImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090037" android:background="?android:dividerHorizontal" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/APKTOOL_DUPLICATE_id_0x7f0901b5" />
+</RelativeLayout>

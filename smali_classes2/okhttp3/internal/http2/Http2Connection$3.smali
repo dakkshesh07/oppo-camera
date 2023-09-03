@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lokhttp3/internal/http2/Http2Connection;->writePingLater(ZIILokhttp3/internal/http2/Ping;)V
+    value = Lokhttp3/internal/http2/Http2Connection;->pushRequestLater(ILjava/util/List;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,29 +17,21 @@
 # instance fields
 .field final synthetic this$0:Lokhttp3/internal/http2/Http2Connection;
 
-.field final synthetic val$payload1:I
+.field final synthetic val$requestHeaders:Ljava/util/List;
 
-.field final synthetic val$payload2:I
-
-.field final synthetic val$ping:Lokhttp3/internal/http2/Ping;
-
-.field final synthetic val$reply:Z
+.field final synthetic val$streamId:I
 
 
 # direct methods
-.method varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection;Ljava/lang/String;[Ljava/lang/Object;ZIILokhttp3/internal/http2/Ping;)V
+.method varargs constructor <init>(Lokhttp3/internal/http2/Http2Connection;Ljava/lang/String;[Ljava/lang/Object;ILjava/util/List;)V
     .locals 0
 
-    .line 352
+    .line 839
     iput-object p1, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
-    iput-boolean p4, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$reply:Z
+    iput p4, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$streamId:I
 
-    iput p5, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$payload1:I
-
-    iput p6, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$payload2:I
-
-    iput-object p7, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$ping:Lokhttp3/internal/http2/Ping;
+    iput-object p5, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$requestHeaders:Ljava/util/List;
 
     invoke-direct {p0, p2, p3}, Lokhttp3/internal/NamedRunnable;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
@@ -49,24 +41,75 @@
 
 # virtual methods
 .method public execute()V
-    .locals 5
+    .locals 3
 
-    .line 355
+    .line 841
+    iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
+
+    iget-object v0, v0, Lokhttp3/internal/http2/Http2Connection;->pushObserver:Lokhttp3/internal/http2/PushObserver;
+
+    iget v1, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$streamId:I
+
+    iget-object v2, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$requestHeaders:Ljava/util/List;
+
+    invoke-interface {v0, v1, v2}, Lokhttp3/internal/http2/PushObserver;->onRequest(ILjava/util/List;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 844
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
 
-    iget-boolean v1, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$reply:Z
+    iget-object v0, v0, Lokhttp3/internal/http2/Http2Connection;->writer:Lokhttp3/internal/http2/Http2Writer;
 
-    iget v2, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$payload1:I
+    iget v1, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$streamId:I
 
-    iget v3, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$payload2:I
+    sget-object v2, Lokhttp3/internal/http2/ErrorCode;->CANCEL:Lokhttp3/internal/http2/ErrorCode;
 
-    iget-object v4, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$ping:Lokhttp3/internal/http2/Ping;
+    invoke-virtual {v0, v1, v2}, Lokhttp3/internal/http2/Http2Writer;->rstStream(ILokhttp3/internal/http2/ErrorCode;)V
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lokhttp3/internal/http2/Http2Connection;->writePing(ZIILokhttp3/internal/http2/Ping;)V
+    .line 845
+    iget-object v0, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
+
+    monitor-enter v0
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
+    .line 846
+    :try_start_1
+    iget-object v1, p0, Lokhttp3/internal/http2/Http2Connection$3;->this$0:Lokhttp3/internal/http2/Http2Connection;
+
+    iget-object v1, v1, Lokhttp3/internal/http2/Http2Connection;->currentPushRequests:Ljava/util/Set;
+
+    iget v2, p0, Lokhttp3/internal/http2/Http2Connection$3;->val$streamId:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 847
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    throw v1
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
     :catch_0
+    :cond_0
+    :goto_0
     return-void
 .end method

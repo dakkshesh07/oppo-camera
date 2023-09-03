@@ -1,5 +1,5 @@
 .class Landroidx/appcompat/view/menu/b$a;
-.super Landroidx/appcompat/widget/ae;
+.super Landroidx/appcompat/widget/ad;
 .source "ActionMenuItemView.java"
 
 
@@ -26,7 +26,7 @@
     iput-object p1, p0, Landroidx/appcompat/view/menu/b$a;->a:Landroidx/appcompat/view/menu/b;
 
     .line 300
-    invoke-direct {p0, p1}, Landroidx/appcompat/widget/ae;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Landroidx/appcompat/widget/ad;-><init>(Landroid/view/View;)V
 
     return-void
 .end method

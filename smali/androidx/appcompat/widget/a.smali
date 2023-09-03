@@ -22,7 +22,7 @@
 
 .field protected e:I
 
-.field protected f:Landroidx/core/g/aa;
+.field protected f:Landroidx/core/f/aa;
 
 .field private g:Z
 
@@ -223,16 +223,16 @@
     return v0
 .end method
 
-.method public a(IJ)Landroidx/core/g/aa;
+.method public a(IJ)Landroidx/core/f/aa;
     .locals 2
 
     .line 160
-    iget-object v0, p0, Landroidx/appcompat/widget/a;->f:Landroidx/core/g/aa;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->f:Landroidx/core/f/aa;
 
     if-eqz v0, :cond_0
 
     .line 161
-    invoke-virtual {v0}, Landroidx/core/g/aa;->b()V
+    invoke-virtual {v0}, Landroidx/core/f/aa;->b()V
 
     :cond_0
     const/4 v0, 0x0
@@ -251,51 +251,51 @@
 
     .line 168
     :cond_1
-    invoke-static {p0}, Landroidx/core/g/w;->n(Landroid/view/View;)Landroidx/core/g/aa;
+    invoke-static {p0}, Landroidx/core/f/w;->n(Landroid/view/View;)Landroidx/core/f/aa;
 
     move-result-object v0
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Landroidx/core/g/aa;->a(F)Landroidx/core/g/aa;
+    invoke-virtual {v0, v1}, Landroidx/core/f/aa;->a(F)Landroidx/core/f/aa;
 
     move-result-object v0
 
     .line 169
-    invoke-virtual {v0, p2, p3}, Landroidx/core/g/aa;->a(J)Landroidx/core/g/aa;
+    invoke-virtual {v0, p2, p3}, Landroidx/core/f/aa;->a(J)Landroidx/core/f/aa;
 
     .line 170
     iget-object p2, p0, Landroidx/appcompat/widget/a;->a:Landroidx/appcompat/widget/a$a;
 
-    invoke-virtual {p2, v0, p1}, Landroidx/appcompat/widget/a$a;->a(Landroidx/core/g/aa;I)Landroidx/appcompat/widget/a$a;
+    invoke-virtual {p2, v0, p1}, Landroidx/appcompat/widget/a$a;->a(Landroidx/core/f/aa;I)Landroidx/appcompat/widget/a$a;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/core/g/aa;->a(Landroidx/core/g/ab;)Landroidx/core/g/aa;
+    invoke-virtual {v0, p1}, Landroidx/core/f/aa;->a(Landroidx/core/f/ab;)Landroidx/core/f/aa;
 
     return-object v0
 
     .line 173
     :cond_2
-    invoke-static {p0}, Landroidx/core/g/w;->n(Landroid/view/View;)Landroidx/core/g/aa;
+    invoke-static {p0}, Landroidx/core/f/w;->n(Landroid/view/View;)Landroidx/core/f/aa;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Landroidx/core/g/aa;->a(F)Landroidx/core/g/aa;
+    invoke-virtual {v1, v0}, Landroidx/core/f/aa;->a(F)Landroidx/core/f/aa;
 
     move-result-object v0
 
     .line 174
-    invoke-virtual {v0, p2, p3}, Landroidx/core/g/aa;->a(J)Landroidx/core/g/aa;
+    invoke-virtual {v0, p2, p3}, Landroidx/core/f/aa;->a(J)Landroidx/core/f/aa;
 
     .line 175
     iget-object p2, p0, Landroidx/appcompat/widget/a;->a:Landroidx/appcompat/widget/a$a;
 
-    invoke-virtual {p2, v0, p1}, Landroidx/appcompat/widget/a$a;->a(Landroidx/core/g/aa;I)Landroidx/appcompat/widget/a$a;
+    invoke-virtual {p2, v0, p1}, Landroidx/appcompat/widget/a$a;->a(Landroidx/core/f/aa;I)Landroidx/appcompat/widget/a$a;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Landroidx/core/g/aa;->a(Landroidx/core/g/ab;)Landroidx/core/g/aa;
+    invoke-virtual {v0, p1}, Landroidx/core/f/aa;->a(Landroidx/core/f/ab;)Landroidx/core/f/aa;
 
     return-object v0
 .end method
@@ -325,7 +325,7 @@
     .locals 1
 
     .line 153
-    iget-object v0, p0, Landroidx/appcompat/widget/a;->f:Landroidx/core/g/aa;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->f:Landroidx/core/f/aa;
 
     if-eqz v0, :cond_0
 
@@ -528,12 +528,12 @@
     if-eq p1, v0, :cond_1
 
     .line 188
-    iget-object v0, p0, Landroidx/appcompat/widget/a;->f:Landroidx/core/g/aa;
+    iget-object v0, p0, Landroidx/appcompat/widget/a;->f:Landroidx/core/f/aa;
 
     if-eqz v0, :cond_0
 
     .line 189
-    invoke-virtual {v0}, Landroidx/core/g/aa;->b()V
+    invoke-virtual {v0}, Landroidx/core/f/aa;->b()V
 
     .line 191
     :cond_0

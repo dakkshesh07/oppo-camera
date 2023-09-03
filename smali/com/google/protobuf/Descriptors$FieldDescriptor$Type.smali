@@ -70,7 +70,7 @@
 .method static constructor <clinit>()V
     .locals 16
 
-    .line 1149
+    .line 1216
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->DOUBLE:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -83,7 +83,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->DOUBLE:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1150
+    .line 1217
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->FLOAT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -96,7 +96,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->FLOAT:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1151
+    .line 1218
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->LONG:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -109,7 +109,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->INT64:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1152
+    .line 1219
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->LONG:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -122,7 +122,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->UINT64:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1153
+    .line 1220
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -135,7 +135,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->INT32:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1154
+    .line 1221
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->LONG:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -148,7 +148,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->FIXED64:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1155
+    .line 1222
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -161,7 +161,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->FIXED32:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1156
+    .line 1223
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->BOOLEAN:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -174,7 +174,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->BOOL:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1157
+    .line 1224
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->STRING:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -187,7 +187,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->STRING:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1158
+    .line 1225
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->MESSAGE:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -200,7 +200,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->GROUP:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1159
+    .line 1226
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->MESSAGE:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -213,7 +213,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->MESSAGE:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1160
+    .line 1227
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->BYTE_STRING:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -226,7 +226,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->BYTES:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1161
+    .line 1228
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -239,7 +239,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->UINT32:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1162
+    .line 1229
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->ENUM:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -252,7 +252,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->ENUM:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1163
+    .line 1230
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -265,7 +265,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->SFIXED32:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1164
+    .line 1231
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->LONG:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -278,7 +278,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->SFIXED64:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1165
+    .line 1232
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -291,7 +291,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->SINT32:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
-    .line 1166
+    .line 1233
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->LONG:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -306,7 +306,7 @@
 
     const/16 v0, 0x12
 
-    .line 1148
+    .line 1215
     new-array v0, v0, [Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     sget-object v1, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->DOUBLE:Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
@@ -408,10 +408,10 @@
         }
     .end annotation
 
-    .line 1168
+    .line 1235
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1169
+    .line 1236
     iput-object p3, p0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->javaType:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     return-void
@@ -420,7 +420,7 @@
 .method public static valueOf(Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;)Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
     .locals 1
 
-    .line 1180
+    .line 1250
     invoke-static {}, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->values()[Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     move-result-object v0
@@ -439,7 +439,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
     .locals 1
 
-    .line 1148
+    .line 1215
     const-class v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -454,7 +454,7 @@
 .method public static values()[Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
     .locals 1
 
-    .line 1148
+    .line 1215
     sget-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->$VALUES:[Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->clone()Ljava/lang/Object;
@@ -471,7 +471,7 @@
 .method public getJavaType()Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
     .locals 1
 
-    .line 1177
+    .line 1246
     iget-object v0, p0, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->javaType:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     return-object v0
@@ -480,7 +480,7 @@
 .method public toProto()Lcom/google/protobuf/DescriptorProtos$FieldDescriptorProto$Type;
     .locals 1
 
-    .line 1175
+    .line 1242
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$FieldDescriptor$Type;->ordinal()I
 
     move-result v0

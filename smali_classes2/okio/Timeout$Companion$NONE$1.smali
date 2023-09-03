@@ -13,6 +13,9 @@
     name = null
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # direct methods
 .method constructor <init>()V
@@ -48,7 +51,7 @@
 
     const-string p1, "unit"
 
-    invoke-static {p3, p1}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p1}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 219
     move-object p1, p0

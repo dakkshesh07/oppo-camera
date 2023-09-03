@@ -374,7 +374,7 @@
     if-eq v0, v1, :cond_5
 
     .line 785
-    invoke-static {p3}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p3}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p3
 
@@ -436,7 +436,7 @@
 
     .line 777
     :cond_5
-    invoke-static {p3}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p3}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p3
 
@@ -1510,6 +1510,8 @@
 
 .method public onTextSizeChange()V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 614
     invoke-virtual {p0}, Lcom/google/android/material/badge/BadgeDrawable;->invalidateSelf()V

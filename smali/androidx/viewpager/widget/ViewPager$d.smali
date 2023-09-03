@@ -1,5 +1,5 @@
 .class Landroidx/viewpager/widget/ViewPager$d;
-.super Landroidx/core/g/a;
+.super Landroidx/core/f/a;
 .source "ViewPager.java"
 
 
@@ -25,7 +25,7 @@
     .line 3037
     iput-object p1, p0, Landroidx/viewpager/widget/ViewPager$d;->a:Landroidx/viewpager/widget/ViewPager;
 
-    invoke-direct {p0}, Landroidx/core/g/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/f/a;-><init>()V
 
     return-void
 .end method
@@ -67,7 +67,7 @@
     .locals 1
 
     .line 3041
-    invoke-super {p0, p1, p2}, Landroidx/core/g/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/f/a;->onInitializeAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     .line 3042
     const-class p1, Landroidx/viewpager/widget/ViewPager;
@@ -129,11 +129,11 @@
     return-void
 .end method
 
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
     .locals 1
 
     .line 3053
-    invoke-super {p0, p1, p2}, Landroidx/core/g/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+    invoke-super {p0, p1, p2}, Landroidx/core/f/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
 
     .line 3054
     const-class p1, Landroidx/viewpager/widget/ViewPager;
@@ -142,14 +142,14 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->b(Ljava/lang/CharSequence;)V
 
     .line 3055
     invoke-direct {p0}, Landroidx/viewpager/widget/ViewPager$d;->a()Z
 
     move-result p1
 
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->j(Z)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->j(Z)V
 
     .line 3056
     iget-object p1, p0, Landroidx/viewpager/widget/ViewPager$d;->a:Landroidx/viewpager/widget/ViewPager;
@@ -165,7 +165,7 @@
     const/16 p1, 0x1000
 
     .line 3057
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->a(I)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->a(I)V
 
     .line 3059
     :cond_0
@@ -182,7 +182,7 @@
     const/16 p1, 0x2000
 
     .line 3060
-    invoke-virtual {p2, p1}, Landroidx/core/g/a/d;->a(I)V
+    invoke-virtual {p2, p1}, Landroidx/core/f/a/d;->a(I)V
 
     :cond_1
     return-void
@@ -192,7 +192,7 @@
     .locals 1
 
     .line 3066
-    invoke-super {p0, p1, p2, p3}, Landroidx/core/g/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    invoke-super {p0, p1, p2, p3}, Landroidx/core/f/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p1
 

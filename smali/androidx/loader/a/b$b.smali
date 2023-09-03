@@ -29,10 +29,10 @@
 
 
 # instance fields
-.field private final a:Landroidx/loader/b/a;
+.field private final a:Landroidx/loader/content/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/loader/b/a<",
+            "Landroidx/loader/content/a<",
             "TD;>;"
         }
     .end annotation
@@ -51,70 +51,6 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TD;)V"
-        }
-    .end annotation
-
-    .line 246
-    sget-boolean v0, Landroidx/loader/a/b;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 247
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "  onLoadFinished in "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/b/a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ": "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/b/a;
-
-    .line 248
-    invoke-virtual {v1, p1}, Landroidx/loader/b/a;->a(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "LoaderManager"
-
-    .line 247
-    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 250
-    :cond_0
-    iget-object v0, p0, Landroidx/loader/a/b$b;->b:Landroidx/loader/a/a$a;
-
-    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/b/a;
-
-    invoke-interface {v0, v1, p1}, Landroidx/loader/a/a$a;->a(Landroidx/loader/b/a;Ljava/lang/Object;)V
-
-    const/4 p1, 0x1
-
-    .line 251
-    iput-boolean p1, p0, Landroidx/loader/a/b$b;->c:Z
-
-    return-void
-.end method
-
 .method public a(Ljava/lang/String;Ljava/io/PrintWriter;)V
     .locals 0
 
@@ -162,7 +98,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/b/a;
+    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/content/a;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -178,11 +114,75 @@
     :cond_0
     iget-object v0, p0, Landroidx/loader/a/b$b;->b:Landroidx/loader/a/a$a;
 
-    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/b/a;
+    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/content/a;
 
-    invoke-interface {v0, v1}, Landroidx/loader/a/a$a;->a(Landroidx/loader/b/a;)V
+    invoke-interface {v0, v1}, Landroidx/loader/a/a$a;->a(Landroidx/loader/content/a;)V
 
     :cond_1
+    return-void
+.end method
+
+.method public onChanged(Ljava/lang/Object;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TD;)V"
+        }
+    .end annotation
+
+    .line 246
+    sget-boolean v0, Landroidx/loader/a/b;->a:Z
+
+    if-eqz v0, :cond_0
+
+    .line 247
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "  onLoadFinished in "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/content/a;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/content/a;
+
+    .line 248
+    invoke-virtual {v1, p1}, Landroidx/loader/content/a;->a(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "LoaderManager"
+
+    .line 247
+    invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 250
+    :cond_0
+    iget-object v0, p0, Landroidx/loader/a/b$b;->b:Landroidx/loader/a/a$a;
+
+    iget-object v1, p0, Landroidx/loader/a/b$b;->a:Landroidx/loader/content/a;
+
+    invoke-interface {v0, v1, p1}, Landroidx/loader/a/a$a;->a(Landroidx/loader/content/a;Ljava/lang/Object;)V
+
+    const/4 p1, 0x1
+
+    .line 251
+    iput-boolean p1, p0, Landroidx/loader/a/b$b;->c:Z
+
     return-void
 .end method
 

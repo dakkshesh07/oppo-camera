@@ -23,7 +23,7 @@
     .locals 3
 
     .line 57
-    invoke-static {}, Lcom/airbnb/lottie/c/b/h$a;->values()[Lcom/airbnb/lottie/c/b/h$a;
+    invoke-static {}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->values()[Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
     move-result-object v0
 
@@ -36,9 +36,9 @@
     :try_start_0
     sget-object v0, Lcom/airbnb/lottie/a/a/l$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/h$a;->MERGE:Lcom/airbnb/lottie/c/b/h$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->MERGE:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/h$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->ordinal()I
 
     move-result v1
 
@@ -52,9 +52,9 @@
     :try_start_1
     sget-object v0, Lcom/airbnb/lottie/a/a/l$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/h$a;->ADD:Lcom/airbnb/lottie/c/b/h$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->ADD:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/h$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->ordinal()I
 
     move-result v1
 
@@ -68,9 +68,9 @@
     :try_start_2
     sget-object v0, Lcom/airbnb/lottie/a/a/l$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/h$a;->SUBTRACT:Lcom/airbnb/lottie/c/b/h$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->SUBTRACT:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/h$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->ordinal()I
 
     move-result v1
 
@@ -84,9 +84,9 @@
     :try_start_3
     sget-object v0, Lcom/airbnb/lottie/a/a/l$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/h$a;->INTERSECT:Lcom/airbnb/lottie/c/b/h$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->INTERSECT:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/h$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->ordinal()I
 
     move-result v1
 
@@ -100,9 +100,9 @@
     :try_start_4
     sget-object v0, Lcom/airbnb/lottie/a/a/l$1;->a:[I
 
-    sget-object v1, Lcom/airbnb/lottie/c/b/h$a;->EXCLUDE_INTERSECTIONS:Lcom/airbnb/lottie/c/b/h$a;
+    sget-object v1, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->EXCLUDE_INTERSECTIONS:Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;
 
-    invoke-virtual {v1}, Lcom/airbnb/lottie/c/b/h$a;->ordinal()I
+    invoke-virtual {v1}, Lcom/airbnb/lottie/model/content/MergePaths$MergePathsMode;->ordinal()I
 
     move-result v1
 

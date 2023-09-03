@@ -26,7 +26,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/d;Landroid/content/Context;IILjava/util/List;Ljava/util/List;Lcom/oppo/camera/ui/FixedListView;)V
     .locals 0
 
-    .line 134
+    .line 137
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->c:Lcom/oppo/camera/ui/menu/setting/d;
 
     iput-object p6, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->a:Ljava/util/List;
@@ -43,30 +43,30 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
-    .line 137
+    .line 140
     invoke-super {p0, p1, p2, p3}, Lcom/oppo/camera/ui/menu/setting/d$a;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const p3, 0x7f0901ea
+    const p3, 0x7f090230
 
-    .line 138
+    .line 141
     invoke-virtual {p2, p3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/CheckBox;
 
-    const v0, 0x7f0901eb
+    const v0, 0x7f090231
 
-    .line 139
+    .line 142
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 140
+    .line 143
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->a:Ljava/util/List;
 
     invoke-interface {v1, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -77,7 +77,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 142
+    const/4 v1, 0x0
+
+    .line 144
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 146
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->c:Lcom/oppo/camera/ui/menu/setting/d;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/setting/d;->a(Lcom/oppo/camera/ui/menu/setting/d;)I
@@ -86,7 +91,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 143
+    .line 147
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->b:Lcom/oppo/camera/ui/FixedListView;
 
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->c:Lcom/oppo/camera/ui/menu/setting/d;
@@ -107,18 +112,16 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/ui/FixedListView;->setItemChecked(IZ)V
 
-    .line 144
+    .line 148
     invoke-virtual {p3, v2}, Landroid/widget/CheckBox;->setChecked(Z)V
 
     goto :goto_0
 
+    .line 150
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {p3, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
 
-    .line 146
-    invoke-virtual {p3, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
-
-    .line 149
+    .line 153
     :goto_0
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/d$1;->isEnabled(I)Z
 
@@ -126,23 +129,23 @@
 
     if-nez p1, :cond_1
 
-    const p1, 0x7f0901ec
+    const p1, 0x7f090232
 
-    .line 150
+    .line 154
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p1
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 151
+    .line 155
     iget-object p3, p0, Lcom/oppo/camera/ui/menu/setting/d$1;->c:Lcom/oppo/camera/ui/menu/setting/d;
 
     invoke-virtual {p3}, Lcom/oppo/camera/ui/menu/setting/d;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    const v0, 0x7f06036e
+    const v0, 0x7f060402
 
     invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
 

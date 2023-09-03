@@ -1,5 +1,5 @@
 .class public Lcom/oppo/camera/ui/menu/setting/CameraCustomListPreference;
-.super Lcom/color/support/preference/ColorListPreference;
+.super Lcom/coui/appcompat/preference/COUIListPreference;
 .source "CameraCustomListPreference.java"
 
 
@@ -12,7 +12,7 @@
     .locals 2
 
     .line 18
-    invoke-direct {p0, p1, p2}, Lcom/color/support/preference/ColorListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/coui/appcompat/preference/COUIListPreference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x0
 

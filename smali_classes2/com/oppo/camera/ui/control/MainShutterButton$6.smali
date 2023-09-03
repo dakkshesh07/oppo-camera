@@ -3,12 +3,12 @@
 .source "MainShutterButton.java"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/control/MainShutterButton;->s()V
+    value = Lcom/oppo/camera/ui/control/MainShutterButton;->D()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/control/MainShutterButton;)V
     .locals 0
 
-    .line 1177
+    .line 2200
     iput-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$6;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,28 +35,33 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 1180
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/MainShutterButton$6;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {v0, p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->b(Lcom/oppo/camera/ui/control/MainShutterButton;I)I
-
-    .line 1181
+    .line 2208
     iget-object p1, p0, Lcom/oppo/camera/ui/control/MainShutterButton$6;->a:Lcom/oppo/camera/ui/control/MainShutterButton;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/control/MainShutterButton;->invalidate()V
+    const/16 v0, 0x14
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/control/MainShutterButton;->f(Lcom/oppo/camera/ui/control/MainShutterButton;I)V
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

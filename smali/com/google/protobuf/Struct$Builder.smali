@@ -45,10 +45,10 @@
 .method private constructor <init>()V
     .locals 0
 
-    .line 395
+    .line 430
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>()V
 
-    .line 396
+    .line 431
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -57,10 +57,10 @@
 .method private constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
     .locals 0
 
-    .line 401
+    .line 436
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
-    .line 402
+    .line 437
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -69,7 +69,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;Lcom/google/protobuf/Struct$1;)V
     .locals 0
 
-    .line 356
+    .line 390
     invoke-direct {p0, p1}, Lcom/google/protobuf/Struct$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
@@ -78,7 +78,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/Struct$1;)V
     .locals 0
 
-    .line 356
+    .line 390
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;-><init>()V
 
     return-void
@@ -87,7 +87,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 362
+    .line 396
     sget-object v0, Lcom/google/protobuf/StructProto;->internal_static_google_protobuf_Struct_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -105,12 +105,12 @@
         }
     .end annotation
 
-    .line 511
+    .line 561
     iget-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
     if-nez v0, :cond_0
 
-    .line 512
+    .line 562
     sget-object v0, Lcom/google/protobuf/Struct$FieldsDefaultEntryHolder;->defaultEntry:Lcom/google/protobuf/MapEntry;
 
     invoke-static {v0}, Lcom/google/protobuf/MapField;->emptyMapField(Lcom/google/protobuf/MapEntry;)Lcom/google/protobuf/MapField;
@@ -133,15 +133,15 @@
         }
     .end annotation
 
-    .line 519
+    .line 569
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->onChanged()V
 
-    .line 520
+    .line 570
     iget-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
     if-nez v0, :cond_0
 
-    .line 521
+    .line 571
     sget-object v0, Lcom/google/protobuf/Struct$FieldsDefaultEntryHolder;->defaultEntry:Lcom/google/protobuf/MapEntry;
 
     invoke-static {v0}, Lcom/google/protobuf/MapField;->newMapField(Lcom/google/protobuf/MapEntry;)Lcom/google/protobuf/MapField;
@@ -150,7 +150,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
-    .line 524
+    .line 574
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
@@ -160,7 +160,7 @@
 
     if-nez v0, :cond_1
 
-    .line 525
+    .line 575
     iget-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
     invoke-virtual {v0}, Lcom/google/protobuf/MapField;->copy()Lcom/google/protobuf/MapField;
@@ -169,7 +169,7 @@
 
     iput-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
-    .line 527
+    .line 577
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/Struct$Builder;->fields_:Lcom/google/protobuf/MapField;
 
@@ -179,7 +179,7 @@
 .method private maybeForceBuilderInitialization()V
     .locals 1
 
-    .line 405
+    .line 440
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     return-void
@@ -190,7 +190,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -201,7 +201,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -212,7 +212,7 @@
 .method public addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    .line 465
+    .line 511
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -225,7 +225,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->build()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -236,7 +236,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->build()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -247,12 +247,12 @@
 .method public build()Lcom/google/protobuf/Struct;
     .locals 2
 
-    .line 425
+    .line 464
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->buildPartial()Lcom/google/protobuf/Struct;
 
     move-result-object v0
 
-    .line 426
+    .line 465
     invoke-virtual {v0}, Lcom/google/protobuf/Struct;->isInitialized()Z
 
     move-result v1
@@ -261,7 +261,7 @@
 
     return-object v0
 
-    .line 427
+    .line 466
     :cond_0
     invoke-static {v0}, Lcom/google/protobuf/Struct$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
@@ -273,7 +273,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->buildPartial()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -284,7 +284,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->buildPartial()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -295,31 +295,31 @@
 .method public buildPartial()Lcom/google/protobuf/Struct;
     .locals 2
 
-    .line 433
+    .line 473
     new-instance v0, Lcom/google/protobuf/Struct;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/google/protobuf/Struct;-><init>(Lcom/google/protobuf/GeneratedMessageV3$Builder;Lcom/google/protobuf/Struct$1;)V
 
-    .line 434
+    .line 474
     iget v1, p0, Lcom/google/protobuf/Struct$Builder;->bitField0_:I
 
-    .line 435
+    .line 475
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Lcom/google/protobuf/Struct;->access$302(Lcom/google/protobuf/Struct;Lcom/google/protobuf/MapField;)Lcom/google/protobuf/MapField;
 
-    .line 436
+    .line 476
     invoke-static {v0}, Lcom/google/protobuf/Struct;->access$300(Lcom/google/protobuf/Struct;)Lcom/google/protobuf/MapField;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lcom/google/protobuf/MapField;->makeImmutable()V
 
-    .line 437
+    .line 477
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->onBuilt()V
 
     return-object v0
@@ -328,7 +328,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clear()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -339,7 +339,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clear()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -350,7 +350,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clear()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -361,7 +361,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clear()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -372,10 +372,10 @@
 .method public clear()Lcom/google/protobuf/Struct$Builder;
     .locals 1
 
-    .line 410
+    .line 446
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
-    .line 411
+    .line 447
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -388,7 +388,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -399,7 +399,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -410,7 +410,7 @@
 .method public clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    .line 451
+    .line 494
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -423,11 +423,16 @@
 .method public clearFields()Lcom/google/protobuf/Struct$Builder;
     .locals 1
 
-    .line 600
-    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getMutableFields()Ljava/util/Map;
+    .line 650
+    invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Lcom/google/protobuf/MapField;->getMutableMap()Ljava/util/Map;
+
+    move-result-object v0
+
+    .line 651
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-object p0
@@ -436,7 +441,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -447,7 +452,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -458,7 +463,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -469,7 +474,7 @@
 .method public clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    .line 455
+    .line 499
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -482,7 +487,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clone()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -493,7 +498,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clone()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -504,7 +509,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clone()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -515,7 +520,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clone()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -526,7 +531,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clone()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -537,7 +542,7 @@
 .method public clone()Lcom/google/protobuf/Struct$Builder;
     .locals 1
 
-    .line 442
+    .line 483
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
@@ -555,7 +560,7 @@
         }
     .end annotation
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->clone()Lcom/google/protobuf/Struct$Builder;
 
     move-result-object v0
@@ -568,7 +573,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 544
+    .line 594
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -583,7 +588,7 @@
 
     return p1
 
-    .line 543
+    .line 593
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -595,7 +600,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -606,7 +611,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 356
+    .line 390
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -617,7 +622,7 @@
 .method public getDefaultInstanceForType()Lcom/google/protobuf/Struct;
     .locals 1
 
-    .line 421
+    .line 459
     invoke-static {}, Lcom/google/protobuf/Struct;->getDefaultInstance()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -628,7 +633,7 @@
 .method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 417
+    .line 454
     sget-object v0, Lcom/google/protobuf/StructProto;->internal_static_google_protobuf_Struct_descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object v0
@@ -649,7 +654,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 551
+    .line 601
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getFieldsMap()Ljava/util/Map;
 
     move-result-object v0
@@ -660,7 +665,7 @@
 .method public getFieldsCount()I
     .locals 1
 
-    .line 531
+    .line 581
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -688,7 +693,7 @@
         }
     .end annotation
 
-    .line 562
+    .line 612
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -705,7 +710,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 577
+    .line 627
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -714,7 +719,7 @@
 
     move-result-object v0
 
-    .line 578
+    .line 628
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -732,7 +737,7 @@
     :cond_0
     return-object p2
 
-    .line 575
+    .line 625
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -746,7 +751,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 592
+    .line 642
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -755,14 +760,14 @@
 
     move-result-object v0
 
-    .line 593
+    .line 643
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 596
+    .line 646
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
@@ -771,7 +776,7 @@
 
     return-object p1
 
-    .line 594
+    .line 644
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -779,7 +784,7 @@
 
     throw p1
 
-    .line 590
+    .line 640
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -803,7 +808,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 623
+    .line 675
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
@@ -818,14 +823,14 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 389
+    .line 424
     sget-object v0, Lcom/google/protobuf/StructProto;->internal_static_google_protobuf_Struct_fieldAccessorTable:Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     const-class v1, Lcom/google/protobuf/Struct;
 
     const-class v2, Lcom/google/protobuf/Struct$Builder;
 
-    .line 390
+    .line 425
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -840,14 +845,14 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 370
+    .line 404
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetFields()Lcom/google/protobuf/MapField;
 
     move-result-object p1
 
     return-object p1
 
-    .line 372
+    .line 406
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -877,14 +882,14 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 381
+    .line 415
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object p1
 
     return-object p1
 
-    .line 383
+    .line 417
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -923,7 +928,7 @@
         }
     .end annotation
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -934,7 +939,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -950,7 +955,7 @@
         }
     .end annotation
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -966,7 +971,7 @@
         }
     .end annotation
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -977,7 +982,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -993,7 +998,7 @@
         }
     .end annotation
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1011,7 +1016,7 @@
 
     const/4 v0, 0x0
 
-    .line 494
+    .line 544
     :try_start_0
     invoke-static {}, Lcom/google/protobuf/Struct;->access$500()Lcom/google/protobuf/Parser;
 
@@ -1028,7 +1033,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 500
+    .line 550
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/Struct;)Lcom/google/protobuf/Struct$Builder;
 
     :cond_0
@@ -1042,7 +1047,7 @@
     :catch_0
     move-exception p1
 
-    .line 496
+    .line 546
     :try_start_1
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -1052,7 +1057,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 497
+    .line 547
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -1070,9 +1075,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 500
+    .line 550
     invoke-virtual {p0, v0}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/Struct;)Lcom/google/protobuf/Struct$Builder;
 
+    .line 552
     :cond_1
     throw p1
 .end method
@@ -1080,12 +1086,12 @@
 .method public mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Struct$Builder;
     .locals 1
 
-    .line 468
+    .line 515
     instance-of v0, p1, Lcom/google/protobuf/Struct;
 
     if-eqz v0, :cond_0
 
-    .line 469
+    .line 516
     check-cast p1, Lcom/google/protobuf/Struct;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeFrom(Lcom/google/protobuf/Struct;)Lcom/google/protobuf/Struct$Builder;
@@ -1094,7 +1100,7 @@
 
     return-object p1
 
-    .line 471
+    .line 518
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -1102,9 +1108,9 @@
 .end method
 
 .method public mergeFrom(Lcom/google/protobuf/Struct;)Lcom/google/protobuf/Struct$Builder;
-    .locals 1
+    .locals 2
 
-    .line 477
+    .line 524
     invoke-static {}, Lcom/google/protobuf/Struct;->getDefaultInstance()Lcom/google/protobuf/Struct;
 
     move-result-object v0
@@ -1113,21 +1119,26 @@
 
     return-object p0
 
-    .line 478
+    .line 525
     :cond_0
     invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
 
-    .line 479
+    .line 526
     invoke-static {p1}, Lcom/google/protobuf/Struct;->access$400(Lcom/google/protobuf/Struct;)Lcom/google/protobuf/MapField;
 
-    move-result-object p1
+    move-result-object v1
 
-    .line 478
-    invoke-virtual {v0, p1}, Lcom/google/protobuf/MapField;->mergeFrom(Lcom/google/protobuf/MapField;)V
+    .line 525
+    invoke-virtual {v0, v1}, Lcom/google/protobuf/MapField;->mergeFrom(Lcom/google/protobuf/MapField;)V
 
-    .line 480
+    .line 527
+    iget-object p1, p1, Lcom/google/protobuf/Struct;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
+
+    .line 528
     invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->onChanged()V
 
     return-object p0
@@ -1136,7 +1147,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1147,7 +1158,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1158,7 +1169,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1169,7 +1180,14 @@
 .method public final mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    return-object p0
+    .line 716
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/protobuf/Struct$Builder;
+
+    return-object p1
 .end method
 
 .method public putAllFields(Ljava/util/Map;)Lcom/google/protobuf/Struct$Builder;
@@ -1185,11 +1203,16 @@
         }
     .end annotation
 
-    .line 650
-    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getMutableFields()Ljava/util/Map;
+    .line 703
+    invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Lcom/google/protobuf/MapField;->getMutableMap()Ljava/util/Map;
+
+    move-result-object v0
+
+    .line 704
     invoke-interface {v0, p1}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     return-object p0
@@ -1202,16 +1225,21 @@
 
     if-eqz p2, :cond_0
 
-    .line 637
-    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getMutableFields()Ljava/util/Map;
+    .line 689
+    invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Lcom/google/protobuf/MapField;->getMutableMap()Ljava/util/Map;
+
+    move-result-object v0
+
+    .line 690
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 
-    .line 636
+    .line 688
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1219,7 +1247,7 @@
 
     throw p1
 
-    .line 635
+    .line 687
     :cond_1
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1233,16 +1261,21 @@
 
     if-eqz p1, :cond_0
 
-    .line 614
-    invoke-virtual {p0}, Lcom/google/protobuf/Struct$Builder;->getMutableFields()Ljava/util/Map;
+    .line 665
+    invoke-direct {p0}, Lcom/google/protobuf/Struct$Builder;->internalGetMutableFields()Lcom/google/protobuf/MapField;
 
     move-result-object v0
 
+    invoke-virtual {v0}, Lcom/google/protobuf/MapField;->getMutableMap()Ljava/util/Map;
+
+    move-result-object v0
+
+    .line 666
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p0
 
-    .line 613
+    .line 664
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -1254,7 +1287,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1265,7 +1298,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Struct$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1276,7 +1309,7 @@
 .method public setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    .line 447
+    .line 489
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -1289,7 +1322,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/Struct$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1300,7 +1333,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/Struct$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1311,7 +1344,7 @@
 .method public setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    .line 460
+    .line 505
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -1324,7 +1357,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1335,7 +1368,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 356
+    .line 390
     invoke-virtual {p0, p1}, Lcom/google/protobuf/Struct$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
 
     move-result-object p1
@@ -1346,5 +1379,12 @@
 .method public final setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Struct$Builder;
     .locals 0
 
-    return-object p0
+    .line 710
+    invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/protobuf/Struct$Builder;
+
+    return-object p1
 .end method

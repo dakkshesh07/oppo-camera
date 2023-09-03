@@ -3,6 +3,11 @@
 .source "MaterialResources.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method private constructor <init>()V
     .locals 0
@@ -74,11 +79,11 @@
     return-object p0
 .end method
 
-.method public static getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/as;I)Landroid/content/res/ColorStateList;
+.method public static getColorStateList(Landroid/content/Context;Landroidx/appcompat/widget/ar;I)Landroid/content/res/ColorStateList;
     .locals 1
 
     .line 81
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result v0
 
@@ -87,7 +92,7 @@
     const/4 v0, 0x0
 
     .line 82
-    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v0
 
@@ -113,7 +118,7 @@
     const/4 p0, -0x1
 
     .line 94
-    invoke-virtual {p1, p2, p0}, Landroidx/appcompat/widget/as;->b(II)I
+    invoke-virtual {p1, p2, p0}, Landroidx/appcompat/widget/ar;->b(II)I
 
     move-result v0
 
@@ -128,7 +133,7 @@
 
     .line 100
     :cond_1
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 

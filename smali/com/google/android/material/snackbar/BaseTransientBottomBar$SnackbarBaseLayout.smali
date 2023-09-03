@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/EnclosingClass;
     value = Lcom/google/android/material/snackbar/BaseTransientBottomBar;
 .end annotation
@@ -103,7 +106,7 @@
     int-to-float v1, v1
 
     .line 1097
-    invoke-static {p0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;F)V
+    invoke-static {p0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;F)V
 
     .line 1100
     :cond_0
@@ -192,7 +195,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     :cond_1
     return-void
@@ -314,7 +317,7 @@
 
     .line 1182
     :cond_0
-    invoke-static {p0}, Landroidx/core/g/w;->s(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->s(Landroid/view/View;)V
 
     return-void
 .end method

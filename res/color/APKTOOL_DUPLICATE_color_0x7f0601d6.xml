@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="?APKTOOL_DUPLICATE_attr_0x7f040167" />
+    <item android:state_focused="true" android:color="?APKTOOL_DUPLICATE_attr_0x7f040168" />
+    <item android:state_focused="false" android:color="?APKTOOL_DUPLICATE_attr_0x7f040169" />
+</selector>

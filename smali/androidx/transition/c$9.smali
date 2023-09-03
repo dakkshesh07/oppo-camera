@@ -82,7 +82,7 @@
 
     iget-object v0, p0, Landroidx/transition/c$9;->b:Landroid/graphics/Rect;
 
-    invoke-static {p1, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {p1, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 382
     iget-object p1, p0, Landroidx/transition/c$9;->a:Landroid/view/View;

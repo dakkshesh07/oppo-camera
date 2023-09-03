@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/pi_ai_scene_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.oppo.camera.ui.preview.AISceneView android:textSize="@dimen/pi_ai_scene_text_size" android:textColor="@color/ai_scene_text_color" android:ellipsize="end" android:id="@id/pi_ai_scene_text" android:background="@drawable/pi_ai_scene_bg" android:paddingTop="@dimen/pi_ai_scene_padding_top" android:paddingBottom="@dimen/pi_ai_scene_padding_bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/pi_ai_scene_hint_bg_shadow_width" android:layout_marginRight="@dimen/pi_ai_scene_hint_bg_shadow_width" android:maxWidth="@dimen/pi_ai_scene_text_max_width" android:maxLines="1" android:paddingStart="@dimen/pi_ai_scene_padding_start" android:paddingEnd="@dimen/pi_ai_scene_padding_end" />
-</RelativeLayout>

@@ -21,5 +21,8 @@
 .method public abstract a(Lcom/oppo/camera/ui/OppoNumSeekBar;IZ)V
 .end method
 
+.method public abstract a()Z
+.end method
+
 .method public abstract b(Lcom/oppo/camera/ui/OppoNumSeekBar;I)V
 .end method

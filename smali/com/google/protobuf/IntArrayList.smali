@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/google/protobuf/Internal$IntList;
+.implements Lcom/google/protobuf/PrimitiveNonBoxingCollection;
 .implements Ljava/util/RandomAccess;
 
 
@@ -14,6 +15,7 @@
         "Ljava/lang/Integer;",
         ">;",
         "Lcom/google/protobuf/Internal$IntList;",
+        "Lcom/google/protobuf/PrimitiveNonBoxingCollection;",
         "Ljava/util/RandomAccess;"
     }
 .end annotation
@@ -31,12 +33,16 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .line 48
     new-instance v0, Lcom/google/protobuf/IntArrayList;
 
-    invoke-direct {v0}, Lcom/google/protobuf/IntArrayList;-><init>()V
+    const/4 v1, 0x0
+
+    new-array v2, v1, [I
+
+    invoke-direct {v0, v2, v1}, Lcom/google/protobuf/IntArrayList;-><init>([II)V
 
     sput-object v0, Lcom/google/protobuf/IntArrayList;->EMPTY_LIST:Lcom/google/protobuf/IntArrayList;
 
@@ -53,7 +59,7 @@
 
     const/16 v0, 0xa
 
-    .line 72
+    .line 68
     new-array v0, v0, [I
 
     const/4 v1, 0x0
@@ -66,13 +72,13 @@
 .method private constructor <init>([II)V
     .locals 0
 
-    .line 79
+    .line 74
     invoke-direct {p0}, Lcom/google/protobuf/AbstractProtobufList;-><init>()V
 
-    .line 80
+    .line 75
     iput-object p1, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
-    .line 81
+    .line 76
     iput p2, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     return-void
@@ -81,17 +87,17 @@
 .method private addInt(II)V
     .locals 4
 
-    .line 171
+    .line 190
     invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
 
     if-ltz p1, :cond_1
 
-    .line 172
+    .line 191
     iget v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     if-gt p1, v0, :cond_1
 
-    .line 176
+    .line 195
     iget-object v1, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     array-length v2, v1
@@ -102,7 +108,7 @@
 
     sub-int/2addr v0, p1
 
-    .line 178
+    .line 197
     invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_0
@@ -110,20 +116,20 @@
     :cond_0
     mul-int/lit8 v0, v0, 0x3
 
-    .line 181
+    .line 200
     div-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 182
+    .line 201
     new-array v0, v0, [I
 
     const/4 v2, 0x0
 
-    .line 185
+    .line 204
     invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 188
+    .line 207
     iget-object v1, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     add-int/lit8 v2, p1, 0x1
@@ -134,23 +140,23 @@
 
     invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 189
+    .line 208
     iput-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
-    .line 192
+    .line 211
     :goto_0
     iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aput p2, v0, p1
 
-    .line 193
+    .line 212
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    .line 194
+    .line 213
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -159,7 +165,7 @@
 
     return-void
 
-    .line 173
+    .line 192
     :cond_1
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
@@ -186,14 +192,14 @@
 
     if-ltz p1, :cond_0
 
-    .line 264
+    .line 283
     iget v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     if-ge p1, v0, :cond_0
 
     return-void
 
-    .line 265
+    .line 284
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -209,7 +215,7 @@
 .method private makeOutOfBoundsExceptionMessage(I)Ljava/lang/String;
     .locals 2
 
-    .line 270
+    .line 289
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,7 +246,7 @@
 .method public add(ILjava/lang/Integer;)V
     .locals 0
 
-    .line 156
+    .line 169
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -253,12 +259,40 @@
 .method public bridge synthetic add(ILjava/lang/Object;)V
     .locals 0
 
-    .line 44
+    .line 45
     check-cast p2, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/IntArrayList;->add(ILjava/lang/Integer;)V
 
     return-void
+.end method
+
+.method public add(Ljava/lang/Integer;)Z
+    .locals 0
+
+    .line 163
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/IntArrayList;->addInt(I)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 45
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/IntArrayList;->add(Ljava/lang/Integer;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
 .method public addAll(Ljava/util/Collection;)Z
@@ -273,28 +307,29 @@
         }
     .end annotation
 
-    .line 199
+    .line 218
     invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
 
-    if-eqz p1, :cond_4
+    .line 220
+    invoke-static {p1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
+    .line 223
     instance-of v0, p1, Lcom/google/protobuf/IntArrayList;
 
     if-nez v0, :cond_0
 
-    .line 207
+    .line 224
     invoke-super {p0, p1}, Lcom/google/protobuf/AbstractProtobufList;->addAll(Ljava/util/Collection;)Z
 
     move-result p1
 
     return p1
 
-    .line 210
+    .line 227
     :cond_0
     check-cast p1, Lcom/google/protobuf/IntArrayList;
 
-    .line 211
+    .line 228
     iget v0, p1, Lcom/google/protobuf/IntArrayList;->size:I
 
     const/4 v1, 0x0
@@ -306,7 +341,7 @@
     :cond_1
     const v2, 0x7fffffff
 
-    .line 215
+    .line 232
     iget v3, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     sub-int/2addr v2, v3
@@ -315,21 +350,21 @@
 
     add-int/2addr v3, v0
 
-    .line 222
+    .line 239
     iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     array-length v2, v0
 
     if-le v3, v2, :cond_2
 
-    .line 223
+    .line 240
     invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([II)[I
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
-    .line 226
+    .line 243
     :cond_2
     iget-object v0, p1, Lcom/google/protobuf/IntArrayList;->array:[I
 
@@ -341,10 +376,10 @@
 
     invoke-static {v0, v1, v2, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 227
+    .line 244
     iput v3, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    .line 228
+    .line 245
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
 
     const/4 v0, 0x1
@@ -355,30 +390,59 @@
 
     return v0
 
-    .line 218
+    .line 235
     :cond_3
     new-instance p1, Ljava/lang/OutOfMemoryError;
 
     invoke-direct {p1}, Ljava/lang/OutOfMemoryError;-><init>()V
 
     throw p1
-
-    .line 202
-    :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p1
 .end method
 
 .method public addInt(I)V
-    .locals 1
+    .locals 4
 
-    .line 164
+    .line 175
+    invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
+
+    .line 176
     iget v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    invoke-direct {p0, v0, p1}, Lcom/google/protobuf/IntArrayList;->addInt(II)V
+    iget-object v1, p0, Lcom/google/protobuf/IntArrayList;->array:[I
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_0
+
+    mul-int/lit8 v2, v0, 0x3
+
+    .line 178
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 179
+    new-array v2, v2, [I
+
+    const/4 v3, 0x0
+
+    .line 181
+    invoke-static {v1, v3, v2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 182
+    iput-object v2, p0, Lcom/google/protobuf/IntArrayList;->array:[I
+
+    .line 185
+    :cond_0
+    iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
+
+    iget v1, p0, Lcom/google/protobuf/IntArrayList;->size:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/IntArrayList;->size:I
+
+    aput p1, v0, v1
 
     return-void
 .end method
@@ -392,24 +456,24 @@
 
     return v0
 
-    .line 89
+    .line 96
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/IntArrayList;
 
     if-nez v1, :cond_1
 
-    .line 90
+    .line 97
     invoke-super {p0, p1}, Lcom/google/protobuf/AbstractProtobufList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 92
+    .line 99
     :cond_1
     check-cast p1, Lcom/google/protobuf/IntArrayList;
 
-    .line 93
+    .line 100
     iget v1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     iget v2, p1, Lcom/google/protobuf/IntArrayList;->size:I
@@ -420,19 +484,19 @@
 
     return v3
 
-    .line 97
+    .line 104
     :cond_2
     iget-object p1, p1, Lcom/google/protobuf/IntArrayList;->array:[I
 
     move v1, v3
 
-    .line 98
+    .line 105
     :goto_0
     iget v2, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     if-ge v1, v2, :cond_4
 
-    .line 99
+    .line 106
     iget-object v2, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aget v2, v2, v1
@@ -455,7 +519,7 @@
 .method public get(I)Ljava/lang/Integer;
     .locals 0
 
-    .line 126
+    .line 133
     invoke-virtual {p0, p1}, Lcom/google/protobuf/IntArrayList;->getInt(I)I
 
     move-result p1
@@ -470,7 +534,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/IntArrayList;->get(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -481,10 +545,10 @@
 .method public getInt(I)I
     .locals 1
 
-    .line 131
+    .line 138
     invoke-direct {p0, p1}, Lcom/google/protobuf/IntArrayList;->ensureIndexInRange(I)V
 
-    .line 132
+    .line 139
     iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aget p1, v0, p1
@@ -499,7 +563,7 @@
 
     const/4 v1, 0x0
 
-    .line 110
+    .line 117
     :goto_0
     iget v2, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
@@ -507,7 +571,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 111
+    .line 118
     iget-object v2, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aget v2, v2, v1
@@ -525,12 +589,12 @@
 .method public mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$IntList;
     .locals 2
 
-    .line 118
+    .line 125
     iget v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     if-lt p1, v0, :cond_0
 
-    .line 121
+    .line 128
     new-instance v0, Lcom/google/protobuf/IntArrayList;
 
     iget-object v1, p0, Lcom/google/protobuf/IntArrayList;->array:[I
@@ -545,7 +609,7 @@
 
     return-object v0
 
-    .line 119
+    .line 126
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -557,7 +621,7 @@
 .method public bridge synthetic mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$ProtobufList;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/IntArrayList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$IntList;
 
     move-result-object p1
@@ -568,41 +632,49 @@
 .method public remove(I)Ljava/lang/Integer;
     .locals 4
 
-    .line 248
+    .line 265
     invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
 
-    .line 249
+    .line 266
     invoke-direct {p0, p1}, Lcom/google/protobuf/IntArrayList;->ensureIndexInRange(I)V
 
-    .line 250
+    .line 267
     iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aget v1, v0, p1
 
-    add-int/lit8 v2, p1, 0x1
+    .line 268
+    iget v2, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    .line 251
-    iget v3, p0, Lcom/google/protobuf/IntArrayList;->size:I
+    add-int/lit8 v3, v2, -0x1
 
-    sub-int/2addr v3, p1
+    if-ge p1, v3, :cond_0
 
-    invoke-static {v0, v2, v0, p1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    add-int/lit8 v3, p1, 0x1
 
-    .line 252
+    sub-int/2addr v2, p1
+
+    add-int/lit8 v2, v2, -0x1
+
+    .line 269
+    invoke-static {v0, v3, v0, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 271
+    :cond_0
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    .line 253
+    .line 272
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
 
-    .line 254
+    .line 273
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -613,7 +685,7 @@
 .method public bridge synthetic remove(I)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/IntArrayList;->remove(I)Ljava/lang/Integer;
 
     move-result-object p1
@@ -622,22 +694,22 @@
 .end method
 
 .method public remove(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
-    .line 234
+    .line 251
     invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 235
+    .line 252
     :goto_0
     iget v2, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     if-ge v1, v2, :cond_1
 
-    .line 236
+    .line 253
     iget-object v2, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aget v2, v2, v1
@@ -652,7 +724,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 237
+    .line 254
     iget-object p1, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     add-int/lit8 v0, v1, 0x1
@@ -661,25 +733,27 @@
 
     sub-int/2addr v2, v1
 
+    const/4 v3, 0x1
+
+    sub-int/2addr v2, v3
+
     invoke-static {p1, v0, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 238
+    .line 255
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    const/4 v0, 0x1
-
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, v3
 
     iput p1, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
-    .line 239
+    .line 256
     iget p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, v3
 
     iput p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
 
-    return v0
+    return v3
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -690,10 +764,56 @@
     return v0
 .end method
 
+.method protected removeRange(II)V
+    .locals 2
+
+    .line 81
+    invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
+
+    if-lt p2, p1, :cond_0
+
+    .line 86
+    iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
+
+    iget v1, p0, Lcom/google/protobuf/IntArrayList;->size:I
+
+    sub-int/2addr v1, p2
+
+    invoke-static {v0, p2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 87
+    iget v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
+
+    sub-int/2addr p2, p1
+
+    sub-int/2addr v0, p2
+
+    iput v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
+
+    .line 88
+    iget p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/google/protobuf/IntArrayList;->modCount:I
+
+    return-void
+
+    .line 83
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string p2, "toIndex < fromIndex"
+
+    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
 .method public set(ILjava/lang/Integer;)Ljava/lang/Integer;
     .locals 0
 
-    .line 142
+    .line 149
     invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -712,7 +832,7 @@
 .method public bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     check-cast p2, Ljava/lang/Integer;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/IntArrayList;->set(ILjava/lang/Integer;)Ljava/lang/Integer;
@@ -725,18 +845,18 @@
 .method public setInt(II)I
     .locals 2
 
-    .line 147
+    .line 154
     invoke-virtual {p0}, Lcom/google/protobuf/IntArrayList;->ensureIsMutable()V
 
-    .line 148
+    .line 155
     invoke-direct {p0, p1}, Lcom/google/protobuf/IntArrayList;->ensureIndexInRange(I)V
 
-    .line 149
+    .line 156
     iget-object v0, p0, Lcom/google/protobuf/IntArrayList;->array:[I
 
     aget v1, v0, p1
 
-    .line 150
+    .line 157
     aput p2, v0, p1
 
     return v1
@@ -745,7 +865,7 @@
 .method public size()I
     .locals 1
 
-    .line 137
+    .line 144
     iget v0, p0, Lcom/google/protobuf/IntArrayList;->size:I
 
     return v0

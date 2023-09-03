@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803b4" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902b4" android:visible="true" android:title="@string/APKTOOL_DUPLICATE_string_0x7f10054a" app:APKTOOL_DUPLICATE_attr_0x7f040519="APKTOOL_DUPLICATE_id_0x7f09004b" />
+    <item android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902bf" android:visible="true" android:title="@string/APKTOOL_DUPLICATE_string_0x7f10054e" app:APKTOOL_DUPLICATE_attr_0x7f040022="com.coui.appcompat.widget.COUICheckBox" app:APKTOOL_DUPLICATE_attr_0x7f040519="APKTOOL_DUPLICATE_id_0x7f09004b" />
+</menu>

@@ -16,10 +16,10 @@
 
 .field private static final sClassPrefixList:[Ljava/lang/String;
 
-.field private static final sConstructorMap:Landroidx/b/g;
+.field private static final sConstructorMap:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "Ljava/lang/reflect/Constructor<",
             "+",
@@ -92,11 +92,11 @@
     sput-object v0, Landroidx/appcompat/app/h;->sClassPrefixList:[Ljava/lang/String;
 
     .line 87
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    sput-object v0, Landroidx/appcompat/app/h;->sConstructorMap:Landroidx/b/g;
+    sput-object v0, Landroidx/appcompat/app/h;->sConstructorMap:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -137,7 +137,7 @@
     if-lt v1, v2, :cond_0
 
     .line 316
-    invoke-static {p1}, Landroidx/core/g/w;->F(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->F(Landroid/view/View;)Z
 
     move-result v1
 
@@ -188,9 +188,9 @@
     .end annotation
 
     .line 333
-    sget-object v0, Landroidx/appcompat/app/h;->sConstructorMap:Landroidx/b/g;
+    sget-object v0, Landroidx/appcompat/app/h;->sConstructorMap:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p2}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -247,9 +247,9 @@
     move-result-object v0
 
     .line 344
-    sget-object p1, Landroidx/appcompat/app/h;->sConstructorMap:Landroidx/b/g;
+    sget-object p1, Landroidx/appcompat/app/h;->sConstructorMap:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p1, p2, v0}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     const/4 p1, 0x1
@@ -613,10 +613,21 @@
     return-object v0
 .end method
 
-.method protected createImageView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/n;
+.method protected createImageView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatImageView;
     .locals 1
 
     .line 199
+    new-instance v0, Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    return-object v0
+.end method
+
+.method protected createMultiAutoCompleteTextView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/n;
+    .locals 1
+
+    .line 246
     new-instance v0, Landroidx/appcompat/widget/n;
 
     invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/n;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -624,21 +635,21 @@
     return-object v0
 .end method
 
-.method protected createMultiAutoCompleteTextView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/o;
+.method protected createRadioButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/q;
     .locals 1
 
-    .line 246
-    new-instance v0, Landroidx/appcompat/widget/o;
+    .line 229
+    new-instance v0, Landroidx/appcompat/widget/q;
 
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/o;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/q;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
 
-.method protected createRadioButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/r;
+.method protected createRatingBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/r;
     .locals 1
 
-    .line 229
+    .line 251
     new-instance v0, Landroidx/appcompat/widget/r;
 
     invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/r;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -646,24 +657,13 @@
     return-object v0
 .end method
 
-.method protected createRatingBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/s;
-    .locals 1
-
-    .line 251
-    new-instance v0, Landroidx/appcompat/widget/s;
-
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/s;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    return-object v0
-.end method
-
-.method protected createSeekBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/t;
+.method protected createSeekBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/s;
     .locals 1
 
     .line 256
-    new-instance v0, Landroidx/appcompat/widget/t;
+    new-instance v0, Landroidx/appcompat/widget/s;
 
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/t;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/s;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
@@ -690,13 +690,13 @@
     return-object v0
 .end method
 
-.method protected createToggleButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/y;
+.method protected createToggleButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/x;
     .locals 1
 
     .line 261
-    new-instance v0, Landroidx/appcompat/widget/y;
+    new-instance v0, Landroidx/appcompat/widget/x;
 
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/y;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/x;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-object v0
 .end method
@@ -741,7 +741,7 @@
     if-eqz p8, :cond_3
 
     .line 107
-    invoke-static {p1}, Landroidx/appcompat/widget/ap;->a(Landroid/content/Context;)Landroid/content/Context;
+    invoke-static {p1}, Landroidx/appcompat/widget/ao;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object p1
 
@@ -950,7 +950,7 @@
 
     .line 167
     :pswitch_0
-    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createToggleButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/y;
+    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createToggleButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/x;
 
     move-result-object p5
 
@@ -961,7 +961,7 @@
 
     .line 163
     :pswitch_1
-    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createSeekBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/t;
+    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createSeekBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/s;
 
     move-result-object p5
 
@@ -972,7 +972,7 @@
 
     .line 159
     :pswitch_2
-    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createRatingBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/s;
+    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createRatingBar(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/r;
 
     move-result-object p5
 
@@ -983,7 +983,7 @@
 
     .line 155
     :pswitch_3
-    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createMultiAutoCompleteTextView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/o;
+    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createMultiAutoCompleteTextView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/n;
 
     move-result-object p5
 
@@ -1016,7 +1016,7 @@
 
     .line 143
     :pswitch_6
-    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createRadioButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/r;
+    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createRadioButton(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/q;
 
     move-result-object p5
 
@@ -1082,7 +1082,7 @@
 
     .line 119
     :pswitch_c
-    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createImageView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/n;
+    invoke-virtual {p0, p1, p4}, Landroidx/appcompat/app/h;->createImageView(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatImageView;
 
     move-result-object p5
 

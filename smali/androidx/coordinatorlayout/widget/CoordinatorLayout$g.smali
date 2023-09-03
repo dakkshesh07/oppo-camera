@@ -42,12 +42,12 @@
     .locals 1
 
     .line 2034
-    invoke-static {p1}, Landroidx/core/g/w;->C(Landroid/view/View;)F
+    invoke-static {p1}, Landroidx/core/f/w;->C(Landroid/view/View;)F
 
     move-result p1
 
     .line 2035
-    invoke-static {p2}, Landroidx/core/g/w;->C(Landroid/view/View;)F
+    invoke-static {p2}, Landroidx/core/f/w;->C(Landroid/view/View;)F
 
     move-result p2
 

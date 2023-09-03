@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:camera="http://schemas.android.com/apk/res-auto">
+    <item android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08033b" camera:APKTOOL_DUPLICATE_attr_0x7f040545="true" />
+    <item android:drawable="@drawable/APKTOOL_DUPLICATE_drawable_0x7f08033a" camera:APKTOOL_DUPLICATE_attr_0x7f040545="false" />
+</selector>

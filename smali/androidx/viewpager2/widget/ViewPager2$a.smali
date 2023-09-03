@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method a(Landroidx/core/g/a/d;)V
+.method a(Landroidx/core/f/a/d;)V
     .locals 0
 
     return-void

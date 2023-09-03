@@ -32,64 +32,69 @@
 
 .field private n:Z
 
+.field private o:Z
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .line 72
+    .line 76
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 38
+    .line 37
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 39
+    .line 38
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
 
-    .line 40
+    .line 39
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
 
     const/4 p1, 0x0
 
-    .line 41
+    .line 40
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->e:I
 
     const-string v0, ""
 
-    .line 42
+    .line 41
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->f:Ljava/lang/String;
 
-    .line 45
+    .line 44
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
 
-    .line 46
+    .line 45
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->h:I
 
-    .line 47
+    .line 46
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
     const-wide/16 v0, 0x0
 
-    .line 49
+    .line 48
     iput-wide v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->j:J
 
-    .line 50
+    .line 49
     iput-wide v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->k:J
 
     const/4 v0, 0x0
 
-    .line 52
+    .line 51
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
 
-    .line 54
+    .line 53
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->m:Z
 
-    .line 55
+    .line 54
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
 
-    .line 73
+    .line 55
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->o:Z
+
+    .line 77
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a()V
 
     return-void
@@ -98,7 +103,7 @@
 .method private a()V
     .locals 3
 
-    .line 77
+    .line 81
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -107,18 +112,18 @@
 
     move-result-object v0
 
-    const v1, 0x7f07038f
+    const v1, 0x7f070434
 
-    .line 78
+    .line 82
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     div-int/lit8 v1, v1, 0x2
 
-    const v2, 0x7f070390
+    const v2, 0x7f070435
 
-    .line 79
+    .line 83
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
@@ -139,13 +144,13 @@
 
     return-void
 
-    .line 100
+    .line 104
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
     if-nez v0, :cond_1
 
-    .line 101
+    .line 105
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -154,7 +159,7 @@
 
     move-result-object v0
 
-    .line 102
+    .line 106
     new-instance v1, Landroid/graphics/Paint;
 
     const/4 v2, 0x1
@@ -163,10 +168,10 @@
 
     iput-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
-    .line 103
+    .line 107
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
-    const v2, 0x7f0703c2
+    const v2, 0x7f0704b9
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -176,17 +181,17 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 104
+    .line 108
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
     const/4 v2, -0x1
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 105
+    .line 109
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
-    const v2, 0x7f070392
+    const v2, 0x7f070437
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -196,36 +201,39 @@
 
     const/4 v3, 0x0
 
-    const v4, 0x7f070391
+    const v4, 0x7f070436
 
-    .line 106
+    .line 110
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
     int-to-float v4, v4
 
-    const v5, 0x7f0602c1
+    const v5, 0x7f06036f
 
-    .line 107
+    .line 111
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v0
 
-    .line 105
+    .line 109
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 108
-    invoke-static {}, Lcom/oppo/camera/util/Util;->u()Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    .line 109
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
     .line 112
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/oppo/camera/util/Util;->j(Landroid/content/Context;)Landroid/graphics/Typeface;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    .line 115
     :cond_1
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->f:Ljava/lang/String;
 
@@ -235,33 +243,33 @@
 .method private b()V
     .locals 4
 
-    .line 196
+    .line 224
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
 
     iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
     if-eq v0, v1, :cond_3
 
-    .line 197
+    .line 225
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide v0
 
-    .line 199
+    .line 227
     iget-wide v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->k:J
 
     cmp-long v2, v0, v2
 
     if-gez v2, :cond_2
 
-    .line 200
+    .line 228
     iget-wide v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->j:J
 
     sub-long/2addr v0, v2
 
     long-to-int v0, v0
 
-    .line 201
+    .line 229
     iget v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->h:I
 
     iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->m:Z
@@ -282,7 +290,7 @@
 
     if-ltz v1, :cond_1
 
-    .line 202
+    .line 230
     rem-int/lit16 v1, v1, 0x168
 
     goto :goto_1
@@ -292,16 +300,16 @@
 
     add-int/lit16 v1, v1, 0x168
 
-    .line 204
+    .line 232
     :goto_1
     iput v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
 
-    .line 205
+    .line 233
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->invalidate()V
 
     goto :goto_2
 
-    .line 207
+    .line 235
     :cond_2
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
@@ -317,7 +325,7 @@
 .method public a(IZ)V
     .locals 3
 
-    .line 218
+    .line 245
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->e:I
 
     const/4 v1, 0x0
@@ -331,7 +339,7 @@
     :cond_0
     if-ltz p1, :cond_1
 
-    .line 222
+    .line 249
     rem-int/lit16 p1, p1, 0x168
 
     goto :goto_0
@@ -341,7 +349,7 @@
 
     add-int/lit16 p1, p1, 0x168
 
-    .line 225
+    .line 252
     :goto_0
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
@@ -349,25 +357,25 @@
 
     return-void
 
-    .line 229
+    .line 256
     :cond_2
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
     if-eqz p2, :cond_6
 
-    .line 232
+    .line 259
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->h:I
 
-    .line 233
+    .line 260
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
     move-result-wide p1
 
     iput-wide p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->j:J
 
-    .line 235
+    .line 262
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
     iget p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
@@ -393,11 +401,11 @@
 
     const/4 v1, 0x1
 
-    .line 241
+    .line 268
     :cond_5
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->m:Z
 
-    .line 242
+    .line 269
     iget-wide v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->j:J
 
     invoke-static {p1}, Ljava/lang/Math;->abs(I)I
@@ -414,12 +422,12 @@
 
     iput-wide v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->k:J
 
-    .line 243
+    .line 270
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->invalidate()V
 
     goto :goto_2
 
-    .line 245
+    .line 272
     :cond_6
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->i:I
 
@@ -434,35 +442,32 @@
 
     if-eqz p1, :cond_0
 
-    .line 117
+    .line 120
     invoke-direct {p0, p2}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a(Ljava/lang/String;)V
 
-    .line 118
+    .line 121
     iput-object p3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
 
     const/4 p1, 0x0
 
-    .line 119
+    .line 122
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->e:I
 
     goto :goto_0
 
-    .line 121
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
+    if-eqz p3, :cond_1
 
-    if-nez p1, :cond_1
-
-    .line 122
+    .line 125
     iput-object p3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
 
     :cond_1
     const/4 p1, 0x1
 
-    .line 125
+    .line 128
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->e:I
 
-    .line 128
+    .line 131
     :goto_0
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->invalidate()V
 
@@ -472,55 +477,115 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 6
 
-    .line 149
+    .line 152
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 151
+    .line 154
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->e:I
 
-    const/4 v1, 0x2
+    const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    const/4 v2, 0x2
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
     const/4 v3, 0x1
 
-    if-eq v0, v3, :cond_1
+    if-eq v0, v3, :cond_2
 
-    if-eq v0, v1, :cond_0
+    if-eq v0, v2, :cond_0
 
-    goto/16 :goto_4
+    goto/16 :goto_7
 
-    .line 183
+    .line 203
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_b
 
-    .line 184
+    .line 204
+    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->o:Z
+
+    if-eqz v3, :cond_1
+
+    .line 205
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
 
+    move-result v0
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
     move-result v1
+
+    sub-int/2addr v0, v1
+
+    div-int/2addr v0, v2
+
+    .line 206
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v3
+
+    sub-int/2addr v1, v3
+
+    div-int/2addr v1, v2
+
+    .line 207
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
+
+    .line 208
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    add-int/2addr v4, v1
+
+    .line 207
+    invoke-virtual {v2, v0, v1, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    goto :goto_0
+
+    .line 210
+    :cond_1
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
+
+    move-result v2
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
 
     move-result v3
 
-    invoke-virtual {v0, v2, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v0, v1, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 185
+    .line 213
+    :goto_0
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    goto/16 :goto_4
+    goto/16 :goto_7
 
-    .line 171
-    :cond_1
+    .line 183
+    :cond_2
     invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b()V
 
-    .line 172
+    .line 184
     iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
 
     neg-int v0, v0
@@ -529,109 +594,19 @@
 
     iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_3
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
 
     move-result v3
 
-    div-int/2addr v3, v1
+    div-int/2addr v3, v2
 
     int-to-float v3, v3
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    iget v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
-
-    sub-float/2addr v3, v4
-
-    :goto_0
-    iget-boolean v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
-
-    if-eqz v4, :cond_3
-
-    .line 173
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
-
-    move-result v4
-
-    div-int/2addr v4, v1
-
-    int-to-float v1, v4
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    iget v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
-
-    sub-float/2addr v1, v4
-
-    .line 172
-    :goto_1
-    invoke-virtual {p1, v0, v3, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
-
-    .line 175
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_8
-
-    .line 176
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
-
-    move-result v3
-
-    invoke-virtual {v0, v2, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    .line 177
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    goto/16 :goto_4
-
-    .line 153
-    :cond_4
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b()V
-
-    .line 154
-    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
-
-    neg-int v0, v0
-
-    int-to-float v0, v0
-
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
-
-    move-result v3
-
-    div-int/2addr v3, v1
-
-    int-to-float v3, v3
-
-    goto :goto_2
-
-    :cond_5
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
 
     move-result v3
@@ -642,65 +617,276 @@
 
     sub-float/2addr v3, v4
 
-    :goto_2
+    :goto_1
     iget-boolean v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_4
 
-    .line 155
+    .line 185
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
 
     move-result v4
 
-    div-int/2addr v4, v1
+    div-int/2addr v4, v2
 
-    int-to-float v1, v4
+    int-to-float v4, v4
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_6
+    :cond_4
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    iget v5, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
+
+    sub-float/2addr v4, v5
+
+    .line 184
+    :goto_2
+    invoke-virtual {p1, v0, v3, v4}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    .line 187
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_b
+
+    .line 188
+    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->o:Z
+
+    if-eqz v3, :cond_5
+
+    .line 189
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    div-int/2addr v0, v2
+
+    .line 190
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
 
     move-result v1
 
-    int-to-float v1, v1
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
 
-    iget v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    sub-float/2addr v1, v4
+    move-result v3
 
-    .line 154
-    :goto_3
-    invoke-virtual {p1, v0, v3, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
+    sub-int/2addr v1, v3
 
-    .line 157
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+    div-int/2addr v1, v2
 
-    if-eqz v0, :cond_7
+    .line 191
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
 
-    .line 158
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
+
+    .line 192
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    add-int/2addr v4, v1
+
+    .line 191
+    invoke-virtual {v2, v0, v1, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    goto :goto_3
+
+    .line 194
+    :cond_5
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
 
-    move-result v1
+    move-result v2
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
 
     move-result v3
 
-    invoke-virtual {v0, v2, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v0, v1, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 159
+    .line 197
+    :goto_3
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    goto/16 :goto_7
+
+    .line 156
+    :cond_6
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b()V
+
+    .line 157
+    iget v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->g:I
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
+
+    if-eqz v3, :cond_7
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
+
+    move-result v3
+
+    div-int/2addr v3, v2
+
+    int-to-float v3, v3
+
+    goto :goto_4
+
+    :cond_7
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
+
+    sub-float/2addr v3, v4
+
+    :goto_4
+    iget-boolean v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->n:Z
+
+    if-eqz v4, :cond_8
+
+    .line 158
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
+
+    move-result v4
+
+    div-int/2addr v4, v2
+
+    int-to-float v4, v4
+
+    goto :goto_5
+
+    :cond_8
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    iget v5, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->l:F
+
+    sub-float/2addr v4, v5
+
+    .line 157
+    :goto_5
+    invoke-virtual {p1, v0, v3, v4}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    .line 160
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v0, :cond_a
+
+    .line 161
+    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->o:Z
+
+    if-eqz v3, :cond_9
+
+    .line 162
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    div-int/2addr v0, v2
+
+    .line 163
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
+
+    move-result v1
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v3
+
+    sub-int/2addr v1, v3
+
+    div-int/2addr v1, v2
+
+    .line 164
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    .line 165
+    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
+
+    .line 166
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    add-int/2addr v4, v1
+
+    .line 164
+    invoke-virtual {v2, v0, v1, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    goto :goto_6
+
+    .line 168
+    :cond_9
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
+
+    move-result v3
+
+    invoke-virtual {v0, v1, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 171
+    :goto_6
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 162
-    :cond_7
+    .line 174
+    :cond_a
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_b
 
-    .line 163
+    .line 175
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->f:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getWidth()I
@@ -727,7 +913,7 @@
 
     sub-float/2addr v1, v2
 
-    .line 164
+    .line 176
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->getHeight()I
 
     move-result v2
@@ -762,11 +948,11 @@
 
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->a:Landroid/graphics/Paint;
 
-    .line 163
+    .line 175
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    :cond_8
-    :goto_4
+    :cond_b
+    :goto_7
     return-void
 .end method
 
@@ -786,6 +972,15 @@
     return p1
 .end method
 
+.method public setBaseShape(Z)V
+    .locals 0
+
+    .line 62
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->o:Z
+
+    return-void
+.end method
+
 .method public setNormalShape(Z)V
     .locals 0
 
@@ -798,21 +993,21 @@
 .method public setPopdownButtonImage(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .line 132
+    .line 135
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 136
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->d:Landroid/graphics/drawable/Drawable;
 
     :cond_0
     const/4 p1, 0x2
 
-    .line 136
+    .line 139
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/c;->e:I
 
-    .line 137
+    .line 140
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/levelcontrol/c;->invalidate()V
 
     return-void

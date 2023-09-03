@@ -350,9 +350,14 @@
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$1;-><init>()V
 
+    .line 80
+    invoke-virtual {v0}, Lcom/google/gson/internal/bind/TypeAdapters$1;->nullSafe()Lcom/google/gson/TypeAdapter;
+
+    move-result-object v0
+
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CLASS:Lcom/google/gson/TypeAdapter;
 
-    .line 90
+    .line 82
     const-class v0, Ljava/lang/Class;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->CLASS:Lcom/google/gson/TypeAdapter;
@@ -363,14 +368,19 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CLASS_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 92
+    .line 84
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$2;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$2;-><init>()V
 
+    .line 129
+    invoke-virtual {v0}, Lcom/google/gson/internal/bind/TypeAdapters$2;->nullSafe()Lcom/google/gson/TypeAdapter;
+
+    move-result-object v0
+
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BIT_SET:Lcom/google/gson/TypeAdapter;
 
-    .line 149
+    .line 131
     const-class v0, Ljava/util/BitSet;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->BIT_SET:Lcom/google/gson/TypeAdapter;
@@ -381,198 +391,198 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BIT_SET_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 151
+    .line 133
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$3;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$3;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BOOLEAN:Lcom/google/gson/TypeAdapter;
 
-    .line 177
+    .line 155
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$4;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$4;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BOOLEAN_AS_STRING:Lcom/google/gson/TypeAdapter;
 
-    .line 191
+    .line 169
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     const-class v1, Ljava/lang/Boolean;
 
     sget-object v2, Lcom/google/gson/internal/bind/TypeAdapters;->BOOLEAN:Lcom/google/gson/TypeAdapter;
 
-    .line 192
+    .line 170
     invoke-static {v0, v1, v2}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BOOLEAN_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 194
+    .line 172
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$5;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$5;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BYTE:Lcom/google/gson/TypeAdapter;
 
-    .line 214
+    .line 192
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
     const-class v1, Ljava/lang/Byte;
 
     sget-object v2, Lcom/google/gson/internal/bind/TypeAdapters;->BYTE:Lcom/google/gson/TypeAdapter;
 
-    .line 215
+    .line 193
     invoke-static {v0, v1, v2}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BYTE_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 217
+    .line 195
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$6;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$6;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->SHORT:Lcom/google/gson/TypeAdapter;
 
-    .line 236
+    .line 214
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     const-class v1, Ljava/lang/Short;
 
     sget-object v2, Lcom/google/gson/internal/bind/TypeAdapters;->SHORT:Lcom/google/gson/TypeAdapter;
 
-    .line 237
+    .line 215
     invoke-static {v0, v1, v2}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->SHORT_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 239
+    .line 217
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$7;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$7;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->INTEGER:Lcom/google/gson/TypeAdapter;
 
-    .line 257
+    .line 235
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     const-class v1, Ljava/lang/Integer;
 
     sget-object v2, Lcom/google/gson/internal/bind/TypeAdapters;->INTEGER:Lcom/google/gson/TypeAdapter;
 
-    .line 258
+    .line 236
     invoke-static {v0, v1, v2}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->INTEGER_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 260
+    .line 238
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$8;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$8;-><init>()V
 
-    .line 271
+    .line 249
     invoke-virtual {v0}, Lcom/google/gson/internal/bind/TypeAdapters$8;->nullSafe()Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_INTEGER:Lcom/google/gson/TypeAdapter;
 
-    .line 272
+    .line 250
     const-class v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_INTEGER:Lcom/google/gson/TypeAdapter;
 
-    .line 273
+    .line 251
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_INTEGER_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 275
+    .line 253
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$9;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$9;-><init>()V
 
-    .line 282
+    .line 260
     invoke-virtual {v0}, Lcom/google/gson/internal/bind/TypeAdapters$9;->nullSafe()Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_BOOLEAN:Lcom/google/gson/TypeAdapter;
 
-    .line 283
+    .line 261
     const-class v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_BOOLEAN:Lcom/google/gson/TypeAdapter;
 
-    .line 284
+    .line 262
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_BOOLEAN_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 286
+    .line 264
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$10;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$10;-><init>()V
 
-    .line 313
+    .line 291
     invoke-virtual {v0}, Lcom/google/gson/internal/bind/TypeAdapters$10;->nullSafe()Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_INTEGER_ARRAY:Lcom/google/gson/TypeAdapter;
 
-    .line 314
+    .line 292
     const-class v0, Ljava/util/concurrent/atomic/AtomicIntegerArray;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_INTEGER_ARRAY:Lcom/google/gson/TypeAdapter;
 
-    .line 315
+    .line 293
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->ATOMIC_INTEGER_ARRAY_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 317
+    .line 295
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$11;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$11;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->LONG:Lcom/google/gson/TypeAdapter;
 
-    .line 336
+    .line 314
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$12;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$12;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->FLOAT:Lcom/google/gson/TypeAdapter;
 
-    .line 351
+    .line 329
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$13;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$13;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->DOUBLE:Lcom/google/gson/TypeAdapter;
 
-    .line 366
+    .line 344
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$14;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$14;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->NUMBER:Lcom/google/gson/TypeAdapter;
 
-    .line 386
+    .line 365
     const-class v0, Ljava/lang/Number;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->NUMBER:Lcom/google/gson/TypeAdapter;
@@ -583,49 +593,49 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->NUMBER_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 388
+    .line 367
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$15;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$15;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CHARACTER:Lcom/google/gson/TypeAdapter;
 
-    .line 407
+    .line 386
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     const-class v1, Ljava/lang/Character;
 
     sget-object v2, Lcom/google/gson/internal/bind/TypeAdapters;->CHARACTER:Lcom/google/gson/TypeAdapter;
 
-    .line 408
+    .line 387
     invoke-static {v0, v1, v2}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CHARACTER_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 410
+    .line 389
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$16;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$16;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->STRING:Lcom/google/gson/TypeAdapter;
 
-    .line 430
+    .line 409
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$17;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$17;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BIG_DECIMAL:Lcom/google/gson/TypeAdapter;
 
-    .line 448
+    .line 427
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$18;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$18;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->BIG_INTEGER:Lcom/google/gson/TypeAdapter;
 
-    .line 466
+    .line 445
     const-class v0, Ljava/lang/String;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->STRING:Lcom/google/gson/TypeAdapter;
@@ -636,52 +646,52 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 468
+    .line 447
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$19;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$19;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_BUILDER:Lcom/google/gson/TypeAdapter;
 
-    .line 483
+    .line 462
     const-class v0, Ljava/lang/StringBuilder;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_BUILDER:Lcom/google/gson/TypeAdapter;
 
-    .line 484
+    .line 463
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_BUILDER_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 486
+    .line 465
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$20;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$20;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_BUFFER:Lcom/google/gson/TypeAdapter;
 
-    .line 501
+    .line 480
     const-class v0, Ljava/lang/StringBuffer;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_BUFFER:Lcom/google/gson/TypeAdapter;
 
-    .line 502
+    .line 481
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->STRING_BUFFER_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 504
+    .line 483
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$21;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$21;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->URL:Lcom/google/gson/TypeAdapter;
 
-    .line 520
+    .line 499
     const-class v0, Ljava/net/URL;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->URL:Lcom/google/gson/TypeAdapter;
@@ -692,14 +702,14 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->URL_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 522
+    .line 501
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$22;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$22;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->URI:Lcom/google/gson/TypeAdapter;
 
-    .line 542
+    .line 521
     const-class v0, Ljava/net/URI;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->URI:Lcom/google/gson/TypeAdapter;
@@ -710,33 +720,33 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->URI_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 544
+    .line 523
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$23;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$23;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->INET_ADDRESS:Lcom/google/gson/TypeAdapter;
 
-    .line 560
+    .line 539
     const-class v0, Ljava/net/InetAddress;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->INET_ADDRESS:Lcom/google/gson/TypeAdapter;
 
-    .line 561
+    .line 540
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newTypeHierarchyFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->INET_ADDRESS_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 563
+    .line 542
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$24;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$24;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->UUID:Lcom/google/gson/TypeAdapter;
 
-    .line 578
+    .line 557
     const-class v0, Ljava/util/UUID;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->UUID:Lcom/google/gson/TypeAdapter;
@@ -747,19 +757,19 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->UUID_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 580
+    .line 559
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$25;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$25;-><init>()V
 
-    .line 589
+    .line 568
     invoke-virtual {v0}, Lcom/google/gson/internal/bind/TypeAdapters$25;->nullSafe()Lcom/google/gson/TypeAdapter;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CURRENCY:Lcom/google/gson/TypeAdapter;
 
-    .line 590
+    .line 569
     const-class v0, Ljava/util/Currency;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->CURRENCY:Lcom/google/gson/TypeAdapter;
@@ -770,42 +780,42 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CURRENCY_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 592
+    .line 571
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$26;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$26;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->TIMESTAMP_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 613
+    .line 592
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$27;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$27;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CALENDAR:Lcom/google/gson/TypeAdapter;
 
-    .line 678
+    .line 657
     const-class v0, Ljava/util/Calendar;
 
     const-class v1, Ljava/util/GregorianCalendar;
 
     sget-object v2, Lcom/google/gson/internal/bind/TypeAdapters;->CALENDAR:Lcom/google/gson/TypeAdapter;
 
-    .line 679
+    .line 658
     invoke-static {v0, v1, v2}, Lcom/google/gson/internal/bind/TypeAdapters;->newFactoryForMultipleTypes(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->CALENDAR_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 681
+    .line 660
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$28;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$28;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->LOCALE:Lcom/google/gson/TypeAdapter;
 
-    .line 716
+    .line 695
     const-class v0, Ljava/util/Locale;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->LOCALE:Lcom/google/gson/TypeAdapter;
@@ -816,26 +826,26 @@
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->LOCALE_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 718
+    .line 697
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$29;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$29;-><init>()V
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->JSON_ELEMENT:Lcom/google/gson/TypeAdapter;
 
-    .line 790
+    .line 769
     const-class v0, Lcom/google/gson/JsonElement;
 
     sget-object v1, Lcom/google/gson/internal/bind/TypeAdapters;->JSON_ELEMENT:Lcom/google/gson/TypeAdapter;
 
-    .line 791
+    .line 770
     invoke-static {v0, v1}, Lcom/google/gson/internal/bind/TypeAdapters;->newTypeHierarchyFactory(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)Lcom/google/gson/TypeAdapterFactory;
 
     move-result-object v0
 
     sput-object v0, Lcom/google/gson/internal/bind/TypeAdapters;->JSON_ELEMENT_FACTORY:Lcom/google/gson/TypeAdapterFactory;
 
-    .line 828
+    .line 807
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$30;
 
     invoke-direct {v0}, Lcom/google/gson/internal/bind/TypeAdapters$30;-><init>()V
@@ -874,7 +884,7 @@
         }
     .end annotation
 
-    .line 844
+    .line 823
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$31;
 
     invoke-direct {v0, p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$31;-><init>(Lcom/google/gson/reflect/TypeToken;Lcom/google/gson/TypeAdapter;)V
@@ -897,7 +907,7 @@
         }
     .end annotation
 
-    .line 854
+    .line 833
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$32;
 
     invoke-direct {v0, p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$32;-><init>(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V
@@ -922,7 +932,7 @@
         }
     .end annotation
 
-    .line 867
+    .line 846
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$33;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$33;-><init>(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V
@@ -947,7 +957,7 @@
         }
     .end annotation
 
-    .line 882
+    .line 861
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$34;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/gson/internal/bind/TypeAdapters$34;-><init>(Ljava/lang/Class;Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V
@@ -970,7 +980,7 @@
         }
     .end annotation
 
-    .line 901
+    .line 880
     new-instance v0, Lcom/google/gson/internal/bind/TypeAdapters$35;
 
     invoke-direct {v0, p0, p1}, Lcom/google/gson/internal/bind/TypeAdapters$35;-><init>(Ljava/lang/Class;Lcom/google/gson/TypeAdapter;)V

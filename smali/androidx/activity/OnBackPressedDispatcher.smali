@@ -129,20 +129,20 @@
     return-void
 .end method
 
-.method public a(Landroidx/lifecycle/h;Landroidx/activity/c;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/activity/c;)V
     .locals 2
 
     .line 145
-    invoke-interface {p1}, Landroidx/lifecycle/h;->getLifecycle()Landroidx/lifecycle/e;
+    invoke-interface {p1}, Landroidx/lifecycle/g;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p1
 
     .line 146
-    invoke-virtual {p1}, Landroidx/lifecycle/e;->a()Landroidx/lifecycle/e$b;
+    invoke-virtual {p1}, Landroidx/lifecycle/Lifecycle;->a()Landroidx/lifecycle/Lifecycle$State;
 
     move-result-object v0
 
-    sget-object v1, Landroidx/lifecycle/e$b;->DESTROYED:Landroidx/lifecycle/e$b;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$State;->DESTROYED:Landroidx/lifecycle/Lifecycle$State;
 
     if-ne v0, v1, :cond_0
 
@@ -152,7 +152,7 @@
     :cond_0
     new-instance v0, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;
 
-    invoke-direct {v0, p0, p1, p2}, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/e;Landroidx/activity/c;)V
+    invoke-direct {v0, p0, p1, p2}, Landroidx/activity/OnBackPressedDispatcher$LifecycleOnBackPressedCancellable;-><init>(Landroidx/activity/OnBackPressedDispatcher;Landroidx/lifecycle/Lifecycle;Landroidx/activity/c;)V
 
     invoke-virtual {p2, v0}, Landroidx/activity/c;->a(Landroidx/activity/a;)V
 

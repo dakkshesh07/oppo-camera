@@ -1,5 +1,5 @@
 .class Landroidx/appcompat/view/menu/k$a;
-.super Landroidx/core/g/b;
+.super Landroidx/core/f/b;
 .source "MenuItemWrapperICS.java"
 
 
@@ -28,7 +28,7 @@
     iput-object p1, p0, Landroidx/appcompat/view/menu/k$a;->b:Landroidx/appcompat/view/menu/k;
 
     .line 433
-    invoke-direct {p0, p2}, Landroidx/core/g/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Landroidx/core/f/b;-><init>(Landroid/content/Context;)V
 
     .line 434
     iput-object p3, p0, Landroidx/appcompat/view/menu/k$a;->a:Landroid/view/ActionProvider;

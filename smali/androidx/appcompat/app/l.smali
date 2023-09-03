@@ -313,7 +313,7 @@
 
     const-string v1, "android.permission.ACCESS_COARSE_LOCATION"
 
-    invoke-static {v0, v1}, Landroidx/core/content/b;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Landroidx/core/a/c;->a(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v0
 
@@ -339,7 +339,7 @@
 
     const-string v3, "android.permission.ACCESS_FINE_LOCATION"
 
-    invoke-static {v2, v3}, Landroidx/core/content/b;->a(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {v2, v3}, Landroidx/core/a/c;->a(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v2
 

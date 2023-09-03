@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Landroidx/appcompat/app/d;
-.implements Landroidx/core/app/m$a;
+.implements Landroidx/core/app/n$a;
 
 
 # instance fields
@@ -125,11 +125,11 @@
     return-void
 .end method
 
-.method public a(Landroidx/core/app/m;)V
+.method public a(Landroidx/core/app/n;)V
     .locals 0
 
     .line 381
-    invoke-virtual {p1, p0}, Landroidx/core/app/m;->a(Landroid/app/Activity;)Landroidx/core/app/m;
+    invoke-virtual {p1, p0}, Landroidx/core/app/n;->a(Landroid/app/Activity;)Landroidx/core/app/n;
 
     return-void
 .end method
@@ -184,7 +184,7 @@
     return-void
 .end method
 
-.method public b(Landroidx/core/app/m;)V
+.method public b(Landroidx/core/app/n;)V
     .locals 0
 
     return-void
@@ -194,7 +194,7 @@
     .locals 3
 
     .line 620
-    invoke-virtual {p0}, Landroidx/appcompat/app/c;->k_()Landroidx/appcompat/app/a;
+    invoke-virtual {p0}, Landroidx/appcompat/app/c;->v_()Landroidx/appcompat/app/a;
 
     move-result-object v0
 
@@ -250,7 +250,7 @@
     move-result v0
 
     .line 564
-    invoke-virtual {p0}, Landroidx/appcompat/app/c;->k_()Landroidx/appcompat/app/a;
+    invoke-virtual {p0}, Landroidx/appcompat/app/c;->v_()Landroidx/appcompat/app/a;
 
     move-result-object v1
 
@@ -298,18 +298,18 @@
     if-eqz v1, :cond_0
 
     .line 430
-    invoke-static {p0}, Landroidx/core/app/m;->a(Landroid/content/Context;)Landroidx/core/app/m;
+    invoke-static {p0}, Landroidx/core/app/n;->a(Landroid/content/Context;)Landroidx/core/app/n;
 
     move-result-object v0
 
     .line 431
-    invoke-virtual {p0, v0}, Landroidx/appcompat/app/c;->a(Landroidx/core/app/m;)V
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/c;->a(Landroidx/core/app/n;)V
 
     .line 432
-    invoke-virtual {p0, v0}, Landroidx/appcompat/app/c;->b(Landroidx/core/app/m;)V
+    invoke-virtual {p0, v0}, Landroidx/appcompat/app/c;->b(Landroidx/core/app/n;)V
 
     .line 433
-    invoke-virtual {v0}, Landroidx/core/app/m;->a()V
+    invoke-virtual {v0}, Landroidx/core/app/n;->a()V
 
     .line 436
     :try_start_0
@@ -404,20 +404,20 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Landroidx/appcompat/widget/ax;->a()Z
+    invoke-static {}, Landroidx/appcompat/widget/aw;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 575
-    new-instance v0, Landroidx/appcompat/widget/ax;
+    new-instance v0, Landroidx/appcompat/widget/aw;
 
     invoke-super {p0}, Landroidx/fragment/app/c;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Landroidx/appcompat/widget/ax;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
+    invoke-direct {v0, p0, v1}, Landroidx/appcompat/widget/aw;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
 
     iput-object v0, p0, Landroidx/appcompat/app/c;->l:Landroid/content/res/Resources;
 
@@ -468,21 +468,6 @@
     invoke-virtual {v0}, Landroidx/appcompat/app/e;->f()V
 
     return-void
-.end method
-
-.method public k_()Landroidx/appcompat/app/a;
-    .locals 1
-
-    .line 139
-    invoke-virtual {p0}, Landroidx/appcompat/app/c;->h()Landroidx/appcompat/app/e;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/appcompat/app/e;->a()Landroidx/appcompat/app/a;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public onConfigurationChanged(Landroid/content/res/Configuration;)V
@@ -605,7 +590,7 @@
 
     .line 232
     :cond_0
-    invoke-virtual {p0}, Landroidx/appcompat/app/c;->k_()Landroidx/appcompat/app/a;
+    invoke-virtual {p0}, Landroidx/appcompat/app/c;->v_()Landroidx/appcompat/app/a;
 
     move-result-object p1
 
@@ -782,7 +767,7 @@
     .locals 3
 
     .line 611
-    invoke-virtual {p0}, Landroidx/appcompat/app/c;->k_()Landroidx/appcompat/app/a;
+    invoke-virtual {p0}, Landroidx/appcompat/app/c;->v_()Landroidx/appcompat/app/a;
 
     move-result-object v0
 
@@ -869,4 +854,19 @@
     invoke-virtual {v0, p1}, Landroidx/appcompat/app/e;->a(I)V
 
     return-void
+.end method
+
+.method public v_()Landroidx/appcompat/app/a;
+    .locals 1
+
+    .line 139
+    invoke-virtual {p0}, Landroidx/appcompat/app/c;->h()Landroidx/appcompat/app/e;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/appcompat/app/e;->a()Landroidx/appcompat/app/a;
+
+    move-result-object v0
+
+    return-object v0
 .end method

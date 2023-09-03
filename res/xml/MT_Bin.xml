@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <provider connectionType="BT|BLE|WIFI" impl="com.oppo.camera.watch.WatchAgentService" limit="ANY" name="WatchAgentService" timeout="10" urn="app:camera.helper.provider:1.0">
+        <channel id="104" priority="low" reliability="disable" />
+        <channel id="110" priority="low" reliability="disable" />
+    </provider>
+    <paths>
+        <files-path name="my_images" path="." />
+        <cache-path name="my_cache" path="." />
+        <external-path name="ext" path="." />
+    </paths>
+</resources>

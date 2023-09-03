@@ -39,3 +39,9 @@
 
 .method public abstract getStructValueOrBuilder()Lcom/google/protobuf/StructOrBuilder;
 .end method
+
+.method public abstract hasListValue()Z
+.end method
+
+.method public abstract hasStructValue()Z
+.end method

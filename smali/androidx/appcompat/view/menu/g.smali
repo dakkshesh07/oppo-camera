@@ -3,6 +3,11 @@
 .source "MenuAdapter.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field a:Landroidx/appcompat/view/menu/h;
 

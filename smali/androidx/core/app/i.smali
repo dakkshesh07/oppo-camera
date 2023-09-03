@@ -6,6 +6,11 @@
 .implements Landroidx/core/app/g;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private final a:Landroid/app/Notification$Builder;
 
@@ -1088,19 +1093,19 @@
 
     .line 298
     :goto_2
-    invoke-virtual {p1}, Landroidx/core/app/h$a;->f()[Landroidx/core/app/k;
+    invoke-virtual {p1}, Landroidx/core/app/h$a;->f()[Landroidx/core/app/l;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 300
-    invoke-virtual {p1}, Landroidx/core/app/h$a;->f()[Landroidx/core/app/k;
+    invoke-virtual {p1}, Landroidx/core/app/h$a;->f()[Landroidx/core/app/l;
 
     move-result-object v0
 
     .line 299
-    invoke-static {v0}, Landroidx/core/app/k;->a([Landroidx/core/app/k;)[Landroid/app/RemoteInput;
+    invoke-static {v0}, Landroidx/core/app/l;->a([Landroidx/core/app/l;)[Landroid/app/RemoteInput;
 
     move-result-object v0
 

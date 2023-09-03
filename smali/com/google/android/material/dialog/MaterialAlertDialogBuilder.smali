@@ -284,7 +284,7 @@
     .line 148
     check-cast v3, Lcom/google/android/material/shape/MaterialShapeDrawable;
 
-    invoke-static {v2}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {v2}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result v4
 

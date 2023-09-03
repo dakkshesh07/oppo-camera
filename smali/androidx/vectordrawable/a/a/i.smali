@@ -255,7 +255,7 @@
     invoke-direct {v0}, Landroidx/vectordrawable/a/a/i;-><init>()V
 
     .line 647
-    invoke-static {p0, p1, p2}, Landroidx/core/content/a/f;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p0, p1, p2}, Landroidx/core/a/a/f;->a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
@@ -389,7 +389,7 @@
     const/4 v4, -0x1
 
     .line 760
-    invoke-static {p1, p2, v2, v3, v4}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v2, v3, v4}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v2
 
@@ -407,7 +407,7 @@
     const/4 v3, 0x1
 
     .line 765
-    invoke-static {p1, p2, p3, v2, v3}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, p2, p3, v2, v3}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
 
@@ -424,7 +424,7 @@
 
     const-string v3, "autoMirrored"
 
-    invoke-static {p1, p2, v3, p3, v2}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IZ)Z
+    invoke-static {p1, p2, v3, p3, v2}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IZ)Z
 
     move-result p3
 
@@ -437,7 +437,7 @@
 
     const-string v2, "viewportWidth"
 
-    invoke-static {p1, p2, v2, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -450,7 +450,7 @@
 
     const-string v2, "viewportHeight"
 
-    invoke-static {p1, p2, v2, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -518,7 +518,7 @@
     const-string v2, "alpha"
 
     .line 803
-    invoke-static {p1, p2, v2, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p2
 
@@ -538,9 +538,9 @@
     iput-object p1, v1, Landroidx/vectordrawable/a/a/i$f;->i:Ljava/lang/String;
 
     .line 810
-    iget-object p2, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object p2, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {p2, p1, v1}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1, v1}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void
@@ -788,13 +788,13 @@
     if-eqz v6, :cond_1
 
     .line 839
-    iget-object v6, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object v6, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v3}, Landroidx/vectordrawable/a/a/i$b;->getPathName()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v6, v7, v3}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v6, v7, v3}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     const/4 v6, 0x0
@@ -841,13 +841,13 @@
     if-eqz v7, :cond_3
 
     .line 848
-    iget-object v7, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object v7, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v3}, Landroidx/vectordrawable/a/a/i$a;->getPathName()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v7, v8, v3}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v8, v3}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 850
     :cond_3
@@ -893,13 +893,13 @@
     if-eqz v7, :cond_5
 
     .line 857
-    iget-object v7, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object v7, v1, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
     invoke-virtual {v3}, Landroidx/vectordrawable/a/a/i$c;->getGroupName()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v7, v8, v3}, Landroidx/b/a;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v8, v3}, Landroidx/collection/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 860
     :cond_5
@@ -1001,9 +1001,9 @@
 
     iget-object v0, v0, Landroidx/vectordrawable/a/a/i$g;->b:Landroidx/vectordrawable/a/a/i$f;
 
-    iget-object v0, v0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/b/a;
+    iget-object v0, v0, Landroidx/vectordrawable/a/a/i$f;->k:Landroidx/collection/ArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/a;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1673,7 +1673,7 @@
     .line 716
     sget-object v1, Landroidx/vectordrawable/a/a/a;->a:[I
 
-    invoke-static {p1, p4, p3, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p4, p3, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/beauty3d/g;Z)V
     .locals 0
 
-    .line 415
+    .line 411
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/g$6;->b:Lcom/oppo/camera/ui/beauty3d/g;
 
     iput-boolean p2, p0, Lcom/oppo/camera/ui/beauty3d/g$6;->a:Z
@@ -42,7 +42,7 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 418
+    .line 414
     iget-boolean p1, p0, Lcom/oppo/camera/ui/beauty3d/g$6;->a:Z
 
     xor-int/lit8 p1, p1, 0x1

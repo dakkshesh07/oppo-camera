@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Lcom/google/android/material/datepicker/MaterialCalendar$OnDayClickListener;,
@@ -192,7 +195,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/android/material/datepicker/MaterialCalendar$5;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
 
-    invoke-static {v0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {v0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 382
     sget v1, Lcom/google/android/material/R$id;->month_navigation_previous:I
@@ -582,7 +585,7 @@
 
     invoke-direct {v1, p0}, Lcom/google/android/material/datepicker/MaterialCalendar$1;-><init>(Lcom/google/android/material/datepicker/MaterialCalendar;)V
 
-    invoke-static {p2, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p2, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 161
     new-instance v1, Lcom/google/android/material/datepicker/DaysOfWeekAdapter;
@@ -737,13 +740,13 @@
     if-nez p3, :cond_3
 
     .line 223
-    new-instance p3, Landroidx/recyclerview/widget/k;
+    new-instance p3, Landroidx/recyclerview/widget/n;
 
-    invoke-direct {p3}, Landroidx/recyclerview/widget/k;-><init>()V
+    invoke-direct {p3}, Landroidx/recyclerview/widget/n;-><init>()V
 
     iget-object v0, p0, Lcom/google/android/material/datepicker/MaterialCalendar;->recyclerView:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/k;->a(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p3, v0}, Landroidx/recyclerview/widget/n;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
     .line 225
     :cond_3

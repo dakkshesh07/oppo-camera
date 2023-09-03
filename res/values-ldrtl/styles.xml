@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TextAppearance.ColorSupport" parent="@android:style/TextAppearance">
-        <item name="android:textSize">@dimen/oppo_textview_text_size</item>
+    <style name="APKTOOL_DUPLICATE_style_0x7f110246" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/APKTOOL_DUPLICATE_dimen_0x7f0702d2</item>
         <item name="android:textAlignment">viewStart</item>
     </style>
-    <style name="Widget.ColorSupport.EditText" parent="@android:style/Widget.EditText">
-        <item name="android:textSize">@dimen/oppo_edittext_text_size</item>
-        <item name="android:minHeight">@dimen/oppo_edit_text_height_min</item>
-        <item name="android:editTextColor">@color/color_edit_text_color</item>
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103b3" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">@dimen/APKTOOL_DUPLICATE_dimen_0x7f070176</item>
+        <item name="android:minHeight">@dimen/APKTOOL_DUPLICATE_dimen_0x7f070174</item>
+        <item name="android:editTextColor">@color/APKTOOL_DUPLICATE_color_0x7f0601d6</item>
         <item name="android:textAlignment">viewStart</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04015b">@color/APKTOOL_DUPLICATE_color_0x7f0602da</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04015f">@color/APKTOOL_DUPLICATE_color_0x7f0602dc</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04016c">@drawable/APKTOOL_DUPLICATE_drawable_0x7f08025b</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04016d">@drawable/APKTOOL_DUPLICATE_drawable_0x7f08025d</item>
     </style>
-    <style name="Widget.ColorSupport.ExpandableListView" parent="@style/Widget.ColorSupport.ListView">
-        <item name="android:groupIndicator">@drawable/oppo_expander_group</item>
-        <item name="android:childDivider">@drawable/color_divider_horizontal_default</item>
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103bd" parent="@style/APKTOOL_DUPLICATE_style_0x7f1103c5">
+        <item name="android:groupIndicator">@drawable/APKTOOL_DUPLICATE_drawable_0x7f080267</item>
+        <item name="android:childDivider">@drawable/APKTOOL_DUPLICATE_drawable_0x7f080257</item>
         <item name="android:indicatorStart">?android:expandableListPreferredItemIndicatorLeft</item>
         <item name="android:indicatorEnd">?android:expandableListPreferredItemIndicatorRight</item>
     </style>
-    <style name="Widget.ColorSupport.ProgressBar" parent="@style/Widget.ColorSupport">
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103cc" parent="@style/APKTOOL_DUPLICATE_style_0x7f11037b">
         <item name="android:maxWidth">48.0dip</item>
         <item name="android:maxHeight">48.0dip</item>
         <item name="android:indeterminateOnly">true</item>
@@ -26,41 +30,41 @@
         <item name="android:minHeight">48.0dip</item>
         <item name="android:mirrorForRtl">true</item>
     </style>
-    <style name="Widget.ColorSupport.SeekBar" parent="@style/Widget.ColorSupport">
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103d4" parent="@style/APKTOOL_DUPLICATE_style_0x7f11037b">
         <item name="android:paddingLeft">8.0dip</item>
         <item name="android:paddingRight">8.0dip</item>
         <item name="android:focusable">true</item>
         <item name="android:maxHeight">50.0dip</item>
         <item name="android:indeterminateOnly">false</item>
-        <item name="android:indeterminateDrawable">@drawable/oppo_progress_horizontal</item>
-        <item name="android:progressDrawable">@drawable/oppo_progress_horizontal</item>
+        <item name="android:indeterminateDrawable">@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802a0</item>
+        <item name="android:progressDrawable">@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802a0</item>
         <item name="android:minHeight">50.0dip</item>
-        <item name="android:thumb">@drawable/oppo_seek_thumb</item>
+        <item name="android:thumb">@drawable/APKTOOL_DUPLICATE_drawable_0x7f0802d8</item>
         <item name="android:thumbOffset">8.0dip</item>
         <item name="android:mirrorForRtl">true</item>
     </style>
-    <style name="Widget.ColorSupport.TextView" parent="@android:style/Widget.TextView">
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103d9" parent="@android:style/Widget.TextView">
         <item name="android:textAlignment">viewStart</item>
     </style>
-    <style name="Widget.ColorSupport.Toolbar" parent="@android:style/Widget">
-        <item name="android:paddingLeft">@dimen/toolbar_normal_menu_padding_right</item>
-        <item name="android:paddingRight">@dimen/toolbar_normal_menu_padding_left</item>
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103dc" parent="@android:style/Widget">
+        <item name="android:paddingLeft">@dimen/APKTOOL_DUPLICATE_dimen_0x7f0707f3</item>
+        <item name="android:paddingRight">@dimen/APKTOOL_DUPLICATE_dimen_0x7f0707f2</item>
         <item name="android:minHeight">50.0dip</item>
-        <item name="minTitleTextSize">16.0dip</item>
-        <item name="supportButtonGravity">center_vertical</item>
-        <item name="supportCollapseContentDescription">@string/support_abc_toolbar_collapse_description</item>
-        <item name="supportCollapseIcon">?homeAsUpIndicator</item>
-        <item name="supportContentInsetEnd">15.0dip</item>
-        <item name="supportContentInsetStart">24.0dip</item>
-        <item name="supportMaxButtonHeight">50.0dip</item>
-        <item name="supportSubtitleTextAppearance">@style/TextAppearance.ColorSupport.AppCompatSupport.Toolbar.SubTitle</item>
-        <item name="supportTitleMarginBottom">1.0dip</item>
-        <item name="supportTitleMarginTop">4.0dip</item>
-        <item name="supportTitleMargins">0.0dip</item>
-        <item name="supportTitleTextAppearance">@style/TextAppearance.ColorSupport.AppCompatSupport.Toolbar.Title</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040461">16.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04055d">APKTOOL_DUPLICATE_id_0x7f090095</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04055e">@string/APKTOOL_DUPLICATE_string_0x7f10055c</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f04055f">?APKTOOL_DUPLICATE_attr_0x7f04036e</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040560">15.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040563">24.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040566">50.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040572">@style/APKTOOL_DUPLICATE_style_0x7f110248</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040574">1.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040577">4.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040578">0.0dip</item>
+        <item name="APKTOOL_DUPLICATE_attr_0x7f040579">@style/APKTOOL_DUPLICATE_style_0x7f110249</item>
     </style>
-    <style name="Widget.ColorSupport.Toolbar.Button.Navigation" parent="@style/Widget.AppCompatSupport.Toolbar.Button.Navigation">
-        <item name="android:paddingLeft">@dimen/color_action_bar_navigation_padding_end_material</item>
-        <item name="android:paddingRight">@dimen/color_action_bar_navigation_padding_start_material</item>
+    <style name="APKTOOL_DUPLICATE_style_0x7f1103dd" parent="@style/APKTOOL_DUPLICATE_style_0x7f11037a">
+        <item name="android:paddingLeft">@dimen/APKTOOL_DUPLICATE_dimen_0x7f070131</item>
+        <item name="android:paddingRight">@dimen/APKTOOL_DUPLICATE_dimen_0x7f070132</item>
     </style>
 </resources>

@@ -605,6 +605,8 @@
 
 .method public setRecycleOnMeasureEnabled(Z)Landroidx/appcompat/app/b$a;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 966
     iget-object v0, p0, Landroidx/appcompat/app/b$a;->P:Landroidx/appcompat/app/AlertController$a;
@@ -787,6 +789,9 @@
 
 .method public setView(Landroid/view/View;IIII)Landroidx/appcompat/app/b$a;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

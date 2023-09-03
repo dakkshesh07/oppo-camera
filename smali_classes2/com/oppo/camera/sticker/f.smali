@@ -441,7 +441,7 @@
 
     const-string v0, "StickerDataRequest"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -472,7 +472,7 @@
     const-string v0, "dealStickerResponseData, response is null!"
 
     .line 173
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -491,7 +491,7 @@
     .line 179
     iget-object v1, v6, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/oppo/camera/sticker/d/d;->a(Landroid/content/Context;)J
+    invoke-static {v1}, Lcom/oppo/camera/sticker/b/d;->a(Landroid/content/Context;)J
 
     move-result-wide v1
 
@@ -523,7 +523,7 @@
 
     move-result-object v3
 
-    invoke-static {v9, v3}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v3}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     cmp-long v1, v10, v1
 
@@ -550,7 +550,7 @@
     .line 188
     iget-object v3, v6, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v3, v1, v2}, Lcom/oppo/camera/sticker/d/d;->b(Landroid/content/Context;J)V
+    invoke-static {v3, v1, v2}, Lcom/oppo/camera/sticker/b/d;->b(Landroid/content/Context;J)V
 
     .line 189
     iget-object v12, v0, Lcom/oppo/camera/sticker/protocol/StickerResponse;->fileServerHost:Ljava/lang/String;
@@ -565,7 +565,7 @@
     const-string v0, "dealStickerResponseData, hort url is empty!"
 
     .line 192
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -578,7 +578,7 @@
     const-string v0, "dealStickerResponseData, responseStickerCategoryList is null!"
 
     .line 200
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -628,7 +628,7 @@
     const-string v0, "dealStickerResponseData, stickerList is null!"
 
     .line 215
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -697,12 +697,12 @@
     .line 231
     iget-object v0, v6, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v0, v10, v11}, Lcom/oppo/camera/sticker/d/d;->a(Landroid/content/Context;J)V
+    invoke-static {v0, v10, v11}, Lcom/oppo/camera/sticker/b/d;->a(Landroid/content/Context;J)V
 
     .line 232
     iget-object v0, v6, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v0, v7, v8}, Lcom/oppo/camera/sticker/d/d;->c(Landroid/content/Context;J)V
+    invoke-static {v0, v7, v8}, Lcom/oppo/camera/sticker/b/d;->c(Landroid/content/Context;J)V
 
     goto :goto_2
 
@@ -728,7 +728,7 @@
 
     move-result-object v0
 
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 238
     :goto_2
@@ -742,7 +742,7 @@
     const-string v0, "dealStickerResponseData, data version already new. do not update!"
 
     .line 240
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 243
     :goto_3
@@ -783,7 +783,7 @@
 
     move-result-object v0
 
-    invoke-static {v9, v0}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v9, v0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_4
     return-void
@@ -798,24 +798,24 @@
     invoke-direct {p1}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;-><init>()V
 
     .line 158
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oppo/camera/sticker/d/a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/oppo/camera/sticker/b/a;->b()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;->model(Ljava/lang/String;)Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;
 
     .line 159
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/d/a;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/b/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -827,13 +827,13 @@
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;->protocolVersion(Ljava/lang/String;)Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;
 
     .line 161
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/d/a;->a(Landroid/content/Context;)I
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/sticker/b/a;->a(Landroid/content/Context;)I
 
     move-result v0
 
@@ -844,44 +844,44 @@
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;->clientVersion(Ljava/lang/String;)Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;
 
     .line 162
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oppo/camera/sticker/d/a;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/oppo/camera/sticker/b/a;->c()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;->colorosVersion(Ljava/lang/String;)Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;
 
     .line 163
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oppo/camera/sticker/d/a;->e()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/oppo/camera/sticker/b/a;->e()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;->androidVersion(Ljava/lang/String;)Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;
 
     .line 164
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oppo/camera/sticker/d/a;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/oppo/camera/sticker/b/a;->d()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;->otaVersion(Ljava/lang/String;)Lcom/oppo/camera/sticker/protocol/StickerRequest$Builder;
 
     .line 165
-    invoke-static {}, Lcom/oppo/camera/sticker/d/a;->a()Lcom/oppo/camera/sticker/d/a;
+    invoke-static {}, Lcom/oppo/camera/sticker/b/a;->a()Lcom/oppo/camera/sticker/b/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oppo/camera/sticker/d/a;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/oppo/camera/sticker/b/a;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -890,7 +890,7 @@
     .line 166
     iget-object v0, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/oppo/camera/sticker/d/d;->a(Landroid/content/Context;)J
+    invoke-static {v0}, Lcom/oppo/camera/sticker/b/d;->a(Landroid/content/Context;)J
 
     move-result-wide v0
 
@@ -966,7 +966,7 @@
 
     const-string v0, "StickerDataRequest"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -978,7 +978,7 @@
     .line 121
     iget-object v0, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/oppo/camera/sticker/d/d;->f(Landroid/content/Context;)I
+    invoke-static {v0}, Lcom/oppo/camera/sticker/b/d;->f(Landroid/content/Context;)I
 
     move-result v0
 
@@ -999,31 +999,31 @@
 
     const-string v2, "StickerDataRequest"
 
-    invoke-static {v2, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 125
-    new-instance v1, Lcom/oppo/camera/sticker/c/a;
+    new-instance v1, Lcom/oppo/camera/sticker/net/HttpRequestHelper;
 
     iget-object v2, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-direct {v1, v2}, Lcom/oppo/camera/sticker/c/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/oppo/camera/sticker/net/HttpRequestHelper;-><init>(Landroid/content/Context;)V
 
     .line 126
     invoke-direct {p0, v0}, Lcom/oppo/camera/sticker/f;->a(I)[B
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/oppo/camera/sticker/c/a;->a([B)Lokhttp3/RequestBody;
+    invoke-virtual {v1, v2}, Lcom/oppo/camera/sticker/net/HttpRequestHelper;->a([B)Lokhttp3/RequestBody;
 
     move-result-object v2
 
     .line 127
-    sget-object v3, Lcom/oppo/camera/sticker/c/a$b;->POST:Lcom/oppo/camera/sticker/c/a$b;
+    sget-object v3, Lcom/oppo/camera/sticker/net/HttpRequestHelper$HttpMethodType;->POST:Lcom/oppo/camera/sticker/net/HttpRequestHelper$HttpMethodType;
 
     iget-object v4, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
     .line 128
-    invoke-virtual {v1, v4, v0}, Lcom/oppo/camera/sticker/c/a;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-virtual {v1, v4, v0}, Lcom/oppo/camera/sticker/net/HttpRequestHelper;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1034,7 +1034,7 @@
     move-result-object v0
 
     .line 127
-    invoke-virtual {v1, v3, v4, v0, v2}, Lcom/oppo/camera/sticker/c/a;->a(Lcom/oppo/camera/sticker/c/a$b;Ljava/lang/String;Ljava/util/Map;Lokhttp3/RequestBody;)Lokhttp3/Request;
+    invoke-virtual {v1, v3, v4, v0, v2}, Lcom/oppo/camera/sticker/net/HttpRequestHelper;->a(Lcom/oppo/camera/sticker/net/HttpRequestHelper$HttpMethodType;Ljava/lang/String;Ljava/util/Map;Lokhttp3/RequestBody;)Lokhttp3/Request;
 
     move-result-object v0
 
@@ -1043,7 +1043,7 @@
 
     invoke-direct {v2, p0}, Lcom/oppo/camera/sticker/f$2;-><init>(Lcom/oppo/camera/sticker/f;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/oppo/camera/sticker/c/a;->a(Lokhttp3/Request;Lcom/oppo/camera/sticker/c/a$c;)V
+    invoke-virtual {v1, v0, v2}, Lcom/oppo/camera/sticker/net/HttpRequestHelper;->a(Lokhttp3/Request;Lcom/oppo/camera/sticker/net/HttpRequestHelper$b;)V
 
     return-void
 .end method
@@ -1070,7 +1070,7 @@
 
     const-string v1, "StickerDataRequest"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 79
     new-instance v0, Landroid/content/IntentFilter;
@@ -1086,9 +1086,13 @@
 
     move-result-object v1
 
+    invoke-static {v1}, Landroidx/e/a/a;->a(Landroid/content/Context;)Landroidx/e/a/a;
+
+    move-result-object v1
+
     iget-object v2, p0, Lcom/oppo/camera/sticker/f;->c:Landroid/content/BroadcastReceiver;
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v0}, Landroidx/e/a/a;->a(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)V
 
     return-void
 .end method
@@ -1122,7 +1126,7 @@
 
     const-string v1, "StickerDataRequest"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 86
     iget-object v0, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
@@ -1148,14 +1152,14 @@
     .line 102
     iget-object v0, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/oppo/camera/sticker/d/d;->b(Landroid/content/Context;)J
+    invoke-static {v0}, Lcom/oppo/camera/sticker/b/d;->b(Landroid/content/Context;)J
 
     move-result-wide v0
 
     .line 103
     iget-object v2, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/oppo/camera/sticker/d/d;->c(Landroid/content/Context;)J
+    invoke-static {v2}, Lcom/oppo/camera/sticker/b/d;->c(Landroid/content/Context;)J
 
     move-result-wide v2
 
@@ -1175,7 +1179,7 @@
     const-string v1, "checkUpdateData, do not need update data!"
 
     .line 110
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 112
     iget-object v0, p0, Lcom/oppo/camera/sticker/f;->a:Landroid/content/Context;

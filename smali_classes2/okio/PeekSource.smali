@@ -6,6 +6,11 @@
 .implements Lokio/Source;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # instance fields
 .field private final buffer:Lokio/Buffer;
 
@@ -26,7 +31,7 @@
 
     const-string v0, "upstream"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -87,7 +92,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v0, 0x0
 
@@ -135,7 +140,7 @@
 
     if-nez v6, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_1
     iget v6, v6, Lokio/Segment;->pos:I
@@ -198,7 +203,7 @@
 
     if-nez v0, :cond_6
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_6
     iget v0, v0, Lokio/Segment;->pos:I

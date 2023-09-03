@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/coloros/anim/g$1;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/coloros/anim/d/c;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/e;
+    invoke-static {v0, v1}, Lcom/coloros/anim/network/b;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/e;
 
     move-result-object v0
 

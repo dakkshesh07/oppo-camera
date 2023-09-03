@@ -44,7 +44,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
-    invoke-static {p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -53,7 +53,7 @@
     iput-object p1, p0, Landroidx/core/d/a;->a:Ljava/lang/String;
 
     .line 58
-    invoke-static {p2}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -62,7 +62,7 @@
     iput-object p1, p0, Landroidx/core/d/a;->b:Ljava/lang/String;
 
     .line 59
-    invoke-static {p3}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
     iput-object p1, p0, Landroidx/core/d/a;->c:Ljava/lang/String;
 
     .line 60
-    invoke-static {p4}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p4}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -172,6 +172,8 @@
 
 .method public f()Ljava/lang/String;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 143
     iget-object v0, p0, Landroidx/core/d/a;->f:Ljava/lang/String;

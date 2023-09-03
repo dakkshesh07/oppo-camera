@@ -17,7 +17,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .line 45
+    .line 43
     new-instance v0, Lcom/google/protobuf/TextFormatParseLocation;
 
     const/4 v1, -0x1
@@ -32,13 +32,13 @@
 .method private constructor <init>(II)V
     .locals 0
 
-    .line 68
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
+    .line 67
     iput p1, p0, Lcom/google/protobuf/TextFormatParseLocation;->line:I
 
-    .line 70
+    .line 68
     iput p2, p0, Lcom/google/protobuf/TextFormatParseLocation;->column:I
 
     return-void
@@ -53,7 +53,7 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 56
+    .line 54
     sget-object p0, Lcom/google/protobuf/TextFormatParseLocation;->EMPTY:Lcom/google/protobuf/TextFormatParseLocation;
 
     return-object p0
@@ -63,14 +63,14 @@
 
     if-ltz p1, :cond_1
 
-    .line 62
+    .line 60
     new-instance v0, Lcom/google/protobuf/TextFormatParseLocation;
 
     invoke-direct {v0, p0, p1}, Lcom/google/protobuf/TextFormatParseLocation;-><init>(II)V
 
     return-object v0
 
-    .line 59
+    .line 57
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -80,7 +80,7 @@
 
     const/4 v2, 0x0
 
-    .line 60
+    .line 58
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
@@ -117,7 +117,7 @@
 
     return v0
 
-    .line 91
+    .line 89
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/TextFormatParseLocation;
 
@@ -127,11 +127,11 @@
 
     return v2
 
-    .line 94
+    .line 92
     :cond_1
     check-cast p1, Lcom/google/protobuf/TextFormatParseLocation;
 
-    .line 95
+    .line 93
     iget v1, p0, Lcom/google/protobuf/TextFormatParseLocation;->line:I
 
     invoke-virtual {p1}, Lcom/google/protobuf/TextFormatParseLocation;->getLine()I
@@ -142,7 +142,6 @@
 
     iget v1, p0, Lcom/google/protobuf/TextFormatParseLocation;->column:I
 
-    .line 96
     invoke-virtual {p1}, Lcom/google/protobuf/TextFormatParseLocation;->getColumn()I
 
     move-result p1
@@ -161,7 +160,7 @@
 .method public getColumn()I
     .locals 1
 
-    .line 78
+    .line 76
     iget v0, p0, Lcom/google/protobuf/TextFormatParseLocation;->column:I
 
     return v0
@@ -170,7 +169,7 @@
 .method public getLine()I
     .locals 1
 
-    .line 74
+    .line 72
     iget v0, p0, Lcom/google/protobuf/TextFormatParseLocation;->line:I
 
     return v0
@@ -181,7 +180,7 @@
 
     const/4 v0, 0x2
 
-    .line 101
+    .line 98
     new-array v0, v0, [I
 
     iget v1, p0, Lcom/google/protobuf/TextFormatParseLocation;->line:I
@@ -196,7 +195,7 @@
 
     aput v1, v0, v2
 
-    .line 102
+    .line 99
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
     move-result v0
@@ -209,7 +208,7 @@
 
     const/4 v0, 0x2
 
-    .line 83
+    .line 81
     new-array v0, v0, [Ljava/lang/Object;
 
     iget v1, p0, Lcom/google/protobuf/TextFormatParseLocation;->line:I

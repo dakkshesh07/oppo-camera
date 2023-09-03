@@ -70,9 +70,9 @@
 
     check-cast v0, Landroidx/appcompat/view/menu/e$a;
 
-    iget-object v0, v0, Landroidx/appcompat/view/menu/e$a;->a:Landroidx/appcompat/widget/ah;
+    iget-object v0, v0, Landroidx/appcompat/view/menu/e$a;->a:Landroidx/appcompat/widget/ag;
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/ah;->i()Z
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ag;->i()Z
 
     move-result v0
 
@@ -118,9 +118,9 @@
     check-cast v1, Landroidx/appcompat/view/menu/e$a;
 
     .line 112
-    iget-object v1, v1, Landroidx/appcompat/view/menu/e$a;->a:Landroidx/appcompat/widget/ah;
+    iget-object v1, v1, Landroidx/appcompat/view/menu/e$a;->a:Landroidx/appcompat/widget/ag;
 
-    invoke-virtual {v1}, Landroidx/appcompat/widget/ah;->a_()V
+    invoke-virtual {v1}, Landroidx/appcompat/widget/ag;->a_()V
 
     goto :goto_0
 

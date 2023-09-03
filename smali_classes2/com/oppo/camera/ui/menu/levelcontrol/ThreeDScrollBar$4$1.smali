@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;)V
     .locals 0
 
-    .line 193
+    .line 196
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4$1;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public run()V
     .locals 1
 
-    .line 196
+    .line 199
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4$1;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;
 
     iget-object v0, v0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$4;->a:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;

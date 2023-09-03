@@ -216,7 +216,7 @@
 
     const-string v0, "content://downloads/my_downloads"
 
-    .line 92
+    .line 93
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -225,7 +225,7 @@
 
     const-string v0, "content://downloads/all_downloads"
 
-    .line 99
+    .line 100
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -234,7 +234,7 @@
 
     const-string v0, "content://downloads/public_downloads"
 
-    .line 109
+    .line 110
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

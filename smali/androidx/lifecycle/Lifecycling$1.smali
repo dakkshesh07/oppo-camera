@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingClass;
-    value = Landroidx/lifecycle/k;
+    value = Landroidx/lifecycle/j;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic a:Landroidx/lifecycle/f;
+.field final synthetic a:Landroidx/lifecycle/e;
 
 
 # virtual methods
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 1
 
-    .line 60
-    iget-object v0, p0, Landroidx/lifecycle/Lifecycling$1;->a:Landroidx/lifecycle/f;
+    .line 61
+    iget-object v0, p0, Landroidx/lifecycle/Lifecycling$1;->a:Landroidx/lifecycle/e;
 
-    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/f;->a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/e;->a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
 
     return-void
 .end method

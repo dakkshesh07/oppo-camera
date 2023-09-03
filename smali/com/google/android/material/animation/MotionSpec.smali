@@ -8,10 +8,10 @@
 
 
 # instance fields
-.field private final propertyValues:Landroidx/b/g;
+.field private final propertyValues:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "[",
             "Landroid/animation/PropertyValuesHolder;",
@@ -20,10 +20,10 @@
     .end annotation
 .end field
 
-.field private final timings:Landroidx/b/g;
+.field private final timings:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Ljava/lang/String;",
             "Lcom/google/android/material/animation/MotionTiming;",
             ">;"
@@ -40,18 +40,18 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 70
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
     .line 71
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/b/g;
+    iput-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/SimpleArrayMap;
 
     return-void
 .end method
@@ -331,11 +331,11 @@
     check-cast p1, Lcom/google/android/material/animation/MotionSpec;
 
     .line 235
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    iget-object p1, p1, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object p1, p1, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -390,9 +390,9 @@
     if-eqz v0, :cond_0
 
     .line 113
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -424,9 +424,9 @@
     if-eqz v0, :cond_0
 
     .line 87
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -447,9 +447,9 @@
     .locals 9
 
     .line 161
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->size()I
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v0
 
@@ -461,9 +461,9 @@
     if-ge v3, v0, :cond_0
 
     .line 162
-    iget-object v4, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v4, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v4, v3}, Landroidx/b/g;->c(I)Ljava/lang/Object;
+    invoke-virtual {v4, v3}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -496,9 +496,9 @@
     .locals 1
 
     .line 99
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -519,9 +519,9 @@
     .locals 1
 
     .line 76
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -542,9 +542,9 @@
     .locals 1
 
     .line 240
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->hashCode()I
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->hashCode()I
 
     move-result v0
 
@@ -555,9 +555,9 @@
     .locals 1
 
     .line 123
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->propertyValues:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -566,9 +566,9 @@
     .locals 1
 
     .line 92
-    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v0, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -619,7 +619,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 252
-    iget-object v1, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/b/g;
+    iget-object v1, p0, Lcom/google/android/material/animation/MotionSpec;->timings:Landroidx/collection/SimpleArrayMap;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -10,7 +10,7 @@
 
 .field protected c:Landroid/content/Context;
 
-.field protected d:Landroidx/constraintlayout/a/a/j;
+.field protected d:Landroidx/constraintlayout/solver/widgets/h;
 
 .field protected e:Z
 
@@ -247,7 +247,7 @@
     .locals 2
 
     .line 154
-    iget-object v0, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/a/a/j;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/solver/widgets/h;
 
     if-nez v0, :cond_0
 
@@ -268,9 +268,9 @@
     check-cast v0, Landroidx/constraintlayout/widget/ConstraintLayout$a;
 
     .line 160
-    iget-object v1, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/a/a/j;
+    iget-object v1, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/solver/widgets/h;
 
-    iput-object v1, v0, Landroidx/constraintlayout/widget/ConstraintLayout$a;->al:Landroidx/constraintlayout/a/a/f;
+    iput-object v1, v0, Landroidx/constraintlayout/widget/ConstraintLayout$a;->al:Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     :cond_1
     return-void
@@ -350,7 +350,7 @@
 
     .line 232
     :cond_0
-    iget-object v0, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/a/a/j;
+    iget-object v0, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/solver/widgets/h;
 
     if-nez v0, :cond_1
 
@@ -358,7 +358,7 @@
 
     .line 235
     :cond_1
-    invoke-virtual {v0}, Landroidx/constraintlayout/a/a/j;->J()V
+    invoke-virtual {v0}, Landroidx/constraintlayout/solver/widgets/h;->J()V
 
     const/4 v0, 0x0
 
@@ -381,13 +381,13 @@
     if-eqz v1, :cond_2
 
     .line 240
-    iget-object v2, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/a/a/j;
+    iget-object v2, p0, Landroidx/constraintlayout/widget/b;->d:Landroidx/constraintlayout/solver/widgets/h;
 
-    invoke-virtual {p1, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->a(Landroid/view/View;)Landroidx/constraintlayout/a/a/f;
+    invoke-virtual {p1, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->a(Landroid/view/View;)Landroidx/constraintlayout/solver/widgets/ConstraintWidget;
 
     move-result-object v1
 
-    invoke-virtual {v2, v1}, Landroidx/constraintlayout/a/a/j;->b(Landroidx/constraintlayout/a/a/f;)V
+    invoke-virtual {v2, v1}, Landroidx/constraintlayout/solver/widgets/h;->c(Landroidx/constraintlayout/solver/widgets/ConstraintWidget;)V
 
     :cond_2
     add-int/lit8 v0, v0, 0x1

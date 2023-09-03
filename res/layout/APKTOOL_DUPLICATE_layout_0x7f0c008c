@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coui.appcompat.widget.IgnoreWindowInsetsFrameLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900b8" android:fitsSystemWindows="true" android:clipChildren="false" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" app:APKTOOL_DUPLICATE_attr_0x7f040386="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/APKTOOL_DUPLICATE_id_0x7f090216" android:background="@color/APKTOOL_DUPLICATE_color_0x7f060247" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:soundEffectsEnabled="false" android:importantForAccessibility="no" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900bf" android:fitsSystemWindows="true" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07021f">
+        <View android:id="@id/APKTOOL_DUPLICATE_id_0x7f090314" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <com.coui.appcompat.widget.IgnoreWindowInsetsFrameLayout android:layout_gravity="center|top" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0900f1" android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="wrap_content" app:APKTOOL_DUPLICATE_attr_0x7f0403d8="@string/APKTOOL_DUPLICATE_string_0x7f100062" style="?APKTOOL_DUPLICATE_attr_0x7f040084" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</com.coui.appcompat.widget.IgnoreWindowInsetsFrameLayout>

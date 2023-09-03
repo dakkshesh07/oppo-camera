@@ -27,7 +27,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .line 79
+    .line 75
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistryLite;->getEmptyRegistry()Lcom/google/protobuf/ExtensionRegistryLite;
 
     move-result-object v0
@@ -40,7 +40,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    .line 49
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,7 +62,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 70
+    .line 66
     invoke-interface {p1}, Lcom/google/protobuf/MessageLite;->isInitialized()Z
 
     move-result v0
@@ -71,18 +71,18 @@
 
     goto :goto_0
 
-    .line 71
+    .line 67
     :cond_0
     invoke-direct {p0, p1}, Lcom/google/protobuf/AbstractParser;->newUninitializedMessageException(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/UninitializedMessageException;
 
     move-result-object v0
 
-    .line 72
+    .line 68
     invoke-virtual {v0}, Lcom/google/protobuf/UninitializedMessageException;->asInvalidProtocolBufferException()Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object v0
 
-    .line 73
+    .line 69
     invoke-virtual {v0, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -103,12 +103,12 @@
         }
     .end annotation
 
-    .line 56
+    .line 52
     instance-of v0, p1, Lcom/google/protobuf/AbstractMessageLite;
 
     if-eqz v0, :cond_0
 
-    .line 57
+    .line 53
     check-cast p1, Lcom/google/protobuf/AbstractMessageLite;
 
     invoke-virtual {p1}, Lcom/google/protobuf/AbstractMessageLite;->newUninitializedMessageException()Lcom/google/protobuf/UninitializedMessageException;
@@ -117,7 +117,7 @@
 
     return-object p1
 
-    .line 59
+    .line 55
     :cond_0
     new-instance v0, Lcom/google/protobuf/UninitializedMessageException;
 
@@ -144,7 +144,7 @@
         }
     .end annotation
 
-    .line 256
+    .line 272
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parseDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -171,12 +171,11 @@
         }
     .end annotation
 
-    .line 251
+    .line 267
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
 
-    .line 250
     invoke-direct {p0, p1}, Lcom/google/protobuf/AbstractParser;->checkMessageInitialized(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -192,7 +191,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parseDelimitedFrom(Ljava/io/InputStream;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -208,7 +207,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parseDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -232,7 +231,7 @@
         }
     .end annotation
 
-    .line 130
+    .line 125
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -259,7 +258,7 @@
         }
     .end annotation
 
-    .line 125
+    .line 120
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -287,7 +286,7 @@
         }
     .end annotation
 
-    .line 96
+    .line 91
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parseFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -314,14 +313,13 @@
         }
     .end annotation
 
-    .line 91
+    .line 86
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/google/protobuf/MessageLite;
 
-    .line 90
     invoke-direct {p0, p1}, Lcom/google/protobuf/AbstractParser;->checkMessageInitialized(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -345,7 +343,7 @@
         }
     .end annotation
 
-    .line 220
+    .line 237
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parseFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -372,17 +370,109 @@
         }
     .end annotation
 
-    .line 215
+    .line 232
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
 
-    .line 214
     invoke-direct {p0, p1}, Lcom/google/protobuf/AbstractParser;->checkMessageInitialized(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
 
     return-object p1
+.end method
+
+.method public parseFrom(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/MessageLite;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/nio/ByteBuffer;",
+            ")TMessageType;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 149
+    sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
+
+    invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/nio/ByteBuffer;",
+            "Lcom/google/protobuf/ExtensionRegistryLite;",
+            ")TMessageType;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 133
+    :try_start_0
+    invoke-static {p1}, Lcom/google/protobuf/CodedInputStream;->newInstance(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/CodedInputStream;
+
+    move-result-object p1
+
+    .line 134
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lcom/google/protobuf/MessageLite;
+    :try_end_0
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_0 .. :try_end_0} :catch_1
+
+    const/4 v0, 0x0
+
+    .line 136
+    :try_start_1
+    invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->checkLastTagWas(I)V
+    :try_end_1
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 144
+    invoke-direct {p0, p2}, Lcom/google/protobuf/AbstractParser;->checkMessageInitialized(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/MessageLite;
+
+    move-result-object p1
+
+    return-object p1
+
+    :catch_0
+    move-exception p1
+
+    .line 138
+    :try_start_2
+    invoke-virtual {p1, p2}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
+
+    move-result-object p1
+
+    throw p1
+    :try_end_2
+    .catch Lcom/google/protobuf/InvalidProtocolBufferException; {:try_start_2 .. :try_end_2} :catch_1
+
+    :catch_1
+    move-exception p1
+
+    .line 141
+    throw p1
 .end method
 
 .method public parseFrom([B)Lcom/google/protobuf/MessageLite;
@@ -399,7 +489,7 @@
         }
     .end annotation
 
-    .line 190
+    .line 208
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -423,7 +513,7 @@
         }
     .end annotation
 
-    .line 179
+    .line 197
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/google/protobuf/AbstractParser;->parseFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -449,12 +539,11 @@
         }
     .end annotation
 
-    .line 173
+    .line 191
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
 
-    .line 172
     invoke-direct {p0, p1}, Lcom/google/protobuf/AbstractParser;->checkMessageInitialized(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -478,7 +567,7 @@
         }
     .end annotation
 
-    .line 185
+    .line 203
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -498,7 +587,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parseFrom(Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -514,7 +603,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parseFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -530,7 +619,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parseFrom(Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -546,7 +635,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parseFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -562,7 +651,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parseFrom(Ljava/io/InputStream;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -578,8 +667,40 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parseFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic parseFrom(Ljava/nio/ByteBuffer;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 48
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parseFrom(Ljava/nio/ByteBuffer;)Lcom/google/protobuf/MessageLite;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public bridge synthetic parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lcom/google/protobuf/InvalidProtocolBufferException;
+        }
+    .end annotation
+
+    .line 48
+    invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parseFrom(Ljava/nio/ByteBuffer;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
 
@@ -594,7 +715,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parseFrom([B)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -610,7 +731,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/AbstractParser;->parseFrom([BII)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -626,7 +747,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/AbstractParser;->parseFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -642,7 +763,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parseFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -666,7 +787,7 @@
         }
     .end annotation
 
-    .line 244
+    .line 261
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parsePartialDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -693,7 +814,7 @@
         }
     .end annotation
 
-    .line 229
+    .line 246
     :try_start_0
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
@@ -707,7 +828,7 @@
 
     return-object p1
 
-    .line 233
+    .line 250
     :cond_0
     invoke-static {v0, p1}, Lcom/google/protobuf/CodedInputStream;->readRawVarint32(ILjava/io/InputStream;)I
 
@@ -715,12 +836,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 237
+    .line 254
     new-instance v1, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;
 
     invoke-direct {v1, p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 238
+    .line 255
     invoke-virtual {p0, v1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -730,14 +851,10 @@
     :catch_0
     move-exception p1
 
-    .line 235
+    .line 252
     new-instance p2, Lcom/google/protobuf/InvalidProtocolBufferException;
 
-    invoke-virtual {p1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/io/IOException;)V
 
     throw p2
 .end method
@@ -750,7 +867,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parsePartialDelimitedFrom(Ljava/io/InputStream;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -766,7 +883,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialDelimitedFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -790,7 +907,7 @@
         }
     .end annotation
 
-    .line 119
+    .line 114
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -817,13 +934,13 @@
         }
     .end annotation
 
-    .line 104
+    .line 99
     :try_start_0
     invoke-virtual {p1}, Lcom/google/protobuf/ByteString;->newCodedInput()Lcom/google/protobuf/CodedInputStream;
 
     move-result-object p1
 
-    .line 105
+    .line 100
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p2
@@ -834,7 +951,7 @@
 
     const/4 v0, 0x0
 
-    .line 107
+    .line 102
     :try_start_1
     invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->checkLastTagWas(I)V
     :try_end_1
@@ -845,7 +962,7 @@
     :catch_0
     move-exception p1
 
-    .line 109
+    .line 104
     :try_start_2
     invoke-virtual {p1, p2}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -858,7 +975,7 @@
     :catch_1
     move-exception p1
 
-    .line 113
+    .line 108
     throw p1
 .end method
 
@@ -878,7 +995,7 @@
         }
     .end annotation
 
-    .line 84
+    .line 80
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
@@ -906,7 +1023,7 @@
         }
     .end annotation
 
-    .line 208
+    .line 226
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, v0}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -933,12 +1050,12 @@
         }
     .end annotation
 
-    .line 196
+    .line 214
     invoke-static {p1}, Lcom/google/protobuf/CodedInputStream;->newInstance(Ljava/io/InputStream;)Lcom/google/protobuf/CodedInputStream;
 
     move-result-object p1
 
-    .line 197
+    .line 215
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p2
@@ -947,7 +1064,7 @@
 
     const/4 v0, 0x0
 
-    .line 199
+    .line 217
     :try_start_0
     invoke-virtual {p1, v0}, Lcom/google/protobuf/CodedInputStream;->checkLastTagWas(I)V
     :try_end_0
@@ -958,7 +1075,7 @@
     :catch_0
     move-exception p1
 
-    .line 201
+    .line 219
     invoke-virtual {p1, p2}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
     move-result-object p1
@@ -980,7 +1097,7 @@
         }
     .end annotation
 
-    .line 165
+    .line 184
     array-length v0, p1
 
     sget-object v1, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
@@ -1008,7 +1125,7 @@
         }
     .end annotation
 
-    .line 154
+    .line 173
     sget-object v0, Lcom/google/protobuf/AbstractParser;->EMPTY_REGISTRY:Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-virtual {p0, p1, p2, p3, v0}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
@@ -1034,13 +1151,13 @@
         }
     .end annotation
 
-    .line 138
+    .line 157
     :try_start_0
     invoke-static {p1, p2, p3}, Lcom/google/protobuf/CodedInputStream;->newInstance([BII)Lcom/google/protobuf/CodedInputStream;
 
     move-result-object p1
 
-    .line 139
+    .line 158
     invoke-virtual {p0, p1, p4}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Ljava/lang/Object;
 
     move-result-object p2
@@ -1051,7 +1168,7 @@
 
     const/4 p3, 0x0
 
-    .line 141
+    .line 160
     :try_start_1
     invoke-virtual {p1, p3}, Lcom/google/protobuf/CodedInputStream;->checkLastTagWas(I)V
     :try_end_1
@@ -1062,7 +1179,7 @@
     :catch_0
     move-exception p1
 
-    .line 143
+    .line 162
     :try_start_2
     invoke-virtual {p1, p2}, Lcom/google/protobuf/InvalidProtocolBufferException;->setUnfinishedMessage(Lcom/google/protobuf/MessageLite;)Lcom/google/protobuf/InvalidProtocolBufferException;
 
@@ -1075,7 +1192,7 @@
     :catch_1
     move-exception p1
 
-    .line 147
+    .line 166
     throw p1
 .end method
 
@@ -1095,7 +1212,7 @@
         }
     .end annotation
 
-    .line 160
+    .line 179
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -1115,7 +1232,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/ByteString;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1131,7 +1248,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/ByteString;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1147,7 +1264,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1163,7 +1280,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Ljava/io/InputStream;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1179,7 +1296,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom(Ljava/io/InputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1195,7 +1312,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom([B)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1211,7 +1328,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom([BII)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1227,7 +1344,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom([BIILcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1
@@ -1243,7 +1360,7 @@
         }
     .end annotation
 
-    .line 49
+    .line 48
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/AbstractParser;->parsePartialFrom([BLcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/MessageLite;
 
     move-result-object p1

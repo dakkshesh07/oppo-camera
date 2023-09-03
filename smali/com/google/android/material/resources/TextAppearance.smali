@@ -3,6 +3,11 @@
 .source "TextAppearance.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final TAG:Ljava/lang/String; = "TextAppearance"
 
@@ -354,7 +359,7 @@
     :try_start_0
     iget v0, p0, Lcom/google/android/material/resources/TextAppearance;->fontFamilyResourceId:I
 
-    invoke-static {p1, v0}, Landroidx/core/content/a/f;->a(Landroid/content/Context;I)Landroid/graphics/Typeface;
+    invoke-static {p1, v0}, Landroidx/core/a/a/f;->a(Landroid/content/Context;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
@@ -497,7 +502,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v2, v3}, Landroidx/core/content/a/f;->a(Landroid/content/Context;ILandroidx/core/content/a/f$a;Landroid/os/Handler;)V
+    invoke-static {p1, v0, v2, v3}, Landroidx/core/a/a/f;->a(Landroid/content/Context;ILandroidx/core/a/a/f$a;Landroid/os/Handler;)V
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0

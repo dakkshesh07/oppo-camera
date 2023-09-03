@@ -36,7 +36,7 @@
     invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
     .line 246
-    invoke-static {p1}, Landroidx/core/g/w;->s(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->s(Landroid/view/View;)V
 
     return-void
 .end method

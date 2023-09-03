@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/b;)V
     .locals 0
 
-    .line 511
+    .line 505
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$8;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +48,7 @@
 
     goto :goto_0
 
-    .line 517
+    .line 511
     :cond_0
     :try_start_0
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$8;->a:Lcom/oppo/camera/ui/menu/setting/b;
@@ -70,16 +70,16 @@
     :catch_0
     move-exception p1
 
-    .line 520
+    .line 514
     invoke-virtual {p1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 526
+    .line 520
     :cond_1
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$8;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->j()V
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->k()V
 
     :goto_0
     return-void

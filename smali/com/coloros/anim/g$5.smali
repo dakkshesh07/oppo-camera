@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/coloros/anim/g;->a(Landroid/content/res/AssetManager;Ljava/lang/String;)Lcom/coloros/anim/f;
+    value = Lcom/coloros/anim/g;->b(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -28,17 +28,17 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/content/res/AssetManager;
+.field final synthetic a:Landroid/content/Context;
 
 .field final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .line 118
-    iput-object p1, p0, Lcom/coloros/anim/g$5;->a:Landroid/content/res/AssetManager;
+    .line 106
+    iput-object p1, p0, Lcom/coloros/anim/g$5;->a:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/coloros/anim/g$5;->b:Ljava/lang/String;
 
@@ -60,12 +60,12 @@
         }
     .end annotation
 
-    .line 121
-    iget-object v0, p0, Lcom/coloros/anim/g$5;->a:Landroid/content/res/AssetManager;
+    .line 109
+    iget-object v0, p0, Lcom/coloros/anim/g$5;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/coloros/anim/g$5;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/coloros/anim/g;->b(Landroid/content/res/AssetManager;Ljava/lang/String;)Lcom/coloros/anim/e;
+    invoke-static {v0, v1}, Lcom/coloros/anim/g;->c(Landroid/content/Context;Ljava/lang/String;)Lcom/coloros/anim/e;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
         }
     .end annotation
 
-    .line 118
+    .line 106
     invoke-virtual {p0}, Lcom/coloros/anim/g$5;->a()Lcom/coloros/anim/e;
 
     move-result-object v0

@@ -3,7 +3,7 @@
 .source "AppCompatDelegateImpl.java"
 
 # interfaces
-.implements Landroidx/appcompat/widget/ad$a;
+.implements Landroidx/appcompat/widget/ac$a;
 
 
 # annotations
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->a(Landroidx/core/g/ae;Landroid/graphics/Rect;)I
+    invoke-virtual {v0, v1, p1}, Landroidx/appcompat/app/AppCompatDelegateImpl;->a(Landroidx/core/f/ae;Landroid/graphics/Rect;)I
 
     move-result v0
 

@@ -431,7 +431,7 @@
     const-string v1, "RV Nested Prefetch"
 
     .line 329
-    invoke-static {v1}, Landroidx/core/c/a;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Landroidx/core/os/a;->a(Ljava/lang/String;)V
 
     .line 330
     iget-object v1, p1, Landroidx/recyclerview/widget/RecyclerView;->mState:Landroidx/recyclerview/widget/RecyclerView$t;
@@ -466,14 +466,14 @@
 
     .line 338
     :cond_2
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     goto :goto_1
 
     :catchall_0
     move-exception p1
 
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     .line 339
     throw p1
@@ -727,7 +727,7 @@
     const-string v2, "RV Prefetch"
 
     .line 374
-    invoke-static {v2}, Landroidx/core/c/a;->a(Ljava/lang/String;)V
+    invoke-static {v2}, Landroidx/core/os/a;->a(Ljava/lang/String;)V
 
     .line 376
     iget-object v2, p0, Landroidx/recyclerview/widget/h;->b:Ljava/util/ArrayList;
@@ -745,7 +745,7 @@
     iput-wide v0, p0, Landroidx/recyclerview/widget/h;->c:J
 
     .line 404
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     return-void
 
@@ -823,7 +823,7 @@
     iput-wide v0, p0, Landroidx/recyclerview/widget/h;->c:J
 
     .line 404
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     return-void
 
@@ -834,7 +834,7 @@
     iput-wide v0, p0, Landroidx/recyclerview/widget/h;->c:J
 
     .line 404
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
     .line 405
     throw v2

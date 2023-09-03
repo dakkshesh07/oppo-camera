@@ -1,11 +1,14 @@
 .class Lcom/airbnb/lottie/LottieAnimationView$4;
-.super Lcom/airbnb/lottie/g/c;
+.super Ljava/lang/Object;
 .source "LottieAnimationView.java"
+
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/airbnb/lottie/LottieAnimationView;->a(Lcom/airbnb/lottie/c/e;Ljava/lang/Object;Lcom/airbnb/lottie/g/e;)V
+    value = Lcom/airbnb/lottie/LottieAnimationView;->a(I)Lcom/airbnb/lottie/m;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,50 +18,103 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/airbnb/lottie/g/c<",
-        "TT;>;"
+        "Ljava/lang/Object;",
+        "Ljava/util/concurrent/Callable<",
+        "Lcom/airbnb/lottie/l<",
+        "Lcom/airbnb/lottie/d;",
+        ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/airbnb/lottie/g/e;
+.field final synthetic a:I
 
 .field final synthetic b:Lcom/airbnb/lottie/LottieAnimationView;
 
 
 # direct methods
-.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;Lcom/airbnb/lottie/g/e;)V
+.method constructor <init>(Lcom/airbnb/lottie/LottieAnimationView;I)V
     .locals 0
 
-    .line 866
+    .line 409
     iput-object p1, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->b:Lcom/airbnb/lottie/LottieAnimationView;
 
-    iput-object p2, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->a:Lcom/airbnb/lottie/g/e;
+    iput p2, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->a:I
 
-    invoke-direct {p0}, Lcom/airbnb/lottie/g/c;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/g/b;)Ljava/lang/Object;
-    .locals 1
+.method public a()Lcom/airbnb/lottie/l;
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lcom/airbnb/lottie/g/b<",
-            "TT;>;)TT;"
+            "()",
+            "Lcom/airbnb/lottie/l<",
+            "Lcom/airbnb/lottie/d;",
+            ">;"
         }
     .end annotation
 
-    .line 868
-    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->a:Lcom/airbnb/lottie/g/e;
+    .line 411
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->b:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-interface {v0, p1}, Lcom/airbnb/lottie/g/e;->a(Lcom/airbnb/lottie/g/b;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/airbnb/lottie/LottieAnimationView;->c(Lcom/airbnb/lottie/LottieAnimationView;)Z
 
-    move-result-object p1
+    move-result v0
 
-    return-object p1
+    if-eqz v0, :cond_0
+
+    .line 412
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->b:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->a:I
+
+    invoke-static {v0, v1}, Lcom/airbnb/lottie/e;->b(Landroid/content/Context;I)Lcom/airbnb/lottie/l;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->b:Lcom/airbnb/lottie/LottieAnimationView;
+
+    invoke-virtual {v0}, Lcom/airbnb/lottie/LottieAnimationView;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/airbnb/lottie/LottieAnimationView$4;->a:I
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/airbnb/lottie/e;->b(Landroid/content/Context;ILjava/lang/String;)Lcom/airbnb/lottie/l;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+.end method
+
+.method public synthetic call()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 409
+    invoke-virtual {p0}, Lcom/airbnb/lottie/LottieAnimationView$4;->a()Lcom/airbnb/lottie/l;
+
+    move-result-object v0
+
+    return-object v0
 .end method

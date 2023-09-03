@@ -17,11 +17,11 @@
 
 
 # instance fields
-.field public a:Lcom/oppo/camera/l;
+.field public a:Lcom/oppo/camera/i;
 
-.field public b:Z
+.field public b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-.field protected c:Z
+.field public c:Z
 
 .field protected d:Z
 
@@ -29,37 +29,43 @@
 
 .field protected f:Z
 
-.field protected g:I
+.field protected g:Z
 
-.field protected h:Landroid/content/Context;
+.field protected h:Z
 
-.field protected i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+.field protected i:I
 
-.field protected j:Lcom/oppo/camera/ui/menu/setting/i;
+.field protected j:Landroid/content/Context;
 
-.field protected k:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;
+.field protected k:Lcom/oppo/camera/ui/menu/setting/i;
 
-.field protected l:Lcom/oppo/camera/ui/e;
+.field protected l:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;
 
-.field protected m:I
+.field protected m:Lcom/oppo/camera/ui/d;
 
-.field private n:Z
+.field protected n:I
 
-.field private o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+.field protected o:Lcom/oppo/camera/ui/menu/a;
 
-.field private p:Landroid/view/ViewGroup;
+.field protected p:Z
 
-.field private q:I
+.field private q:Z
 
-.field private r:I
+.field private r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
-.field private s:I
+.field private s:Landroid/view/ViewGroup;
 
 .field private t:I
 
-.field private u:Ljava/lang/String;
+.field private u:I
 
-.field private v:Ljava/util/ArrayList;
+.field private v:I
+
+.field private w:I
+
+.field private x:Ljava/lang/String;
+
+.field private y:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
@@ -69,120 +75,119 @@
     .end annotation
 .end field
 
-.field private w:Z
-
-.field private x:Lcom/oppo/camera/ui/menu/a;
-
 
 # direct methods
-.method public constructor <init>(Lcom/oppo/camera/l;Landroid/content/Context;Lcom/oppo/camera/ui/menu/a;Lcom/oppo/camera/ui/menu/setting/i;Lcom/oppo/camera/ui/e;ILjava/lang/String;)V
+.method public constructor <init>(Lcom/oppo/camera/i;Landroid/content/Context;Lcom/oppo/camera/ui/menu/a;Lcom/oppo/camera/ui/menu/setting/i;Lcom/oppo/camera/ui/d;ILjava/lang/String;)V
     .locals 3
 
-    .line 92
+    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 54
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/l;
+    .line 67
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    .line 68
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     const/4 v1, 0x0
 
-    .line 55
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Z
-
-    .line 57
+    .line 69
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
 
-    .line 58
+    .line 71
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+
+    .line 72
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
 
     const/4 v2, 0x1
 
-    .line 59
-    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
+    .line 73
+    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f:Z
 
-    .line 60
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f:Z
+    .line 74
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:Z
 
-    .line 61
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:I
+    .line 75
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Z
 
-    .line 62
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
-
-    .line 63
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    .line 64
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
-
-    .line 65
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;
-
-    .line 66
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/e;
-
-    .line 67
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 76
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:I
 
     .line 77
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
 
     .line 78
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     .line 79
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;
 
     .line 80
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
 
     .line 81
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:I
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     .line 82
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:I
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     .line 83
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
+    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
-    .line 85
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    .line 86
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    .line 87
-    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
-
-    .line 88
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 92
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
 
     .line 93
-    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     .line 94
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/l;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:Landroid/view/ViewGroup;
 
     .line 95
-    iput-object p4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
+
+    .line 96
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:I
+
+    .line 97
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:I
+
+    .line 98
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:I
+
+    .line 100
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    .line 101
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    .line 106
+    iput-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
+
+    .line 107
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    .line 108
+    iput-object p4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     if-eqz p3, :cond_1
 
-    .line 98
-    iput-object p3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 111
+    iput-object p3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
-    .line 100
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 113
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/g;->a(Lcom/oppo/camera/ui/menu/a;)Z
+    invoke-static {p1}, Lcom/oppo/camera/ui/f;->a(Lcom/oppo/camera/ui/menu/a;)Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 101
+    .line 114
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -203,15 +208,15 @@
 
     const-string p2, "CameraMenuOption"
 
-    invoke-static {p2, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 106
+    .line 119
     :cond_0
     new-instance p1, Ljava/util/ArrayList;
 
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
 
@@ -219,51 +224,352 @@
 
     invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    .line 107
-    invoke-virtual {p0, p7}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n(Ljava/lang/String;)Ljava/lang/String;
+    .line 120
+    invoke-virtual {p0, p7}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o(Ljava/lang/String;)V
 
-    .line 110
+    .line 123
     :cond_1
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0703be
+    const p2, 0x7f0704b5
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:I
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:I
 
-    .line 111
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
+    .line 124
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const p2, 0x7f0703bf
+    const p2, 0x7f0704b6
 
     invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p1
 
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:I
 
-    .line 112
-    iput-object p5, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/e;
+    .line 125
+    iput-object p5, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
 
-    .line 113
-    iput p6, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:I
+    .line 126
+    iput p6, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:I
+
+    return-void
+.end method
+
+.method private a(ILjava/lang/String;)V
+    .locals 12
+
+    .line 1208
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    const-string v1, "pref_video_size_key"
+
+    .line 1209
+    invoke-static {v1, p1}, Lcom/oppo/camera/aps/config/CameraConfig;->getOptionKeyDefaultValue(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 1208
+    invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz p2, :cond_0
+
+    .line 1211
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 1215
+    :cond_0
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
+
+    const v3, 0x7f1003ca
+
+    .line 1216
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "pref_video_fps_key"
+
+    .line 1215
+    invoke-virtual {v0, v3, v2}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1217
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g(I)Z
+
+    move-result v2
+
+    .line 1219
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    invoke-virtual {v4}, Lcom/oppo/camera/i;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v4
+
+    .line 1220
+    invoke-interface {v4, v1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    const-string v5, ""
+
+    const-string v6, "pref_lasted_video_size"
+
+    .line 1221
+    invoke-interface {v4, v6, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    const-string v6, "pref_lasted_video_save_status"
+
+    const/4 v7, 0x0
+
+    .line 1222
+    invoke-interface {v4, v6, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    const-string v8, "video_size_4kuhd"
+
+    .line 1224
+    invoke-virtual {v8, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    const-string v9, "off"
+
+    const-string v10, "pref_none_sat_ultra_wide_angle_key"
+
+    const-string v11, "pref_lasted_video_fps"
+
+    if-eqz v8, :cond_3
+
+    .line 1225
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    invoke-virtual {v2, v11, v5}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 1228
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_1
+
+    const/16 v8, 0x3c
+
+    .line 1229
+    invoke-static {v8}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v8, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 1230
+    invoke-static {p1, p2}, Lcom/oppo/camera/util/Util;->a(ILjava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 1231
+    invoke-interface {v4, v11, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1232
+    invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    :cond_1
+    const/4 v2, 0x0
+
+    .line 1235
+    invoke-virtual {p0, p1, v2, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
+
+    if-eqz v2, :cond_2
+
+    .line 1237
+    invoke-interface {v2}, Lcom/oppo/camera/ui/d;->m()F
+
+    move-result v2
+
+    const v8, 0x3f19999a    # 0.6f
+
+    invoke-static {v2, v8}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    const-string v2, "com.oplus.feature.wide.angle.open.default"
+
+    .line 1238
+    invoke-static {v2}, Lcom/oppo/camera/aps/config/CameraConfig;->getConfigBooleanValue(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    const-string v2, "on"
+
+    .line 1239
+    invoke-interface {v4, v10, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_0
+
+    .line 1241
+    :cond_2
+    invoke-interface {v4, v10, v9}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    :goto_0
+    const-string v2, "pref_video_blur_menu_state"
+
+    .line 1244
+    invoke-interface {v4, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    const-string v2, "pref_video_blur_menu_index"
+
+    .line 1245
+    invoke-interface {v4, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    const-string v2, "pref_video_blur_menu"
+
+    .line 1246
+    invoke-interface {v4, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_1
+
+    :cond_3
+    if-eqz v2, :cond_4
+
+    .line 1248
+    invoke-interface {v4, v10, v9}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1250
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
+
+    if-eqz v2, :cond_4
+
+    .line 1251
+    invoke-interface {v2}, Lcom/oppo/camera/ui/d;->l()V
+
+    :cond_4
+    :goto_1
+    const-string v2, "video_size_1080p"
+
+    .line 1255
+    invoke-virtual {v2, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    .line 1256
+    invoke-static {p1}, Lcom/oppo/camera/device/a;->c(I)Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    const-string v2, "pref_video_super_eis_key"
+
+    .line 1257
+    invoke-interface {v4, v2, v9}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    const-string v2, "pref_super_eis_wide_key"
+
+    .line 1258
+    invoke-interface {v4, v2, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 1261
+    :cond_5
+    invoke-static {p1, p2}, Lcom/oppo/camera/util/Util;->a(ILjava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    .line 1262
+    invoke-interface {v4, v11, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1263
+    invoke-interface {v4, v6, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    const/16 p1, 0x1e
+
+    .line 1265
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    .line 1266
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {v4, v3, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1270
+    :cond_6
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
+
+    if-eqz p1, :cond_7
+
+    .line 1271
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0, p2}, Lcom/oppo/camera/ui/menu/setting/i;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1274
+    :cond_7
+    invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 1275
+    invoke-virtual {p0, v1, p2, v7}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -271,43 +577,230 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;Z)Z
     .locals 0
 
-    .line 44
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
+    .line 56
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
 
     return p1
 .end method
 
+.method private b(ILjava/lang/String;)V
+    .locals 4
+
+    .line 1279
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    invoke-static {p1}, Lcom/oppo/camera/util/Util;->m(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "pref_slow_video_size_key"
+
+    invoke-virtual {v0, v2, v1}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1280
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    invoke-virtual {v1}, Lcom/oppo/camera/i;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    .line 1281
+    invoke-interface {v1, v2, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1283
+    invoke-static {p1}, Lcom/oppo/camera/device/a;->c(I)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    const-string p1, "video_size_1080p"
+
+    .line 1284
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    const-string v3, "pref_slow_video_rear_fps_key"
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "com.oplus.slow.video.1080p.default.value"
+
+    .line 1286
+    invoke-static {p1}, Lcom/oppo/camera/aps/config/CameraConfig;->getConfigIntValue(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 1285
+    invoke-interface {v1, v3, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "video_size_720p"
+
+    .line 1287
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const-string p1, "com.oplus.slow.video.720p.default.value"
+
+    .line 1289
+    invoke-static {p1}, Lcom/oppo/camera/aps/config/CameraConfig;->getConfigIntValue(Ljava/lang/String;)I
+
+    move-result p1
+
+    .line 1288
+    invoke-interface {v1, v3, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 1293
+    :cond_1
+    :goto_0
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public A()I
+.method public A()Z
     .locals 1
 
-    .line 948
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
+    .line 965
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
+
+    return v0
+.end method
+
+.method public B()V
+    .locals 2
+
+    .line 979
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
+
+    if-eqz v1, :cond_0
+
+    .line 980
+    invoke-virtual {v0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->onAnimationEnd(Landroid/view/animation/Animation;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public C()I
+    .locals 1
+
+    .line 991
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:I
+
+    return v0
+.end method
+
+.method public D()I
+    .locals 1
+
+    .line 1031
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 949
+    .line 1032
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/16 v0, 0x8
+
+    return v0
+.end method
+
+.method public E()Z
+    .locals 1
+
+    .line 1039
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 1040
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->isShown()Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public F()I
+    .locals 1
+
+    .line 1047
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+
+    if-eqz v0, :cond_0
+
+    .line 1048
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a()I
 
     move-result v0
 
     return v0
 
-    .line 950
+    .line 1049
     :cond_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 951
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 1050
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -323,7 +816,7 @@
     return v0
 .end method
 
-.method public B()Landroid/view/View;
+.method public G()Landroid/view/View;
     .locals 1
 
     const/4 v0, 0x0
@@ -331,11 +824,40 @@
     return-object v0
 .end method
 
-.method public C()I
+.method public H()Z
     .locals 1
 
-    .line 1054
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected I()Ljava/lang/String;
+    .locals 1
+
+    .line 1160
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
+
+    if-eqz v0, :cond_0
+
+    .line 1161
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionTitle()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public J()I
+    .locals 1
+
+    .line 1168
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionType()I
 
@@ -344,15 +866,15 @@
     return v0
 .end method
 
-.method public D()Landroid/graphics/drawable/Drawable;
+.method public K()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1074
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1321
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -360,10 +882,10 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 1075
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1322
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -377,8 +899,8 @@
 
     if-nez v0, :cond_1
 
-    .line 1078
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1325
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
@@ -402,15 +924,15 @@
     return-object v0
 .end method
 
-.method public E()Landroid/graphics/drawable/Drawable;
+.method public L()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1088
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1338
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -418,10 +940,10 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 1089
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1339
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -435,8 +957,8 @@
 
     if-nez v0, :cond_1
 
-    .line 1092
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1342
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
@@ -460,11 +982,11 @@
     return-object v0
 .end method
 
-.method public F()Z
+.method public M()Z
     .locals 2
 
-    .line 1100
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    .line 1350
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
     const-string v1, "on"
 
@@ -475,15 +997,15 @@
     return v0
 .end method
 
-.method public G()Landroid/graphics/drawable/Drawable;
+.method public N()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .line 1106
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1356
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     if-eqz v0, :cond_0
 
-    .line 1107
+    .line 1357
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionExpandIcon()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -497,15 +1019,15 @@
     return-object v0
 .end method
 
-.method public H()Ljava/lang/String;
+.method public O()Ljava/lang/String;
     .locals 2
 
-    .line 1128
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1378
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -513,11 +1035,11 @@
 
     if-ge v1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    .line 1129
+    .line 1379
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -534,10 +1056,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1130
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1380
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -557,15 +1079,15 @@
     return-object v0
 .end method
 
-.method public I()Ljava/lang/String;
+.method public P()Ljava/lang/String;
     .locals 2
 
-    .line 1137
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1387
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -573,10 +1095,10 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 1138
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1388
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -596,15 +1118,15 @@
     return-object v0
 .end method
 
-.method public J()I
+.method public Q()I
     .locals 1
 
-    .line 1153
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1403
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 1154
+    .line 1404
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -617,40 +1139,28 @@
     return v0
 .end method
 
-.method public K()Ljava/util/List;
+.method public R()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljava/util/List<",
+            "Ljava/util/ArrayList<",
             "Lcom/oppo/camera/ui/menu/d;",
             ">;"
         }
     .end annotation
 
-    .line 1161
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
-
-    if-eqz v0, :cond_0
-
-    .line 1162
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
+    .line 1411
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method public L()Z
+.method public S()Z
     .locals 1
 
-    .line 1169
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1415
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionOnOff()Z
 
@@ -659,11 +1169,11 @@
     return v0
 .end method
 
-.method public M()Z
+.method public T()Z
     .locals 1
 
-    .line 1173
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1419
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getImageTitleMode()Z
 
@@ -672,11 +1182,11 @@
     return v0
 .end method
 
-.method public N()Z
+.method public U()Z
     .locals 1
 
-    .line 1177
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1423
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getImageTitleColorChangeable()Z
 
@@ -685,11 +1195,11 @@
     return v0
 .end method
 
-.method public O()I
+.method public V()I
     .locals 1
 
-    .line 1181
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1427
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getGroupType()I
 
@@ -698,20 +1208,20 @@
     return v0
 .end method
 
-.method public P()I
+.method public W()I
     .locals 1
 
-    .line 1222
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 1453
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     return v0
 .end method
 
-.method protected Q()Landroid/graphics/Bitmap;
+.method protected X()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 1371
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1604
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOffAnimationIcon()Landroid/graphics/Bitmap;
 
@@ -720,11 +1230,11 @@
     return-object v0
 .end method
 
-.method protected R()Landroid/graphics/Bitmap;
+.method protected Y()Landroid/graphics/Bitmap;
     .locals 1
 
-    .line 1375
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1608
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOnAnimationIcon()Landroid/graphics/Bitmap;
 
@@ -736,12 +1246,12 @@
 .method public a()Ljava/lang/String;
     .locals 1
 
-    .line 1046
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1152
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     if-eqz v0, :cond_0
 
-    .line 1047
+    .line 1153
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionKey()Ljava/lang/String;
 
     move-result-object v0
@@ -757,15 +1267,15 @@
 .method public a(F)V
     .locals 2
 
-    .line 826
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 922
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 827
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 923
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -775,7 +1285,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v1
 
@@ -785,7 +1295,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -803,12 +1313,12 @@
 .method public a(I)V
     .locals 1
 
-    .line 147
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+    .line 160
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->J()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->Q()I
 
     move-result v0
 
@@ -817,22 +1327,22 @@
     :cond_0
     const/16 p1, 0x8
 
-    .line 149
+    .line 162
     :cond_1
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->D()I
 
     move-result v0
 
     if-eq v0, p1, :cond_2
 
-    .line 150
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 163
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -845,7 +1355,7 @@
 .method public a(II)V
     .locals 2
 
-    .line 889
+    .line 995
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -866,7 +1376,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 890
+    .line 996
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -879,35 +1389,35 @@
 
     const-string v1, "CameraMenuOption"
 
-    .line 889
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 995
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-ne p1, p2, :cond_0
 
     return-void
 
-    .line 896
+    .line 1002
     :cond_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    .line 897
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 1003
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     if-nez v0, :cond_1
 
-    .line 898
+    .line 1004
     new-instance v0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;-><init>(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)V
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
-    .line 899
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 1005
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
@@ -915,19 +1425,19 @@
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 900
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 1006
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     invoke-virtual {v0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 903
+    .line 1009
     :cond_1
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
 
     if-eqz v0, :cond_2
 
-    .line 904
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 1010
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a(I)V
 
@@ -936,34 +1446,34 @@
     :cond_2
     const/4 v0, 0x1
 
-    .line 906
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
+    .line 1012
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:Z
 
-    .line 907
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 1013
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a(II)V
 
-    .line 908
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 1014
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     const-wide/16 v0, 0xfa
 
     invoke-virtual {p1, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->setDuration(J)V
 
-    .line 909
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 1015
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 910
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 1016
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     invoke-virtual {p1, p2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
@@ -975,15 +1485,15 @@
 .method public a(IIII)V
     .locals 1
 
-    .line 863
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 959
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 864
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 960
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -996,12 +1506,12 @@
 .method public a(IZ)V
     .locals 1
 
-    .line 262
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 275
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v0, :cond_0
 
-    .line 263
+    .line 276
     invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(IZ)V
 
     :cond_0
@@ -1025,19 +1535,19 @@
 
     if-eqz p1, :cond_0
 
-    .line 836
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 932
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 838
+    .line 934
     :try_start_0
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:Landroid/view/ViewGroup;
 
-    .line 839
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 935
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -1050,7 +1560,7 @@
     :catch_0
     move-exception p1
 
-    .line 841
+    .line 937
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1071,7 +1581,7 @@
 
     const-string v0, "CameraMenuOption"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -1081,8 +1591,8 @@
 .method public a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;)V
     .locals 0
 
-    .line 832
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;
+    .line 928
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$OnItemClickListener;
 
     return-void
 .end method
@@ -1090,12 +1600,12 @@
 .method public a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;I)V
     .locals 4
 
-    .line 202
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    .line 215
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     if-eqz p1, :cond_6
 
-    .line 203
+    .line 216
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -1110,7 +1620,7 @@
 
     if-nez p1, :cond_0
 
-    .line 204
+    .line 217
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1135,19 +1645,19 @@
 
     const-string p2, "CameraMenuOption"
 
-    invoke-static {p2, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 211
+    .line 224
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-interface {p1, v0, v3, p2}, Lcom/oppo/camera/ui/menu/setting/i;->a(Ljava/lang/String;II)Ljava/lang/String;
 
@@ -1155,33 +1665,33 @@
 
     if-eqz p1, :cond_1
 
-    .line 214
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 227
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    invoke-static {p1, p2}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+    invoke-static {p1, p2}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
 
     move-result p2
 
-    .line 217
+    .line 230
     :cond_1
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     if-eq p1, p2, :cond_2
 
-    .line 220
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g(I)V
+    .line 233
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i(I)V
 
-    .line 221
+    .line 234
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    .line 223
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    .line 236
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-interface {p1, v0, v2}, Lcom/oppo/camera/ui/menu/setting/i;->a(Ljava/lang/String;Z)Z
+    invoke-interface {p1, p2, v2}, Lcom/oppo/camera/ui/menu/setting/i;->a(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -1192,31 +1702,31 @@
     :cond_2
     move v1, v2
 
-    .line 228
+    .line 241
     :goto_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz p1, :cond_3
 
-    .line 229
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 242
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionSingleIcon()Landroid/graphics/Bitmap;
+    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/a;->getOptionSingleIcon()Landroid/graphics/Bitmap;
 
-    move-result-object v0
+    move-result-object p2
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemIcon(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemIcon(Landroid/graphics/Bitmap;)V
 
-    .line 230
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 243
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
+    invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
 
-    .line 233
+    .line 246
     :cond_3
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -1224,14 +1734,14 @@
 
     const/4 p1, 0x3
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->O()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->V()I
 
-    move-result v0
+    move-result p2
 
-    if-eq p1, v0, :cond_4
+    if-eq p1, p2, :cond_4
 
-    .line 234
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 247
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -1240,20 +1750,18 @@
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 238
+    .line 251
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n()V
 
-    .line 241
+    .line 254
     :cond_5
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    invoke-interface {p1, v0, v1, p2}, Lcom/oppo/camera/ui/menu/setting/i;->b(Ljava/lang/String;II)V
+    invoke-interface {p1, p2}, Lcom/oppo/camera/ui/menu/setting/i;->a(Ljava/lang/String;)V
 
     :cond_6
     return-void
@@ -1262,7 +1770,7 @@
 .method public a(Ljava/lang/String;)V
     .locals 3
 
-    .line 633
+    .line 732
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1289,10 +1797,10 @@
 
     const-string v1, "CameraMenuOption"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 635
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->z()Z
+    .line 734
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->E()Z
 
     move-result v0
 
@@ -1304,7 +1812,7 @@
 
     if-nez v0, :cond_4
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -1312,9 +1820,9 @@
 
     goto :goto_1
 
-    .line 639
+    .line 738
     :cond_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -1322,7 +1830,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setClickable(Z)V
 
-    .line 641
+    .line 740
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -1335,11 +1843,11 @@
 
     const/4 p1, 0x1
 
-    .line 642
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    .line 741
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
-    .line 644
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 743
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -1347,40 +1855,40 @@
 
     move-result v0
 
-    .line 645
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:I
+    .line 744
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:I
 
-    .line 646
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
+    .line 745
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
 
-    .line 648
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u()Z
+    .line 747
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->A()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 649
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v()V
+    .line 748
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()V
 
     :cond_1
     if-eq v0, v1, :cond_2
 
-    .line 653
+    .line 752
     invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(II)V
 
     goto :goto_0
 
-    .line 655
+    .line 754
     :cond_2
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
-    .line 656
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 755
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -1388,26 +1896,50 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 659
+    .line 758
     :goto_0
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
     goto :goto_1
 
-    .line 661
+    .line 760
     :cond_3
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g(Ljava/lang/String;)V
 
     :cond_4
     :goto_1
     return-void
 .end method
 
+.method protected a(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    .locals 0
+
+    return-void
+.end method
+
 .method public a(Z)V
     .locals 0
 
-    .line 258
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
+    .line 271
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f:Z
+
+    return-void
+.end method
+
+.method public a(ZII)V
+    .locals 0
 
     return-void
 .end method
@@ -1415,37 +1947,37 @@
 .method public a(ZZ)V
     .locals 3
 
-    .line 155
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    .line 168
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
     const/high16 v1, 0x3f000000    # 0.5f
 
     const/4 v2, 0x0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_2
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 156
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 169
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 157
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 170
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 158
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 171
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -1461,32 +1993,31 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 161
-    :cond_1
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 173
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     instance-of v0, v0, Landroid/view/ViewGroup;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
-    .line 162
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 174
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 164
+    .line 176
     :goto_1
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v1
 
-    if-ge v2, v1, :cond_2
+    if-ge v2, v1, :cond_1
 
-    .line 165
+    .line 177
     invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
@@ -1497,53 +2028,53 @@
 
     goto :goto_1
 
-    .line 169
-    :cond_2
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
+    .line 182
+    :cond_1
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
-    .line 171
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 184
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
-    .line 172
+    .line 185
     invoke-virtual {v0, p1, p2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(ZZ)V
 
     goto :goto_3
 
-    .line 175
-    :cond_3
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 188
+    :cond_2
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_3
 
-    .line 176
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 189
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 177
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 190
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
 
-    .line 179
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 192
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     instance-of p1, p1, Landroid/view/ViewGroup;
 
-    if-eqz p1, :cond_4
+    if-eqz p1, :cond_3
 
-    .line 180
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 193
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -1551,15 +2082,15 @@
 
     move p2, v2
 
-    .line 182
+    .line 195
     :goto_2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
 
-    if-ge p2, v0, :cond_4
+    if-ge p2, v0, :cond_3
 
-    .line 183
+    .line 196
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
@@ -1570,23 +2101,108 @@
 
     goto :goto_2
 
-    .line 188
-    :cond_4
-    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
+    .line 201
+    :cond_3
+    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
-    .line 190
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 203
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_4
 
     const/4 p2, 0x1
 
-    .line 191
+    .line 204
     invoke-virtual {p1, v2, p2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(ZZ)V
 
-    :cond_5
+    :cond_4
     :goto_3
     return-void
+.end method
+
+.method protected a(ILjava/lang/String;Ljava/lang/String;)Z
+    .locals 2
+
+    if-nez p2, :cond_0
+
+    .line 1304
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
+
+    const v1, 0x7f1003ca
+
+    .line 1305
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "pref_video_fps_key"
+
+    .line 1304
+    invoke-virtual {p2, v1, v0}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    :cond_0
+    if-nez p3, :cond_1
+
+    .line 1309
+    iget-object p3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    const-string v0, "pref_video_size_key"
+
+    .line 1310
+    invoke-static {v0, p1}, Lcom/oppo/camera/aps/config/CameraConfig;->getOptionKeyDefaultValue(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 1309
+    invoke-virtual {p3, v0, p1}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
+    :cond_1
+    const-string p1, "video_size_4kuhd"
+
+    .line 1313
+    invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/16 p1, 0x3c
+
+    .line 1314
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const-string p1, "com.oplus.feature.video.4k60fps.ultrawide.support"
+
+    .line 1315
+    invoke-static {p1}, Lcom/oppo/camera/aps/config/CameraConfig;->getConfigBooleanValue(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
 .end method
 
 .method public a(Ljava/lang/String;I)Z
@@ -1596,7 +2212,7 @@
 
     if-eqz p1, :cond_1
 
-    .line 1206
+    .line 463
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -1607,16 +2223,16 @@
 
     if-eqz p1, :cond_1
 
-    .line 1207
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 464
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz p1, :cond_0
 
     move p1, v0
 
-    .line 1208
+    .line 465
     :goto_0
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -1624,8 +2240,8 @@
 
     if-ge p1, v1, :cond_0
 
-    .line 1209
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 466
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1633,8 +2249,8 @@
 
     check-cast v1, Lcom/oppo/camera/ui/menu/d;
 
-    .line 1210
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
+    .line 467
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
 
     invoke-virtual {v2, p2}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1642,12 +2258,12 @@
 
     invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/menu/d;->a(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1211
+    .line 468
     invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/d;->a()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {p0, v1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-virtual {p0, v1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Landroid/graphics/drawable/Drawable;Z)V
 
     add-int/lit8 p1, p1, 0x1
 
@@ -1662,107 +2278,6 @@
     return v0
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 3
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    .line 460
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    return v0
-
-    .line 464
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "disableMenuOption, key: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "CameraMenuOption"
-
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 466
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p()Z
-
-    move-result p1
-
-    const/4 v1, 0x1
-
-    if-eqz p1, :cond_2
-
-    .line 467
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
-
-    .line 468
-    invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
-
-    .line 469
-    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
-
-    xor-int/2addr p1, v1
-
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
-
-    if-eqz p2, :cond_1
-
-    .line 472
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 473
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->E()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->F()Z
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(Landroid/graphics/drawable/Drawable;Z)V
-
-    .line 477
-    :cond_1
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    .line 478
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    :cond_2
-    return v1
-.end method
-
 .method public a(Ljava/lang/String;Ljava/lang/String;IZ)Z
     .locals 3
 
@@ -1772,7 +2287,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 572
+    .line 637
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v2
@@ -1789,34 +2304,34 @@
 
     if-eqz v2, :cond_2
 
-    .line 573
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    .line 638
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     if-eqz v2, :cond_1
 
-    invoke-interface {v2, p1}, Lcom/oppo/camera/ui/menu/setting/i;->a(Ljava/lang/String;)Z
+    invoke-interface {v2, p1}, Lcom/oppo/camera/ui/menu/setting/i;->b(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    .line 574
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+    .line 639
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
 
-    .line 575
+    .line 640
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Z)V
 
-    .line 576
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e(Ljava/lang/String;)V
+    .line 641
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
 
-    .line 577
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    .line 642
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-interface {p1}, Lcom/oppo/camera/ui/menu/setting/i;->getMenuPanelEnable()Z
 
     move-result p1
 
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-interface {p2}, Lcom/oppo/camera/ui/menu/setting/i;->getMenuPanelAshed()Z
 
@@ -1828,23 +2343,26 @@
 
     if-eqz p4, :cond_0
 
-    .line 580
-    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
+    .line 645
+    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e(I)V
 
     goto :goto_0
 
-    .line 582
+    .line 647
     :cond_0
     invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(I)V
 
+    .line 651
     :cond_1
     :goto_0
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r()V
+
     return v0
 
     :cond_2
     if-eqz p1, :cond_4
 
-    .line 587
+    .line 654
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object p2
@@ -1855,7 +2373,7 @@
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result p1
 
@@ -1863,10 +2381,13 @@
 
     if-nez p3, :cond_3
 
-    .line 589
-    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
+    .line 656
+    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e(I)V
 
+    .line 659
     :cond_3
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r()V
+
     return v0
 
     :cond_4
@@ -1874,27 +2395,52 @@
 .end method
 
 .method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 2
+    .locals 3
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    .line 486
+    .line 518
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_0
+    if-nez v1, :cond_0
 
     return v0
 
-    .line 490
+    .line 522
     :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "disableMenuOption, key: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", keyValue: "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "CameraMenuOption"
+
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 524
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p()Z
 
     move-result p1
@@ -1903,56 +2449,59 @@
 
     if-eqz p1, :cond_3
 
-    .line 491
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    .line 525
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
-    .line 492
-    invoke-virtual {p0, v1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
+    .line 526
+    invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
 
-    .line 493
-    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    .line 527
+    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
     xor-int/2addr p1, v1
 
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
     if-nez p3, :cond_1
 
-    .line 496
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e(Ljava/lang/String;)V
+    .line 530
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:Z
+
+    .line 531
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 498
+    .line 533
     :cond_1
-    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j(Ljava/lang/String;)Z
+    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    .line 499
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->E()Landroid/graphics/drawable/Drawable;
+    .line 534
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->L()Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->F()Z
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->M()Z
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Landroid/graphics/drawable/Drawable;Z)V
 
-    .line 503
+    .line 538
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    .line 504
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 539
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -1979,7 +2528,7 @@
 
     if-eqz p1, :cond_5
 
-    .line 425
+    .line 479
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -1990,8 +2539,8 @@
 
     if-eqz p1, :cond_5
 
-    .line 426
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n(Ljava/lang/String;)Ljava/lang/String;
+    .line 480
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2003,20 +2552,20 @@
 
     if-eqz p1, :cond_4
 
-    .line 427
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 481
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz p1, :cond_0
 
-    .line 428
+    .line 482
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k()V
 
-    .line 431
+    .line 485
     :cond_0
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    .line 433
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->J()I
+    .line 487
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->Q()I
 
     move-result p1
 
@@ -2024,18 +2573,18 @@
 
     if-ge p1, v1, :cond_1
 
-    .line 434
+    .line 488
     invoke-virtual {p0, v0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
 
     goto :goto_0
 
-    .line 435
+    .line 489
     :cond_1
-    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
     if-nez p1, :cond_2
 
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-interface {p1}, Lcom/oppo/camera/ui/menu/setting/i;->getMenuPanelEnable()Z
 
@@ -2043,13 +2592,13 @@
 
     if-eqz p1, :cond_2
 
-    .line 436
+    .line 490
     invoke-virtual {p0, p3, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
 
-    .line 439
+    .line 493
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->J()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->Q()I
 
     move-result p1
 
@@ -2057,22 +2606,22 @@
 
     const/16 p1, 0x8
 
-    .line 440
+    .line 494
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(I)V
 
     goto :goto_1
 
-    .line 442
+    .line 496
     :cond_3
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 445
+    .line 499
     :cond_4
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e(Ljava/lang/String;)V
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
 
-    .line 446
+    .line 500
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
     :goto_1
@@ -2087,7 +2636,7 @@
 
     if-eqz p1, :cond_2
 
-    .line 599
+    .line 668
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v0
@@ -2100,17 +2649,17 @@
 
     const/4 p1, 0x1
 
-    .line 600
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+    .line 669
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
 
-    .line 602
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 671
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->D()I
 
     move-result v0
 
@@ -2122,8 +2671,8 @@
 
     const/4 p2, 0x4
 
-    .line 603
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 672
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -2133,8 +2682,8 @@
 
     if-eq p2, v0, :cond_0
 
-    .line 604
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 673
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p2
 
@@ -2146,12 +2695,15 @@
 
     goto :goto_0
 
-    .line 606
+    .line 675
     :cond_0
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(I)V
 
+    .line 679
     :cond_1
     :goto_0
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s()V
+
     return p1
 
     :cond_2
@@ -2161,13 +2713,13 @@
 .end method
 
 .method public varargs a(Ljava/lang/String;[Ljava/lang/String;)Z
-    .locals 7
+    .locals 8
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_3
 
-    .line 512
+    .line 576
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
     move-result-object v1
@@ -2178,7 +2730,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 513
+    .line 577
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2195,92 +2747,92 @@
 
     const-string v1, "CameraMenuOption"
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_2
 
-    .line 515
+    .line 579
     array-length p1, p2
 
     if-lez p1, :cond_2
 
-    move p1, v0
+    .line 580
+    array-length p1, p2
 
-    .line 516
+    move v1, v0
+
     :goto_0
-    array-length v1, p2
+    if-ge v1, p1, :cond_1
 
-    if-ge p1, v1, :cond_1
+    aget-object v2, p2, v1
 
-    .line 517
-    aget-object v1, p2, p1
+    .line 581
+    invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n(Ljava/lang/String;)I
 
-    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l(Ljava/lang/String;)I
+    move-result v2
 
-    move-result v1
+    if-ltz v2, :cond_0
 
-    if-ltz v1, :cond_0
-
-    .line 520
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    if-eqz v2, :cond_0
-
-    .line 521
-    new-instance v2, Lcom/oppo/camera/ui/menu/setting/j;
-
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/l;
-
-    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
-
-    iget-object v5, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/e;
-
-    iget v6, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:I
-
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/oppo/camera/ui/menu/setting/j;-><init>(Lcom/oppo/camera/l;Landroid/content/Context;Lcom/oppo/camera/ui/e;I)V
-
-    .line 523
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/j;->b()V
-
-    .line 524
-    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(I)Lcom/oppo/camera/ui/menu/d;
-
-    move-result-object v3
+    .line 584
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v3, :cond_0
 
-    .line 527
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/d;->d()Ljava/lang/String;
+    .line 585
+    new-instance v3, Lcom/oppo/camera/ui/menu/setting/j;
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
+
+    iget-object v6, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
+
+    iget v7, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:I
+
+    invoke-direct {v3, v4, v5, v6, v7}, Lcom/oppo/camera/ui/menu/setting/j;-><init>(Lcom/oppo/camera/i;Landroid/content/Context;Lcom/oppo/camera/ui/d;I)V
+
+    .line 587
+    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/j;->b()V
+
+    .line 588
+    invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h(I)Lcom/oppo/camera/ui/menu/d;
 
     move-result-object v4
 
-    invoke-virtual {v2, v4}, Lcom/oppo/camera/ui/menu/setting/j;->h(Ljava/lang/String;)V
+    if-eqz v4, :cond_0
 
-    .line 528
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/d;->a()Landroid/graphics/drawable/Drawable;
+    .line 591
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->d()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-virtual {v2, v3, v0}, Lcom/oppo/camera/ui/menu/setting/j;->b(Landroid/graphics/drawable/Drawable;Z)V
+    invoke-virtual {v3, v5}, Lcom/oppo/camera/ui/menu/setting/j;->i(Ljava/lang/String;)V
 
-    .line 529
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 592
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->a()Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v3, v2, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;I)Z
+    move-result-object v4
+
+    invoke-virtual {v3, v4, v0}, Lcom/oppo/camera/ui/menu/setting/j;->a(Landroid/graphics/drawable/Drawable;Z)V
+
+    .line 593
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    invoke-virtual {v4, v3, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;I)Z
 
     :cond_0
-    add-int/lit8 p1, p1, 0x1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 535
+    .line 599
     :cond_1
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz p1, :cond_2
 
-    .line 536
-    iget p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 600
+    iget p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
 
@@ -2310,7 +2862,7 @@
 
     if-eqz p1, :cond_6
 
-    .line 1296
+    .line 1527
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -2319,14 +2871,14 @@
 
     goto/16 :goto_2
 
-    .line 1300
+    .line 1531
     :cond_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1301
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1532
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
 
@@ -2334,7 +2886,7 @@
 
     move v3, v0
 
-    .line 1303
+    .line 1534
     :goto_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -2342,7 +2894,7 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 1304
+    .line 1535
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2359,7 +2911,7 @@
 
     if-ltz v4, :cond_1
 
-    .line 1305
+    .line 1536
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2371,9 +2923,9 @@
 
     goto :goto_0
 
-    .line 1309
+    .line 1540
     :cond_2
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -2395,9 +2947,9 @@
 
     move p1, v0
 
-    .line 1312
+    .line 1543
     :goto_1
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -2405,8 +2957,8 @@
 
     if-ge p1, v3, :cond_4
 
-    .line 1313
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1544
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v3, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -2444,31 +2996,31 @@
     :cond_4
     move p1, v2
 
-    .line 1319
+    .line 1550
     :cond_5
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 1320
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1551
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    .line 1321
-    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m(Ljava/lang/String;)V
+    .line 1552
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o(Ljava/lang/String;)V
 
     goto :goto_3
 
-    .line 1297
+    .line 1528
     :cond_6
     :goto_2
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    .line 1298
-    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1529
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {p2}, Ljava/util/ArrayList;->clear()V
 
@@ -2484,24 +3036,24 @@
 .method public b()V
     .locals 2
 
-    .line 117
+    .line 130
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    .line 118
+    .line 131
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p()Z
 
-    .line 119
+    .line 132
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c()V
 
-    .line 121
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
+    .line 134
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
     xor-int/lit8 v1, v0, 0x1
 
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
-    .line 122
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    .line 135
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
     invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
 
@@ -2511,7 +3063,7 @@
 .method public b(I)V
     .locals 4
 
-    .line 780
+    .line 879
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2538,22 +3090,22 @@
 
     const-string v1, "CameraMenuOption"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 782
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 881
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 783
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 882
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
-    .line 784
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 883
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v1
 
@@ -2561,8 +3113,8 @@
 
     move-result v1
 
-    .line 785
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 884
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v2
 
@@ -2572,8 +3124,8 @@
 
     add-int/2addr v2, p1
 
-    .line 786
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 885
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v3
 
@@ -2581,16 +3133,10 @@
 
     move-result v3
 
-    .line 783
+    .line 882
     invoke-virtual {v0, p1, v1, v2, v3}, Landroid/view/View;->layout(IIII)V
 
     :cond_0
-    return-void
-.end method
-
-.method public b(Landroid/graphics/drawable/Drawable;Z)V
-    .locals 0
-
     return-void
 .end method
 
@@ -2609,15 +3155,15 @@
 .method public b(ZZ)V
     .locals 4
 
-    .line 791
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 890
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 792
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 891
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -2625,8 +3171,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 793
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 892
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -2634,8 +3180,8 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setClickable(Z)V
 
-    .line 794
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 893
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -2645,8 +3191,8 @@
 
     const/4 v0, 0x3
 
-    .line 796
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 895
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v3
 
@@ -2654,8 +3200,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 797
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 896
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -2663,9 +3209,9 @@
 
     goto :goto_0
 
-    .line 798
+    .line 897
     :cond_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result p1
 
@@ -2673,32 +3219,32 @@
 
     if-eqz p2, :cond_1
 
-    .line 799
-    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    .line 898
+    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
-    .line 800
+    .line 899
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    .line 801
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
+    .line 900
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
 
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(I)V
 
-    .line 805
+    .line 904
     :cond_1
     :goto_0
-    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
     :cond_2
     return-void
 .end method
 
-.method public varargs b(Ljava/lang/String;[Ljava/lang/String;)Z
+.method public b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 3
 
     const/4 v0, 0x0
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_0
 
     .line 547
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
@@ -2709,9 +3255,126 @@
 
     move-result v1
 
+    if-nez v1, :cond_0
+
+    return v0
+
+    .line 551
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "enableMenuOption, key: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", keyValue: "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "CameraMenuOption"
+
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 553
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p()Z
+
+    move-result p1
+
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_3
+
+    .line 554
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+
+    .line 555
+    invoke-virtual {p0, v1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ZZ)V
+
+    .line 556
+    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+
+    xor-int/2addr p1, v1
+
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
+
+    if-nez p3, :cond_1
+
+    .line 559
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:Z
+
+    .line 560
+    invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 562
+    :cond_1
+    invoke-virtual {p0, p3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 563
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->L()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->M()Z
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Landroid/graphics/drawable/Drawable;Z)V
+
+    .line 567
+    :cond_2
+    :goto_0
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    .line 568
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_3
+    return v1
+.end method
+
+.method public varargs b(Ljava/lang/String;[Ljava/lang/String;)Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_3
+
+    .line 611
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
     if-eqz v1, :cond_3
 
-    .line 548
+    .line 612
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2726,9 +3389,20 @@
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", remove keys: "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 613
+    invoke-static {p2}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2736,46 +3410,47 @@
 
     const-string v1, "CameraMenuOption"
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 612
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_2
 
-    .line 550
+    .line 615
     array-length p1, p2
 
     if-lez p1, :cond_2
 
-    .line 551
-    :goto_0
+    .line 616
     array-length p1, p2
 
+    :goto_0
     if-ge v0, p1, :cond_2
 
-    .line 552
-    aget-object p1, p2, v0
+    aget-object v1, p2, v0
 
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k(Ljava/lang/String;)I
+    .line 617
+    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m(Ljava/lang/String;)I
 
-    move-result p1
+    move-result v1
 
-    if-ltz p1, :cond_1
+    if-ltz v1, :cond_1
 
-    .line 555
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 620
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
-    .line 556
-    invoke-virtual {v1, p1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(I)V
+    .line 621
+    invoke-virtual {v2, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(I)V
 
-    .line 557
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 622
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    invoke-virtual {p1, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
+    invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
 
-    .line 560
+    .line 625
     :cond_0
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
@@ -2796,12 +3471,12 @@
 .method public c()V
     .locals 1
 
-    .line 126
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Z
+    .line 139
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
 
     if-nez v0, :cond_0
 
-    .line 127
+    .line 140
     invoke-static {p0}, Lcom/oppo/camera/ui/menu/f;->a(Lcom/oppo/camera/ui/menu/e;)V
 
     :cond_0
@@ -2811,57 +3486,32 @@
 .method public c(I)V
     .locals 2
 
-    .line 879
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 969
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz v0, :cond_1
 
-    const-string v1, "key: "
+    const/4 v1, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v1, p1, :cond_0
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+    .line 971
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a(I)V
 
-    move-result-object v1
+    .line 974
+    :cond_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->cancel()V
 
-    const-string v1, " setItemState, state( "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " ==> "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " )"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "CameraMenuOption"
-
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 881
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:I
-
+    :cond_1
     return-void
 .end method
 
 .method public c(Ljava/lang/String;)V
     .locals 3
 
-    .line 672
+    .line 771
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2888,10 +3538,10 @@
 
     const-string v1, "CameraMenuOption"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 674
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 773
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -2899,9 +3549,9 @@
 
     return-void
 
-    .line 678
+    .line 777
     :cond_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v0
 
@@ -2909,8 +3559,8 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 679
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 778
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -2921,28 +3571,28 @@
     :cond_1
     const/4 v0, 0x3
 
-    .line 682
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 781
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v2
 
     if-ne v0, v2, :cond_2
 
-    .line 683
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 782
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 684
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g(Ljava/lang/String;)V
+    .line 783
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 685
+    .line 784
     :cond_2
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result p1
 
@@ -2950,55 +3600,37 @@
 
     const/4 p1, 0x2
 
-    .line 686
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    .line 785
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
-    .line 687
+    .line 786
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    .line 688
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 787
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/view/View;->clearAnimation()V
 
-    .line 690
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y()I
+    .line 789
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+
+    if-eqz p1, :cond_4
+
+    .line 790
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->A()Z
 
     move-result p1
 
     if-eqz p1, :cond_3
 
-    .line 691
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v()V
+    .line 791
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()V
 
-    .line 692
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
-
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(I)V
-
-    goto :goto_0
-
-    .line 693
+    .line 794
     :cond_3
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
-
-    if-eqz p1, :cond_5
-
-    .line 694
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    .line 695
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v()V
-
-    .line 698
-    :cond_4
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3006,9 +3638,27 @@
 
     move-result p1
 
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
 
     invoke-virtual {p0, p1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(II)V
+
+    goto :goto_0
+
+    .line 795
+    :cond_4
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->D()I
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    .line 796
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()V
+
+    .line 797
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
+
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(I)V
 
     :cond_5
     :goto_0
@@ -3024,73 +3674,92 @@
 .method public d()V
     .locals 1
 
-    .line 132
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 145
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v0, :cond_0
 
-    .line 133
+    .line 146
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->f()V
 
-    .line 136
+    .line 149
     :cond_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u()Z
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->A()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 137
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v()V
+    .line 150
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()V
 
     :cond_1
     const/4 v0, 0x1
 
-    .line 140
+    .line 153
     invoke-virtual {p0, v0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(ZZ)V
 
-    .line 141
+    .line 154
     invoke-static {p0}, Lcom/oppo/camera/ui/menu/f;->b(Lcom/oppo/camera/ui/menu/e;)V
 
     return-void
 .end method
 
 .method public d(I)V
-    .locals 4
+    .locals 2
 
-    .line 926
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 985
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "key: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " setItemState, state( "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " ==> "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " )"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    const-string v1, "CameraMenuOption"
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y()I
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    .line 987
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:I
 
-    if-eq v0, p1, :cond_0
-
-    .line 927
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0x12c
-
-    invoke-static {v0, p1, v1, v2, v3}, Lcom/oppo/camera/util/Util;->a(Landroid/view/View;ILandroid/view/animation/Animation$AnimationListener;J)V
-
-    :cond_0
     return-void
 .end method
 
 .method public d(Ljava/lang/String;)V
     .locals 3
 
-    .line 705
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 804
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3098,8 +3767,8 @@
 
     if-eqz p1, :cond_2
 
-    .line 706
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 805
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3107,8 +3776,8 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setClickable(Z)V
 
-    .line 708
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 807
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result p1
 
@@ -3116,14 +3785,14 @@
 
     const/high16 p1, 0x3f800000    # 1.0f
 
-    .line 709
+    .line 808
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(F)V
 
     :cond_0
     const/4 p1, 0x3
 
-    .line 712
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 811
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v2
 
@@ -3135,8 +3804,8 @@
 
     if-nez p1, :cond_1
 
-    .line 713
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 812
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3144,29 +3813,29 @@
 
     goto :goto_0
 
-    .line 714
+    .line 813
     :cond_1
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result p1
 
     if-ne v1, p1, :cond_2
 
-    .line 715
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    .line 814
+    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
-    .line 716
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
+    .line 815
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
 
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(I)V
 
-    .line 720
+    .line 819
     :cond_2
     :goto_0
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    .line 721
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    .line 820
+    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
     return-void
 .end method
@@ -3180,12 +3849,12 @@
 .method public e(Z)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .line 1116
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1366
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -3195,8 +3864,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 1118
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1368
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     const/4 v0, 0x1
 
@@ -3212,9 +3881,9 @@
 
     goto :goto_0
 
-    .line 1120
+    .line 1370
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
@@ -3238,51 +3907,33 @@
 .end method
 
 .method public e(I)V
-    .locals 0
+    .locals 4
 
-    .line 969
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:I
+    .line 1025
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public e(Ljava/lang/String;)V
-    .locals 1
+    if-eqz v0, :cond_0
 
-    .line 617
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c:Z
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->D()I
 
-    if-nez v0, :cond_1
+    move-result v0
 
-    .line 618
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n(Ljava/lang/String;)Ljava/lang/String;
+    if-eq v0, p1, :cond_0
 
-    move-result-object p1
+    .line 1026
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m(Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 620
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g()Z
+    const/4 v1, 0x0
 
-    move-result p1
+    const-wide/16 v2, 0x12c
 
-    if-nez p1, :cond_0
+    invoke-static {v0, p1, v1, v2, v3}, Lcom/oppo/camera/util/Util;->a(Landroid/view/View;ILandroid/view/animation/Animation$AnimationListener;J)V
 
-    .line 621
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
-
-    .line 624
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    if-eqz p1, :cond_1
-
-    .line 625
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
-
-    :cond_1
     return-void
 .end method
 
@@ -3294,180 +3945,68 @@
     return v0
 .end method
 
-.method public f(I)Lcom/oppo/camera/ui/menu/d;
-    .locals 1
+.method public e(Ljava/lang/String;)Z
+    .locals 0
 
-    .line 1145
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-le v0, p1, :cond_0
-
-    .line 1146
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/oppo/camera/ui/menu/d;
-
-    return-object p1
-
-    :cond_0
     const/4 p1, 0x0
 
-    return-object p1
+    return p1
+.end method
+
+.method public f(I)V
+    .locals 0
+
+    .line 1068
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:I
+
+    return-void
 .end method
 
 .method public f(Ljava/lang/String;)V
-    .locals 2
+    .locals 1
 
-    .line 725
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v0, "hideMenu, option key: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", remove: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
+    .line 716
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v0, ", state: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 726
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", itemView: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", show: "
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->z()Z
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 717
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    const-string v0, "CameraMenuOption"
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o(Ljava/lang/String;)V
 
-    .line 725
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 728
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->z()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 729
+    .line 719
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g()Z
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    .line 730
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 720
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o()V
 
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 731
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x3
-
-    .line 732
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
-
-    .line 734
-    new-instance p1, Landroid/view/animation/AlphaAnimation;
-
-    const/high16 v0, 0x3f800000    # 1.0f
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    const-wide/16 v0, 0x96
-
-    .line 735
-    invoke-virtual {p1, v0, v1}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
-
-    .line 736
-    new-instance v0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;
-
-    invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;-><init>(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)V
-
-    invoke-virtual {p1, v0}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 755
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
-
-    .line 756
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
+    .line 723
     :cond_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    if-eqz p1, :cond_1
+
+    .line 724
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
+
+    :cond_1
     return-void
 .end method
 
 .method public f()Z
     .locals 1
 
-    .line 246
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 259
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v0, :cond_0
 
@@ -3488,22 +4027,211 @@
     return v0
 .end method
 
-.method public g(I)V
+.method public g(Ljava/lang/String;)V
+    .locals 2
+
+    .line 824
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "hideMenu, option key: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", remove: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", state: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 825
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", itemView: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", show: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->E()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "CameraMenuOption"
+
+    .line 824
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 827
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->E()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    .line 828
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 829
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 830
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x3
+
+    .line 831
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
+
+    .line 833
+    new-instance p1, Landroid/view/animation/AlphaAnimation;
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
+
+    const-wide/16 v0, 0x96
+
+    .line 834
+    invoke-virtual {p1, v0, v1}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+
+    .line 835
+    new-instance v0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;
+
+    invoke-direct {v0, p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$1;-><init>(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)V
+
+    invoke-virtual {p1, v0}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    .line 854
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
+
+    .line 855
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public g()Z
     .locals 1
 
-    if-ltz p1, :cond_0
+    .line 263
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
 
-    .line 1200
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    return v0
+.end method
+
+.method protected g(I)Z
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 1297
+    invoke-virtual {p0, p1, v0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    const-string v0, "pref_none_sat_ultra_wide_angle_key"
+
+    const-string v1, "off"
+
+    .line 1298
+    invoke-virtual {p1, v0, v1}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "on"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    return p1
+.end method
+
+.method public h(I)Lcom/oppo/camera/ui/menu/d;
+    .locals 1
+
+    .line 1395
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    if-ge p1, v0, :cond_0
+    if-le v0, p1, :cond_0
 
-    .line 1201
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1396
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -3511,20 +4239,18 @@
 
     check-cast p1, Lcom/oppo/camera/ui/menu/d;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i(Ljava/lang/String;)V
+    return-object p1
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    return-object p1
 .end method
 
-.method public g(Ljava/lang/String;)V
+.method public h(Ljava/lang/String;)V
     .locals 4
 
-    .line 761
+    .line 860
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3543,7 +4269,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3551,8 +4277,8 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 762
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    .line 861
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v0
 
@@ -3562,7 +4288,7 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -3574,11 +4300,11 @@
 
     const-string v0, "CameraMenuOption"
 
-    .line 761
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 860
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 764
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 863
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3586,7 +4312,7 @@
 
     const/4 p1, 0x3
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result v0
 
@@ -3600,11 +4326,11 @@
 
     const/4 p1, 0x4
 
-    .line 765
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->c(I)V
+    .line 864
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d(I)V
 
-    .line 767
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 866
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3616,8 +4342,8 @@
 
     invoke-static {p1, v0, v1, v2, v3}, Lcom/oppo/camera/util/Util;->a(Landroid/view/View;ILandroid/view/animation/Animation$AnimationListener;J)V
 
-    .line 769
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 868
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3627,8 +4353,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 770
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 869
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -3644,26 +4370,11 @@
     return-void
 .end method
 
-.method public g()Z
-    .locals 1
-
-    .line 250
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->d:Z
-
-    return v0
-.end method
-
-.method public h(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public h()Z
     .locals 1
 
-    .line 254
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->e:Z
+    .line 267
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f:Z
 
     return v0
 .end method
@@ -3671,23 +4382,23 @@
 .method public i()V
     .locals 3
 
-    .line 272
+    .line 281
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j()V
 
-    .line 274
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 283
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v0, :cond_0
 
     const/16 v1, 0x8
 
-    .line 275
+    .line 284
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setVisibility(I)V
 
-    .line 276
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 285
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-interface {v1}, Lcom/oppo/camera/ui/menu/setting/i;->getOrientation()I
 
@@ -3697,10 +4408,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(IZ)V
 
-    .line 277
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 286
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/a;->getOptionSingleIcon()Landroid/graphics/Bitmap;
 
@@ -3708,10 +4419,10 @@
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemIcon(Landroid/graphics/Bitmap;)V
 
-    .line 278
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 287
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
 
@@ -3719,50 +4430,277 @@
     return-void
 .end method
 
+.method public i(I)V
+    .locals 1
+
+    if-ltz p1, :cond_0
+
+    .line 1447
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge p1, v0, :cond_0
+
+    .line 1448
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oppo/camera/ui/menu/d;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j(Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public i(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public j()V
+    .locals 8
+
+    const-string v0, "CameraMenuOption"
+
+    const-string v1, "initializeOptionItems"
+
+    .line 292
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 294
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->S()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 295
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->Q()I
+
+    move-result v0
+
+    if-lez v0, :cond_4
+
+    .line 298
+    new-instance v1, Lcom/oppo/camera/ui/menu/c;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
+
+    invoke-direct {v1, v2, v3}, Lcom/oppo/camera/ui/menu/c;-><init>(Landroid/content/Context;Lcom/oppo/camera/ui/d;)V
+
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_3
+
+    .line 301
+    new-instance v3, Lcom/oppo/camera/ui/menu/setting/j;
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    iget-object v5, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
+
+    iget-object v6, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
+
+    iget v7, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:I
+
+    invoke-direct {v3, v4, v5, v6, v7}, Lcom/oppo/camera/ui/menu/setting/j;-><init>(Lcom/oppo/camera/i;Landroid/content/Context;Lcom/oppo/camera/ui/d;I)V
+
+    .line 303
+    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/j;->b()V
+
+    .line 305
+    invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h(I)Lcom/oppo/camera/ui/menu/d;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_2
+
+    .line 308
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->V()I
+
+    move-result v5
+
+    const/4 v6, 0x3
+
+    if-ne v5, v6, :cond_0
+
+    .line 309
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->a()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4, v1}, Lcom/oppo/camera/ui/menu/setting/j;->b(Landroid/graphics/drawable/Drawable;Z)V
+
+    goto :goto_1
+
+    .line 310
+    :cond_0
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->V()I
+
+    move-result v5
+
+    const/4 v6, 0x4
+
+    if-ne v5, v6, :cond_1
+
+    .line 311
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v6
+
+    const/4 v7, 0x1
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    .line 312
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v7, v1
+
+    const-string v4, "%d"
+
+    .line 311
+    invoke-static {v6, v4, v7}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, "X"
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/oppo/camera/ui/menu/setting/j;->i(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 314
+    :cond_1
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->d()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Lcom/oppo/camera/ui/menu/setting/j;->i(Ljava/lang/String;)V
+
+    .line 318
+    :cond_2
+    :goto_1
+    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    invoke-virtual {v4, v3}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)Z
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 321
+    :cond_3
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
+
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionSingleIcon()Landroid/graphics/Bitmap;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemIcon(Landroid/graphics/Bitmap;)V
+
+    .line 322
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
+
+    .line 323
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    invoke-virtual {v0, p0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemListListener(Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;)V
+
+    .line 324
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v2
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v2, v1, v3}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Landroid/view/View;II)V
+
+    .line 325
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setVisibility(I)V
+
+    :cond_4
+    return-void
+.end method
+
+.method public j(Ljava/lang/String;)V
     .locals 2
 
-    .line 1058
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1172
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
 
     move-result v0
 
     if-ltz v0, :cond_0
 
-    .line 1061
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 1175
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    .line 1062
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    .line 1176
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
-    .line 1063
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    const/4 v0, 0x0
 
-    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/i;->getSharedPreferences()Landroid/content/SharedPreferences;
+    .line 1177
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:Z
 
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    .line 1064
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/a;->getOptionKey()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 1065
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    .line 1179
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1067
+    .line 1181
     :cond_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -3780,515 +4718,113 @@
 
     const-string v0, "CameraMenuOption"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
-.end method
-
-.method public j()V
-    .locals 8
-
-    const-string v0, "CameraMenuOption"
-
-    const-string v1, "initializeOptionItems"
-
-    .line 283
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 285
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->L()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    .line 286
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->J()I
-
-    move-result v0
-
-    if-lez v0, :cond_3
-
-    .line 289
-    new-instance v1, Lcom/oppo/camera/ui/menu/c;
-
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
-
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/e;
-
-    invoke-direct {v1, v2, v3}, Lcom/oppo/camera/ui/menu/c;-><init>(Landroid/content/Context;Lcom/oppo/camera/ui/e;)V
-
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_2
-
-    .line 292
-    new-instance v3, Lcom/oppo/camera/ui/menu/setting/j;
-
-    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/l;
-
-    iget-object v5, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
-
-    iget-object v6, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->l:Lcom/oppo/camera/ui/e;
-
-    iget v7, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:I
-
-    invoke-direct {v3, v4, v5, v6, v7}, Lcom/oppo/camera/ui/menu/setting/j;-><init>(Lcom/oppo/camera/l;Landroid/content/Context;Lcom/oppo/camera/ui/e;I)V
-
-    .line 294
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/j;->b()V
-
-    .line 296
-    invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->f(I)Lcom/oppo/camera/ui/menu/d;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    .line 299
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->O()I
-
-    move-result v5
-
-    const/4 v6, 0x3
-
-    if-ne v5, v6, :cond_0
-
-    .line 300
-    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->a()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4, v1}, Lcom/oppo/camera/ui/menu/setting/j;->a(Landroid/graphics/drawable/Drawable;Z)V
-
-    goto :goto_1
-
-    .line 302
-    :cond_0
-    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/d;->d()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/oppo/camera/ui/menu/setting/j;->h(Ljava/lang/String;)V
-
-    .line 306
-    :cond_1
-    :goto_1
-    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    invoke-virtual {v4, v3}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 309
-    :cond_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
-
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionSingleIcon()Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemIcon(Landroid/graphics/Bitmap;)V
-
-    .line 310
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    invoke-virtual {v0, v2}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setSelectItemIndex(I)V
-
-    .line 311
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    invoke-virtual {v0, p0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setOptionItemListListener(Lcom/oppo/camera/ui/menu/BasicOptionItemList$OptionItemListListener;)V
-
-    .line 312
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v2, v1, v3}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->a(Landroid/view/View;II)V
-
-    .line 313
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->setVisibility(I)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public j(Ljava/lang/String;)Z
-    .locals 2
-
-    .line 1185
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    .line 1187
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    if-eq v0, v1, :cond_0
-
-    .line 1188
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    .line 1189
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/oppo/camera/ui/menu/d;
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    .line 1191
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "setOptionValueNoToPreferences, key: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mOptionValue: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public k(Ljava/lang/String;)I
-    .locals 2
-
-    .line 1228
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 1229
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    .line 1232
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    .line 1235
-    :cond_0
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    if-gtz v1, :cond_1
-
-    const-string p1, "CameraMenuOption"
-
-    const-string v1, "removeOptionItem, the remain item is 0, Error"
-
-    .line 1238
-    invoke-static {p1, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v0
-
-    .line 1242
-    :cond_1
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    .line 1243
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/oppo/camera/ui/menu/d;
-
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    .line 1244
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    .line 1245
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 1247
-    :cond_2
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-static {p1, v1}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
-
-    move-result p1
-
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v0, -0x1
-
-    :goto_0
-    return v0
 .end method
 
 .method public k()V
     .locals 1
 
-    .line 319
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 331
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v0, :cond_0
 
-    .line 320
+    .line 332
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->g()V
 
     const/4 v0, 0x0
 
-    .line 321
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 333
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     :cond_0
     return-void
 .end method
 
-.method public l(Ljava/lang/String;)I
-    .locals 4
+.method protected k(Ljava/lang/String;)V
+    .locals 3
 
-    .line 1257
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1188
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:Lcom/oppo/camera/ui/d;
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
+    if-eqz v0, :cond_0
 
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
-
-    .line 1258
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
+    .line 1189
+    invoke-interface {v0}, Lcom/oppo/camera/ui/d;->A()I
 
     move-result v0
 
-    if-eqz v0, :cond_4
-
-    .line 1259
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    .line 1263
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    add-int/lit8 v1, p1, -0x1
-
+    .line 1192
     :goto_0
-    if-ltz v1, :cond_2
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
-    .line 1268
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    move-result-object v1
 
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
+    const-string v2, "pref_slow_video_size_key"
 
-    move-result-object v2
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v2
+    if-eqz v1, :cond_1
 
-    check-cast v2, Lcom/oppo/camera/ui/menu/d;
+    .line 1193
+    invoke-direct {p0, v0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(ILjava/lang/String;)V
 
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
+    return-void
 
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-static {v2, v3}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
-
-    move-result v2
-
-    if-ltz v2, :cond_1
-
-    add-int/lit8 v2, v2, 0x1
-
-    move v0, v2
-
-    goto :goto_1
-
+    .line 1197
     :cond_1
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    .line 1277
+    const-string v2, "pref_video_size_key"
+
+    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 1198
+    invoke-direct {p0, v0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(ILjava/lang/String;)V
+
+    return-void
+
+    .line 1202
     :cond_2
-    :goto_1
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/i;->getSharedPreferences()Landroid/content/SharedPreferences;
 
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    .line 1203
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
-    invoke-virtual {v1, v0, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/a;->getOptionKey()Ljava/lang/String;
 
-    move p1, v0
+    move-result-object v1
 
-    .line 1280
-    :goto_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    .line 1204
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    move-result v0
-
-    if-gtz v0, :cond_3
-
-    const-string v0, "CameraMenuOption"
-
-    const-string v1, "addOptionItem, the remain item is 0, Error"
-
-    .line 1283
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return p1
-
-    .line 1287
-    :cond_3
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
-
-    invoke-static {v0, v1}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
-
-    goto :goto_3
-
-    :cond_4
-    const/4 p1, -0x1
-
-    :goto_3
-    return p1
+    return-void
 .end method
 
 .method public l()V
@@ -4296,32 +4832,32 @@
 
     const/4 v0, 0x1
 
-    .line 327
+    .line 339
     invoke-virtual {p0, v0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(ZZ)V
 
-    .line 328
+    .line 340
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Z)V
 
-    .line 330
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 342
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 331
+    .line 343
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->release()V
 
-    .line 332
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 344
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
-    .line 335
+    .line 347
     :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_3
 
-    .line 336
+    .line 348
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -4342,86 +4878,506 @@
 
     if-eqz v2, :cond_1
 
-    .line 338
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/d;->e()V
+    .line 350
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/d;->f()V
 
     goto :goto_0
 
-    .line 343
+    .line 355
     :cond_2
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 344
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 356
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    .line 347
+    .line 359
     :cond_3
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
-    .line 348
+    .line 360
     invoke-static {p0}, Lcom/oppo/camera/ui/menu/f;->b(Lcom/oppo/camera/ui/menu/e;)V
 
-    .line 349
+    .line 361
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k()V
 
-    .line 351
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 363
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    .line 352
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    .line 364
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->clearAnimation()V
 
-    .line 355
+    .line 367
     :cond_4
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
     if-eqz v0, :cond_5
 
-    .line 356
+    .line 368
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->cancel()V
 
-    .line 357
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
+    .line 369
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
 
-    .line 360
+    .line 372
     :cond_5
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r()V
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x()V
 
-    .line 361
-    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h:Landroid/content/Context;
+    .line 373
+    iput-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Landroid/content/Context;
 
     return-void
+.end method
+
+.method public l(Ljava/lang/String;)Z
+    .locals 3
+
+    .line 1431
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    .line 1433
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    if-eq v0, v1, :cond_0
+
+    .line 1434
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    .line 1435
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/oppo/camera/ui/menu/d;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    .line 1436
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a:Lcom/oppo/camera/i;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/i;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:Z
+
+    .line 1438
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setOptionValueNoToPreferences, key: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", mOptionValue: "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public m(Ljava/lang/String;)I
+    .locals 2
+
+    .line 1459
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 1460
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    .line 1463
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    .line 1466
+    :cond_0
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    if-gtz v1, :cond_1
+
+    const-string p1, "CameraMenuOption"
+
+    const-string v1, "removeOptionItem, the remain item is 0, Error"
+
+    .line 1469
+    invoke-static {p1, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v0
+
+    .line 1473
+    :cond_1
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 1474
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/oppo/camera/ui/menu/d;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    .line 1475
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    .line 1476
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 1478
+    :cond_2
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v1}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
 .end method
 
 .method public m()V
     .locals 1
 
-    .line 365
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+    .line 377
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
 
     if-eqz v0, :cond_0
 
-    .line 366
+    .line 378
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/f;->a(Lcom/oppo/camera/ui/menu/BasicOptionItemList;)V
 
     :cond_0
     return-void
 .end method
 
-.method public m(Ljava/lang/String;)V
+.method public n(Ljava/lang/String;)I
+    .locals 4
+
+    .line 1488
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
+
+    .line 1489
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 1490
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    move v0, p1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    add-int/lit8 v1, p1, -0x1
+
+    :goto_0
+    if-ltz v1, :cond_2
+
+    .line 1498
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
+
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/oppo/camera/ui/menu/d;
+
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/d;->b()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {v2, v3}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+
+    move-result v2
+
+    if-ltz v2, :cond_1
+
+    add-int/lit8 v0, v2, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    .line 1509
+    :cond_2
+    :goto_1
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
+
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/a;->getOptionItems()Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v1, v0, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+
+    .line 1511
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    if-gtz p1, :cond_3
+
+    const-string p1, "CameraMenuOption"
+
+    const-string v1, "addOptionItem, the remain item is 0, Error"
+
+    .line 1514
+    invoke-static {p1, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v0
+
+    .line 1518
+    :cond_3
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v1}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+
+    move-result p1
+
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
+
+    goto :goto_2
+
+    :cond_4
+    const/4 v0, -0x1
+
+    :goto_2
+    return v0
+.end method
+
+.method public n()V
+    .locals 1
+
+    .line 383
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->isShown()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 384
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
+
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public o()V
     .locals 2
 
-    .line 1328
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->j:Lcom/oppo/camera/ui/menu/setting/i;
+    .line 418
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->Q()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 419
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->L()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->M()Z
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Landroid/graphics/drawable/Drawable;Z)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    .line 421
+    invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Landroid/graphics/drawable/Drawable;Z)V
+
+    .line 424
+    :goto_0
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->P()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i(Ljava/lang/String;)V
+
+    .line 426
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 427
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public o(Ljava/lang/String;)V
+    .locals 2
+
+    .line 1559
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->k:Lcom/oppo/camera/ui/menu/setting/i;
 
     invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/i;->getSharedPreferences()Landroid/content/SharedPreferences;
 
@@ -4435,10 +5391,10 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
-    .line 1330
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1561
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -4446,56 +5402,62 @@
 
     const/4 v0, 0x0
 
-    if-lez p1, :cond_1
+    if-lez p1, :cond_2
 
-    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w:Z
+    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    .line 1331
-    invoke-static {p1, v1}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+    .line 1562
+    invoke-static {p1, v1}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
 
     move-result p1
 
-    if-gez p1, :cond_1
+    if-gez p1, :cond_2
 
-    .line 1332
+    .line 1563
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->g:Z
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    if-nez p1, :cond_1
 
-    invoke-static {p1, v1}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+    .line 1564
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v1}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
 
     move-result p1
 
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    .line 1334
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 1567
+    :cond_1
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    if-gez p1, :cond_4
+    if-gez p1, :cond_5
 
-    .line 1335
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 1568
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    .line 1337
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1570
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    if-lez p1, :cond_4
+    if-lez p1, :cond_5
 
-    .line 1338
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1571
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -4507,62 +5469,62 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 1342
-    :cond_1
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    .line 1575
+    :cond_2
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    invoke-static {p1, v1}, Lcom/oppo/camera/ui/g;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
+    invoke-static {p1, v1}, Lcom/oppo/camera/ui/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)I
 
     move-result p1
 
-    if-ltz p1, :cond_3
+    if-ltz p1, :cond_4
 
-    .line 1344
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1577
+    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-lt p1, v1, :cond_2
+    if-lt p1, v1, :cond_3
 
     goto :goto_0
 
-    .line 1350
-    :cond_2
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 1583
+    :cond_3
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    if-eq v0, p1, :cond_4
+    if-eq v0, p1, :cond_5
 
-    .line 1351
-    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    .line 1584
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     goto :goto_1
 
-    .line 1345
-    :cond_3
+    .line 1578
+    :cond_4
     :goto_0
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
-    .line 1347
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1580
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
     move-result p1
 
-    if-lez p1, :cond_4
+    if-lez p1, :cond_5
 
-    .line 1348
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    .line 1581
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->m:I
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:I
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -4574,43 +5536,39 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->u:Ljava/lang/String;
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Ljava/lang/String;
 
-    :cond_4
+    :cond_5
     :goto_1
     return-void
 .end method
 
-.method public n(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method public p(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
-    .line 1357
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->x:Lcom/oppo/camera/ui/menu/a;
+    .line 1590
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/a;->getOptionDefaultValue()Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
 
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1359
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    return-object p1
 
-    invoke-static {v0, v1}, Lcom/oppo/camera/ui/g;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-object v0
-
+    .line 1594
     :cond_0
-    if-eqz p1, :cond_1
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/a;
 
-    .line 1363
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/a;->getOptionDefaultValue()Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/g;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
+    move-result-object p1
+
+    .line 1596
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/f;->b(Ljava/lang/String;Ljava/util/ArrayList;)Z
 
     move-result v0
 
@@ -4618,9 +5576,9 @@
 
     return-object p1
 
-    .line 1367
+    .line 1600
     :cond_1
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->v:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->y:Ljava/util/ArrayList;
 
     const/4 v0, 0x0
 
@@ -4635,93 +5593,13 @@
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public n()V
-    .locals 1
-
-    .line 371
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->isShown()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 372
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->i:Lcom/oppo/camera/ui/menu/BasicOptionItemList;
-
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/BasicOptionItemList;->d()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public o()V
-    .locals 2
-
-    .line 380
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->J()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    .line 381
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->E()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->F()Z
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(Landroid/graphics/drawable/Drawable;Z)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    .line 383
-    invoke-virtual {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->b(Landroid/graphics/drawable/Drawable;Z)V
-
-    .line 386
-    :goto_0
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->I()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->h(Ljava/lang/String;)V
-
-    .line 388
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 389
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    :cond_1
-    return-void
 .end method
 
 .method protected p()Z
     .locals 2
 
-    .line 456
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->J()I
+    .line 510
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->Q()I
 
     move-result v0
 
@@ -4740,33 +5618,74 @@
     return v0
 .end method
 
-.method public q()I
+.method public q()Z
     .locals 1
 
-    .line 776
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->q:I
+    .line 514
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Z
 
     return v0
 .end method
 
 .method protected r()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected s()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public t()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public u()I
+    .locals 1
+
+    .line 875
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->t:I
+
+    return v0
+.end method
+
+.method public v()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected w()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected x()V
     .locals 2
 
-    .line 847
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Landroid/view/ViewGroup;
+    .line 943
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 848
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Landroid/view/ViewGroup;
+    .line 944
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:Landroid/view/ViewGroup;
 
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v1
 
@@ -4775,122 +5694,23 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 851
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->p:Landroid/view/ViewGroup;
+    .line 947
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->s:Landroid/view/ViewGroup;
 
     return-void
-.end method
-
-.method public s()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public u()Z
-    .locals 1
-
-    .line 869
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
-
-    return v0
-.end method
-
-.method public v()V
-    .locals 2
-
-    .line 873
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->o:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->n:Z
-
-    if-eqz v1, :cond_0
-
-    .line 874
-    invoke-virtual {v0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->onAnimationEnd(Landroid/view/animation/Animation;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public w()I
-    .locals 1
-
-    .line 885
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->r:I
-
-    return v0
-.end method
-
-.method public x()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public y()I
     .locals 1
 
-    .line 932
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 933
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/16 v0, 0x8
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public z()Z
+.method public z()I
     .locals 1
 
-    .line 940
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 941
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->isShown()Z
-
-    move-result v0
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0

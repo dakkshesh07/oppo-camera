@@ -7,14 +7,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/coloros/anim/a/b/f<",
-        "Lcom/coloros/anim/c/b/c;",
+        "Lcom/coloros/anim/model/content/c;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final c:Lcom/coloros/anim/c/b/c;
+.field private final c:Lcom/coloros/anim/model/content/c;
 
 
 # direct methods
@@ -24,8 +24,8 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/g/c<",
-            "Lcom/coloros/anim/c/b/c;",
+            "Lcom/coloros/anim/e/c<",
+            "Lcom/coloros/anim/model/content/c;",
             ">;>;)V"
         }
     .end annotation
@@ -40,11 +40,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/coloros/anim/g/c;
+    check-cast p1, Lcom/coloros/anim/e/c;
 
-    iget-object p1, p1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
-    check-cast p1, Lcom/coloros/anim/c/b/c;
+    check-cast p1, Lcom/coloros/anim/model/content/c;
 
     if-nez p1, :cond_0
 
@@ -52,65 +52,65 @@
 
     .line 14
     :cond_0
-    invoke-virtual {p1}, Lcom/coloros/anim/c/b/c;->c()I
+    invoke-virtual {p1}, Lcom/coloros/anim/model/content/c;->c()I
 
     move-result v0
 
     .line 15
     :goto_0
-    new-instance p1, Lcom/coloros/anim/c/b/c;
+    new-instance p1, Lcom/coloros/anim/model/content/c;
 
     new-array v1, v0, [F
 
     new-array v0, v0, [I
 
-    invoke-direct {p1, v1, v0}, Lcom/coloros/anim/c/b/c;-><init>([F[I)V
+    invoke-direct {p1, v1, v0}, Lcom/coloros/anim/model/content/c;-><init>([F[I)V
 
-    iput-object p1, p0, Lcom/coloros/anim/a/b/d;->c:Lcom/coloros/anim/c/b/c;
+    iput-object p1, p0, Lcom/coloros/anim/a/b/d;->c:Lcom/coloros/anim/model/content/c;
 
     return-void
 .end method
 
 
 # virtual methods
-.method synthetic a(Lcom/coloros/anim/g/c;F)Ljava/lang/Object;
+.method synthetic a(Lcom/coloros/anim/e/c;F)Ljava/lang/Object;
     .locals 0
 
     .line 8
-    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/d;->b(Lcom/coloros/anim/g/c;F)Lcom/coloros/anim/c/b/c;
+    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/d;->b(Lcom/coloros/anim/e/c;F)Lcom/coloros/anim/model/content/c;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method b(Lcom/coloros/anim/g/c;F)Lcom/coloros/anim/c/b/c;
+.method b(Lcom/coloros/anim/e/c;F)Lcom/coloros/anim/model/content/c;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/c<",
-            "Lcom/coloros/anim/c/b/c;",
+            "Lcom/coloros/anim/e/c<",
+            "Lcom/coloros/anim/model/content/c;",
             ">;F)",
-            "Lcom/coloros/anim/c/b/c;"
+            "Lcom/coloros/anim/model/content/c;"
         }
     .end annotation
 
     .line 20
-    iget-object v0, p0, Lcom/coloros/anim/a/b/d;->c:Lcom/coloros/anim/c/b/c;
+    iget-object v0, p0, Lcom/coloros/anim/a/b/d;->c:Lcom/coloros/anim/model/content/c;
 
-    iget-object v1, p1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    iget-object v1, p1, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
-    check-cast v1, Lcom/coloros/anim/c/b/c;
+    check-cast v1, Lcom/coloros/anim/model/content/c;
 
-    iget-object p1, p1, Lcom/coloros/anim/g/c;->d:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
 
-    check-cast p1, Lcom/coloros/anim/c/b/c;
+    check-cast p1, Lcom/coloros/anim/model/content/c;
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/coloros/anim/c/b/c;->a(Lcom/coloros/anim/c/b/c;Lcom/coloros/anim/c/b/c;F)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/coloros/anim/model/content/c;->a(Lcom/coloros/anim/model/content/c;Lcom/coloros/anim/model/content/c;F)V
 
     .line 21
-    iget-object p1, p0, Lcom/coloros/anim/a/b/d;->c:Lcom/coloros/anim/c/b/c;
+    iget-object p1, p0, Lcom/coloros/anim/a/b/d;->c:Lcom/coloros/anim/model/content/c;
 
     return-object p1
 .end method

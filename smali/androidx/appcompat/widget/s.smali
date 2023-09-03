@@ -1,18 +1,18 @@
 .class public Landroidx/appcompat/widget/s;
-.super Landroid/widget/RatingBar;
-.source "AppCompatRatingBar.java"
+.super Landroid/widget/SeekBar;
+.source "AppCompatSeekBar.java"
 
 
 # instance fields
-.field private final a:Landroidx/appcompat/widget/q;
+.field private final a:Landroidx/appcompat/widget/t;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 46
-    sget v0, Landroidx/appcompat/R$attr;->ratingBarStyle:I
+    .line 45
+    sget v0, Landroidx/appcompat/R$attr;->seekBarStyle:I
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/s;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -22,81 +22,78 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 51
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 50
+    invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
+    .line 52
     invoke-virtual {p0}, Landroidx/appcompat/widget/s;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
+
+    .line 54
+    new-instance p1, Landroidx/appcompat/widget/t;
+
+    invoke-direct {p1, p0}, Landroidx/appcompat/widget/t;-><init>(Landroid/widget/SeekBar;)V
+
+    iput-object p1, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/t;
 
     .line 55
-    new-instance p1, Landroidx/appcompat/widget/q;
+    iget-object p1, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/t;
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/q;-><init>(Landroid/widget/ProgressBar;)V
-
-    iput-object p1, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/q;
-
-    .line 56
-    iget-object p1, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/q;
-
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/q;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/t;->a(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected declared-synchronized onMeasure(II)V
+.method protected drawableStateChanged()V
+    .locals 1
+
+    .line 66
+    invoke-super {p0}, Landroid/widget/SeekBar;->drawableStateChanged()V
+
+    .line 67
+    iget-object v0, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/t;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/t;->c()V
+
+    return-void
+.end method
+
+.method public jumpDrawablesToCurrentState()V
+    .locals 1
+
+    .line 72
+    invoke-super {p0}, Landroid/widget/SeekBar;->jumpDrawablesToCurrentState()V
+
+    .line 73
+    iget-object v0, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/t;
+
+    invoke-virtual {v0}, Landroidx/appcompat/widget/t;->b()V
+
+    return-void
+.end method
+
+.method protected declared-synchronized onDraw(Landroid/graphics/Canvas;)V
     .locals 1
 
     monitor-enter p0
 
-    .line 61
+    .line 60
     :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
+    invoke-super {p0, p1}, Landroid/widget/SeekBar;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 63
-    iget-object p2, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/q;
+    .line 61
+    iget-object v0, p0, Landroidx/appcompat/widget/s;->a:Landroidx/appcompat/widget/t;
 
-    invoke-virtual {p2}, Landroidx/appcompat/widget/q;->a()Landroid/graphics/Bitmap;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    .line 65
-    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p0}, Landroidx/appcompat/widget/s;->getNumStars()I
-
-    move-result v0
-
-    mul-int/2addr p2, v0
-
-    const/4 v0, 0x0
-
-    .line 66
-    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
-
-    move-result p1
-
-    .line 67
-    invoke-virtual {p0}, Landroidx/appcompat/widget/s;->getMeasuredHeight()I
-
-    move-result p2
-
-    .line 66
-    invoke-virtual {p0, p1, p2}, Landroidx/appcompat/widget/s;->setMeasuredDimension(II)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/t;->a(Landroid/graphics/Canvas;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 69
-    :cond_0
+    .line 62
     monitor-exit p0
 
     return-void

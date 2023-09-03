@@ -10,9 +10,9 @@
 
 .field public static final ST_STICKER_PARAM_MAKEUP_INT_CANVAS_WIDTH:I = 0x2bf
 
-.field public static final ST_STICKER_PARAM_MAKEUP_INT_HEIGHT:I = 0x2be
-
 .field public static final ST_STICKER_PARAM_MAKEUP_INT_WIDTH:I = 0x2bd
+
+.field public static final ST_STICKER_PARAM_MAKEUjP_INT_HEIGHT:I = 0x2be
 
 
 # direct methods

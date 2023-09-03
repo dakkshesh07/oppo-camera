@@ -3,6 +3,11 @@
 .source "GeneratedAdapter.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # virtual methods
-.method public abstract a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;ZLandroidx/lifecycle/l;)V
+.method public abstract a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;ZLandroidx/lifecycle/l;)V
 .end method

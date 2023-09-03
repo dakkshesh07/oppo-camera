@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;Ljava/lang/String;)V
     .locals 0
 
-    .line 81
+    .line 83
     iput-object p1, p0, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService$1;->b:Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;
 
     iput-object p2, p0, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService$1;->a:Ljava/lang/String;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 2
 
-    .line 84
+    .line 86
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService$1;->a:Ljava/lang/String;
 
     const-string v1, "com.coloros.providers.sticker.download.category.thumbnail"
@@ -53,14 +53,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 85
+    .line 87
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService$1;->b:Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;
 
     invoke-static {v0, v0}, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;->a(Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 86
+    .line 88
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService$1;->a:Ljava/lang/String;
 
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 87
+    .line 89
     iget-object v0, p0, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService$1;->b:Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;
 
     invoke-static {v0, v0}, Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;->b(Lcom/oppo/camera/sticker/download/thumbnail/ThumbDownloadService;Landroid/content/Context;)V

@@ -52,7 +52,7 @@
 .method static constructor <clinit>()V
     .locals 12
 
-    .line 1194
+    .line 1263
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const/4 v1, 0x0
@@ -67,7 +67,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1195
+    .line 1264
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const-wide/16 v2, 0x0
@@ -84,7 +84,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->LONG:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1196
+    .line 1265
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const/4 v2, 0x0
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->FLOAT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1197
+    .line 1266
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const-wide/16 v5, 0x0
@@ -118,7 +118,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->DOUBLE:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1198
+    .line 1267
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -133,7 +133,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->BOOLEAN:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1199
+    .line 1268
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const/4 v2, 0x5
@@ -146,7 +146,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->STRING:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1200
+    .line 1269
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     sget-object v7, Lcom/google/protobuf/ByteString;->EMPTY:Lcom/google/protobuf/ByteString;
@@ -159,7 +159,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->BYTE_STRING:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1201
+    .line 1270
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const/4 v7, 0x0
@@ -172,7 +172,7 @@
 
     sput-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->ENUM:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
-    .line 1202
+    .line 1271
     new-instance v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     const/16 v10, 0x8
@@ -185,7 +185,7 @@
 
     const/16 v0, 0x9
 
-    .line 1193
+    .line 1262
     new-array v0, v0, [Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     sget-object v7, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->INT:Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
@@ -239,19 +239,19 @@
         }
     .end annotation
 
-    .line 1204
+    .line 1273
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 1205
+    .line 1274
     iput-object p3, p0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->defaultDefault:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method static synthetic access$2300(Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;)Ljava/lang/Object;
+.method static synthetic access$2400(Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;)Ljava/lang/Object;
     .locals 0
 
-    .line 1193
+    .line 1262
     iget-object p0, p0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->defaultDefault:Ljava/lang/Object;
 
     return-object p0
@@ -260,7 +260,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
     .locals 1
 
-    .line 1193
+    .line 1262
     const-class v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -275,7 +275,7 @@
 .method public static values()[Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
     .locals 1
 
-    .line 1193
+    .line 1262
     sget-object v0, Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->$VALUES:[Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/Descriptors$FieldDescriptor$JavaType;->clone()Ljava/lang/Object;

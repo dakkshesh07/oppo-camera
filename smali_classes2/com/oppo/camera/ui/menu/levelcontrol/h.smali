@@ -29,55 +29,55 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    const v0, 0x7f0703aa
+    const v0, 0x7f0704a1
 
     .line 45
-    invoke-static {v0}, Lcom/oppo/camera/util/Util;->g(I)F
+    invoke-static {v0}, Lcom/oppo/camera/util/Util;->f(I)F
 
     move-result v0
 
     sput v0, Lcom/oppo/camera/ui/menu/levelcontrol/h;->e:F
 
-    const v0, 0x7f0703ab
+    const v0, 0x7f0704a2
 
     .line 46
-    invoke-static {v0}, Lcom/oppo/camera/util/Util;->g(I)F
+    invoke-static {v0}, Lcom/oppo/camera/util/Util;->f(I)F
 
     move-result v0
 
     sput v0, Lcom/oppo/camera/ui/menu/levelcontrol/h;->f:F
 
-    const v0, 0x7f0703a9
+    const v0, 0x7f0704a0
 
     .line 47
-    invoke-static {v0}, Lcom/oppo/camera/util/Util;->g(I)F
+    invoke-static {v0}, Lcom/oppo/camera/util/Util;->f(I)F
 
     move-result v0
 
     sput v0, Lcom/oppo/camera/ui/menu/levelcontrol/h;->g:F
 
-    const v0, 0x7f0703b6
+    const v0, 0x7f0704ad
 
     .line 48
-    invoke-static {v0}, Lcom/oppo/camera/util/Util;->g(I)F
+    invoke-static {v0}, Lcom/oppo/camera/util/Util;->f(I)F
 
     move-result v0
 
     sput v0, Lcom/oppo/camera/ui/menu/levelcontrol/h;->h:F
 
-    const v0, 0x7f0703a8
+    const v0, 0x7f07049f
 
     .line 49
-    invoke-static {v0}, Lcom/oppo/camera/util/Util;->g(I)F
+    invoke-static {v0}, Lcom/oppo/camera/util/Util;->f(I)F
 
     move-result v0
 
     sput v0, Lcom/oppo/camera/ui/menu/levelcontrol/h;->i:F
 
-    const v0, 0x7f0703b5
+    const v0, 0x7f0704ac
 
     .line 50
-    invoke-static {v0}, Lcom/oppo/camera/util/Util;->g(I)F
+    invoke-static {v0}, Lcom/oppo/camera/util/Util;->f(I)F
 
     move-result v0
 

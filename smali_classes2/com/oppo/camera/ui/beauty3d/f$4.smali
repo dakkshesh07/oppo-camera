@@ -1,11 +1,14 @@
 .class Lcom/oppo/camera/ui/beauty3d/f$4;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "Beauty3DGuideScanUI.java"
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/beauty3d/f;->a(Landroid/animation/ObjectAnimator;Landroid/view/View;)V
+    value = Lcom/oppo/camera/ui/beauty3d/f;->h()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,46 +18,113 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
-
-.field final synthetic b:Lcom/oppo/camera/ui/beauty3d/f;
+.field final synthetic a:Lcom/oppo/camera/ui/beauty3d/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/oppo/camera/ui/beauty3d/f;Landroid/view/View;)V
+.method constructor <init>(Lcom/oppo/camera/ui/beauty3d/f;)V
     .locals 0
 
-    .line 954
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->b:Lcom/oppo/camera/ui/beauty3d/f;
+    .line 1071
+    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
 
-    iput-object p2, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Landroid/view/View;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1098
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->c(Lcom/oppo/camera/ui/beauty3d/f;Z)Z
+
+    return-void
+.end method
+
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 957
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    .line 1079
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    .line 958
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Landroid/view/View;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v0, 0x4
+    const-string v0, "scanComplete, onAnimationEnd, mbScanCompleteCancel: "
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 959
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Landroid/view/View;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
 
-    const/high16 v0, 0x3f800000    # 1.0f
+    invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/f;->h(Lcom/oppo/camera/ui/beauty3d/f;)Z
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setAlpha(F)V
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Beauty3DGuideScanUI"
+
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 1081
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
+
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/f;->i(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
+
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/f;->h(Lcom/oppo/camera/ui/beauty3d/f;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    .line 1082
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
+
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/f;->i(Lcom/oppo/camera/ui/beauty3d/f;)Landroid/os/Handler;
+
+    move-result-object p1
+
+    new-instance v0, Lcom/oppo/camera/ui/beauty3d/f$4$1;
+
+    invoke-direct {v0, p0}, Lcom/oppo/camera/ui/beauty3d/f$4$1;-><init>(Lcom/oppo/camera/ui/beauty3d/f$4;)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1074
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/f$4;->a:Lcom/oppo/camera/ui/beauty3d/f;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/beauty3d/f;->c(Lcom/oppo/camera/ui/beauty3d/f;Z)Z
 
     return-void
 .end method

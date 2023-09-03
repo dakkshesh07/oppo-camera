@@ -22,10 +22,10 @@
 .method constructor <init>(Ljava/io/InputStream;I)V
     .locals 0
 
-    .line 254
+    .line 283
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 255
+    .line 284
     iput p2, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     return-void
@@ -41,7 +41,7 @@
         }
     .end annotation
 
-    .line 260
+    .line 289
     invoke-super {p0}, Ljava/io/FilterInputStream;->available()I
 
     move-result v0
@@ -63,7 +63,7 @@
         }
     .end annotation
 
-    .line 265
+    .line 294
     iget v0, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     if-gtz v0, :cond_0
@@ -72,7 +72,7 @@
 
     return v0
 
-    .line 268
+    .line 297
     :cond_0
     invoke-super {p0}, Ljava/io/FilterInputStream;->read()I
 
@@ -80,7 +80,7 @@
 
     if-ltz v0, :cond_1
 
-    .line 270
+    .line 299
     iget v1, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     add-int/lit8 v1, v1, -0x1
@@ -99,7 +99,7 @@
         }
     .end annotation
 
-    .line 278
+    .line 306
     iget v0, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     if-gtz v0, :cond_0
@@ -108,20 +108,20 @@
 
     return p1
 
-    .line 281
+    .line 309
     :cond_0
     invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
 
     move-result p3
 
-    .line 282
+    .line 310
     invoke-super {p0, p1, p2, p3}, Ljava/io/FilterInputStream;->read([BII)I
 
     move-result p1
 
     if-ltz p1, :cond_1
 
-    .line 284
+    .line 312
     iget p2, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     sub-int/2addr p2, p1
@@ -140,7 +140,7 @@
         }
     .end annotation
 
-    .line 291
+    .line 319
     iget v0, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     int-to-long v0, v0
@@ -159,7 +159,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 293
+    .line 321
     iget v0, p0, Lcom/google/protobuf/AbstractMessageLite$Builder$LimitedInputStream;->limit:I
 
     int-to-long v0, v0

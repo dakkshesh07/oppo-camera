@@ -77,7 +77,7 @@
         }
     .end annotation
 
-    .line 132
+    .line 137
     new-instance v0, Lcom/google/protobuf/MapField$ImmutableMessageConverter;
 
     invoke-direct {v0, p1}, Lcom/google/protobuf/MapField$ImmutableMessageConverter;-><init>(Lcom/google/protobuf/MapEntry;)V
@@ -100,21 +100,21 @@
         }
     .end annotation
 
-    .line 120
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
+    .line 129
     iput-object p1, p0, Lcom/google/protobuf/MapField;->converter:Lcom/google/protobuf/MapField$Converter;
 
     const/4 p1, 0x1
 
-    .line 122
+    .line 130
     iput-boolean p1, p0, Lcom/google/protobuf/MapField;->isMutable:Z
 
-    .line 123
+    .line 131
     iput-object p2, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
-    .line 124
+    .line 132
     new-instance p1, Lcom/google/protobuf/MapField$MutatabilityAwareMap;
 
     invoke-direct {p1, p0, p3}, Lcom/google/protobuf/MapField$MutatabilityAwareMap;-><init>(Lcom/google/protobuf/MutabilityOracle;Ljava/util/Map;)V
@@ -123,7 +123,7 @@
 
     const/4 p1, 0x0
 
-    .line 125
+    .line 133
     iput-object p1, p0, Lcom/google/protobuf/MapField;->listData:Ljava/util/List;
 
     return-void
@@ -138,7 +138,7 @@
         }
     .end annotation
 
-    .line 152
+    .line 154
     iget-object v0, p0, Lcom/google/protobuf/MapField;->converter:Lcom/google/protobuf/MapField$Converter;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/MapField$Converter;->convertKeyAndValueToMessage(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/protobuf/Message;
@@ -211,12 +211,12 @@
         }
     .end annotation
 
-    .line 161
+    .line 163
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 162
+    .line 164
     invoke-virtual {p1}, Lcom/google/protobuf/MapField$MutatabilityAwareMap;->entrySet()Ljava/util/Set;
 
     move-result-object p1
@@ -247,12 +247,10 @@
 
     move-result-object v1
 
-    .line 164
     invoke-direct {p0, v2, v1}, Lcom/google/protobuf/MapField;->convertKeyAndValueToMessage(Ljava/lang/Object;Ljava/lang/Object;)Lcom/google/protobuf/Message;
 
     move-result-object v1
 
-    .line 163
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -272,7 +270,7 @@
         }
     .end annotation
 
-    .line 157
+    .line 159
     iget-object v0, p0, Lcom/google/protobuf/MapField;->converter:Lcom/google/protobuf/MapField$Converter;
 
     invoke-interface {v0, p1, p2}, Lcom/google/protobuf/MapField$Converter;->convertMessageToKeyAndValue(Lcom/google/protobuf/Message;Ljava/util/Map;)V
@@ -296,12 +294,11 @@
         }
     .end annotation
 
-    .line 139
+    .line 143
     new-instance v0, Lcom/google/protobuf/MapField;
 
     sget-object v1, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
 
-    .line 140
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v2
@@ -327,7 +324,7 @@
         }
     .end annotation
 
-    .line 146
+    .line 149
     new-instance v0, Lcom/google/protobuf/MapField;
 
     sget-object v1, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
@@ -382,7 +379,6 @@
 
     sget-object v2, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
 
-    .line 230
     invoke-virtual {p0}, Lcom/google/protobuf/MapField;->getMap()Ljava/util/Map;
 
     move-result-object v3
@@ -399,7 +395,7 @@
 .method public ensureMutable()V
     .locals 1
 
-    .line 286
+    .line 280
     invoke-virtual {p0}, Lcom/google/protobuf/MapField;->isMutable()Z
 
     move-result v0
@@ -408,7 +404,7 @@
 
     return-void
 
-    .line 287
+    .line 281
     :cond_0
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
@@ -460,17 +456,17 @@
         }
     .end annotation
 
-    .line 235
+    .line 234
     iget-object v0, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
     sget-object v1, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
 
     if-ne v0, v1, :cond_1
 
-    .line 236
+    .line 235
     monitor-enter p0
 
-    .line 237
+    .line 236
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
@@ -478,7 +474,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 238
+    .line 237
     iget-object v0, p0, Lcom/google/protobuf/MapField;->mapData:Lcom/google/protobuf/MapField$MutatabilityAwareMap;
 
     invoke-direct {p0, v0}, Lcom/google/protobuf/MapField;->convertMapToList(Lcom/google/protobuf/MapField$MutatabilityAwareMap;)Ljava/util/List;
@@ -487,12 +483,12 @@
 
     iput-object v0, p0, Lcom/google/protobuf/MapField;->listData:Ljava/util/List;
 
-    .line 239
+    .line 238
     sget-object v0, Lcom/google/protobuf/MapField$StorageMode;->BOTH:Lcom/google/protobuf/MapField$StorageMode;
 
     iput-object v0, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
-    .line 241
+    .line 240
     :cond_0
     monitor-exit p0
 
@@ -507,7 +503,7 @@
 
     throw v0
 
-    .line 243
+    .line 242
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/google/protobuf/MapField;->listData:Ljava/util/List;
@@ -591,7 +587,7 @@
 .method getMapEntryMessageDefaultInstance()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 263
+    .line 259
     iget-object v0, p0, Lcom/google/protobuf/MapField;->converter:Lcom/google/protobuf/MapField$Converter;
 
     invoke-interface {v0}, Lcom/google/protobuf/MapField$Converter;->getMessageDefaultInstance()Lcom/google/protobuf/Message;
@@ -612,21 +608,21 @@
         }
     .end annotation
 
-    .line 248
+    .line 247
     iget-object v0, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
     sget-object v1, Lcom/google/protobuf/MapField$StorageMode;->LIST:Lcom/google/protobuf/MapField$StorageMode;
 
     if-eq v0, v1, :cond_1
 
-    .line 249
+    .line 248
     iget-object v0, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
     sget-object v1, Lcom/google/protobuf/MapField$StorageMode;->MAP:Lcom/google/protobuf/MapField$StorageMode;
 
     if-ne v0, v1, :cond_0
 
-    .line 250
+    .line 249
     iget-object v0, p0, Lcom/google/protobuf/MapField;->mapData:Lcom/google/protobuf/MapField$MutatabilityAwareMap;
 
     invoke-direct {p0, v0}, Lcom/google/protobuf/MapField;->convertMapToList(Lcom/google/protobuf/MapField$MutatabilityAwareMap;)Ljava/util/List;
@@ -638,15 +634,15 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 252
+    .line 251
     iput-object v0, p0, Lcom/google/protobuf/MapField;->mapData:Lcom/google/protobuf/MapField$MutatabilityAwareMap;
 
-    .line 253
+    .line 252
     sget-object v0, Lcom/google/protobuf/MapField$StorageMode;->LIST:Lcom/google/protobuf/MapField$StorageMode;
 
     iput-object v0, p0, Lcom/google/protobuf/MapField;->mode:Lcom/google/protobuf/MapField$StorageMode;
 
-    .line 255
+    .line 254
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/MapField;->listData:Ljava/util/List;
 
@@ -722,7 +718,7 @@
 .method public isMutable()Z
     .locals 1
 
-    .line 278
+    .line 272
     iget-boolean v0, p0, Lcom/google/protobuf/MapField;->isMutable:Z
 
     return v0
@@ -733,7 +729,7 @@
 
     const/4 v0, 0x0
 
-    .line 271
+    .line 267
     iput-boolean v0, p0, Lcom/google/protobuf/MapField;->isMutable:Z
 
     return-void

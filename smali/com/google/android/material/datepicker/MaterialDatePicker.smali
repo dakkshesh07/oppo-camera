@@ -509,7 +509,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p1, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     .line 369
     iget-object p1, p0, Lcom/google/android/material/datepicker/MaterialDatePicker;->headerToggleButton:Lcom/google/android/material/internal/CheckableImageButton;
@@ -1181,7 +1181,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {v1}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result v1
 
@@ -1303,7 +1303,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p3, v0}, Landroidx/core/g/w;->d(Landroid/view/View;I)V
+    invoke-static {p3, v0}, Landroidx/core/f/w;->d(Landroid/view/View;I)V
 
     .line 227
     sget p3, Lcom/google/android/material/R$id;->mtrl_picker_header_toggle:I

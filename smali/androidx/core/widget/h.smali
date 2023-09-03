@@ -110,12 +110,12 @@
 
     .line 73
     :cond_0
-    invoke-static {p1}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p1}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
     .line 72
-    invoke-static {p4, v0}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p4, v0}, Landroidx/core/f/d;->a(II)I
 
     move-result p4
 

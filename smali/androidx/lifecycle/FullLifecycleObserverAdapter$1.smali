@@ -22,8 +22,8 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .line 32
-    invoke-static {}, Landroidx/lifecycle/e$a;->values()[Landroidx/lifecycle/e$a;
+    .line 34
+    invoke-static {}, Landroidx/lifecycle/Lifecycle$Event;->values()[Landroidx/lifecycle/Lifecycle$Event;
 
     move-result-object v0
 
@@ -36,9 +36,9 @@
     :try_start_0
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_CREATE:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_CREATE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -52,9 +52,9 @@
     :try_start_1
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_START:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_START:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -68,9 +68,9 @@
     :try_start_2
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_RESUME:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_RESUME:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -84,9 +84,9 @@
     :try_start_3
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_PAUSE:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_PAUSE:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -100,9 +100,9 @@
     :try_start_4
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_STOP:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_STOP:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -116,9 +116,9 @@
     :try_start_5
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_DESTROY:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_DESTROY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -132,9 +132,9 @@
     :try_start_6
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_ANY:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_ANY:Landroidx/lifecycle/Lifecycle$Event;
 
-    invoke-virtual {v1}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {v1}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 

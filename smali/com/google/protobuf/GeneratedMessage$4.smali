@@ -26,7 +26,7 @@
 .method constructor <init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 1709
+    .line 1711
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$4;->val$singularType:Ljava/lang/Class;
 
     iput-object p2, p0, Lcom/google/protobuf/GeneratedMessage$4;->val$descriptorOuterClass:Ljava/lang/String;
@@ -45,7 +45,7 @@
 .method protected loadDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
     .locals 4
 
-    .line 1713
+    .line 1715
     :try_start_0
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$4;->val$singularType:Ljava/lang/Class;
 
@@ -61,7 +61,7 @@
 
     const-string v1, "descriptor"
 
-    .line 1714
+    .line 1716
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -74,7 +74,7 @@
 
     check-cast v0, Lcom/google/protobuf/Descriptors$FileDescriptor;
 
-    .line 1715
+    .line 1717
     iget-object v1, p0, Lcom/google/protobuf/GeneratedMessage$4;->val$extensionName:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/Descriptors$FileDescriptor;->findExtensionByName(Ljava/lang/String;)Lcom/google/protobuf/Descriptors$FieldDescriptor;
@@ -88,7 +88,7 @@
     :catch_0
     move-exception v0
 
-    .line 1717
+    .line 1719
     new-instance v1, Ljava/lang/RuntimeException;
 
     new-instance v2, Ljava/lang/StringBuilder;

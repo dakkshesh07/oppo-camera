@@ -22,11 +22,9 @@
 
 .field public b:Landroid/widget/TextView;
 
-.field public c:Landroid/widget/ImageView;
+.field public c:Lcom/oppo/camera/ui/beauty3d/d$d;
 
-.field public d:Lcom/oppo/camera/ui/beauty3d/d$d;
-
-.field final synthetic e:Lcom/oppo/camera/ui/beauty3d/d$b;
+.field final synthetic d:Lcom/oppo/camera/ui/beauty3d/d$b;
 
 
 # direct methods
@@ -34,26 +32,23 @@
     .locals 0
 
     .line 1699
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->e:Lcom/oppo/camera/ui/beauty3d/d$b;
+    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$b;
 
     .line 1700
     invoke-direct {p0, p2}, Landroidx/recyclerview/widget/RecyclerView$w;-><init>(Landroid/view/View;)V
 
     const/4 p1, 0x0
 
-    .line 1678
+    .line 1679
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->a:Lcom/oppo/camera/ui/beauty3d/BorderRoundImageView;
 
-    .line 1679
+    .line 1680
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->b:Landroid/widget/TextView;
 
-    .line 1680
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->c:Landroid/widget/ImageView;
-
     .line 1681
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$d;
+    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->c:Lcom/oppo/camera/ui/beauty3d/d$d;
 
-    const p1, 0x7f0900ff
+    const p1, 0x7f09010b
 
     .line 1701
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -64,7 +59,7 @@
 
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->a:Lcom/oppo/camera/ui/beauty3d/BorderRoundImageView;
 
-    const p1, 0x7f0900fe
+    const p1, 0x7f09010a
 
     .line 1702
     invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -75,21 +70,10 @@
 
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->b:Landroid/widget/TextView;
 
-    const p1, 0x7f0900fd
-
     .line 1703
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->c:Landroid/widget/ImageView;
+    iput-object p3, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->c:Lcom/oppo/camera/ui/beauty3d/d$d;
 
     .line 1704
-    iput-object p3, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$d;
-
-    .line 1705
     invoke-virtual {p2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     return-void
@@ -106,7 +90,7 @@
 
     .line 1685
     :goto_0
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->e:Lcom/oppo/camera/ui/beauty3d/d$b;
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$b;
 
     invoke-static {v2}, Lcom/oppo/camera/ui/beauty3d/d$b;->a(Lcom/oppo/camera/ui/beauty3d/d$b;)Ljava/util/List;
 
@@ -119,7 +103,7 @@
     if-ge v1, v2, :cond_0
 
     .line 1686
-    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->e:Lcom/oppo/camera/ui/beauty3d/d$b;
+    iget-object v2, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$b;
 
     invoke-static {v2}, Lcom/oppo/camera/ui/beauty3d/d$b;->a(Lcom/oppo/camera/ui/beauty3d/d$b;)Ljava/util/List;
 
@@ -157,10 +141,10 @@
 
     const-string v1, "Beauty3DEditUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1691
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->e:Lcom/oppo/camera/ui/beauty3d/d$b;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$b;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/beauty3d/d$b;->a(Lcom/oppo/camera/ui/beauty3d/d$b;)Ljava/util/List;
 
@@ -179,12 +163,12 @@
     invoke-interface {v0, v1, v2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 1692
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->e:Lcom/oppo/camera/ui/beauty3d/d$b;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$b;
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/beauty3d/d$b;->notifyDataSetChanged()V
 
     .line 1694
-    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->d:Lcom/oppo/camera/ui/beauty3d/d$d;
+    iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/d$b$a;->c:Lcom/oppo/camera/ui/beauty3d/d$d;
 
     if-eqz v0, :cond_1
 

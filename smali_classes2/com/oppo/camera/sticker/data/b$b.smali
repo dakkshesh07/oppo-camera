@@ -60,7 +60,7 @@
 
     const-string v0, "StickerDataManager"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 

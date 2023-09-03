@@ -3,7 +3,12 @@
 .source "CustomVersionedParcelable.java"
 
 # interfaces
-.implements Landroidx/versionedparcelable/c;
+.implements Landroidx/versionedparcelable/b;
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
 
 
 # direct methods
@@ -20,12 +25,16 @@
 # virtual methods
 .method public a(Z)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
 
 .method public e()V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method

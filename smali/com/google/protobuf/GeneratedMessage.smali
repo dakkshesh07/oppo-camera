@@ -138,19 +138,19 @@
         }
     .end annotation
 
-    .line 3007
+    .line 3011
     invoke-virtual {p0}, Lcom/google/protobuf/ExtensionLite;->isLite()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3011
+    .line 3015
     check-cast p0, Lcom/google/protobuf/Extension;
 
     return-object p0
 
-    .line 3008
+    .line 3012
     :cond_0
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -164,12 +164,12 @@
 .method protected static computeStringSize(ILjava/lang/Object;)I
     .locals 1
 
-    .line 3015
+    .line 3019
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 3016
+    .line 3020
     check-cast p1, Ljava/lang/String;
 
     invoke-static {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->computeStringSize(ILjava/lang/String;)I
@@ -178,7 +178,7 @@
 
     return p0
 
-    .line 3018
+    .line 3022
     :cond_0
     check-cast p1, Lcom/google/protobuf/ByteString;
 
@@ -192,12 +192,12 @@
 .method protected static computeStringSizeNoTag(Ljava/lang/Object;)I
     .locals 1
 
-    .line 3023
+    .line 3027
     instance-of v0, p0, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 3024
+    .line 3028
     check-cast p0, Ljava/lang/String;
 
     invoke-static {p0}, Lcom/google/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
@@ -206,7 +206,7 @@
 
     return p0
 
-    .line 3026
+    .line 3030
     :cond_0
     check-cast p0, Lcom/google/protobuf/ByteString;
 
@@ -389,7 +389,7 @@
 .method private static varargs getMethodOrDie(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
     .locals 3
 
-    .line 1968
+    .line 1970
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
@@ -402,7 +402,7 @@
     :catch_0
     move-exception p2
 
-    .line 1970
+    .line 1972
     new-instance v0, Ljava/lang/RuntimeException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -413,7 +413,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1971
+    .line 1973
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p0
@@ -442,7 +442,7 @@
 .method private static varargs invokeOrDie(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1980
+    .line 1982
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -456,27 +456,27 @@
     :catch_0
     move-exception p0
 
-    .line 1986
+    .line 1988
     invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
-    .line 1987
+    .line 1989
     instance-of p1, p0, Ljava/lang/RuntimeException;
 
     if-nez p1, :cond_1
 
-    .line 1989
+    .line 1991
     instance-of p1, p0, Ljava/lang/Error;
 
     if-eqz p1, :cond_0
 
-    .line 1990
+    .line 1992
     check-cast p0, Ljava/lang/Error;
 
     throw p0
 
-    .line 1992
+    .line 1994
     :cond_0
     new-instance p1, Ljava/lang/RuntimeException;
 
@@ -486,7 +486,7 @@
 
     throw p1
 
-    .line 1988
+    .line 1990
     :cond_1
     check-cast p0, Ljava/lang/RuntimeException;
 
@@ -495,7 +495,7 @@
     :catch_1
     move-exception p0
 
-    .line 1982
+    .line 1984
     new-instance p1, Ljava/lang/RuntimeException;
 
     const-string p2, "Couldn\'t use Java reflection to implement protocol message reflection."
@@ -522,7 +522,7 @@
         }
     .end annotation
 
-    .line 1641
+    .line 1643
     new-instance v0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     sget-object v1, Lcom/google/protobuf/Extension$ExtensionType;->IMMUTABLE:Lcom/google/protobuf/Extension$ExtensionType;
@@ -553,7 +553,7 @@
         }
     .end annotation
 
-    .line 1708
+    .line 1710
     new-instance v0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     new-instance v1, Lcom/google/protobuf/GeneratedMessage$4;
@@ -586,7 +586,7 @@
         }
     .end annotation
 
-    .line 1621
+    .line 1623
     new-instance v0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     new-instance v1, Lcom/google/protobuf/GeneratedMessage$2;
@@ -619,7 +619,7 @@
         }
     .end annotation
 
-    .line 1681
+    .line 1683
     new-instance v0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     new-instance v1, Lcom/google/protobuf/GeneratedMessage$3;
@@ -902,19 +902,19 @@
         }
     .end annotation
 
-    .line 3032
+    .line 3036
     instance-of v0, p2, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 3033
+    .line 3037
     check-cast p2, Ljava/lang/String;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/CodedOutputStream;->writeString(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 3035
+    .line 3039
     :cond_0
     check-cast p2, Lcom/google/protobuf/ByteString;
 
@@ -932,19 +932,19 @@
         }
     .end annotation
 
-    .line 3041
+    .line 3045
     instance-of v0, p1, Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 3042
+    .line 3046
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream;->writeStringNoTag(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 3044
+    .line 3048
     :cond_0
     check-cast p1, Lcom/google/protobuf/ByteString;
 
@@ -1232,7 +1232,7 @@
 .method protected internalGetMapField(I)Lcom/google/protobuf/MapField;
     .locals 2
 
-    .line 2013
+    .line 2015
     new-instance p1, Ljava/lang/RuntimeException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1243,7 +1243,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2014
+    .line 2016
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -1437,7 +1437,7 @@
         }
     .end annotation
 
-    .line 2997
+    .line 3001
     new-instance v0, Lcom/google/protobuf/GeneratedMessageLite$SerializedForm;
 
     invoke-direct {v0, p0}, Lcom/google/protobuf/GeneratedMessageLite$SerializedForm;-><init>(Lcom/google/protobuf/MessageLite;)V

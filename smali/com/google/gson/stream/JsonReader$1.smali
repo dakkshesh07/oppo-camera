@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 1593
+    .line 1594
     invoke-direct {p0}, Lcom/google/gson/internal/JsonReaderInternalAccess;-><init>()V
 
     return-void
@@ -34,25 +34,25 @@
         }
     .end annotation
 
-    .line 1595
+    .line 1596
     instance-of v0, p1, Lcom/google/gson/internal/bind/JsonTreeReader;
 
     if-eqz v0, :cond_0
 
-    .line 1596
+    .line 1597
     check-cast p1, Lcom/google/gson/internal/bind/JsonTreeReader;
 
     invoke-virtual {p1}, Lcom/google/gson/internal/bind/JsonTreeReader;->promoteNameToValue()V
 
     return-void
 
-    .line 1599
+    .line 1600
     :cond_0
     iget v0, p1, Lcom/google/gson/stream/JsonReader;->peeked:I
 
     if-nez v0, :cond_1
 
-    .line 1601
+    .line 1602
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->doPeek()I
 
     move-result v0
@@ -64,7 +64,7 @@
 
     const/16 v0, 0x9
 
-    .line 1604
+    .line 1605
     iput v0, p1, Lcom/google/gson/stream/JsonReader;->peeked:I
 
     goto :goto_0
@@ -76,7 +76,7 @@
 
     const/16 v0, 0x8
 
-    .line 1606
+    .line 1607
     iput v0, p1, Lcom/google/gson/stream/JsonReader;->peeked:I
 
     goto :goto_0
@@ -88,13 +88,13 @@
 
     const/16 v0, 0xa
 
-    .line 1608
+    .line 1609
     iput v0, p1, Lcom/google/gson/stream/JsonReader;->peeked:I
 
     :goto_0
     return-void
 
-    .line 1610
+    .line 1611
     :cond_4
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -106,43 +106,14 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    .line 1612
     invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->peek()Lcom/google/gson/stream/JsonToken;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, " at line "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1611
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->getLineNumber()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " column "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->getColumnNumber()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, " path "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1612
-    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->getPath()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/google/gson/stream/JsonReader;->locationString()Ljava/lang/String;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "MenuItemImpl.java"
 
 # interfaces
-.implements Landroidx/core/g/b$b;
+.implements Landroidx/core/f/b$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/appcompat/view/menu/j;->a(Landroidx/core/g/b;)Landroidx/core/a/a/b;
+    value = Landroidx/appcompat/view/menu/j;->a(Landroidx/core/f/b;)Landroidx/core/b/a/b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

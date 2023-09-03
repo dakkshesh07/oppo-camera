@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="abc_action_bar_embed_tabs">true</bool>
-    <bool name="abc_allow_stacked_button_bar">false</bool>
-    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
-    <bool name="color_button_anim_enable">true</bool>
-    <bool name="color_config_actionMenuItemAllCaps">false</bool>
-    <bool name="color_switch_theme_enable">false</bool>
-    <bool name="config_materialPreferenceIconSpaceReserved">false</bool>
-    <bool name="is_dialog_preference_immersive">false</bool>
-    <bool name="list_status_white_enabled">false</bool>
-    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
-    <bool name="oppo_actionbar_animatetab_transparent">false</bool>
+    <bool name="MT_Bin">true</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050001">false</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050002">true</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050003">false</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050004">true</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050005">false</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050006">false</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050007">false</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050008">false</bool>
+    <bool name="APKTOOL_DUPLICATE_bool_0x7f050009">true</bool>
 </resources>

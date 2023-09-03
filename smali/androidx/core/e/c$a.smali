@@ -167,6 +167,8 @@
 
 .method public a(Landroidx/core/e/c$a;)Z
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 275
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -687,7 +689,7 @@
     aput-object v2, v0, v1
 
     .line 353
-    invoke-static {v0}, Landroidx/core/f/c;->a([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/d;->a([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -816,7 +818,7 @@
     aput-object v2, v0, v1
 
     .line 358
-    invoke-static {v0}, Landroidx/core/f/c;->a([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/d;->a([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -920,7 +922,7 @@
     aput-object v1, v0, v4
 
     .line 363
-    invoke-static {v0}, Landroidx/core/f/c;->a([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/d;->a([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -1024,7 +1026,7 @@
     aput-object v1, v0, v4
 
     .line 367
-    invoke-static {v0}, Landroidx/core/f/c;->a([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/d;->a([Ljava/lang/Object;)I
 
     move-result v0
 
@@ -1113,7 +1115,7 @@
     aput-object v1, v0, v5
 
     .line 371
-    invoke-static {v0}, Landroidx/core/f/c;->a([Ljava/lang/Object;)I
+    invoke-static {v0}, Landroidx/core/util/d;->a([Ljava/lang/Object;)I
 
     move-result v0
 

@@ -1,5 +1,5 @@
 .class public Landroidx/recyclerview/widget/e;
-.super Landroidx/recyclerview/widget/r;
+.super Landroidx/recyclerview/widget/u;
 .source "DefaultItemAnimator.java"
 
 
@@ -136,7 +136,7 @@
     .locals 1
 
     .line 38
-    invoke-direct {p0}, Landroidx/recyclerview/widget/r;-><init>()V
+    invoke-direct {p0}, Landroidx/recyclerview/widget/u;-><init>()V
 
     .line 43
     new-instance v0, Ljava/util/ArrayList;
@@ -575,7 +575,7 @@
 
     move-result-wide v7
 
-    invoke-static {v5, v6, v7, v8}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
+    invoke-static {v5, v6, v7, v8}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
 
     goto :goto_1
 
@@ -630,7 +630,7 @@
 
     move-result-wide v7
 
-    invoke-static {v5, v6, v7, v8}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
+    invoke-static {v5, v6, v7, v8}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
 
     goto :goto_2
 
@@ -736,7 +736,7 @@
     iget-object v0, v0, Landroidx/recyclerview/widget/RecyclerView$w;->itemView:Landroid/view/View;
 
     .line 184
-    invoke-static {v0, v5, v8, v9}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
+    invoke-static {v0, v5, v8, v9}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
 
     :cond_b
     :goto_6
@@ -1196,7 +1196,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/r;->a(Landroidx/recyclerview/widget/RecyclerView$w;Ljava/util/List;)Z
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/u;->a(Landroidx/recyclerview/widget/RecyclerView$w;Ljava/util/List;)Z
 
     move-result p1
 

@@ -6,6 +6,11 @@
 .implements Lcom/google/android/material/internal/TextDrawableHelper$TextDrawableDelegate;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final DEFAULT_STYLE:I
 
@@ -637,14 +642,14 @@
     const/16 v0, 0xe5
 
     .line 163
-    invoke-static {p3, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p3, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result p3
 
     const/16 v0, 0x99
 
     .line 164
-    invoke-static {p2, v0}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {p2, v0}, Landroidx/core/graphics/c;->b(II)I
 
     move-result p2
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/h;-><init>(Landroid/content/Context;Lcom/oppo/camera/ui/e;ZLandroid/graphics/Bitmap;ZZLcom/oppo/camera/l;)V
+    value = Lcom/oppo/camera/ui/menu/h;-><init>(Landroid/content/Context;Lcom/oppo/camera/ui/d;ZLandroid/graphics/Bitmap;ZZLcom/oppo/camera/i;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/h;)V
     .locals 0
 
-    .line 154
+    .line 156
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/h$1;->a:Lcom/oppo/camera/ui/menu/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,15 +38,15 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
-    .line 157
+    .line 159
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 158
+    .line 160
     invoke-virtual {p1, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 160
+    .line 162
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
@@ -55,7 +55,7 @@
 
     if-ne v1, p1, :cond_0
 
-    .line 161
+    .line 163
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result p1
@@ -74,7 +74,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 162
+    .line 164
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/h$1;->a:Lcom/oppo/camera/ui/menu/h;
 
     invoke-static {p1, v1}, Lcom/oppo/camera/ui/menu/h;->a(Lcom/oppo/camera/ui/menu/h;Z)Z

@@ -59,36 +59,36 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 37
+    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 28
+    .line 30
     iput v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->h:I
-
-    .line 33
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->k:Ljava/util/ArrayList;
-
-    .line 34
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->l:Ljava/util/ArrayList;
 
     .line 35
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->k:Ljava/util/ArrayList;
+
+    .line 36
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->l:Ljava/util/ArrayList;
+
+    .line 37
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->m:Ljava/util/ArrayList;
 
-    .line 38
+    .line 40
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a(Landroid/content/Context;)V
 
     return-void
@@ -97,44 +97,44 @@
 .method private a(Landroid/content/Context;)V
     .locals 2
 
-    .line 148
+    .line 150
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     const-string v1, "vertex_tex.sh"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/k;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/oppo/camera/util/f;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->i:Ljava/lang/String;
 
-    .line 149
+    .line 151
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
     const-string v0, "frag_tex.sh"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/k;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/oppo/camera/util/f;->a(Ljava/lang/String;Landroid/content/res/Resources;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->j:Ljava/lang/String;
 
-    .line 151
+    .line 153
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->i:Ljava/lang/String;
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->j:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/levelcontrol/k;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {p1, v0}, Lcom/oppo/camera/util/f;->b(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result p1
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
-    .line 153
+    .line 155
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     const-string v0, "aPosition"
@@ -145,7 +145,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->c:I
 
-    .line 154
+    .line 156
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     const-string v0, "aTexCoor"
@@ -156,7 +156,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->d:I
 
-    .line 155
+    .line 157
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     const-string v0, "uMVPMatrix"
@@ -167,7 +167,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->b:I
 
-    .line 156
+    .line 158
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     const-string v0, "uCamera"
@@ -178,7 +178,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->f:I
 
-    .line 157
+    .line 159
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     const-string v0, "uLightLocation"
@@ -189,7 +189,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->g:I
 
-    .line 158
+    .line 160
     iget p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     const-string v0, "uMMatrix"
@@ -208,17 +208,17 @@
 .method public a()V
     .locals 1
 
-    .line 42
+    .line 44
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 43
+    .line 45
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->l:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 44
+    .line 46
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
@@ -233,10 +233,10 @@
 
     const/4 v1, 0x6
 
-    .line 51
+    .line 53
     iput v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->h:I
 
-    .line 54
+    .line 56
     iget v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->h:I
 
     mul-int/lit8 v2, v1, 0x3
@@ -245,7 +245,7 @@
 
     mul-int/lit8 v1, v1, 0x2
 
-    .line 57
+    .line 59
     new-array v1, v1, [F
 
     const/4 v3, 0x0
@@ -275,7 +275,7 @@
 
     add-float v11, p5, v11
 
-    .line 64
+    .line 66
     aput v11, v2, v5
 
     add-int/lit8 v5, v9, 0x1
@@ -286,12 +286,12 @@
 
     div-float/2addr v12, v13
 
-    .line 65
+    .line 67
     aput v12, v2, v9
 
     add-int/lit8 v9, v5, 0x1
 
-    .line 66
+    .line 68
     aput p3, v2, v5
 
     add-int/lit8 v5, v6, 0x1
@@ -302,12 +302,12 @@
 
     div-float/2addr v10, v8
 
-    .line 68
+    .line 70
     aput v10, v1, v6
 
     add-int/lit8 v6, v5, 0x1
 
-    .line 69
+    .line 71
     aput v14, v1, v5
 
     add-int/lit8 v5, v9, 0x1
@@ -322,7 +322,7 @@
 
     add-float v16, p5, v16
 
-    .line 72
+    .line 74
     aput v16, v2, v9
 
     add-int/lit8 v9, v5, 0x1
@@ -331,12 +331,12 @@
 
     div-float v17, v17, v13
 
-    .line 73
+    .line 75
     aput v17, v2, v5
 
     add-int/lit8 v5, v9, 0x1
 
-    .line 74
+    .line 76
     aput p3, v2, v9
 
     add-int/lit8 v9, v6, 0x1
@@ -345,117 +345,117 @@
 
     div-float/2addr v15, v8
 
-    .line 76
+    .line 78
     aput v15, v1, v6
 
     add-int/lit8 v6, v9, 0x1
 
-    .line 77
+    .line 79
     aput v7, v1, v9
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 80
+    .line 82
     aput v11, v2, v5
 
     add-int/lit8 v5, v8, 0x1
 
-    .line 81
+    .line 83
     aput v17, v2, v8
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 82
+    .line 84
     aput p3, v2, v5
 
     add-int/lit8 v5, v6, 0x1
 
-    .line 84
+    .line 86
     aput v10, v1, v6
 
     add-int/lit8 v6, v5, 0x1
 
-    .line 85
+    .line 87
     aput v7, v1, v5
 
     add-int/lit8 v5, v8, 0x1
 
-    .line 88
+    .line 90
     aput v11, v2, v8
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 89
+    .line 91
     aput v12, v2, v5
 
     add-int/lit8 v5, v8, 0x1
 
-    .line 90
+    .line 92
     aput p3, v2, v8
 
     add-int/lit8 v8, v6, 0x1
 
-    .line 92
+    .line 94
     aput v10, v1, v6
 
     add-int/lit8 v6, v8, 0x1
 
-    .line 93
+    .line 95
     aput v14, v1, v8
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 96
+    .line 98
     aput v16, v2, v5
 
     add-int/lit8 v5, v8, 0x1
 
-    .line 97
+    .line 99
     aput v12, v2, v8
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 98
+    .line 100
     aput p3, v2, v5
 
     add-int/lit8 v5, v6, 0x1
 
-    .line 100
+    .line 102
     aput v15, v1, v6
 
     add-int/lit8 v6, v5, 0x1
 
-    .line 101
+    .line 103
     aput v14, v1, v5
 
     add-int/lit8 v5, v8, 0x1
 
-    .line 104
+    .line 106
     aput v16, v2, v8
 
     add-int/lit8 v8, v5, 0x1
 
-    .line 105
+    .line 107
     aput v17, v2, v5
 
     add-int/lit8 v5, v8, 0x1
 
-    .line 106
+    .line 108
     aput p3, v2, v8
 
     add-int/lit8 v8, v6, 0x1
 
-    .line 108
+    .line 110
     aput v15, v1, v6
 
     add-int/lit8 v6, v8, 0x1
 
-    .line 109
+    .line 111
     aput v7, v1, v8
 
     goto/16 :goto_0
 
-    .line 112
+    .line 114
     :cond_0
     array-length v4, v2
 
@@ -463,23 +463,23 @@
 
     move v5, v3
 
-    .line 114
+    .line 116
     :goto_1
     array-length v6, v2
 
     if-ge v5, v6, :cond_2
 
-    .line 115
+    .line 117
     rem-int/lit8 v6, v5, 0x3
 
     if-ne v6, v8, :cond_1
 
-    .line 116
+    .line 118
     aput v7, v4, v5
 
     goto :goto_2
 
-    .line 118
+    .line 120
     :cond_1
     aget v6, v2, v5
 
@@ -490,7 +490,7 @@
 
     goto :goto_1
 
-    .line 122
+    .line 124
     :cond_2
     array-length v5, v2
 
@@ -500,30 +500,30 @@
 
     move-result-object v5
 
-    .line 123
+    .line 125
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v6
 
     invoke-virtual {v5, v6}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 124
+    .line 126
     invoke-virtual {v5}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v5
 
-    .line 125
+    .line 127
     invoke-virtual {v5, v2}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 126
+    .line 128
     invoke-virtual {v5, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 128
+    .line 130
     iget-object v6, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 130
+    .line 132
     array-length v2, v2
 
     mul-int/lit8 v2, v2, 0x4
@@ -532,30 +532,30 @@
 
     move-result-object v2
 
-    .line 131
+    .line 133
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v5
 
     invoke-virtual {v2, v5}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 132
+    .line 134
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v2
 
-    .line 133
+    .line 135
     invoke-virtual {v2, v4}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 134
+    .line 136
     invoke-virtual {v2, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 136
+    .line 138
     iget-object v4, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 138
+    .line 140
     array-length v2, v1
 
     mul-int/lit8 v2, v2, 0x4
@@ -564,25 +564,25 @@
 
     move-result-object v2
 
-    .line 139
+    .line 141
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 140
+    .line 142
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v2
 
-    .line 141
+    .line 143
     invoke-virtual {v2, v1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    .line 142
+    .line 144
     invoke-virtual {v2, v3}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 144
+    .line 146
     iget-object v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->l:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -597,12 +597,12 @@
 
     move/from16 v1, p2
 
-    .line 162
+    .line 164
     iget v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->a:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 163
+    .line 165
     iget v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->b:I
 
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/i;->d()[F
@@ -615,7 +615,7 @@
 
     invoke-static {v2, v4, v5, v3, v5}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 164
+    .line 166
     iget v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->e:I
 
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/i;->e()[F
@@ -624,7 +624,7 @@
 
     invoke-static {v2, v4, v5, v3, v5}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZ[FI)V
 
-    .line 165
+    .line 167
     iget v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->f:I
 
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/i;->f()Ljava/nio/FloatBuffer;
@@ -633,7 +633,7 @@
 
     invoke-static {v2, v4, v3}, Landroid/opengl/GLES20;->glUniform3fv(IILjava/nio/FloatBuffer;)V
 
-    .line 166
+    .line 168
     iget v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->g:I
 
     invoke-static {}, Lcom/oppo/camera/ui/menu/levelcontrol/i;->g()Ljava/nio/FloatBuffer;
@@ -642,12 +642,12 @@
 
     invoke-static {v2, v4, v3}, Landroid/opengl/GLES20;->glUniform3fv(IILjava/nio/FloatBuffer;)V
 
-    .line 169
+    .line 171
     iget v6, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->c:I
 
     iget-object v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->k:Ljava/util/ArrayList;
 
-    .line 170
+    .line 172
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -664,15 +664,15 @@
 
     const/16 v10, 0xc
 
-    .line 169
+    .line 171
     invoke-static/range {v6 .. v11}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 173
+    .line 175
     iget v12, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->d:I
 
     iget-object v2, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->l:Ljava/util/ArrayList;
 
-    .line 174
+    .line 176
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -689,44 +689,44 @@
 
     const/16 v16, 0x8
 
-    .line 173
+    .line 175
     invoke-static/range {v12 .. v17}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 176
+    .line 178
     iget v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->c:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 177
+    .line 179
     iget v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->d:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
     const v1, 0x84c0
 
-    .line 179
+    .line 181
     invoke-static {v1}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
     const/16 v1, 0xde1
 
     move/from16 v2, p1
 
-    .line 180
+    .line 182
     invoke-static {v1, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 182
+    .line 184
     iget v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->h:I
 
     const/4 v2, 0x4
 
     invoke-static {v2, v5, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 184
+    .line 186
     iget v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->c:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V
 
-    .line 185
+    .line 187
     iget v1, v0, Lcom/oppo/camera/ui/menu/levelcontrol/j;->d:I
 
     invoke-static {v1}, Landroid/opengl/GLES20;->glDisableVertexAttribArray(I)V

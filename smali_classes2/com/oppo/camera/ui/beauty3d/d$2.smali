@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/beauty3d/d;)V
     .locals 1
 
-    .line 203
+    .line 208
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     const/4 v0, 0x0
@@ -37,7 +37,7 @@
 .method public a(Landroid/view/View;I)V
     .locals 1
 
-    .line 206
+    .line 211
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -54,7 +54,12 @@
 
     const-string v0, "Beauty3DEditUI"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 213
+    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
+
+    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->d(Lcom/oppo/camera/ui/beauty3d/d;)V
 
     if-eqz p2, :cond_3
 
@@ -72,7 +77,7 @@
 
     goto :goto_0
 
-    .line 222
+    .line 229
     :cond_0
     iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
@@ -80,7 +85,7 @@
 
     goto :goto_0
 
-    .line 218
+    .line 225
     :cond_1
     iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
@@ -88,7 +93,7 @@
 
     goto :goto_0
 
-    .line 214
+    .line 221
     :cond_2
     iget-object p2, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
@@ -96,7 +101,7 @@
 
     goto :goto_0
 
-    .line 210
+    .line 217
     :cond_3
     iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
@@ -104,21 +109,6 @@
 
     invoke-virtual {p1, p2}, Lcom/oppo/camera/ui/beauty3d/d;->b(I)V
 
-    .line 229
     :goto_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->d(Lcom/oppo/camera/ui/beauty3d/d;)I
-
-    move-result p1
-
-    if-lez p1, :cond_4
-
-    .line 230
-    iget-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$2;->a:Lcom/oppo/camera/ui/beauty3d/d;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/beauty3d/d;->e(Lcom/oppo/camera/ui/beauty3d/d;)V
-
-    :cond_4
     return-void
 .end method

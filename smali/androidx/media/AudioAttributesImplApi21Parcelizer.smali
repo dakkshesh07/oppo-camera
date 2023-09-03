@@ -3,6 +3,11 @@
 .source "AudioAttributesImplApi21Parcelizer.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -13,7 +18,7 @@
     return-void
 .end method
 
-.method public static read(Landroidx/versionedparcelable/a;)Landroidx/media/b;
+.method public static read(Landroidx/versionedparcelable/VersionedParcel;)Landroidx/media/b;
     .locals 3
 
     .line 11
@@ -26,7 +31,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(Landroid/os/Parcelable;I)Landroid/os/Parcelable;
 
     move-result-object v1
 
@@ -39,7 +44,7 @@
 
     const/4 v2, 0x2
 
-    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/a;->b(II)I
+    invoke-virtual {p0, v1, v2}, Landroidx/versionedparcelable/VersionedParcel;->b(II)I
 
     move-result p0
 
@@ -48,27 +53,27 @@
     return-object v0
 .end method
 
-.method public static write(Landroidx/media/b;Landroidx/versionedparcelable/a;)V
+.method public static write(Landroidx/media/b;Landroidx/versionedparcelable/VersionedParcel;)V
     .locals 2
 
     const/4 v0, 0x0
 
     .line 18
-    invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/a;->a(ZZ)V
+    invoke-virtual {p1, v0, v0}, Landroidx/versionedparcelable/VersionedParcel;->a(ZZ)V
 
     .line 19
     iget-object v0, p0, Landroidx/media/b;->a:Landroid/media/AudioAttributes;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/a;->a(Landroid/os/Parcelable;I)V
+    invoke-virtual {p1, v0, v1}, Landroidx/versionedparcelable/VersionedParcel;->a(Landroid/os/Parcelable;I)V
 
     .line 20
     iget p0, p0, Landroidx/media/b;->b:I
 
     const/4 v0, 0x2
 
-    invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/a;->a(II)V
+    invoke-virtual {p1, p0, v0}, Landroidx/versionedparcelable/VersionedParcel;->a(II)V
 
     return-void
 .end method

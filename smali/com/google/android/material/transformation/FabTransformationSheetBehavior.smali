@@ -159,7 +159,7 @@
 
     move-result v6
 
-    invoke-static {v5, v6}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v5, v6}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     goto :goto_2
 
@@ -186,7 +186,7 @@
     const/4 v6, 0x4
 
     .line 119
-    invoke-static {v5, v6}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {v5, v6}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     :cond_6
     :goto_2

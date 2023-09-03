@@ -44,7 +44,7 @@
     iput p2, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->currentOffset:I
 
     .line 1285
-    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
     const/4 v0, 0x0
 
@@ -52,9 +52,9 @@
 
     iget-object p1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
-    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/g/ae;
+    iget-object p1, p1, Lcom/google/android/material/appbar/CollapsingToolbarLayout;->lastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {p1}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {p1}, Landroidx/core/f/ae;->b()I
 
     move-result p1
 
@@ -137,7 +137,7 @@
 
     move-result v3
 
-    invoke-static {v4, v0, v3}, Landroidx/core/b/a;->a(III)I
+    invoke-static {v4, v0, v3}, Landroidx/core/c/a;->a(III)I
 
     move-result v3
 
@@ -167,7 +167,7 @@
     .line 1309
     iget-object v0, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
-    invoke-static {v0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {v0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     .line 1313
     :cond_4
@@ -180,7 +180,7 @@
 
     iget-object v1, p0, Lcom/google/android/material/appbar/CollapsingToolbarLayout$OffsetUpdateListener;->this$0:Lcom/google/android/material/appbar/CollapsingToolbarLayout;
 
-    invoke-static {v1}, Landroidx/core/g/w;->m(Landroid/view/View;)I
+    invoke-static {v1}, Landroidx/core/f/w;->m(Landroid/view/View;)I
 
     move-result v1
 

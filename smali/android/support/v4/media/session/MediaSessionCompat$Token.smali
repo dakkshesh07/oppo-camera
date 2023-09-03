@@ -93,6 +93,8 @@
 
 .method public static fromBundle(Landroid/os/Bundle;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 4
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 v0, 0x0
 
@@ -160,6 +162,8 @@
 
 .method public static fromToken(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     if-eqz p0, :cond_0
 
@@ -257,6 +261,8 @@
 
 .method public getExtraBinder()Landroid/support/v4/media/session/IMediaSession;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1664
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
@@ -266,6 +272,8 @@
 
 .method public getSessionToken2Bundle()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1680
     iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSessionToken2Bundle:Landroid/os/Bundle;
@@ -305,6 +313,8 @@
 
 .method public setExtraBinder(Landroid/support/v4/media/session/IMediaSession;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1672
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mExtraBinder:Landroid/support/v4/media/session/IMediaSession;
@@ -314,6 +324,8 @@
 
 .method public setSessionToken2Bundle(Landroid/os/Bundle;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1688
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->mSessionToken2Bundle:Landroid/os/Bundle;
@@ -323,6 +335,8 @@
 
 .method public toBundle()Landroid/os/Bundle;
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 1696
     new-instance v0, Landroid/os/Bundle;

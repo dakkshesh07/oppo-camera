@@ -23,7 +23,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "TT;>;>;)V"
         }
     .end annotation

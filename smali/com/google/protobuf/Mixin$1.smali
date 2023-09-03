@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 789
+    .line 859
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 794
+    .line 865
     new-instance v0, Lcom/google/protobuf/Mixin;
 
     const/4 v1, 0x0
@@ -60,7 +60,7 @@
         }
     .end annotation
 
-    .line 789
+    .line 859
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/Mixin$1;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/Mixin;
 
     move-result-object p1

@@ -105,7 +105,7 @@
 
     const-string v1, "Beauty3DUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
     iget-object v0, p0, Lcom/oppo/camera/ui/beauty3d/g$1;->a:Lcom/oppo/camera/ui/beauty3d/g;

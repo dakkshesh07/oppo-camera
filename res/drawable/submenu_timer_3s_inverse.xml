@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<vector android:name="vector" android:height="@dimen/svg_icon_height" android:width="@dimen/svg_icon_width" android:viewportWidth="96.0" android:viewportHeight="96.0"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:name="group">
-        <path android:name="path_width" android:pathData="M 39 23 L 57 23 M 48 31 C 42.433 31 37.088 33.214 33.151 37.151 C 29.214 41.088 27 46.433 27 52 C 27 57.567 29.214 62.912 33.151 66.849 C 37.088 70.786 42.433 73 48 73 C 53.567 73 58.912 70.786 62.849 66.849 C 66.786 62.912 69 57.567 69 52 C 69 46.433 66.786 41.088 62.849 37.151 C 58.912 33.214 53.567 31 48 31 Z M 62.978 37.027 L 67.194 32.829 M 33.003 37.026 L 28.821 32.844" android:strokeColor="@color/inverse_text_color" android:strokeWidth="@integer/svg_icon_strokeWidth_four" />
-        <path android:name="path_width" android:pathData="M 41.5 43.5 L 52.589 43.5 L 52.589 43.653 L 44.721 51.956 L 44.958 52.187 C 47.12 50.659 49.385 50.718 51.752 52.362 C 55.376 55.323 53.268 61.631 48 61.617 C 43.425 61.639 42.318 58.133 42.059 57.42" android:strokeColor="@color/inverse_text_color" android:strokeWidth="@integer/svg_icon_strokeWidth_four" />
-    </group>
-</vector>

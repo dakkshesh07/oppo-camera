@@ -46,7 +46,7 @@
     const-string p1, "context == null"
 
     .line 64
-    invoke-static {p2, p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p2, p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -57,7 +57,7 @@
     const-string p1, "handler == null"
 
     .line 65
-    invoke-static {p3, p1}, Landroidx/core/f/f;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p3, p1}, Landroidx/core/util/g;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 

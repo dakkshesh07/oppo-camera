@@ -3,6 +3,11 @@
 .source "ForegroundLinearLayout.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private foreground:Landroid/graphics/drawable/Drawable;
 

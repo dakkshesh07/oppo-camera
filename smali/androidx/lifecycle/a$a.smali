@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Landroidx/lifecycle/e$a;",
+            "Landroidx/lifecycle/Lifecycle$Event;",
             "Ljava/util/List<",
             "Landroidx/lifecycle/a$b;",
             ">;>;"
@@ -32,7 +32,7 @@
         value = {
             "Ljava/util/Map<",
             "Landroidx/lifecycle/a$b;",
-            "Landroidx/lifecycle/e$a;",
+            "Landroidx/lifecycle/Lifecycle$Event;",
             ">;"
         }
     .end annotation
@@ -47,7 +47,7 @@
             "(",
             "Ljava/util/Map<",
             "Landroidx/lifecycle/a$b;",
-            "Landroidx/lifecycle/e$a;",
+            "Landroidx/lifecycle/Lifecycle$Event;",
             ">;)V"
         }
     .end annotation
@@ -92,7 +92,7 @@
 
     move-result-object v1
 
-    check-cast v1, Landroidx/lifecycle/e$a;
+    check-cast v1, Landroidx/lifecycle/Lifecycle$Event;
 
     .line 174
     iget-object v2, p0, Landroidx/lifecycle/a$a;->a:Ljava/util/Map;
@@ -129,7 +129,7 @@
     return-void
 .end method
 
-.method private static a(Ljava/util/List;Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;Ljava/lang/Object;)V
+.method private static a(Ljava/util/List;Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -137,8 +137,8 @@
             "Ljava/util/List<",
             "Landroidx/lifecycle/a$b;",
             ">;",
-            "Landroidx/lifecycle/h;",
-            "Landroidx/lifecycle/e$a;",
+            "Landroidx/lifecycle/g;",
+            "Landroidx/lifecycle/Lifecycle$Event;",
             "Ljava/lang/Object;",
             ")V"
         }
@@ -163,7 +163,7 @@
 
     check-cast v1, Landroidx/lifecycle/a$b;
 
-    invoke-virtual {v1, p1, p2, p3}, Landroidx/lifecycle/a$b;->a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;Ljava/lang/Object;)V
+    invoke-virtual {v1, p1, p2, p3}, Landroidx/lifecycle/a$b;->a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
 
     add-int/lit8 v0, v0, -0x1
 
@@ -175,7 +175,7 @@
 
 
 # virtual methods
-.method a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;Ljava/lang/Object;)V
+.method a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
     .locals 2
 
     .line 185
@@ -187,12 +187,12 @@
 
     check-cast v0, Ljava/util/List;
 
-    invoke-static {v0, p1, p2, p3}, Landroidx/lifecycle/a$a;->a(Ljava/util/List;Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;Ljava/lang/Object;)V
+    invoke-static {v0, p1, p2, p3}, Landroidx/lifecycle/a$a;->a(Ljava/util/List;Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
 
     .line 186
     iget-object v0, p0, Landroidx/lifecycle/a$a;->a:Ljava/util/Map;
 
-    sget-object v1, Landroidx/lifecycle/e$a;->ON_ANY:Landroidx/lifecycle/e$a;
+    sget-object v1, Landroidx/lifecycle/Lifecycle$Event;->ON_ANY:Landroidx/lifecycle/Lifecycle$Event;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -200,7 +200,7 @@
 
     check-cast v0, Ljava/util/List;
 
-    invoke-static {v0, p1, p2, p3}, Landroidx/lifecycle/a$a;->a(Ljava/util/List;Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;Ljava/lang/Object;)V
+    invoke-static {v0, p1, p2, p3}, Landroidx/lifecycle/a$a;->a(Ljava/util/List;Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;Ljava/lang/Object;)V
 
     return-void
 .end method

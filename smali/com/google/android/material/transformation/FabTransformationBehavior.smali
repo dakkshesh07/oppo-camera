@@ -1029,11 +1029,11 @@
     .end annotation
 
     .line 207
-    invoke-static {p2}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {p2}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result p7
 
-    invoke-static {p1}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {p1}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result p1
 
@@ -1742,7 +1742,7 @@
     .locals 2
 
     .line 735
-    invoke-static {p1}, Landroidx/core/g/w;->x(Landroid/view/View;)Landroid/content/res/ColorStateList;
+    invoke-static {p1}, Landroidx/core/f/w;->x(Landroid/view/View;)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 

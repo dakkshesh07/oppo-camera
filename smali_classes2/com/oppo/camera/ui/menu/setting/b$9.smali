@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/b;)V
     .locals 0
 
-    .line 535
+    .line 529
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +50,7 @@
 
     goto :goto_0
 
-    .line 540
+    .line 534
     :cond_0
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
@@ -64,7 +64,7 @@
 
     invoke-static {p2, v0, v3, v2}, Lcom/oppo/camera/ui/menu/setting/b;->a(Lcom/oppo/camera/ui/menu/setting/b;Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 542
+    .line 536
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->h()Z
@@ -73,16 +73,16 @@
 
     if-eqz p2, :cond_1
 
-    .line 543
+    .line 537
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
-    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->i()V
+    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->j()V
 
-    .line 546
+    .line 540
     :cond_1
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 547
+    .line 541
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->getActivity()Landroidx/fragment/app/c;
@@ -91,20 +91,20 @@
 
     const-string p2, "agree"
 
-    invoke-static {p1, v1, p2}, Lcom/oppo/camera/i;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1, p2}, Lcom/oppo/camera/f;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 552
+    .line 546
     :cond_2
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
-    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->j()V
+    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->k()V
 
-    .line 553
+    .line 547
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 554
+    .line 548
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$9;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->getActivity()Landroidx/fragment/app/c;
@@ -113,7 +113,7 @@
 
     const-string p2, "cancel"
 
-    invoke-static {p1, v1, p2}, Lcom/oppo/camera/i;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v1, p2}, Lcom/oppo/camera/f;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset android:insetLeft="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07002e" android:insetRight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07002e" android:insetTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07002f" android:insetBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07002f"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="rectangle">
+        <corners android:radius="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070034" />
+        <solid android:color="@android:color/white" />
+        <padding android:left="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070030" android:top="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070031" android:right="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070030" android:bottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070031" />
+    </shape>
+</inset>

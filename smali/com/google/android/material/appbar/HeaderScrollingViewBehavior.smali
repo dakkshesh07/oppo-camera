@@ -131,7 +131,7 @@
 
     float-to-int p1, p1
 
-    invoke-static {p1, v1, v0}, Landroidx/core/b/a;->a(III)I
+    invoke-static {p1, v1, v0}, Landroidx/core/c/a;->a(III)I
 
     move-result v1
 
@@ -259,21 +259,21 @@
     invoke-virtual {v5, v2, v3, v4, v6}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 126
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/g/ae;
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/f/ae;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 128
-    invoke-static {p1}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 129
-    invoke-static {p2}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p2}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result p1
 
@@ -282,7 +282,7 @@
     .line 133
     iget p1, v5, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->a()I
 
     move-result v3
 
@@ -293,7 +293,7 @@
     .line 134
     iget p1, v5, Landroid/graphics/Rect;->right:I
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->c()I
 
     move-result v2
 
@@ -328,7 +328,7 @@
     move v7, p3
 
     .line 138
-    invoke-static/range {v2 .. v7}, Landroidx/core/g/d;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-static/range {v2 .. v7}, Landroidx/core/f/d;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     .line 146
     invoke-virtual {p0, v0}, Lcom/google/android/material/appbar/HeaderScrollingViewBehavior;->getOverlapPixelsForOffset(Landroid/view/View;)I
@@ -415,26 +415,26 @@
     if-lez p5, :cond_1
 
     .line 72
-    invoke-static {v2}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {v2}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
     .line 73
-    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/g/ae;
+    invoke-virtual {p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getLastWindowInsets()Landroidx/core/f/ae;
 
     move-result-object v3
 
     if-eqz v3, :cond_2
 
     .line 75
-    invoke-virtual {v3}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v3}, Landroidx/core/f/ae;->b()I
 
     move-result v4
 
     .line 76
-    invoke-virtual {v3}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {v3}, Landroidx/core/f/ae;->d()I
 
     move-result v3
 

@@ -217,7 +217,7 @@
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 205
-    invoke-static {p0, p1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -343,12 +343,12 @@
     if-nez v5, :cond_1
 
     .line 549
-    invoke-static {v4, v6}, Landroidx/core/g/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {v4, v6}, Landroidx/core/f/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     neg-int v3, v3
 
     .line 550
-    invoke-static {v4, v3}, Landroidx/core/g/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {v4, v3}, Landroidx/core/f/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     goto :goto_1
 
@@ -797,10 +797,10 @@
 
     .line 579
     :cond_1
-    invoke-static {p1, v2}, Landroidx/core/g/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {p1, v2}, Landroidx/core/f/g;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     .line 580
-    invoke-static {p1, v2}, Landroidx/core/g/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    invoke-static {p1, v2}, Landroidx/core/f/g;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
     .line 581
     iput v2, p1, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
@@ -872,7 +872,7 @@
     if-ne v0, v1, :cond_0
 
     .line 740
-    invoke-static {}, Landroidx/core/g/w;->a()I
+    invoke-static {}, Landroidx/core/f/w;->a()I
 
     move-result v0
 
@@ -1200,7 +1200,7 @@
 
     invoke-direct {p2, p0}, Lcom/google/android/material/button/MaterialButtonToggleGroup$2;-><init>(Lcom/google/android/material/button/MaterialButtonToggleGroup;)V
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/a;)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/a;)V
 
     return-void
 .end method
@@ -1467,7 +1467,7 @@
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 310
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -1496,12 +1496,12 @@
     const/4 v3, 0x0
 
     .line 312
-    invoke-static {v2, v0, v3, v1}, Landroidx/core/g/a/d$b;->a(IIZI)Landroidx/core/g/a/d$b;
+    invoke-static {v2, v0, v3, v1}, Landroidx/core/f/a/d$b;->a(IIZI)Landroidx/core/f/a/d$b;
 
     move-result-object v0
 
     .line 311
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

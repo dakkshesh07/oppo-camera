@@ -29,7 +29,7 @@
 
 .field private b:Lcom/oppo/camera/ui/control/e;
 
-.field private c:Lcom/oppo/camera/ui/control/e$b;
+.field private c:Lcom/oppo/camera/ui/control/e$c;
 
 .field private d:Z
 
@@ -37,78 +37,48 @@
 
 .field private f:Z
 
-.field private g:Lcom/oppo/camera/ui/control/b$b;
+.field private g:Lcom/oppo/camera/ui/control/b$c;
 
 
 # direct methods
-.method public constructor <init>(Lcom/oppo/camera/ui/control/b;Lcom/oppo/camera/ui/control/e$b;ZZZLcom/oppo/camera/ui/control/b$b;)V
+.method public constructor <init>(Lcom/oppo/camera/ui/control/b;Lcom/oppo/camera/ui/control/e$c;ZZZLcom/oppo/camera/ui/control/b$c;)V
     .locals 0
 
-    .line 1978
+    .line 2698
     iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
     const/4 p1, 0x0
 
-    .line 1970
+    .line 2690
     iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
 
-    .line 1971
-    iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->c:Lcom/oppo/camera/ui/control/e$b;
+    .line 2691
+    iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->c:Lcom/oppo/camera/ui/control/e$c;
 
     const/4 p1, 0x0
 
-    .line 1972
+    .line 2692
     iput-boolean p1, p0, Lcom/oppo/camera/ui/control/b$a;->d:Z
 
-    .line 1974
+    .line 2694
     iput-boolean p1, p0, Lcom/oppo/camera/ui/control/b$a;->f:Z
 
-    .line 1979
-    iput-object p2, p0, Lcom/oppo/camera/ui/control/b$a;->c:Lcom/oppo/camera/ui/control/e$b;
+    .line 2699
+    iput-object p2, p0, Lcom/oppo/camera/ui/control/b$a;->c:Lcom/oppo/camera/ui/control/e$c;
 
-    .line 1980
+    .line 2700
     iput-boolean p3, p0, Lcom/oppo/camera/ui/control/b$a;->d:Z
 
-    .line 1981
+    .line 2701
     iput-boolean p4, p0, Lcom/oppo/camera/ui/control/b$a;->e:Z
 
-    .line 1982
+    .line 2702
     iput-boolean p5, p0, Lcom/oppo/camera/ui/control/b$a;->f:Z
 
-    .line 1983
-    iput-object p6, p0, Lcom/oppo/camera/ui/control/b$a;->g:Lcom/oppo/camera/ui/control/b$b;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcom/oppo/camera/ui/control/b;Z)V
-    .locals 0
-
-    .line 1986
-    iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    const/4 p1, 0x0
-
-    .line 1970
-    iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
-
-    .line 1971
-    iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->c:Lcom/oppo/camera/ui/control/e$b;
-
-    const/4 p1, 0x0
-
-    .line 1972
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/control/b$a;->d:Z
-
-    .line 1974
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/control/b$a;->f:Z
-
-    .line 1987
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/control/b$a;->d:Z
+    .line 2703
+    iput-object p6, p0, Lcom/oppo/camera/ui/control/b$a;->g:Lcom/oppo/camera/ui/control/b$c;
 
     return-void
 .end method
@@ -116,171 +86,170 @@
 
 # virtual methods
 .method protected varargs a([Ljava/lang/Void;)Lcom/oppo/camera/ui/control/e;
-    .locals 7
+    .locals 5
 
     const-string p1, "CameraControlUI"
 
     const-string v0, "doInBackground"
 
-    .line 1992
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2712
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1995
+    const/4 v0, 0x0
+
+    .line 2714
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    .line 2717
     invoke-virtual {p0}, Lcom/oppo/camera/ui/control/b$a;->isCancelled()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
+    iget-object v1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Z
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->o(Lcom/oppo/camera/ui/control/b;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_7
+    if-nez v1, :cond_7
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
+    iget-object v1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->g(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->p(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-nez v0, :cond_0
+    if-nez v1, :cond_0
 
-    goto/16 :goto_2
+    goto/16 :goto_1
 
-    .line 2002
+    .line 2724
     :cond_0
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
+    iget-object v1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
 
-    if-nez v0, :cond_5
+    if-nez v1, :cond_5
 
-    const/4 v0, 0x1
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/control/b$a;->e:Z
 
-    .line 2003
-    new-array v1, v0, [Lcom/oppo/camera/ui/control/e;
+    if-eqz v1, :cond_5
 
-    const-string v2, "getLastThumbnailFromContentResolver"
+    .line 2725
+    new-instance v1, Lcom/oppo/camera/ui/control/e;
 
-    .line 2005
-    invoke-static {v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;)V
+    invoke-direct {v1}, Lcom/oppo/camera/ui/control/e;-><init>()V
 
-    .line 2007
-    sget-object v3, Lcom/oppo/camera/y;->t:Ljava/lang/String;
+    .line 2726
+    iget-object v2, p0, Lcom/oppo/camera/ui/control/b$a;->c:Lcom/oppo/camera/ui/control/e$c;
 
-    const-string v4, "on"
+    invoke-virtual {v1, v2}, Lcom/oppo/camera/ui/control/e;->a(Lcom/oppo/camera/ui/control/e$c;)V
 
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 2728
+    sget-object v2, Lcom/oppo/camera/ab;->u:Ljava/lang/String;
 
-    move-result v3
+    const-string v3, "on"
 
-    const/4 v4, 0x0
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v3, :cond_1
+    move-result v2
 
-    invoke-static {}, Lcom/oppo/camera/y;->c()Z
+    const/4 v3, 0x1
 
-    move-result v3
+    if-eqz v2, :cond_1
 
-    if-eqz v3, :cond_1
+    invoke-static {}, Lcom/oppo/camera/ab;->d()Z
 
-    move v3, v0
+    move-result v2
 
-    goto :goto_0
+    if-eqz v2, :cond_1
 
+    move v0, v3
+
+    .line 2730
     :cond_1
-    move v3, v4
+    iget-object v2, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    .line 2009
-    :goto_0
-    iget-object v5, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {v5}, Lcom/oppo/camera/ui/control/b;->g(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
-
-    move-result-object v5
-
-    invoke-static {v5, v1, v3}, Lcom/oppo/camera/ui/control/e;->a(Landroid/content/ContentResolver;[Lcom/oppo/camera/ui/control/e;Z)I
-
-    move-result v5
-
-    .line 2011
-    invoke-static {}, Lcom/oppo/camera/y;->c()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    invoke-static {}, Lcom/oppo/camera/util/Util;->z()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    if-nez v5, :cond_2
-
-    .line 2012
-    iget-object v5, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
-
-    invoke-static {v5}, Lcom/oppo/camera/ui/control/b;->g(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
-
-    move-result-object v5
-
-    xor-int/2addr v3, v0
-
-    invoke-static {v5, v1, v3}, Lcom/oppo/camera/ui/control/e;->a(Landroid/content/ContentResolver;[Lcom/oppo/camera/ui/control/e;Z)I
-
-    move-result v5
-
-    .line 2015
-    :cond_2
-    invoke-static {v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;)V
-
-    .line 2017
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "doInBackground, code: "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2}, Lcom/oppo/camera/ui/control/b;->p(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1, v0}, Lcom/oppo/camera/ui/control/e;->a(Landroid/content/ContentResolver;Lcom/oppo/camera/ui/control/e;Z)I
 
-    if-eqz v5, :cond_5
+    move-result v2
 
-    if-eq v5, v0, :cond_4
+    .line 2732
+    invoke-static {}, Lcom/oppo/camera/ab;->d()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-static {}, Lcom/oppo/camera/util/Util;->S()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    if-nez v2, :cond_2
+
+    .line 2733
+    iget-object v2, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/control/b;->p(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    xor-int/2addr v0, v3
+
+    invoke-static {v2, v1, v0}, Lcom/oppo/camera/ui/control/e;->a(Landroid/content/ContentResolver;Lcom/oppo/camera/ui/control/e;Z)I
+
+    move-result v2
+
+    .line 2736
+    :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "doInBackground, code: "
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v2, :cond_5
+
+    if-eq v2, v3, :cond_4
 
     const/4 p1, 0x2
 
-    if-eq v5, p1, :cond_3
+    if-eq v2, p1, :cond_3
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 2029
+    .line 2748
     :cond_3
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/control/b$a;->cancel(Z)Z
+    invoke-virtual {p0, v3}, Lcom/oppo/camera/ui/control/b$a;->cancel(Z)Z
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 2021
+    .line 2740
     :cond_4
-    aget-object p1, v1, v4
+    iput-object v1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
 
-    iput-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
-
-    .line 2037
+    .line 2756
     :cond_5
-    :goto_1
+    :goto_0
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->h(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/f;
+    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->q(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/f;
 
     move-result-object p1
 
@@ -288,30 +257,32 @@
 
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/control/b;->Y()Z
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/control/b;->ah()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    .line 2038
+    .line 2757
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->h(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/f;
+    invoke-static {p1}, Lcom/oppo/camera/ui/control/b;->q(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/f;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/oppo/camera/ui/control/f;->a()Z
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/control/b$a;->e:Z
 
-    .line 2041
+    invoke-interface {p1, v0}, Lcom/oppo/camera/ui/control/f;->a(Z)V
+
+    .line 2760
     :cond_6
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
 
     return-object p1
 
-    .line 1996
+    .line 2718
     :cond_7
-    :goto_2
+    :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +303,7 @@
 
     iget-object v1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Z
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->o(Lcom/oppo/camera/ui/control/b;)Z
 
     move-result v1
 
@@ -344,8 +315,8 @@
 
     iget-object v1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    .line 1997
-    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->g(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
+    .line 2719
+    invoke-static {v1}, Lcom/oppo/camera/ui/control/b;->p(Lcom/oppo/camera/ui/control/b;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -355,8 +326,8 @@
 
     move-result-object v0
 
-    .line 1996
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2718
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -366,7 +337,7 @@
 .method protected a(Lcom/oppo/camera/ui/control/e;)V
     .locals 2
 
-    .line 2046
+    .line 2765
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -393,18 +364,18 @@
 
     const-string v1, "CameraControlUI"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2048
+    .line 2767
     invoke-virtual {p0}, Lcom/oppo/camera/ui/control/b$a;->isCancelled()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->f(Lcom/oppo/camera/ui/control/b;)Z
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->o(Lcom/oppo/camera/ui/control/b;)Z
 
     move-result v0
 
@@ -412,21 +383,26 @@
 
     goto :goto_1
 
-    .line 2052
+    .line 2771
     :cond_0
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/control/b$a;->e:Z
+
+    if-eqz v0, :cond_2
+
+    .line 2772
     iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->h(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/f;
+    invoke-static {v0}, Lcom/oppo/camera/ui/control/b;->q(Lcom/oppo/camera/ui/control/b;)Lcom/oppo/camera/ui/control/f;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/oppo/camera/ui/control/f;->b()Z
+    invoke-interface {v0}, Lcom/oppo/camera/ui/control/f;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2053
+    .line 2773
     iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
     iget-boolean v1, p0, Lcom/oppo/camera/ui/control/b$a;->d:Z
@@ -435,7 +411,7 @@
 
     goto :goto_0
 
-    .line 2055
+    .line 2775
     :cond_1
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
 
@@ -445,28 +421,45 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/oppo/camera/ui/control/b;->a(Lcom/oppo/camera/ui/control/e;Z)V
 
-    .line 2058
+    .line 2778
     :goto_0
     iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->b:Lcom/oppo/camera/ui/control/e;
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->g:Lcom/oppo/camera/ui/control/b$b;
+    iget-object v0, p0, Lcom/oppo/camera/ui/control/b$a;->g:Lcom/oppo/camera/ui/control/b$c;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    .line 2059
-    invoke-interface {v0, p1}, Lcom/oppo/camera/ui/control/b$b;->a(Lcom/oppo/camera/ui/control/e;)V
+    .line 2779
+    invoke-interface {v0, p1}, Lcom/oppo/camera/ui/control/b$c;->a(Lcom/oppo/camera/ui/control/e;)V
 
+    goto :goto_1
+
+    .line 2782
     :cond_2
+    iget-object p1, p0, Lcom/oppo/camera/ui/control/b$a;->a:Lcom/oppo/camera/ui/control/b;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/control/b;->M()V
+
+    :cond_3
     :goto_1
     return-void
+.end method
+
+.method public a()Z
+    .locals 1
+
+    .line 2707
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/control/b$a;->f:Z
+
+    return v0
 .end method
 
 .method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1969
+    .line 2689
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/control/b$a;->a([Ljava/lang/Void;)Lcom/oppo/camera/ui/control/e;
@@ -479,7 +472,7 @@
 .method protected synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .line 1969
+    .line 2689
     check-cast p1, Lcom/oppo/camera/ui/control/e;
 
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/control/b$a;->a(Lcom/oppo/camera/ui/control/e;)V

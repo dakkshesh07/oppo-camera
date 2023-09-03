@@ -31,7 +31,7 @@
 .method constructor <init>(Lcom/oppo/camera/update/UpdateUtil;)V
     .locals 0
 
-    .line 389
+    .line 436
     iput-object p1, p0, Lcom/oppo/camera/update/UpdateUtil$2;->this$0:Lcom/oppo/camera/update/UpdateUtil;
 
     invoke-direct {p0}, Lcom/google/gson/reflect/TypeToken;-><init>()V

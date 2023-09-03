@@ -77,7 +77,7 @@
 
 .field private mTextColors:Landroid/content/res/ColorStateList;
 
-.field private final mTextHelper:Landroidx/appcompat/widget/w;
+.field private final mTextHelper:Landroidx/appcompat/widget/v;
 
 .field private mTextOff:Ljava/lang/CharSequence;
 
@@ -220,7 +220,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v2}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+    invoke-static {p0, v2}, Landroidx/appcompat/widget/am;->a(Landroid/view/View;Landroid/content/Context;)V
 
     .line 224
     new-instance v2, Landroid/text/TextPaint;
@@ -250,7 +250,7 @@
     .line 229
     sget-object v2, Landroidx/appcompat/R$styleable;->SwitchCompat:[I
 
-    invoke-static {p1, p2, v2, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v2, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object v2
 
@@ -258,7 +258,7 @@
     sget-object v6, Landroidx/appcompat/R$styleable;->SwitchCompat:[I
 
     .line 233
-    invoke-virtual {v2}, Landroidx/appcompat/widget/as;->a()Landroid/content/res/TypedArray;
+    invoke-virtual {v2}, Landroidx/appcompat/widget/ar;->a()Landroid/content/res/TypedArray;
 
     move-result-object v8
 
@@ -273,12 +273,12 @@
     move v9, p3
 
     .line 231
-    invoke-static/range {v4 .. v10}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static/range {v4 .. v10}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     .line 235
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_android_thumb:I
 
-    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -296,7 +296,7 @@
     :cond_0
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_track:I
 
-    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -314,7 +314,7 @@
     :cond_1
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_android_textOn:I
 
-    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -323,7 +323,7 @@
     .line 244
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_android_textOff:I
 
-    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/as;->c(I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/ar;->c(I)Ljava/lang/CharSequence;
 
     move-result-object v4
 
@@ -332,7 +332,7 @@
     .line 245
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_showText:I
 
-    invoke-virtual {v2, v4, v3}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v2, v4, v3}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v4
 
@@ -341,7 +341,7 @@
     .line 246
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_thumbTextPadding:I
 
-    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v4
 
@@ -350,7 +350,7 @@
     .line 248
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_switchMinWidth:I
 
-    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v4
 
@@ -359,7 +359,7 @@
     .line 250
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_switchPadding:I
 
-    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result v4
 
@@ -368,7 +368,7 @@
     .line 252
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_splitTrack:I
 
-    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {v2, v4, v1}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result v4
 
@@ -377,7 +377,7 @@
     .line 254
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_thumbTint:I
 
-    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v4
 
@@ -396,12 +396,12 @@
     const/4 v5, -0x1
 
     .line 260
-    invoke-virtual {v2, v4, v5}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v2, v4, v5}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v4
 
     .line 259
-    invoke-static {v4, v0}, Landroidx/appcompat/widget/ab;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v4, v0}, Landroidx/appcompat/widget/aa;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v4
 
@@ -434,7 +434,7 @@
     :cond_5
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_trackTint:I
 
-    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v2, v4}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v4
 
@@ -451,12 +451,12 @@
     sget v4, Landroidx/appcompat/R$styleable;->SwitchCompat_trackTintMode:I
 
     .line 275
-    invoke-virtual {v2, v4, v5}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v2, v4, v5}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v4
 
     .line 274
-    invoke-static {v4, v0}, Landroidx/appcompat/widget/ab;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {v4, v0}, Landroidx/appcompat/widget/aa;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
 
@@ -489,7 +489,7 @@
     :cond_9
     sget v0, Landroidx/appcompat/R$styleable;->SwitchCompat_switchTextAppearance:I
 
-    invoke-virtual {v2, v0, v1}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v2, v0, v1}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v0
 
@@ -500,19 +500,19 @@
 
     .line 290
     :cond_a
-    new-instance v0, Landroidx/appcompat/widget/w;
+    new-instance v0, Landroidx/appcompat/widget/v;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/w;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, Landroidx/appcompat/widget/v;-><init>(Landroid/widget/TextView;)V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->mTextHelper:Landroidx/appcompat/widget/w;
+    iput-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->mTextHelper:Landroidx/appcompat/widget/v;
 
     .line 291
-    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->mTextHelper:Landroidx/appcompat/widget/w;
+    iget-object v0, p0, Landroidx/appcompat/widget/SwitchCompat;->mTextHelper:Landroidx/appcompat/widget/v;
 
-    invoke-virtual {v0, p2, p3}, Landroidx/appcompat/widget/w;->a(Landroid/util/AttributeSet;I)V
+    invoke-virtual {v0, p2, p3}, Landroidx/appcompat/widget/v;->a(Landroid/util/AttributeSet;I)V
 
     .line 293
-    invoke-virtual {v2}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v2}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 295
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
@@ -847,7 +847,7 @@
     .locals 2
 
     .line 1304
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v0
 
@@ -905,7 +905,7 @@
     if-eqz v0, :cond_0
 
     .line 1319
-    invoke-static {v0}, Landroidx/appcompat/widget/ab;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v0}, Landroidx/appcompat/widget/aa;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -913,7 +913,7 @@
 
     .line 1321
     :cond_0
-    sget-object v0, Landroidx/appcompat/widget/ab;->a:Landroid/graphics/Rect;
+    sget-object v0, Landroidx/appcompat/widget/aa;->a:Landroid/graphics/Rect;
 
     .line 1324
     :goto_0
@@ -1209,7 +1209,7 @@
     if-lez v4, :cond_3
 
     .line 1018
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v4
 
@@ -1298,7 +1298,7 @@
     if-eqz v6, :cond_0
 
     .line 1154
-    invoke-static {v6}, Landroidx/appcompat/widget/ab;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v6}, Landroidx/appcompat/widget/aa;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     move-result-object v6
 
@@ -1306,7 +1306,7 @@
 
     .line 1156
     :cond_0
-    sget-object v6, Landroidx/appcompat/widget/ab;->a:Landroid/graphics/Rect;
+    sget-object v6, Landroidx/appcompat/widget/aa;->a:Landroid/graphics/Rect;
 
     .line 1160
     :goto_0
@@ -1556,7 +1556,7 @@
     .locals 2
 
     .line 1274
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1603,7 +1603,7 @@
     .locals 2
 
     .line 1286
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1891,7 +1891,7 @@
     if-eqz v4, :cond_1
 
     .line 1227
-    invoke-static {v4}, Landroidx/appcompat/widget/ab;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v4}, Landroidx/appcompat/widget/aa;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     move-result-object v5
 
@@ -2180,7 +2180,7 @@
     :goto_0
     iget-object p3, p0, Landroidx/appcompat/widget/SwitchCompat;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p3}, Landroidx/appcompat/widget/ab;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {p3}, Landroidx/appcompat/widget/aa;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     move-result-object p3
 
@@ -2213,7 +2213,7 @@
 
     .line 1107
     :goto_1
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result p1
 
@@ -2508,7 +2508,7 @@
     if-eqz v4, :cond_5
 
     .line 855
-    invoke-static {v4}, Landroidx/appcompat/widget/ab;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
+    invoke-static {v4}, Landroidx/appcompat/widget/aa;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Rect;
 
     move-result-object v4
 
@@ -2693,7 +2693,7 @@
 
     .line 963
     :goto_0
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2879,7 +2879,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -2985,14 +2985,14 @@
     .line 311
     sget-object v0, Landroidx/appcompat/R$styleable;->TextAppearance:[I
 
-    invoke-static {p1, p2, v0}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;I[I)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;I[I)Landroidx/appcompat/widget/ar;
 
     move-result-object p1
 
     .line 317
     sget p2, Landroidx/appcompat/R$styleable;->TextAppearance_android_textColor:I
 
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object p2
 
@@ -3017,7 +3017,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/as;->e(II)I
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/ar;->e(II)I
 
     move-result p2
 
@@ -3050,14 +3050,14 @@
 
     const/4 v1, -0x1
 
-    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result p2
 
     .line 335
     sget v2, Landroidx/appcompat/R$styleable;->TextAppearance_android_textStyle:I
 
-    invoke-virtual {p1, v2, v1}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {p1, v2, v1}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result v1
 
@@ -3067,7 +3067,7 @@
     .line 339
     sget p2, Landroidx/appcompat/R$styleable;->TextAppearance_textAllCaps:I
 
-    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {p1, p2, v0}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result p2
 
@@ -3094,7 +3094,7 @@
 
     .line 346
     :goto_1
-    invoke-virtual {p1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 .end method

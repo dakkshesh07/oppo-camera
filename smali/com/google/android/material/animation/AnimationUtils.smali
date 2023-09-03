@@ -3,6 +3,11 @@
 .source "AnimationUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field public static final DECELERATE_INTERPOLATOR:Landroid/animation/TimeInterpolator;
 

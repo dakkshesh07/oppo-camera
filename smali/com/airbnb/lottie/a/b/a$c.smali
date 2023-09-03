@@ -30,11 +30,11 @@
 .method public abstract a(F)Z
 .end method
 
-.method public abstract b()Lcom/airbnb/lottie/g/a;
+.method public abstract b()Lcom/airbnb/lottie/d/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/airbnb/lottie/g/a<",
+            "Lcom/airbnb/lottie/d/a<",
             "TT;>;"
         }
     .end annotation

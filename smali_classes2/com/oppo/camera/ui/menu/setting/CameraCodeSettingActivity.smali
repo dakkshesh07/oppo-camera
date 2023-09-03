@@ -1,12 +1,12 @@
 .class public Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;
-.super Lcom/oppo/camera/ui/menu/setting/m;
+.super Lcom/oppo/camera/ui/menu/setting/l;
 .source "CameraCodeSettingActivity.java"
 
 
 # instance fields
-.field private k:Lcolor/support/v7/widget/Toolbar;
+.field private k:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
-.field private l:Lcolor/support/design/widget/ColorAppBarLayout;
+.field private l:Lcom/google/android/material/appbar/AppBarLayout;
 
 
 # direct methods
@@ -14,15 +14,15 @@
     .locals 1
 
     .line 26
-    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/m;-><init>()V
+    invoke-direct {p0}, Lcom/oppo/camera/ui/menu/setting/l;-><init>()V
 
     const/4 v0, 0x0
 
     .line 29
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->k:Lcolor/support/v7/widget/Toolbar;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->k:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
     .line 30
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->l:Lcolor/support/design/widget/ColorAppBarLayout;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->l:Lcom/google/android/material/appbar/AppBarLayout;
 
     return-void
 .end method
@@ -33,9 +33,9 @@
     .locals 3
 
     .line 35
-    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/m;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/oppo/camera/ui/menu/setting/l;->onCreate(Landroid/os/Bundle;)V
 
-    const p1, 0x7f0c0031
+    const p1, 0x7f0c0032
 
     .line 37
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->setContentView(I)V
@@ -55,7 +55,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f090172
+    const v1, 0x7f09019b
 
     .line 41
     invoke-virtual {v0, v1, p1}, Landroidx/fragment/app/k;->a(ILandroidx/fragment/app/Fragment;)Landroidx/fragment/app/k;
@@ -65,19 +65,19 @@
     .line 42
     invoke-virtual {v0}, Landroidx/fragment/app/k;->b()I
 
-    const v0, 0x7f0902af
+    const v0, 0x7f090311
 
     .line 44
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcolor/support/v7/widget/Toolbar;
+    check-cast v0, Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->k:Lcolor/support/v7/widget/Toolbar;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->k:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
     .line 45
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->k:Lcolor/support/v7/widget/Toolbar;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->k:Lcom/coui/appcompat/widget/toolbar/COUIToolbar;
 
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->a(Landroidx/appcompat/widget/Toolbar;)V
 
@@ -88,22 +88,28 @@
 
     move-result-object v0
 
-    check-cast v0, Lcolor/support/design/widget/ColorAppBarLayout;
+    check-cast v0, Lcom/google/android/material/appbar/AppBarLayout;
 
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->l:Lcolor/support/design/widget/ColorAppBarLayout;
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->l:Lcom/google/android/material/appbar/AppBarLayout;
 
     .line 47
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->l:Lcolor/support/design/widget/ColorAppBarLayout;
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->l:Lcom/google/android/material/appbar/AppBarLayout;
 
-    invoke-static {p0}, Lcom/oppo/camera/util/g;->a(Landroid/content/Context;)I
+    invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f070666
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1, v2, v2}, Lcolor/support/design/widget/ColorAppBarLayout;->setPadding(IIII)V
+    invoke-virtual {v0, v2, v1, v2, v2}, Lcom/google/android/material/appbar/AppBarLayout;->setPadding(IIII)V
 
-    const v0, 0x7f100099
+    const v0, 0x7f1000da
 
     .line 48
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/CameraCodeSettingActivity;->setTitle(I)V

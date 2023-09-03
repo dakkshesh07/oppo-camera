@@ -1,48 +1,43 @@
-.class public Landroidx/appcompat/widget/y;
-.super Landroid/widget/ToggleButton;
-.source "AppCompatToggleButton.java"
+.class public interface abstract Landroidx/appcompat/widget/y;
+.super Ljava/lang/Object;
+.source "DecorContentParent.java"
 
 
-# instance fields
-.field private final a:Landroidx/appcompat/widget/w;
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
 
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
-
-    const v0, 0x101004b
-
-    .line 45
-    invoke-direct {p0, p1, p2, v0}, Landroidx/appcompat/widget/y;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    return-void
+# virtual methods
+.method public abstract a(I)V
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+.method public abstract a(Landroid/view/Menu;Landroidx/appcompat/view/menu/n$a;)V
+.end method
 
-    .line 50
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/ToggleButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public abstract e()Z
+.end method
 
-    .line 52
-    invoke-virtual {p0}, Landroidx/appcompat/widget/y;->getContext()Landroid/content/Context;
+.method public abstract f()Z
+.end method
 
-    move-result-object p1
+.method public abstract g()Z
+.end method
 
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/an;->a(Landroid/view/View;Landroid/content/Context;)V
+.method public abstract h()Z
+.end method
 
-    .line 54
-    new-instance p1, Landroidx/appcompat/widget/w;
+.method public abstract i()Z
+.end method
 
-    invoke-direct {p1, p0}, Landroidx/appcompat/widget/w;-><init>(Landroid/widget/TextView;)V
+.method public abstract j()V
+.end method
 
-    iput-object p1, p0, Landroidx/appcompat/widget/y;->a:Landroidx/appcompat/widget/w;
+.method public abstract k()V
+.end method
 
-    .line 55
-    iget-object p1, p0, Landroidx/appcompat/widget/y;->a:Landroidx/appcompat/widget/w;
+.method public abstract setWindowCallback(Landroid/view/Window$Callback;)V
+.end method
 
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/w;->a(Landroid/util/AttributeSet;I)V
-
-    return-void
+.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/setting/b;->s()V
+    value = Lcom/oppo/camera/ui/menu/setting/b;->u()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/b;)V
     .locals 0
 
-    .line 376
+    .line 370
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$2;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,12 +38,12 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 379
+    .line 373
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/b$2;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
-    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->j()V
+    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/b;->k()V
 
-    .line 380
+    .line 374
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void

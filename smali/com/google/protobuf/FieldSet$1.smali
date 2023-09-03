@@ -24,7 +24,7 @@
 .method static constructor <clinit>()V
     .locals 12
 
-    .line 670
+    .line 649
     invoke-static {}, Lcom/google/protobuf/WireFormat$FieldType;->values()[Lcom/google/protobuf/WireFormat$FieldType;
 
     move-result-object v0
@@ -322,7 +322,7 @@
     :try_end_11
     .catch Ljava/lang/NoSuchFieldError; {:try_start_11 .. :try_end_11} :catch_11
 
-    .line 392
+    .line 409
     :catch_11
     invoke-static {}, Lcom/google/protobuf/WireFormat$JavaType;->values()[Lcom/google/protobuf/WireFormat$JavaType;
 

@@ -30,14 +30,14 @@
 
     const/4 v0, 0x0
 
-    .line 2192
+    .line 2240
     invoke-direct {p0, v0}, Lcom/google/protobuf/CodedOutputStream;-><init>(Lcom/google/protobuf/CodedOutputStream$1;)V
 
     if-ltz p1, :cond_0
 
     const/16 v0, 0x14
 
-    .line 2200
+    .line 2248
     invoke-static {p1, v0}, Ljava/lang/Math;->max(II)I
 
     move-result p1
@@ -46,7 +46,7 @@
 
     iput-object p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
-    .line 2201
+    .line 2249
     iget-object p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
     array-length p1, p1
@@ -55,7 +55,7 @@
 
     return-void
 
-    .line 2194
+    .line 2242
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -71,7 +71,7 @@
 .method final buffer(B)V
     .locals 3
 
-    .line 2221
+    .line 2269
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
@@ -82,7 +82,7 @@
 
     aput-byte p1, v0, v1
 
-    .line 2222
+    .line 2270
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/lit8 p1, p1, 0x1
@@ -95,7 +95,7 @@
 .method final bufferFixed32NoTag(I)V
     .locals 3
 
-    .line 2321
+    .line 2365
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
@@ -110,7 +110,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2322
+    .line 2366
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -125,7 +125,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2323
+    .line 2367
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -140,7 +140,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2324
+    .line 2368
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -155,7 +155,7 @@
 
     aput-byte p1, v0, v1
 
-    .line 2325
+    .line 2369
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/lit8 p1, p1, 0x4
@@ -168,7 +168,7 @@
 .method final bufferFixed64NoTag(J)V
     .locals 7
 
-    .line 2333
+    .line 2377
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
@@ -187,7 +187,7 @@
 
     aput-byte v4, v0, v1
 
-    .line 2334
+    .line 2378
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v4, v1, 0x1
@@ -206,7 +206,7 @@
 
     aput-byte v5, v0, v1
 
-    .line 2335
+    .line 2379
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v5, v1, 0x1
@@ -225,7 +225,7 @@
 
     aput-byte v5, v0, v1
 
-    .line 2336
+    .line 2380
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v5, v1, 0x1
@@ -244,7 +244,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2337
+    .line 2381
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -263,7 +263,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2338
+    .line 2382
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -282,7 +282,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2339
+    .line 2383
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -301,7 +301,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2340
+    .line 2384
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
     add-int/lit8 v2, v1, 0x1
@@ -320,7 +320,7 @@
 
     aput-byte p1, v0, v1
 
-    .line 2341
+    .line 2385
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/2addr p1, v4
@@ -335,7 +335,7 @@
 
     if-ltz p1, :cond_0
 
-    .line 2239
+    .line 2287
     invoke-virtual {p0, p1}, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->bufferUInt32NoTag(I)V
 
     goto :goto_0
@@ -343,7 +343,7 @@
     :cond_0
     int-to-long v0, p1
 
-    .line 2242
+    .line 2290
     invoke-virtual {p0, v0, v1}, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->bufferUInt64NoTag(J)V
 
     :goto_0
@@ -353,7 +353,7 @@
 .method final bufferTag(II)V
     .locals 0
 
-    .line 2230
+    .line 2278
     invoke-static {p1, p2}, Lcom/google/protobuf/WireFormat;->makeTag(II)I
 
     move-result p1
@@ -364,56 +364,50 @@
 .end method
 
 .method final bufferUInt32NoTag(I)V
-    .locals 8
+    .locals 6
 
-    .line 2251
+    .line 2299
     invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$100()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 2252
-    invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$200()J
+    .line 2300
+    iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    move-result-wide v0
-
-    iget v2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
-
-    int-to-long v2, v2
-
-    add-long/2addr v0, v2
-
-    move-wide v2, v0
+    int-to-long v0, v0
 
     :goto_0
-    and-int/lit8 v4, p1, -0x80
+    and-int/lit8 v2, p1, -0x80
 
-    const-wide/16 v5, 0x1
+    if-nez v2, :cond_0
 
-    if-nez v4, :cond_0
+    .line 2303
+    iget-object v2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
-    .line 2256
-    iget-object v4, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
+    iget v3, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    add-long/2addr v5, v2
+    add-int/lit8 v4, v3, 0x1
+
+    iput v4, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
+
+    int-to-long v3, v3
 
     int-to-byte p1, p1
 
-    invoke-static {v4, v2, v3, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
+    invoke-static {v2, v3, v4, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
-    sub-long/2addr v5, v0
+    .line 2310
+    iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    long-to-int p1, v5
+    int-to-long v2, p1
 
-    .line 2264
-    iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
+    sub-long/2addr v2, v0
 
-    add-int/2addr v0, p1
+    long-to-int p1, v2
 
-    iput v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
-
-    .line 2265
+    .line 2311
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/2addr v0, p1
@@ -422,23 +416,27 @@
 
     return-void
 
-    .line 2259
+    .line 2306
     :cond_0
-    iget-object v4, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
+    iget-object v2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
-    add-long/2addr v5, v2
+    iget v3, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    and-int/lit8 v7, p1, 0x7f
+    add-int/lit8 v4, v3, 0x1
 
-    or-int/lit16 v7, v7, 0x80
+    iput v4, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    int-to-byte v7, v7
+    int-to-long v3, v3
 
-    invoke-static {v4, v2, v3, v7}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
+    and-int/lit8 v5, p1, 0x7f
+
+    or-int/lit16 v5, v5, 0x80
+
+    int-to-byte v5, v5
+
+    invoke-static {v2, v3, v4, v5}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     ushr-int/lit8 p1, p1, 0x7
-
-    move-wide v2, v5
 
     goto :goto_0
 
@@ -448,7 +446,7 @@
 
     if-nez v0, :cond_2
 
-    .line 2269
+    .line 2315
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
@@ -461,7 +459,7 @@
 
     aput-byte p1, v0, v1
 
-    .line 2270
+    .line 2316
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/lit8 p1, p1, 0x1
@@ -470,7 +468,7 @@
 
     return-void
 
-    .line 2273
+    .line 2319
     :cond_2
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
@@ -488,7 +486,7 @@
 
     aput-byte v2, v0, v1
 
-    .line 2274
+    .line 2320
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/lit8 v0, v0, 0x1
@@ -501,9 +499,9 @@
 .end method
 
 .method final bufferUInt64NoTag(J)V
-    .locals 13
+    .locals 11
 
-    .line 2286
+    .line 2332
     invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$100()Z
 
     move-result v0
@@ -516,51 +514,45 @@
 
     if-eqz v0, :cond_1
 
-    .line 2287
-    invoke-static {}, Lcom/google/protobuf/CodedOutputStream;->access$200()J
-
-    move-result-wide v6
-
+    .line 2333
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    int-to-long v8, v0
-
-    add-long/2addr v6, v8
-
-    move-wide v8, v6
+    int-to-long v6, v0
 
     :goto_0
-    and-long v10, p1, v4
+    and-long v8, p1, v4
 
-    cmp-long v0, v10, v2
-
-    const-wide/16 v10, 0x1
+    cmp-long v0, v8, v2
 
     if-nez v0, :cond_0
 
-    .line 2291
+    .line 2336
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
-    add-long/2addr v10, v8
+    iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
+
+    int-to-long v1, v1
 
     long-to-int p1, p1
 
     int-to-byte p1, p1
 
-    invoke-static {v0, v8, v9, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
+    invoke-static {v0, v1, v2, p1}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
-    sub-long/2addr v10, v6
+    .line 2343
+    iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    long-to-int p1, v10
+    int-to-long p1, p1
 
-    .line 2299
-    iget p2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
+    sub-long/2addr p1, v6
 
-    add-int/2addr p2, p1
+    long-to-int p1, p1
 
-    iput p2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
-
-    .line 2300
+    .line 2344
     iget p2, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/2addr p2, p1
@@ -569,25 +561,29 @@
 
     return-void
 
-    .line 2294
+    .line 2339
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
-    add-long/2addr v10, v8
+    iget v8, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    long-to-int v12, p1
+    add-int/lit8 v9, v8, 0x1
 
-    and-int/lit8 v12, v12, 0x7f
+    iput v9, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
 
-    or-int/lit16 v12, v12, 0x80
+    int-to-long v8, v8
 
-    int-to-byte v12, v12
+    long-to-int v10, p1
 
-    invoke-static {v0, v8, v9, v12}, Lcom/google/protobuf/UnsafeUtil;->putByte(Ljava/lang/Object;JB)V
+    and-int/lit8 v10, v10, 0x7f
+
+    or-int/lit16 v10, v10, 0x80
+
+    int-to-byte v10, v10
+
+    invoke-static {v0, v8, v9, v10}, Lcom/google/protobuf/UnsafeUtil;->putByte([BJB)V
 
     ushr-long/2addr p1, v1
-
-    move-wide v8, v10
 
     goto :goto_0
 
@@ -599,7 +595,7 @@
 
     if-nez v0, :cond_2
 
-    .line 2304
+    .line 2348
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
     iget v1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->position:I
@@ -614,7 +610,7 @@
 
     aput-byte p1, v0, v1
 
-    .line 2305
+    .line 2349
     iget p1, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/lit8 p1, p1, 0x1
@@ -623,7 +619,7 @@
 
     return-void
 
-    .line 2308
+    .line 2352
     :cond_2
     iget-object v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->buffer:[B
 
@@ -643,7 +639,7 @@
 
     aput-byte v7, v0, v6
 
-    .line 2309
+    .line 2353
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     add-int/lit8 v0, v0, 0x1
@@ -658,7 +654,7 @@
 .method public final getTotalBytesWritten()I
     .locals 1
 
-    .line 2213
+    .line 2261
     iget v0, p0, Lcom/google/protobuf/CodedOutputStream$AbstractBufferedEncoder;->totalBytesWritten:I
 
     return v0
@@ -667,7 +663,7 @@
 .method public final spaceLeft()I
     .locals 2
 
-    .line 2206
+    .line 2254
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "spaceLeft() can only be called on CodedOutputStreams that are writing to a flat array or ByteBuffer."

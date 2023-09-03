@@ -1,6 +1,6 @@
 .class final Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;
 .super Ljava/lang/Object;
-.source "AndroidMessage.kt"
+.source "AndroidMessage.java"
 
 # interfaces
 .implements Landroid/os/Parcelable$Creator;
@@ -40,8 +40,8 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/squareup/wire/ProtoAdapter;)V
-    .locals 1
+.method constructor <init>(Lcom/squareup/wire/ProtoAdapter;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -50,13 +50,10 @@
         }
     .end annotation
 
-    const-string v0, "adapter"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 35
+    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 48
     iput-object p1, p0, Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
     return-void
@@ -65,7 +62,7 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -74,26 +71,31 @@
         }
     .end annotation
 
-    const-string v0, "input"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 38
+    .line 53
+    :try_start_0
     iget-object v0, p0, Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object p1
 
-    const-string v1, "input.createByteArray()"
-
-    invoke-static {p1, v1}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
     invoke-virtual {v0, p1}, Lcom/squareup/wire/ProtoAdapter;->decode([B)Ljava/lang/Object;
 
     move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p1
+
+    :catch_0
+    move-exception p1
+
+    .line 55
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method
 
 .method public newArray(I)[Ljava/lang/Object;
@@ -104,41 +106,18 @@
         }
     .end annotation
 
-    .line 41
+    .line 61
     iget-object v0, p0, Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;->adapter:Lcom/squareup/wire/ProtoAdapter;
 
-    invoke-virtual {v0}, Lcom/squareup/wire/ProtoAdapter;->getType()Lc/f/a;
+    iget-object v0, v0, Lcom/squareup/wire/ProtoAdapter;->javaType:Ljava/lang/Class;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Lc/d/a;->b(Lc/f/a;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
     invoke-static {v0, p1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object p1
 
-    if-eqz p1, :cond_1
+    check-cast p1, [Ljava/lang/Object;
 
     check-cast p1, [Ljava/lang/Object;
 
     return-object p1
-
-    :cond_1
-    new-instance p1, Lc/e;
-
-    const-string v0, "null cannot be cast to non-null type kotlin.Array<M>"
-
-    invoke-direct {p1, v0}, Lc/e;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method

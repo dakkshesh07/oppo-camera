@@ -50,7 +50,7 @@
     .line 149
     iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$1;->a:Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
 
-    invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/j;
+    invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/i;
 
     move-result-object p1
 
@@ -58,13 +58,21 @@
 
     iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$1;->a:Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
 
-    invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/j;
+    invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/i;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/oppo/camera/sticker/ui/j;->g()Z
+    invoke-interface {p1}, Lcom/oppo/camera/sticker/ui/i;->g()Z
 
     move-result p1
+
+    if-eqz p1, :cond_2
+
+    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$1;->a:Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
+
+    invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/a;
+
+    move-result-object p1
 
     if-nez p1, :cond_0
 
@@ -82,29 +90,22 @@
 
     move-result-object p1
 
+    if-eqz p1, :cond_1
+
     .line 157
     iget-object p2, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$1;->a:Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
 
-    invoke-static {p2}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/j;
+    invoke-static {p2}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->a(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/i;
 
     move-result-object p2
 
-    invoke-interface {p2, p1, p3}, Lcom/oppo/camera/sticker/ui/j;->a(Lcom/oppo/camera/sticker/data/StickerItem;I)Z
+    invoke-interface {p2, p1, p3}, Lcom/oppo/camera/sticker/ui/i;->a(Lcom/oppo/camera/sticker/data/StickerItem;I)Z
 
     move-result p1
 
     if-nez p1, :cond_1
 
     .line 158
-    iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$1;->a:Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
-
-    invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/a;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    .line 159
     iget-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout$1;->a:Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;
 
     invoke-static {p1}, Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;->b(Lcom/oppo/camera/sticker/ui/StickerGridViewLayout;)Lcom/oppo/camera/sticker/ui/a;
@@ -123,7 +124,7 @@
     const-string p2, "onItemClick, return"
 
     .line 150
-    invoke-static {p1, p2}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;Lcom/oppo/camera/ui/menu/levelcontrol/f;)V
     .locals 0
 
-    .line 320
+    .line 330
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     iput-object p2, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;->a:Lcom/oppo/camera/ui/menu/levelcontrol/f;
@@ -42,7 +42,7 @@
 .method public run()V
     .locals 4
 
-    .line 323
+    .line 333
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/g;
@@ -67,7 +67,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->a(Lcom/oppo/camera/ui/menu/levelcontrol/f;Z)V
 
-    .line 324
+    .line 334
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->f(Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;)Lcom/oppo/camera/ui/menu/levelcontrol/g;
@@ -76,16 +76,16 @@
 
     invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/g;->c()V
 
-    .line 325
+    .line 335
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;->b:Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
 
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar$6;->a:Lcom/oppo/camera/ui/menu/levelcontrol/f;
 
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->i()I
+    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/levelcontrol/f;->k()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;->b(I)V
 
     return-void
 .end method

@@ -10,6 +10,9 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # static fields
 .field public static final Companion:Lokio/HashingSource$Companion;
@@ -29,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokio/HashingSource$Companion;-><init>(Lc/d/b/f;)V
+    invoke-direct {v0, v1}, Lokio/HashingSource$Companion;-><init>(Lkotlin/jvm/internal/o;)V
 
     sput-object v0, Lokio/HashingSource;->Companion:Lokio/HashingSource$Companion;
 
@@ -41,11 +44,11 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "algorithm"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 45
     invoke-direct {p0, p1}, Lokio/ForwardingSource;-><init>(Lokio/Source;)V
@@ -72,15 +75,15 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "key"
 
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "algorithm"
 
-    invoke-static {p3, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 50
     invoke-direct {p0, p1}, Lokio/ForwardingSource;-><init>(Lokio/Source;)V
@@ -249,7 +252,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_1
     invoke-virtual {v0}, Ljavax/crypto/Mac;->doFinal()[B
@@ -262,7 +265,7 @@
 
     const-string v2, "result"
 
-    invoke-static {v0, v2}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v0}, Lokio/ByteString;-><init>([B)V
 
@@ -279,7 +282,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 63
     invoke-super {p0, p1, p2, p3}, Lokio/ForwardingSource;->read(Lokio/Buffer;J)J
@@ -309,7 +312,7 @@
 
     if-nez v4, :cond_0
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_0
     :goto_0
@@ -322,7 +325,7 @@
 
     if-nez v4, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     .line 73
     :cond_1
@@ -382,7 +385,7 @@
 
     if-nez v1, :cond_4
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_4
     iget-object v5, v4, Lokio/Segment;->data:[B
@@ -410,7 +413,7 @@
 
     if-nez v4, :cond_5
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_5
     move-wide v2, v0

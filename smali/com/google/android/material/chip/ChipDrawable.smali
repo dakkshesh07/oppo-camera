@@ -1518,7 +1518,7 @@
     const/16 v2, 0x7f
 
     .line 738
-    invoke-static {v1, v2}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {v1, v2}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v1
 
@@ -1612,7 +1612,7 @@
 
     const/high16 v1, -0x10000
 
-    invoke-static {v1, v2}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {v1, v2}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v1
 
@@ -1635,7 +1635,7 @@
 
     const v1, -0xff0100
 
-    invoke-static {v1, v2}, Landroidx/core/graphics/d;->b(II)I
+    invoke-static {v1, v2}, Landroidx/core/graphics/c;->b(II)I
 
     move-result v1
 

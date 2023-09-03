@@ -204,7 +204,7 @@
     .line 223
     iget-object v2, v0, Lcom/google/android/material/appbar/HeaderBehavior;->flingRunnable:Ljava/lang/Runnable;
 
-    invoke-static {p2, v2}, Landroidx/core/g/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p2, v2}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     const/4 v1, 0x1
 
@@ -781,7 +781,7 @@
     if-gt p1, p5, :cond_0
 
     .line 170
-    invoke-static {p3, p4, p5}, Landroidx/core/b/a;->a(III)I
+    invoke-static {p3, p4, p5}, Landroidx/core/c/a;->a(III)I
 
     move-result p2
 

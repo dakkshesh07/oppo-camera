@@ -184,7 +184,7 @@
     return-void
 .end method
 
-.method a(Landroidx/lifecycle/e;Landroid/os/Bundle;)V
+.method a(Landroidx/lifecycle/Lifecycle;Landroid/os/Bundle;)V
     .locals 1
 
     .line 190
@@ -209,7 +209,7 @@
 
     invoke-direct {p2, p0}, Landroidx/savedstate/SavedStateRegistry$1;-><init>(Landroidx/savedstate/a;)V
 
-    invoke-virtual {p1, p2}, Landroidx/lifecycle/e;->a(Landroidx/lifecycle/g;)V
+    invoke-virtual {p1, p2}, Landroidx/lifecycle/Lifecycle;->a(Landroidx/lifecycle/f;)V
 
     const/4 p1, 0x1
 

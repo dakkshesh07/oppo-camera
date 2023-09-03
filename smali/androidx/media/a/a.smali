@@ -14,6 +14,8 @@
 # direct methods
 .method public static a(Landroid/content/Context;)Landroid/content/ComponentName;
     .locals 3
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 282
     new-instance v0, Landroid/content/Intent;

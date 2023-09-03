@@ -78,7 +78,7 @@
 
     const-string p2, "com.oppo.camera.gallery.cache.fileprovider"
 
-    invoke-static {v0, p2, v1}, Landroidx/core/content/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v0, p2, v1}, Landroidx/core/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p2
 
@@ -95,6 +95,54 @@
     const/4 p1, 0x0
 
     return-object p1
+.end method
+
+.method public static a(Landroid/content/Context;)V
+    .locals 4
+
+    .line 125
+    new-instance v0, Ljava/io/File;
+
+    invoke-static {p0}, Lcom/oppo/camera/util/Util;->z(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "com.oppo.camera.gallery.cache.fileprovider"
+
+    invoke-static {p0, v1, v0}, Landroidx/core/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    .line 126
+    new-instance v2, Ljava/io/File;
+
+    invoke-static {}, Lcom/oppo/camera/ab;->b()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v1, v2}, Landroidx/core/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    const-string v3, "com.coloros.gallery3d"
+
+    .line 128
+    invoke-virtual {p0, v3, v0, v2}, Landroid/content/Context;->revokeUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
+
+    .line 130
+    invoke-virtual {p0, v3, v1, v2}, Landroid/content/Context;->revokeUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
+
+    return-void
 .end method
 
 .method private a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;)V
@@ -142,7 +190,7 @@
 
     const-string v1, "SandBoxContentProvider"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 54
     sget-object v0, Lcom/oppo/camera/util/storage/SandBoxContentProvider;->a:Landroid/content/UriMatcher;
@@ -226,7 +274,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/oppo/camera/y;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/oppo/camera/ab;->b()Ljava/lang/String;
 
     move-result-object v1
 

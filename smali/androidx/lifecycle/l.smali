@@ -3,6 +3,11 @@
 .source "MethodCallsLogger.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private a:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;

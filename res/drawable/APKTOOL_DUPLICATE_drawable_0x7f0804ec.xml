@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple android:color="@color/APKTOOL_DUPLICATE_color_0x7f0603f4"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070699" />
+            <solid android:color="@color/APKTOOL_DUPLICATE_color_0x7f060168" />
+            <padding android:left="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070697" android:top="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070698" android:right="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070697" android:bottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070698" />
+        </shape>
+    </item>
+</ripple>

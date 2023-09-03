@@ -463,7 +463,7 @@
     iget-object p1, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
 
     .line 638
-    invoke-static {p1}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result p2
 
@@ -541,7 +541,7 @@
     sget v1, Lcom/google/android/material/R$color;->mtrl_scrim_color:I
 
     .line 799
-    invoke-static {p1, v1}, Landroidx/core/content/a;->c(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Landroidx/core/a/a;->c(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -932,7 +932,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v7}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 
@@ -947,7 +947,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Landroidx/core/f/f;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v7}, Landroidx/core/util/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
 

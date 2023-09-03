@@ -22,7 +22,7 @@
 .method constructor <init>(Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .line 86
+    .line 89
     iput-object p1, p0, Lcom/google/gson/internal/UnsafeAllocator$3;->val$newInstance:Ljava/lang/reflect/Method;
 
     invoke-direct {p0}, Lcom/google/gson/internal/UnsafeAllocator;-><init>()V
@@ -50,7 +50,10 @@
         }
     .end annotation
 
-    .line 90
+    .line 93
+    invoke-static {p1}, Lcom/google/gson/internal/UnsafeAllocator$3;->assertInstantiable(Ljava/lang/Class;)V
+
+    .line 94
     iget-object v0, p0, Lcom/google/gson/internal/UnsafeAllocator$3;->val$newInstance:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2

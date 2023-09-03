@@ -3,6 +3,11 @@
 .source "ArchTaskExecutor.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static volatile a:Landroidx/a/a/a/a;
 

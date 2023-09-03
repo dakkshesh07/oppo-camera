@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coui.appcompat.widget.COUICheckedLinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckedTextView android:gravity="center_vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09009c" android:paddingTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07078c" android:paddingBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070789" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checkMark="?android:listChoiceIndicatorSingle" android:minHeight="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070790" android:paddingStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07078a" android:paddingEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07078b" android:forceDarkAllowed="false" style="?android:textAppearanceLarge" />
+    <ImageView android:gravity="bottom" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09017d" android:background="@drawable/APKTOOL_DUPLICATE_drawable_0x7f080259" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</com.coui.appcompat.widget.COUICheckedLinearLayout>

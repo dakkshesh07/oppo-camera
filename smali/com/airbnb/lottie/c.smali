@@ -3,6 +3,11 @@
 .source "L.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field public static a:Z = false
 
@@ -16,6 +21,14 @@
 
 .field private static f:I
 
+.field private static g:Lcom/airbnb/lottie/network/e;
+
+.field private static h:Lcom/airbnb/lottie/network/d;
+
+.field private static volatile i:Lcom/airbnb/lottie/network/g;
+
+.field private static volatile j:Lcom/airbnb/lottie/network/f;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -24,17 +37,81 @@
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;)Lcom/airbnb/lottie/network/g;
+    .locals 3
+
+    .line 94
+    sget-object v0, Lcom/airbnb/lottie/c;->i:Lcom/airbnb/lottie/network/g;
+
+    if-nez v0, :cond_2
+
+    .line 96
+    const-class v1, Lcom/airbnb/lottie/network/g;
+
+    monitor-enter v1
+
+    .line 97
+    :try_start_0
+    sget-object v0, Lcom/airbnb/lottie/c;->i:Lcom/airbnb/lottie/network/g;
+
+    if-nez v0, :cond_1
+
+    .line 99
+    new-instance v0, Lcom/airbnb/lottie/network/g;
+
+    invoke-static {p0}, Lcom/airbnb/lottie/c;->b(Landroid/content/Context;)Lcom/airbnb/lottie/network/f;
+
+    move-result-object p0
+
+    sget-object v2, Lcom/airbnb/lottie/c;->g:Lcom/airbnb/lottie/network/e;
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lcom/airbnb/lottie/c;->g:Lcom/airbnb/lottie/network/e;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v2, Lcom/airbnb/lottie/network/b;
+
+    invoke-direct {v2}, Lcom/airbnb/lottie/network/b;-><init>()V
+
+    :goto_0
+    invoke-direct {v0, p0, v2}, Lcom/airbnb/lottie/network/g;-><init>(Lcom/airbnb/lottie/network/f;Lcom/airbnb/lottie/network/e;)V
+
+    sput-object v0, Lcom/airbnb/lottie/c;->i:Lcom/airbnb/lottie/network/g;
+
+    .line 101
+    :cond_1
+    monitor-exit v1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_2
+    :goto_1
+    return-object v0
+.end method
+
 .method public static a(Ljava/lang/String;)V
     .locals 4
 
-    .line 31
+    .line 51
     sget-boolean v0, Lcom/airbnb/lottie/c;->b:Z
 
     if-nez v0, :cond_0
 
     return-void
 
-    .line 34
+    .line 54
     :cond_0
     sget v0, Lcom/airbnb/lottie/c;->e:I
 
@@ -42,7 +119,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 35
+    .line 55
     sget p0, Lcom/airbnb/lottie/c;->f:I
 
     add-int/lit8 p0, p0, 0x1
@@ -51,13 +128,13 @@
 
     return-void
 
-    .line 38
+    .line 58
     :cond_1
     sget-object v1, Lcom/airbnb/lottie/c;->c:[Ljava/lang/String;
 
     aput-object p0, v1, v0
 
-    .line 39
+    .line 59
     sget-object v1, Lcom/airbnb/lottie/c;->d:[J
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
@@ -66,10 +143,10 @@
 
     aput-wide v2, v1, v0
 
-    .line 40
-    invoke-static {p0}, Landroidx/core/c/a;->a(Ljava/lang/String;)V
+    .line 60
+    invoke-static {p0}, Landroidx/core/os/a;->a(Ljava/lang/String;)V
 
-    .line 41
+    .line 61
     sget p0, Lcom/airbnb/lottie/c;->e:I
 
     add-int/lit8 p0, p0, 0x1
@@ -82,7 +159,7 @@
 .method public static b(Ljava/lang/String;)F
     .locals 4
 
-    .line 45
+    .line 65
     sget v0, Lcom/airbnb/lottie/c;->f:I
 
     const/4 v1, 0x0
@@ -91,12 +168,12 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 46
+    .line 66
     sput v0, Lcom/airbnb/lottie/c;->f:I
 
     return v1
 
-    .line 49
+    .line 69
     :cond_0
     sget-boolean v0, Lcom/airbnb/lottie/c;->b:Z
 
@@ -104,7 +181,7 @@
 
     return v1
 
-    .line 52
+    .line 72
     :cond_1
     sget v0, Lcom/airbnb/lottie/c;->e:I
 
@@ -112,14 +189,14 @@
 
     sput v0, Lcom/airbnb/lottie/c;->e:I
 
-    .line 53
+    .line 73
     sget v0, Lcom/airbnb/lottie/c;->e:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_3
 
-    .line 56
+    .line 76
     sget-object v1, Lcom/airbnb/lottie/c;->c:[Ljava/lang/String;
 
     aget-object v0, v1, v0
@@ -130,10 +207,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 60
-    invoke-static {}, Landroidx/core/c/a;->a()V
+    .line 80
+    invoke-static {}, Landroidx/core/os/a;->a()V
 
-    .line 61
+    .line 81
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v0
@@ -154,7 +231,7 @@
 
     return p0
 
-    .line 57
+    .line 77
     :cond_2
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -192,7 +269,7 @@
 
     throw v0
 
-    .line 54
+    .line 74
     :cond_3
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -201,4 +278,66 @@
     invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
+.end method
+
+.method public static b(Landroid/content/Context;)Lcom/airbnb/lottie/network/f;
+    .locals 3
+
+    .line 108
+    sget-object v0, Lcom/airbnb/lottie/c;->j:Lcom/airbnb/lottie/network/f;
+
+    if-nez v0, :cond_2
+
+    .line 110
+    const-class v1, Lcom/airbnb/lottie/network/f;
+
+    monitor-enter v1
+
+    .line 111
+    :try_start_0
+    sget-object v0, Lcom/airbnb/lottie/c;->j:Lcom/airbnb/lottie/network/f;
+
+    if-nez v0, :cond_1
+
+    .line 113
+    new-instance v0, Lcom/airbnb/lottie/network/f;
+
+    sget-object v2, Lcom/airbnb/lottie/c;->h:Lcom/airbnb/lottie/network/d;
+
+    if-eqz v2, :cond_0
+
+    sget-object p0, Lcom/airbnb/lottie/c;->h:Lcom/airbnb/lottie/network/d;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v2, Lcom/airbnb/lottie/c$1;
+
+    invoke-direct {v2, p0}, Lcom/airbnb/lottie/c$1;-><init>(Landroid/content/Context;)V
+
+    move-object p0, v2
+
+    :goto_0
+    invoke-direct {v0, p0}, Lcom/airbnb/lottie/network/f;-><init>(Lcom/airbnb/lottie/network/d;)V
+
+    sput-object v0, Lcom/airbnb/lottie/c;->j:Lcom/airbnb/lottie/network/f;
+
+    .line 119
+    :cond_1
+    monitor-exit v1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_2
+    :goto_1
+    return-object v0
 .end method

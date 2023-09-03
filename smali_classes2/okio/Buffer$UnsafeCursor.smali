@@ -16,6 +16,9 @@
     name = "UnsafeCursor"
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # instance fields
 .field public buffer:Lokio/Buffer;
@@ -37,20 +40,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .line 801
+    .line 793
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-wide/16 v0, -0x1
 
-    .line 806
+    .line 798
     iput-wide v0, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
     const/4 v0, -0x1
 
-    .line 808
+    .line 800
     iput v0, p0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 809
+    .line 801
     iput v0, p0, Lokio/Buffer$UnsafeCursor;->end:I
 
     return-void
@@ -61,7 +64,7 @@
 .method public close()V
     .locals 3
 
-    .line 1016
+    .line 1008
     iget-object v0, p0, Lokio/Buffer$UnsafeCursor;->buffer:Lokio/Buffer;
 
     if-eqz v0, :cond_0
@@ -78,14 +81,14 @@
 
     const/4 v0, 0x0
 
-    .line 1018
+    .line 1010
     move-object v1, v0
 
     check-cast v1, Lokio/Buffer;
 
     iput-object v1, p0, Lokio/Buffer$UnsafeCursor;->buffer:Lokio/Buffer;
 
-    .line 1019
+    .line 1011
     move-object v1, v0
 
     check-cast v1, Lokio/Segment;
@@ -94,25 +97,25 @@
 
     const-wide/16 v1, -0x1
 
-    .line 1020
+    .line 1012
     iput-wide v1, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
-    .line 1021
+    .line 1013
     check-cast v0, [B
 
     iput-object v0, p0, Lokio/Buffer$UnsafeCursor;->data:[B
 
     const/4 v0, -0x1
 
-    .line 1022
+    .line 1014
     iput v0, p0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 1023
+    .line 1015
     iput v0, p0, Lokio/Buffer$UnsafeCursor;->end:I
 
     return-void
 
-    .line 1016
+    .line 1008
     :cond_1
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -160,63 +163,63 @@
     :goto_1
     if-eqz v0, :cond_4
 
-    .line 995
+    .line 987
     iget-object v0, p0, Lokio/Buffer$UnsafeCursor;->buffer:Lokio/Buffer;
 
     if-eqz v0, :cond_3
 
-    .line 996
+    .line 988
     iget-boolean v1, p0, Lokio/Buffer$UnsafeCursor;->readWrite:Z
 
     if-eqz v1, :cond_2
 
-    .line 998
+    .line 990
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v3
 
-    .line 999
+    .line 991
     invoke-virtual {v0, p1}, Lokio/Buffer;->writableSegment$okio(I)Lokio/Segment;
 
     move-result-object p1
 
-    .line 1000
+    .line 992
     iget v1, p1, Lokio/Segment;->limit:I
 
     rsub-int v1, v1, 0x2000
 
-    .line 1001
+    .line 993
     iput v2, p1, Lokio/Segment;->limit:I
 
     int-to-long v5, v1
 
     add-long v7, v3, v5
 
-    .line 1002
+    .line 994
     invoke-virtual {v0, v7, v8}, Lokio/Buffer;->setSize$okio(J)V
 
-    .line 1005
+    .line 997
     iput-object p1, p0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
-    .line 1006
+    .line 998
     iput-wide v3, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
-    .line 1007
+    .line 999
     iget-object p1, p1, Lokio/Segment;->data:[B
 
     iput-object p1, p0, Lokio/Buffer$UnsafeCursor;->data:[B
 
     rsub-int p1, v1, 0x2000
 
-    .line 1008
+    .line 1000
     iput p1, p0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 1009
+    .line 1001
     iput v2, p0, Lokio/Buffer$UnsafeCursor;->end:I
 
     return-wide v5
 
-    .line 996
+    .line 988
     :cond_2
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -232,7 +235,7 @@
 
     throw p1
 
-    .line 995
+    .line 987
     :cond_3
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -248,7 +251,7 @@
 
     throw p1
 
-    .line 994
+    .line 986
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -276,7 +279,7 @@
 
     throw v0
 
-    .line 993
+    .line 985
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -308,14 +311,14 @@
 .method public final next()I
     .locals 4
 
-    .line 817
+    .line 809
     iget-wide v0, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
     iget-object v2, p0, Lokio/Buffer$UnsafeCursor;->buffer:Lokio/Buffer;
 
     if-nez v2, :cond_0
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_0
     invoke-virtual {v2}, Lokio/Buffer;->size()J
@@ -336,7 +339,7 @@
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 818
+    .line 810
     iget-wide v0, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
     const-wide/16 v2, -0x1
@@ -367,7 +370,7 @@
 
     return v0
 
-    .line 817
+    .line 809
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -391,17 +394,17 @@
 
     move-wide/from16 v1, p1
 
-    .line 917
+    .line 909
     iget-object v3, v0, Lokio/Buffer$UnsafeCursor;->buffer:Lokio/Buffer;
 
     if-eqz v3, :cond_a
 
-    .line 918
+    .line 910
     iget-boolean v4, v0, Lokio/Buffer$UnsafeCursor;->readWrite:Z
 
     if-eqz v4, :cond_9
 
-    .line 920
+    .line 912
     invoke-virtual {v3}, Lokio/Buffer;->size()J
 
     move-result-wide v4
@@ -435,20 +438,20 @@
 
     if-lez v8, :cond_4
 
-    .line 926
+    .line 918
     iget-object v8, v3, Lokio/Buffer;->head:Lokio/Segment;
 
     if-nez v8, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_1
     iget-object v8, v8, Lokio/Segment;->prev:Lokio/Segment;
 
     if-nez v8, :cond_2
 
-    .line 927
-    invoke-static {}, Lc/d/b/k;->a()V
+    .line 919
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_2
     iget v11, v8, Lokio/Segment;->limit:I
@@ -463,14 +466,14 @@
 
     if-gtz v13, :cond_3
 
-    .line 929
+    .line 921
     invoke-virtual {v8}, Lokio/Segment;->pop()Lokio/Segment;
 
     move-result-object v13
 
     iput-object v13, v3, Lokio/Buffer;->head:Lokio/Segment;
 
-    .line 930
+    .line 922
     sget-object v13, Lokio/SegmentPool;->INSTANCE:Lokio/SegmentPool;
 
     invoke-virtual {v13, v8}, Lokio/SegmentPool;->recycle(Lokio/Segment;)V
@@ -479,7 +482,7 @@
 
     goto :goto_1
 
-    .line 933
+    .line 925
     :cond_3
     iget v9, v8, Lokio/Segment;->limit:I
 
@@ -492,32 +495,32 @@
     :cond_4
     const/4 v6, 0x0
 
-    .line 938
+    .line 930
     move-object v7, v6
 
     check-cast v7, Lokio/Segment;
 
     iput-object v7, v0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
-    .line 939
+    .line 931
     iput-wide v1, v0, Lokio/Buffer$UnsafeCursor;->offset:J
 
-    .line 940
+    .line 932
     check-cast v6, [B
 
     iput-object v6, v0, Lokio/Buffer$UnsafeCursor;->data:[B
 
     const/4 v6, -0x1
 
-    .line 941
+    .line 933
     iput v6, v0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 942
+    .line 934
     iput v6, v0, Lokio/Buffer$UnsafeCursor;->end:I
 
     goto :goto_3
 
-    .line 922
+    .line 914
     :cond_5
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -557,26 +560,26 @@
 
     if-lez v13, :cond_8
 
-    .line 948
+    .line 940
     invoke-virtual {v3, v8}, Lokio/Buffer;->writableSegment$okio(I)Lokio/Segment;
 
     move-result-object v13
 
-    .line 949
+    .line 941
     iget v14, v13, Lokio/Segment;->limit:I
 
     rsub-int v14, v14, 0x2000
 
     int-to-long v14, v14
 
-    .line 1028
+    .line 1020
     invoke-static {v11, v12, v14, v15}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v14
 
     long-to-int v14, v14
 
-    .line 950
+    .line 942
     iget v15, v13, Lokio/Segment;->limit:I
 
     add-int/2addr v15, v14
@@ -589,25 +592,25 @@
 
     if-eqz v6, :cond_7
 
-    .line 955
+    .line 947
     iput-object v13, v0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
-    .line 956
+    .line 948
     iput-wide v4, v0, Lokio/Buffer$UnsafeCursor;->offset:J
 
-    .line 957
+    .line 949
     iget-object v6, v13, Lokio/Segment;->data:[B
 
     iput-object v6, v0, Lokio/Buffer$UnsafeCursor;->data:[B
 
-    .line 958
+    .line 950
     iget v6, v13, Lokio/Segment;->limit:I
 
     sub-int/2addr v6, v14
 
     iput v6, v0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 959
+    .line 951
     iget v6, v13, Lokio/Segment;->limit:I
 
     iput v6, v0, Lokio/Buffer$UnsafeCursor;->end:I
@@ -619,14 +622,14 @@
 
     goto :goto_2
 
-    .line 965
+    .line 957
     :cond_8
     :goto_3
     invoke-virtual {v3, v1, v2}, Lokio/Buffer;->setSize$okio(J)V
 
     return-wide v4
 
-    .line 918
+    .line 910
     :cond_9
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -642,7 +645,7 @@
 
     throw v1
 
-    .line 917
+    .line 909
     :cond_a
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -662,7 +665,7 @@
 .method public final seek(J)I
     .locals 12
 
-    .line 827
+    .line 819
     iget-object v0, p0, Lokio/Buffer$UnsafeCursor;->buffer:Lokio/Buffer;
 
     if-eqz v0, :cond_10
@@ -675,7 +678,7 @@
 
     if-ltz v2, :cond_f
 
-    .line 828
+    .line 820
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v2
@@ -690,7 +693,7 @@
 
     if-eqz v2, :cond_e
 
-    .line 833
+    .line 825
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v2
@@ -704,30 +707,30 @@
     :cond_0
     const-wide/16 v1, 0x0
 
-    .line 844
+    .line 836
     invoke-virtual {v0}, Lokio/Buffer;->size()J
 
     move-result-wide v3
 
-    .line 845
+    .line 837
     iget-object v5, v0, Lokio/Buffer;->head:Lokio/Segment;
 
-    .line 846
+    .line 838
     iget-object v6, v0, Lokio/Buffer;->head:Lokio/Segment;
 
-    .line 847
+    .line 839
     iget-object v7, p0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
     if-eqz v7, :cond_3
 
-    .line 848
+    .line 840
     iget-wide v8, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
     iget v10, p0, Lokio/Buffer$UnsafeCursor;->start:I
 
     if-nez v7, :cond_1
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_1
     iget v7, v7, Lokio/Segment;->pos:I
@@ -742,14 +745,14 @@
 
     if-lez v9, :cond_2
 
-    .line 852
+    .line 844
     iget-object v6, p0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
     move-wide v3, v7
 
     goto :goto_0
 
-    .line 856
+    .line 848
     :cond_2
     iget-object v5, p0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
@@ -768,8 +771,8 @@
     :goto_1
     if-nez v5, :cond_4
 
-    .line 866
-    invoke-static {}, Lc/d/b/k;->a()V
+    .line 858
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_4
     iget v3, v5, Lokio/Segment;->limit:I
@@ -786,7 +789,7 @@
 
     if-ltz v3, :cond_8
 
-    .line 867
+    .line 859
     iget v3, v5, Lokio/Segment;->limit:I
 
     iget v4, v5, Lokio/Segment;->pos:I
@@ -797,7 +800,7 @@
 
     add-long/2addr v1, v3
 
-    .line 868
+    .line 860
     iget-object v5, v5, Lokio/Segment;->next:Lokio/Segment;
 
     goto :goto_1
@@ -814,16 +817,16 @@
 
     if-nez v5, :cond_6
 
-    .line 875
-    invoke-static {}, Lc/d/b/k;->a()V
+    .line 867
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_6
     iget-object v5, v5, Lokio/Segment;->prev:Lokio/Segment;
 
     if-nez v5, :cond_7
 
-    .line 876
-    invoke-static {}, Lc/d/b/k;->a()V
+    .line 868
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_7
     iget v3, v5, Lokio/Segment;->limit:I
@@ -838,7 +841,7 @@
 
     goto :goto_2
 
-    .line 881
+    .line 873
     :cond_8
     iget-boolean v3, p0, Lokio/Buffer$UnsafeCursor;->readWrite:Z
 
@@ -846,60 +849,60 @@
 
     if-nez v5, :cond_9
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_9
     iget-boolean v3, v5, Lokio/Segment;->shared:Z
 
     if-eqz v3, :cond_c
 
-    .line 882
+    .line 874
     invoke-virtual {v5}, Lokio/Segment;->unsharedCopy()Lokio/Segment;
 
     move-result-object v3
 
-    .line 883
+    .line 875
     iget-object v4, v0, Lokio/Buffer;->head:Lokio/Segment;
 
     if-ne v4, v5, :cond_a
 
-    .line 884
+    .line 876
     iput-object v3, v0, Lokio/Buffer;->head:Lokio/Segment;
 
-    .line 886
+    .line 878
     :cond_a
     invoke-virtual {v5, v3}, Lokio/Segment;->push(Lokio/Segment;)Lokio/Segment;
 
     move-result-object v5
 
-    .line 887
+    .line 879
     iget-object v0, v5, Lokio/Segment;->prev:Lokio/Segment;
 
     if-nez v0, :cond_b
 
-    invoke-static {}, Lc/d/b/k;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_b
     invoke-virtual {v0}, Lokio/Segment;->pop()Lokio/Segment;
 
-    .line 891
+    .line 883
     :cond_c
     iput-object v5, p0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
-    .line 892
+    .line 884
     iput-wide p1, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
     if-nez v5, :cond_d
 
-    .line 893
-    invoke-static {}, Lc/d/b/k;->a()V
+    .line 885
+    invoke-static {}, Lkotlin/jvm/internal/r;->a()V
 
     :cond_d
     iget-object v0, v5, Lokio/Segment;->data:[B
 
     iput-object v0, p0, Lokio/Buffer$UnsafeCursor;->data:[B
 
-    .line 894
+    .line 886
     iget v0, v5, Lokio/Segment;->pos:I
 
     sub-long/2addr p1, v1
@@ -910,12 +913,12 @@
 
     iput v0, p0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 895
+    .line 887
     iget p1, v5, Lokio/Segment;->limit:I
 
     iput p1, p0, Lokio/Buffer$UnsafeCursor;->end:I
 
-    .line 896
+    .line 888
     iget p1, p0, Lokio/Buffer$UnsafeCursor;->end:I
 
     iget p2, p0, Lokio/Buffer$UnsafeCursor;->start:I
@@ -928,32 +931,32 @@
     :goto_3
     const/4 v0, 0x0
 
-    .line 834
+    .line 826
     move-object v2, v0
 
     check-cast v2, Lokio/Segment;
 
     iput-object v2, p0, Lokio/Buffer$UnsafeCursor;->segment:Lokio/Segment;
 
-    .line 835
+    .line 827
     iput-wide p1, p0, Lokio/Buffer$UnsafeCursor;->offset:J
 
-    .line 836
+    .line 828
     check-cast v0, [B
 
     iput-object v0, p0, Lokio/Buffer$UnsafeCursor;->data:[B
 
-    .line 837
+    .line 829
     iput v1, p0, Lokio/Buffer$UnsafeCursor;->start:I
 
-    .line 838
+    .line 830
     iput v1, p0, Lokio/Buffer$UnsafeCursor;->end:I
 
     return v1
 
-    .line 830
+    .line 822
     :cond_f
-    sget-object v1, Lc/d/b/o;->a:Lc/d/b/o;
+    sget-object v1, Lkotlin/jvm/internal/w;->a:Lkotlin/jvm/internal/w;
 
     const/4 v1, 0x2
 
@@ -993,9 +996,9 @@
 
     const-string p2, "java.lang.String.format(format, *args)"
 
-    invoke-static {p1, p2}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 829
+    .line 821
     new-instance p2, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-direct {p2, p1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
@@ -1004,7 +1007,7 @@
 
     throw p2
 
-    .line 827
+    .line 819
     :cond_10
     new-instance p1, Ljava/lang/IllegalStateException;
 

@@ -30,6 +30,9 @@
 .method public abstract getDeprecated()Z
 .end method
 
+.method public abstract getIdempotencyLevel()Lcom/google/protobuf/DescriptorProtos$MethodOptions$IdempotencyLevel;
+.end method
+
 .method public abstract getUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 .end method
 
@@ -63,4 +66,7 @@
 .end method
 
 .method public abstract hasDeprecated()Z
+.end method
+
+.method public abstract hasIdempotencyLevel()Z
 .end method

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_gravity="center_horizontal" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09013b" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070117" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070114" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070116" android:layout_marginBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070115"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <VideoView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090353" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070117" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070114" />
+    <androidx.appcompat.widget.AppCompatImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090189" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+</FrameLayout>

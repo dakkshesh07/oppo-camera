@@ -3,6 +3,11 @@
 .source "ActionBarContainer.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field a:Landroid/graphics/drawable/Drawable;
 
@@ -49,7 +54,7 @@
     invoke-direct {v0, p0}, Landroidx/appcompat/widget/b;-><init>(Landroidx/appcompat/widget/ActionBarContainer;)V
 
     .line 63
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 65
     sget-object v0, Landroidx/appcompat/R$styleable;->ActionBar:[I
@@ -1131,7 +1136,7 @@
     return-void
 .end method
 
-.method public setTabContainer(Landroidx/appcompat/widget/al;)V
+.method public setTabContainer(Landroidx/appcompat/widget/ak;)V
     .locals 2
 
     .line 229
@@ -1152,7 +1157,7 @@
     invoke-virtual {p0, p1}, Landroidx/appcompat/widget/ActionBarContainer;->addView(Landroid/view/View;)V
 
     .line 235
-    invoke-virtual {p1}, Landroidx/appcompat/widget/al;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ak;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
@@ -1169,7 +1174,7 @@
     const/4 v0, 0x0
 
     .line 238
-    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/al;->setAllowCollapse(Z)V
+    invoke-virtual {p1, v0}, Landroidx/appcompat/widget/ak;->setAllowCollapse(Z)V
 
     :cond_1
     return-void

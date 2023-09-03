@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100065">", "</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100424">read SD card</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100425">obtain phone IMEI</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100427">Cancel</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100428">Continue</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100429">There are problems with the security certificate for this site.</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10042a">Security warning</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10042b">Exit</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10042c">\"%1$s\" requires the following permissions during use: %2$s.</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10042d">Settings</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10042e">\"%1$s\"</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10049e">Loading...</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f10049f">Help and Feedback</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f1004c3">Turn on \"Mobile Data\" or use Wi-Fi to access</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f1004f8">No network connection</string>
+    <string name="APKTOOL_DUPLICATE_string_0x7f100581">Help &amp; Feedback would like to connect to network during use. Do you allow?</string>
+</resources>

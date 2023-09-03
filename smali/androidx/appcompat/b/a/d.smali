@@ -10,6 +10,9 @@
     }
 .end annotation
 
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/b/a/d$a;
@@ -144,7 +147,7 @@
     :cond_3
     sget-object v3, Landroidx/appcompat/resources/R$styleable;->StateListDrawableItem:[I
 
-    invoke-static {p2, p5, p4, v3}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p2, p5, p4, v3}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v3
 
@@ -162,11 +165,11 @@
     if-lez v6, :cond_4
 
     .line 200
-    invoke-static {}, Landroidx/appcompat/widget/ai;->a()Landroidx/appcompat/widget/ai;
+    invoke-static {}, Landroidx/appcompat/widget/ah;->a()Landroidx/appcompat/widget/ah;
 
     move-result-object v4
 
-    invoke-virtual {v4, p1, v6}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v4, p1, v6}, Landroidx/appcompat/widget/ah;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v4
 
@@ -473,7 +476,7 @@
     .line 143
     sget-object v0, Landroidx/appcompat/resources/R$styleable;->StateListDrawable:[I
 
-    invoke-static {p2, p5, p4, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p2, p5, p4, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

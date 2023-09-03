@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/c/c/a;Lcom/airbnb/lottie/c/b/o;)V
+.method public constructor <init>(Lcom/airbnb/lottie/f;Lcom/airbnb/lottie/model/layer/a;Lcom/airbnb/lottie/model/content/k;)V
     .locals 1
 
     .line 24
@@ -54,14 +54,14 @@
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/q;->g:Lcom/airbnb/lottie/a/a/b;
 
     .line 25
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/o;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/k;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/airbnb/lottie/a/a/q;->b:Ljava/lang/String;
 
     .line 26
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/o;->c()Z
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/k;->c()Z
 
     move-result v0
 
@@ -71,11 +71,11 @@
     iput-object p1, p0, Lcom/airbnb/lottie/a/a/q;->d:Lcom/airbnb/lottie/f;
 
     .line 28
-    invoke-virtual {p3}, Lcom/airbnb/lottie/c/b/o;->b()Lcom/airbnb/lottie/c/a/h;
+    invoke-virtual {p3}, Lcom/airbnb/lottie/model/content/k;->b()Lcom/airbnb/lottie/model/a/h;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/c/a/h;->a()Lcom/airbnb/lottie/a/b/a;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/model/a/h;->a()Lcom/airbnb/lottie/a/b/a;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
     .line 29
     iget-object p1, p0, Lcom/airbnb/lottie/a/a/q;->e:Lcom/airbnb/lottie/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/c/c/a;->a(Lcom/airbnb/lottie/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/airbnb/lottie/model/layer/a;->a(Lcom/airbnb/lottie/a/b/a;)V
 
     .line 30
     iget-object p1, p0, Lcom/airbnb/lottie/a/a/q;->e:Lcom/airbnb/lottie/a/b/a;
@@ -160,11 +160,11 @@
     check-cast v0, Lcom/airbnb/lottie/a/a/s;
 
     .line 46
-    invoke-virtual {v0}, Lcom/airbnb/lottie/a/a/s;->c()Lcom/airbnb/lottie/c/b/q$a;
+    invoke-virtual {v0}, Lcom/airbnb/lottie/a/a/s;->c()Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     move-result-object v1
 
-    sget-object v2, Lcom/airbnb/lottie/c/b/q$a;->SIMULTANEOUSLY:Lcom/airbnb/lottie/c/b/q$a;
+    sget-object v2, Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;->SIMULTANEOUSLY:Lcom/airbnb/lottie/model/content/ShapeTrimPath$Type;
 
     if-ne v1, v2, :cond_0
 

@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)V
     .locals 2
 
-    .line 432
+    .line 421
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingInterpolator;->this$0:Lcom/oppo/camera/ui/CommonComponent/ScaleBar;
 
     const/4 p1, 0x0
@@ -31,7 +31,7 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 433
+    .line 422
     invoke-direct {p0, p1, p1, v0, v1}, Landroid/view/animation/PathInterpolator;-><init>(FFFF)V
 
     return-void

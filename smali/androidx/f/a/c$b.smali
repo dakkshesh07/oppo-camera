@@ -27,22 +27,27 @@
 
 .field public final c:Landroidx/f/a/c$a;
 
+.field public final d:Z
+
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/f/a/c$a;)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroidx/f/a/c$a;Z)V
     .locals 0
 
-    .line 319
+    .line 337
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 320
+    .line 338
     iput-object p1, p0, Landroidx/f/a/c$b;->a:Landroid/content/Context;
 
-    .line 321
+    .line 339
     iput-object p2, p0, Landroidx/f/a/c$b;->b:Ljava/lang/String;
 
-    .line 322
+    .line 340
     iput-object p3, p0, Landroidx/f/a/c$b;->c:Landroidx/f/a/c$a;
+
+    .line 341
+    iput-boolean p4, p0, Landroidx/f/a/c$b;->d:Z
 
     return-void
 .end method
@@ -50,7 +55,7 @@
 .method public static a(Landroid/content/Context;)Landroidx/f/a/c$b$a;
     .locals 1
 
-    .line 331
+    .line 351
     new-instance v0, Landroidx/f/a/c$b$a;
 
     invoke-direct {v0, p0}, Landroidx/f/a/c$b$a;-><init>(Landroid/content/Context;)V

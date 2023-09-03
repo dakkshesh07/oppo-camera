@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Landroidx/core/d/b;->a(Landroid/content/Context;Landroidx/core/d/a;Landroidx/core/content/a/f$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
+    value = Landroidx/core/d/b;->a(Landroid/content/Context;Landroidx/core/d/a;Landroidx/core/a/a/f$a;Landroid/os/Handler;ZII)Landroid/graphics/Typeface;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -54,11 +54,11 @@
 
     .line 308
     :try_start_0
-    sget-object v1, Landroidx/core/d/b;->c:Landroidx/b/g;
+    sget-object v1, Landroidx/core/d/b;->c:Landroidx/collection/SimpleArrayMap;
 
     iget-object v2, p0, Landroidx/core/d/b$3;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -73,11 +73,11 @@
 
     .line 312
     :cond_0
-    sget-object v2, Landroidx/core/d/b;->c:Landroidx/b/g;
+    sget-object v2, Landroidx/core/d/b;->c:Landroidx/collection/SimpleArrayMap;
 
     iget-object v3, p0, Landroidx/core/d/b$3;->a:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Landroidx/b/g;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 313
     monitor-exit v0

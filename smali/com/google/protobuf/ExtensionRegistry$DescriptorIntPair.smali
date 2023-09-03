@@ -24,13 +24,13 @@
 .method constructor <init>(Lcom/google/protobuf/Descriptors$Descriptor;I)V
     .locals 0
 
-    .line 379
+    .line 347
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 380
+    .line 348
     iput-object p1, p0, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 381
+    .line 349
     iput p2, p0, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;->number:I
 
     return-void
@@ -39,7 +39,7 @@
 .method static synthetic access$000(Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;)Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 0
 
-    .line 375
+    .line 343
     iget-object p0, p0, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     return-object p0
@@ -50,7 +50,7 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .line 390
+    .line 359
     instance-of v0, p1, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;
 
     const/4 v1, 0x0
@@ -59,11 +59,11 @@
 
     return v1
 
-    .line 393
+    .line 362
     :cond_0
     check-cast p1, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;
 
-    .line 394
+    .line 363
     iget-object v0, p0, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     iget-object v2, p1, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
@@ -85,7 +85,7 @@
 .method public hashCode()I
     .locals 2
 
-    .line 386
+    .line 354
     iget-object v0, p0, Lcom/google/protobuf/ExtensionRegistry$DescriptorIntPair;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

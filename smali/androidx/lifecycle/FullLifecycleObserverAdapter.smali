@@ -3,40 +3,40 @@
 .source "FullLifecycleObserverAdapter.java"
 
 # interfaces
-.implements Landroidx/lifecycle/f;
+.implements Landroidx/lifecycle/e;
 
 
 # instance fields
 .field private final a:Landroidx/lifecycle/b;
 
-.field private final b:Landroidx/lifecycle/f;
+.field private final b:Landroidx/lifecycle/e;
 
 
 # direct methods
-.method constructor <init>(Landroidx/lifecycle/b;Landroidx/lifecycle/f;)V
+.method constructor <init>(Landroidx/lifecycle/b;Landroidx/lifecycle/e;)V
     .locals 0
 
-    .line 25
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 28
     iput-object p1, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    .line 27
-    iput-object p2, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Landroidx/lifecycle/f;
+    .line 29
+    iput-object p2, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Landroidx/lifecycle/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+.method public a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
     .locals 2
 
-    .line 32
+    .line 34
     sget-object v0, Landroidx/lifecycle/FullLifecycleObserverAdapter$1;->a:[I
 
-    invoke-virtual {p2}, Landroidx/lifecycle/e$a;->ordinal()I
+    invoke-virtual {p2}, Landroidx/lifecycle/Lifecycle$Event;->ordinal()I
 
     move-result v1
 
@@ -46,7 +46,7 @@
 
     goto :goto_0
 
-    .line 52
+    .line 54
     :pswitch_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -56,60 +56,60 @@
 
     throw p1
 
-    .line 49
+    .line 51
     :pswitch_1
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->f(Landroidx/lifecycle/h;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->f(Landroidx/lifecycle/g;)V
 
     goto :goto_0
 
-    .line 46
+    .line 48
     :pswitch_2
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->e(Landroidx/lifecycle/h;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->e(Landroidx/lifecycle/g;)V
 
     goto :goto_0
 
-    .line 43
+    .line 45
     :pswitch_3
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->d(Landroidx/lifecycle/h;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->d(Landroidx/lifecycle/g;)V
 
     goto :goto_0
 
-    .line 40
+    .line 42
     :pswitch_4
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->c(Landroidx/lifecycle/h;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->c(Landroidx/lifecycle/g;)V
 
     goto :goto_0
 
-    .line 37
+    .line 39
     :pswitch_5
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->b(Landroidx/lifecycle/h;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->b(Landroidx/lifecycle/g;)V
 
     goto :goto_0
 
-    .line 34
+    .line 36
     :pswitch_6
     iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->a:Landroidx/lifecycle/b;
 
-    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->a(Landroidx/lifecycle/h;)V
+    invoke-interface {v0, p1}, Landroidx/lifecycle/b;->a(Landroidx/lifecycle/g;)V
 
-    .line 54
+    .line 56
     :goto_0
-    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Landroidx/lifecycle/f;
+    iget-object v0, p0, Landroidx/lifecycle/FullLifecycleObserverAdapter;->b:Landroidx/lifecycle/e;
 
     if-eqz v0, :cond_0
 
-    .line 55
-    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/f;->a(Landroidx/lifecycle/h;Landroidx/lifecycle/e$a;)V
+    .line 57
+    invoke-interface {v0, p1, p2}, Landroidx/lifecycle/e;->a(Landroidx/lifecycle/g;Landroidx/lifecycle/Lifecycle$Event;)V
 
     :cond_0
     return-void

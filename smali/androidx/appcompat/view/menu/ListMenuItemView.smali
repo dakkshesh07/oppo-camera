@@ -7,6 +7,11 @@
 .implements Landroidx/appcompat/view/menu/o$a;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private a:Landroidx/appcompat/view/menu/j;
 
@@ -70,14 +75,14 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, p2, v1, p3, v2}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {v0, p2, v1, p3, v2}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object p2
 
     .line 83
     sget p3, Landroidx/appcompat/R$styleable;->MenuView_android_itemBackground:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
@@ -88,7 +93,7 @@
 
     const/4 v0, -0x1
 
-    invoke-virtual {p2, p3, v0}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p2, p3, v0}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p3
 
@@ -97,7 +102,7 @@
     .line 86
     sget p3, Landroidx/appcompat/R$styleable;->MenuView_preserveIconSpacing:I
 
-    invoke-virtual {p2, p3, v2}, Landroidx/appcompat/widget/as;->a(IZ)Z
+    invoke-virtual {p2, p3, v2}, Landroidx/appcompat/widget/ar;->a(IZ)Z
 
     move-result p3
 
@@ -109,7 +114,7 @@
     .line 89
     sget p3, Landroidx/appcompat/R$styleable;->MenuView_subMenuArrow:I
 
-    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p2, p3}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
@@ -145,7 +150,7 @@
     iput-boolean p3, p0, Landroidx/appcompat/view/menu/ListMenuItemView;->o:Z
 
     .line 96
-    invoke-virtual {p2}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p2}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 97
     invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
@@ -526,7 +531,7 @@
     .line 104
     iget-object v0, p0, Landroidx/appcompat/view/menu/ListMenuItemView;->j:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 106
     sget v0, Landroidx/appcompat/R$id;->title:I

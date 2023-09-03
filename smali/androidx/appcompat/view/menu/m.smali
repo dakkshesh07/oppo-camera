@@ -3,6 +3,11 @@
 .source "MenuPopupHelper.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private final a:Landroid/content/Context;
 
@@ -111,12 +116,12 @@
     iget-object p4, p0, Landroidx/appcompat/view/menu/m;->f:Landroid/view/View;
 
     .line 271
-    invoke-static {p4}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p4}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p4
 
     .line 270
-    invoke-static {p3, p4}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p3, p4}, Landroidx/core/f/d;->a(II)I
 
     move-result p3
 

@@ -68,7 +68,7 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .line 568
+    .line 587
     new-instance v0, Lcom/google/protobuf/Field$Cardinality;
 
     const/4 v1, 0x0
@@ -79,7 +79,7 @@
 
     sput-object v0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_UNKNOWN:Lcom/google/protobuf/Field$Cardinality;
 
-    .line 576
+    .line 595
     new-instance v0, Lcom/google/protobuf/Field$Cardinality;
 
     const/4 v2, 0x1
@@ -90,7 +90,7 @@
 
     sput-object v0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_OPTIONAL:Lcom/google/protobuf/Field$Cardinality;
 
-    .line 584
+    .line 603
     new-instance v0, Lcom/google/protobuf/Field$Cardinality;
 
     const/4 v3, 0x2
@@ -101,7 +101,7 @@
 
     sput-object v0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_REQUIRED:Lcom/google/protobuf/Field$Cardinality;
 
-    .line 592
+    .line 611
     new-instance v0, Lcom/google/protobuf/Field$Cardinality;
 
     const/4 v4, 0x3
@@ -112,7 +112,7 @@
 
     sput-object v0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_REPEATED:Lcom/google/protobuf/Field$Cardinality;
 
-    .line 593
+    .line 612
     new-instance v0, Lcom/google/protobuf/Field$Cardinality;
 
     const/4 v5, 0x4
@@ -127,7 +127,7 @@
 
     const/4 v0, 0x5
 
-    .line 559
+    .line 578
     new-array v0, v0, [Lcom/google/protobuf/Field$Cardinality;
 
     sget-object v6, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_UNKNOWN:Lcom/google/protobuf/Field$Cardinality;
@@ -152,14 +152,14 @@
 
     sput-object v0, Lcom/google/protobuf/Field$Cardinality;->$VALUES:[Lcom/google/protobuf/Field$Cardinality;
 
-    .line 661
+    .line 686
     new-instance v0, Lcom/google/protobuf/Field$Cardinality$1;
 
     invoke-direct {v0}, Lcom/google/protobuf/Field$Cardinality$1;-><init>()V
 
     sput-object v0, Lcom/google/protobuf/Field$Cardinality;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
-    .line 681
+    .line 706
     invoke-static {}, Lcom/google/protobuf/Field$Cardinality;->values()[Lcom/google/protobuf/Field$Cardinality;
 
     move-result-object v0
@@ -177,10 +177,10 @@
         }
     .end annotation
 
-    .line 697
+    .line 722
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 698
+    .line 723
     iput p3, p0, Lcom/google/protobuf/Field$Cardinality;->value:I
 
     return-void
@@ -207,25 +207,25 @@
 
     return-object p0
 
-    .line 651
+    .line 676
     :cond_0
     sget-object p0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_REPEATED:Lcom/google/protobuf/Field$Cardinality;
 
     return-object p0
 
-    .line 650
+    .line 675
     :cond_1
     sget-object p0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_REQUIRED:Lcom/google/protobuf/Field$Cardinality;
 
     return-object p0
 
-    .line 649
+    .line 674
     :cond_2
     sget-object p0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_OPTIONAL:Lcom/google/protobuf/Field$Cardinality;
 
     return-object p0
 
-    .line 648
+    .line 673
     :cond_3
     sget-object p0, Lcom/google/protobuf/Field$Cardinality;->CARDINALITY_UNKNOWN:Lcom/google/protobuf/Field$Cardinality;
 
@@ -235,7 +235,7 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 2
 
-    .line 678
+    .line 703
     invoke-static {}, Lcom/google/protobuf/Field;->getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
@@ -266,7 +266,7 @@
         }
     .end annotation
 
-    .line 658
+    .line 683
     sget-object v0, Lcom/google/protobuf/Field$Cardinality;->internalValueMap:Lcom/google/protobuf/Internal$EnumLiteMap;
 
     return-object v0
@@ -277,7 +277,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .line 643
+    .line 664
     invoke-static {p0}, Lcom/google/protobuf/Field$Cardinality;->forNumber(I)Lcom/google/protobuf/Field$Cardinality;
 
     move-result-object p0
@@ -288,7 +288,7 @@
 .method public static valueOf(Lcom/google/protobuf/Descriptors$EnumValueDescriptor;)Lcom/google/protobuf/Field$Cardinality;
     .locals 2
 
-    .line 685
+    .line 710
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -299,7 +299,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 689
+    .line 714
     invoke-virtual {p0}, Lcom/google/protobuf/Descriptors$EnumValueDescriptor;->getIndex()I
 
     move-result v0
@@ -308,12 +308,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 690
+    .line 715
     sget-object p0, Lcom/google/protobuf/Field$Cardinality;->UNRECOGNIZED:Lcom/google/protobuf/Field$Cardinality;
 
     return-object p0
 
-    .line 692
+    .line 717
     :cond_0
     sget-object v0, Lcom/google/protobuf/Field$Cardinality;->VALUES:[Lcom/google/protobuf/Field$Cardinality;
 
@@ -325,7 +325,7 @@
 
     return-object p0
 
-    .line 686
+    .line 711
     :cond_1
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -339,7 +339,7 @@
 .method public static valueOf(Ljava/lang/String;)Lcom/google/protobuf/Field$Cardinality;
     .locals 1
 
-    .line 559
+    .line 578
     const-class v0, Lcom/google/protobuf/Field$Cardinality;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -354,7 +354,7 @@
 .method public static values()[Lcom/google/protobuf/Field$Cardinality;
     .locals 1
 
-    .line 559
+    .line 578
     sget-object v0, Lcom/google/protobuf/Field$Cardinality;->$VALUES:[Lcom/google/protobuf/Field$Cardinality;
 
     invoke-virtual {v0}, [Lcom/google/protobuf/Field$Cardinality;->clone()Ljava/lang/Object;
@@ -371,7 +371,7 @@
 .method public final getDescriptorForType()Lcom/google/protobuf/Descriptors$EnumDescriptor;
     .locals 1
 
-    .line 674
+    .line 699
     invoke-static {}, Lcom/google/protobuf/Field$Cardinality;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0
@@ -382,17 +382,17 @@
 .method public final getNumber()I
     .locals 2
 
-    .line 631
+    .line 650
     sget-object v0, Lcom/google/protobuf/Field$Cardinality;->UNRECOGNIZED:Lcom/google/protobuf/Field$Cardinality;
 
     if-eq p0, v0, :cond_0
 
-    .line 635
+    .line 654
     iget v0, p0, Lcom/google/protobuf/Field$Cardinality;->value:I
 
     return v0
 
-    .line 632
+    .line 651
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -406,7 +406,7 @@
 .method public final getValueDescriptor()Lcom/google/protobuf/Descriptors$EnumValueDescriptor;
     .locals 2
 
-    .line 670
+    .line 695
     invoke-static {}, Lcom/google/protobuf/Field$Cardinality;->getDescriptor()Lcom/google/protobuf/Descriptors$EnumDescriptor;
 
     move-result-object v0

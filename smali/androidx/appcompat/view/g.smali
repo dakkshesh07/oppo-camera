@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroidx/appcompat/view/g$b;,
@@ -285,14 +288,14 @@
     if-nez v6, :cond_d
 
     .line 203
-    iget-object v6, v0, Landroidx/appcompat/view/g$b;->a:Landroidx/core/g/b;
+    iget-object v6, v0, Landroidx/appcompat/view/g$b;->a:Landroidx/core/f/b;
 
     if-eqz v6, :cond_6
 
-    iget-object v6, v0, Landroidx/appcompat/view/g$b;->a:Landroidx/core/g/b;
+    iget-object v6, v0, Landroidx/appcompat/view/g$b;->a:Landroidx/core/f/b;
 
     .line 204
-    invoke-virtual {v6}, Landroidx/core/g/b;->c()Z
+    invoke-virtual {v6}, Landroidx/core/f/b;->c()Z
 
     move-result v6
 
@@ -435,7 +438,7 @@
     const-string v0, "Error inflating menu XML"
 
     .line 119
-    instance-of v1, p2, Landroidx/core/a/a/a;
+    instance-of v1, p2, Landroidx/core/b/a/a;
 
     if-nez v1, :cond_0
 

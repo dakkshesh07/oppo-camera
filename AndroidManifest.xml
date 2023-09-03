@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.oppo.camera" platformBuildVersionCode="30" platformBuildVersionName="11">
     <permission android:name="com.coloros.camera.sandbox.permission.SANDBOX_PROVIDER" android:protectionLevel="signatureOrSystem"/>
-    <permission android:name="com.oplus.camera.sticker.thumbnail.service" android:protectionLevel="signatureOrSystem"/>
     <original-package android:name="com.oppo.camera"/>
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="mediatek.permission.ACCESS_APU_SYS"/>
     <uses-permission android:name="android.permission.DEVICE_POWER"/>
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.SYSTEM_CAMERA"/>
     <uses-permission android:name="android.permission.MANAGE_APP_OPS_MODES"/>
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
@@ -21,9 +21,9 @@
     <uses-permission android:name="oppo.permission.APP_SETTING"/>
     <uses-permission android:name="android.permission.CONTROL_KEYGUARD"/>
     <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE"/>
+    <uses-permission android:name="oplus.permission.OPLUS_COMPONENT_SAFE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_LOGS"/>
@@ -36,18 +36,59 @@
     <uses-permission android:name="android.permission.STATUS_BAR_SERVICE"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="heytap.speechassist.permission.FLOAT_WINDOW_STATUS"/>
+    <uses-permission android:name="com.oppo.permission.safe.SECURITY"/>
+    <uses-permission android:name="com.oplus.permission.safe.SECURITY"/>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="com.coloros.videoeditor.camera.permission.TEMPLATE"/>
+    <uses-permission android:name="com.oppo.permission.safe.SAU"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="com.oppo.wmanager.ENABLE_NOTIFICATION"/>
+    <uses-permission android:name="com.oppo.WATCH_APP_TYPE.Companion"/>
+    <uses-permission android:name="com.heytap.accessory.permission.ACCESSORY_FRAMEWORK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="com.oplus.permission.safe.PHONE"/>
-    <uses-permission android:name="com.oplus.camera.sticker.thumbnail.service"/>
     <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="false"/>
-    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@drawable/ic_launcher_camera" android:label="@string/camera_app_name" android:largeHeap="true" android:logo="@drawable/ic_launcher_camera" android:maxAspectRatio="2.2" android:name="com.oppo.camera.MyApplication" android:supportsRtl="true">
-        <meta-data android:name="versionCommit" android:value="dc87538"/>
-        <meta-data android:name="versionDate" android:value="220331"/>
+    <queries>
+        <provider android:authorities="com.oplus.statistics.provider"/>
+        <package android:name="com.heytap.usercenter"/>
+        <package android:name="com.heytap.vip"/>
+        <package android:name="com.oneplus.account"/>
+        <package android:name="com.oppo.usercenter"/>
+        <package android:name="com.oplus.vip"/>
+        <package android:name="com.heytap.htms"/>
+    </queries>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:forceQueryable="true" android:icon="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803de" android:label="@string/APKTOOL_DUPLICATE_string_0x7f1000a0" android:largeHeap="true" android:logo="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803de" android:maxAspectRatio="2.2" android:name="com.oppo.camera.MyApplication" android:supportsRtl="true" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.oplus.ocs.oaf.AUTH_CODE" android:value="ATBFAiBJoMXXG7RdnG+9yUSVeISFLEvaRTISeF05BSMCh8pPqwIhAJ7EWLWeRsjosChHIHP6Kob3seUPm8UFrePG+BzQWA0HaO8JWOAAAAA="/>
+        <meta-data android:name="AccessoryServicesLocation" android:value="/res/xml/accessoryservices.xml"/>
+        <receiver android:name="com.heytap.accessory.platform.RegisterUponInstallReceiver" android:permission="com.heytap.accessory.permission.NOTIFICATION">
+            <intent-filter>
+                <action android:name="com.heytap.accessory.action.REGISTER_AGENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.heytap.accessory.platform.ServiceConnectionIndicationReceiver" android:permission="com.heytap.accessory.permission.NOTIFICATION">
+            <intent-filter>
+                <action android:name="com.heytap.accessory.action.SERVICE_CONNECTION_REQUESTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.heytap.accessory.stream.StreamConnReceiver" android:permission="com.heytap.accessory.permission.NOTIFICATION">
+            <intent-filter>
+                <action android:name="com.heytap.accessory.streamconnection"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.oppo.camera.watch.WatchAgentService" android:permission="oppo.permission.OPPO_COMPONENT_SAFE"/>
+        <meta-data android:name="versionCommit" android:value="95ff153"/>
+        <meta-data android:name="versionDate" android:value="210928"/>
         <meta-data android:name="AppCode" android:value="20009"/>
         <meta-data android:name="upgrade_product_code" android:value="20194"/>
         <meta-data android:name="color_material_enable" android:value="true"/>
-        <uses-library android:name="coloros.support" android:required="false"/>
-        <activity android:clearTaskOnLaunch="true" android:configChanges="density|fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenSize|smallestScreenSize|uiMode" android:label="@string/camera_app_name" android:launchMode="singleTop" android:name="com.oppo.camera.Camera" android:resizeableActivity="false" android:screenOrientation="portrait" android:showWhenLocked="true" android:taskAffinity="com.oppo.camera" android:theme="@style/ThemeCamera" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        <meta-data android:name="isSupportHeadsetPhoto" android:value="true"/>
+        <meta-data android:name="OppoPermissionKey" android:value="@string/APKTOOL_DUPLICATE_string_0x7f100501"/>
+        <meta-data android:name="AppPlatformKey" android:value="@string/APKTOOL_DUPLICATE_string_0x7f10001c"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:clearTaskOnLaunch="true" android:configChanges="density|fontScale|keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize|smallestScreenSize|uiMode" android:label="@string/APKTOOL_DUPLICATE_string_0x7f1000a0" android:launchMode="singleTop" android:name="com.oppo.camera.Camera" android:resizeableActivity="false" android:screenOrientation="portrait" android:showWhenLocked="true" android:taskAffinity="com.oppo.camera" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f1102f4" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -70,41 +111,40 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
             <intent-filter>
+                <action android:name="com.oplus.action.CAMERA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
                 <action android:name="com.oppo.action.VIDEO_CAMERA"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="com.oppo.camera.action.fastcapture.sandbox"/>
             </intent-filter>
-            <meta-data android:name="android.app.shortcuts" android:resource="@xml/shortcuts"/>
-            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/start_fake_layout"/>
+            <meta-data android:name="android.app.shortcuts" android:resource="@xml/APKTOOL_DUPLICATE_xml_0x7f13000e"/>
+            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/APKTOOL_DUPLICATE_layout_0x7f0c0111"/>
         </activity>
-        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/camera_setting_advanced_setting" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraSubSettingActivity" android:screenOrientation="portrait" android:theme="@style/AppNoTitleTheme.PreferenceFragment" android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="oppo.intent.action.APP_SUB_SETTING"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/camera_slogan_title" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraPhotoSloganSettingActivity" android:screenOrientation="portrait" android:theme="@style/AppNoTitleTheme.PreferenceFragment" android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="oppo.intent.action.APP_PHOTO_SLOGAN_SETTING"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/camera_codec_title" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraCodeSettingActivity" android:screenOrientation="portrait" android:theme="@style/AppNoTitleTheme.PreferenceFragment" android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="oppo.intent.action.APP_CODE_SETTING"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize|uiMode" android:label="@string/camera_app_name" android:launchMode="singleTop" android:name="com.oppo.camera.CameraImageActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:taskAffinity="com.oppo.camera" android:theme="@style/ThemeCamera" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboard|keyboardHidden|mcc|mnc|navigation|orientation|screenSize|uiMode" android:label="@string/APKTOOL_DUPLICATE_string_0x7f1000a0" android:launchMode="singleTop" android:name="com.oppo.camera.CameraImageActivity" android:resizeableActivity="false" android:screenOrientation="portrait" android:taskAffinity="com.oppo.camera" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f1102f4" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.media.action.STILL_IMAGE_CAMERA"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.VOICE"/>
             </intent-filter>
+            <meta-data android:name="com.android.keyguard.layout" android:resource="@layout/APKTOOL_DUPLICATE_layout_0x7f0c0111"/>
         </activity>
-        <activity android:exported="false" android:icon="@drawable/ic_camera_setting" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraSettingActivity" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:resizeableActivity="true" android:screenOrientation="portrait" android:showWhenLocked="true" android:theme="@style/AppNoTitleTheme.PreferenceFragment">
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/APKTOOL_DUPLICATE_string_0x7f10029f" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraSubSettingActivity" android:screenOrientation="portrait" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f11001a" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="oppo.intent.action.APP_SUB_SETTING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/APKTOOL_DUPLICATE_string_0x7f1000da" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraCodeSettingActivity" android:screenOrientation="portrait" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f11001a" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="oppo.intent.action.APP_CODE_SETTING"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="false" android:icon="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803d4" android:launchMode="singleTop" android:name="com.oppo.camera.ui.menu.setting.CameraSettingActivity" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:resizeableActivity="true" android:screenOrientation="portrait" android:showWhenLocked="true" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f11001a">
             <intent-filter>
                 <action android:name="oppo.intent.action.APP_SETTINGS"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -115,30 +155,18 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.APP_PRIORITY" android:value="30010"/>
         </activity>
-        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/camera_slogan_title" android:name="com.oppo.camera.ui.menu.setting.CameraSloganSettingActivity" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:showWhenLocked="true" android:theme="@style/AppNoTitleTheme.PreferenceFragment" android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="oppo.intent.action.APP_SLOGAN_SETTING"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity android:enabled="true" android:excludeFromRecents="true" android:exported="false" android:label="@string/camera_setting_video_ratio" android:name="com.oppo.camera.ui.menu.setting.CameraVideoRatioSettingActivity" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:showWhenLocked="true" android:theme="@style/AppNoTitleTheme.PreferenceFragment">
-            <intent-filter>
-                <action android:name="oppo.intent.action.APP_VIDEO_RATIO_SETTING"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
         <receiver android:exported="false" android:name="com.oppo.camera.CameraButtonIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.CAMERA_BUTTON"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="com.oppo.camera.update.UpdateReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+        <receiver android:name="com.oppo.camera.tuningupgrade.TuningParameterUpgradeReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
             <intent-filter>
-                <action android:name="oppo.intent.action.ROM_UPDATE_CONFIG_SUCCESS"/>
-                <action android:name="oppo.intent.action.OPPO_OTA_UPDATE_SUCCESSED"/>
+                <action android:name="com.oplusos.sau.DATARES_UPDATE"/>
+                <action android:name="com.coloros.sau.DATARES_UPDATE"/>
             </intent-filter>
         </receiver>
-        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:icon="@drawable/ic_launcher_videocamera" android:label="@string/camera_video_name" android:launchMode="singleTop" android:name="com.oppo.camera.VideoCamera" android:screenOrientation="portrait" android:taskAffinity="com.oppo.camera" android:theme="@style/ThemeCamera" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
+        <activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:icon="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803df" android:label="@string/APKTOOL_DUPLICATE_string_0x7f1003ed" android:launchMode="singleTop" android:name="com.oppo.camera.VideoCamera" android:screenOrientation="portrait" android:taskAffinity="com.oppo.camera" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f1102f4" android:visibleToInstantApps="true" android:windowSoftInputMode="stateAlwaysHidden|adjustPan">
             <intent-filter>
                 <action android:name="android.media.action.VIDEO_CAMERA"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -150,22 +178,42 @@
         </activity>
         <receiver android:name="com.oppo.camera.DebugBroadcastReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
             <intent-filter>
+                <action android:name="com.oplus.engineermode.EngineerModeMain"/>
                 <action android:name="com.oppo.engineermode.EngineerModeMain"/>
             </intent-filter>
         </receiver>
-        <service android:enabled="true" android:exported="false" android:name="com.oppo.camera.Ipa.ImageProcessService" android:permission="oppo.permission.OPPO_COMPONENT_SAFE"/>
+        <service android:enabled="true" android:exported="false" android:name="com.oppo.camera.aps.service.ApsService" android:permission="oppo.permission.OPPO_COMPONENT_SAFE"/>
         <provider android:authorities="com.oppo.camera.sticker.db.provider" android:exported="false" android:name="com.oppo.camera.sticker.provider.StickerProvider" android:permission="oppo.permission.OPPO_COMPONENT_SAFE"/>
         <service android:exported="false" android:name="com.oppo.camera.sticker.download.thumbnail.ThumbDownloadService" android:permission="oppo.permission.OPPO_COMPONENT_SAFE"/>
+        <service android:exported="false" android:name="com.oppo.camera.tuningupgrade.TuningParameterUpgradeService" android:permission="oppo.permission.OPPO_COMPONENT_SAFE"/>
         <provider android:authorities="com.oppo.camera.providers.sticker.file.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.oppo.camera.sticker.provider.FileProvider" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_file_paths"/>
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/APKTOOL_DUPLICATE_xml_0x7f13000c"/>
         </provider>
         <provider android:authorities="com.oppo.camera.entry" android:exported="true" android:name="com.oppo.camera.entry.EntryProvider"/>
-        <provider android:authorities="com.oppo.camera.gallery.cache.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_gallery_file_paths"/>
+        <provider android:authorities="com.oppo.camera.gallery.cache.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.oppo.camera.GalleryCacheFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/APKTOOL_DUPLICATE_xml_0x7f13000d"/>
         </provider>
         <provider android:authorities="com.oppo.camera.gallery.cache.provider" android:exported="true" android:name="com.oppo.camera.util.storage.SandBoxContentProvider" android:permission="com.coloros.camera.sandbox.permission.SANDBOX_PROVIDER"/>
+        <meta-data android:name="SDK_MODULE_ACCOUNT_BIZ_NO" android:value="1000002"/>
+        <meta-data android:name="ACCOUNT_NEED_PRESTART_APP" android:value="1"/>
+        <provider android:authorities="com.oppo.camera.UCAccountSDKInitProvider" android:enabled="true" android:exported="false" android:multiprocess="true" android:name="com.heytap.usercenter.accountsdk.utils.UCAccountSDKInitProvider"/>
+        <receiver android:exported="false" android:name="com.heytap.usercenter.accountsdk.utils.app.UserCenterOperateReceiver">
+            <intent-filter>
+                <action android:name="com.usercenter.action.receiver.SUPPORT_LOGIN"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.oppo.camera.MspFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="com.heytap.msp.sdk.MspFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/APKTOOL_DUPLICATE_xml_0x7f13000b"/>
+        </provider>
         <meta-data android:name="com.oplus.support:api-adapter" android:value="11.7.0"/>
-        <meta-data android:name="dependencies:implementation:com.oplus.appprovider:settings" android:value="1.0.2"/>
+        <meta-data android:name="dependencies:implementation:com.oplus.appprovider:settings" android:value="2.0.2"/>
+        <meta-data android:name="sau_aar_version_code" android:value="2104"/>
+        <meta-data android:name="sau_aar_version_name" android:value="2.1.4"/>
+        <activity android:configChanges="fontScale|keyboardHidden|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:launchMode="singleTop" android:name="com.customer.feedback.sdk.activity.FeedbackActivity" android:theme="@style/APKTOOL_DUPLICATE_style_0x7f11044d">
+            <intent-filter>
+                <action android:name="com.customer.feedback.START"/>
+            </intent-filter>
+        </activity>
         <provider android:authorities="com.oppo.camera.tingle" android:directBootAware="true" android:exported="false" android:multiprocess="true" android:name="com.oplus.tingle.ipc.internal.TingleProvider"/>
         <provider android:authorities="com.oppo.camera.epona" android:directBootAware="true" android:exported="true" android:multiprocess="true" android:name="com.oplus.epona.internal.EponaProvider" android:permission="com.oppo.permission.safe.SECURITY"/>
         <meta-data android:name="com.oplus.epona:epona" android:value="2.0.0"/>

@@ -158,19 +158,26 @@
 
     .line 227
     :cond_0
+    invoke-static {v4}, Lokhttp3/internal/cache/CacheInterceptor;->isContentSpecificHeader(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
     invoke-static {v4}, Lokhttp3/internal/cache/CacheInterceptor;->isEndToEnd(Ljava/lang/String;)Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
+    .line 228
     invoke-virtual {p1, v4}, Lokhttp3/Headers;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
     if-nez v6, :cond_2
 
-    .line 228
+    .line 229
     :cond_1
     sget-object v6, Lokhttp3/internal/Internal;->instance:Lokhttp3/internal/Internal;
 
@@ -182,40 +189,34 @@
 
     goto :goto_0
 
-    .line 232
+    .line 233
     :cond_3
     invoke-virtual {p1}, Lokhttp3/Headers;->size()I
 
     move-result p0
 
     :goto_2
-    if-ge v2, p0, :cond_6
+    if-ge v2, p0, :cond_5
 
-    .line 233
+    .line 234
     invoke-virtual {p1, v2}, Lokhttp3/Headers;->name(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v3, "Content-Length"
+    .line 235
+    invoke-static {v1}, Lokhttp3/internal/cache/CacheInterceptor;->isContentSpecificHeader(Ljava/lang/String;)Z
 
-    .line 234
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    invoke-static {v1}, Lokhttp3/internal/cache/CacheInterceptor;->isEndToEnd(Ljava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_4
 
-    goto :goto_3
-
-    .line 237
-    :cond_4
-    invoke-static {v1}, Lokhttp3/internal/cache/CacheInterceptor;->isEndToEnd(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    .line 238
+    .line 236
     sget-object v3, Lokhttp3/internal/Internal;->instance:Lokhttp3/internal/Internal;
 
     invoke-virtual {p1, v2}, Lokhttp3/Headers;->value(I)Ljava/lang/String;
@@ -224,14 +225,13 @@
 
     invoke-virtual {v3, v0, v1, v4}, Lokhttp3/internal/Internal;->addLenient(Lokhttp3/Headers$Builder;Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_5
-    :goto_3
+    :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 242
-    :cond_6
+    .line 240
+    :cond_5
     invoke-virtual {v0}, Lokhttp3/Headers$Builder;->build()Lokhttp3/Headers;
 
     move-result-object p0
@@ -239,12 +239,57 @@
     return-object p0
 .end method
 
+.method static isContentSpecificHeader(Ljava/lang/String;)Z
+    .locals 1
+
+    const-string v0, "Content-Length"
+
+    .line 263
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "Content-Encoding"
+
+    .line 264
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "Content-Type"
+
+    .line 265
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    :goto_1
+    return p0
+.end method
+
 .method static isEndToEnd(Ljava/lang/String;)Z
     .locals 1
 
     const-string v0, "Connection"
 
-    .line 250
+    .line 248
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -253,7 +298,7 @@
 
     const-string v0, "Keep-Alive"
 
-    .line 251
+    .line 249
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -262,7 +307,7 @@
 
     const-string v0, "Proxy-Authenticate"
 
-    .line 252
+    .line 250
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -271,7 +316,7 @@
 
     const-string v0, "Proxy-Authorization"
 
-    .line 253
+    .line 251
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -280,7 +325,7 @@
 
     const-string v0, "TE"
 
-    .line 254
+    .line 252
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -289,7 +334,7 @@
 
     const-string v0, "Trailers"
 
-    .line 255
+    .line 253
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -298,7 +343,7 @@
 
     const-string v0, "Transfer-Encoding"
 
-    .line 256
+    .line 254
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
@@ -307,7 +352,7 @@
 
     const-string v0, "Upgrade"
 
-    .line 257
+    .line 255
     invoke-virtual {v0, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result p0

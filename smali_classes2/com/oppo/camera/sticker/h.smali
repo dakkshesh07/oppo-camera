@@ -70,7 +70,7 @@
     const-string v0, "StickerMediator"
 
     .line 62
-    invoke-static {v0, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 64
     iput-object p1, p0, Lcom/oppo/camera/sticker/h;->b:Landroid/content/Context;
@@ -114,14 +114,10 @@
     const-string v2, "getInstance"
 
     .line 52
-    invoke-static {v1, v2}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 54
     new-instance v1, Lcom/oppo/camera/sticker/h;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p0
 
     invoke-direct {v1, p0}, Lcom/oppo/camera/sticker/h;-><init>(Landroid/content/Context;)V
 
@@ -182,12 +178,12 @@
 
     const-string v1, "StickerMediator"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "StickerMediator.create"
 
     .line 72
-    invoke-static {v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;)V
 
     .line 74
     invoke-static {}, Lcom/oppo/camera/sticker/download/a;->a()Lcom/oppo/camera/sticker/download/a;
@@ -224,16 +220,16 @@
     invoke-virtual {v2}, Lcom/oppo/camera/sticker/data/b;->d()V
 
     .line 83
-    sget-object v2, Lcom/oppo/camera/sticker/d/b;->k:Ljava/lang/String;
+    sget-object v2, Lcom/oppo/camera/sticker/b/b;->k:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/oppo/camera/sticker/d/b;->c(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/oppo/camera/sticker/b/b;->d(Ljava/lang/String;)Z
 
     .line 84
     iput-boolean v1, p0, Lcom/oppo/camera/sticker/h;->f:Z
 
     .line 88
     :cond_0
-    invoke-static {v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -363,7 +359,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -401,7 +397,7 @@
 
     const-string v1, "StickerMediator"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 149
     iget-object v0, p0, Lcom/oppo/camera/sticker/h;->c:Lcom/oppo/camera/sticker/data/b;
@@ -523,7 +519,7 @@
 
     const-string v1, "StickerMediator"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 100
     iget-boolean v0, p0, Lcom/oppo/camera/sticker/h;->e:Z
@@ -601,7 +597,7 @@
     const-string v0, "removeStickerCallback, stop ThumbDownloadService"
 
     .line 132
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     const-string p1, "StickerMediator"
@@ -627,7 +623,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

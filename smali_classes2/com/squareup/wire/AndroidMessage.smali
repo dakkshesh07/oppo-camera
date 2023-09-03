@@ -1,6 +1,6 @@
 .class public abstract Lcom/squareup/wire/AndroidMessage;
 .super Lcom/squareup/wire/Message;
-.source "AndroidMessage.kt"
+.source "AndroidMessage.java"
 
 # interfaces
 .implements Landroid/os/Parcelable;
@@ -9,8 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;,
-        Lcom/squareup/wire/AndroidMessage$Companion;
+        Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;
     }
 .end annotation
 
@@ -28,27 +27,9 @@
 .end annotation
 
 
-# static fields
-.field public static final Companion:Lcom/squareup/wire/AndroidMessage$Companion;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lcom/squareup/wire/AndroidMessage$Companion;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/squareup/wire/AndroidMessage$Companion;-><init>(Lc/d/b/f;)V
-
-    sput-object v0, Lcom/squareup/wire/AndroidMessage;->Companion:Lcom/squareup/wire/AndroidMessage$Companion;
-
-    return-void
-.end method
-
 .method protected constructor <init>(Lcom/squareup/wire/ProtoAdapter;Lokio/ByteString;)V
-    .locals 1
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -59,21 +40,13 @@
         }
     .end annotation
 
-    const-string v0, "adapter"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "unknownFields"
-
-    invoke-static {p2, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 27
+    .line 33
     invoke-direct {p0, p1, p2}, Lcom/squareup/wire/Message;-><init>(Lcom/squareup/wire/ProtoAdapter;Lokio/ByteString;)V
 
     return-void
 .end method
 
-.method public static final newCreator(Lcom/squareup/wire/ProtoAdapter;)Landroid/os/Parcelable$Creator;
+.method public static newCreator(Lcom/squareup/wire/ProtoAdapter;)Landroid/os/Parcelable$Creator;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -87,18 +60,17 @@
         }
     .end annotation
 
-    sget-object v0, Lcom/squareup/wire/AndroidMessage;->Companion:Lcom/squareup/wire/AndroidMessage$Companion;
+    .line 29
+    new-instance v0, Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;
 
-    invoke-virtual {v0, p0}, Lcom/squareup/wire/AndroidMessage$Companion;->newCreator(Lcom/squareup/wire/ProtoAdapter;)Landroid/os/Parcelable$Creator;
+    invoke-direct {v0, p0}, Lcom/squareup/wire/AndroidMessage$ProtoAdapterCreator;-><init>(Lcom/squareup/wire/ProtoAdapter;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public describeContents()I
+.method public final describeContents()I
     .locals 1
 
     const/4 v0, 0x0
@@ -106,14 +78,10 @@
     return v0
 .end method
 
-.method public writeToParcel(Landroid/os/Parcel;I)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    const-string p2, "dest"
-
-    invoke-static {p1, p2}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 30
+    .line 37
     invoke-virtual {p0}, Lcom/squareup/wire/AndroidMessage;->encode()[B
 
     move-result-object p2

@@ -69,25 +69,25 @@
 .method private constructor <init>()V
     .locals 1
 
-    .line 23645
+    .line 29128
     invoke-direct {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 23883
+    .line 29384
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
-    .line 24011
+    .line 29523
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
-    .line 24344
+    .line 29881
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 23646
+    .line 29129
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -96,7 +96,7 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/DescriptorProtos$1;)V
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;-><init>()V
 
     return-void
@@ -105,25 +105,25 @@
 .method private constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
     .locals 0
 
-    .line 23651
+    .line 29134
     invoke-direct {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     const/4 p1, 0x0
 
-    .line 23883
+    .line 29384
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
-    .line 24011
+    .line 29523
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
-    .line 24344
+    .line 29881
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 23652
+    .line 29135
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->maybeForceBuilderInitialization()V
 
     return-void
@@ -132,37 +132,35 @@
 .method synthetic constructor <init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;Lcom/google/protobuf/DescriptorProtos$1;)V
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-direct {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;-><init>(Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;)V
 
     return-void
 .end method
 
 .method private ensureUninterpretedOptionIsMutable()V
-    .locals 3
+    .locals 2
 
-    .line 24346
+    .line 29883
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/16 v1, 0x40
+    and-int/lit8 v0, v0, 0x40
 
-    and-int/2addr v0, v1
+    if-nez v0, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    .line 24347
+    .line 29884
     new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
+    iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 24348
+    .line 29885
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    or-int/2addr v0, v1
+    or-int/lit8 v0, v0, 0x40
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
@@ -173,8 +171,8 @@
 .method public static final getDescriptor()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 23634
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$16400()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 29116
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$18900()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -194,23 +192,21 @@
         }
     .end annotation
 
-    .line 24643
+    .line 30180
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
-    .line 24644
+    .line 30181
     new-instance v0, Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/16 v3, 0x40
+    and-int/lit8 v2, v2, 0x40
 
-    and-int/2addr v2, v3
-
-    if-ne v2, v3, :cond_0
+    if-eqz v2, :cond_0
 
     const/4 v2, 0x1
 
@@ -219,13 +215,13 @@
     :cond_0
     const/4 v2, 0x0
 
-    .line 24648
+    .line 30185
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getParentForChildren()Lcom/google/protobuf/GeneratedMessageV3$BuilderParent;
 
     move-result-object v3
 
-    .line 24649
+    .line 30186
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->isClean()Z
 
     move-result v4
@@ -236,10 +232,10 @@
 
     const/4 v0, 0x0
 
-    .line 24650
+    .line 30187
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 24652
+    .line 30189
     :cond_1
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -249,12 +245,12 @@
 .method private maybeForceBuilderInitialization()V
     .locals 1
 
-    .line 23655
+    .line 29138
     sget-boolean v0, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v0, :cond_0
 
-    .line 23657
+    .line 29140
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     :cond_0
@@ -276,25 +272,25 @@
         }
     .end annotation
 
-    .line 24522
+    .line 30059
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24523
+    .line 30060
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24524
+    .line 30061
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/Collection;)V
+    invoke-static {p1, v0}, Lcom/google/protobuf/AbstractMessageLite$Builder;->addAll(Ljava/lang/Iterable;Ljava/util/List;)V
 
-    .line 24526
+    .line 30063
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24528
+    .line 30065
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -317,7 +313,7 @@
         }
     .end annotation
 
-    .line 23784
+    .line 29281
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->addExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -330,7 +326,7 @@
 .method public bridge synthetic addExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->addExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -341,7 +337,7 @@
 .method public addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 23766
+    .line 29260
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -354,7 +350,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -365,7 +361,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -376,7 +372,7 @@
 .method public bridge synthetic addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->addRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -387,15 +383,15 @@
 .method public addUninterpretedOption(ILcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24504
+    .line 30041
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24505
+    .line 30042
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24506
+    .line 30043
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;->build()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
@@ -404,12 +400,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 24507
+    .line 30044
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24509
+    .line 30046
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;->build()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
@@ -424,27 +420,27 @@
 .method public addUninterpretedOption(ILcom/google/protobuf/DescriptorProtos$UninterpretedOption;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24465
+    .line 30002
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 24469
+    .line 30006
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24470
+    .line 30007
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 24471
+    .line 30008
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24467
+    .line 30004
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -452,7 +448,7 @@
 
     throw p1
 
-    .line 24473
+    .line 30010
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -463,15 +459,15 @@
 .method public addUninterpretedOption(Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24486
+    .line 30023
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24487
+    .line 30024
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24488
+    .line 30025
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;->build()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
@@ -480,12 +476,12 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24489
+    .line 30026
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24491
+    .line 30028
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;->build()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
@@ -500,27 +496,27 @@
 .method public addUninterpretedOption(Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24444
+    .line 29981
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p1, :cond_0
 
-    .line 24448
+    .line 29985
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24449
+    .line 29986
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 24450
+    .line 29987
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24446
+    .line 29983
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -528,7 +524,7 @@
 
     throw p1
 
-    .line 24452
+    .line 29989
     :cond_1
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addMessage(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -539,17 +535,17 @@
 .method public addUninterpretedOptionBuilder()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;
     .locals 2
 
-    .line 24614
+    .line 30151
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 24615
+    .line 30152
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
     move-result-object v1
 
-    .line 24614
+    .line 30151
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(Lcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object v0
@@ -562,17 +558,17 @@
 .method public addUninterpretedOptionBuilder(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;
     .locals 2
 
-    .line 24626
+    .line 30163
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
 
-    .line 24627
+    .line 30164
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
     move-result-object v1
 
-    .line 24626
+    .line 30163
     invoke-virtual {v0, p1, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addBuilder(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/AbstractMessage$Builder;
 
     move-result-object p1
@@ -585,12 +581,12 @@
 .method public build()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
     .locals 2
 
-    .line 23693
+    .line 29180
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->buildPartial()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
 
-    .line 23694
+    .line 29181
     invoke-virtual {v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->isInitialized()Z
 
     move-result v1
@@ -599,7 +595,7 @@
 
     return-object v0
 
-    .line 23695
+    .line 29182
     :cond_0
     invoke-static {v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->newUninitializedMessageException(Lcom/google/protobuf/Message;)Lcom/google/protobuf/UninitializedMessageException;
 
@@ -611,7 +607,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -622,7 +618,7 @@
 .method public bridge synthetic build()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->build()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -631,120 +627,108 @@
 .end method
 
 .method public buildPartial()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
-    .locals 5
+    .locals 4
 
-    .line 23701
+    .line 29189
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;-><init>(Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;Lcom/google/protobuf/DescriptorProtos$1;)V
 
-    .line 23702
+    .line 29190
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v2, v1, 0x1
 
-    const/4 v3, 0x1
+    if-eqz v2, :cond_0
 
-    if-ne v2, v3, :cond_0
+    const/4 v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    .line 23707
+    .line 29195
     :goto_0
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$16902(Lcom/google/protobuf/DescriptorProtos$FieldOptions;I)I
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$19402(Lcom/google/protobuf/DescriptorProtos$FieldOptions;I)I
 
-    and-int/lit8 v2, v1, 0x2
+    and-int/lit8 v3, v1, 0x2
 
-    const/4 v4, 0x2
+    if-eqz v3, :cond_1
 
-    if-ne v2, v4, :cond_1
+    .line 29197
+    iget-boolean v3, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->packed_:Z
 
-    or-int/lit8 v3, v3, 0x2
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$19502(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
 
-    .line 23711
+    or-int/lit8 v2, v2, 0x2
+
     :cond_1
-    iget-boolean v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->packed_:Z
+    and-int/lit8 v3, v1, 0x4
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17002(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
+    if-eqz v3, :cond_2
 
-    and-int/lit8 v2, v1, 0x4
+    or-int/lit8 v2, v2, 0x4
 
-    const/4 v4, 0x4
-
-    if-ne v2, v4, :cond_2
-
-    or-int/lit8 v3, v3, 0x4
-
-    .line 23715
+    .line 29203
     :cond_2
-    iget v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
+    iget v3, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17102(Lcom/google/protobuf/DescriptorProtos$FieldOptions;I)I
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$19602(Lcom/google/protobuf/DescriptorProtos$FieldOptions;I)I
 
-    and-int/lit8 v2, v1, 0x8
+    and-int/lit8 v3, v1, 0x8
 
-    const/16 v4, 0x8
+    if-eqz v3, :cond_3
 
-    if-ne v2, v4, :cond_3
+    .line 29205
+    iget-boolean v3, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->lazy_:Z
 
-    or-int/lit8 v3, v3, 0x8
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$19702(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
 
-    .line 23719
+    or-int/lit8 v2, v2, 0x8
+
     :cond_3
-    iget-boolean v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->lazy_:Z
+    and-int/lit8 v3, v1, 0x10
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17202(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
+    if-eqz v3, :cond_4
 
-    and-int/lit8 v2, v1, 0x10
+    .line 29209
+    iget-boolean v3, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->deprecated_:Z
 
-    const/16 v4, 0x10
+    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$19802(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
 
-    if-ne v2, v4, :cond_4
+    or-int/lit8 v2, v2, 0x10
 
-    or-int/lit8 v3, v3, 0x10
-
-    .line 23723
     :cond_4
-    iget-boolean v2, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->deprecated_:Z
+    and-int/lit8 v1, v1, 0x20
 
-    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17302(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
+    if-eqz v1, :cond_5
 
-    const/16 v2, 0x20
-
-    and-int/2addr v1, v2
-
-    if-ne v1, v2, :cond_5
-
-    or-int/lit8 v3, v3, 0x20
-
-    .line 23727
-    :cond_5
+    .line 29213
     iget-boolean v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->weak_:Z
 
-    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17402(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$19902(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Z)Z
 
-    .line 23728
+    or-int/lit8 v2, v2, 0x20
+
+    .line 29216
+    :cond_5
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v1, :cond_7
 
-    .line 23729
+    .line 29217
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/16 v2, 0x40
+    and-int/lit8 v1, v1, 0x40
 
-    and-int/2addr v1, v2
+    if-eqz v1, :cond_6
 
-    if-ne v1, v2, :cond_6
-
-    .line 23730
+    .line 29218
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -753,34 +737,34 @@
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 23731
+    .line 29219
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x41
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23733
+    .line 29221
     :cond_6
     iget-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17502(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20002(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Ljava/util/List;)Ljava/util/List;
 
     goto :goto_1
 
-    .line 23735
+    .line 29223
     :cond_7
     invoke-virtual {v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->build()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17502(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Ljava/util/List;)Ljava/util/List;
+    invoke-static {v0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20002(Lcom/google/protobuf/DescriptorProtos$FieldOptions;Ljava/util/List;)Ljava/util/List;
 
-    .line 23737
+    .line 29225
     :goto_1
-    invoke-static {v0, v3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17602(Lcom/google/protobuf/DescriptorProtos$FieldOptions;I)I
+    invoke-static {v0, v2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20102(Lcom/google/protobuf/DescriptorProtos$FieldOptions;I)I
 
-    .line 23738
+    .line 29226
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onBuilt()V
 
     return-object v0
@@ -789,7 +773,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->buildPartial()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -800,7 +784,7 @@
 .method public bridge synthetic buildPartial()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->buildPartial()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -811,7 +795,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -822,84 +806,84 @@
 .method public clear()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 2
 
-    .line 23661
+    .line 29145
     invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->clear()Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     const/4 v0, 0x0
 
-    .line 23662
+    .line 29146
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
-    .line 23663
+    .line 29147
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x2
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23664
+    .line 29148
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->packed_:Z
 
-    .line 23665
+    .line 29149
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x3
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23666
+    .line 29150
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
-    .line 23667
+    .line 29151
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x5
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23668
+    .line 29152
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->lazy_:Z
 
-    .line 23669
+    .line 29153
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x9
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23670
+    .line 29154
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->deprecated_:Z
 
-    .line 23671
+    .line 29155
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x11
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23672
+    .line 29156
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->weak_:Z
 
-    .line 23673
+    .line 29157
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23674
+    .line 29158
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 23675
+    .line 29159
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 23676
+    .line 29160
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x41
@@ -908,7 +892,7 @@
 
     goto :goto_0
 
-    .line 23678
+    .line 29162
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
@@ -919,7 +903,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -930,7 +914,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -941,7 +925,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -952,7 +936,7 @@
 .method public bridge synthetic clear()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clear()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -963,7 +947,7 @@
 .method public clearCtype()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 23941
+    .line 29448
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x2
@@ -972,10 +956,10 @@
 
     const/4 v0, 0x0
 
-    .line 23942
+    .line 29449
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
-    .line 23943
+    .line 29450
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -984,7 +968,7 @@
 .method public clearDeprecated()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24289
+    .line 29821
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x11
@@ -993,10 +977,10 @@
 
     const/4 v0, 0x0
 
-    .line 24290
+    .line 29822
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->deprecated_:Z
 
-    .line 24291
+    .line 29823
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -1016,7 +1000,7 @@
         }
     .end annotation
 
-    .line 23789
+    .line 29287
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->clearExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -1029,7 +1013,7 @@
 .method public bridge synthetic clearExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1040,7 +1024,7 @@
 .method public clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 23752
+    .line 29243
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -1053,7 +1037,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1064,7 +1048,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1075,7 +1059,7 @@
 .method public bridge synthetic clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearField(Lcom/google/protobuf/Descriptors$FieldDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1086,7 +1070,7 @@
 .method public clearJstype()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24089
+    .line 29611
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x5
@@ -1095,10 +1079,10 @@
 
     const/4 v0, 0x0
 
-    .line 24090
+    .line 29612
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
-    .line 24091
+    .line 29613
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -1107,7 +1091,7 @@
 .method public clearLazy()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24229
+    .line 29756
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x9
@@ -1116,10 +1100,10 @@
 
     const/4 v0, 0x0
 
-    .line 24230
+    .line 29757
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->lazy_:Z
 
-    .line 24231
+    .line 29758
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -1128,7 +1112,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1139,7 +1123,7 @@
 .method public clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 23756
+    .line 29248
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -1152,7 +1136,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1163,7 +1147,7 @@
 .method public bridge synthetic clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clearOneof(Lcom/google/protobuf/Descriptors$OneofDescriptor;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1174,7 +1158,7 @@
 .method public clearPacked()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24005
+    .line 29517
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x3
@@ -1183,10 +1167,10 @@
 
     const/4 v0, 0x0
 
-    .line 24006
+    .line 29518
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->packed_:Z
 
-    .line 24007
+    .line 29519
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -1195,31 +1179,31 @@
 .method public clearUninterpretedOption()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24540
+    .line 30077
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24541
+    .line 30078
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 24542
+    .line 30079
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x41
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 24543
+    .line 30080
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24545
+    .line 30082
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->clear()V
 
@@ -1230,7 +1214,7 @@
 .method public clearWeak()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24337
+    .line 29874
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x21
@@ -1239,10 +1223,10 @@
 
     const/4 v0, 0x0
 
-    .line 24338
+    .line 29875
     iput-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->weak_:Z
 
-    .line 24339
+    .line 29876
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -1251,7 +1235,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -1262,7 +1246,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/AbstractMessageLite$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -1273,8 +1257,8 @@
 .method public clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 23743
-    invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->clone()Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
+    .line 29232
+    invoke-super {p0}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object v0
 
@@ -1286,18 +1270,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 1
 
-    .line 23627
-    invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic clone()Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
-    .locals 1
-
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -1308,7 +1281,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/Message$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -1319,7 +1292,7 @@
 .method public bridge synthetic clone()Lcom/google/protobuf/MessageLite$Builder;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -1335,7 +1308,7 @@
         }
     .end annotation
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->clone()Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object v0
@@ -1346,7 +1319,7 @@
 .method public getCtype()Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
     .locals 1
 
-    .line 23908
+    .line 29412
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
     invoke-static {v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;->valueOf(I)Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
@@ -1355,7 +1328,7 @@
 
     if-nez v0, :cond_0
 
-    .line 23909
+    .line 29413
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;->STRING:Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
 
     :cond_0
@@ -1365,7 +1338,7 @@
 .method public getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
     .locals 1
 
-    .line 23689
+    .line 29175
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -1376,7 +1349,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -1387,7 +1360,7 @@
 .method public bridge synthetic getDefaultInstanceForType()Lcom/google/protobuf/MessageLite;
     .locals 1
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getDefaultInstanceForType()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -1398,7 +1371,7 @@
 .method public getDeprecated()Z
     .locals 1
 
-    .line 24260
+    .line 29789
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->deprecated_:Z
 
     return v0
@@ -1407,8 +1380,8 @@
 .method public getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;
     .locals 1
 
-    .line 23685
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$16400()Lcom/google/protobuf/Descriptors$Descriptor;
+    .line 29170
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$18900()Lcom/google/protobuf/Descriptors$Descriptor;
 
     move-result-object v0
 
@@ -1418,7 +1391,7 @@
 .method public getJstype()Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;
     .locals 1
 
-    .line 24046
+    .line 29563
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
     invoke-static {v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;->valueOf(I)Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;
@@ -1427,7 +1400,7 @@
 
     if-nez v0, :cond_0
 
-    .line 24047
+    .line 29564
     sget-object v0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;->JS_NORMAL:Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;
 
     :cond_0
@@ -1437,7 +1410,7 @@
 .method public getLazy()Z
     .locals 1
 
-    .line 24160
+    .line 29684
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->lazy_:Z
 
     return v0
@@ -1446,7 +1419,7 @@
 .method public getPacked()Z
     .locals 1
 
-    .line 23974
+    .line 29483
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->packed_:Z
 
     return v0
@@ -1455,12 +1428,12 @@
 .method public getUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
     .locals 1
 
-    .line 24391
+    .line 29928
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24392
+    .line 29929
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1471,7 +1444,7 @@
 
     return-object p1
 
-    .line 24394
+    .line 29931
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessage(I)Lcom/google/protobuf/AbstractMessage;
 
@@ -1485,7 +1458,7 @@
 .method public getUninterpretedOptionBuilder(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;
     .locals 1
 
-    .line 24575
+    .line 30112
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -1510,7 +1483,7 @@
         }
     .end annotation
 
-    .line 24638
+    .line 30175
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -1525,12 +1498,12 @@
 .method public getUninterpretedOptionCount()I
     .locals 1
 
-    .line 24377
+    .line 29914
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24378
+    .line 29915
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -1539,7 +1512,7 @@
 
     return v0
 
-    .line 24380
+    .line 29917
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getCount()I
 
@@ -1559,12 +1532,12 @@
         }
     .end annotation
 
-    .line 24363
+    .line 29900
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24364
+    .line 29901
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -1573,7 +1546,7 @@
 
     return-object v0
 
-    .line 24366
+    .line 29903
     :cond_0
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageList()Ljava/util/List;
 
@@ -1585,12 +1558,12 @@
 .method public getUninterpretedOptionOrBuilder(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOptionOrBuilder;
     .locals 1
 
-    .line 24586
+    .line 30123
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24587
+    .line 30124
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1601,7 +1574,7 @@
 
     return-object p1
 
-    .line 24588
+    .line 30125
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilder(I)Lcom/google/protobuf/MessageOrBuilder;
 
@@ -1624,19 +1597,19 @@
         }
     .end annotation
 
-    .line 24600
+    .line 30137
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-eqz v0, :cond_0
 
-    .line 24601
+    .line 30138
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->getMessageOrBuilderList()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 
-    .line 24603
+    .line 30140
     :cond_0
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
@@ -1650,7 +1623,7 @@
 .method public getWeak()Z
     .locals 1
 
-    .line 24314
+    .line 29848
     iget-boolean v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->weak_:Z
 
     return v0
@@ -1659,14 +1632,14 @@
 .method public hasCtype()Z
     .locals 2
 
-    .line 23895
+    .line 29397
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     const/4 v1, 0x1
 
     and-int/2addr v0, v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
@@ -1678,16 +1651,14 @@
 .end method
 
 .method public hasDeprecated()Z
-    .locals 2
+    .locals 1
 
-    .line 24247
+    .line 29775
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/16 v1, 0x10
+    and-int/lit8 v0, v0, 0x10
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1701,16 +1672,14 @@
 .end method
 
 .method public hasJstype()Z
-    .locals 2
+    .locals 1
 
-    .line 24028
+    .line 29542
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/4 v1, 0x4
+    and-int/lit8 v0, v0, 0x4
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1724,16 +1693,14 @@
 .end method
 
 .method public hasLazy()Z
-    .locals 2
+    .locals 1
 
-    .line 24127
+    .line 29650
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/16 v1, 0x8
+    and-int/lit8 v0, v0, 0x8
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1747,16 +1714,14 @@
 .end method
 
 .method public hasPacked()Z
-    .locals 2
+    .locals 1
 
-    .line 23960
+    .line 29468
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/4 v1, 0x2
+    and-int/lit8 v0, v0, 0x2
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1770,16 +1735,14 @@
 .end method
 
 .method public hasWeak()Z
-    .locals 2
+    .locals 1
 
-    .line 24304
+    .line 29837
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    const/16 v1, 0x20
+    and-int/lit8 v0, v0, 0x20
 
-    and-int/2addr v0, v1
-
-    if-ne v0, v1, :cond_0
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -1795,8 +1758,8 @@
 .method protected internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
     .locals 3
 
-    .line 23639
-    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$16500()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
+    .line 29122
+    invoke-static {}, Lcom/google/protobuf/DescriptorProtos;->access$19000()Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
 
@@ -1804,7 +1767,7 @@
 
     const-class v2, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23640
+    .line 29123
     invoke-virtual {v0, v1, v2}, Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;->ensureFieldAccessorsInitialized(Ljava/lang/Class;Ljava/lang/Class;)Lcom/google/protobuf/GeneratedMessageV3$FieldAccessorTable;
 
     move-result-object v0
@@ -1819,7 +1782,7 @@
 
     move v1, v0
 
-    .line 23853
+    .line 29353
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionCount()I
 
@@ -1827,7 +1790,7 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 23854
+    .line 29354
     invoke-virtual {p0, v1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
     move-result-object v2
@@ -1845,7 +1808,7 @@
 
     goto :goto_0
 
-    .line 23858
+    .line 29358
     :cond_1
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->extensionsAreInitialized()Z
 
@@ -1869,7 +1832,7 @@
         }
     .end annotation
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1880,7 +1843,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1896,7 +1859,7 @@
         }
     .end annotation
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -1914,7 +1877,7 @@
 
     const/4 v0, 0x0
 
-    .line 23870
+    .line 29371
     :try_start_0
     sget-object v1, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->PARSER:Lcom/google/protobuf/Parser;
 
@@ -1929,7 +1892,7 @@
 
     if-eqz p1, :cond_0
 
-    .line 23876
+    .line 29377
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     :cond_0
@@ -1943,7 +1906,7 @@
     :catch_0
     move-exception p1
 
-    .line 23872
+    .line 29373
     :try_start_1
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->getUnfinishedMessage()Lcom/google/protobuf/MessageLite;
 
@@ -1953,7 +1916,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 23873
+    .line 29374
     :try_start_2
     invoke-virtual {p1}, Lcom/google/protobuf/InvalidProtocolBufferException;->unwrapIOException()Ljava/io/IOException;
 
@@ -1971,9 +1934,10 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 23876
+    .line 29377
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
+    .line 29379
     :cond_1
     throw p1
 .end method
@@ -1981,7 +1945,7 @@
 .method public mergeFrom(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 2
 
-    .line 23801
+    .line 29300
     invoke-static {}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getDefaultInstance()Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     move-result-object v0
@@ -1990,7 +1954,7 @@
 
     return-object p0
 
-    .line 23802
+    .line 29301
     :cond_0
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->hasCtype()Z
 
@@ -1998,14 +1962,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 23803
+    .line 29302
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getCtype()Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setCtype(Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23805
+    .line 29304
     :cond_1
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->hasPacked()Z
 
@@ -2013,14 +1977,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 23806
+    .line 29305
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getPacked()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setPacked(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23808
+    .line 29307
     :cond_2
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->hasJstype()Z
 
@@ -2028,14 +1992,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 23809
+    .line 29308
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getJstype()Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setJstype(Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23811
+    .line 29310
     :cond_3
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->hasLazy()Z
 
@@ -2043,14 +2007,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 23812
+    .line 29311
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getLazy()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setLazy(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23814
+    .line 29313
     :cond_4
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->hasDeprecated()Z
 
@@ -2058,14 +2022,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 23815
+    .line 29314
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getDeprecated()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setDeprecated(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23817
+    .line 29316
     :cond_5
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->hasWeak()Z
 
@@ -2073,21 +2037,21 @@
 
     if-eqz v0, :cond_6
 
-    .line 23818
+    .line 29317
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->getWeak()Z
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setWeak(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23820
+    .line 29319
     :cond_6
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_8
 
-    .line 23821
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17500(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
+    .line 29320
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20000(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
 
     move-result-object v0
 
@@ -2097,7 +2061,7 @@
 
     if-nez v0, :cond_b
 
-    .line 23822
+    .line 29321
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -2106,14 +2070,14 @@
 
     if-eqz v0, :cond_7
 
-    .line 23823
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17500(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
+    .line 29322
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20000(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 23824
+    .line 29323
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v0, v0, -0x41
@@ -2122,28 +2086,28 @@
 
     goto :goto_0
 
-    .line 23826
+    .line 29325
     :cond_7
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 23827
+    .line 29326
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17500(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20000(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 23829
+    .line 29328
     :goto_0
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_1
 
-    .line 23832
+    .line 29331
     :cond_8
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17500(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20000(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
 
     move-result-object v0
 
@@ -2153,7 +2117,7 @@
 
     if-nez v0, :cond_b
 
-    .line 23833
+    .line 29332
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->isEmpty()Z
@@ -2162,36 +2126,36 @@
 
     if-eqz v0, :cond_a
 
-    .line 23834
+    .line 29333
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     invoke-virtual {v0}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->dispose()V
 
     const/4 v0, 0x0
 
-    .line 23835
+    .line 29334
     iput-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 23836
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17500(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
+    .line 29335
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20000(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
-    .line 23837
+    .line 29336
     iget v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     and-int/lit8 v1, v1, -0x41
 
     iput v1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23838
+    .line 29337
     sget-boolean v1, Lcom/google/protobuf/GeneratedMessageV3;->alwaysUseFieldBuilders:Z
 
     if-eqz v1, :cond_9
 
-    .line 23840
+    .line 29339
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->getUninterpretedOptionFieldBuilder()Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     move-result-object v0
@@ -2201,27 +2165,27 @@
 
     goto :goto_1
 
-    .line 23842
+    .line 29341
     :cond_a
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$17500(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
+    invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->access$20000(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->addAllMessages(Ljava/lang/Iterable;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
-    .line 23846
+    .line 29345
     :cond_b
     :goto_1
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeExtensionFields(Lcom/google/protobuf/GeneratedMessageV3$ExtendableMessage;)V
 
-    .line 23847
+    .line 29346
     iget-object p1, p1, Lcom/google/protobuf/DescriptorProtos$FieldOptions;->unknownFields:Lcom/google/protobuf/UnknownFieldSet;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
-    .line 23848
+    .line 29347
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -2230,12 +2194,12 @@
 .method public mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 23792
+    .line 29291
     instance-of v0, p1, Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     if-eqz v0, :cond_0
 
-    .line 23793
+    .line 29292
     check-cast p1, Lcom/google/protobuf/DescriptorProtos$FieldOptions;
 
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/DescriptorProtos$FieldOptions;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
@@ -2244,7 +2208,7 @@
 
     return-object p1
 
-    .line 23795
+    .line 29294
     :cond_0
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/AbstractMessage$Builder;
 
@@ -2259,7 +2223,7 @@
         }
     .end annotation
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2270,7 +2234,7 @@
 .method public bridge synthetic mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/Message;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2286,7 +2250,7 @@
         }
     .end annotation
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2297,7 +2261,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/AbstractMessage$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2308,7 +2272,7 @@
 .method public final mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 24661
+    .line 30200
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -2321,7 +2285,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2332,7 +2296,7 @@
 .method public bridge synthetic mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->mergeUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2343,25 +2307,25 @@
 .method public removeUninterpretedOption(I)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24557
+    .line 30094
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24558
+    .line 30095
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24559
+    .line 30096
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 24560
+    .line 30097
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24562
+    .line 30099
     :cond_0
     invoke-virtual {v0, p1}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->remove(I)V
 
@@ -2374,26 +2338,26 @@
 
     if-eqz p1, :cond_0
 
-    .line 23925
+    .line 29431
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23926
+    .line 29432
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;->getNumber()I
 
     move-result p1
 
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ctype_:I
 
-    .line 23927
+    .line 29433
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
 
-    .line 23923
+    .line 29429
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -2405,17 +2369,17 @@
 .method public setDeprecated(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24273
+    .line 29804
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x10
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 24274
+    .line 29805
     iput-boolean p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->deprecated_:Z
 
-    .line 24275
+    .line 29806
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -2436,7 +2400,7 @@
         }
     .end annotation
 
-    .line 23778
+    .line 29274
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->setExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -2460,7 +2424,7 @@
         }
     .end annotation
 
-    .line 23772
+    .line 29267
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->setExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -2473,7 +2437,7 @@
 .method public bridge synthetic setExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2484,7 +2448,7 @@
 .method public bridge synthetic setExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setExtension(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2495,7 +2459,7 @@
 .method public setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 23748
+    .line 29238
     invoke-super {p0, p1, p2}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -2508,7 +2472,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2519,7 +2483,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2530,7 +2494,7 @@
 .method public bridge synthetic setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setField(Lcom/google/protobuf/Descriptors$FieldDescriptor;Ljava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2543,26 +2507,26 @@
 
     if-eqz p1, :cond_0
 
-    .line 24068
+    .line 29588
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 24069
+    .line 29589
     invoke-virtual {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$JSType;->getNumber()I
 
     move-result p1
 
     iput p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->jstype_:I
 
-    .line 24070
+    .line 29590
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
 
-    .line 24066
+    .line 29586
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -2574,17 +2538,17 @@
 .method public setLazy(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24193
+    .line 29719
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x8
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 24194
+    .line 29720
     iput-boolean p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->lazy_:Z
 
-    .line 24195
+    .line 29721
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -2593,17 +2557,17 @@
 .method public setPacked(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 23988
+    .line 29499
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 23989
+    .line 29500
     iput-boolean p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->packed_:Z
 
-    .line 23990
+    .line 29501
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0
@@ -2612,7 +2576,7 @@
 .method public setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 23761
+    .line 29254
     invoke-super {p0, p1, p2, p3}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
 
     move-result-object p1
@@ -2625,7 +2589,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2636,7 +2600,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2647,7 +2611,7 @@
 .method public bridge synthetic setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setRepeatedField(Lcom/google/protobuf/Descriptors$FieldDescriptor;ILjava/lang/Object;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2658,15 +2622,15 @@
 .method public setUninterpretedOption(ILcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24427
+    .line 29964
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_0
 
-    .line 24428
+    .line 29965
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24429
+    .line 29966
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;->build()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
@@ -2675,12 +2639,12 @@
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 24430
+    .line 29967
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24432
+    .line 29969
     :cond_0
     invoke-virtual {p2}, Lcom/google/protobuf/DescriptorProtos$UninterpretedOption$Builder;->build()Lcom/google/protobuf/DescriptorProtos$UninterpretedOption;
 
@@ -2695,27 +2659,27 @@
 .method public setUninterpretedOption(ILcom/google/protobuf/DescriptorProtos$UninterpretedOption;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24406
+    .line 29943
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOptionBuilder_:Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
     if-nez v0, :cond_1
 
     if-eqz p2, :cond_0
 
-    .line 24410
+    .line 29947
     invoke-direct {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->ensureUninterpretedOptionIsMutable()V
 
-    .line 24411
+    .line 29948
     iget-object v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->uninterpretedOption_:Ljava/util/List;
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 24412
+    .line 29949
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     goto :goto_0
 
-    .line 24408
+    .line 29945
     :cond_0
     new-instance p1, Ljava/lang/NullPointerException;
 
@@ -2723,7 +2687,7 @@
 
     throw p1
 
-    .line 24414
+    .line 29951
     :cond_1
     invoke-virtual {v0, p1, p2}, Lcom/google/protobuf/RepeatedFieldBuilderV3;->setMessage(ILcom/google/protobuf/AbstractMessage;)Lcom/google/protobuf/RepeatedFieldBuilderV3;
 
@@ -2734,7 +2698,7 @@
 .method public final setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 0
 
-    .line 24656
+    .line 30194
     invoke-super {p0, p1}, Lcom/google/protobuf/GeneratedMessageV3$ExtendableBuilder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
 
     move-result-object p1
@@ -2747,7 +2711,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/GeneratedMessageV3$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2758,7 +2722,7 @@
 .method public bridge synthetic setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/Message$Builder;
     .locals 0
 
-    .line 23627
+    .line 29109
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->setUnknownFields(Lcom/google/protobuf/UnknownFieldSet;)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
 
     move-result-object p1
@@ -2769,17 +2733,17 @@
 .method public setWeak(Z)Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;
     .locals 1
 
-    .line 24324
+    .line 29860
     iget v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
     or-int/lit8 v0, v0, 0x20
 
     iput v0, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->bitField0_:I
 
-    .line 24325
+    .line 29861
     iput-boolean p1, p0, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->weak_:Z
 
-    .line 24326
+    .line 29862
     invoke-virtual {p0}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$Builder;->onChanged()V
 
     return-object p0

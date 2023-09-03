@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f09015b" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09006e" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.oppo.camera.ui.widget.TextCenterView android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090071" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07011a" android:layout_marginBottom="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07011a" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070118" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070118" />
+        <com.oppo.camera.ui.widget.GuideTextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070112" android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f06007b" android:gravity="start" android:layout_gravity="center_horizontal" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09006f" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070113" android:lineSpacingExtra="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070122" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070118" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f070118" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

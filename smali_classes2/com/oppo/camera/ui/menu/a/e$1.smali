@@ -1,11 +1,11 @@
 .class Lcom/oppo/camera/ui/menu/a/e$1;
-.super Lcom/oppo/camera/ui/menu/a/c;
+.super Landroidx/recyclerview/widget/LinearLayoutManager;
 .source "FaceBeautyCustomMenu.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/menu/a/e;-><init>(Landroid/app/Activity;Landroid/view/View$OnClickListener;Lcom/oppo/camera/ui/menu/a/c$b;Lcom/oppo/camera/ui/OppoNumSeekBar$a;)V
+    value = Lcom/oppo/camera/ui/menu/a/e;-><init>(Landroid/app/Activity;Landroid/view/View$OnClickListener;Lcom/oppo/camera/ui/menu/a/e$b;Lcom/oppo/camera/ui/OppoNumSeekBar$a;Lcom/oppo/camera/ui/menu/a/e$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/oppo/camera/ui/menu/a/e;Landroid/content/Context;)V
+.method constructor <init>(Lcom/oppo/camera/ui/menu/a/e;Landroid/content/Context;IZ)V
     .locals 0
 
-    .line 52
+    .line 126
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/a/e$1;->a:Lcom/oppo/camera/ui/menu/a/e;
 
-    invoke-direct {p0, p2}, Lcom/oppo/camera/ui/menu/a/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2, p3, p4}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)I
-    .locals 0
+.method public canScrollHorizontally()Z
+    .locals 1
 
-    const p1, 0x7f0c0085
+    const/4 v0, 0x0
 
-    return p1
+    return v0
 .end method

@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/b;)V
     .locals 0
 
-    .line 311
+    .line 305
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$1;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +42,7 @@
 
     if-ne p2, p1, :cond_0
 
-    .line 315
+    .line 309
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$1;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->getActivity()Landroidx/fragment/app/c;

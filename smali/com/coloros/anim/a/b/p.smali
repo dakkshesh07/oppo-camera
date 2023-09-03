@@ -18,10 +18,10 @@
 
 
 # instance fields
-.field private final c:Lcom/coloros/anim/g/a;
+.field private final c:Lcom/coloros/anim/e/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/coloros/anim/g/a<",
+            "Lcom/coloros/anim/e/a<",
             "TA;>;"
         }
     .end annotation
@@ -37,12 +37,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/g/b;)V
+.method public constructor <init>(Lcom/coloros/anim/e/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TA;>;)V"
         }
     .end annotation
@@ -50,17 +50,17 @@
     const/4 v0, 0x0
 
     .line 17
-    invoke-direct {p0, p1, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, v0}, Lcom/coloros/anim/a/b/p;-><init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/coloros/anim/g/b;Ljava/lang/Object;)V
+.method public constructor <init>(Lcom/coloros/anim/e/b;Ljava/lang/Object;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TA;>;TA;)V"
         }
     .end annotation
@@ -73,14 +73,14 @@
     invoke-direct {p0, v0}, Lcom/coloros/anim/a/b/a;-><init>(Ljava/util/List;)V
 
     .line 12
-    new-instance v0, Lcom/coloros/anim/g/a;
+    new-instance v0, Lcom/coloros/anim/e/a;
 
-    invoke-direct {v0}, Lcom/coloros/anim/g/a;-><init>()V
+    invoke-direct {v0}, Lcom/coloros/anim/e/a;-><init>()V
 
-    iput-object v0, p0, Lcom/coloros/anim/a/b/p;->c:Lcom/coloros/anim/g/a;
+    iput-object v0, p0, Lcom/coloros/anim/a/b/p;->c:Lcom/coloros/anim/e/a;
 
     .line 22
-    invoke-virtual {p0, p1}, Lcom/coloros/anim/a/b/p;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p0, p1}, Lcom/coloros/anim/a/b/p;->a(Lcom/coloros/anim/e/b;)V
 
     .line 23
     iput-object p2, p0, Lcom/coloros/anim/a/b/p;->d:Ljava/lang/Object;
@@ -90,12 +90,12 @@
 
 
 # virtual methods
-.method a(Lcom/coloros/anim/g/c;F)Ljava/lang/Object;
+.method a(Lcom/coloros/anim/e/c;F)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "TK;>;F)TA;"
         }
     .end annotation
@@ -112,7 +112,7 @@
     .locals 1
 
     .line 37
-    iget-object v0, p0, Lcom/coloros/anim/a/b/p;->b:Lcom/coloros/anim/g/b;
+    iget-object v0, p0, Lcom/coloros/anim/a/b/p;->b:Lcom/coloros/anim/e/b;
 
     if-eqz v0, :cond_0
 
@@ -140,7 +140,7 @@
     .end annotation
 
     .line 45
-    iget-object v0, p0, Lcom/coloros/anim/a/b/p;->b:Lcom/coloros/anim/g/b;
+    iget-object v0, p0, Lcom/coloros/anim/a/b/p;->b:Lcom/coloros/anim/e/b;
 
     iget-object v4, p0, Lcom/coloros/anim/a/b/p;->d:Ljava/lang/Object;
 
@@ -162,7 +162,7 @@
 
     move-object v3, v4
 
-    invoke-virtual/range {v0 .. v7}, Lcom/coloros/anim/g/b;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
+    invoke-virtual/range {v0 .. v7}, Lcom/coloros/anim/e/b;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
 
     move-result-object v0
 

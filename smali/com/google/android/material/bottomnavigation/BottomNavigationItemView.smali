@@ -6,6 +6,11 @@
 .implements Landroidx/appcompat/view/menu/o$a;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final CHECKED_STATE_SET:[I
 
@@ -165,12 +170,12 @@
 
     const/4 p2, 0x2
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 105
     iget-object p1, p0, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->largeLabel:Landroid/widget/TextView;
 
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     .line 106
     invoke-virtual {p0, v0}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->setFocusable(Z)V
@@ -566,7 +571,7 @@
 
     .line 148
     :goto_0
-    invoke-static {p0, p2}, Landroidx/appcompat/widget/au;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p2}, Landroidx/appcompat/widget/at;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     .line 149
     invoke-virtual {p1}, Landroidx/appcompat/view/menu/j;->isVisible()Z
@@ -700,7 +705,7 @@
 
     .line 290
     :cond_1
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -723,12 +728,12 @@
     move-result v5
 
     .line 292
-    invoke-static/range {v0 .. v5}, Landroidx/core/g/a/d$c;->a(IIIIZZ)Landroidx/core/g/a/d$c;
+    invoke-static/range {v0 .. v5}, Landroidx/core/f/a/d$c;->a(IIIIZZ)Landroidx/core/f/a/d$c;
 
     move-result-object v0
 
     .line 291
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->b(Ljava/lang/Object;)V
 
     .line 299
     invoke-virtual {p0}, Lcom/google/android/material/bottomnavigation/BottomNavigationItemView;->isSelected()Z
@@ -740,18 +745,18 @@
     const/4 v0, 0x0
 
     .line 300
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->h(Z)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->h(Z)V
 
     .line 301
-    sget-object v0, Landroidx/core/g/a/d$a;->e:Landroidx/core/g/a/d$a;
+    sget-object v0, Landroidx/core/f/a/d$a;->e:Landroidx/core/f/a/d$a;
 
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->b(Landroidx/core/g/a/d$a;)Z
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->b(Landroidx/core/f/a/d$a;)Z
 
     :cond_2
     const-string v0, "Tab"
 
     .line 303
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->i(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->i(Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -1133,12 +1138,12 @@
 
     const/16 v0, 0x3ea
 
-    invoke-static {p1, v0}, Landroidx/core/g/t;->a(Landroid/content/Context;I)Landroidx/core/g/t;
+    invoke-static {p1, v0}, Landroidx/core/f/t;->a(Landroid/content/Context;I)Landroidx/core/f/t;
 
     move-result-object p1
 
     .line 327
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/t;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/t;)V
 
     goto :goto_0
 
@@ -1146,7 +1151,7 @@
     const/4 p1, 0x0
 
     .line 330
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/t;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/t;)V
 
     :goto_0
     return-void
@@ -1284,7 +1289,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -1322,7 +1327,7 @@
 
     .line 424
     :cond_0
-    invoke-static {p0, p1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
@@ -1552,7 +1557,7 @@
     .line 198
     :cond_3
     :goto_0
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/au;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/at;->a(Landroid/view/View;Ljava/lang/CharSequence;)V
 
     return-void
 .end method

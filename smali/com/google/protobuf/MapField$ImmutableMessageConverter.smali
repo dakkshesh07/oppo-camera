@@ -52,10 +52,10 @@
         }
     .end annotation
 
-    .line 93
+    .line 103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
+    .line 104
     iput-object p1, p0, Lcom/google/protobuf/MapField$ImmutableMessageConverter;->defaultEntry:Lcom/google/protobuf/MapEntry;
 
     return-void
@@ -72,7 +72,7 @@
         }
     .end annotation
 
-    .line 99
+    .line 109
     iget-object v0, p0, Lcom/google/protobuf/MapField$ImmutableMessageConverter;->defaultEntry:Lcom/google/protobuf/MapEntry;
 
     invoke-virtual {v0}, Lcom/google/protobuf/MapEntry;->newBuilderForType()Lcom/google/protobuf/MapEntry$Builder;
@@ -105,10 +105,10 @@
         }
     .end annotation
 
-    .line 104
+    .line 115
     check-cast p1, Lcom/google/protobuf/MapEntry;
 
-    .line 105
+    .line 116
     invoke-virtual {p1}, Lcom/google/protobuf/MapEntry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -125,7 +125,7 @@
 .method public getMessageDefaultInstance()Lcom/google/protobuf/Message;
     .locals 1
 
-    .line 110
+    .line 121
     iget-object v0, p0, Lcom/google/protobuf/MapField$ImmutableMessageConverter;->defaultEntry:Lcom/google/protobuf/MapEntry;
 
     return-object v0

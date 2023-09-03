@@ -3,8 +3,8 @@
 .source "CoordinatorLayout.java"
 
 # interfaces
-.implements Landroidx/core/g/o;
-.implements Landroidx/core/g/p;
+.implements Landroidx/core/f/o;
+.implements Landroidx/core/f/p;
 
 
 # annotations
@@ -70,10 +70,10 @@
     .end annotation
 .end field
 
-.field private static final sRectPool:Landroidx/core/f/e$a;
+.field private static final sRectPool:Landroidx/core/util/f$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/f/e$a<",
+            "Landroidx/core/util/f$a<",
             "Landroid/graphics/Rect;",
             ">;"
         }
@@ -82,7 +82,7 @@
 
 
 # instance fields
-.field private mApplyWindowInsetsListener:Landroidx/core/g/r;
+.field private mApplyWindowInsetsListener:Landroidx/core/f/r;
 
 .field private final mBehaviorConsumed:[I
 
@@ -116,11 +116,11 @@
 
 .field private mKeylines:[I
 
-.field private mLastInsets:Landroidx/core/g/ae;
+.field private mLastInsets:Landroidx/core/f/ae;
 
 .field private mNeedsPreDrawListener:Z
 
-.field private final mNestedScrollingParentHelper:Landroidx/core/g/q;
+.field private final mNestedScrollingParentHelper:Landroidx/core/f/q;
 
 .field private mNestedScrollingTarget:Landroid/view/View;
 
@@ -231,13 +231,13 @@
     sput-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sConstructors:Ljava/lang/ThreadLocal;
 
     .line 152
-    new-instance v0, Landroidx/core/f/e$c;
+    new-instance v0, Landroidx/core/util/f$c;
 
     const/16 v1, 0xc
 
-    invoke-direct {v0, v1}, Landroidx/core/f/e$c;-><init>(I)V
+    invoke-direct {v0, v1}, Landroidx/core/util/f$c;-><init>(I)V
 
-    sput-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sRectPool:Landroidx/core/f/e$a;
+    sput-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sRectPool:Landroidx/core/util/f$a;
 
     return-void
 .end method
@@ -311,11 +311,11 @@
     iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingV2ConsumedCompat:[I
 
     .line 203
-    new-instance v0, Landroidx/core/g/q;
+    new-instance v0, Landroidx/core/f/q;
 
-    invoke-direct {v0, p0}, Landroidx/core/g/q;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p0}, Landroidx/core/f/q;-><init>(Landroid/view/ViewGroup;)V
 
-    iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/g/q;
+    iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/f/q;
 
     const/4 v0, 0x0
 
@@ -467,7 +467,7 @@
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
     .line 250
-    invoke-static {p0}, Landroidx/core/g/w;->f(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->f(Landroid/view/View;)I
 
     move-result p1
 
@@ -476,7 +476,7 @@
     const/4 p1, 0x1
 
     .line 252
-    invoke-static {p0, p1}, Landroidx/core/g/w;->b(Landroid/view/View;I)V
+    invoke-static {p0, p1}, Landroidx/core/f/w;->b(Landroid/view/View;I)V
 
     :cond_4
     return-void
@@ -486,9 +486,9 @@
     .locals 1
 
     .line 156
-    sget-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sRectPool:Landroidx/core/f/e$a;
+    sget-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sRectPool:Landroidx/core/util/f$a;
 
-    invoke-interface {v0}, Landroidx/core/f/e$a;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Landroidx/core/util/f$a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -612,11 +612,11 @@
     return-void
 .end method
 
-.method private dispatchApplyWindowInsetsToBehaviors(Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method private dispatchApplyWindowInsetsToBehaviors(Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 4
 
     .line 854
-    invoke-virtual {p1}, Landroidx/core/g/ae;->f()Z
+    invoke-virtual {p1}, Landroidx/core/f/ae;->f()Z
 
     move-result v0
 
@@ -641,7 +641,7 @@
     move-result-object v2
 
     .line 860
-    invoke-static {v2}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {v2}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v3
 
@@ -662,12 +662,12 @@
     if-eqz v3, :cond_1
 
     .line 866
-    invoke-virtual {v3, p0, v2, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$b;->onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroidx/core/g/ae;)Landroidx/core/g/ae;
+    invoke-virtual {v3, p0, v2, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$b;->onApplyWindowInsets(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroidx/core/f/ae;)Landroidx/core/f/ae;
 
     move-result-object p1
 
     .line 867
-    invoke-virtual {p1}, Landroidx/core/g/ae;->f()Z
+    invoke-virtual {p1}, Landroidx/core/f/ae;->f()Z
 
     move-result v2
 
@@ -697,7 +697,7 @@
     move-result p1
 
     .line 992
-    invoke-static {p1, p2}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p1, p2}, Landroidx/core/f/d;->a(II)I
 
     move-result p1
 
@@ -710,7 +710,7 @@
     move-result p5
 
     .line 994
-    invoke-static {p5, p2}, Landroidx/core/g/d;->a(II)I
+    invoke-static {p5, p2}, Landroidx/core/f/d;->a(II)I
 
     move-result p2
 
@@ -1056,18 +1056,18 @@
     invoke-virtual {v7, v1, v2, v3, v4}, Landroid/graphics/Rect;->set(IIII)V
 
     .line 1200
-    iget-object v1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     if-eqz v1, :cond_0
 
-    invoke-static {p0}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 1201
-    invoke-static {p1}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v1
 
@@ -1076,9 +1076,9 @@
     .line 1204
     iget v1, v7, Landroid/graphics/Rect;->left:I
 
-    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->a()I
 
     move-result v2
 
@@ -1089,9 +1089,9 @@
     .line 1205
     iget v1, v7, Landroid/graphics/Rect;->top:I
 
-    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->b()I
 
     move-result v2
 
@@ -1102,9 +1102,9 @@
     .line 1206
     iget v1, v7, Landroid/graphics/Rect;->right:I
 
-    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->c()I
 
     move-result v2
 
@@ -1115,9 +1115,9 @@
     .line 1207
     iget v1, v7, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->d()I
 
     move-result v2
 
@@ -1154,7 +1154,7 @@
     move v6, p2
 
     .line 1211
-    invoke-static/range {v1 .. v6}, Landroidx/core/g/d;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
+    invoke-static/range {v1 .. v6}, Landroidx/core/f/d;->a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     .line 1213
     iget p2, v8, Landroid/graphics/Rect;->left:I
@@ -1249,7 +1249,7 @@
     move-result v1
 
     .line 1131
-    invoke-static {v1, p3}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v1, p3}, Landroidx/core/f/d;->a(II)I
 
     move-result v1
 
@@ -1413,7 +1413,7 @@
     .locals 8
 
     .line 1413
-    invoke-static {p1}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p1}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1559,7 +1559,7 @@
     :cond_4
     iget v1, v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$e;->h:I
 
-    invoke-static {v1, p3}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v1, p3}, Landroidx/core/f/d;->a(II)I
 
     move-result p3
 
@@ -2232,9 +2232,9 @@
     invoke-virtual {p0}, Landroid/graphics/Rect;->setEmpty()V
 
     .line 165
-    sget-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sRectPool:Landroidx/core/f/e$a;
+    sget-object v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->sRectPool:Landroidx/core/util/f$a;
 
-    invoke-interface {v0, p0}, Landroidx/core/f/e$a;->a(Ljava/lang/Object;)Z
+    invoke-interface {v0, p0}, Landroidx/core/util/f$a;->a(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -2415,7 +2415,7 @@
     sub-int v1, p2, v1
 
     .line 1497
-    invoke-static {p1, v1}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     .line 1498
     iput p2, v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$e;->i:I
@@ -2445,7 +2445,7 @@
     sub-int v1, p2, v1
 
     .line 1506
-    invoke-static {p1, v1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     .line 1507
     iput p2, v0, Landroidx/coordinatorlayout/widget/CoordinatorLayout$e;->j:I
@@ -2468,14 +2468,14 @@
 
     .line 3309
     :cond_0
-    invoke-static {p0}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 3310
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mApplyWindowInsetsListener:Landroidx/core/g/r;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mApplyWindowInsetsListener:Landroidx/core/f/r;
 
     if-nez v0, :cond_1
 
@@ -2484,13 +2484,13 @@
 
     invoke-direct {v0, p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout$1;-><init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
 
-    iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mApplyWindowInsetsListener:Landroidx/core/g/r;
+    iput-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mApplyWindowInsetsListener:Landroidx/core/f/r;
 
     .line 3321
     :cond_1
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mApplyWindowInsetsListener:Landroidx/core/g/r;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mApplyWindowInsetsListener:Landroidx/core/f/r;
 
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     const/16 v0, 0x500
 
@@ -2503,7 +2503,7 @@
     const/4 v0, 0x0
 
     .line 3327
-    invoke-static {p0, v0}, Landroidx/core/g/w;->a(Landroid/view/View;Landroidx/core/g/r;)V
+    invoke-static {p0, v0}, Landroidx/core/f/w;->a(Landroid/view/View;Landroidx/core/f/r;)V
 
     :goto_0
     return-void
@@ -3371,11 +3371,13 @@
     return-void
 .end method
 
-.method public final getLastWindowInsets()Landroidx/core/g/ae;
+.method public final getLastWindowInsets()Landroidx/core/f/ae;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 401
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     return-object v0
 .end method
@@ -3384,9 +3386,9 @@
     .locals 1
 
     .line 2017
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/g/q;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/f/q;
 
-    invoke-virtual {v0}, Landroidx/core/g/q;->a()I
+    invoke-virtual {v0}, Landroidx/core/f/q;->a()I
 
     move-result v0
 
@@ -3750,13 +3752,13 @@
     if-eqz v0, :cond_2
 
     .line 1674
-    invoke-static {v9, v0}, Landroidx/core/g/w;->f(Landroid/view/View;I)V
+    invoke-static {v9, v0}, Landroidx/core/f/w;->f(Landroid/view/View;I)V
 
     :cond_2
     if-eqz v1, :cond_3
 
     .line 1677
-    invoke-static {v9, v1}, Landroidx/core/g/w;->e(Landroid/view/View;I)V
+    invoke-static {v9, v1}, Landroidx/core/f/w;->e(Landroid/view/View;I)V
 
     :cond_3
     if-eqz v14, :cond_4
@@ -3828,18 +3830,18 @@
 
     .line 273
     :cond_1
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     if-nez v0, :cond_2
 
-    invoke-static {p0}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 276
-    invoke-static {p0}, Landroidx/core/g/w;->s(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->s(Landroid/view/View;)V
 
     :cond_2
     const/4 v0, 0x1
@@ -3858,7 +3860,7 @@
     move/from16 v1, p1
 
     .line 1307
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v2
 
@@ -3968,7 +3970,7 @@
     .line 1335
     iget v12, v10, Landroidx/coordinatorlayout/widget/CoordinatorLayout$e;->g:I
 
-    invoke-static {v12, v2}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v12, v2}, Landroidx/core/f/d;->a(II)I
 
     move-result v12
 
@@ -4257,13 +4259,13 @@
     if-eqz v0, :cond_1
 
     .line 928
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v0}, Landroidx/core/f/ae;->b()I
 
     move-result v0
 
@@ -4334,7 +4336,7 @@
     .locals 1
 
     .line 906
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result p1
 
@@ -4498,7 +4500,7 @@
     move-result v1
 
     .line 774
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v10
 
@@ -4549,11 +4551,11 @@
     move-result v1
 
     .line 787
-    iget-object v3, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v3, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     if-eqz v3, :cond_1
 
-    invoke-static/range {p0 .. p0}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static/range {p0 .. p0}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v3
 
@@ -4644,7 +4646,7 @@
     move-result v11
 
     .line 802
-    invoke-static {v11, v10}, Landroidx/core/g/d;->a(II)I
+    invoke-static {v11, v10}, Landroidx/core/f/d;->a(II)I
 
     move-result v11
 
@@ -4721,39 +4723,39 @@
     if-eqz v19, :cond_a
 
     .line 816
-    invoke-static/range {v20 .. v20}, Landroidx/core/g/w;->t(Landroid/view/View;)Z
+    invoke-static/range {v20 .. v20}, Landroidx/core/f/w;->t(Landroid/view/View;)Z
 
     move-result v0
 
     if-nez v0, :cond_a
 
     .line 819
-    iget-object v0, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v0, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {v0}, Landroidx/core/g/ae;->a()I
+    invoke-virtual {v0}, Landroidx/core/f/ae;->a()I
 
     move-result v0
 
-    iget-object v2, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v2, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     .line 820
-    invoke-virtual {v2}, Landroidx/core/g/ae;->c()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->c()I
 
     move-result v2
 
     add-int/2addr v0, v2
 
     .line 821
-    iget-object v2, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v2, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-virtual {v2}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {v2}, Landroidx/core/f/ae;->b()I
 
     move-result v2
 
-    iget-object v11, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v11, v7, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     .line 822
-    invoke-virtual {v11}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {v11}, Landroidx/core/f/ae;->d()I
 
     move-result v11
 
@@ -5587,9 +5589,9 @@
     .locals 9
 
     .line 1802
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/g/q;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/f/q;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroidx/core/g/q;->a(Landroid/view/View;Landroid/view/View;II)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroidx/core/f/q;->a(Landroid/view/View;Landroid/view/View;II)V
 
     .line 1803
     iput-object p2, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingTarget:Landroid/view/View;
@@ -5938,9 +5940,9 @@
     .locals 5
 
     .line 1829
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/g/q;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mNestedScrollingParentHelper:Landroidx/core/f/q;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/core/g/q;->a(Landroid/view/View;I)V
+    invoke-virtual {v0, p1, p2}, Landroidx/core/f/q;->a(Landroid/view/View;I)V
 
     .line 1831
     invoke-virtual {p0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->getChildCount()I
@@ -6316,7 +6318,7 @@
     iget-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mStatusBarBackground:Landroid/graphics/drawable/Drawable;
 
     .line 312
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -6351,7 +6353,7 @@
 
     .line 316
     :cond_4
-    invoke-static {p0}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p0}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_5
     return-void
@@ -6380,7 +6382,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroidx/core/content/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Landroidx/core/a/a;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -6433,20 +6435,20 @@
     return-void
 .end method
 
-.method final setWindowInsets(Landroidx/core/g/ae;)Landroidx/core/g/ae;
+.method final setWindowInsets(Landroidx/core/f/ae;)Landroidx/core/f/ae;
     .locals 3
 
     .line 384
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
-    invoke-static {v0, p1}, Landroidx/core/f/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Landroidx/core/util/d;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
     .line 385
-    iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/g/ae;
+    iput-object p1, p0, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->mLastInsets:Landroidx/core/f/ae;
 
     const/4 v0, 0x1
 
@@ -6455,7 +6457,7 @@
     if-eqz p1, :cond_0
 
     .line 386
-    invoke-virtual {p1}, Landroidx/core/g/ae;->b()I
+    invoke-virtual {p1}, Landroidx/core/f/ae;->b()I
 
     move-result v2
 
@@ -6491,7 +6493,7 @@
     invoke-virtual {p0, v0}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->setWillNotDraw(Z)V
 
     .line 390
-    invoke-direct {p0, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->dispatchApplyWindowInsetsToBehaviors(Landroidx/core/g/ae;)Landroidx/core/g/ae;
+    invoke-direct {p0, p1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->dispatchApplyWindowInsetsToBehaviors(Landroidx/core/f/ae;)Landroidx/core/f/ae;
 
     move-result-object p1
 

@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <plurals name="red_dot_with_number_description">
+    <plurals name="MT_Bin">
+        <item quantity="other">刪除 %1$d 項</item>
+        <item quantity="one">刪除 %1$d 項</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0001">
+        <item quantity="other">已選擇 %1$d 項</item>
+        <item quantity="one">已選擇 %1$d 項</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0003">
         <item quantity="other">%d 個新通知</item>
         <item quantity="one">%d 個新通知</item>
     </plurals>
-    <plurals name="sticker_recycle_bin_title_has_selected">
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0004">
         <item quantity="other">已選擇 %1$d 張貼圖</item>
         <item quantity="one">已選擇 %1$d 張貼圖</item>
+    </plurals>
+    <plurals name="APKTOOL_DUPLICATE_plurals_0x7f0e0005">
+        <item quantity="other">已選擇 %1$d 項</item>
+        <item quantity="one">已選擇 %1$d 項</item>
     </plurals>
 </resources>

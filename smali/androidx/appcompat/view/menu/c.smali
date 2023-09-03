@@ -6,6 +6,11 @@
 .implements Landroidx/appcompat/view/menu/n;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field protected a:Landroid/content/Context;
 

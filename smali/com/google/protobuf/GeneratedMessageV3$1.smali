@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/google/protobuf/GeneratedMessageV3;Lcom/google/protobuf/AbstractMessage$BuilderParent;)V
     .locals 0
 
-    .line 375
+    .line 537
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessageV3$1;->this$0:Lcom/google/protobuf/GeneratedMessageV3;
 
     iput-object p2, p0, Lcom/google/protobuf/GeneratedMessageV3$1;->val$parent:Lcom/google/protobuf/AbstractMessage$BuilderParent;
@@ -42,7 +42,7 @@
 .method public markDirty()V
     .locals 1
 
-    .line 378
+    .line 540
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessageV3$1;->val$parent:Lcom/google/protobuf/AbstractMessage$BuilderParent;
 
     invoke-interface {v0}, Lcom/google/protobuf/AbstractMessage$BuilderParent;->markDirty()V

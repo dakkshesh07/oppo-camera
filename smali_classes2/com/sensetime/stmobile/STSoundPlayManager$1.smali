@@ -70,7 +70,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -123,7 +123,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 89
     iget-object p1, p0, Lcom/sensetime/stmobile/STSoundPlayManager$1;->this$0:Lcom/sensetime/stmobile/STSoundPlayManager;
@@ -140,7 +140,7 @@
     const-string v1, "onCompletion, play done"
 
     .line 91
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_2
 
@@ -189,7 +189,7 @@
     const-string v1, "onCompletion err"
 
     .line 101
-    invoke-static {v0, v1, p1}, Lcom/oppo/camera/e;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p1}, Lcom/oppo/camera/c;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

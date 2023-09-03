@@ -1,17 +1,11 @@
 .class public interface abstract Lcom/oppo/camera/ui/preview/r;
 .super Ljava/lang/Object;
-.source "ZoomListener.java"
+.source "PreviewRenderCallback.java"
 
 
 # virtual methods
-.method public abstract a(F)Landroid/graphics/drawable/Drawable;
+.method public abstract a(Lcom/oppo/camera/gl/h;Z)V
 .end method
 
-.method public abstract a()Z
-.end method
-
-.method public abstract b()Z
-.end method
-
-.method public abstract c()Z
+.method public abstract b(Lcom/oppo/camera/gl/h;Z)V
 .end method

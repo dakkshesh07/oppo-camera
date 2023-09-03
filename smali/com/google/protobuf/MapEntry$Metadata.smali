@@ -55,7 +55,7 @@
         }
     .end annotation
 
-    .line 63
+    .line 62
     invoke-static {p2}, Lcom/google/protobuf/MapEntry;->access$000(Lcom/google/protobuf/MapEntry;)Ljava/lang/Object;
 
     move-result-object v0
@@ -66,10 +66,10 @@
 
     invoke-direct {p0, p3, v0, p4, p2}, Lcom/google/protobuf/MapEntryLite$Metadata;-><init>(Lcom/google/protobuf/WireFormat$FieldType;Ljava/lang/Object;Lcom/google/protobuf/WireFormat$FieldType;Ljava/lang/Object;)V
 
-    .line 64
+    .line 63
     iput-object p1, p0, Lcom/google/protobuf/MapEntry$Metadata;->descriptor:Lcom/google/protobuf/Descriptors$Descriptor;
 
-    .line 65
+    .line 64
     new-instance p1, Lcom/google/protobuf/MapEntry$Metadata$1;
 
     invoke-direct {p1, p0}, Lcom/google/protobuf/MapEntry$Metadata$1;-><init>(Lcom/google/protobuf/MapEntry$Metadata;)V

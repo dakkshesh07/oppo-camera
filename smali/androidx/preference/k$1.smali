@@ -1,5 +1,5 @@
 .class Landroidx/preference/k$1;
-.super Landroidx/core/g/a;
+.super Landroidx/core/f/a;
 .source "PreferenceRecyclerViewAccessibilityDelegate.java"
 
 
@@ -25,22 +25,22 @@
     .line 61
     iput-object p1, p0, Landroidx/preference/k$1;->a:Landroidx/preference/k;
 
-    invoke-direct {p0}, Landroidx/core/g/a;-><init>()V
+    invoke-direct {p0}, Landroidx/core/f/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+.method public onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
     .locals 2
 
     .line 64
     iget-object v0, p0, Landroidx/preference/k$1;->a:Landroidx/preference/k;
 
-    iget-object v0, v0, Landroidx/preference/k;->b:Landroidx/core/g/a;
+    iget-object v0, v0, Landroidx/preference/k;->b:Landroidx/core/f/a;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/core/g/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/g/a/d;)V
+    invoke-virtual {v0, p1, p2}, Landroidx/core/f/a;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroidx/core/f/a/d;)V
 
     .line 65
     iget-object v0, p0, Landroidx/preference/k$1;->a:Landroidx/preference/k;
@@ -82,7 +82,7 @@
 
     .line 78
     :cond_1
-    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->a(Landroidx/core/g/a/d;)V
+    invoke-virtual {p1, p2}, Landroidx/preference/Preference;->a(Landroidx/core/f/a/d;)V
 
     return-void
 .end method
@@ -93,9 +93,9 @@
     .line 84
     iget-object v0, p0, Landroidx/preference/k$1;->a:Landroidx/preference/k;
 
-    iget-object v0, v0, Landroidx/preference/k;->b:Landroidx/core/g/a;
+    iget-object v0, v0, Landroidx/preference/k;->b:Landroidx/core/f/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/core/g/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
+    invoke-virtual {v0, p1, p2, p3}, Landroidx/core/f/a;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result p1
 

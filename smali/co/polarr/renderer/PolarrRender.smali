@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field public instance:La/a/a/d;
+.field public instance:La/a/b/d;
 
 
 # direct methods
@@ -18,11 +18,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, La/a/a/d;
+    new-instance v0, La/a/b/d;
 
-    invoke-direct {v0}, La/a/a/d;-><init>()V
+    invoke-direct {v0}, La/a/b/d;-><init>()V
 
-    iput-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iput-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public static SetStaticResPath(Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0}, La/a/a/a/ak;->b(Ljava/lang/String;)V
+    invoke-static {p0}, La/a/b/a/ak;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 .method public static Version()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "1.6.13_oppo_camera_capture"
+    const-string v0, "1.6.13_oppo_camera"
 
     return-object v0
 .end method
@@ -46,7 +46,7 @@
 .method public static clearTextureHelper(III)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, La/a/a/a;->a(III)V
+    invoke-static {p0, p1, p2}, La/a/b/a;->a(III)V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 .method public static enableLogger(Z)V
     .locals 0
 
-    invoke-static {p0}, La/a/a/a;->a(Z)V
+    invoke-static {p0}, La/a/b/a;->a(Z)V
 
     return-void
 .end method
@@ -76,7 +76,7 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    invoke-static {p0}, La/a/a/a;->b(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p0}, La/a/b/a;->b(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object p0
 
@@ -122,7 +122,7 @@
 
     iget-object v0, p4, Lco/polarr/renderer/entities/MagicEraserPath;->points:Ljava/util/List;
 
-    invoke-static {v0, p5, p6, p7}, La/a/a/d;->a(Ljava/util/List;FFF)Ljava/util/List;
+    invoke-static {v0, p5, p6, p7}, La/a/b/d;->a(Ljava/util/List;FFF)Ljava/util/List;
 
     move-result-object p5
 
@@ -147,7 +147,7 @@
 
     move v3, p3
 
-    invoke-static/range {v0 .. v5}, La/a/a/a;->a(Landroid/content/res/Resources;IIILco/polarr/renderer/entities/MagicEraserPath;I)V
+    invoke-static/range {v0 .. v5}, La/a/b/a;->a(Landroid/content/res/Resources;IIILco/polarr/renderer/entities/MagicEraserPath;I)V
 
     return-void
 .end method
@@ -155,7 +155,7 @@
 .method public static magicEraserOneTimeCompatible(Landroid/content/res/Resources;IIILco/polarr/renderer/entities/MagicEraserPath;I)V
     .locals 0
 
-    invoke-static/range {p0 .. p5}, La/a/a/a;->a(Landroid/content/res/Resources;IIILco/polarr/renderer/entities/MagicEraserPath;I)V
+    invoke-static/range {p0 .. p5}, La/a/b/a;->a(Landroid/content/res/Resources;IIILco/polarr/renderer/entities/MagicEraserPath;I)V
 
     return-void
 .end method
@@ -176,7 +176,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1, p2}, La/a/a/a;->a(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Ljava/util/List;)Ljava/util/List;
+    invoke-static {p0, p1, p2}, La/a/b/a;->a(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Ljava/util/List;)Ljava/util/List;
 
     move-result-object p0
 
@@ -201,7 +201,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, p2, p3, v0}, La/a/a/a;->a(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Ljava/util/List;FF)Ljava/util/List;
+    invoke-static {p0, p1, p2, p3, v0}, La/a/b/a;->a(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Ljava/util/List;FF)Ljava/util/List;
 
     move-result-object p0
 
@@ -224,7 +224,7 @@
         }
     .end annotation
 
-    invoke-static {p0, p1, p2, p3, p4}, La/a/a/a;->a(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Ljava/util/List;FF)Ljava/util/List;
+    invoke-static {p0, p1, p2, p3, p4}, La/a/b/a;->a(Landroid/content/res/Resources;Landroid/graphics/Bitmap;Ljava/util/List;FF)Ljava/util/List;
 
     move-result-object p0
 
@@ -234,7 +234,7 @@
 .method public static renderNV12(Landroid/content/Context;[BIILjava/lang/String;FZ)[B
     .locals 0
 
-    invoke-static/range {p0 .. p6}, La/a/a/a;->b(Landroid/content/Context;[BIILjava/lang/String;FZ)[B
+    invoke-static/range {p0 .. p6}, La/a/b/a;->b(Landroid/content/Context;[BIILjava/lang/String;FZ)[B
 
     move-result-object p0
 
@@ -244,17 +244,17 @@
 .method public static renderNV21(Landroid/content/Context;[BIILjava/lang/String;FZ)[B
     .locals 0
 
-    invoke-static/range {p0 .. p6}, La/a/a/a;->a(Landroid/content/Context;[BIILjava/lang/String;FZ)[B
+    invoke-static/range {p0 .. p6}, La/a/b/a;->a(Landroid/content/Context;[BIILjava/lang/String;FZ)[B
 
-    move-result-object p0
+    const/4 p0, 0x0
 
-    return-object p0
+    throw p0
 .end method
 
 .method public static setupVignetteParams(FFFFFF)V
     .locals 0
 
-    invoke-static/range {p0 .. p5}, La/a/a/a;->a(FFFFFF)V
+    invoke-static/range {p0 .. p5}, La/a/b/a;->a(FFFFFF)V
 
     return-void
 .end method
@@ -267,7 +267,7 @@
     monitor-enter v0
 
     :try_start_0
-    invoke-static {p0}, La/a/a/a;->a(I)V
+    invoke-static {p0}, La/a/b/a;->a(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -292,9 +292,9 @@
 .method public addBrushPathPoint(Lco/polarr/renderer/entities/BrushItem;Landroid/graphics/PointF;)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(Lco/polarr/renderer/entities/BrushItem;Landroid/graphics/PointF;)V
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(Lco/polarr/renderer/entities/BrushItem;Landroid/graphics/PointF;)V
 
     return-void
 .end method
@@ -314,9 +314,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, La/a/a/d;->a(Ljava/util/Map;IFZ)V
+    invoke-virtual {v0, p1, p2, p3, p4}, La/a/b/d;->a(Ljava/util/Map;IFZ)V
 
     return-void
 .end method
@@ -333,11 +333,11 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, La/a/a/d;->a(FLjava/util/Map;)Ljava/util/Map;
+    invoke-virtual {v0, p1, v1}, La/a/b/d;->a(FLjava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -360,9 +360,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(FLjava/util/Map;)Ljava/util/Map;
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(FLjava/util/Map;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -384,9 +384,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->a(F)Ljava/util/Map;
+    invoke-virtual {v0, p1}, La/a/b/d;->a(F)Ljava/util/Map;
 
     move-result-object p1
 
@@ -404,9 +404,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->a(Ljava/util/List;)I
+    invoke-virtual {v0, p1}, La/a/b/d;->a(Ljava/util/List;)I
 
     move-result p1
 
@@ -416,9 +416,9 @@
 .method public brushPaintFinish()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->a()V
+    invoke-virtual {v0}, La/a/b/d;->a()V
 
     return-void
 .end method
@@ -426,9 +426,9 @@
 .method public brushStart(Lco/polarr/renderer/entities/BrushItem;)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->a(Lco/polarr/renderer/entities/BrushItem;)V
+    invoke-virtual {v0, p1}, La/a/b/d;->a(Lco/polarr/renderer/entities/BrushItem;)V
 
     return-void
 .end method
@@ -436,9 +436,9 @@
 .method public clearTexture(III)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2, p3}, La/a/a/d;->a(III)V
+    invoke-virtual {v0, p1, p2, p3}, La/a/b/d;->a(III)V
 
     return-void
 .end method
@@ -446,9 +446,9 @@
 .method public clearThumbCache()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->b()V
+    invoke-virtual {v0}, La/a/b/d;->b()V
 
     return-void
 .end method
@@ -456,9 +456,9 @@
 .method public combine(II)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(II)V
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(II)V
 
     return-void
 .end method
@@ -466,9 +466,9 @@
 .method public createInputTexture()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->c()V
+    invoke-virtual {v0}, La/a/b/d;->c()V
 
     return-void
 .end method
@@ -484,9 +484,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(Ljava/util/List;I)V
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(Ljava/util/List;I)V
 
     return-void
 .end method
@@ -502,7 +502,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
     move-object v1, p1
 
@@ -516,7 +516,7 @@
 
     move v6, p6
 
-    invoke-virtual/range {v0 .. v6}, La/a/a/d;->a(Ljava/util/List;IZFFF)V
+    invoke-virtual/range {v0 .. v6}, La/a/b/d;->a(Ljava/util/List;IZFFF)V
 
     return-void
 .end method
@@ -524,9 +524,9 @@
 .method public drawFrame()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->e()V
+    invoke-virtual {v0}, La/a/b/d;->e()V
 
     return-void
 .end method
@@ -534,9 +534,9 @@
 .method public drawFrameWithVignette()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->f()V
+    invoke-virtual {v0}, La/a/b/d;->f()V
 
     return-void
 .end method
@@ -544,9 +544,9 @@
 .method public enableDemoire(Z)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(Z)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(Z)V
 
     return-void
 .end method
@@ -554,9 +554,9 @@
 .method public enableRealTimeAutoEnhancement(Z)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->c(Z)V
+    invoke-virtual {v0, p1}, La/a/b/d;->c(Z)V
 
     return-void
 .end method
@@ -566,9 +566,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->d(Z)V
+    invoke-virtual {v0, p1}, La/a/b/d;->d(Z)V
 
     return-void
 .end method
@@ -576,9 +576,9 @@
 .method public fastRenderBitmap(Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -588,9 +588,9 @@
 .method public fastRenderBitmap(Landroid/graphics/Bitmap;Ljava/lang/String;F)Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2, p3}, La/a/a/d;->a(Landroid/graphics/Bitmap;Ljava/lang/String;F)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, p1, p2, p3}, La/a/b/d;->a(Landroid/graphics/Bitmap;Ljava/lang/String;F)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -600,9 +600,9 @@
 .method public fastUpdateFilter(Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, La/a/b/d;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -610,9 +610,9 @@
 .method public fastUpdateFilter(Ljava/lang/String;F)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->b(Ljava/lang/String;F)V
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->b(Ljava/lang/String;F)V
 
     return-void
 .end method
@@ -628,9 +628,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(Ljava/util/List;)V
 
     return-void
 .end method
@@ -638,9 +638,9 @@
 .method public fastUseCombineLut()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->i()V
+    invoke-virtual {v0}, La/a/b/d;->i()V
 
     return-void
 .end method
@@ -648,21 +648,21 @@
 .method public getBrushLastPaint()I
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->j()I
+    invoke-virtual {v0}, La/a/b/d;->j()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public getLookup2DFilter()La/a/a/a/ak;
+.method public getLookup2DFilter()La/a/b/a/ak;
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->k()La/a/a/a/ak;
+    invoke-virtual {v0}, La/a/b/d;->k()La/a/b/a/ak;
 
     move-result-object v0
 
@@ -672,9 +672,9 @@
 .method public getOutputId()I
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->l()I
+    invoke-virtual {v0}, La/a/b/d;->l()I
 
     move-result v0
 
@@ -684,9 +684,9 @@
 .method public getTextureId()I
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->m()I
+    invoke-virtual {v0}, La/a/b/d;->m()I
 
     move-result v0
 
@@ -698,9 +698,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->n()V
+    invoke-virtual {v0}, La/a/b/d;->n()V
 
     return-void
 .end method
@@ -708,9 +708,9 @@
 .method public initRender(Landroid/content/res/Resources;IIZ)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, La/a/a/d;->a(Landroid/content/res/Resources;IIZ)V
+    invoke-virtual {v0, p1, p2, p3, p4}, La/a/b/d;->a(Landroid/content/res/Resources;IIZ)V
 
     return-void
 .end method
@@ -718,7 +718,7 @@
 .method public initRender(Landroid/content/res/Resources;IIZI)V
     .locals 6
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
     move-object v1, p1
 
@@ -730,7 +730,7 @@
 
     move v5, p5
 
-    invoke-virtual/range {v0 .. v5}, La/a/a/d;->a(Landroid/content/res/Resources;IIZI)V
+    invoke-virtual/range {v0 .. v5}, La/a/b/d;->a(Landroid/content/res/Resources;IIZI)V
 
     return-void
 .end method
@@ -748,9 +748,9 @@
 .method public magicEraserPathOverLay(Lco/polarr/renderer/entities/MagicEraserPath;III)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, La/a/a/d;->a(Lco/polarr/renderer/entities/MagicEraserPath;III)V
+    invoke-virtual {v0, p1, p2, p3, p4}, La/a/b/d;->a(Lco/polarr/renderer/entities/MagicEraserPath;III)V
 
     return-void
 .end method
@@ -758,9 +758,9 @@
 .method public release()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->o()V
+    invoke-virtual {v0}, La/a/b/d;->o()V
 
     return-void
 .end method
@@ -768,9 +768,9 @@
 .method public releaseGLRes()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->r()V
+    invoke-virtual {v0}, La/a/b/d;->r()V
 
     return-void
 .end method
@@ -778,9 +778,9 @@
 .method public releaseNonGLRes()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->t()V
+    invoke-virtual {v0}, La/a/b/d;->t()V
 
     return-void
 .end method
@@ -799,9 +799,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(Landroid/graphics/Bitmap;Ljava/util/Map;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(Landroid/graphics/Bitmap;Ljava/util/Map;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -811,9 +811,9 @@
 .method public setBrushLastPaintingTex(I)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->a(I)V
+    invoke-virtual {v0, p1}, La/a/b/d;->a(I)V
 
     return-void
 .end method
@@ -821,9 +821,9 @@
 .method public setFilterIntensity(F)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(F)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(F)V
 
     return-void
 .end method
@@ -831,9 +831,9 @@
 .method public setGrainAmount(F)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->c(F)V
+    invoke-virtual {v0, p1}, La/a/b/d;->c(F)V
 
     return-void
 .end method
@@ -841,9 +841,9 @@
 .method public setInputTexture(I)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(I)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(I)V
 
     return-void
 .end method
@@ -851,9 +851,9 @@
 .method public setNeedDrawScreen(Z)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->f(Z)V
+    invoke-virtual {v0, p1}, La/a/b/d;->f(Z)V
 
     return-void
 .end method
@@ -861,9 +861,9 @@
 .method public setOutputTexture(I)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->c(I)V
+    invoke-virtual {v0, p1}, La/a/b/d;->c(I)V
 
     return-void
 .end method
@@ -879,9 +879,9 @@
 .method public updateBrushPoints(Lco/polarr/renderer/entities/BrushItem;)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(Lco/polarr/renderer/entities/BrushItem;)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(Lco/polarr/renderer/entities/BrushItem;)V
 
     return-void
 .end method
@@ -900,9 +900,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->a(Ljava/util/List;F)V
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->a(Ljava/util/List;F)V
 
     return-void
 .end method
@@ -910,9 +910,9 @@
 .method public updateInputTexture()V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0}, La/a/a/d;->w()V
+    invoke-virtual {v0}, La/a/b/d;->w()V
 
     return-void
 .end method
@@ -920,9 +920,9 @@
 .method public updateOffsetScale(FFF)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2, p3}, La/a/a/d;->a(FFF)V
+    invoke-virtual {v0, p1, p2, p3}, La/a/b/d;->a(FFF)V
 
     return-void
 .end method
@@ -930,9 +930,9 @@
 .method public updateSize(II)V
     .locals 1
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1, p2}, La/a/a/d;->c(II)V
+    invoke-virtual {v0, p1, p2}, La/a/b/d;->c(II)V
 
     return-void
 .end method
@@ -942,9 +942,9 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -961,9 +961,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/a/d;
+    iget-object v0, p0, Lco/polarr/renderer/PolarrRender;->instance:La/a/b/d;
 
-    invoke-virtual {v0, p1}, La/a/a/d;->b(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, La/a/b/d;->b(Ljava/util/Map;)V
 
     return-void
 .end method

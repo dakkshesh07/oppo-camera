@@ -81,12 +81,12 @@
 .method public add(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/FormBody$Builder;
     .locals 8
 
-    .line 120
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    .line 123
     iget-object v0, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;
-
-    iget-object v7, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
-
-    const-string v2, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
     const/4 v3, 0x0
 
@@ -96,6 +96,10 @@
 
     const/4 v6, 0x1
 
+    iget-object v7, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
+
+    const-string v2, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
+
     move-object v1, p1
 
     invoke-static/range {v1 .. v7}, Lokhttp3/HttpUrl;->canonicalize(Ljava/lang/String;Ljava/lang/String;ZZZZLjava/nio/charset/Charset;)Ljava/lang/String;
@@ -104,16 +108,16 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 121
+    .line 124
     iget-object p1, p0, Lokhttp3/FormBody$Builder;->values:Ljava/util/List;
-
-    iget-object v6, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
-
-    const-string v1, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
     const/4 v2, 0x0
 
     const/4 v4, 0x1
+
+    iget-object v6, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
+
+    const-string v1, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
     move-object v0, p2
 
@@ -124,17 +128,37 @@
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
+
+    .line 121
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "value == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 120
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "name == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public addEncoded(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/FormBody$Builder;
     .locals 8
 
-    .line 126
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    .line 132
     iget-object v0, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;
-
-    iget-object v7, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
-
-    const-string v2, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
     const/4 v3, 0x1
 
@@ -144,6 +168,10 @@
 
     const/4 v6, 0x1
 
+    iget-object v7, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
+
+    const-string v2, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
+
     move-object v1, p1
 
     invoke-static/range {v1 .. v7}, Lokhttp3/HttpUrl;->canonicalize(Ljava/lang/String;Ljava/lang/String;ZZZZLjava/nio/charset/Charset;)Ljava/lang/String;
@@ -152,18 +180,18 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 127
+    .line 133
     iget-object p1, p0, Lokhttp3/FormBody$Builder;->values:Ljava/util/List;
-
-    iget-object v6, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
-
-    const-string v1, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
     const/4 v4, 0x1
+
+    iget-object v6, p0, Lokhttp3/FormBody$Builder;->charset:Ljava/nio/charset/Charset;
+
+    const-string v1, " \"\':;<=>@[]^`{}|/\\?#&!$(),~"
 
     move-object v0, p2
 
@@ -174,12 +202,32 @@
     invoke-interface {p1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
+
+    .line 130
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "value == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    .line 129
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "name == null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 .method public build()Lokhttp3/FormBody;
     .locals 3
 
-    .line 132
+    .line 138
     new-instance v0, Lokhttp3/FormBody;
 
     iget-object v1, p0, Lokhttp3/FormBody$Builder;->names:Ljava/util/List;

@@ -16,6 +16,9 @@
 
 # instance fields
 .field protected a:Landroidx/core/app/h$d;
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field b:Ljava/lang/CharSequence;
 
@@ -43,12 +46,16 @@
 # virtual methods
 .method public a(Landroid/os/Bundle;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
 
 .method public a(Landroidx/core/app/g;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     return-void
 .end method
@@ -78,6 +85,8 @@
 
 .method public b(Landroidx/core/app/g;)Landroid/widget/RemoteViews;
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -86,6 +95,8 @@
 
 .method public c(Landroidx/core/app/g;)Landroid/widget/RemoteViews;
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 p1, 0x0
 
@@ -94,6 +105,8 @@
 
 .method public d(Landroidx/core/app/g;)Landroid/widget/RemoteViews;
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     const/4 p1, 0x0
 

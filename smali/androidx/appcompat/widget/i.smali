@@ -3,6 +3,11 @@
 .source "AppCompatDrawableManager.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final a:Landroid/graphics/PorterDuff$Mode;
 
@@ -10,7 +15,7 @@
 
 
 # instance fields
-.field private c:Landroidx/appcompat/widget/ai;
+.field private c:Landroidx/appcompat/widget/ah;
 
 
 # direct methods
@@ -43,7 +48,7 @@
 
     .line 438
     :try_start_0
-    invoke-static {p0, p1}, Landroidx/appcompat/widget/ai;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
+    invoke-static {p0, p1}, Landroidx/appcompat/widget/ah;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object p0
     :try_end_0
@@ -84,22 +89,22 @@
     .line 56
     sget-object v1, Landroidx/appcompat/widget/i;->b:Landroidx/appcompat/widget/i;
 
-    invoke-static {}, Landroidx/appcompat/widget/ai;->a()Landroidx/appcompat/widget/ai;
+    invoke-static {}, Landroidx/appcompat/widget/ah;->a()Landroidx/appcompat/widget/ah;
 
     move-result-object v2
 
-    iput-object v2, v1, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ai;
+    iput-object v2, v1, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ah;
 
     .line 57
     sget-object v1, Landroidx/appcompat/widget/i;->b:Landroidx/appcompat/widget/i;
 
-    iget-object v1, v1, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ai;
+    iget-object v1, v1, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ah;
 
     new-instance v2, Landroidx/appcompat/widget/i$1;
 
     invoke-direct {v2}, Landroidx/appcompat/widget/i$1;-><init>()V
 
-    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ai;->a(Landroidx/appcompat/widget/ai$e;)V
+    invoke-virtual {v1, v2}, Landroidx/appcompat/widget/ah;->a(Landroidx/appcompat/widget/ah$e;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -117,11 +122,11 @@
     throw v1
 .end method
 
-.method static a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/aq;[I)V
+.method static a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/ap;[I)V
     .locals 0
 
     .line 433
-    invoke-static {p0, p1, p2}, Landroidx/appcompat/widget/ai;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/aq;[I)V
+    invoke-static {p0, p1, p2}, Landroidx/appcompat/widget/ah;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/ap;[I)V
 
     return-void
 .end method
@@ -178,9 +183,9 @@
 
     .line 406
     :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ai;
+    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ah;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/ah;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
     :try_end_0
@@ -205,9 +210,9 @@
 
     .line 411
     :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ai;
+    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ah;
 
-    invoke-virtual {v0, p1, p2, p3}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v0, p1, p2, p3}, Landroidx/appcompat/widget/ah;->a(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
     :try_end_0
@@ -232,9 +237,9 @@
 
     .line 415
     :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ai;
+    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ah;
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ai;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ah;->a(Landroid/content/Context;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -258,9 +263,9 @@
 
     .line 429
     :try_start_0
-    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ai;
+    iget-object v0, p0, Landroidx/appcompat/widget/i;->c:Landroidx/appcompat/widget/ah;
 
-    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/ai;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, p1, p2}, Landroidx/appcompat/widget/ah;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
     :try_end_0

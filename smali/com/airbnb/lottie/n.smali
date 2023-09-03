@@ -29,7 +29,7 @@
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/airbnb/lottie/f/f;",
+            "Lcom/airbnb/lottie/c/f;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator<",
-            "Landroidx/core/f/d<",
+            "Landroidx/core/util/e<",
             "Ljava/lang/String;",
             "Ljava/lang/Float;",
             ">;>;"
@@ -61,9 +61,9 @@
     iput-boolean v0, p0, Lcom/airbnb/lottie/n;->a:Z
 
     .line 24
-    new-instance v0, Landroidx/b/b;
+    new-instance v0, Landroidx/collection/ArraySet;
 
-    invoke-direct {v0}, Landroidx/b/b;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/ArraySet;-><init>()V
 
     iput-object v0, p0, Lcom/airbnb/lottie/n;->b:Ljava/util/Set;
 
@@ -104,14 +104,14 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/airbnb/lottie/f/f;
+    check-cast v0, Lcom/airbnb/lottie/c/f;
 
     if-nez v0, :cond_1
 
     .line 50
-    new-instance v0, Lcom/airbnb/lottie/f/f;
+    new-instance v0, Lcom/airbnb/lottie/c/f;
 
-    invoke-direct {v0}, Lcom/airbnb/lottie/f/f;-><init>()V
+    invoke-direct {v0}, Lcom/airbnb/lottie/c/f;-><init>()V
 
     .line 51
     iget-object v1, p0, Lcom/airbnb/lottie/n;->c:Ljava/util/Map;
@@ -120,7 +120,7 @@
 
     .line 53
     :cond_1
-    invoke-virtual {v0, p2}, Lcom/airbnb/lottie/f/f;->a(F)V
+    invoke-virtual {v0, p2}, Lcom/airbnb/lottie/c/f;->a(F)V
 
     const-string v0, "__container"
 

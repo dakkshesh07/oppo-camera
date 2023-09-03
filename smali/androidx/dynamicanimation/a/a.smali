@@ -40,10 +40,10 @@
 
 .field c:J
 
-.field private final d:Landroidx/b/g;
+.field private final d:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "Landroidx/dynamicanimation/a/a$b;",
             "Ljava/lang/Long;",
             ">;"
@@ -79,11 +79,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 75
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/b/g;
+    iput-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/collection/SimpleArrayMap;
 
     .line 77
     new-instance v0, Ljava/util/ArrayList;
@@ -150,9 +150,9 @@
     .locals 4
 
     .line 171
-    iget-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -175,9 +175,9 @@
     if-gez p2, :cond_1
 
     .line 176
-    iget-object p2, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/b/g;
+    iget-object p2, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p2, p1}, Landroidx/b/g;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     return v1
 
@@ -299,9 +299,9 @@
     .locals 2
 
     .line 141
-    iget-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 142
     iget-object v0, p0, Landroidx/dynamicanimation/a/a;->b:Ljava/util/ArrayList;
@@ -370,7 +370,7 @@
     if-lez v0, :cond_2
 
     .line 133
-    iget-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/dynamicanimation/a/a;->d:Landroidx/collection/SimpleArrayMap;
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -382,7 +382,7 @@
 
     move-result-object p2
 
-    invoke-virtual {v0, p1, p2}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, p2}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
     return-void

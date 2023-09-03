@@ -32,7 +32,7 @@
 .method constructor <init>(Lokhttp3/internal/http1/Http1Codec;Lokhttp3/HttpUrl;)V
     .locals 2
 
-    .line 436
+    .line 439
     iput-object p1, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     const/4 v0, 0x0
@@ -41,15 +41,15 @@
 
     const-wide/16 v0, -0x1
 
-    .line 433
+    .line 436
     iput-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
     const/4 p1, 0x1
 
-    .line 434
+    .line 437
     iput-boolean p1, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->hasMoreChunks:Z
 
-    .line 437
+    .line 440
     iput-object p2, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->url:Lokhttp3/HttpUrl;
 
     return-void
@@ -63,7 +63,7 @@
         }
     .end annotation
 
-    .line 462
+    .line 465
     iget-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
     const-wide/16 v2, -0x1
@@ -72,14 +72,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 463
+    .line 466
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iget-object v0, v0, Lokhttp3/internal/http1/Http1Codec;->source:Lokio/BufferedSource;
 
     invoke-interface {v0}, Lokio/BufferedSource;->readUtf8LineStrict()Ljava/lang/String;
 
-    .line 466
+    .line 469
     :cond_0
     :try_start_0
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
@@ -92,7 +92,7 @@
 
     iput-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
-    .line 467
+    .line 470
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iget-object v0, v0, Lokhttp3/internal/http1/Http1Codec;->source:Lokio/BufferedSource;
@@ -105,7 +105,7 @@
 
     move-result-object v0
 
-    .line 468
+    .line 471
     iget-wide v1, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
     const-wide/16 v3, 0x0
@@ -130,7 +130,7 @@
 
     if-eqz v1, :cond_3
 
-    .line 475
+    .line 478
     :cond_1
     iget-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
@@ -140,10 +140,10 @@
 
     const/4 v0, 0x0
 
-    .line 476
+    .line 479
     iput-boolean v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->hasMoreChunks:Z
 
-    .line 477
+    .line 480
     iget-object v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->this$0:Lokhttp3/internal/http1/Http1Codec;
 
     iget-object v0, v0, Lokhttp3/internal/http1/Http1Codec;->client:Lokhttp3/OkHttpClient;
@@ -166,13 +166,13 @@
 
     const/4 v1, 0x0
 
-    .line 478
+    .line 481
     invoke-virtual {p0, v0, v1}, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->endOfInput(ZLjava/io/IOException;)V
 
     :cond_2
     return-void
 
-    .line 469
+    .line 472
     :cond_3
     :try_start_1
     new-instance v1, Ljava/net/ProtocolException;
@@ -208,7 +208,7 @@
     :catch_0
     move-exception v0
 
-    .line 473
+    .line 476
     new-instance v1, Ljava/net/ProtocolException;
 
     invoke-virtual {v0}, Ljava/lang/NumberFormatException;->getMessage()Ljava/lang/String;
@@ -230,14 +230,14 @@
         }
     .end annotation
 
-    .line 483
+    .line 486
     iget-boolean v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->closed:Z
 
     if-eqz v0, :cond_0
 
     return-void
 
-    .line 484
+    .line 487
     :cond_0
     iget-boolean v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->hasMoreChunks:Z
 
@@ -257,13 +257,13 @@
 
     const/4 v1, 0x0
 
-    .line 485
+    .line 488
     invoke-virtual {p0, v0, v1}, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->endOfInput(ZLjava/io/IOException;)V
 
     :cond_1
     const/4 v0, 0x1
 
-    .line 487
+    .line 490
     iput-boolean v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->closed:Z
 
     return-void
@@ -283,12 +283,12 @@
 
     if-ltz v2, :cond_5
 
-    .line 442
+    .line 445
     iget-boolean v2, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->closed:Z
 
     if-nez v2, :cond_4
 
-    .line 443
+    .line 446
     iget-boolean v2, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->hasMoreChunks:Z
 
     const-wide/16 v3, -0x1
@@ -297,7 +297,7 @@
 
     return-wide v3
 
-    .line 445
+    .line 448
     :cond_0
     iget-wide v5, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
@@ -309,18 +309,18 @@
 
     if-nez v0, :cond_2
 
-    .line 446
+    .line 449
     :cond_1
     invoke-direct {p0}, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->readChunkSize()V
 
-    .line 447
+    .line 450
     iget-boolean v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->hasMoreChunks:Z
 
     if-nez v0, :cond_2
 
     return-wide v3
 
-    .line 450
+    .line 453
     :cond_2
     iget-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
@@ -336,7 +336,7 @@
 
     if-eqz p3, :cond_3
 
-    .line 456
+    .line 459
     iget-wide v0, p0, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->bytesRemainingInChunk:J
 
     sub-long/2addr v0, p1
@@ -345,7 +345,7 @@
 
     return-wide p1
 
-    .line 452
+    .line 455
     :cond_3
     new-instance p1, Ljava/net/ProtocolException;
 
@@ -355,13 +355,13 @@
 
     const/4 p2, 0x0
 
-    .line 453
+    .line 456
     invoke-virtual {p0, p2, p1}, Lokhttp3/internal/http1/Http1Codec$ChunkedSource;->endOfInput(ZLjava/io/IOException;)V
 
-    .line 454
+    .line 457
     throw p1
 
-    .line 442
+    .line 445
     :cond_4
     new-instance p1, Ljava/lang/IllegalStateException;
 
@@ -371,7 +371,7 @@
 
     throw p1
 
-    .line 441
+    .line 444
     :cond_5
     new-instance p1, Ljava/lang/IllegalArgumentException;
 

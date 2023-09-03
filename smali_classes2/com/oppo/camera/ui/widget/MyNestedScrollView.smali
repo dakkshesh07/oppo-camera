@@ -9,7 +9,7 @@
 
     const/4 v0, 0x0
 
-    .line 13
+    .line 14
     invoke-direct {p0, p1, v0}, Lcom/oppo/camera/ui/widget/MyNestedScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    .line 17
+    .line 18
     invoke-direct {p0, p1, p2, v0}, Lcom/oppo/camera/ui/widget/MyNestedScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -29,7 +29,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 0
 
-    .line 21
+    .line 22
     invoke-direct {p0, p1, p2, p3}, Landroidx/core/widget/NestedScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     return-void
@@ -40,7 +40,7 @@
 .method public dispatchTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 26
+    .line 27
     invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1
@@ -51,7 +51,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 0
 
-    .line 31
+    .line 32
     invoke-super {p0, p1}, Landroidx/core/widget/NestedScrollView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p1

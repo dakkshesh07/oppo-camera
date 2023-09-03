@@ -31,26 +31,26 @@
 .method public constructor <init>(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;)V
     .locals 1
 
-    .line 981
+    .line 1087
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 977
+    .line 1083
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->b:I
 
-    .line 978
+    .line 1084
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
-    .line 979
+    .line 1085
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->d:Z
 
-    .line 982
+    .line 1088
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;Z)Z
 
-    .line 983
+    .line 1089
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->d:Z
 
     return-void
@@ -61,7 +61,7 @@
 .method public a()I
     .locals 1
 
-    .line 992
+    .line 1098
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
     return v0
@@ -70,7 +70,7 @@
 .method public a(I)V
     .locals 0
 
-    .line 996
+    .line 1102
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
     return-void
@@ -79,10 +79,10 @@
 .method public a(II)V
     .locals 0
 
-    .line 987
+    .line 1093
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->b:I
 
-    .line 988
+    .line 1094
     iput p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
     return-void
@@ -91,10 +91,10 @@
 .method protected applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 3
 
-    .line 1001
+    .line 1107
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p2
 
@@ -104,7 +104,7 @@
 
     if-nez p2, :cond_0
 
-    .line 1002
+    .line 1108
     iget p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->b:I
@@ -119,10 +119,10 @@
 
     add-int/2addr p1, v0
 
-    .line 1003
+    .line 1109
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v0
 
@@ -132,7 +132,7 @@
 
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v1
 
@@ -144,7 +144,7 @@
 
     iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v2
 
@@ -163,15 +163,15 @@
 
     const/4 v0, 0x1
 
-    .line 1009
+    .line 1115
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->d:Z
 
-    .line 1010
+    .line 1116
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     iget v1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v2
 
@@ -183,7 +183,7 @@
 
     iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v4
 
@@ -195,7 +195,7 @@
 
     iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v4}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v4
 
@@ -205,7 +205,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(IIII)V
 
-    .line 1011
+    .line 1117
     invoke-super {p0}, Landroid/view/animation/Animation;->cancel()V
 
     return-void
@@ -214,31 +214,31 @@
 .method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 4
 
-    .line 1016
+    .line 1122
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;Z)Z
 
-    .line 1017
+    .line 1123
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->d:Z
 
-    .line 1019
+    .line 1125
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    .line 1020
+    .line 1126
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->c:I
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v1
 
@@ -250,7 +250,7 @@
 
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v3
 
@@ -262,7 +262,7 @@
 
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object v3
 
@@ -272,10 +272,10 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->a(IIII)V
 
-    .line 1022
+    .line 1128
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->w()I
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->C()I
 
     move-result p1
 
@@ -283,19 +283,19 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 1023
+    .line 1129
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setClickable(Z)V
 
-    .line 1024
+    .line 1130
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->B()Landroid/view/View;
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;->G()Landroid/view/View;
 
     move-result-object p1
 
@@ -310,7 +310,7 @@
 .method public onAnimationRepeat(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 1031
+    .line 1137
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     const/4 v0, 0x1
@@ -323,7 +323,7 @@
 .method public onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 1036
+    .line 1142
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->hasStarted()Z
 
     move-result p1
@@ -336,7 +336,7 @@
 
     if-nez p1, :cond_0
 
-    .line 1037
+    .line 1143
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->a:Lcom/oppo/camera/ui/menu/setting/CameraMenuOption;
 
     const/4 v0, 0x1
@@ -346,7 +346,7 @@
     :cond_0
     const/4 p1, 0x0
 
-    .line 1040
+    .line 1146
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/CameraMenuOption$LayoutTranslationAnimation;->d:Z
 
     return-void

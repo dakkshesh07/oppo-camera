@@ -58,7 +58,7 @@
 
     check-cast v1, Lcom/coloros/anim/a/a/s;
 
-    invoke-static {p1, v1}, Lcom/coloros/anim/f/g;->a(Landroid/graphics/Path;Lcom/coloros/anim/a/a/s;)V
+    invoke-static {p1, v1}, Lcom/coloros/anim/d/g;->a(Landroid/graphics/Path;Lcom/coloros/anim/a/a/s;)V
 
     add-int/lit8 v0, v0, -0x1
 

@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    .line 89
+    .line 74
     invoke-direct {p0, p1, v0}, Landroidx/dynamicanimation/a/b$d;-><init>(Ljava/lang/String;Landroidx/dynamicanimation/a/b$1;)V
 
     return-void
@@ -31,8 +31,8 @@
 .method public a(Landroid/view/View;)F
     .locals 0
 
-    .line 97
-    invoke-static {p1}, Landroidx/core/g/w;->p(Landroid/view/View;)F
+    .line 82
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
     move-result p1
 
@@ -42,7 +42,7 @@
 .method public bridge synthetic a(Ljava/lang/Object;)F
     .locals 0
 
-    .line 89
+    .line 74
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1}, Landroidx/dynamicanimation/a/b$8;->a(Landroid/view/View;)F
@@ -55,8 +55,8 @@
 .method public a(Landroid/view/View;F)V
     .locals 0
 
-    .line 92
-    invoke-static {p1, p2}, Landroidx/core/g/w;->b(Landroid/view/View;F)V
+    .line 77
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 .method public bridge synthetic a(Ljava/lang/Object;F)V
     .locals 0
 
-    .line 89
+    .line 74
     check-cast p1, Landroid/view/View;
 
     invoke-virtual {p0, p1, p2}, Landroidx/dynamicanimation/a/b$8;->a(Landroid/view/View;F)V

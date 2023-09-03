@@ -1,0 +1,57 @@
+// Source Code of WatchAgentProto, do not delete it!!!.
+// The format of Message`s name is DEVICE(such Watch, Camera) + Interface(what is Operation) + Message(Fixed Field).
+// Such as Watch + ConnectPreview + Message = ConnectCameraMessage.It present the message is send by Watch and it is want
+// to Connect Preview.
+syntax = "proto3";
+package com.oppo.camera.watch.proto;
+message WatchConnectPreviewMessage {
+    int32 previewWidth = 0x01;
+    int32 previewHeight = 0x02;
+    int32 bitRate = 0x03;
+    int32 frameInterval = 0x04;
+    int32 frameRate = 0x05;
+    bool isNeedLauncherCamera = 0x06;
+    int32 captureQuality = 0x07;
+    int32 singlePackageSize = 0x08;
+    int32 singlePackageDelay = 0x09;
+}
+
+message CameraConnectPreviewMessage {
+    string currentMode = 0x01;
+    string currentModeName = 0x02;
+    repeated string photoModeList = 0x03;
+    int32 codecWidth = 0x04;
+    int32 codecHeight = 0x05;
+    int32 orientation = 0x06;
+}
+
+message WatchCaptureMessage {
+    int32 countDown = 0x01;
+}
+
+message CameraCaptureMessage {
+    bool isReady= 0x01;
+}
+
+message CameraCaptureDataMessage {
+    int64 subPackageIdentify = 0x01;
+    int32 subPackageTotal = 0x02;
+    int32 subPackageIndex = 0x03;
+    bytes pictureData = 0x04;
+    int32 packageLength = 0x05;
+}
+
+message CameraRecordMessage {
+    int32 videoState = 0x01;
+    int64 recordTime = 0x02;
+}
+
+message CameraOAFStateMessage {
+    bool reconnect = 0x01;
+}
+
+message CameraConfigurationMessage {
+    int32 orientation = 0x01;
+    int32 codecWidth = 0x02;
+    int32 codecHeight = 0x03;
+}

@@ -3,7 +3,7 @@
 .source "AudioAttributesCompat.java"
 
 # interfaces
-.implements Landroidx/versionedparcelable/c;
+.implements Landroidx/versionedparcelable/b;
 
 
 # static fields

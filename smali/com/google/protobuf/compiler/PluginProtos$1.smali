@@ -1,9 +1,6 @@
-.class final Lcom/google/protobuf/compiler/PluginProtos$1;
+.class synthetic Lcom/google/protobuf/compiler/PluginProtos$1;
 .super Ljava/lang/Object;
 .source "PluginProtos.java"
-
-# interfaces
-.implements Lcom/google/protobuf/Descriptors$FileDescriptor$InternalDescriptorAssigner;
 
 
 # annotations
@@ -12,30 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x1008
     name = null
 .end annotation
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .line 4244
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public assignDescriptors(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/ExtensionRegistry;
-    .locals 0
-
-    .line 4247
-    invoke-static {p1}, Lcom/google/protobuf/compiler/PluginProtos;->access$3702(Lcom/google/protobuf/Descriptors$FileDescriptor;)Lcom/google/protobuf/Descriptors$FileDescriptor;
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method

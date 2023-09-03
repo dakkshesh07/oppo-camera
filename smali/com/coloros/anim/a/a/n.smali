@@ -15,7 +15,7 @@
 
 .field private final c:Lcom/coloros/anim/b;
 
-.field private final d:Lcom/coloros/anim/c/b/i$a;
+.field private final d:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
 .field private final e:Z
 
@@ -102,7 +102,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/c/c/a;Lcom/coloros/anim/c/b/i;)V
+.method public constructor <init>(Lcom/coloros/anim/b;Lcom/coloros/anim/model/layer/a;Lcom/coloros/anim/model/content/PolystarShape;)V
     .locals 1
 
     .line 50
@@ -126,105 +126,105 @@
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->c:Lcom/coloros/anim/b;
 
     .line 53
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->a()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->a()Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->b:Ljava/lang/String;
 
     .line 54
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->b()Lcom/coloros/anim/c/b/i$a;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->b()Lcom/coloros/anim/model/content/PolystarShape$Type;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/c/b/i$a;
+    iput-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
     .line 55
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->j()Z
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->j()Z
 
     move-result p1
 
     iput-boolean p1, p0, Lcom/coloros/anim/a/a/n;->e:Z
 
     .line 56
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->c()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->c()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->f:Lcom/coloros/anim/a/b/a;
 
     .line 57
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->d()Lcom/coloros/anim/c/a/m;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->d()Lcom/coloros/anim/model/a/m;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/coloros/anim/c/a/m;->a()Lcom/coloros/anim/a/b/a;
+    invoke-interface {p1}, Lcom/coloros/anim/model/a/m;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->g:Lcom/coloros/anim/a/b/a;
 
     .line 58
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->e()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->e()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->h:Lcom/coloros/anim/a/b/a;
 
     .line 59
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->g()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->g()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->j:Lcom/coloros/anim/a/b/a;
 
     .line 60
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->i()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->i()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->l:Lcom/coloros/anim/a/b/a;
 
     .line 61
-    iget-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/c/b/i$a;
+    iget-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
-    sget-object v0, Lcom/coloros/anim/c/b/i$a;->STAR:Lcom/coloros/anim/c/b/i$a;
+    sget-object v0, Lcom/coloros/anim/model/content/PolystarShape$Type;->STAR:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
     if-ne p1, v0, :cond_0
 
     .line 62
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->f()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->f()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/coloros/anim/a/a/n;->i:Lcom/coloros/anim/a/b/a;
 
     .line 63
-    invoke-virtual {p3}, Lcom/coloros/anim/c/b/i;->h()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p3}, Lcom/coloros/anim/model/content/PolystarShape;->h()Lcom/coloros/anim/model/a/b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p1}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p1
 
@@ -245,44 +245,44 @@
     :goto_0
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->f:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 70
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->g:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 71
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->h:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 72
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->j:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 73
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->l:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 74
-    iget-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/c/b/i$a;
+    iget-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
-    sget-object p3, Lcom/coloros/anim/c/b/i$a;->STAR:Lcom/coloros/anim/c/b/i$a;
+    sget-object p3, Lcom/coloros/anim/model/content/PolystarShape$Type;->STAR:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
     if-ne p1, p3, :cond_1
 
     .line 75
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->i:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 76
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->k:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p2, p1}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p2, p1}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 79
     :cond_1
@@ -311,9 +311,9 @@
     invoke-virtual {p1, p0}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/a/b/a$a;)V
 
     .line 84
-    iget-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/c/b/i$a;
+    iget-object p1, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
-    sget-object p2, Lcom/coloros/anim/c/b/i$a;->STAR:Lcom/coloros/anim/c/b/i$a;
+    sget-object p2, Lcom/coloros/anim/model/content/PolystarShape$Type;->STAR:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
     if-ne p1, p2, :cond_2
 
@@ -1318,35 +1318,35 @@
     return-void
 .end method
 
-.method public a(Lcom/coloros/anim/c/f;ILjava/util/List;Lcom/coloros/anim/c/f;)V
+.method public a(Lcom/coloros/anim/model/e;ILjava/util/List;Lcom/coloros/anim/model/e;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             "I",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             ">;",
-            "Lcom/coloros/anim/c/f;",
+            "Lcom/coloros/anim/model/e;",
             ")V"
         }
     .end annotation
 
     .line 311
-    invoke-static {p1, p2, p3, p4, p0}, Lcom/coloros/anim/f/f;->a(Lcom/coloros/anim/c/f;ILjava/util/List;Lcom/coloros/anim/c/f;Lcom/coloros/anim/a/a/k;)V
+    invoke-static {p1, p2, p3, p4, p0}, Lcom/coloros/anim/d/f;->a(Lcom/coloros/anim/model/e;ILjava/util/List;Lcom/coloros/anim/model/e;Lcom/coloros/anim/a/a/k;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;Lcom/coloros/anim/g/b;)V
+.method public a(Ljava/lang/Object;Lcom/coloros/anim/e/b;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;",
-            "Lcom/coloros/anim/g/b<",
+            "Lcom/coloros/anim/e/b<",
             "TT;>;)V"
         }
     .end annotation
@@ -1359,7 +1359,7 @@
     .line 318
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->f:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1372,7 +1372,7 @@
     .line 320
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->h:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1385,7 +1385,7 @@
     .line 322
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->g:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1400,7 +1400,7 @@
     if-eqz v0, :cond_3
 
     .line 324
-    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1413,7 +1413,7 @@
     .line 326
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->j:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1428,7 +1428,7 @@
     if-eqz v0, :cond_5
 
     .line 329
-    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {v0, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     goto :goto_0
 
@@ -1441,7 +1441,7 @@
     .line 331
     iget-object p1, p0, Lcom/coloros/anim/a/a/n;->l:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/g/b;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/a/b/a;->a(Lcom/coloros/anim/e/b;)V
 
     :cond_6
     :goto_0
@@ -1487,11 +1487,11 @@
     check-cast v0, Lcom/coloros/anim/a/a/s;
 
     .line 105
-    invoke-virtual {v0}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/c/b/q$a;
+    invoke-virtual {v0}, Lcom/coloros/anim/a/a/s;->c()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     move-result-object v1
 
-    sget-object v2, Lcom/coloros/anim/c/b/q$a;->SIMULTANEOUSLY:Lcom/coloros/anim/c/b/q$a;
+    sget-object v2, Lcom/coloros/anim/model/content/ShapeTrimPath$Type;->SIMULTANEOUSLY:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     if-ne v1, v2, :cond_0
 
@@ -1559,9 +1559,9 @@
     :cond_1
     sget-object v0, Lcom/coloros/anim/a/a/n$1;->a:[I
 
-    iget-object v2, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/c/b/i$a;
+    iget-object v2, p0, Lcom/coloros/anim/a/a/n;->d:Lcom/coloros/anim/model/content/PolystarShape$Type;
 
-    invoke-virtual {v2}, Lcom/coloros/anim/c/b/i$a;->ordinal()I
+    invoke-virtual {v2}, Lcom/coloros/anim/model/content/PolystarShape$Type;->ordinal()I
 
     move-result v2
 

@@ -1,14 +1,14 @@
 .class Lcom/oppo/camera/ui/preview/n$1;
 .super Ljava/lang/Object;
-.source "SwitchAnimManager.java"
+.source "GradienterView.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/n;->a(Lcom/oppo/camera/gl/h;IIIILcom/oppo/camera/gl/c;)Z
+    value = Lcom/oppo/camera/ui/preview/n;->setVisibilityWithAnimation(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,15 +18,19 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/oppo/camera/ui/preview/n;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/oppo/camera/ui/preview/n;
 
 
 # direct methods
-.method constructor <init>(Lcom/oppo/camera/ui/preview/n;)V
+.method constructor <init>(Lcom/oppo/camera/ui/preview/n;I)V
     .locals 0
 
-    .line 115
-    iput-object p1, p0, Lcom/oppo/camera/ui/preview/n$1;->a:Lcom/oppo/camera/ui/preview/n;
+    .line 180
+    iput-object p1, p0, Lcom/oppo/camera/ui/preview/n$1;->b:Lcom/oppo/camera/ui/preview/n;
+
+    iput p2, p0, Lcom/oppo/camera/ui/preview/n$1;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,27 +39,41 @@
 
 
 # virtual methods
-.method public run()V
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    .line 118
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/n$1;->a:Lcom/oppo/camera/ui/preview/n;
+    .line 188
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/n$1;->b:Lcom/oppo/camera/ui/preview/n;
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/n;->a(Lcom/oppo/camera/ui/preview/n;)Lcom/oppo/camera/ui/preview/e$c;
+    iget v0, p0, Lcom/oppo/camera/ui/preview/n$1;->a:I
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Lcom/oppo/camera/ui/preview/n;->setVisibility(I)V
 
-    if-eqz v0, :cond_0
+    .line 189
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/n$1;->b:Lcom/oppo/camera/ui/preview/n;
 
-    .line 119
-    iget-object v0, p0, Lcom/oppo/camera/ui/preview/n$1;->a:Lcom/oppo/camera/ui/preview/n;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/oppo/camera/ui/preview/n;->a(Lcom/oppo/camera/ui/preview/n;)Lcom/oppo/camera/ui/preview/e$c;
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/n;->a(Lcom/oppo/camera/ui/preview/n;Z)Z
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-interface {v0}, Lcom/oppo/camera/ui/preview/e$c;->b()V
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    :cond_0
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 1
+
+    .line 183
+    iget-object p1, p0, Lcom/oppo/camera/ui/preview/n$1;->b:Lcom/oppo/camera/ui/preview/n;
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/n;->a(Lcom/oppo/camera/ui/preview/n;Z)Z
+
     return-void
 .end method

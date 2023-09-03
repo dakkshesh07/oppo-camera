@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/mode_title_layout" android:background="@drawable/mode_title_bg" android:visibility="visible" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/mode_title_margin_top" android:minHeight="@dimen/mode_title_height" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:forceDarkAllowed="false"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="@dimen/mode_title_text_size" android:textColor="@android:color/white" android:id="@id/mode_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerVertical="true" android:layout_marginStart="@dimen/mode_name_tv_margin_left" />
-    <ImageView android:id="@id/mode_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/close_mode" android:layout_centerVertical="true" android:layout_marginStart="@dimen/mode_close_img_margin_left" android:layout_marginEnd="@dimen/mode_close_img_margin_right" android:layout_toEndOf="@id/mode_name" />
-</RelativeLayout>

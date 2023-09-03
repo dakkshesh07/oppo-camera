@@ -25,7 +25,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/e;)V
     .locals 0
 
-    .line 93
+    .line 98
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,7 +36,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/menu/levelcontrol/e;Lcom/oppo/camera/ui/menu/levelcontrol/e$1;)V
     .locals 0
 
-    .line 93
+    .line 98
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;-><init>(Lcom/oppo/camera/ui/menu/levelcontrol/e;)V
 
     return-void
@@ -47,7 +47,7 @@
 .method public a()V
     .locals 3
 
-    .line 96
+    .line 101
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
+    .line 102
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -65,7 +65,7 @@
 
     invoke-interface {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e$a;->a()V
 
-    .line 100
+    .line 105
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
@@ -75,7 +75,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 101
+    .line 106
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->b(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/ThreeDScrollBar;
@@ -103,7 +103,7 @@
 .method public a(IZ)V
     .locals 1
 
-    .line 114
+    .line 119
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -112,12 +112,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 115
+    .line 120
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0, p1}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;I)I
 
-    .line 116
+    .line 121
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -133,7 +133,7 @@
 .method public a(Lcom/oppo/camera/ui/menu/levelcontrol/g;)V
     .locals 1
 
-    .line 107
+    .line 112
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -142,7 +142,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 108
+    .line 113
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -158,7 +158,7 @@
 .method public a(I)Z
     .locals 1
 
-    .line 122
+    .line 127
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -167,7 +167,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 123
+    .line 128
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -189,7 +189,7 @@
 .method public b()Z
     .locals 1
 
-    .line 131
+    .line 136
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
@@ -200,7 +200,7 @@
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
-    .line 132
+    .line 137
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
 
     move-result-object v0
@@ -213,8 +213,8 @@
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
-    .line 133
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->d()Z
+    .line 138
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->g()Z
 
     move-result v0
 
@@ -222,7 +222,7 @@
 
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
-    .line 134
+    .line 139
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->e(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Landroid/animation/AnimatorSet;
 
     move-result-object v0
@@ -244,7 +244,7 @@
     :cond_0
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
-    .line 135
+    .line 140
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->f(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Z
 
     move-result v0
@@ -265,7 +265,7 @@
 .method public c()I
     .locals 1
 
-    .line 140
+    .line 145
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
 
     invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->g(Lcom/oppo/camera/ui/menu/levelcontrol/e;)I
@@ -278,6 +278,29 @@
 .method public d()I
     .locals 1
 
+    .line 150
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 151
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/levelcontrol/e$b;->a:Lcom/oppo/camera/ui/menu/levelcontrol/e;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e;->a(Lcom/oppo/camera/ui/menu/levelcontrol/e;)Lcom/oppo/camera/ui/menu/levelcontrol/e$a;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/levelcontrol/e$a;->e()I
+
+    move-result v0
+
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     return v0

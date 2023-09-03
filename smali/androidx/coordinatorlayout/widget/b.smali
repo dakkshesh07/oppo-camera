@@ -3,6 +3,11 @@
 .source "ViewGroupUtils.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # static fields
 .field private static final a:Ljava/lang/ThreadLocal;
     .annotation system Ldalvik/annotation/Signature;

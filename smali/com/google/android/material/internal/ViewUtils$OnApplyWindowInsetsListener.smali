@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/g/ae;
+.method public abstract onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/f/ae;
 .end method

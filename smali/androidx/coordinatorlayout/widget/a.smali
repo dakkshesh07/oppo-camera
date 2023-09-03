@@ -4,6 +4,9 @@
 
 
 # annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
@@ -15,20 +18,20 @@
 
 
 # instance fields
-.field private final a:Landroidx/core/f/e$a;
+.field private final a:Landroidx/core/util/f$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/f/e$a<",
+            "Landroidx/core/util/f$a<",
             "Ljava/util/ArrayList<",
             "TT;>;>;"
         }
     .end annotation
 .end field
 
-.field private final b:Landroidx/b/g;
+.field private final b:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
+            "Landroidx/collection/SimpleArrayMap<",
             "TT;",
             "Ljava/util/ArrayList<",
             "TT;>;>;"
@@ -63,20 +66,20 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 40
-    new-instance v0, Landroidx/core/f/e$b;
+    new-instance v0, Landroidx/core/util/f$b;
 
     const/16 v1, 0xa
 
-    invoke-direct {v0, v1}, Landroidx/core/f/e$b;-><init>(I)V
+    invoke-direct {v0, v1}, Landroidx/core/util/f$b;-><init>(I)V
 
-    iput-object v0, p0, Landroidx/coordinatorlayout/widget/a;->a:Landroidx/core/f/e$a;
+    iput-object v0, p0, Landroidx/coordinatorlayout/widget/a;->a:Landroidx/core/util/f$a;
 
     .line 41
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iput-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
     .line 43
     new-instance v0, Ljava/util/ArrayList;
@@ -128,9 +131,9 @@
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     .line 184
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -193,9 +196,9 @@
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
     .line 214
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->a:Landroidx/core/f/e$a;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->a:Landroidx/core/util/f$a;
 
-    invoke-interface {v0, p1}, Landroidx/core/f/e$a;->a(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Landroidx/core/util/f$a;->a(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -211,9 +214,9 @@
     .end annotation
 
     .line 205
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->a:Landroidx/core/f/e$a;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->a:Landroidx/core/util/f$a;
 
-    invoke-interface {v0}, Landroidx/core/f/e$a;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Landroidx/core/util/f$a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -236,9 +239,9 @@
     .locals 3
 
     .line 143
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->size()I
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v0
 
@@ -248,9 +251,9 @@
     if-ge v1, v0, :cond_1
 
     .line 144
-    iget-object v2, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v2, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v2, v1}, Landroidx/b/g;->c(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -268,9 +271,9 @@
 
     .line 149
     :cond_1
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->clear()V
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->clear()V
 
     return-void
 .end method
@@ -284,20 +287,20 @@
     .end annotation
 
     .line 54
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 55
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1, v1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -312,26 +315,26 @@
     .end annotation
 
     .line 76
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p2}, Landroidx/b/g;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p2}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 81
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -345,9 +348,9 @@
     move-result-object v0
 
     .line 85
-    iget-object v1, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, p1, v0}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 88
     :cond_0
@@ -387,9 +390,9 @@
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     .line 166
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->size()I
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v0
 
@@ -399,9 +402,9 @@
     if-ge v1, v0, :cond_0
 
     .line 167
-    iget-object v2, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v2, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v2, v1}, Landroidx/b/g;->b(I)Ljava/lang/Object;
+    invoke-virtual {v2, v1}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -431,9 +434,9 @@
     .end annotation
 
     .line 63
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -450,9 +453,9 @@
     .end annotation
 
     .line 98
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -472,9 +475,9 @@
     .end annotation
 
     .line 110
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->size()I
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v0
 
@@ -486,9 +489,9 @@
     if-ge v2, v0, :cond_2
 
     .line 111
-    iget-object v3, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v3, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v3, v2}, Landroidx/b/g;->c(I)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -512,9 +515,9 @@
 
     .line 116
     :cond_0
-    iget-object v3, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v3, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v3, v2}, Landroidx/b/g;->b(I)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -538,9 +541,9 @@
     .end annotation
 
     .line 130
-    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0}, Landroidx/b/g;->size()I
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v0
 
@@ -552,9 +555,9 @@
     if-ge v2, v0, :cond_1
 
     .line 131
-    iget-object v3, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/b/g;
+    iget-object v3, p0, Landroidx/coordinatorlayout/widget/a;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v3, v2}, Landroidx/b/g;->c(I)Ljava/lang/Object;
+    invoke-virtual {v3, v2}, Landroidx/collection/SimpleArrayMap;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v3
 

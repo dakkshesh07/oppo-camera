@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="dimen" name="color_lock_pattern_outer_circle_max_alpha">0.2</item>
-    <item type="dimen" name="color_numeric_keyboard_dark_circle_max_alpha">0.12</item>
+    <item type="dimen" name="APKTOOL_DUPLICATE_dimen_0x7f0701ea">0.2</item>
+    <item type="dimen" name="APKTOOL_DUPLICATE_dimen_0x7f070212">0.12</item>
 </resources>

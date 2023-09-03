@@ -22,7 +22,7 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .line 123
+    .line 120
     invoke-direct {p0, p1}, Lcom/google/protobuf/InvalidProtocolBufferException;-><init>(Ljava/lang/String;)V
 
     return-void

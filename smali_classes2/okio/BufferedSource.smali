@@ -7,6 +7,11 @@
 .implements Lokio/Source;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # virtual methods
 .method public abstract buffer()Lokio/Buffer;
 .end method

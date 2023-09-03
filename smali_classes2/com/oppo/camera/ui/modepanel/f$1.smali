@@ -1,14 +1,14 @@
 .class Lcom/oppo/camera/ui/modepanel/f$1;
 .super Ljava/lang/Object;
-.source "MoreUIControl.java"
+.source "ItemDragHelper.java"
 
 # interfaces
-.implements Landroidx/recyclerview/widget/RecyclerView$m;
+.implements Ljava/lang/Runnable;
 
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/modepanel/f;->f(I)V
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/oppo/camera/ui/modepanel/f;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/modepanel/f;)V
     .locals 0
 
-    .line 99
+    .line 747
     iput-object p1, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -35,62 +35,162 @@
 
 
 # virtual methods
-.method public a(Z)V
-    .locals 0
+.method public run()V
+    .locals 7
 
-    return-void
-.end method
+    .line 751
+    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
 
-.method public a(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)Z
-    .locals 5
-
-    .line 102
-    iget-object p1, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;)Landroid/view/GestureDetector;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    .line 103
-    iget-object p1, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
-
-    new-instance v0, Landroid/view/GestureDetector;
-
-    invoke-static {p1}, Lcom/oppo/camera/ui/modepanel/f;->b(Lcom/oppo/camera/ui/modepanel/f;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;)Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v1
 
-    new-instance v2, Lcom/oppo/camera/ui/modepanel/f$d;
+    iget-object v2, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/modepanel/f;->b(Lcom/oppo/camera/ui/modepanel/f;)I
+
+    move-result v2
+
+    int-to-float v2, v2
 
     iget-object v3, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
 
+    invoke-static {v3}, Lcom/oppo/camera/ui/modepanel/f;->c(Lcom/oppo/camera/ui/modepanel/f;)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-static {v0, v1, v2, v3}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;Landroidx/recyclerview/widget/RecyclerView;FF)[F
+
+    move-result-object v0
+
+    .line 752
+    iget-object v1, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v1}, Lcom/oppo/camera/ui/modepanel/f;->d(Lcom/oppo/camera/ui/modepanel/f;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v3}, Lcom/oppo/camera/ui/modepanel/f;->b(Lcom/oppo/camera/ui/modepanel/f;)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v4}, Lcom/oppo/camera/ui/modepanel/f;->c(Lcom/oppo/camera/ui/modepanel/f;)I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-static {v1, v2, v3, v4}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;Landroidx/recyclerview/widget/RecyclerView;FF)[F
+
+    move-result-object v1
+
+    .line 753
+    iget-object v2, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v3
+
     const/4 v4, 0x0
 
-    invoke-direct {v2, v3, v4}, Lcom/oppo/camera/ui/modepanel/f$d;-><init>(Lcom/oppo/camera/ui/modepanel/f;Lcom/oppo/camera/ui/modepanel/f$1;)V
+    aget v5, v0, v4
 
-    invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
+    float-to-int v5, v5
 
-    invoke-static {p1, v0}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;Landroid/view/GestureDetector;)Landroid/view/GestureDetector;
+    const/4 v6, 0x1
 
-    .line 106
+    aget v0, v0, v6
+
+    float-to-int v0, v0
+
+    invoke-static {v2, v3, v5, v0}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;Landroidx/recyclerview/widget/RecyclerView;II)Z
+
+    move-result v0
+
+    .line 754
+    iget-object v2, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v2}, Lcom/oppo/camera/ui/modepanel/f;->d(Lcom/oppo/camera/ui/modepanel/f;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v3
+
+    aget v4, v1, v4
+
+    float-to-int v4, v4
+
+    aget v1, v1, v6
+
+    float-to-int v1, v1
+
+    invoke-static {v2, v3, v4, v1}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;Landroidx/recyclerview/widget/RecyclerView;II)Z
+
+    move-result v1
+
+    .line 756
+    iget-object v2, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-virtual {v2}, Lcom/oppo/camera/ui/modepanel/f;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    if-nez v0, :cond_0
+
+    if-eqz v1, :cond_1
+
+    .line 758
     :cond_0
-    iget-object p1, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
 
-    invoke-static {p1}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;)Landroid/view/GestureDetector;
+    invoke-static {v0}, Lcom/oppo/camera/ui/modepanel/f;->b(Lcom/oppo/camera/ui/modepanel/f;)I
 
-    move-result-object p1
+    move-result v1
 
-    invoke-virtual {p1, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    int-to-float v1, v1
 
-    move-result p1
+    iget-object v2, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
 
-    return p1
-.end method
+    invoke-static {v2}, Lcom/oppo/camera/ui/modepanel/f;->c(Lcom/oppo/camera/ui/modepanel/f;)I
 
-.method public b(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/MotionEvent;)V
-    .locals 0
+    move-result v2
 
+    int-to-float v2, v2
+
+    invoke-static {v0, v1, v2}, Lcom/oppo/camera/ui/modepanel/f;->a(Lcom/oppo/camera/ui/modepanel/f;FF)Z
+
+    .line 759
+    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/modepanel/f;->d(Lcom/oppo/camera/ui/modepanel/f;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v1}, Lcom/oppo/camera/ui/modepanel/f;->e(Lcom/oppo/camera/ui/modepanel/f;)Ljava/lang/Runnable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    .line 760
+    iget-object v0, p0, Lcom/oppo/camera/ui/modepanel/f$1;->a:Lcom/oppo/camera/ui/modepanel/f;
+
+    invoke-static {v0}, Lcom/oppo/camera/ui/modepanel/f;->d(Lcom/oppo/camera/ui/modepanel/f;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Landroidx/core/f/w;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+
+    :cond_1
     return-void
 .end method

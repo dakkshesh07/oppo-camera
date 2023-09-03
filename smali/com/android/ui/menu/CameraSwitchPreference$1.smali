@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/android/ui/menu/CameraSwitchPreference;)V
     .locals 0
 
-    .line 112
+    .line 110
     iput-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference$1;->a:Lcom/android/ui/menu/CameraSwitchPreference;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onClick(Landroid/content/DialogInterface;I)V
     .locals 0
 
-    .line 115
+    .line 113
     iget-object p1, p0, Lcom/android/ui/menu/CameraSwitchPreference$1;->a:Lcom/android/ui/menu/CameraSwitchPreference;
 
     const/4 p2, 0x1

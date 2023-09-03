@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/APKTOOL_DUPLICATE_id_0x7f090252" android:background="@android:color/transparent" android:paddingTop="24.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/APKTOOL_DUPLICATE_id_0x7f09021e" android:background="@android:color/transparent" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerInParent="true" style="@style/APKTOOL_DUPLICATE_style_0x7f110453" />
+    <TextView android:textSize="14.0dip" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090338" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_below="@id/APKTOOL_DUPLICATE_id_0x7f09021e" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -3,6 +3,11 @@
 .source "ActionBarContextView.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private g:Ljava/lang/CharSequence;
 
@@ -61,23 +66,23 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {p1, p2, v0, p3, v1}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object p1
 
     .line 71
     sget p2, Landroidx/appcompat/R$styleable;->ActionMode_background:I
 
-    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/as;->a(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Landroidx/appcompat/widget/ar;->a(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    invoke-static {p0, p2}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p2}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 72
     sget p2, Landroidx/appcompat/R$styleable;->ActionMode_titleTextStyle:I
 
-    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p2
 
@@ -86,7 +91,7 @@
     .line 74
     sget p2, Landroidx/appcompat/R$styleable;->ActionMode_subtitleTextStyle:I
 
-    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p2
 
@@ -95,7 +100,7 @@
     .line 77
     sget p2, Landroidx/appcompat/R$styleable;->ActionMode_height:I
 
-    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/as;->f(II)I
+    invoke-virtual {p1, p2, v1}, Landroidx/appcompat/widget/ar;->f(II)I
 
     move-result p2
 
@@ -106,14 +111,14 @@
 
     sget p3, Landroidx/appcompat/R$layout;->abc_action_mode_close_item_material:I
 
-    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {p1, p2, p3}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result p2
 
     iput p2, p0, Landroidx/appcompat/widget/ActionBarContextView;->q:I
 
     .line 84
-    invoke-virtual {p1}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {p1}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 .end method
@@ -302,11 +307,11 @@
 
 
 # virtual methods
-.method public bridge synthetic a(IJ)Landroidx/core/g/aa;
+.method public bridge synthetic a(IJ)Landroidx/core/f/aa;
     .locals 0
 
     .line 42
-    invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/a;->a(IJ)Landroidx/core/g/aa;
+    invoke-super {p0, p1, p2, p3}, Landroidx/appcompat/widget/a;->a(IJ)Landroidx/core/f/aa;
 
     move-result-object p1
 
@@ -447,7 +452,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 190
     iget-object p1, p0, Landroidx/appcompat/widget/ActionBarContextView;->c:Landroidx/appcompat/widget/ActionMenuView;
@@ -683,7 +688,7 @@
     .locals 9
 
     .line 324
-    invoke-static {p0}, Landroidx/appcompat/widget/ay;->a(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/appcompat/widget/ax;->a(Landroid/view/View;)Z
 
     move-result p1
 

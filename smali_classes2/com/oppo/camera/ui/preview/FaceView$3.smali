@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/FaceView;->i()V
+    value = Lcom/oppo/camera/ui/preview/FaceView;->k()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/FaceView;)V
     .locals 0
 
-    .line 786
+    .line 898
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$3;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    .line 789
+    .line 901
     iget-object v0, p0, Lcom/oppo/camera/ui/preview/FaceView$3;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -53,7 +53,7 @@
 
     invoke-static {v0, p1}, Lcom/oppo/camera/ui/preview/FaceView;->c(Lcom/oppo/camera/ui/preview/FaceView;I)I
 
-    .line 790
+    .line 902
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$3;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/preview/FaceView;->invalidate()V

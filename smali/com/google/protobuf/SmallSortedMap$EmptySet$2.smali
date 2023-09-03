@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 608
+    .line 651
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,8 +49,8 @@
         }
     .end annotation
 
-    .line 611
-    invoke-static {}, Lcom/google/protobuf/SmallSortedMap$EmptySet;->access$700()Ljava/util/Iterator;
+    .line 654
+    invoke-static {}, Lcom/google/protobuf/SmallSortedMap$EmptySet;->access$1000()Ljava/util/Iterator;
 
     move-result-object v0
 

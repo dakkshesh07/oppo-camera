@@ -26,7 +26,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 757
+    .line 800
     invoke-direct {p0}, Lcom/google/protobuf/AbstractParser;-><init>()V
 
     return-void
@@ -42,7 +42,7 @@
         }
     .end annotation
 
-    .line 762
+    .line 806
     new-instance v0, Lcom/google/protobuf/DescriptorProtos$FileDescriptorSet;
 
     const/4 v1, 0x0
@@ -60,7 +60,7 @@
         }
     .end annotation
 
-    .line 757
+    .line 800
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/DescriptorProtos$FileDescriptorSet$1;->parsePartialFrom(Lcom/google/protobuf/CodedInputStream;Lcom/google/protobuf/ExtensionRegistryLite;)Lcom/google/protobuf/DescriptorProtos$FileDescriptorSet;
 
     move-result-object p1

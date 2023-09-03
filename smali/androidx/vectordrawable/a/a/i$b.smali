@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field a:Landroidx/core/content/a/b;
+.field a:Landroidx/core/a/a/b;
 
 .field b:F
 
-.field c:Landroidx/core/content/a/b;
+.field c:Landroidx/core/a/a/b;
 
 .field d:F
 
@@ -136,9 +136,9 @@
     iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->p:[I
 
     .line 1843
-    iget-object v0, p1, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object v0, p1, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
-    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
     .line 1844
     iget v0, p1, Landroidx/vectordrawable/a/a/i$b;->b:F
@@ -151,9 +151,9 @@
     iput v0, p0, Landroidx/vectordrawable/a/a/i$b;->d:F
 
     .line 1846
-    iget-object v0, p1, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object v0, p1, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
-    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
     .line 1847
     iget v0, p1, Landroidx/vectordrawable/a/a/i$b;->n:I
@@ -277,7 +277,7 @@
     const-string v0, "pathData"
 
     .line 1908
-    invoke-static {p2, v0}, Landroidx/core/content/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
+    invoke-static {p2, v0}, Landroidx/core/a/a/g;->a(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
     move-result v0
 
@@ -309,11 +309,11 @@
     if-eqz v0, :cond_2
 
     .line 1923
-    invoke-static {v0}, Landroidx/core/graphics/f;->b(Ljava/lang/String;)[Landroidx/core/graphics/f$b;
+    invoke-static {v0}, Landroidx/core/graphics/e;->b(Ljava/lang/String;)[Landroidx/core/graphics/e$b;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->l:[Landroidx/core/graphics/f$b;
+    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->l:[Landroidx/core/graphics/e$b;
 
     :cond_2
     const/4 v5, 0x1
@@ -329,11 +329,11 @@
     move-object v3, p3
 
     .line 1926
-    invoke-static/range {v1 .. v6}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;II)Landroidx/core/content/a/b;
+    invoke-static/range {v1 .. v6}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;II)Landroidx/core/a/a/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iput-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
     const/16 v0, 0xc
 
@@ -342,7 +342,7 @@
 
     const-string v2, "fillAlpha"
 
-    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -355,7 +355,7 @@
     const-string v2, "strokeLineCap"
 
     .line 1930
-    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -373,7 +373,7 @@
     const-string v2, "strokeLineJoin"
 
     .line 1933
-    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result v0
 
@@ -393,7 +393,7 @@
 
     const-string v2, "strokeMiterLimit"
 
-    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v2, v0, v1}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result v0
 
@@ -408,11 +408,11 @@
     move-object v2, p2
 
     .line 1939
-    invoke-static/range {v1 .. v6}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;II)Landroidx/core/content/a/b;
+    invoke-static/range {v1 .. v6}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Landroid/content/res/Resources$Theme;Ljava/lang/String;II)Landroidx/core/a/a/b;
 
     move-result-object p3
 
-    iput-object p3, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iput-object p3, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
     const/16 p3, 0xb
 
@@ -421,7 +421,7 @@
 
     const-string v1, "strokeAlpha"
 
-    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -434,7 +434,7 @@
 
     const-string v1, "strokeWidth"
 
-    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -447,7 +447,7 @@
 
     const-string v1, "trimPathEnd"
 
-    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -460,7 +460,7 @@
 
     const-string v1, "trimPathOffset"
 
-    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -473,7 +473,7 @@
 
     const-string v1, "trimPathStart"
 
-    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
+    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;IF)F
 
     move-result p3
 
@@ -486,7 +486,7 @@
 
     const-string v1, "fillType"
 
-    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
+    invoke-static {p1, p2, v1, p3, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/TypedArray;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;II)I
 
     move-result p1
 
@@ -503,7 +503,7 @@
     .line 1890
     sget-object v0, Landroidx/vectordrawable/a/a/a;->c:[I
 
-    invoke-static {p1, p3, p2, v0}, Landroidx/core/content/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p3, p2, v0}, Landroidx/core/a/a/g;->a(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
@@ -520,16 +520,16 @@
     .locals 2
 
     .line 1965
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/a/b;->a([I)Z
+    invoke-virtual {v0, p1}, Landroidx/core/a/a/b;->a([I)Z
 
     move-result v0
 
     .line 1966
-    iget-object v1, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object v1, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
-    invoke-virtual {v1, p1}, Landroidx/core/content/a/b;->a([I)Z
+    invoke-virtual {v1, p1}, Landroidx/core/a/a/b;->a([I)Z
 
     move-result p1
 
@@ -542,17 +542,17 @@
     .locals 1
 
     .line 1960
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0}, Landroidx/core/content/a/b;->d()Z
+    invoke-virtual {v0}, Landroidx/core/a/a/b;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0}, Landroidx/core/content/a/b;->d()Z
+    invoke-virtual {v0}, Landroidx/core/a/a/b;->d()Z
 
     move-result v0
 
@@ -586,9 +586,9 @@
     .locals 1
 
     .line 2018
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0}, Landroidx/core/content/a/b;->b()I
+    invoke-virtual {v0}, Landroidx/core/a/a/b;->b()I
 
     move-result v0
 
@@ -608,9 +608,9 @@
     .locals 1
 
     .line 1987
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0}, Landroidx/core/content/a/b;->b()I
+    invoke-virtual {v0}, Landroidx/core/a/a/b;->b()I
 
     move-result v0
 
@@ -666,9 +666,9 @@
     .locals 1
 
     .line 2023
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->c:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/a/b;->b(I)V
+    invoke-virtual {v0, p1}, Landroidx/core/a/a/b;->b(I)V
 
     return-void
 .end method
@@ -686,9 +686,9 @@
     .locals 1
 
     .line 1992
-    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/content/a/b;
+    iget-object v0, p0, Landroidx/vectordrawable/a/a/i$b;->a:Landroidx/core/a/a/b;
 
-    invoke-virtual {v0, p1}, Landroidx/core/content/a/b;->b(I)V
+    invoke-virtual {v0, p1}, Landroidx/core/a/a/b;->b(I)V
 
     return-void
 .end method

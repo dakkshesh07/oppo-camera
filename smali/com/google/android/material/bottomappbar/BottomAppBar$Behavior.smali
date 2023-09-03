@@ -147,7 +147,7 @@
     if-eqz v0, :cond_1
 
     .line 1004
-    invoke-static {v0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v1
 

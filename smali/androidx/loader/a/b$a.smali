@@ -3,7 +3,7 @@
 .source "LoaderManagerImpl.java"
 
 # interfaces
-.implements Landroidx/loader/b/a$a;
+.implements Landroidx/loader/content/a$a;
 
 
 # annotations
@@ -23,29 +23,29 @@
         ">",
         "Landroidx/lifecycle/m<",
         "TD;>;",
-        "Landroidx/loader/b/a$a<",
+        "Landroidx/loader/content/a$a<",
         "TD;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private final e:I
+.field private final a:I
 
-.field private final f:Landroid/os/Bundle;
+.field private final b:Landroid/os/Bundle;
 
-.field private final g:Landroidx/loader/b/a;
+.field private final c:Landroidx/loader/content/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/loader/b/a<",
+            "Landroidx/loader/content/a<",
             "TD;>;"
         }
     .end annotation
 .end field
 
-.field private h:Landroidx/lifecycle/h;
+.field private d:Landroidx/lifecycle/g;
 
-.field private i:Landroidx/loader/a/b$b;
+.field private e:Landroidx/loader/a/b$b;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/loader/a/b$b<",
@@ -54,10 +54,10 @@
     .end annotation
 .end field
 
-.field private j:Landroidx/loader/b/a;
+.field private f:Landroidx/loader/content/a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/loader/b/a<",
+            "Landroidx/loader/content/a<",
             "TD;>;"
         }
     .end annotation
@@ -65,12 +65,28 @@
 
 
 # virtual methods
-.method a(Z)Landroidx/loader/b/a;
+.method a()Landroidx/loader/content/a;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/loader/content/a<",
+            "TD;>;"
+        }
+    .end annotation
+
+    .line 71
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
+
+    return-object v0
+.end method
+
+.method a(Z)Landroidx/loader/content/a;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)",
-            "Landroidx/loader/b/a<",
+            "Landroidx/loader/content/a<",
             "TD;>;"
         }
     .end annotation
@@ -100,22 +116,22 @@
 
     .line 151
     :cond_0
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-virtual {v0}, Landroidx/loader/b/a;->c()Z
+    invoke-virtual {v0}, Landroidx/loader/content/a;->c()Z
 
     .line 152
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-virtual {v0}, Landroidx/loader/b/a;->g()V
+    invoke-virtual {v0}, Landroidx/loader/content/a;->g()V
 
     .line 154
-    iget-object v0, p0, Landroidx/loader/a/b$a;->i:Landroidx/loader/a/b$b;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->e:Landroidx/loader/a/b$b;
 
     if-eqz v0, :cond_1
 
     .line 156
-    invoke-virtual {p0, v0}, Landroidx/loader/a/b$a;->a(Landroidx/lifecycle/n;)V
+    invoke-virtual {p0, v0}, Landroidx/loader/a/b$a;->removeObserver(Landroidx/lifecycle/n;)V
 
     if-eqz p1, :cond_1
 
@@ -124,9 +140,9 @@
 
     .line 162
     :cond_1
-    iget-object v1, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v1, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-virtual {v1, p0}, Landroidx/loader/b/a;->a(Landroidx/loader/b/a$a;)V
+    invoke-virtual {v1, p0}, Landroidx/loader/content/a;->a(Landroidx/loader/content/a$a;)V
 
     if-eqz v0, :cond_2
 
@@ -142,72 +158,20 @@
 
     .line 164
     :cond_3
-    iget-object p1, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object p1, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-virtual {p1}, Landroidx/loader/b/a;->i()V
+    invoke-virtual {p1}, Landroidx/loader/content/a;->i()V
 
     .line 165
-    iget-object p1, p0, Landroidx/loader/a/b$a;->j:Landroidx/loader/b/a;
+    iget-object p1, p0, Landroidx/loader/a/b$a;->f:Landroidx/loader/content/a;
 
     return-object p1
 
     .line 167
     :cond_4
-    iget-object p1, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object p1, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
     return-object p1
-.end method
-
-.method public a(Landroidx/lifecycle/n;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroidx/lifecycle/n<",
-            "-TD;>;)V"
-        }
-    .end annotation
-
-    .line 134
-    invoke-super {p0, p1}, Landroidx/lifecycle/m;->a(Landroidx/lifecycle/n;)V
-
-    const/4 p1, 0x0
-
-    .line 136
-    iput-object p1, p0, Landroidx/loader/a/b$a;->h:Landroidx/lifecycle/h;
-
-    .line 137
-    iput-object p1, p0, Landroidx/loader/a/b$a;->i:Landroidx/loader/a/b$b;
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TD;)V"
-        }
-    .end annotation
-
-    .line 189
-    invoke-super {p0, p1}, Landroidx/lifecycle/m;->a(Ljava/lang/Object;)V
-
-    .line 191
-    iget-object p1, p0, Landroidx/loader/a/b$a;->j:Landroidx/loader/b/a;
-
-    if-eqz p1, :cond_0
-
-    .line 192
-    invoke-virtual {p1}, Landroidx/loader/b/a;->i()V
-
-    const/4 p1, 0x0
-
-    .line 193
-    iput-object p1, p0, Landroidx/loader/a/b$a;->j:Landroidx/loader/b/a;
-
-    :cond_0
-    return-void
 .end method
 
 .method public a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
@@ -220,7 +184,7 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget v0, p0, Landroidx/loader/a/b$a;->e:I
+    iget v0, p0, Landroidx/loader/a/b$a;->a:I
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(I)V
 
@@ -229,7 +193,7 @@
     .line 213
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v0, p0, Landroidx/loader/a/b$a;->f:Landroid/os/Bundle;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->b:Landroid/os/Bundle;
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
@@ -240,12 +204,12 @@
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
     invoke-virtual {p3, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     .line 215
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -261,10 +225,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1, p2, p3, p4}, Landroidx/loader/b/a;->a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p2, p3, p4}, Landroidx/loader/content/a;->a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     .line 216
-    iget-object p2, p0, Landroidx/loader/a/b$a;->i:Landroidx/loader/a/b$b;
+    iget-object p2, p0, Landroidx/loader/a/b$a;->e:Landroidx/loader/a/b$b;
 
     if-eqz p2, :cond_0
 
@@ -275,12 +239,12 @@
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    iget-object p2, p0, Landroidx/loader/a/b$a;->i:Landroidx/loader/a/b$b;
+    iget-object p2, p0, Landroidx/loader/a/b$a;->e:Landroidx/loader/a/b$b;
 
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     .line 218
-    iget-object p2, p0, Landroidx/loader/a/b$a;->i:Landroidx/loader/a/b$b;
+    iget-object p2, p0, Landroidx/loader/a/b$a;->e:Landroidx/loader/a/b$b;
 
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -305,15 +269,15 @@
     invoke-virtual {p3, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 221
-    invoke-virtual {p0}, Landroidx/loader/a/b$a;->e()Landroidx/loader/b/a;
+    invoke-virtual {p0}, Landroidx/loader/a/b$a;->a()Landroidx/loader/content/a;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Landroidx/loader/a/b$a;->a()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroidx/loader/a/b$a;->getValue()Ljava/lang/Object;
 
     move-result-object p4
 
-    invoke-virtual {p2, p4}, Landroidx/loader/b/a;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p2, p4}, Landroidx/loader/content/a;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -328,7 +292,7 @@
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     .line 223
-    invoke-virtual {p0}, Landroidx/loader/a/b$a;->d()Z
+    invoke-virtual {p0}, Landroidx/loader/a/b$a;->hasActiveObservers()Z
 
     move-result p1
 
@@ -338,7 +302,30 @@
     return-void
 .end method
 
-.method protected b()V
+.method b()V
+    .locals 2
+
+    .line 111
+    iget-object v0, p0, Landroidx/loader/a/b$a;->d:Landroidx/lifecycle/g;
+
+    .line 112
+    iget-object v1, p0, Landroidx/loader/a/b$a;->e:Landroidx/loader/a/b$b;
+
+    if-eqz v0, :cond_0
+
+    if-eqz v1, :cond_0
+
+    .line 118
+    invoke-super {p0, v1}, Landroidx/lifecycle/m;->removeObserver(Landroidx/lifecycle/n;)V
+
+    .line 119
+    invoke-virtual {p0, v0, v1}, Landroidx/loader/a/b$a;->observe(Landroidx/lifecycle/g;Landroidx/lifecycle/n;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected onActive()V
     .locals 2
 
     .line 76
@@ -366,14 +353,14 @@
 
     .line 77
     :cond_0
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-virtual {v0}, Landroidx/loader/b/a;->a()V
+    invoke-virtual {v0}, Landroidx/loader/content/a;->a()V
 
     return-void
 .end method
 
-.method protected c()V
+.method protected onInactive()V
     .locals 2
 
     .line 82
@@ -401,47 +388,60 @@
 
     .line 83
     :cond_0
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v0, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-virtual {v0}, Landroidx/loader/b/a;->e()V
+    invoke-virtual {v0}, Landroidx/loader/content/a;->e()V
 
     return-void
 .end method
 
-.method e()Landroidx/loader/b/a;
-    .locals 1
+.method public removeObserver(Landroidx/lifecycle/n;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Landroidx/loader/b/a<",
-            "TD;>;"
+            "(",
+            "Landroidx/lifecycle/n<",
+            "-TD;>;)V"
         }
     .end annotation
 
-    .line 71
-    iget-object v0, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    .line 134
+    invoke-super {p0, p1}, Landroidx/lifecycle/m;->removeObserver(Landroidx/lifecycle/n;)V
 
-    return-object v0
+    const/4 p1, 0x0
+
+    .line 136
+    iput-object p1, p0, Landroidx/loader/a/b$a;->d:Landroidx/lifecycle/g;
+
+    .line 137
+    iput-object p1, p0, Landroidx/loader/a/b$a;->e:Landroidx/loader/a/b$b;
+
+    return-void
 .end method
 
-.method f()V
-    .locals 2
+.method public setValue(Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TD;)V"
+        }
+    .end annotation
 
-    .line 111
-    iget-object v0, p0, Landroidx/loader/a/b$a;->h:Landroidx/lifecycle/h;
+    .line 189
+    invoke-super {p0, p1}, Landroidx/lifecycle/m;->setValue(Ljava/lang/Object;)V
 
-    .line 112
-    iget-object v1, p0, Landroidx/loader/a/b$a;->i:Landroidx/loader/a/b$b;
+    .line 191
+    iget-object p1, p0, Landroidx/loader/a/b$a;->f:Landroidx/loader/content/a;
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
-    if-eqz v1, :cond_0
+    .line 192
+    invoke-virtual {p1}, Landroidx/loader/content/a;->i()V
 
-    .line 118
-    invoke-super {p0, v1}, Landroidx/lifecycle/m;->a(Landroidx/lifecycle/n;)V
+    const/4 p1, 0x0
 
-    .line 119
-    invoke-virtual {p0, v0, v1}, Landroidx/loader/a/b$a;->a(Landroidx/lifecycle/h;Landroidx/lifecycle/n;)V
+    .line 193
+    iput-object p1, p0, Landroidx/loader/a/b$a;->f:Landroidx/loader/content/a;
 
     :cond_0
     return-void
@@ -479,7 +479,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 203
-    iget v1, p0, Landroidx/loader/a/b$a;->e:I
+    iget v1, p0, Landroidx/loader/a/b$a;->a:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -489,9 +489,9 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 205
-    iget-object v1, p0, Landroidx/loader/a/b$a;->g:Landroidx/loader/b/a;
+    iget-object v1, p0, Landroidx/loader/a/b$a;->c:Landroidx/loader/content/a;
 
-    invoke-static {v1, v0}, Landroidx/core/f/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string v1, "}}"
 

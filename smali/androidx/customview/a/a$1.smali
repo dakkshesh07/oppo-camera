@@ -20,7 +20,7 @@
     value = {
         "Ljava/lang/Object;",
         "Landroidx/customview/a/b$a<",
-        "Landroidx/core/g/a/d;",
+        "Landroidx/core/f/a/d;",
         ">;"
     }
 .end annotation
@@ -38,11 +38,11 @@
 
 
 # virtual methods
-.method public a(Landroidx/core/g/a/d;Landroid/graphics/Rect;)V
+.method public a(Landroidx/core/f/a/d;Landroid/graphics/Rect;)V
     .locals 0
 
     .line 339
-    invoke-virtual {p1, p2}, Landroidx/core/g/a/d;->a(Landroid/graphics/Rect;)V
+    invoke-virtual {p1, p2}, Landroidx/core/f/a/d;->a(Landroid/graphics/Rect;)V
 
     return-void
 .end method
@@ -51,9 +51,9 @@
     .locals 0
 
     .line 336
-    check-cast p1, Landroidx/core/g/a/d;
+    check-cast p1, Landroidx/core/f/a/d;
 
-    invoke-virtual {p0, p1, p2}, Landroidx/customview/a/a$1;->a(Landroidx/core/g/a/d;Landroid/graphics/Rect;)V
+    invoke-virtual {p0, p1, p2}, Landroidx/customview/a/a$1;->a(Landroidx/core/f/a/d;Landroid/graphics/Rect;)V
 
     return-void
 .end method

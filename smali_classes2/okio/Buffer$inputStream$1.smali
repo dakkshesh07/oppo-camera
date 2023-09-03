@@ -13,6 +13,9 @@
     name = null
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # instance fields
 .field final synthetic this$0:Lokio/Buffer;
@@ -27,7 +30,7 @@
         }
     .end annotation
 
-    .line 115
+    .line 116
     iput-object p1, p0, Lokio/Buffer$inputStream$1;->this$0:Lokio/Buffer;
 
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
@@ -40,7 +43,7 @@
 .method public available()I
     .locals 4
 
-    .line 128
+    .line 129
     iget-object v0, p0, Lokio/Buffer$inputStream$1;->this$0:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->size()J
@@ -51,7 +54,7 @@
 
     int-to-long v2, v2
 
-    .line 1029
+    .line 1021
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
@@ -70,7 +73,7 @@
 .method public read()I
     .locals 4
 
-    .line 117
+    .line 118
     iget-object v0, p0, Lokio/Buffer$inputStream$1;->this$0:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->size()J
@@ -83,7 +86,7 @@
 
     if-lez v0, :cond_0
 
-    .line 118
+    .line 119
     iget-object v0, p0, Lokio/Buffer$inputStream$1;->this$0:Lokio/Buffer;
 
     invoke-virtual {v0}, Lokio/Buffer;->readByte()B
@@ -106,9 +109,9 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 125
+    .line 126
     iget-object v0, p0, Lokio/Buffer$inputStream$1;->this$0:Lokio/Buffer;
 
     invoke-virtual {v0, p1, p2, p3}, Lokio/Buffer;->read([BII)I
@@ -121,7 +124,7 @@
 .method public toString()Ljava/lang/String;
     .locals 2
 
-    .line 132
+    .line 133
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

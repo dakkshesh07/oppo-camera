@@ -51,6 +51,8 @@
 # virtual methods
 .method public a()Landroid/text/PrecomputedText;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 512
     iget-object v0, p0, Landroidx/core/e/c;->c:Landroid/text/Spannable;

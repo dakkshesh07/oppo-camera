@@ -23,6 +23,8 @@
 # direct methods
 .method public constructor <init>(I[Landroidx/core/d/b$b;)V
     .locals 0
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 427
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

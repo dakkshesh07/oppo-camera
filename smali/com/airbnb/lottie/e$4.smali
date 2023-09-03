@@ -39,7 +39,7 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 143
+    .line 157
     iput-object p1, p0, Lcom/airbnb/lottie/e$4;->a:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/airbnb/lottie/e$4;->b:Ljava/lang/String;
@@ -64,7 +64,7 @@
         }
     .end annotation
 
-    .line 146
+    .line 160
     iget-object v0, p0, Lcom/airbnb/lottie/e$4;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/airbnb/lottie/e$4;->b:Ljava/lang/String;
@@ -86,7 +86,7 @@
         }
     .end annotation
 
-    .line 143
+    .line 157
     invoke-virtual {p0}, Lcom/airbnb/lottie/e$4;->a()Lcom/airbnb/lottie/l;
 
     move-result-object v0

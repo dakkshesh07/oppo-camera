@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/google/protobuf/Message;I)V
     .locals 0
 
-    .line 1622
+    .line 1624
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$2;->val$scope:Lcom/google/protobuf/Message;
 
     iput p2, p0, Lcom/google/protobuf/GeneratedMessage$2;->val$descriptorIndex:I
@@ -41,7 +41,7 @@
 .method public loadDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
     .locals 2
 
-    .line 1625
+    .line 1627
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$2;->val$scope:Lcom/google/protobuf/Message;
 
     invoke-interface {v0}, Lcom/google/protobuf/Message;->getDescriptorForType()Lcom/google/protobuf/Descriptors$Descriptor;

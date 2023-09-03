@@ -6,6 +6,11 @@
 .implements Lokio/Sink;
 
 
+# annotations
+.annotation runtime Lkotlin/i;
+.end annotation
+
+
 # instance fields
 .field private final delegate:Lokio/Sink;
 
@@ -16,7 +21,7 @@
 
     const-string v0, "delegate"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -138,7 +143,7 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
     iget-object v0, p0, Lokio/ForwardingSink;->delegate:Lokio/Sink;

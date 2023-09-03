@@ -1,16 +1,264 @@
-.class public Landroidx/core/graphics/l;
-.super Landroidx/core/graphics/m;
-.source "TypefaceCompatApi29Impl.java"
+.class Landroidx/core/graphics/l;
+.super Ljava/lang/Object;
+.source "TypefaceCompatBaseImpl.java"
+
+
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroidx/core/graphics/l$a;
+    }
+.end annotation
+
+
+# instance fields
+.field private a:Ljava/util/concurrent/ConcurrentHashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/ConcurrentHashMap<",
+            "Ljava/lang/Long;",
+            "Landroidx/core/a/a/c$b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method constructor <init>()V
+    .locals 1
 
-    .line 44
-    invoke-direct {p0}, Landroidx/core/graphics/m;-><init>()V
+    .line 45
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 52
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Landroidx/core/graphics/l;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
+.end method
+
+.method private a(Landroidx/core/a/a/c$b;I)Landroidx/core/a/a/c$c;
+    .locals 1
+
+    .line 153
+    invoke-virtual {p1}, Landroidx/core/a/a/c$b;->a()[Landroidx/core/a/a/c$c;
+
+    move-result-object p1
+
+    new-instance v0, Landroidx/core/graphics/l$2;
+
+    invoke-direct {v0, p0}, Landroidx/core/graphics/l$2;-><init>(Landroidx/core/graphics/l;)V
+
+    invoke-static {p1, p2, v0}, Landroidx/core/graphics/l;->a([Ljava/lang/Object;ILandroidx/core/graphics/l$a;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/core/a/a/c$c;
+
+    return-object p1
+.end method
+
+.method private static a([Ljava/lang/Object;ILandroidx/core/graphics/l$a;)Ljava/lang/Object;
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">([TT;I",
+            "Landroidx/core/graphics/l$a<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    and-int/lit8 v0, p1, 0x1
+
+    if-nez v0, :cond_0
+
+    const/16 v0, 0x190
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x2bc
+
+    :goto_0
+    and-int/lit8 p1, p1, 0x2
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-eqz p1, :cond_1
+
+    move p1, v2
+
+    goto :goto_1
+
+    :cond_1
+    move p1, v1
+
+    :goto_1
+    const/4 v3, 0x0
+
+    const v4, 0x7fffffff
+
+    .line 67
+    array-length v5, p0
+
+    move v6, v4
+
+    move-object v4, v3
+
+    move v3, v1
+
+    :goto_2
+    if-ge v3, v5, :cond_5
+
+    aget-object v7, p0, v3
+
+    .line 68
+    invoke-interface {p2, v7}, Landroidx/core/graphics/l$a;->b(Ljava/lang/Object;)I
+
+    move-result v8
+
+    sub-int/2addr v8, v0
+
+    invoke-static {v8}, Ljava/lang/Math;->abs(I)I
+
+    move-result v8
+
+    mul-int/lit8 v8, v8, 0x2
+
+    .line 69
+    invoke-interface {p2, v7}, Landroidx/core/graphics/l$a;->a(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-ne v9, p1, :cond_2
+
+    move v9, v1
+
+    goto :goto_3
+
+    :cond_2
+    move v9, v2
+
+    :goto_3
+    add-int/2addr v8, v9
+
+    if-eqz v4, :cond_3
+
+    if-le v6, v8, :cond_4
+
+    :cond_3
+    move-object v4, v7
+
+    move v6, v8
+
+    :cond_4
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_5
+    return-object v4
+.end method
+
+.method private a(Landroid/graphics/Typeface;Landroidx/core/a/a/c$b;)V
+    .locals 4
+
+    .line 219
+    invoke-static {p1}, Landroidx/core/graphics/l;->b(Landroid/graphics/Typeface;)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p1, v0, v2
+
+    if-eqz p1, :cond_0
+
+    .line 221
+    iget-object p1, p0, Landroidx/core/graphics/l;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0, p2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+.end method
+
+.method private static b(Landroid/graphics/Typeface;)J
+    .locals 6
+
+    const-string v0, "Could not retrieve font from family."
+
+    const-string v1, "TypefaceCompatBaseImpl"
+
+    const-wide/16 v2, 0x0
+
+    if-nez p0, :cond_0
+
+    return-wide v2
+
+    .line 85
+    :cond_0
+    :try_start_0
+    const-class v4, Landroid/graphics/Typeface;
+
+    const-string v5, "native_instance"
+
+    invoke-virtual {v4, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v4
+
+    const/4 v5, 0x1
+
+    .line 86
+    invoke-virtual {v4, v5}, Ljava/lang/reflect/Field;->setAccessible(Z)V
+
+    .line 87
+    invoke-virtual {v4, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Number;
+
+    .line 88
+    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-wide v0
+
+    :catch_0
+    move-exception p0
+
+    .line 93
+    invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-wide v2
+
+    :catch_1
+    move-exception p0
+
+    .line 90
+    invoke-static {v1, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    return-wide v2
 .end method
 
 
@@ -18,465 +266,293 @@
 .method public a(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
     .locals 0
 
-    .line 146
+    .line 187
+    invoke-static {p1}, Landroidx/core/graphics/m;->a(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object p1
+
+    const/4 p4, 0x0
+
+    if-nez p1, :cond_0
+
+    return-object p4
+
+    .line 192
+    :cond_0
     :try_start_0
-    new-instance p1, Landroid/graphics/fonts/FontFamily$Builder;
+    invoke-static {p1, p2, p3}, Landroidx/core/graphics/m;->a(Ljava/io/File;Landroid/content/res/Resources;I)Z
 
-    new-instance p4, Landroid/graphics/fonts/Font$Builder;
+    move-result p2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {p4, p2, p3}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
+    if-nez p2, :cond_1
 
-    invoke-virtual {p4}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
+    .line 202
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+
+    return-object p4
+
+    .line 195
+    :cond_1
+    :try_start_1
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
+    invoke-static {p2}, Landroid/graphics/Typeface;->createFromFile(Ljava/lang/String;)Landroid/graphics/Typeface;
 
-    invoke-virtual {p1}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    move-result-object p2
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 202
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 150
-    new-instance p2, Landroid/graphics/fonts/FontStyle;
+    return-object p2
 
-    and-int/lit8 p3, p5, 0x1
+    :catchall_0
+    move-exception p2
 
-    if-eqz p3, :cond_0
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    const/16 p3, 0x2bc
+    .line 203
+    throw p2
 
-    goto :goto_0
-
-    :cond_0
-    const/16 p3, 0x190
-
-    :goto_0
-    and-int/lit8 p4, p5, 0x2
-
-    if-eqz p4, :cond_1
-
-    const/4 p4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p4, 0x0
-
-    .line 154
-    :goto_1
-    invoke-direct {p2, p3, p4}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
-
-    .line 156
-    new-instance p3, Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    invoke-direct {p3, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
-
-    invoke-virtual {p3, p2}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    return-object p1
-
+    .line 202
     :catch_0
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    return-object p1
+    return-object p4
 .end method
 
 .method public a(Landroid/content/Context;Landroid/os/CancellationSignal;[Landroidx/core/d/b$b;I)Landroid/graphics/Typeface;
-    .locals 10
+    .locals 2
 
-    .line 63
-    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object p1
-
-    .line 64
-    array-length v0, p3
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v4, v1
-
-    move v3, v2
-
-    :goto_0
-    const/4 v5, 0x1
-
-    if-ge v3, v0, :cond_5
-
-    aget-object v6, p3, v3
-
-    .line 65
-    :try_start_0
-    invoke-virtual {v6}, Landroidx/core/d/b$b;->a()Landroid/net/Uri;
-
-    move-result-object v7
-
-    const-string v8, "r"
-
-    invoke-virtual {p1, v7, v8, p2}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;Landroid/os/CancellationSignal;)Landroid/os/ParcelFileDescriptor;
-
-    move-result-object v7
-
-    if-nez v7, :cond_0
-
-    if-eqz v7, :cond_4
-
-    .line 81
-    :goto_1
-    invoke-virtual {v7}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-
-    goto :goto_5
-
-    .line 70
-    :cond_0
-    :try_start_1
-    new-instance v8, Landroid/graphics/fonts/Font$Builder;
-
-    invoke-direct {v8, v7}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/os/ParcelFileDescriptor;)V
-
-    .line 71
-    invoke-virtual {v6}, Landroidx/core/d/b$b;->c()I
-
-    move-result v9
-
-    invoke-virtual {v8, v9}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v8
-
-    .line 72
-    invoke-virtual {v6}, Landroidx/core/d/b$b;->d()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    move v5, v2
-
-    :goto_2
-    invoke-virtual {v8, v5}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v5
-
-    .line 74
-    invoke-virtual {v6}, Landroidx/core/d/b$b;->b()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v5
-
-    .line 75
-    invoke-virtual {v5}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
-
-    move-result-object v5
-
-    if-nez v4, :cond_2
-
-    .line 77
-    new-instance v6, Landroid/graphics/fonts/FontFamily$Builder;
-
-    invoke-direct {v6, v5}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
-
-    move-object v4, v6
-
-    goto :goto_3
-
-    .line 79
-    :cond_2
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_3
-    if-eqz v7, :cond_4
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v5
-
-    if-eqz v7, :cond_3
-
-    .line 65
-    :try_start_2
-    invoke-virtual {v7}, Landroid/os/ParcelFileDescriptor;->close()V
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
-
-    goto :goto_4
-
-    :catch_1
-    move-exception v6
-
-    :try_start_3
-    invoke-virtual {v5, v6}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_4
-    throw v5
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
-
-    :catch_2
-    :cond_4
-    :goto_5
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_5
-    if-nez v4, :cond_6
-
-    return-object v1
-
-    .line 88
-    :cond_6
-    new-instance p1, Landroid/graphics/fonts/FontStyle;
-
-    and-int/lit8 p2, p4, 0x1
-
-    if-eqz p2, :cond_7
-
-    const/16 p2, 0x2bc
-
-    goto :goto_6
-
-    :cond_7
-    const/16 p2, 0x190
-
-    :goto_6
-    and-int/lit8 p3, p4, 0x2
-
-    if-eqz p3, :cond_8
-
-    move v2, v5
-
-    .line 92
-    :cond_8
-    invoke-direct {p1, p2, v2}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
-
-    .line 94
-    new-instance p2, Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    invoke-virtual {v4}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
-
-    move-result-object p3
-
-    invoke-direct {p2, p3}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
-
-    .line 95
-    invoke-virtual {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    move-result-object p1
-
-    .line 96
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public a(Landroid/content/Context;Landroidx/core/content/a/c$b;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
-    .locals 8
-
-    .line 105
-    invoke-virtual {p2}, Landroidx/core/content/a/c$b;->a()[Landroidx/core/content/a/c$c;
-
-    move-result-object p1
-
-    array-length p2, p1
+    .line 137
+    array-length p2, p3
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    move-object v3, v0
-
-    move v2, v1
-
-    :goto_0
-    const/4 v4, 0x1
-
-    if-ge v2, p2, :cond_2
-
-    aget-object v5, p1, v2
-
-    .line 107
-    :try_start_0
-    new-instance v6, Landroid/graphics/fonts/Font$Builder;
-
-    invoke-virtual {v5}, Landroidx/core/content/a/c$c;->f()I
-
-    move-result v7
-
-    invoke-direct {v6, p3, v7}, Landroid/graphics/fonts/Font$Builder;-><init>(Landroid/content/res/Resources;I)V
-
-    .line 108
-    invoke-virtual {v5}, Landroidx/core/content/a/c$c;->b()I
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Landroid/graphics/fonts/Font$Builder;->setWeight(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v6
-
-    .line 109
-    invoke-virtual {v5}, Landroidx/core/content/a/c$c;->c()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    move v4, v1
-
-    :goto_1
-    invoke-virtual {v6, v4}, Landroid/graphics/fonts/Font$Builder;->setSlant(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v4
-
-    .line 111
-    invoke-virtual {v5}, Landroidx/core/content/a/c$c;->e()I
-
-    move-result v6
-
-    invoke-virtual {v4, v6}, Landroid/graphics/fonts/Font$Builder;->setTtcIndex(I)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v4
-
-    .line 112
-    invoke-virtual {v5}, Landroidx/core/content/a/c$c;->d()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Landroid/graphics/fonts/Font$Builder;->setFontVariationSettings(Ljava/lang/String;)Landroid/graphics/fonts/Font$Builder;
-
-    move-result-object v4
-
-    .line 113
-    invoke-virtual {v4}, Landroid/graphics/fonts/Font$Builder;->build()Landroid/graphics/fonts/Font;
-
-    move-result-object v4
-
-    if-nez v3, :cond_1
-
-    .line 115
-    new-instance v5, Landroid/graphics/fonts/FontFamily$Builder;
-
-    invoke-direct {v5, v4}, Landroid/graphics/fonts/FontFamily$Builder;-><init>(Landroid/graphics/fonts/Font;)V
-
-    move-object v3, v5
-
-    goto :goto_2
-
-    .line 117
-    :cond_1
-    invoke-virtual {v3, v4}, Landroid/graphics/fonts/FontFamily$Builder;->addFont(Landroid/graphics/fonts/Font;)Landroid/graphics/fonts/FontFamily$Builder;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :goto_2
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    if-nez v3, :cond_3
+    if-ge p2, v1, :cond_0
 
     return-object v0
 
-    .line 126
-    :cond_3
-    new-instance p1, Landroid/graphics/fonts/FontStyle;
+    .line 140
+    :cond_0
+    invoke-virtual {p0, p3, p4}, Landroidx/core/graphics/l;->a([Landroidx/core/d/b$b;I)Landroidx/core/d/b$b;
 
-    and-int/lit8 p2, p4, 0x1
+    move-result-object p2
 
-    if-eqz p2, :cond_4
-
-    const/16 p2, 0x2bc
-
-    goto :goto_3
-
-    :cond_4
-    const/16 p2, 0x190
-
-    :goto_3
-    and-int/lit8 p3, p4, 0x2
-
-    if-eqz p3, :cond_5
-
-    move v1, v4
-
-    .line 130
-    :cond_5
-    invoke-direct {p1, p2, v1}, Landroid/graphics/fonts/FontStyle;-><init>(II)V
-
-    .line 132
-    new-instance p2, Landroid/graphics/Typeface$CustomFallbackBuilder;
-
-    invoke-virtual {v3}, Landroid/graphics/fonts/FontFamily$Builder;->build()Landroid/graphics/fonts/FontFamily;
+    .line 143
+    :try_start_0
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Landroid/graphics/Typeface$CustomFallbackBuilder;-><init>(Landroid/graphics/fonts/FontFamily;)V
+    invoke-virtual {p2}, Landroidx/core/d/b$b;->a()Landroid/net/Uri;
 
-    .line 133
-    invoke-virtual {p2, p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->setStyle(Landroid/graphics/fonts/FontStyle;)Landroid/graphics/Typeface$CustomFallbackBuilder;
+    move-result-object p2
+
+    invoke-virtual {p3, p2}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
+
+    move-result-object p2
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    .line 144
+    :try_start_1
+    invoke-virtual {p0, p1, p2}, Landroidx/core/graphics/l;->a(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 148
+    invoke-static {p2}, Landroidx/core/graphics/m;->a(Ljava/io/Closeable;)V
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    move-object v0, p2
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception p1
+
+    :goto_0
+    invoke-static {v0}, Landroidx/core/graphics/m;->a(Ljava/io/Closeable;)V
+
+    .line 149
+    throw p1
+
+    :catch_0
+    move-object p2, v0
+
+    .line 148
+    :catch_1
+    invoke-static {p2}, Landroidx/core/graphics/m;->a(Ljava/io/Closeable;)V
+
+    return-object v0
+.end method
+
+.method public a(Landroid/content/Context;Landroidx/core/a/a/c$b;Landroid/content/res/Resources;I)Landroid/graphics/Typeface;
+    .locals 2
+
+    .line 169
+    invoke-direct {p0, p2, p4}, Landroidx/core/graphics/l;->a(Landroidx/core/a/a/c$b;I)Landroidx/core/a/a/c$c;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 174
+    :cond_0
+    invoke-virtual {v0}, Landroidx/core/a/a/c$c;->f()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroidx/core/a/a/c$c;->a()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 173
+    invoke-static {p1, p3, v1, v0, p4}, Landroidx/core/graphics/f;->a(Landroid/content/Context;Landroid/content/res/Resources;ILjava/lang/String;I)Landroid/graphics/Typeface;
 
     move-result-object p1
 
-    .line 134
-    invoke-virtual {p1}, Landroid/graphics/Typeface$CustomFallbackBuilder;->build()Landroid/graphics/Typeface;
-
-    move-result-object p1
+    .line 176
+    invoke-direct {p0, p1, p2}, Landroidx/core/graphics/l;->a(Landroid/graphics/Typeface;Landroidx/core/a/a/c$b;)V
 
     return-object p1
 .end method
 
 .method protected a(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
-    .locals 0
+    .locals 1
 
-    .line 54
-    new-instance p1, Ljava/lang/RuntimeException;
+    .line 114
+    invoke-static {p1}, Landroidx/core/graphics/m;->a(Landroid/content/Context;)Ljava/io/File;
 
-    const-string p2, "Do not use this function in API 29 or later."
+    move-result-object p1
 
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    throw p1
+    if-nez p1, :cond_0
+
+    return-object v0
+
+    .line 119
+    :cond_0
+    :try_start_0
+    invoke-static {p1, p2}, Landroidx/core/graphics/m;->a(Ljava/io/File;Ljava/io/InputStream;)Z
+
+    move-result p2
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez p2, :cond_1
+
+    .line 129
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+
+    return-object v0
+
+    .line 122
+    :cond_1
+    :try_start_1
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p2}, Landroid/graphics/Typeface;->createFromFile(Ljava/lang/String;)Landroid/graphics/Typeface;
+
+    move-result-object p2
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 129
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+
+    return-object p2
+
+    :catchall_0
+    move-exception p2
+
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+
+    .line 130
+    throw p2
+
+    .line 129
+    :catch_0
+    invoke-virtual {p1}, Ljava/io/File;->delete()Z
+
+    return-object v0
+.end method
+
+.method a(Landroid/graphics/Typeface;)Landroidx/core/a/a/c$b;
+    .locals 4
+
+    .line 211
+    invoke-static {p1}, Landroidx/core/graphics/l;->b(Landroid/graphics/Typeface;)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    .line 215
+    :cond_0
+    iget-object p1, p0, Landroidx/core/graphics/l;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/core/a/a/c$b;
+
+    return-object p1
 .end method
 
 .method protected a([Landroidx/core/d/b$b;I)Landroidx/core/d/b$b;
-    .locals 0
+    .locals 1
 
-    .line 48
-    new-instance p1, Ljava/lang/RuntimeException;
+    .line 99
+    new-instance v0, Landroidx/core/graphics/l$1;
 
-    const-string p2, "Do not use this function in API 29 or later."
+    invoke-direct {v0, p0}, Landroidx/core/graphics/l$1;-><init>(Landroidx/core/graphics/l;)V
 
-    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {p1, p2, v0}, Landroidx/core/graphics/l;->a([Ljava/lang/Object;ILandroidx/core/graphics/l$a;)Ljava/lang/Object;
 
-    throw p1
+    move-result-object p1
+
+    check-cast p1, Landroidx/core/d/b$b;
+
+    return-object p1
 .end method

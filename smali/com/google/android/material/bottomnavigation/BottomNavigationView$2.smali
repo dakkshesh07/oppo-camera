@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/g/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/g/ae;
+.method public onApplyWindowInsets(Landroid/view/View;Landroidx/core/f/ae;Lcom/google/android/material/internal/ViewUtils$RelativePadding;)Landroidx/core/f/ae;
     .locals 2
 
     .line 263
     iget v0, p3, Lcom/google/android/material/internal/ViewUtils$RelativePadding;->bottom:I
 
-    invoke-virtual {p2}, Landroidx/core/g/ae;->d()I
+    invoke-virtual {p2}, Landroidx/core/f/ae;->d()I
 
     move-result v1
 

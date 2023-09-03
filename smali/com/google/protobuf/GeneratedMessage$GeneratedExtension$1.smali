@@ -27,7 +27,7 @@
 .method constructor <init>(Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;Lcom/google/protobuf/Descriptors$FieldDescriptor;)V
     .locals 0
 
-    .line 1804
+    .line 1806
     iput-object p1, p0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension$1;->this$0:Lcom/google/protobuf/GeneratedMessage$GeneratedExtension;
 
     iput-object p2, p0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension$1;->val$descriptor:Lcom/google/protobuf/Descriptors$FieldDescriptor;
@@ -42,7 +42,7 @@
 .method public getDescriptor()Lcom/google/protobuf/Descriptors$FieldDescriptor;
     .locals 1
 
-    .line 1807
+    .line 1809
     iget-object v0, p0, Lcom/google/protobuf/GeneratedMessage$GeneratedExtension$1;->val$descriptor:Lcom/google/protobuf/Descriptors$FieldDescriptor;
 
     return-object v0

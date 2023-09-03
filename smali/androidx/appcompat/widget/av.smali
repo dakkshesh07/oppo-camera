@@ -1,366 +1,544 @@
 .class Landroidx/appcompat/widget/av;
 .super Ljava/lang/Object;
-.source "TooltipCompatHandler.java"
-
-# interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
-.implements Landroid/view/View$OnHoverListener;
-.implements Landroid/view/View$OnLongClickListener;
+.source "TooltipPopup.java"
 
 
-# static fields
-.field private static j:Landroidx/appcompat/widget/av;
-
-.field private static k:Landroidx/appcompat/widget/av;
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
 
 
 # instance fields
-.field private final a:Landroid/view/View;
+.field private final a:Landroid/content/Context;
 
-.field private final b:Ljava/lang/CharSequence;
+.field private final b:Landroid/view/View;
 
-.field private final c:I
+.field private final c:Landroid/widget/TextView;
 
-.field private final d:Ljava/lang/Runnable;
+.field private final d:Landroid/view/WindowManager$LayoutParams;
 
-.field private final e:Ljava/lang/Runnable;
+.field private final e:Landroid/graphics/Rect;
 
-.field private f:I
+.field private final f:[I
 
-.field private g:I
-
-.field private h:Landroidx/appcompat/widget/aw;
-
-.field private i:Z
+.field private final g:[I
 
 
 # direct methods
-.method private constructor <init>(Landroid/view/View;Ljava/lang/CharSequence;)V
-    .locals 1
+.method constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    .line 108
+    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 54
-    new-instance v0, Landroidx/appcompat/widget/av$1;
+    new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/av$1;-><init>(Landroidx/appcompat/widget/av;)V
+    invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/av;->d:Ljava/lang/Runnable;
+    iput-object v0, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    .line 55
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Landroidx/appcompat/widget/av;->e:Landroid/graphics/Rect;
+
+    const/4 v0, 0x2
+
+    .line 56
+    new-array v1, v0, [I
+
+    iput-object v1, p0, Landroidx/appcompat/widget/av;->f:[I
+
+    .line 57
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Landroidx/appcompat/widget/av;->g:[I
 
     .line 60
-    new-instance v0, Landroidx/appcompat/widget/av$2;
+    iput-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
 
-    invoke-direct {v0, p0}, Landroidx/appcompat/widget/av$2;-><init>(Landroidx/appcompat/widget/av;)V
+    .line 62
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
 
-    iput-object v0, p0, Landroidx/appcompat/widget/av;->e:Ljava/lang/Runnable;
-
-    .line 109
-    iput-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    .line 110
-    iput-object p2, p0, Landroidx/appcompat/widget/av;->b:Ljava/lang/CharSequence;
-
-    .line 111
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    .line 112
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object p1
 
-    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
-
-    move-result-object p1
-
-    .line 111
-    invoke-static {p1}, Landroidx/core/g/x;->a(Landroid/view/ViewConfiguration;)I
-
-    move-result p1
-
-    iput p1, p0, Landroidx/appcompat/widget/av;->c:I
-
-    .line 113
-    invoke-direct {p0}, Landroidx/appcompat/widget/av;->d()V
-
-    .line 115
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
-
-    .line 116
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
-
-    return-void
-.end method
-
-.method public static a(Landroid/view/View;Ljava/lang/CharSequence;)V
-    .locals 2
-
-    .line 93
-    sget-object v0, Landroidx/appcompat/widget/av;->j:Landroidx/appcompat/widget/av;
+    sget v0, Landroidx/appcompat/R$layout;->abc_tooltip:I
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    iget-object v0, v0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
+    move-result-object p1
 
-    if-ne v0, p0, :cond_0
+    iput-object p1, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
 
-    .line 94
-    invoke-static {v1}, Landroidx/appcompat/widget/av;->a(Landroidx/appcompat/widget/av;)V
+    .line 63
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
 
-    .line 96
+    sget v0, Landroidx/appcompat/R$id;->message:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    iput-object p1, p0, Landroidx/appcompat/widget/av;->c:Landroid/widget/TextView;
+
+    .line 65
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
+
+    .line 66
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p1, Landroid/view/WindowManager$LayoutParams;->packageName:Ljava/lang/String;
+
+    .line 67
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    const/16 v0, 0x3ea
+
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    const/4 v0, -0x2
+
+    .line 68
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->width:I
+
+    .line 69
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->height:I
+
+    const/4 v0, -0x3
+
+    .line 70
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->format:I
+
+    .line 71
+    sget v0, Landroidx/appcompat/R$style;->Animation_AppCompat_Tooltip:I
+
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
+
+    .line 72
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    const/16 v0, 0x18
+
+    iput v0, p1, Landroid/view/WindowManager$LayoutParams;->flags:I
+
+    return-void
+.end method
+
+.method private static a(Landroid/view/View;)Landroid/view/View;
+    .locals 3
+
+    .line 188
+    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
+
+    move-result-object v0
+
+    .line 189
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    .line 190
+    instance-of v2, v1, Landroid/view/WindowManager$LayoutParams;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Landroid/view/WindowManager$LayoutParams;
+
+    iget v1, v1, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    return-object v0
+
+    .line 198
     :cond_0
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result v0
+    move-result-object p0
 
-    if-eqz v0, :cond_2
+    .line 199
+    :goto_0
+    instance-of v1, p0, Landroid/content/ContextWrapper;
 
-    .line 97
-    sget-object p1, Landroidx/appcompat/widget/av;->k:Landroidx/appcompat/widget/av;
+    if-eqz v1, :cond_2
 
-    if-eqz p1, :cond_1
+    .line 200
+    instance-of v1, p0, Landroid/app/Activity;
 
-    iget-object v0, p1, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
+    if-eqz v1, :cond_1
 
-    if-ne v0, p0, :cond_1
+    .line 201
+    check-cast p0, Landroid/app/Activity;
 
-    .line 98
-    invoke-virtual {p1}, Landroidx/appcompat/widget/av;->a()V
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    .line 100
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 203
     :cond_1
-    invoke-virtual {p0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    check-cast p0, Landroid/content/ContextWrapper;
 
-    const/4 p1, 0x0
+    invoke-virtual {p0}, Landroid/content/ContextWrapper;->getBaseContext()Landroid/content/Context;
 
-    .line 101
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLongClickable(Z)V
-
-    .line 102
-    invoke-virtual {p0, v1}, Landroid/view/View;->setOnHoverListener(Landroid/view/View$OnHoverListener;)V
+    move-result-object p0
 
     goto :goto_0
 
-    .line 104
     :cond_2
-    new-instance v0, Landroidx/appcompat/widget/av;
-
-    invoke-direct {v0, p0, p1}, Landroidx/appcompat/widget/av;-><init>(Landroid/view/View;Ljava/lang/CharSequence;)V
-
-    :goto_0
-    return-void
+    return-object v0
 .end method
 
-.method private static a(Landroidx/appcompat/widget/av;)V
-    .locals 1
+.method private a(Landroid/view/View;IIZLandroid/view/WindowManager$LayoutParams;)V
+    .locals 8
 
-    .line 210
-    sget-object v0, Landroidx/appcompat/widget/av;->j:Landroidx/appcompat/widget/av;
+    .line 105
+    invoke-virtual {p1}, Landroid/view/View;->getApplicationWindowToken()Landroid/os/IBinder;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 211
-    invoke-direct {v0}, Landroidx/appcompat/widget/av;->c()V
+    iput-object v0, p5, Landroid/view/WindowManager$LayoutParams;->token:Landroid/os/IBinder;
 
-    .line 213
-    :cond_0
-    sput-object p0, Landroidx/appcompat/widget/av;->j:Landroidx/appcompat/widget/av;
+    .line 106
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
 
-    .line 214
-    sget-object p0, Landroidx/appcompat/widget/av;->j:Landroidx/appcompat/widget/av;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eqz p0, :cond_1
+    move-result-object v0
 
-    .line 215
-    invoke-direct {p0}, Landroidx/appcompat/widget/av;->b()V
+    sget v1, Landroidx/appcompat/R$dimen;->tooltip_precise_anchor_threshold:I
 
-    :cond_1
-    return-void
-.end method
-
-.method private a(Landroid/view/MotionEvent;)Z
-    .locals 3
-
-    .line 235
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
     move-result v0
 
-    float-to-int v0, v0
+    .line 110
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
-    .line 236
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+    move-result v1
+
+    if-lt v1, v0, :cond_0
+
+    goto :goto_0
+
+    .line 115
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    div-int/lit8 p2, p2, 0x2
+
+    .line 120
+    :goto_0
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-lt v1, v0, :cond_1
+
+    .line 122
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    sget v1, Landroidx/appcompat/R$dimen;->tooltip_precise_anchor_extra_offset:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v0
+
+    add-int v1, p3, v0
+
+    sub-int/2addr p3, v0
+
+    goto :goto_1
+
+    .line 128
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    move p3, v2
+
+    :goto_1
+    const/16 v0, 0x31
+
+    .line 132
+    iput v0, p5, Landroid/view/WindowManager$LayoutParams;->gravity:I
+
+    .line 134
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    if-eqz p4, :cond_2
+
+    .line 135
+    sget v3, Landroidx/appcompat/R$dimen;->tooltip_y_offset_touch:I
+
+    goto :goto_2
+
+    :cond_2
+    sget v3, Landroidx/appcompat/R$dimen;->tooltip_y_offset_non_touch:I
+
+    .line 134
+    :goto_2
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
+
+    move-result v0
+
+    .line 137
+    invoke-static {p1}, Landroidx/appcompat/widget/av;->a(Landroid/view/View;)Landroid/view/View;
+
+    move-result-object v3
+
+    if-nez v3, :cond_3
+
+    const-string p1, "TooltipPopup"
+
+    const-string p2, "Cannot find app view"
+
+    .line 139
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    .line 142
+    :cond_3
+    iget-object v4, p0, Landroidx/appcompat/widget/av;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    .line 143
+    iget-object v4, p0, Landroidx/appcompat/widget/av;->e:Landroid/graphics/Rect;
+
+    iget v4, v4, Landroid/graphics/Rect;->left:I
+
+    if-gez v4, :cond_5
+
+    iget-object v4, p0, Landroidx/appcompat/widget/av;->e:Landroid/graphics/Rect;
+
+    iget v4, v4, Landroid/graphics/Rect;->top:I
+
+    if-gez v4, :cond_5
+
+    .line 146
+    iget-object v4, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const-string v5, "status_bar_height"
+
+    const-string v6, "dimen"
+
+    const-string v7, "android"
+
+    .line 148
+    invoke-virtual {v4, v5, v6, v7}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v5
+
+    if-eqz v5, :cond_4
+
+    .line 150
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v5
+
+    goto :goto_3
+
+    :cond_4
+    move v5, v2
+
+    .line 154
+    :goto_3
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    .line 155
+    iget-object v6, p0, Landroidx/appcompat/widget/av;->e:Landroid/graphics/Rect;
+
+    iget v7, v4, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    invoke-virtual {v6, v2, v5, v7, v4}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 157
+    :cond_5
+    iget-object v4, p0, Landroidx/appcompat/widget/av;->g:[I
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 159
+    iget-object v4, p0, Landroidx/appcompat/widget/av;->f:[I
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->getLocationOnScreen([I)V
+
+    .line 160
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->f:[I
+
+    aget v4, p1, v2
+
+    iget-object v5, p0, Landroidx/appcompat/widget/av;->g:[I
+
+    aget v6, v5, v2
+
+    sub-int/2addr v4, v6
+
+    aput v4, p1, v2
+
+    const/4 v4, 0x1
+
+    .line 161
+    aget v6, p1, v4
+
+    aget v5, v5, v4
+
+    sub-int/2addr v6, v5
+
+    aput v6, p1, v4
+
+    .line 164
+    aget p1, p1, v2
+
+    add-int/2addr p1, p2
+
+    invoke-virtual {v3}, Landroid/view/View;->getWidth()I
+
+    move-result p2
+
+    div-int/lit8 p2, p2, 0x2
+
+    sub-int/2addr p1, p2
+
+    iput p1, p5, Landroid/view/WindowManager$LayoutParams;->x:I
+
+    .line 166
+    invoke-static {v2, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result p1
 
-    float-to-int p1, p1
+    .line 167
+    iget-object p2, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
 
-    .line 237
-    iget v1, p0, Landroidx/appcompat/widget/av;->f:I
+    invoke-virtual {p2, p1, p1}, Landroid/view/View;->measure(II)V
 
-    sub-int v1, v0, v1
+    .line 168
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
 
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    move-result v1
+    move-result p1
 
-    iget v2, p0, Landroidx/appcompat/widget/av;->c:I
+    .line 170
+    iget-object p2, p0, Landroidx/appcompat/widget/av;->f:[I
 
-    if-gt v1, v2, :cond_0
+    aget v2, p2, v4
 
-    iget v1, p0, Landroidx/appcompat/widget/av;->g:I
+    add-int/2addr v2, p3
 
-    sub-int v1, p1, v1
+    sub-int/2addr v2, v0
 
-    .line 238
-    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
+    sub-int/2addr v2, p1
 
-    move-result v1
+    .line 171
+    aget p2, p2, v4
 
-    iget v2, p0, Landroidx/appcompat/widget/av;->c:I
+    add-int/2addr p2, v1
 
-    if-gt v1, v2, :cond_0
+    add-int/2addr p2, v0
 
-    const/4 p1, 0x0
+    if-eqz p4, :cond_7
 
-    return p1
+    if-ltz v2, :cond_6
 
-    .line 241
-    :cond_0
-    iput v0, p0, Landroidx/appcompat/widget/av;->f:I
+    .line 174
+    iput v2, p5, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 242
-    iput p1, p0, Landroidx/appcompat/widget/av;->g:I
+    goto :goto_4
 
-    const/4 p1, 0x1
+    .line 176
+    :cond_6
+    iput p2, p5, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    return p1
-.end method
+    goto :goto_4
 
-.method private b()V
-    .locals 4
+    :cond_7
+    add-int/2addr p1, p2
 
-    .line 220
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
+    .line 179
+    iget-object p3, p0, Landroidx/appcompat/widget/av;->e:Landroid/graphics/Rect;
 
-    iget-object v1, p0, Landroidx/appcompat/widget/av;->d:Ljava/lang/Runnable;
+    invoke-virtual {p3}, Landroid/graphics/Rect;->height()I
 
-    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
+    move-result p3
 
-    move-result v2
+    if-gt p1, p3, :cond_8
 
-    int-to-long v2, v2
+    .line 180
+    iput p2, p5, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    goto :goto_4
 
-    return-void
-.end method
+    .line 182
+    :cond_8
+    iput v2, p5, Landroid/view/WindowManager$LayoutParams;->y:I
 
-.method private c()V
-    .locals 2
-
-    .line 224
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    iget-object v1, p0, Landroidx/appcompat/widget/av;->d:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method private d()V
-    .locals 1
-
-    const v0, 0x7fffffff
-
-    .line 250
-    iput v0, p0, Landroidx/appcompat/widget/av;->f:I
-
-    .line 251
-    iput v0, p0, Landroidx/appcompat/widget/av;->g:I
-
+    :goto_4
     return-void
 .end method
 
 
 # virtual methods
 .method a()V
-    .locals 3
+    .locals 2
 
-    .line 192
-    sget-object v0, Landroidx/appcompat/widget/av;->k:Landroidx/appcompat/widget/av;
-
-    const/4 v1, 0x0
-
-    if-ne v0, p0, :cond_1
-
-    .line 193
-    sput-object v1, Landroidx/appcompat/widget/av;->k:Landroidx/appcompat/widget/av;
-
-    .line 194
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->h:Landroidx/appcompat/widget/aw;
-
-    if-eqz v0, :cond_0
-
-    .line 195
-    invoke-virtual {v0}, Landroidx/appcompat/widget/aw;->a()V
-
-    .line 196
-    iput-object v1, p0, Landroidx/appcompat/widget/av;->h:Landroidx/appcompat/widget/aw;
-
-    .line 197
-    invoke-direct {p0}, Landroidx/appcompat/widget/av;->d()V
-
-    .line 198
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "TooltipCompatHandler"
-
-    const-string v2, "sActiveHandler.mPopup == null"
-
-    .line 200
-    invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 203
-    :cond_1
-    :goto_0
-    sget-object v0, Landroidx/appcompat/widget/av;->j:Landroidx/appcompat/widget/av;
-
-    if-ne v0, p0, :cond_2
-
-    .line 204
-    invoke-static {v1}, Landroidx/appcompat/widget/av;->a(Landroidx/appcompat/widget/av;)V
-
-    .line 206
-    :cond_2
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    iget-object v1, p0, Landroidx/appcompat/widget/av;->e:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method a(Z)V
-    .locals 7
-
-    .line 163
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-static {v0}, Landroidx/core/g/w;->E(Landroid/view/View;)Z
+    .line 91
+    invoke-virtual {p0}, Landroidx/appcompat/widget/av;->b()Z
 
     move-result v0
 
@@ -368,264 +546,100 @@
 
     return-void
 
+    .line 95
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
 
-    .line 166
-    invoke-static {v0}, Landroidx/appcompat/widget/av;->a(Landroidx/appcompat/widget/av;)V
+    const-string v1, "window"
 
-    .line 167
-    sget-object v0, Landroidx/appcompat/widget/av;->k:Landroidx/appcompat/widget/av;
-
-    if-eqz v0, :cond_1
-
-    .line 168
-    invoke-virtual {v0}, Landroidx/appcompat/widget/av;->a()V
-
-    .line 170
-    :cond_1
-    sput-object p0, Landroidx/appcompat/widget/av;->k:Landroidx/appcompat/widget/av;
-
-    .line 172
-    iput-boolean p1, p0, Landroidx/appcompat/widget/av;->i:Z
-
-    .line 173
-    new-instance p1, Landroidx/appcompat/widget/aw;
-
-    iget-object v0, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Landroidx/appcompat/widget/aw;-><init>(Landroid/content/Context;)V
+    check-cast v0, Landroid/view/WindowManager;
 
-    iput-object p1, p0, Landroidx/appcompat/widget/av;->h:Landroidx/appcompat/widget/aw;
+    .line 96
+    iget-object v1, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
 
-    .line 174
-    iget-object v1, p0, Landroidx/appcompat/widget/av;->h:Landroidx/appcompat/widget/aw;
-
-    iget-object v2, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    iget v3, p0, Landroidx/appcompat/widget/av;->f:I
-
-    iget v4, p0, Landroidx/appcompat/widget/av;->g:I
-
-    iget-boolean v5, p0, Landroidx/appcompat/widget/av;->i:Z
-
-    iget-object v6, p0, Landroidx/appcompat/widget/av;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual/range {v1 .. v6}, Landroidx/appcompat/widget/aw;->a(Landroid/view/View;IIZLjava/lang/CharSequence;)V
-
-    .line 176
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    .line 179
-    iget-boolean p1, p0, Landroidx/appcompat/widget/av;->i:Z
-
-    if-eqz p1, :cond_2
-
-    const-wide/16 v0, 0x9c4
-
-    goto :goto_1
-
-    .line 181
-    :cond_2
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-static {p1}, Landroidx/core/g/w;->r(Landroid/view/View;)I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    and-int/2addr p1, v0
-
-    if-ne p1, v0, :cond_3
-
-    const-wide/16 v0, 0xbb8
-
-    .line 183
-    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_3
-    const-wide/16 v0, 0x3a98
-
-    .line 185
-    invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
-
-    move-result p1
-
-    :goto_0
-    int-to-long v2, p1
-
-    sub-long/2addr v0, v2
-
-    .line 187
-    :goto_1
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    iget-object v2, p0, Landroidx/appcompat/widget/av;->e:Ljava/lang/Runnable;
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    .line 188
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    iget-object v2, p0, Landroidx/appcompat/widget/av;->e:Ljava/lang/Runnable;
-
-    invoke-virtual {p1, v2, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public onHover(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 2
+.method a(Landroid/view/View;IIZLjava/lang/CharSequence;)V
+    .locals 7
 
-    .line 129
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->h:Landroidx/appcompat/widget/aw;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    iget-boolean p1, p0, Landroidx/appcompat/widget/av;->i:Z
-
-    if-eqz p1, :cond_0
-
-    return v0
-
-    .line 132
-    :cond_0
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    .line 133
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    const-string v1, "accessibility"
-
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/accessibility/AccessibilityManager;
-
-    .line 134
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityManager;->isTouchExplorationEnabled()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    .line 137
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    const/4 v1, 0x7
-
-    if-eq p1, v1, :cond_3
-
-    const/16 p2, 0xa
-
-    if-eq p1, p2, :cond_2
-
-    goto :goto_0
-
-    .line 144
-    :cond_2
-    invoke-direct {p0}, Landroidx/appcompat/widget/av;->d()V
-
-    .line 145
-    invoke-virtual {p0}, Landroidx/appcompat/widget/av;->a()V
-
-    goto :goto_0
-
-    .line 139
-    :cond_3
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Landroidx/appcompat/widget/av;->h:Landroidx/appcompat/widget/aw;
-
-    if-nez p1, :cond_4
-
-    invoke-direct {p0, p2}, Landroidx/appcompat/widget/av;->a(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    .line 140
-    invoke-static {p0}, Landroidx/appcompat/widget/av;->a(Landroidx/appcompat/widget/av;)V
-
-    :cond_4
-    :goto_0
-    return v0
-.end method
-
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 1
-
-    .line 121
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    .line 78
+    invoke-virtual {p0}, Landroidx/appcompat/widget/av;->b()Z
 
     move-result v0
 
-    div-int/lit8 v0, v0, 0x2
+    if-eqz v0, :cond_0
 
-    iput v0, p0, Landroidx/appcompat/widget/av;->f:I
-
-    .line 122
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result p1
-
-    div-int/lit8 p1, p1, 0x2
-
-    iput p1, p0, Landroidx/appcompat/widget/av;->g:I
-
-    const/4 p1, 0x1
-
-    .line 123
-    invoke-virtual {p0, p1}, Landroidx/appcompat/widget/av;->a(Z)V
-
-    return p1
-.end method
-
-.method public onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
-
-    .line 159
+    .line 79
     invoke-virtual {p0}, Landroidx/appcompat/widget/av;->a()V
 
+    .line 82
+    :cond_0
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 84
+    iget-object v6, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-direct/range {v1 .. v6}, Landroidx/appcompat/widget/av;->a(Landroid/view/View;IIZLandroid/view/WindowManager$LayoutParams;)V
+
+    .line 86
+    iget-object p1, p0, Landroidx/appcompat/widget/av;->a:Landroid/content/Context;
+
+    const-string p2, "window"
+
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/WindowManager;
+
+    .line 87
+    iget-object p2, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
+
+    iget-object p3, p0, Landroidx/appcompat/widget/av;->d:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {p1, p2, p3}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
     return-void
+.end method
+
+.method b()Z
+    .locals 1
+
+    .line 100
+    iget-object v0, p0, Landroidx/appcompat/widget/av;->b:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
 .end method

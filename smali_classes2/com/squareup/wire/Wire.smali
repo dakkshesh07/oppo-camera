@@ -1,10 +1,19 @@
 .class public final Lcom/squareup/wire/Wire;
 .super Ljava/lang/Object;
-.source "Wire.kt"
+.source "Wire.java"
 
 
 # direct methods
-.method public static final get(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method private constructor <init>()V
+    .locals 0
+
+    .line 19
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static get(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {

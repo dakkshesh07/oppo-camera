@@ -264,14 +264,14 @@
     move-result v0
 
     .line 53
-    invoke-static {v0}, Lcom/oppo/providers/downloads/DownloadManager$CursorTranslator;->translateStatus(I)I
+    invoke-static {v0}, Lcom/oplus/b/a/a$a;->b(I)I
 
     move-result v1
 
     iput v1, p1, Lcom/android/providers/downloads/DownloadInfoData;->mStatus:I
 
     .line 55
-    invoke-static {v0}, Lcom/oppo/providers/downloads/DownloadManager$CursorTranslator;->getReason(I)J
+    invoke-static {v0}, Lcom/oplus/b/a/a$a;->a(I)J
 
     move-result-wide v0
 

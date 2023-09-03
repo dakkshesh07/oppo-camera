@@ -22,7 +22,7 @@
 .method private constructor <init>(Lcom/oppo/camera/ui/beauty3d/d;)V
     .locals 0
 
-    .line 1777
+    .line 1867
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$d;->b:Lcom/oppo/camera/ui/beauty3d/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -33,7 +33,7 @@
 .method synthetic constructor <init>(Lcom/oppo/camera/ui/beauty3d/d;Lcom/oppo/camera/ui/beauty3d/d$1;)V
     .locals 0
 
-    .line 1777
+    .line 1867
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/beauty3d/d$d;-><init>(Lcom/oppo/camera/ui/beauty3d/d;)V
 
     return-void

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private d:Lcom/oppo/camera/sticker/ui/h;
+.field private d:Lcom/oppo/camera/sticker/ui/g;
 
 .field private e:Landroid/graphics/Rect;
 
@@ -36,7 +36,7 @@
     const/4 p1, 0x0
 
     .line 15
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/h;
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/g;
 
     .line 16
     new-instance p1, Landroid/graphics/Rect;
@@ -195,11 +195,11 @@
     .locals 1
 
     .line 37
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/g;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/oppo/camera/sticker/ui/h;->a()Z
+    invoke-interface {v0}, Lcom/oppo/camera/sticker/ui/g;->a()Z
 
     move-result v0
 
@@ -243,12 +243,12 @@
     iput v0, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->h:I
 
     .line 50
-    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/h;
+    iget-object v0, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/g;
 
     if-eqz v0, :cond_0
 
     .line 51
-    invoke-interface {v0}, Lcom/oppo/camera/sticker/ui/h;->b()V
+    invoke-interface {v0}, Lcom/oppo/camera/sticker/ui/g;->b()V
 
     .line 55
     :cond_0
@@ -597,11 +597,11 @@
     return p1
 .end method
 
-.method public setStickerCategoryInterface(Lcom/oppo/camera/sticker/ui/h;)V
+.method public setStickerCategoryInterface(Lcom/oppo/camera/sticker/ui/g;)V
     .locals 0
 
     .line 32
-    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/h;
+    iput-object p1, p0, Lcom/oppo/camera/sticker/ui/StickerPageView;->d:Lcom/oppo/camera/sticker/ui/g;
 
     return-void
 .end method

@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/coloros/anim/a/b/f<",
-        "Lcom/coloros/anim/c/b;",
+        "Lcom/coloros/anim/model/DocumentData;",
         ">;"
     }
 .end annotation
@@ -20,8 +20,8 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/g/c<",
-            "Lcom/coloros/anim/c/b;",
+            "Lcom/coloros/anim/e/c<",
+            "Lcom/coloros/anim/model/DocumentData;",
             ">;>;)V"
         }
     .end annotation
@@ -34,33 +34,33 @@
 
 
 # virtual methods
-.method synthetic a(Lcom/coloros/anim/g/c;F)Ljava/lang/Object;
+.method synthetic a(Lcom/coloros/anim/e/c;F)Ljava/lang/Object;
     .locals 0
 
     .line 8
-    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/n;->b(Lcom/coloros/anim/g/c;F)Lcom/coloros/anim/c/b;
+    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/n;->b(Lcom/coloros/anim/e/c;F)Lcom/coloros/anim/model/DocumentData;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method b(Lcom/coloros/anim/g/c;F)Lcom/coloros/anim/c/b;
+.method b(Lcom/coloros/anim/e/c;F)Lcom/coloros/anim/model/DocumentData;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/c<",
-            "Lcom/coloros/anim/c/b;",
+            "Lcom/coloros/anim/e/c<",
+            "Lcom/coloros/anim/model/DocumentData;",
             ">;F)",
-            "Lcom/coloros/anim/c/b;"
+            "Lcom/coloros/anim/model/DocumentData;"
         }
     .end annotation
 
     .line 15
-    iget-object p1, p1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
-    check-cast p1, Lcom/coloros/anim/c/b;
+    check-cast p1, Lcom/coloros/anim/model/DocumentData;
 
     return-object p1
 .end method

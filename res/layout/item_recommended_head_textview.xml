@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<TextView android:textSize="@dimen/recommended_preference_list_item_text_size_head" android:textColor="@color/bottom_recommended_title_head" android:gravity="start|center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/recommended_preference_list_item_head_bottom_margin" android:minHeight="@dimen/recommended_preference_list_item_height_head" android:fontFamily="sans-serif-medium" android:textAlignment="viewStart"
-  xmlns:android="http://schemas.android.com/apk/res/android" />

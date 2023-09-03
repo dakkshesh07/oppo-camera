@@ -18,6 +18,12 @@
 
 
 # virtual methods
+.method public abstract getCompilerVersion()Lcom/google/protobuf/compiler/PluginProtos$Version;
+.end method
+
+.method public abstract getCompilerVersionOrBuilder()Lcom/google/protobuf/compiler/PluginProtos$VersionOrBuilder;
+.end method
+
 .method public abstract getFileToGenerate(I)Ljava/lang/String;
 .end method
 
@@ -74,6 +80,9 @@
             ">;"
         }
     .end annotation
+.end method
+
+.method public abstract hasCompilerVersion()Z
 .end method
 
 .method public abstract hasParameter()Z

@@ -692,6 +692,8 @@
 
 .method public isRoundRect(Landroid/graphics/RectF;)Z
     .locals 5
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 791
     iget-object v0, p0, Lcom/google/android/material/shape/ShapeAppearanceModel;->leftEdge:Lcom/google/android/material/shape/EdgeTreatment;
@@ -914,6 +916,8 @@
 
 .method public withTransformedCornerSizes(Lcom/google/android/material/shape/ShapeAppearanceModel$CornerSizeUnaryOperator;)Lcom/google/android/material/shape/ShapeAppearanceModel;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 775
     invoke-virtual {p0}, Lcom/google/android/material/shape/ShapeAppearanceModel;->toBuilder()Lcom/google/android/material/shape/ShapeAppearanceModel$Builder;

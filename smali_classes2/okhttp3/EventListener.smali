@@ -71,10 +71,6 @@
 
 .method public connectEnd(Lokhttp3/Call;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lokhttp3/Protocol;)V
     .locals 0
-    .param p3    # Ljava/net/Proxy;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
     .param p4    # Lokhttp3/Protocol;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
@@ -85,15 +81,7 @@
 
 .method public connectFailed(Lokhttp3/Call;Ljava/net/InetSocketAddress;Ljava/net/Proxy;Lokhttp3/Protocol;Ljava/io/IOException;)V
     .locals 0
-    .param p3    # Ljava/net/Proxy;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
     .param p4    # Lokhttp3/Protocol;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
-    .param p5    # Ljava/io/IOException;
         .annotation runtime Ljavax/annotation/Nullable;
         .end annotation
     .end param
@@ -121,10 +109,6 @@
 
 .method public dnsEnd(Lokhttp3/Call;Ljava/lang/String;Ljava/util/List;)V
     .locals 0
-    .param p3    # Ljava/util/List;
-        .annotation runtime Ljavax/annotation/Nullable;
-        .end annotation
-    .end param
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

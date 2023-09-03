@@ -25,7 +25,7 @@
 .method constructor <init>([B)V
     .locals 0
 
-    .line 110
+    .line 126
     iput-object p1, p0, Lcom/google/protobuf/TextFormatEscaper$2;->val$input:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public byteAt(I)B
     .locals 1
 
-    .line 117
+    .line 134
     iget-object v0, p0, Lcom/google/protobuf/TextFormatEscaper$2;->val$input:[B
 
     aget-byte p1, v0, p1
@@ -49,7 +49,7 @@
 .method public size()I
     .locals 1
 
-    .line 113
+    .line 129
     iget-object v0, p0, Lcom/google/protobuf/TextFormatEscaper$2;->val$input:[B
 
     array-length v0, v0

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private final b:Landroidx/lifecycle/h;
+.field private final b:Landroidx/lifecycle/g;
 
 .field private final c:Landroidx/loader/a/b$c;
 
@@ -30,14 +30,14 @@
     return-void
 .end method
 
-.method constructor <init>(Landroidx/lifecycle/h;Landroidx/lifecycle/s;)V
+.method constructor <init>(Landroidx/lifecycle/g;Landroidx/lifecycle/s;)V
     .locals 0
 
     .line 371
     invoke-direct {p0}, Landroidx/loader/a/a;-><init>()V
 
     .line 372
-    iput-object p1, p0, Landroidx/loader/a/b;->b:Landroidx/lifecycle/h;
+    iput-object p1, p0, Landroidx/loader/a/b;->b:Landroidx/lifecycle/g;
 
     .line 373
     invoke-static {p2}, Landroidx/loader/a/b$c;->a(Landroidx/lifecycle/s;)Landroidx/loader/a/b$c;
@@ -107,9 +107,9 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 490
-    iget-object v1, p0, Landroidx/loader/a/b;->b:Landroidx/lifecycle/h;
+    iget-object v1, p0, Landroidx/loader/a/b;->b:Landroidx/lifecycle/g;
 
-    invoke-static {v1, v0}, Landroidx/core/f/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
+    invoke-static {v1, v0}, Landroidx/core/util/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
 
     const-string v1, "}}"
 

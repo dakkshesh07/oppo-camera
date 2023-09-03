@@ -4,6 +4,7 @@
 
 # interfaces
 .implements Lcom/google/protobuf/Internal$BooleanList;
+.implements Lcom/google/protobuf/PrimitiveNonBoxingCollection;
 .implements Ljava/util/RandomAccess;
 
 
@@ -14,6 +15,7 @@
         "Ljava/lang/Boolean;",
         ">;",
         "Lcom/google/protobuf/Internal$BooleanList;",
+        "Lcom/google/protobuf/PrimitiveNonBoxingCollection;",
         "Ljava/util/RandomAccess;"
     }
 .end annotation
@@ -31,12 +33,16 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .line 48
     new-instance v0, Lcom/google/protobuf/BooleanArrayList;
 
-    invoke-direct {v0}, Lcom/google/protobuf/BooleanArrayList;-><init>()V
+    const/4 v1, 0x0
+
+    new-array v2, v1, [Z
+
+    invoke-direct {v0, v2, v1}, Lcom/google/protobuf/BooleanArrayList;-><init>([ZI)V
 
     sput-object v0, Lcom/google/protobuf/BooleanArrayList;->EMPTY_LIST:Lcom/google/protobuf/BooleanArrayList;
 
@@ -53,7 +59,7 @@
 
     const/16 v0, 0xa
 
-    .line 72
+    .line 68
     new-array v0, v0, [Z
 
     const/4 v1, 0x0
@@ -66,13 +72,13 @@
 .method private constructor <init>([ZI)V
     .locals 0
 
-    .line 79
+    .line 75
     invoke-direct {p0}, Lcom/google/protobuf/AbstractProtobufList;-><init>()V
 
-    .line 80
+    .line 76
     iput-object p1, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
-    .line 81
+    .line 77
     iput p2, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     return-void
@@ -81,17 +87,17 @@
 .method private addBoolean(IZ)V
     .locals 4
 
-    .line 171
+    .line 191
     invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
 
     if-ltz p1, :cond_1
 
-    .line 172
+    .line 192
     iget v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     if-gt p1, v0, :cond_1
 
-    .line 176
+    .line 196
     iget-object v1, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     array-length v2, v1
@@ -102,7 +108,7 @@
 
     sub-int/2addr v0, p1
 
-    .line 178
+    .line 198
     invoke-static {v1, p1, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     goto :goto_0
@@ -110,20 +116,20 @@
     :cond_0
     mul-int/lit8 v0, v0, 0x3
 
-    .line 181
+    .line 201
     div-int/lit8 v0, v0, 0x2
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 182
+    .line 202
     new-array v0, v0, [Z
 
     const/4 v2, 0x0
 
-    .line 185
+    .line 205
     invoke-static {v1, v2, v0, v2, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 188
+    .line 208
     iget-object v1, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     add-int/lit8 v2, p1, 0x1
@@ -134,23 +140,23 @@
 
     invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 189
+    .line 209
     iput-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
-    .line 192
+    .line 212
     :goto_0
     iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aput-boolean p2, v0, p1
 
-    .line 193
+    .line 213
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    .line 194
+    .line 214
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
@@ -159,7 +165,7 @@
 
     return-void
 
-    .line 173
+    .line 193
     :cond_1
     new-instance p2, Ljava/lang/IndexOutOfBoundsException;
 
@@ -186,14 +192,14 @@
 
     if-ltz p1, :cond_0
 
-    .line 264
+    .line 284
     iget v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     if-ge p1, v0, :cond_0
 
     return-void
 
-    .line 265
+    .line 285
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -209,7 +215,7 @@
 .method private makeOutOfBoundsExceptionMessage(I)Ljava/lang/String;
     .locals 2
 
-    .line 270
+    .line 290
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -240,7 +246,7 @@
 .method public add(ILjava/lang/Boolean;)V
     .locals 0
 
-    .line 156
+    .line 170
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
@@ -253,12 +259,40 @@
 .method public bridge synthetic add(ILjava/lang/Object;)V
     .locals 0
 
-    .line 44
+    .line 45
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/BooleanArrayList;->add(ILjava/lang/Boolean;)V
 
     return-void
+.end method
+
+.method public add(Ljava/lang/Boolean;)Z
+    .locals 0
+
+    .line 164
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->addBoolean(Z)V
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 45
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->add(Ljava/lang/Boolean;)Z
+
+    move-result p1
+
+    return p1
 .end method
 
 .method public addAll(Ljava/util/Collection;)Z
@@ -273,28 +307,29 @@
         }
     .end annotation
 
-    .line 199
+    .line 219
     invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
 
-    if-eqz p1, :cond_4
+    .line 221
+    invoke-static {p1}, Lcom/google/protobuf/Internal;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
+    .line 224
     instance-of v0, p1, Lcom/google/protobuf/BooleanArrayList;
 
     if-nez v0, :cond_0
 
-    .line 207
+    .line 225
     invoke-super {p0, p1}, Lcom/google/protobuf/AbstractProtobufList;->addAll(Ljava/util/Collection;)Z
 
     move-result p1
 
     return p1
 
-    .line 210
+    .line 228
     :cond_0
     check-cast p1, Lcom/google/protobuf/BooleanArrayList;
 
-    .line 211
+    .line 229
     iget v0, p1, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     const/4 v1, 0x0
@@ -306,7 +341,7 @@
     :cond_1
     const v2, 0x7fffffff
 
-    .line 215
+    .line 233
     iget v3, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     sub-int/2addr v2, v3
@@ -315,21 +350,21 @@
 
     add-int/2addr v3, v0
 
-    .line 222
+    .line 240
     iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     array-length v2, v0
 
     if-le v3, v2, :cond_2
 
-    .line 223
+    .line 241
     invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([ZI)[Z
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
-    .line 226
+    .line 244
     :cond_2
     iget-object v0, p1, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
@@ -341,10 +376,10 @@
 
     invoke-static {v0, v1, v2, v4, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 227
+    .line 245
     iput v3, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    .line 228
+    .line 246
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
 
     const/4 v0, 0x1
@@ -355,30 +390,59 @@
 
     return v0
 
-    .line 218
+    .line 236
     :cond_3
     new-instance p1, Ljava/lang/OutOfMemoryError;
 
     invoke-direct {p1}, Ljava/lang/OutOfMemoryError;-><init>()V
 
     throw p1
-
-    .line 202
-    :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
-
-    throw p1
 .end method
 
 .method public addBoolean(Z)V
-    .locals 1
+    .locals 4
 
-    .line 164
+    .line 176
+    invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
+
+    .line 177
     iget v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    invoke-direct {p0, v0, p1}, Lcom/google/protobuf/BooleanArrayList;->addBoolean(IZ)V
+    iget-object v1, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
+
+    array-length v2, v1
+
+    if-ne v0, v2, :cond_0
+
+    mul-int/lit8 v2, v0, 0x3
+
+    .line 179
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0x1
+
+    .line 180
+    new-array v2, v2, [Z
+
+    const/4 v3, 0x0
+
+    .line 182
+    invoke-static {v1, v3, v2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 183
+    iput-object v2, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
+
+    .line 186
+    :cond_0
+    iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
+
+    iget v1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
+
+    aput-boolean p1, v0, v1
 
     return-void
 .end method
@@ -392,24 +456,24 @@
 
     return v0
 
-    .line 89
+    .line 97
     :cond_0
     instance-of v1, p1, Lcom/google/protobuf/BooleanArrayList;
 
     if-nez v1, :cond_1
 
-    .line 90
+    .line 98
     invoke-super {p0, p1}, Lcom/google/protobuf/AbstractProtobufList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
     return p1
 
-    .line 92
+    .line 100
     :cond_1
     check-cast p1, Lcom/google/protobuf/BooleanArrayList;
 
-    .line 93
+    .line 101
     iget v1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     iget v2, p1, Lcom/google/protobuf/BooleanArrayList;->size:I
@@ -420,19 +484,19 @@
 
     return v3
 
-    .line 97
+    .line 105
     :cond_2
     iget-object p1, p1, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     move v1, v3
 
-    .line 98
+    .line 106
     :goto_0
     iget v2, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     if-ge v1, v2, :cond_4
 
-    .line 99
+    .line 107
     iget-object v2, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aget-boolean v2, v2, v1
@@ -455,7 +519,7 @@
 .method public get(I)Ljava/lang/Boolean;
     .locals 0
 
-    .line 126
+    .line 134
     invoke-virtual {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->getBoolean(I)Z
 
     move-result p1
@@ -470,7 +534,7 @@
 .method public bridge synthetic get(I)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->get(I)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -481,10 +545,10 @@
 .method public getBoolean(I)Z
     .locals 1
 
-    .line 131
+    .line 139
     invoke-direct {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->ensureIndexInRange(I)V
 
-    .line 132
+    .line 140
     iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aget-boolean p1, v0, p1
@@ -499,7 +563,7 @@
 
     const/4 v1, 0x0
 
-    .line 110
+    .line 118
     :goto_0
     iget v2, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
@@ -507,7 +571,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    .line 111
+    .line 119
     iget-object v2, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aget-boolean v2, v2, v1
@@ -529,12 +593,12 @@
 .method public mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$BooleanList;
     .locals 2
 
-    .line 118
+    .line 126
     iget v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     if-lt p1, v0, :cond_0
 
-    .line 121
+    .line 129
     new-instance v0, Lcom/google/protobuf/BooleanArrayList;
 
     iget-object v1, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
@@ -549,7 +613,7 @@
 
     return-object v0
 
-    .line 119
+    .line 127
     :cond_0
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
@@ -561,7 +625,7 @@
 .method public bridge synthetic mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$ProtobufList;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->mutableCopyWithCapacity(I)Lcom/google/protobuf/Internal$BooleanList;
 
     move-result-object p1
@@ -572,41 +636,49 @@
 .method public remove(I)Ljava/lang/Boolean;
     .locals 4
 
-    .line 248
+    .line 266
     invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
 
-    .line 249
+    .line 267
     invoke-direct {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->ensureIndexInRange(I)V
 
-    .line 250
+    .line 268
     iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aget-boolean v1, v0, p1
 
-    add-int/lit8 v2, p1, 0x1
+    .line 269
+    iget v2, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    .line 251
-    iget v3, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
+    add-int/lit8 v3, v2, -0x1
 
-    sub-int/2addr v3, p1
+    if-ge p1, v3, :cond_0
 
-    invoke-static {v0, v2, v0, p1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    add-int/lit8 v3, p1, 0x1
 
-    .line 252
+    sub-int/2addr v2, p1
+
+    add-int/lit8 v2, v2, -0x1
+
+    .line 270
+    invoke-static {v0, v3, v0, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 272
+    :cond_0
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     add-int/lit8 p1, p1, -0x1
 
     iput p1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    .line 253
+    .line 273
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
 
     add-int/lit8 p1, p1, 0x1
 
     iput p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
 
-    .line 254
+    .line 274
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -617,7 +689,7 @@
 .method public bridge synthetic remove(I)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     invoke-virtual {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->remove(I)Ljava/lang/Boolean;
 
     move-result-object p1
@@ -626,22 +698,22 @@
 .end method
 
 .method public remove(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 4
 
-    .line 234
+    .line 252
     invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
 
     const/4 v0, 0x0
 
     move v1, v0
 
-    .line 235
+    .line 253
     :goto_0
     iget v2, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     if-ge v1, v2, :cond_1
 
-    .line 236
+    .line 254
     iget-object v2, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aget-boolean v2, v2, v1
@@ -656,7 +728,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 237
+    .line 255
     iget-object p1, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     add-int/lit8 v0, v1, 0x1
@@ -665,25 +737,27 @@
 
     sub-int/2addr v2, v1
 
+    const/4 v3, 0x1
+
+    sub-int/2addr v2, v3
+
     invoke-static {p1, v0, p1, v1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 238
+    .line 256
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    const/4 v0, 0x1
-
-    sub-int/2addr p1, v0
+    sub-int/2addr p1, v3
 
     iput p1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
-    .line 239
+    .line 257
     iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
 
-    add-int/2addr p1, v0
+    add-int/2addr p1, v3
 
     iput p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
 
-    return v0
+    return v3
 
     :cond_0
     add-int/lit8 v1, v1, 0x1
@@ -694,10 +768,56 @@
     return v0
 .end method
 
+.method protected removeRange(II)V
+    .locals 2
+
+    .line 82
+    invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
+
+    if-lt p2, p1, :cond_0
+
+    .line 87
+    iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
+
+    iget v1, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
+
+    sub-int/2addr v1, p2
+
+    invoke-static {v0, p2, v0, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 88
+    iget v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
+
+    sub-int/2addr p2, p1
+
+    sub-int/2addr v0, p2
+
+    iput v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
+
+    .line 89
+    iget p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lcom/google/protobuf/BooleanArrayList;->modCount:I
+
+    return-void
+
+    .line 84
+    :cond_0
+    new-instance p1, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string p2, "toIndex < fromIndex"
+
+    invoke-direct {p1, p2}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
 .method public set(ILjava/lang/Boolean;)Ljava/lang/Boolean;
     .locals 0
 
-    .line 142
+    .line 150
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
@@ -716,7 +836,7 @@
 .method public bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 44
+    .line 45
     check-cast p2, Ljava/lang/Boolean;
 
     invoke-virtual {p0, p1, p2}, Lcom/google/protobuf/BooleanArrayList;->set(ILjava/lang/Boolean;)Ljava/lang/Boolean;
@@ -729,18 +849,18 @@
 .method public setBoolean(IZ)Z
     .locals 2
 
-    .line 147
+    .line 155
     invoke-virtual {p0}, Lcom/google/protobuf/BooleanArrayList;->ensureIsMutable()V
 
-    .line 148
+    .line 156
     invoke-direct {p0, p1}, Lcom/google/protobuf/BooleanArrayList;->ensureIndexInRange(I)V
 
-    .line 149
+    .line 157
     iget-object v0, p0, Lcom/google/protobuf/BooleanArrayList;->array:[Z
 
     aget-boolean v1, v0, p1
 
-    .line 150
+    .line 158
     aput-boolean p2, v0, p1
 
     return v1
@@ -749,7 +869,7 @@
 .method public size()I
     .locals 1
 
-    .line 137
+    .line 145
     iget v0, p0, Lcom/google/protobuf/BooleanArrayList;->size:I
 
     return v0

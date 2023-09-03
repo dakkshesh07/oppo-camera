@@ -1,249 +1,297 @@
 .class public Lcom/oppo/camera/sticker/b/c;
 .super Ljava/lang/Object;
-.source "StickerProcessThread.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/oppo/camera/sticker/b/c$a;
-    }
-.end annotation
+.source "MD5Utils.java"
 
 
 # static fields
-.field private static e:Lcom/oppo/camera/sticker/b/c;
-
-
-# instance fields
-.field private a:Lcom/oppo/camera/sticker/b/a;
-
-.field private b:Landroid/os/HandlerThread;
-
-.field private c:Landroid/os/Handler;
-
-.field private final d:Ljava/lang/String;
-
-.field private f:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList<",
-            "Lcom/oppo/camera/sticker/b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private g:Lcom/sensetime/stmobile/STMobileColorConvertNative;
-
-.field private h:Z
+.field private static final a:[C
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 21
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    .line 22
-    iput-object v0, p0, Lcom/oppo/camera/sticker/b/c;->a:Lcom/oppo/camera/sticker/b/a;
-
-    .line 23
-    iput-object v0, p0, Lcom/oppo/camera/sticker/b/c;->b:Landroid/os/HandlerThread;
-
-    .line 24
-    iput-object v0, p0, Lcom/oppo/camera/sticker/b/c;->c:Landroid/os/Handler;
-
-    const-string v1, "StickerProcessThread"
-
-    .line 25
-    iput-object v1, p0, Lcom/oppo/camera/sticker/b/c;->d:Ljava/lang/String;
-
-    .line 28
-    iput-object v0, p0, Lcom/oppo/camera/sticker/b/c;->f:Ljava/util/ArrayList;
-
-    .line 29
-    iput-object v0, p0, Lcom/oppo/camera/sticker/b/c;->g:Lcom/sensetime/stmobile/STMobileColorConvertNative;
-
-    const/4 v0, 0x0
-
-    .line 51
-    iput-boolean v0, p0, Lcom/oppo/camera/sticker/b/c;->h:Z
-
-    return-void
-.end method
-
-.method static synthetic a(Lcom/oppo/camera/sticker/b/c;)Lcom/oppo/camera/sticker/b/a;
-    .locals 0
-
-    .line 21
-    iget-object p0, p0, Lcom/oppo/camera/sticker/b/c;->a:Lcom/oppo/camera/sticker/b/a;
-
-    return-object p0
-.end method
-
-.method static synthetic a(Lcom/oppo/camera/sticker/b/c;Lcom/oppo/camera/sticker/b/a;)Lcom/oppo/camera/sticker/b/a;
-    .locals 0
-
-    .line 21
-    iput-object p1, p0, Lcom/oppo/camera/sticker/b/c;->a:Lcom/oppo/camera/sticker/b/a;
-
-    return-object p1
-.end method
-
-.method public static a()Lcom/oppo/camera/sticker/b/c;
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 32
-    sget-object v0, Lcom/oppo/camera/sticker/b/c;->e:Lcom/oppo/camera/sticker/b/c;
+    const/16 v0, 0x10
 
-    if-nez v0, :cond_0
+    .line 31
+    new-array v0, v0, [C
 
-    .line 33
-    new-instance v0, Lcom/oppo/camera/sticker/b/c;
+    fill-array-data v0, :array_0
 
-    invoke-direct {v0}, Lcom/oppo/camera/sticker/b/c;-><init>()V
+    sput-object v0, Lcom/oppo/camera/sticker/b/c;->a:[C
 
-    sput-object v0, Lcom/oppo/camera/sticker/b/c;->e:Lcom/oppo/camera/sticker/b/c;
-
-    .line 36
-    :cond_0
-    sget-object v0, Lcom/oppo/camera/sticker/b/c;->e:Lcom/oppo/camera/sticker/b/c;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lcom/oppo/camera/sticker/b/c;)Ljava/util/ArrayList;
-    .locals 0
-
-    .line 21
-    iget-object p0, p0, Lcom/oppo/camera/sticker/b/c;->f:Ljava/util/ArrayList;
-
-    return-object p0
-.end method
-
-.method static synthetic c(Lcom/oppo/camera/sticker/b/c;)Lcom/sensetime/stmobile/STMobileColorConvertNative;
-    .locals 0
-
-    .line 21
-    iget-object p0, p0, Lcom/oppo/camera/sticker/b/c;->g:Lcom/sensetime/stmobile/STMobileColorConvertNative;
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public a(Lcom/oppo/camera/sticker/b/c$a;Z)V
-    .locals 2
-
-    if-eqz p2, :cond_0
-
-    .line 103
-    new-instance p2, Landroid/os/ConditionVariable;
-
-    invoke-direct {p2}, Landroid/os/ConditionVariable;-><init>()V
-
-    .line 104
-    invoke-virtual {p2}, Landroid/os/ConditionVariable;->close()V
-
-    .line 106
-    iget-object v0, p0, Lcom/oppo/camera/sticker/b/c;->c:Landroid/os/Handler;
-
-    new-instance v1, Lcom/oppo/camera/sticker/b/c$2;
-
-    invoke-direct {v1, p0, p1, p2}, Lcom/oppo/camera/sticker/b/c$2;-><init>(Lcom/oppo/camera/sticker/b/c;Lcom/oppo/camera/sticker/b/c$a;Landroid/os/ConditionVariable;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 116
-    invoke-virtual {p2}, Landroid/os/ConditionVariable;->block()V
-
-    goto :goto_0
-
-    .line 118
-    :cond_0
-    iget-object p2, p0, Lcom/oppo/camera/sticker/b/c;->c:Landroid/os/Handler;
-
-    new-instance v0, Lcom/oppo/camera/sticker/b/c$3;
-
-    invoke-direct {v0, p0, p1}, Lcom/oppo/camera/sticker/b/c$3;-><init>(Lcom/oppo/camera/sticker/b/c;Lcom/oppo/camera/sticker/b/c$a;)V
-
-    invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
     return-void
+
+    :array_0
+    .array-data 2
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x41s
+        0x42s
+        0x43s
+        0x44s
+        0x45s
+        0x46s
+    .end array-data
 .end method
 
-.method public b()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
+.method public static a(Ljava/io/InputStream;)Ljava/lang/String;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
         value = {
-            "()",
-            "Ljava/util/ArrayList<",
-            "Lcom/oppo/camera/sticker/b;",
-            ">;"
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/io/IOException;
         }
     .end annotation
 
-    .line 40
-    iget-object v0, p0, Lcom/oppo/camera/sticker/b/c;->f:Ljava/util/ArrayList;
+    const-string v0, "MD5"
 
-    return-object v0
-.end method
+    .line 42
+    invoke-static {v0}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
 
-.method public c()Lcom/sensetime/stmobile/STMobileColorConvertNative;
-    .locals 1
+    move-result-object v0
 
-    .line 44
-    iget-object v0, p0, Lcom/oppo/camera/sticker/b/c;->g:Lcom/sensetime/stmobile/STMobileColorConvertNative;
+    if-eqz p0, :cond_1
 
-    return-object v0
-.end method
+    const/16 v1, 0x400
 
-.method public d()V
-    .locals 3
+    .line 45
+    new-array v1, v1, [B
 
-    .line 54
-    iget-object v0, p0, Lcom/oppo/camera/sticker/b/c;->c:Landroid/os/Handler;
+    .line 48
+    :goto_0
+    invoke-virtual {p0, v1}, Ljava/io/InputStream;->read([B)I
 
-    if-eqz v0, :cond_1
+    move-result v2
 
-    iget-boolean v0, p0, Lcom/oppo/camera/sticker/b/c;->h:Z
+    const/4 v3, -0x1
 
-    if-eqz v0, :cond_0
+    if-eq v2, v3, :cond_0
+
+    const/4 v3, 0x0
+
+    .line 49
+    invoke-virtual {v0, v1, v3, v2}, Ljava/security/MessageDigest;->update([BII)V
 
     goto :goto_0
 
-    .line 58
+    .line 53
     :cond_0
-    new-instance v0, Landroid/os/ConditionVariable;
+    :try_start_0
+    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v0}, Landroid/os/ConditionVariable;-><init>()V
+    goto :goto_1
+
+    :catch_0
+    move-exception p0
+
+    .line 55
+    invoke-virtual {p0}, Ljava/io/IOException;->printStackTrace()V
 
     .line 59
-    invoke-virtual {v0}, Landroid/os/ConditionVariable;->close()V
-
-    .line 60
-    iget-object v1, p0, Lcom/oppo/camera/sticker/b/c;->c:Landroid/os/Handler;
-
-    new-instance v2, Lcom/oppo/camera/sticker/b/c$1;
-
-    invoke-direct {v2, p0, v0}, Lcom/oppo/camera/sticker/b/c$1;-><init>(Lcom/oppo/camera/sticker/b/c;Landroid/os/ConditionVariable;)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 75
-    invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
-
-    const/4 v0, 0x1
-
-    .line 76
-    iput-boolean v0, p0, Lcom/oppo/camera/sticker/b/c;->h:Z
-
     :cond_1
+    :goto_1
+    invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
+
+    move-result-object p0
+
+    invoke-static {p0}, Lcom/oppo/camera/sticker/b/c;->a([B)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/NoSuchAlgorithmException;,
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .line 84
+    new-instance v0, Ljava/io/FileInputStream;
+
+    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+
+    .line 85
+    invoke-static {v0}, Lcom/oppo/camera/sticker/b/c;->a(Ljava/io/InputStream;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static a([B)Ljava/lang/String;
+    .locals 4
+
+    .line 140
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    array-length v1, p0
+
+    mul-int/lit8 v1, v1, 0x2
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    .line 142
     :goto_0
-    return-void
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_0
+
+    .line 143
+    sget-object v2, Lcom/oppo/camera/sticker/b/c;->a:[C
+
+    aget-byte v3, p0, v1
+
+    and-int/lit16 v3, v3, 0xf0
+
+    ushr-int/lit8 v3, v3, 0x4
+
+    aget-char v2, v2, v3
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 144
+    sget-object v2, Lcom/oppo/camera/sticker/b/c;->a:[C
+
+    aget-byte v3, p0, v1
+
+    and-int/lit8 v3, v3, 0xf
+
+    aget-char v2, v2, v3
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    .line 147
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 3
+
+    .line 122
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const-string v2, "MD5Utils"
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    .line 129
+    :cond_0
+    :try_start_0
+    invoke-static {p0}, Lcom/oppo/camera/sticker/b/c;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return p0
+
+    :catch_0
+    move-exception p0
+
+    .line 133
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "md5CheckSum, IOException: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception p0
+
+    .line 131
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "md5CheckSum, NoSuchAlgorithmException: "
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return v1
+
+    .line 123
+    :cond_1
+    :goto_1
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "md5CheckSum, empty value! toBeCheckSum: "
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v2, p0}, Lcom/oppo/camera/c;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return v1
 .end method

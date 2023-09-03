@@ -74,6 +74,9 @@
 
 .method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -93,6 +96,9 @@
 
 .method constructor <init>(Ljava/util/concurrent/Callable;Z)V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -344,7 +350,7 @@
     const-string v0, "Lottie encountered an error but no failure listener was added:"
 
     .line 153
-    invoke-static {v0, p1}, Lcom/airbnb/lottie/f/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lcom/airbnb/lottie/c/d;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

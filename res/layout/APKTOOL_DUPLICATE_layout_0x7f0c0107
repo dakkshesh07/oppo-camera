@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.preview.CameraTimeView android:orientation="horizontal" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09035e" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07069e" android:layout_centerHorizontal="true" android:layoutDirection="ltr"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090068" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803f9" android:layout_marginEnd="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07069a" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a8" />
+    <ImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090241" android:visibility="gone" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0804ed" android:layout_marginHorizontal="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0700fe" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a8" />
+    <com.oppo.camera.ui.inverse.InverseTextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060468" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090358" android:visibility="gone" android:layout_width="wrap_content" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f07069c" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a9" />
+    <com.oppo.camera.ui.inverse.InverseTextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060468" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090359" android:visibility="gone" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a9" />
+    <com.oppo.camera.ui.inverse.InverseImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090356" android:visibility="gone" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803fd" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a8" />
+    <com.oppo.camera.ui.inverse.InverseTextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060468" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09035b" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a9" />
+    <com.oppo.camera.ui.inverse.InverseTextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060468" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09035c" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a9" />
+    <com.oppo.camera.ui.inverse.InverseImageView android:id="@id/APKTOOL_DUPLICATE_id_0x7f090357" android:src="@drawable/APKTOOL_DUPLICATE_drawable_0x7f0803fd" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a8" />
+    <com.oppo.camera.ui.inverse.InverseTextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060468" android:id="@id/APKTOOL_DUPLICATE_id_0x7f09035f" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a9" />
+    <com.oppo.camera.ui.inverse.InverseTextView android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060468" android:id="@id/APKTOOL_DUPLICATE_id_0x7f090360" style="@style/APKTOOL_DUPLICATE_style_0x7f1101a9" />
+</com.oppo.camera.ui.preview.CameraTimeView>

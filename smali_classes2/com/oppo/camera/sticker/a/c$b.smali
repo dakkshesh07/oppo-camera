@@ -29,7 +29,7 @@
 
     const-string v0, "content://com.oppo.camera.sticker.db.provider/multi_info"
 
-    .line 96
+    .line 97
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -38,7 +38,7 @@
 
     const-string v0, "content://com.oppo.camera.sticker.db.provider/multi_info?notify=true"
 
-    .line 97
+    .line 98
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0

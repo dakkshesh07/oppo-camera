@@ -116,6 +116,8 @@
 
 .method public header(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
+    .annotation runtime Ljavax/annotation/Nullable;
+    .end annotation
 
     .line 58
     iget-object v0, p0, Lokhttp3/Request;->headers:Lokhttp3/Headers;

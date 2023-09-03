@@ -18,7 +18,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 40
+    .line 38
     invoke-direct {p0}, Ljava/io/Reader;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    .line 45
+    .line 43
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
@@ -50,7 +50,7 @@
         }
     .end annotation
 
-    .line 42
+    .line 40
     new-instance p1, Ljava/lang/AssertionError;
 
     invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V

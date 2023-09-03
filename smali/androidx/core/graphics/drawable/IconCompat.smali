@@ -9,22 +9,43 @@
 
 # instance fields
 .field public a:I
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field b:Ljava/lang/Object;
 
 .field public c:[B
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public d:Landroid/os/Parcelable;
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public e:I
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public f:I
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field public g:Landroid/content/res/ColorStateList;
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 .field i:Landroid/graphics/PorterDuff$Mode;
 
 .field public j:Ljava/lang/String;
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
+.end field
 
 
 # direct methods
@@ -41,6 +62,8 @@
 
 .method public constructor <init>()V
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 363
     invoke-direct {p0}, Landroidx/versionedparcelable/CustomVersionedParcelable;-><init>()V
@@ -283,6 +306,8 @@
 
 .method public static a(Landroid/content/res/Resources;Ljava/lang/String;I)Landroidx/core/graphics/drawable/IconCompat;
     .locals 2
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     if-eqz p1, :cond_2
 

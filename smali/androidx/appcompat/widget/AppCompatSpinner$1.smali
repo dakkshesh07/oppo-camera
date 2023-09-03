@@ -1,5 +1,5 @@
 .class Landroidx/appcompat/widget/AppCompatSpinner$1;
-.super Landroidx/appcompat/widget/ae;
+.super Landroidx/appcompat/widget/ad;
 .source "AppCompatSpinner.java"
 
 
@@ -29,7 +29,7 @@
 
     iput-object p3, p0, Landroidx/appcompat/widget/AppCompatSpinner$1;->a:Landroidx/appcompat/widget/AppCompatSpinner$c;
 
-    invoke-direct {p0, p2}, Landroidx/appcompat/widget/ae;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Landroidx/appcompat/widget/ad;-><init>(Landroid/view/View;)V
 
     return-void
 .end method

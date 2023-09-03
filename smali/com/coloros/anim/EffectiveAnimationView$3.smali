@@ -23,7 +23,7 @@
     .locals 3
 
     .line 835
-    invoke-static {}, Lcom/coloros/anim/n;->values()[Lcom/coloros/anim/n;
+    invoke-static {}, Lcom/coloros/anim/RenderMode;->values()[Lcom/coloros/anim/RenderMode;
 
     move-result-object v0
 
@@ -36,9 +36,9 @@
     :try_start_0
     sget-object v0, Lcom/coloros/anim/EffectiveAnimationView$3;->a:[I
 
-    sget-object v1, Lcom/coloros/anim/n;->HARDWARE:Lcom/coloros/anim/n;
+    sget-object v1, Lcom/coloros/anim/RenderMode;->HARDWARE:Lcom/coloros/anim/RenderMode;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/n;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/RenderMode;->ordinal()I
 
     move-result v1
 
@@ -52,9 +52,9 @@
     :try_start_1
     sget-object v0, Lcom/coloros/anim/EffectiveAnimationView$3;->a:[I
 
-    sget-object v1, Lcom/coloros/anim/n;->SOFTWARE:Lcom/coloros/anim/n;
+    sget-object v1, Lcom/coloros/anim/RenderMode;->SOFTWARE:Lcom/coloros/anim/RenderMode;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/n;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/RenderMode;->ordinal()I
 
     move-result v1
 
@@ -68,9 +68,9 @@
     :try_start_2
     sget-object v0, Lcom/coloros/anim/EffectiveAnimationView$3;->a:[I
 
-    sget-object v1, Lcom/coloros/anim/n;->NONE:Lcom/coloros/anim/n;
+    sget-object v1, Lcom/coloros/anim/RenderMode;->NONE:Lcom/coloros/anim/RenderMode;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/n;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/RenderMode;->ordinal()I
 
     move-result v1
 
@@ -84,9 +84,9 @@
     :try_start_3
     sget-object v0, Lcom/coloros/anim/EffectiveAnimationView$3;->a:[I
 
-    sget-object v1, Lcom/coloros/anim/n;->AUTOMATIC:Lcom/coloros/anim/n;
+    sget-object v1, Lcom/coloros/anim/RenderMode;->AUTOMATIC:Lcom/coloros/anim/RenderMode;
 
-    invoke-virtual {v1}, Lcom/coloros/anim/n;->ordinal()I
+    invoke-virtual {v1}, Lcom/coloros/anim/RenderMode;->ordinal()I
 
     move-result v1
 

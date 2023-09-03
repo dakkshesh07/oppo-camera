@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/coloros/anim/c/b/q$a;
+.field private final d:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
 .field private final e:Lcom/coloros/anim/a/b/a;
     .annotation system Ldalvik/annotation/Signature;
@@ -59,7 +59,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/coloros/anim/c/c/a;Lcom/coloros/anim/c/b/q;)V
+.method public constructor <init>(Lcom/coloros/anim/model/layer/a;Lcom/coloros/anim/model/content/ShapeTrimPath;)V
     .locals 1
 
     .line 20
@@ -73,54 +73,54 @@
     iput-object v0, p0, Lcom/coloros/anim/a/a/s;->c:Ljava/util/List;
 
     .line 21
-    invoke-virtual {p2}, Lcom/coloros/anim/c/b/q;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/coloros/anim/model/content/ShapeTrimPath;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/coloros/anim/a/a/s;->a:Ljava/lang/String;
 
     .line 22
-    invoke-virtual {p2}, Lcom/coloros/anim/c/b/q;->f()Z
+    invoke-virtual {p2}, Lcom/coloros/anim/model/content/ShapeTrimPath;->f()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/coloros/anim/a/a/s;->b:Z
 
     .line 23
-    invoke-virtual {p2}, Lcom/coloros/anim/c/b/q;->b()Lcom/coloros/anim/c/b/q$a;
+    invoke-virtual {p2}, Lcom/coloros/anim/model/content/ShapeTrimPath;->b()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/coloros/anim/a/a/s;->d:Lcom/coloros/anim/c/b/q$a;
+    iput-object v0, p0, Lcom/coloros/anim/a/a/s;->d:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     .line 24
-    invoke-virtual {p2}, Lcom/coloros/anim/c/b/q;->d()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p2}, Lcom/coloros/anim/model/content/ShapeTrimPath;->d()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/coloros/anim/a/a/s;->e:Lcom/coloros/anim/a/b/a;
 
     .line 25
-    invoke-virtual {p2}, Lcom/coloros/anim/c/b/q;->c()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p2}, Lcom/coloros/anim/model/content/ShapeTrimPath;->c()Lcom/coloros/anim/model/a/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {v0}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/coloros/anim/a/a/s;->f:Lcom/coloros/anim/a/b/a;
 
     .line 26
-    invoke-virtual {p2}, Lcom/coloros/anim/c/b/q;->e()Lcom/coloros/anim/c/a/b;
+    invoke-virtual {p2}, Lcom/coloros/anim/model/content/ShapeTrimPath;->e()Lcom/coloros/anim/model/a/b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/coloros/anim/c/a/b;->a()Lcom/coloros/anim/a/b/a;
+    invoke-virtual {p2}, Lcom/coloros/anim/model/a/b;->a()Lcom/coloros/anim/a/b/a;
 
     move-result-object p2
 
@@ -129,17 +129,17 @@
     .line 28
     iget-object p2, p0, Lcom/coloros/anim/a/a/s;->e:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 29
     iget-object p2, p0, Lcom/coloros/anim/a/a/s;->f:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 30
     iget-object p2, p0, Lcom/coloros/anim/a/a/s;->g:Lcom/coloros/anim/a/b/a;
 
-    invoke-virtual {p1, p2}, Lcom/coloros/anim/c/c/a;->a(Lcom/coloros/anim/a/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/coloros/anim/model/layer/a;->a(Lcom/coloros/anim/a/b/a;)V
 
     .line 32
     iget-object p1, p0, Lcom/coloros/anim/a/a/s;->e:Lcom/coloros/anim/a/b/a;
@@ -232,11 +232,11 @@
     return-object v0
 .end method
 
-.method c()Lcom/coloros/anim/c/b/q$a;
+.method c()Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
     .locals 1
 
     .line 59
-    iget-object v0, p0, Lcom/coloros/anim/a/a/s;->d:Lcom/coloros/anim/c/b/q$a;
+    iget-object v0, p0, Lcom/coloros/anim/a/a/s;->d:Lcom/coloros/anim/model/content/ShapeTrimPath$Type;
 
     return-object v0
 .end method

@@ -186,6 +186,8 @@
 
 .method public getNotifyChildrenChangedOptions()Landroid/os/Bundle;
     .locals 1
+    .annotation build Landroidx/annotation/RestrictTo;
+    .end annotation
 
     .line 443
     iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat;->mImpl:Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImpl;

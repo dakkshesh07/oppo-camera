@@ -24,7 +24,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "Landroid/graphics/PointF;",
             ">;>;)V"
         }
@@ -45,23 +45,23 @@
 
 
 # virtual methods
-.method public synthetic a(Lcom/coloros/anim/g/c;F)Ljava/lang/Object;
+.method public synthetic a(Lcom/coloros/anim/e/c;F)Ljava/lang/Object;
     .locals 0
 
     .line 9
-    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/j;->b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+    invoke-virtual {p0, p1, p2}, Lcom/coloros/anim/a/b/j;->b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public b(Lcom/coloros/anim/g/c;F)Landroid/graphics/PointF;
+.method public b(Lcom/coloros/anim/e/c;F)Landroid/graphics/PointF;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/coloros/anim/g/c<",
+            "Lcom/coloros/anim/e/c<",
             "Landroid/graphics/PointF;",
             ">;F)",
             "Landroid/graphics/PointF;"
@@ -69,37 +69,37 @@
     .end annotation
 
     .line 18
-    iget-object v0, p1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p1, Lcom/coloros/anim/g/c;->d:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
 
     if-eqz v0, :cond_1
 
     .line 22
-    iget-object v0, p1, Lcom/coloros/anim/g/c;->a:Ljava/lang/Object;
+    iget-object v0, p1, Lcom/coloros/anim/e/c;->a:Ljava/lang/Object;
 
     check-cast v0, Landroid/graphics/PointF;
 
     .line 23
-    iget-object v1, p1, Lcom/coloros/anim/g/c;->d:Ljava/lang/Object;
+    iget-object v1, p1, Lcom/coloros/anim/e/c;->d:Ljava/lang/Object;
 
     move-object v9, v1
 
     check-cast v9, Landroid/graphics/PointF;
 
     .line 25
-    iget-object v1, p0, Lcom/coloros/anim/a/b/j;->b:Lcom/coloros/anim/g/b;
+    iget-object v1, p0, Lcom/coloros/anim/a/b/j;->b:Lcom/coloros/anim/e/b;
 
     if-eqz v1, :cond_0
 
     .line 27
-    iget-object v1, p0, Lcom/coloros/anim/a/b/j;->b:Lcom/coloros/anim/g/b;
+    iget-object v1, p0, Lcom/coloros/anim/a/b/j;->b:Lcom/coloros/anim/e/b;
 
-    iget v2, p1, Lcom/coloros/anim/g/c;->c:F
+    iget v2, p1, Lcom/coloros/anim/e/c;->c:F
 
-    iget-object p1, p1, Lcom/coloros/anim/g/c;->e:Ljava/lang/Float;
+    iget-object p1, p1, Lcom/coloros/anim/e/c;->e:Ljava/lang/Float;
 
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
@@ -121,7 +121,7 @@
     move v6, p2
 
     .line 27
-    invoke-virtual/range {v1 .. v8}, Lcom/coloros/anim/g/b;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
+    invoke-virtual/range {v1 .. v8}, Lcom/coloros/anim/e/b;->a(FFLjava/lang/Object;Ljava/lang/Object;FFF)Ljava/lang/Object;
 
     move-result-object p1
 

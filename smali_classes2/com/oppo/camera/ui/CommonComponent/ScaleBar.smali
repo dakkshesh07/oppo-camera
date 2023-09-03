@@ -24,25 +24,25 @@
 
 .field public static final LEFT_ALIGN:I = 0x1
 
-.field private static final MAX_SCALE_ALPHA:I = 0xff
-
 .field private static final SECOND:I = 0x3e8
 
 .field private static final SECOND_CONTROL_POINT_X:F = 0.58f
 
 .field private static final SECOND_CONTROL_POINT_Y:F = 1.0f
 
-.field private static final SMALL_SCALE_ALPHA:I = 0x7f
-
 .field private static final TAG:Ljava/lang/String; = "ScaleBar"
 
 .field private static final TEN_SMALL_SCALE_BETWEEN_BIG_SCALE:I = 0xa
+
+.field private static sBigScaleAlpha:I = 0xff
 
 .field private static sBigScaleColor:I
 
 .field private static sPointerAutoColor:I
 
 .field private static sPointerScaleColor:I
+
+.field private static sSmallScaleAlpha:I
 
 
 # instance fields
@@ -88,6 +88,8 @@
 
 .field private mStartDistanceX:I
 
+.field private mStartOffsetX:I
+
 .field private mVelocityTracker:Landroid/view/VelocityTracker;
 
 .field private mbAuto:Z
@@ -98,62 +100,77 @@
 
 .field private mbValid:Z
 
-.field private sBigScaleAlpha:I
-
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 4
+
+    .line 49
+    sget v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
+
+    int-to-double v0, v0
+
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
+
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    sput v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sSmallScaleAlpha:I
+
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;ILandroid/os/Handler;)V
     .locals 2
 
-    .line 94
+    .line 93
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
-
-    const/16 v0, 0xff
-
-    .line 55
-    iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
 
     const/4 v0, 0x0
 
-    .line 56
+    .line 54
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 57
+    .line 55
+    iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartOffsetX:I
+
+    .line 56
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
     const/16 v0, 0x1e
 
-    .line 61
+    .line 60
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
     const/4 v0, 0x1
 
-    .line 67
+    .line 66
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mAlign:I
 
     const/16 v1, 0xa
 
-    .line 69
+    .line 68
     iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCountBetweenBigScale:I
 
     const/4 v1, 0x0
 
-    .line 72
+    .line 71
     iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mDownX:F
 
-    .line 77
+    .line 76
     iput-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
-    .line 96
+    .line 95
     iput-object p3, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mMyHandler:Landroid/os/Handler;
 
-    .line 97
+    .line 96
     iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
-    .line 98
+    .line 97
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mContext:Landroid/content/Context;
 
-    .line 99
+    .line 98
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->init()V
 
     return-void
@@ -162,49 +179,47 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .line 87
+    .line 86
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    const/16 p2, 0xff
-
-    .line 55
-    iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
 
     const/4 p2, 0x0
 
-    .line 56
+    .line 54
     iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 57
+    .line 55
+    iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartOffsetX:I
+
+    .line 56
     iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
     const/16 p2, 0x1e
 
-    .line 61
+    .line 60
     iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
     const/4 p2, 0x1
 
-    .line 67
+    .line 66
     iput p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mAlign:I
 
     const/16 v0, 0xa
 
-    .line 69
+    .line 68
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCountBetweenBigScale:I
 
     const/4 v0, 0x0
 
-    .line 72
+    .line 71
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mDownX:F
 
-    .line 77
+    .line 76
     iput-boolean p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
-    .line 89
+    .line 88
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mContext:Landroid/content/Context;
 
-    .line 90
+    .line 89
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->init()V
 
     return-void
@@ -213,7 +228,7 @@
 .method static synthetic access$000(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
     .locals 0
 
-    .line 35
+    .line 34
     iget-object p0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleBarValueChangeListener:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
 
     return-object p0
@@ -222,7 +237,7 @@
 .method static synthetic access$100(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;F)V
     .locals 0
 
-    .line 35
+    .line 34
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->onMove(F)V
 
     return-void
@@ -231,7 +246,7 @@
 .method static synthetic access$200(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)Landroid/os/Handler;
     .locals 0
 
-    .line 35
+    .line 34
     iget-object p0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mMyHandler:Landroid/os/Handler;
 
     return-object p0
@@ -240,23 +255,23 @@
 .method static synthetic access$300(Lcom/oppo/camera/ui/CommonComponent/ScaleBar;)V
     .locals 0
 
-    .line 35
+    .line 34
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->scrollNearbyScale()V
 
     return-void
 .end method
 
 .method private init()V
-    .locals 6
+    .locals 5
 
-    .line 103
+    .line 102
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     const/4 v1, 0x0
 
     if-gtz v0, :cond_0
 
-    .line 104
+    .line 103
     iput-boolean v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
     return-void
@@ -264,87 +279,80 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 108
+    .line 107
     iput-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
-    .line 111
+    .line 110
     iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f070560
+    const v3, 0x7f070673
 
-    .line 112
+    .line 111
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
 
     iput v4, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mBigScaleStrokeWidth:I
 
-    const v4, 0x7f070564
+    const v4, 0x7f070677
+
+    .line 112
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    iput v4, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mSmallScaleStrokeWidth:I
+
+    const v4, 0x7f070671
 
     .line 113
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v5
+    move-result v4
 
-    iput v5, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mSmallScaleStrokeWidth:I
+    div-int/lit8 v4, v4, 0x2
 
-    const v5, 0x7f07055e
+    iput v4, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterY:I
+
+    const v4, 0x7f070675
 
     .line 114
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v5
+    move-result v4
 
-    div-int/lit8 v5, v5, 0x2
+    iput v4, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
-    iput v5, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterY:I
-
-    const v5, 0x7f070562
+    const v4, 0x7f070674
 
     .line 115
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v5
+    move-result v4
 
-    iput v5, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
+    iput v4, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleHeight:I
 
-    const v5, 0x7f070561
+    const v4, 0x7f070676
 
     .line 116
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v5
+    move-result v4
 
-    iput v5, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleHeight:I
-
-    const v5, 0x7f070563
+    iput v4, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerHeight:I
 
     .line 117
-    invoke-virtual {v2, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v5
-
-    iput v5, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerHeight:I
-
-    .line 118
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
     iput v3, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mBigScaleStrokeWidth:I
 
-    .line 119
-    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mSmallScaleStrokeWidth:I
-
-    .line 120
+    .line 118
     iget-object v3, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mContext:Landroid/content/Context;
 
     const v4, 0x7f060045
@@ -355,51 +363,51 @@
 
     sput v3, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleColor:I
 
-    const v3, 0x7f060352
+    const v3, 0x7f0603e5
 
-    .line 121
+    .line 119
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
     sput v2, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sPointerScaleColor:I
 
-    .line 122
+    .line 120
     iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mContext:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/oppo/camera/util/Util;->l(Landroid/content/Context;)I
+    invoke-static {v2}, Lcom/oppo/camera/util/Util;->v(Landroid/content/Context;)I
 
     move-result v2
 
     sput v2, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sPointerAutoColor:I
 
-    .line 124
+    .line 122
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    .line 125
+    .line 123
     iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 126
+    .line 124
     iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
     sget v3, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleColor:I
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 127
+    .line 125
     iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 128
+    .line 126
     iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
     iget v3, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mSmallScaleStrokeWidth:I
@@ -408,14 +416,18 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 129
+    .line 127
+    iget-object v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mContext:Landroid/content/Context;
+
+    invoke-static {v2}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
     invoke-static {}, Landroid/view/ViewConfiguration;->getMaximumFlingVelocity()I
 
     move-result v2
 
     iput v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mMaxFlingVelocity:I
 
-    .line 131
+    .line 129
     iget v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     rem-int/lit8 v3, v2, 0x2
@@ -434,12 +446,12 @@
     :goto_0
     iput v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterIndex:I
 
-    .line 133
+    .line 131
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterIndex:I
 
     if-gez v0, :cond_2
 
-    .line 134
+    .line 132
     iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterIndex:I
 
     :cond_2
@@ -449,7 +461,7 @@
 .method private onMove(F)V
     .locals 4
 
-    .line 316
+    .line 313
     iget-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
     if-nez v0, :cond_0
@@ -458,12 +470,12 @@
 
     const-string v0, "onMove return, is not valid"
 
-    .line 317
-    invoke-static {p1, v0}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    .line 314
+    invoke-static {p1, v0}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    .line 322
+    .line 319
     :cond_0
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
@@ -473,19 +485,19 @@
 
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 324
+    .line 321
     iget p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
 
     if-lt p1, v0, :cond_1
 
-    .line 325
+    .line 322
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
     goto :goto_0
 
-    .line 326
+    .line 323
     :cond_1
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
@@ -505,15 +517,15 @@
 
     sub-int/2addr v0, v1
 
-    .line 327
+    .line 324
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 330
+    .line 327
     :cond_2
     :goto_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->updateIndex()V
 
-    .line 331
+    .line 328
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->invalidate()V
 
     return-void
@@ -522,8 +534,12 @@
 .method private scrollNearbyScale()V
     .locals 4
 
-    .line 297
+    .line 294
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
+
+    iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartOffsetX:I
+
+    sub-int/2addr v0, v1
 
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
@@ -531,7 +547,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 300
+    .line 297
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v1
@@ -544,7 +560,7 @@
 
     if-lez v0, :cond_0
 
-    .line 302
+    .line 299
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
     sub-int/2addr v1, v0
@@ -555,7 +571,7 @@
 
     goto :goto_0
 
-    .line 304
+    .line 301
     :cond_0
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
@@ -567,7 +583,7 @@
 
     goto :goto_0
 
-    .line 307
+    .line 304
     :cond_1
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
@@ -575,11 +591,11 @@
 
     iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 310
+    .line 307
     :goto_0
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->updateIndex()V
 
-    .line 311
+    .line 308
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->postInvalidate()V
 
     :cond_2
@@ -589,12 +605,12 @@
 .method private updateIndex()V
     .locals 3
 
-    .line 335
+    .line 332
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     if-eqz v0, :cond_1
 
-    .line 336
+    .line 333
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
 
     iget v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
@@ -613,25 +629,25 @@
 
     rem-int/2addr v0, v1
 
-    .line 338
+    .line 335
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleBarValueChangeListener:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
 
     if-eqz v1, :cond_0
 
-    .line 339
+    .line 336
     iget v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
     if-eq v0, v2, :cond_0
 
-    .line 340
+    .line 337
     invoke-interface {v1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;->onBarMoving()V
 
-    .line 341
+    .line 338
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleBarValueChangeListener:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
 
     invoke-interface {v1, v0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;->onValueChange(I)V
 
-    .line 345
+    .line 342
     :cond_0
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->setCurrentIndex(I)V
 
@@ -644,7 +660,7 @@
 .method public getCurrentIndex()I
     .locals 1
 
-    .line 159
+    .line 157
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
     return v0
@@ -655,25 +671,25 @@
 
     if-ltz p1, :cond_2
 
-    .line 398
+    .line 387
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
-    .line 402
+    .line 391
     :cond_0
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
-    .line 404
+    .line 393
     iget-boolean v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbInitScalePointerX:Z
 
     if-nez v0, :cond_1
 
     return-void
 
-    .line 408
+    .line 397
     :cond_1
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
 
@@ -687,10 +703,10 @@
 
     const/4 p1, 0x1
 
-    .line 409
+    .line 398
     iput-boolean p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbInitIndex:Z
 
-    .line 410
+    .line 399
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->invalidate()V
 
     :cond_2
@@ -711,14 +727,14 @@
 
     move-object/from16 v0, p0
 
-    .line 168
+    .line 166
     iget-boolean v1, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
     if-nez v1, :cond_0
 
     return-void
 
-    .line 172
+    .line 170
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->getLayoutDirection()I
 
@@ -734,7 +750,7 @@
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 173
+    .line 171
     invoke-virtual/range {p0 .. p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->getWidth()I
 
     move-result v5
@@ -760,7 +776,7 @@
     :cond_1
     move-object/from16 v13, p1
 
-    .line 176
+    .line 174
     :goto_0
     iget-object v1, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
@@ -768,44 +784,49 @@
 
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 178
+    .line 176
     iget v1, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterY:I
 
     iget v4, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleHeight:I
 
-    div-int/2addr v4, v3
+    div-int/lit8 v5, v4, 0x2
 
-    add-int/2addr v4, v1
+    add-int/2addr v5, v1
 
-    .line 183
-    iget v5, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mAlign:I
+    .line 177
+    div-int/lit8 v4, v4, 0xa
+
+    sub-int/2addr v1, v4
+
+    .line 181
+    iget v4, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mAlign:I
 
     const/4 v6, 0x0
 
-    if-ne v5, v3, :cond_2
+    if-ne v4, v3, :cond_2
 
-    .line 184
-    iget v5, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterIndex:I
+    .line 182
+    iget v4, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterIndex:I
 
     iget v7, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCountBetweenBigScale:I
 
-    rem-int/2addr v5, v7
+    rem-int/2addr v4, v7
 
     goto :goto_1
 
     :cond_2
-    move v5, v6
+    move v4, v6
 
     :goto_1
     move v14, v6
 
-    .line 187
+    .line 185
     :goto_2
     iget v7, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     if-ge v14, v7, :cond_4
 
-    .line 188
+    .line 186
     iget v7, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
     sub-int/2addr v7, v14
@@ -816,12 +837,12 @@
 
     add-int/2addr v7, v2
 
-    .line 189
+    .line 187
     iget v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
     mul-int/2addr v7, v8
 
-    .line 190
+    .line 188
     iget v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLayoutWidth:I
 
     div-int/2addr v8, v3
@@ -842,14 +863,14 @@
 
     div-float/2addr v7, v8
 
-    .line 192
+    .line 190
     iget v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCountBetweenBigScale:I
 
     rem-int v8, v14, v8
 
-    if-ne v8, v5, :cond_3
+    if-ne v8, v4, :cond_3
 
-    .line 193
+    .line 191
     iget-object v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
     iget v9, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mSmallScaleStrokeWidth:I
@@ -858,10 +879,10 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 194
+    .line 192
     iget-object v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    iget v9, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
+    sget v9, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
 
     int-to-float v9, v9
 
@@ -873,7 +894,7 @@
 
     goto :goto_3
 
-    .line 196
+    .line 194
     :cond_3
     iget-object v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
@@ -883,18 +904,20 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 197
+    .line 195
     iget-object v8, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    const/high16 v9, 0x42fe0000    # 127.0f
+    sget v9, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sSmallScaleAlpha:I
 
-    mul-float/2addr v7, v9
+    int-to-float v9, v9
 
-    float-to-int v7, v7
+    mul-float/2addr v9, v7
+
+    float-to-int v7, v9
 
     invoke-virtual {v8, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 200
+    .line 198
     :goto_3
     iget v7, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
@@ -906,7 +929,7 @@
 
     int-to-float v9, v9
 
-    int-to-float v10, v4
+    int-to-float v10, v5
 
     mul-int/2addr v8, v14
 
@@ -936,68 +959,66 @@
 
     goto :goto_2
 
-    .line 204
+    .line 201
     :cond_4
     iget v1, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCenterY:I
 
     iget v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleHeight:I
 
-    div-int/lit8 v3, v2, 0x2
-
-    add-int/2addr v3, v1
-
-    .line 205
     div-int/lit8 v4, v2, 0x2
 
-    add-int/2addr v1, v4
+    add-int/2addr v4, v1
+
+    .line 202
+    div-int/2addr v2, v3
 
     sub-int/2addr v1, v2
 
-    .line 207
+    .line 204
     iget-boolean v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbAuto:Z
 
     if-eqz v2, :cond_5
 
-    .line 208
+    .line 205
     iget-object v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    sget v4, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sPointerAutoColor:I
+    sget v3, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sPointerAutoColor:I
 
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
     goto :goto_4
 
-    .line 210
+    .line 207
     :cond_5
     iget-object v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    sget v4, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sPointerScaleColor:I
+    sget v3, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sPointerScaleColor:I
 
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 213
+    .line 210
     :goto_4
     iget-object v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    const/16 v4, 0xff
+    sget v3, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
 
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setAlpha(I)V
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 214
+    .line 211
     iget-object v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mPaint:Landroid/graphics/Paint;
 
-    iget v4, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mBigScaleStrokeWidth:I
+    iget v3, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mBigScaleStrokeWidth:I
 
-    int-to-float v4, v4
+    int-to-float v3, v3
 
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 216
+    .line 213
     iget v2, v0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
 
     int-to-float v8, v2
 
-    int-to-float v9, v3
+    int-to-float v9, v4
 
     int-to-float v10, v2
 
@@ -1013,19 +1034,19 @@
 .end method
 
 .method protected onMeasure(II)V
-    .locals 0
+    .locals 1
 
-    .line 359
+    .line 356
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
-    .line 361
+    .line 358
     iget p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLayoutWidth:I
 
     if-lez p1, :cond_0
 
     return-void
 
-    .line 365
+    .line 362
     :cond_0
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->getMeasuredWidth()I
 
@@ -1033,42 +1054,53 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLayoutWidth:I
 
-    .line 366
+    .line 363
     iget p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLayoutWidth:I
 
     div-int/lit8 p1, p1, 0x2
 
-    .line 367
-    iget p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
+    .line 364
+    iget p2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mBigScaleStrokeWidth:I
 
-    rem-int p2, p1, p2
+    div-int/lit8 v0, p2, 0x2
+
+    sub-int v0, p1, v0
+
+    iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
+
+    .line 365
+    iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
+
+    rem-int/2addr p1, v0
+
+    div-int/lit8 p2, p2, 0x2
 
     sub-int/2addr p1, p2
 
-    iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
+    iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartOffsetX:I
 
     const/4 p1, 0x1
 
-    .line 368
+    .line 366
     iput-boolean p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbInitScalePointerX:Z
 
-    .line 370
+    .line 368
     iget-boolean p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbInitIndex:Z
 
     if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
-    .line 371
+    .line 369
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 374
+    .line 372
     :cond_1
     iget p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
     if-ltz p1, :cond_2
 
-    .line 375
+    .line 373
     invoke-virtual {p0, p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->initDataIndex(I)V
 
     :cond_2
@@ -1078,7 +1110,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    .line 222
+    .line 219
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -1101,25 +1133,25 @@
 
     goto/16 :goto_0
 
-    .line 280
+    .line 277
     :cond_0
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz p1, :cond_1
 
-    .line 281
+    .line 278
     invoke-virtual {p1}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 282
+    .line 279
     iput-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 285
+    .line 282
     :cond_1
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->scrollNearbyScale()V
 
     goto/16 :goto_0
 
-    .line 237
+    .line 234
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1129,22 +1161,22 @@
 
     sub-float/2addr v0, v1
 
-    .line 238
+    .line 235
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v1
 
     iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mDownX:F
 
-    .line 240
+    .line 237
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v1, :cond_3
 
-    .line 241
+    .line 238
     invoke-virtual {v1, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 244
+    .line 241
     :cond_3
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->getLayoutDirection()I
 
@@ -1154,12 +1186,12 @@
 
     neg-float p1, v0
 
-    .line 245
+    .line 242
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->onMove(F)V
 
     goto :goto_0
 
-    .line 247
+    .line 244
     :cond_4
     invoke-direct {p0, v0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->onMove(F)V
 
@@ -1168,15 +1200,15 @@
     :cond_5
     const/4 v0, 0x0
 
-    .line 255
+    .line 252
     iget-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     if-eqz v1, :cond_6
 
-    .line 256
+    .line 253
     invoke-virtual {v1, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 257
+    .line 254
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     const/16 v0, 0x3e8
@@ -1187,19 +1219,19 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 258
+    .line 255
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {p1}, Landroid/view/VelocityTracker;->getXVelocity()F
 
     move-result v0
 
-    .line 259
+    .line 256
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {p1}, Landroid/view/VelocityTracker;->clear()V
 
-    .line 262
+    .line 259
     :cond_6
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -1211,7 +1243,7 @@
 
     if-ltz p1, :cond_8
 
-    .line 263
+    .line 260
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->getLayoutDirection()I
 
     move-result p1
@@ -1220,7 +1252,7 @@
 
     neg-float v0, v0
 
-    .line 267
+    .line 264
     :cond_7
     new-instance p1, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;
 
@@ -1228,7 +1260,7 @@
 
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mFlingRunnable:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;
 
-    .line 268
+    .line 265
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mMyHandler:Landroid/os/Handler;
 
     iget-object v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mFlingRunnable:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;
@@ -1237,21 +1269,21 @@
 
     goto :goto_0
 
-    .line 270
+    .line 267
     :cond_8
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->scrollNearbyScale()V
 
-    .line 272
+    .line 269
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleBarValueChangeListener:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
 
     if-eqz p1, :cond_a
 
-    .line 273
+    .line 270
     invoke-interface {p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;->onActionUp()V
 
     goto :goto_0
 
-    .line 226
+    .line 223
     :cond_9
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1259,22 +1291,22 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mDownX:F
 
-    .line 227
+    .line 224
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 229
+    .line 226
     iget-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mFlingRunnable:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;
 
     if-eqz p1, :cond_a
 
-    .line 230
+    .line 227
     invoke-virtual {p1}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;->cancelFling()V
 
-    .line 231
+    .line 228
     iput-object v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mFlingRunnable:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$FlingRunnable;
 
     :cond_a
@@ -1287,14 +1319,14 @@
 
     if-ltz p1, :cond_1
 
-    .line 389
+    .line 378
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
-    .line 393
+    .line 382
     :cond_0
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
 
@@ -1306,7 +1338,7 @@
 
     iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mStartDistanceX:I
 
-    .line 394
+    .line 383
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->invalidate()V
 
     :cond_1
@@ -1325,7 +1357,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 423
+    .line 412
     :cond_0
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mAlign:I
 
@@ -1336,10 +1368,10 @@
 .method public setAuto(Z)V
     .locals 0
 
-    .line 414
+    .line 403
     iput-boolean p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbAuto:Z
 
-    .line 415
+    .line 404
     invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->invalidate()V
 
     return-void
@@ -1350,14 +1382,14 @@
 
     if-ltz p1, :cond_1
 
-    .line 139
+    .line 137
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     if-lt p1, v0, :cond_0
 
     goto :goto_0
 
-    .line 143
+    .line 141
     :cond_0
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
 
@@ -1366,46 +1398,10 @@
     return-void
 .end method
 
-.method public setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 3
-
-    .line 381
-    invoke-virtual {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->getMeasuredWidth()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLayoutWidth:I
-
-    .line 382
-    iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLayoutWidth:I
-
-    div-int/lit8 v1, v0, 0x2
-
-    div-int/lit8 v0, v0, 0x2
-
-    iget v2, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
-
-    rem-int/2addr v0, v2
-
-    sub-int/2addr v1, v0
-
-    iput v1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScalePointerX:I
-
-    .line 383
-    iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mCurrentIndex:I
-
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->initDataIndex(I)V
-
-    .line 385
-    invoke-super {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
 .method public setLevelNum(I)V
     .locals 2
 
-    .line 147
+    .line 145
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1422,17 +1418,17 @@
 
     const-string v1, "ScaleBar"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
+    .line 147
     iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
-    .line 151
+    .line 149
     iget-boolean p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mbValid:Z
 
     if-eqz p1, :cond_1
 
-    .line 152
+    .line 150
     iget p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mLevelNum:I
 
     rem-int/lit8 v0, p1, 0x2
@@ -1453,7 +1449,7 @@
 
     goto :goto_1
 
-    .line 154
+    .line 152
     :cond_1
     invoke-direct {p0}, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->init()V
 
@@ -1464,27 +1460,8 @@
 .method public setScaleBarValueChangeListener(Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;)V
     .locals 0
 
-    .line 163
+    .line 161
     iput-object p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleBarValueChangeListener:Lcom/oppo/camera/ui/CommonComponent/ScaleBar$ScaleBarValueChangeListener;
-
-    return-void
-.end method
-
-.method public setShowBigScale(Z)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    const/16 p1, 0xff
-
-    goto :goto_0
-
-    :cond_0
-    const/16 p1, 0x7f
-
-    .line 503
-    :goto_0
-    iput p1, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->sBigScaleAlpha:I
 
     return-void
 .end method
@@ -1492,7 +1469,7 @@
 .method public sliderLeft()V
     .locals 1
 
-    .line 354
+    .line 351
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
     neg-int v0, v0
@@ -1507,7 +1484,7 @@
 .method public sliderRight()V
     .locals 1
 
-    .line 350
+    .line 347
     iget v0, p0, Lcom/oppo/camera/ui/CommonComponent/ScaleBar;->mScaleMargin:I
 
     int-to-float v0, v0

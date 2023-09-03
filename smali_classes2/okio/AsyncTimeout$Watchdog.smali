@@ -13,6 +13,9 @@
     name = "Watchdog"
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # direct methods
 .method public constructor <init>()V
@@ -20,12 +23,12 @@
 
     const-string v0, "Okio Watchdog"
 
-    .line 219
+    .line 177
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    .line 221
+    .line 179
     invoke-virtual {p0, v0}, Lokio/AsyncTimeout$Watchdog;->setDaemon(Z)V
 
     return-void
@@ -41,21 +44,21 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 227
+    .line 185
     :try_start_0
     move-object v1, v0
 
     check-cast v1, Lokio/AsyncTimeout;
 
-    .line 228
+    .line 186
     const-class v1, Lokio/AsyncTimeout;
 
-    .line 370
+    .line 328
     monitor-enter v1
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 229
+    .line 187
     :try_start_1
     sget-object v2, Lokio/AsyncTimeout;->Companion:Lokio/AsyncTimeout$Companion;
 
@@ -63,21 +66,21 @@
 
     move-result-object v2
 
-    .line 233
+    .line 191
     invoke-static {}, Lokio/AsyncTimeout;->access$getHead$cp()Lokio/AsyncTimeout;
 
     move-result-object v3
 
     if-ne v2, v3, :cond_1
 
-    .line 234
+    .line 192
     check-cast v0, Lokio/AsyncTimeout;
 
     invoke-static {v0}, Lokio/AsyncTimeout;->access$setHead$cp(Lokio/AsyncTimeout;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 235
+    .line 193
     :try_start_2
     monitor-exit v1
     :try_end_2
@@ -85,10 +88,10 @@
 
     return-void
 
-    .line 237
+    .line 195
     :cond_1
     :try_start_3
-    sget-object v0, Lc/f;->a:Lc/f;
+    sget-object v0, Lkotlin/u;->a:Lkotlin/u;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -97,7 +100,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 240
+    .line 198
     invoke-virtual {v2}, Lokio/AsyncTimeout;->timedOut()V
 
     goto :goto_0
@@ -105,7 +108,7 @@
     :catchall_0
     move-exception v0
 
-    .line 237
+    .line 195
     monitor-exit v1
 
     throw v0

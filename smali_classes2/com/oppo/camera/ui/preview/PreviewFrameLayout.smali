@@ -36,7 +36,7 @@
     if-eqz p3, :cond_0
 
     .line 40
-    invoke-interface {p3, p1, p2}, Lcom/oppo/camera/ui/preview/PreviewFrameLayout$OnSizeChangedListener;->b(II)V
+    invoke-interface {p3, p1, p2}, Lcom/oppo/camera/ui/preview/PreviewFrameLayout$OnSizeChangedListener;->c(II)V
 
     :cond_0
     return-void

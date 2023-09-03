@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/oppo/camera/ui/preview/FaceView;->i()V
+    value = Lcom/oppo/camera/ui/preview/FaceView;->k()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/preview/FaceView;)V
     .locals 0
 
-    .line 759
+    .line 871
     iput-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$2;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,7 +38,7 @@
 .method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 774
+    .line 886
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$2;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     const/4 v0, 0x0
@@ -51,7 +51,7 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .line 767
+    .line 879
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$2;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     const/4 v0, 0x0
@@ -60,12 +60,12 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/oppo/camera/ui/preview/FaceView;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 768
+    .line 880
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$2;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/FaceView;->a(Lcom/oppo/camera/ui/preview/FaceView;Z)Z
 
-    .line 769
+    .line 881
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$2;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     invoke-static {p1, v0}, Lcom/oppo/camera/ui/preview/FaceView;->b(Lcom/oppo/camera/ui/preview/FaceView;I)I
@@ -82,7 +82,7 @@
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
 
-    .line 762
+    .line 874
     iget-object p1, p0, Lcom/oppo/camera/ui/preview/FaceView$2;->a:Lcom/oppo/camera/ui/preview/FaceView;
 
     const/4 v0, 0x1

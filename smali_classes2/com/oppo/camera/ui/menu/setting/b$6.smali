@@ -22,7 +22,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/menu/setting/b;)V
     .locals 0
 
-    .line 479
+    .line 473
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$6;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -35,10 +35,10 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
-    .line 482
+    .line 476
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/b$6;->a:Lcom/oppo/camera/ui/menu/setting/b;
 
-    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->l()V
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/b;->m()V
 
     return-void
 .end method

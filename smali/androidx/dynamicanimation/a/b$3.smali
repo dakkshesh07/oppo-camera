@@ -32,7 +32,7 @@
     .locals 0
 
     .line 217
-    invoke-static {p1}, Landroidx/core/g/w;->C(Landroid/view/View;)F
+    invoke-static {p1}, Landroidx/core/f/w;->C(Landroid/view/View;)F
 
     move-result p1
 
@@ -56,7 +56,7 @@
     .locals 0
 
     .line 212
-    invoke-static {p1, p2}, Landroidx/core/g/w;->c(Landroid/view/View;F)V
+    invoke-static {p1, p2}, Landroidx/core/f/w;->c(Landroid/view/View;F)V
 
     return-void
 .end method

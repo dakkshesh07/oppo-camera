@@ -3,7 +3,7 @@
 .source "FragmentManagerImpl.java"
 
 # interfaces
-.implements Landroidx/fragment/app/Fragment$c;
+.implements Landroidx/fragment/app/Fragment$b;
 
 
 # annotations
@@ -150,7 +150,7 @@
     const/4 v6, 0x0
 
     .line 3377
-    invoke-virtual {v5, v6}, Landroidx/fragment/app/Fragment;->setOnStartEnterTransitionListener(Landroidx/fragment/app/Fragment$c;)V
+    invoke-virtual {v5, v6}, Landroidx/fragment/app/Fragment;->setOnStartEnterTransitionListener(Landroidx/fragment/app/Fragment$b;)V
 
     if-eqz v0, :cond_1
 

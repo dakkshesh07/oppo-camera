@@ -13,7 +13,7 @@
 .method public abstract a(Landroidx/f/a/e;Landroid/os/CancellationSignal;)Landroid/database/Cursor;
 .end method
 
-.method public abstract a(Ljava/lang/String;)Landroidx/f/a/f;
+.method public abstract a(Ljava/lang/String;)Landroidx/f/a/g;
 .end method
 
 .method public abstract a()V

@@ -215,7 +215,7 @@
     iget-object v0, p1, Landroidx/transition/t;->b:Landroid/view/View;
 
     .line 222
-    invoke-static {v0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {v0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v1
 
@@ -331,7 +331,7 @@
     .line 232
     iget-object p1, p1, Landroidx/transition/t;->a:Ljava/util/Map;
 
-    invoke-static {v0}, Landroidx/core/g/w;->D(Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {v0}, Landroidx/core/f/w;->D(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -885,7 +885,7 @@
     if-nez v4, :cond_15
 
     .line 367
-    invoke-static {v9, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/Rect;)V
+    invoke-static {v9, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/Rect;)V
 
     .line 368
     sget-object v4, Landroidx/transition/c;->k:Landroidx/transition/j;

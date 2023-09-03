@@ -3,14 +3,19 @@
 .source "AppCompatImageHelper.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private final a:Landroid/widget/ImageView;
 
-.field private b:Landroidx/appcompat/widget/aq;
+.field private b:Landroidx/appcompat/widget/ap;
 
-.field private c:Landroidx/appcompat/widget/aq;
+.field private c:Landroidx/appcompat/widget/ap;
 
-.field private d:Landroidx/appcompat/widget/aq;
+.field private d:Landroidx/appcompat/widget/ap;
 
 
 # direct methods
@@ -30,23 +35,23 @@
     .locals 3
 
     .line 200
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->d:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->d:Landroidx/appcompat/widget/ap;
 
     if-nez v0, :cond_0
 
     .line 201
-    new-instance v0, Landroidx/appcompat/widget/aq;
+    new-instance v0, Landroidx/appcompat/widget/ap;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/aq;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/ap;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/m;->d:Landroidx/appcompat/widget/aq;
+    iput-object v0, p0, Landroidx/appcompat/widget/m;->d:Landroidx/appcompat/widget/ap;
 
     .line 203
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->d:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->d:Landroidx/appcompat/widget/ap;
 
     .line 204
-    invoke-virtual {v0}, Landroidx/appcompat/widget/aq;->a()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ap;->a()V
 
     .line 206
     iget-object v1, p0, Landroidx/appcompat/widget/m;->a:Landroid/widget/ImageView;
@@ -60,10 +65,10 @@
     if-eqz v1, :cond_1
 
     .line 208
-    iput-boolean v2, v0, Landroidx/appcompat/widget/aq;->d:Z
+    iput-boolean v2, v0, Landroidx/appcompat/widget/ap;->d:Z
 
     .line 209
-    iput-object v1, v0, Landroidx/appcompat/widget/aq;->a:Landroid/content/res/ColorStateList;
+    iput-object v1, v0, Landroidx/appcompat/widget/ap;->a:Landroid/content/res/ColorStateList;
 
     .line 211
     :cond_1
@@ -76,18 +81,18 @@
     if-eqz v1, :cond_2
 
     .line 213
-    iput-boolean v2, v0, Landroidx/appcompat/widget/aq;->c:Z
+    iput-boolean v2, v0, Landroidx/appcompat/widget/ap;->c:Z
 
     .line 214
-    iput-object v1, v0, Landroidx/appcompat/widget/aq;->b:Landroid/graphics/PorterDuff$Mode;
+    iput-object v1, v0, Landroidx/appcompat/widget/ap;->b:Landroid/graphics/PorterDuff$Mode;
 
     .line 217
     :cond_2
-    iget-boolean v1, v0, Landroidx/appcompat/widget/aq;->d:Z
+    iget-boolean v1, v0, Landroidx/appcompat/widget/ap;->d:Z
 
     if-nez v1, :cond_4
 
-    iget-boolean v1, v0, Landroidx/appcompat/widget/aq;->c:Z
+    iget-boolean v1, v0, Landroidx/appcompat/widget/ap;->c:Z
 
     if-eqz v1, :cond_3
 
@@ -107,7 +112,7 @@
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Landroidx/appcompat/widget/i;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/aq;[I)V
+    invoke-static {p1, v0, v1}, Landroidx/appcompat/widget/i;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/ap;[I)V
 
     return v2
 .end method
@@ -127,7 +132,7 @@
     if-le v0, v3, :cond_1
 
     .line 182
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->b:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->b:Landroidx/appcompat/widget/ap;
 
     if-eqz v0, :cond_0
 
@@ -169,7 +174,7 @@
     if-eqz p1, :cond_0
 
     .line 92
-    invoke-static {p1}, Landroidx/appcompat/widget/ab;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1}, Landroidx/appcompat/widget/aa;->b(Landroid/graphics/drawable/Drawable;)V
 
     .line 94
     :cond_0
@@ -198,27 +203,27 @@
     .locals 1
 
     .line 114
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     if-nez v0, :cond_0
 
     .line 115
-    new-instance v0, Landroidx/appcompat/widget/aq;
+    new-instance v0, Landroidx/appcompat/widget/ap;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/aq;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/ap;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iput-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     .line 117
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
-    iput-object p1, v0, Landroidx/appcompat/widget/aq;->a:Landroid/content/res/ColorStateList;
+    iput-object p1, v0, Landroidx/appcompat/widget/ap;->a:Landroid/content/res/ColorStateList;
 
     const/4 p1, 0x1
 
     .line 118
-    iput-boolean p1, v0, Landroidx/appcompat/widget/aq;->d:Z
+    iput-boolean p1, v0, Landroidx/appcompat/widget/ap;->d:Z
 
     .line 119
     invoke-virtual {p0}, Landroidx/appcompat/widget/m;->d()V
@@ -230,27 +235,27 @@
     .locals 1
 
     .line 127
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     if-nez v0, :cond_0
 
     .line 128
-    new-instance v0, Landroidx/appcompat/widget/aq;
+    new-instance v0, Landroidx/appcompat/widget/ap;
 
-    invoke-direct {v0}, Landroidx/appcompat/widget/aq;-><init>()V
+    invoke-direct {v0}, Landroidx/appcompat/widget/ap;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iput-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     .line 130
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
-    iput-object p1, v0, Landroidx/appcompat/widget/aq;->b:Landroid/graphics/PorterDuff$Mode;
+    iput-object p1, v0, Landroidx/appcompat/widget/ap;->b:Landroid/graphics/PorterDuff$Mode;
 
     const/4 p1, 0x1
 
     .line 131
-    iput-boolean p1, v0, Landroidx/appcompat/widget/aq;->c:Z
+    iput-boolean p1, v0, Landroidx/appcompat/widget/ap;->c:Z
 
     .line 133
     invoke-virtual {p0}, Landroidx/appcompat/widget/m;->d()V
@@ -272,7 +277,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, p1, v1, p2, v2}, Landroidx/appcompat/widget/as;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/as;
+    invoke-static {v0, p1, v1, p2, v2}, Landroidx/appcompat/widget/ar;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroidx/appcompat/widget/ar;
 
     move-result-object v0
 
@@ -286,7 +291,7 @@
     sget-object v3, Landroidx/appcompat/R$styleable;->AppCompatImageView:[I
 
     .line 55
-    invoke-virtual {v0}, Landroidx/appcompat/widget/as;->a()Landroid/content/res/TypedArray;
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ar;->a()Landroid/content/res/TypedArray;
 
     move-result-object v5
 
@@ -297,7 +302,7 @@
     move v6, p2
 
     .line 54
-    invoke-static/range {v1 .. v7}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
+    invoke-static/range {v1 .. v7}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/content/Context;[ILandroid/util/AttributeSet;Landroid/content/res/TypedArray;II)V
 
     .line 57
     :try_start_0
@@ -314,7 +319,7 @@
     .line 61
     sget v1, Landroidx/appcompat/R$styleable;->AppCompatImageView_srcCompat:I
 
-    invoke-virtual {v0, v1, p2}, Landroidx/appcompat/widget/as;->g(II)I
+    invoke-virtual {v0, v1, p2}, Landroidx/appcompat/widget/ar;->g(II)I
 
     move-result v1
 
@@ -342,13 +347,13 @@
     if-eqz p1, :cond_1
 
     .line 71
-    invoke-static {p1}, Landroidx/appcompat/widget/ab;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p1}, Landroidx/appcompat/widget/aa;->b(Landroid/graphics/drawable/Drawable;)V
 
     .line 74
     :cond_1
     sget p1, Landroidx/appcompat/R$styleable;->AppCompatImageView_tint:I
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p1
 
@@ -360,7 +365,7 @@
     sget v1, Landroidx/appcompat/R$styleable;->AppCompatImageView_tint:I
 
     .line 76
-    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/as;->e(I)Landroid/content/res/ColorStateList;
+    invoke-virtual {v0, v1}, Landroidx/appcompat/widget/ar;->e(I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -371,7 +376,7 @@
     :cond_2
     sget p1, Landroidx/appcompat/R$styleable;->AppCompatImageView_tintMode:I
 
-    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/as;->g(I)Z
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/ar;->g(I)Z
 
     move-result p1
 
@@ -383,14 +388,14 @@
     sget v1, Landroidx/appcompat/R$styleable;->AppCompatImageView_tintMode:I
 
     .line 81
-    invoke-virtual {v0, v1, p2}, Landroidx/appcompat/widget/as;->a(II)I
+    invoke-virtual {v0, v1, p2}, Landroidx/appcompat/widget/ar;->a(II)I
 
     move-result p2
 
     const/4 v1, 0x0
 
     .line 80
-    invoke-static {p2, v1}, Landroidx/appcompat/widget/ab;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
+    invoke-static {p2, v1}, Landroidx/appcompat/widget/aa;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
 
     move-result-object p2
 
@@ -401,14 +406,14 @@
 
     .line 84
     :cond_3
-    invoke-virtual {v0}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ar;->c()V
 
     return-void
 
     :catchall_0
     move-exception p1
 
-    invoke-virtual {v0}, Landroidx/appcompat/widget/as;->c()V
+    invoke-virtual {v0}, Landroidx/appcompat/widget/ar;->c()V
 
     .line 85
     throw p1
@@ -449,11 +454,11 @@
     .locals 1
 
     .line 123
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Landroidx/appcompat/widget/aq;->a:Landroid/content/res/ColorStateList;
+    iget-object v0, v0, Landroidx/appcompat/widget/ap;->a:Landroid/content/res/ColorStateList;
 
     goto :goto_0
 
@@ -468,11 +473,11 @@
     .locals 1
 
     .line 137
-    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v0, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Landroidx/appcompat/widget/aq;->b:Landroid/graphics/PorterDuff$Mode;
+    iget-object v0, v0, Landroidx/appcompat/widget/ap;->b:Landroid/graphics/PorterDuff$Mode;
 
     goto :goto_0
 
@@ -496,7 +501,7 @@
     if-eqz v0, :cond_0
 
     .line 143
-    invoke-static {v0}, Landroidx/appcompat/widget/ab;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Landroidx/appcompat/widget/aa;->b(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
     if-eqz v0, :cond_3
@@ -519,7 +524,7 @@
 
     .line 154
     :cond_1
-    iget-object v1, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/aq;
+    iget-object v1, p0, Landroidx/appcompat/widget/m;->c:Landroidx/appcompat/widget/ap;
 
     if-eqz v1, :cond_2
 
@@ -532,13 +537,13 @@
     move-result-object v2
 
     .line 155
-    invoke-static {v0, v1, v2}, Landroidx/appcompat/widget/i;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/aq;[I)V
+    invoke-static {v0, v1, v2}, Landroidx/appcompat/widget/i;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/ap;[I)V
 
     goto :goto_0
 
     .line 157
     :cond_2
-    iget-object v1, p0, Landroidx/appcompat/widget/m;->b:Landroidx/appcompat/widget/aq;
+    iget-object v1, p0, Landroidx/appcompat/widget/m;->b:Landroidx/appcompat/widget/ap;
 
     if-eqz v1, :cond_3
 
@@ -551,7 +556,7 @@
     move-result-object v2
 
     .line 158
-    invoke-static {v0, v1, v2}, Landroidx/appcompat/widget/i;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/aq;[I)V
+    invoke-static {v0, v1, v2}, Landroidx/appcompat/widget/i;->a(Landroid/graphics/drawable/Drawable;Landroidx/appcompat/widget/ap;[I)V
 
     :cond_3
     :goto_0

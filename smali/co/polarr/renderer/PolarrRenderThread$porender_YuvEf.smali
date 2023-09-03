@@ -59,7 +59,7 @@
 
     iget-object v1, p0, Lco/polarr/renderer/PolarrRenderThread$porender_YuvEf;->d:Lco/polarr/renderer/PolarrRenderThread;
 
-    invoke-static {v1}, Lco/polarr/renderer/PolarrRenderThread;->a(Lco/polarr/renderer/PolarrRenderThread;)La/a/a/d;
+    invoke-static {v1}, Lco/polarr/renderer/PolarrRenderThread;->a(Lco/polarr/renderer/PolarrRenderThread;)La/a/b/d;
 
     move-result-object v1
 
@@ -75,7 +75,7 @@
 
     move-result v3
 
-    invoke-virtual {v1, v2, v3}, La/a/a/d;->c(II)V
+    invoke-virtual {v1, v2, v3}, La/a/b/d;->c(II)V
 
     iget-object v1, p0, Lco/polarr/renderer/PolarrRenderThread$porender_YuvEf;->b:Ljava/util/List;
 
@@ -98,13 +98,13 @@
 
     iget-object v3, p0, Lco/polarr/renderer/PolarrRenderThread$porender_YuvEf;->d:Lco/polarr/renderer/PolarrRenderThread;
 
-    invoke-static {v3}, Lco/polarr/renderer/PolarrRenderThread;->a(Lco/polarr/renderer/PolarrRenderThread;)La/a/a/d;
+    invoke-static {v3}, Lco/polarr/renderer/PolarrRenderThread;->a(Lco/polarr/renderer/PolarrRenderThread;)La/a/b/d;
 
     move-result-object v3
 
     iget-object v4, p0, Lco/polarr/renderer/PolarrRenderThread$porender_YuvEf;->a:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v3, v4, v2}, La/a/a/d;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-virtual {v3, v4, v2}, La/a/b/d;->a(Landroid/graphics/Bitmap;Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 

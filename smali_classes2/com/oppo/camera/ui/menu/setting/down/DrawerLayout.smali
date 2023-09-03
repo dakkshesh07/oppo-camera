@@ -37,13 +37,13 @@
 
 .field private j:F
 
-.field private k:J
+.field private k:F
 
-.field private l:F
+.field private l:Landroid/view/View;
 
-.field private m:Landroid/view/View;
+.field private m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
-.field private n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+.field private n:Z
 
 .field private o:Z
 
@@ -53,231 +53,260 @@
 
 .field private r:Z
 
-.field private s:Z
+.field private s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+.field private t:Landroid/animation/ValueAnimator;
+
+.field private u:Landroid/animation/ValueAnimator;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 2
 
-    .line 59
+    .line 66
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
-    .line 38
+    .line 43
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
 
     const/4 v0, 0x0
 
-    .line 39
+    .line 44
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    .line 41
+    .line 46
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    .line 42
+    .line 47
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
-    .line 43
+    .line 48
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
     const/4 v1, 0x0
 
-    .line 44
+    .line 49
     iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    .line 45
+    .line 50
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
 
-    .line 47
+    .line 52
     iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
-    const-wide/16 v2, 0x0
-
-    .line 48
-    iput-wide v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:J
-
-    .line 49
-    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:F
-
-    .line 50
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
-
-    .line 51
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
-
-    .line 52
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
-
     .line 53
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
     .line 54
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     .line 55
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     .line 56
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Z
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
+
+    .line 57
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+
+    .line 58
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+
+    .line 59
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+
+    const/4 v0, 0x1
+
+    .line 60
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+
+    .line 61
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    .line 62
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    .line 63
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 5
+    .locals 3
 
-    .line 63
+    .line 70
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x0
 
-    .line 38
+    .line 43
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
 
     const/4 v1, 0x0
 
-    .line 39
+    .line 44
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    .line 41
+    .line 46
     iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    .line 42
+    .line 47
     iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
-    .line 43
+    .line 48
     iput v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
     const/4 v2, 0x0
 
-    .line 44
+    .line 49
     iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    .line 45
+    .line 50
     iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
 
-    .line 47
+    .line 52
     iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
-    const-wide/16 v3, 0x0
-
-    .line 48
-    iput-wide v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:J
-
-    .line 49
-    iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:F
-
-    .line 50
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
-
-    .line 51
-    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
-
-    .line 52
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
-
     .line 53
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
     .line 54
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     .line 55
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     .line 56
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Z
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
-    .line 64
+    .line 57
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+
+    .line 58
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+
+    .line 59
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+
+    const/4 v2, 0x1
+
+    .line 60
+    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+
+    .line 61
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    .line 62
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    .line 63
+    iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    .line 71
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
 
-    .line 65
+    .line 72
     new-instance v0, Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-direct {v0, p1, p2, p0}, Lcom/oppo/camera/ui/menu/setting/down/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;)V
 
     iput-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
-    .line 66
+    .line 73
+    sget-object p2, Lcom/oppo/camera/ui/inverse/InverseManager;->INS:Lcom/oppo/camera/ui/inverse/InverseManager;
+
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
+
+    invoke-virtual {p2, p1, v0, v2}, Lcom/oppo/camera/ui/inverse/InverseManager;->registerBackgroundInverse(Landroid/content/Context;Landroid/view/View;Z)V
+
+    .line 74
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p1, p0}, Lcom/oppo/camera/ui/menu/setting/down/b;->setOnRollLayoutListener(Lcom/oppo/camera/ui/menu/setting/down/b$a;)V
 
-    .line 67
+    .line 75
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnabled(Z)V
 
-    .line 68
+    .line 76
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setWillNotDraw(Z)V
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 2
+    .locals 0
 
-    .line 72
+    .line 80
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     const/4 p1, 0x0
 
-    .line 38
+    .line 43
     iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
 
     const/4 p2, 0x0
 
-    .line 39
+    .line 44
     iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    .line 41
+    .line 46
     iput p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    .line 42
+    .line 47
     iput p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
-    .line 43
+    .line 48
     iput p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
     const/4 p3, 0x0
 
-    .line 44
+    .line 49
     iput p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    .line 45
+    .line 50
     iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
 
-    .line 47
+    .line 52
     iput p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
-    const-wide/16 v0, 0x0
-
-    .line 48
-    iput-wide v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:J
-
-    .line 49
-    iput p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:F
-
-    .line 50
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
-
-    .line 51
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
-
-    .line 52
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
-
     .line 53
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    iput p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
     .line 54
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     .line 55
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     .line 56
-    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Z
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
+
+    .line 57
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+
+    .line 58
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+
+    .line 59
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+
+    const/4 p2, 0x1
+
+    .line 60
+    iput-boolean p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+
+    .line 61
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    .line 62
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    .line 63
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
 
     return-void
 .end method
@@ -285,7 +314,7 @@
 .method private a(F)F
     .locals 2
 
-    .line 328
+    .line 349
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
     int-to-float v1, v0
@@ -319,7 +348,7 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;)I
     .locals 0
 
-    .line 29
+    .line 31
     iget p0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
     return p0
@@ -328,147 +357,136 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;I)I
     .locals 0
 
-    .line 29
+    .line 31
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
     return p1
 .end method
 
-.method private a(FF)V
+.method static synthetic a(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+    .locals 0
+
+    .line 31
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    return-object p1
+.end method
+
+.method private a(FFZ)V
     .locals 2
 
-    .line 335
+    .line 356
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
-    .line 336
+    .line 357
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     float-to-int p1, p1
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(IFZ)V
+    invoke-virtual {v0, p1, p2, v1, p3}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(IFZZ)V
 
     return-void
 .end method
 
-.method private a(IIIZ)V
-    .locals 3
+.method private synthetic a(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-    const-string v0, "DrawerLayout"
+    .line 382
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    const-string v1, "startAnimator"
+    if-eqz v0, :cond_0
 
-    .line 345
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 383
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    const/4 v0, 0x2
+    move-result-object p1
 
-    .line 347
-    new-array v0, v0, [I
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    .line 384
+    iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
+
+    int-to-float p1, p1
+
+    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    aput p1, v0, v1
+    .line 385
+    invoke-direct {p0, p1, v0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(FFZ)V
 
-    const/4 v1, 0x1
+    goto :goto_0
 
-    aput p2, v0, v1
+    .line 387
+    :cond_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
 
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
 
-    move-result-object v0
-
-    int-to-long v1, p3
-
-    .line 348
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    .line 349
-    iget-object p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
-
-    const v1, 0x7f01004e
-
-    invoke-static {p3, v1}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
-
-    move-result-object p3
-
-    invoke-virtual {v0, p3}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    .line 350
-    new-instance p3, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;
-
-    invoke-direct {p3, p0, p4, p1, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;ZII)V
-
-    invoke-virtual {v0, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    .line 368
-    new-instance p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p0, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;)V
-
-    invoke-virtual {v0, p1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    .line 369
-    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
-
+    :goto_0
     return-void
 .end method
 
 .method private a(Landroid/view/MotionEvent;)V
     .locals 9
 
-    .line 292
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
-
-    float-to-int v0, v0
-
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
-
     const/4 v0, 0x0
 
-    .line 293
-    invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+    .line 313
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
-    .line 295
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
-
-    invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/setting/down/b;->c()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x14d
-
-    const/4 v4, 0x1
-
-    if-eqz v1, :cond_0
-
-    .line 296
-    iput-boolean v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
-
-    .line 297
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
-
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
-
-    invoke-direct {p0, p1, v0, v3, v4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(IIIZ)V
-
-    goto :goto_0
-
-    .line 299
-    :cond_0
+    .line 314
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    iget v5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    sub-float/2addr v1, v5
+    sub-float/2addr v1, v2
 
+    .line 315
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
+
+    float-to-int v2, v2
+
+    iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
+
+    const/4 v2, 0x0
+
+    .line 316
+    invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+
+    .line 318
+    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
+
+    invoke-virtual {v3}, Lcom/oppo/camera/ui/menu/setting/down/b;->b()Z
+
+    move-result v3
+
+    const/4 v4, 0x1
+
+    if-eqz v3, :cond_0
+
+    .line 319
+    iput-boolean v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+
+    .line 320
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
+
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+
+    invoke-direct {p0, p1, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(II)V
+
+    goto :goto_1
+
+    .line 322
+    :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v5
@@ -481,82 +499,130 @@
 
     long-to-float p1, v5
 
-    div-float/2addr v1, p1
+    div-float p1, v1, p1
 
-    const p1, 0x3f99999a    # 1.2f
+    const v3, 0x3f99999a    # 1.2f
 
-    .line 301
-    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+    .line 324
+    invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
     move-result v5
 
-    cmpg-float p1, p1, v5
+    cmpg-float v3, v3, v5
 
-    if-gez p1, :cond_1
+    if-gez v3, :cond_1
 
-    cmpg-float p1, v2, v1
+    cmpg-float p1, v0, p1
 
     if-ltz p1, :cond_2
 
     :cond_1
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+    iget v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
-    div-int/lit8 v1, v1, 0x2
+    div-int/lit8 v3, v3, 0x2
 
-    if-le p1, v1, :cond_3
+    if-le p1, v3, :cond_4
 
-    .line 302
     :cond_2
+    cmpg-float p1, v0, v1
+
+    if-lez p1, :cond_3
+
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
+
+    .line 326
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result p1
+
+    int-to-float p1, p1
+
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result v3
+
+    cmpl-float p1, p1, v3
+
+    if-ltz p1, :cond_4
+
+    .line 327
+    :cond_3
     iput-boolean v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    .line 303
+    .line 328
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
-    invoke-direct {p0, p1, v1, v3, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(IIIZ)V
+    invoke-direct {p0, p1, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c(II)V
 
     goto :goto_0
 
-    .line 305
-    :cond_3
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+    .line 330
+    :cond_4
+    iput-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    .line 306
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
+    .line 332
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    invoke-direct {p0, p1, v1, v3, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(IIIZ)V
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
-    .line 310
+    if-eq p1, v2, :cond_5
+
+    .line 333
+    invoke-direct {p0, p1, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c(II)V
+
+    .line 337
+    :cond_5
     :goto_0
-    iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
-    .line 312
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    const/16 v2, 0x3e8
 
-    if-eqz p1, :cond_4
+    invoke-virtual {p1, v2}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(I)V
 
-    .line 313
+    .line 340
+    :goto_1
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+
+    .line 342
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
+
+    move-result p1
+
+    cmpl-float p1, p1, v0
+
+    if-lez p1, :cond_6
+
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+
+    if-eqz p1, :cond_6
+
+    .line 343
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
     invoke-interface {p1, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->a(Z)V
 
-    .line 314
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    .line 344
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
-    invoke-interface {p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->b()V
+    invoke-interface {p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->d()V
 
-    :cond_4
+    :cond_6
     return-void
 .end method
 
-.method static synthetic a(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;FF)V
+.method static synthetic a(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;FFZ)V
     .locals 0
 
-    .line 29
-    invoke-direct {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(FF)V
+    .line 31
+    invoke-direct {p0, p1, p2, p3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(FFZ)V
 
     return-void
 .end method
@@ -564,35 +630,332 @@
 .method static synthetic a(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Z)Z
     .locals 0
 
-    .line 29
+    .line 31
     iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
 
     return p1
 .end method
 
-.method private b(FF)V
-    .locals 2
+.method static synthetic b(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;)Landroid/animation/ValueAnimator;
+    .locals 0
 
-    .line 340
+    .line 31
+    iget-object p0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    return-object p0
+.end method
+
+.method private b(FFZ)V
+    .locals 3
+
+    .line 361
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
-    .line 341
+    .line 362
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
-    float-to-int p1, p1
+    float-to-int v1, p1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(IFZ)V
+    invoke-virtual {v0, v1, p2, v2, p3}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(IFZZ)V
+
+    .line 364
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+
+    if-eqz p2, :cond_1
+
+    .line 365
+    iget p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+
+    if-lez p3, :cond_0
+
+    int-to-float v0, p3
+
+    sub-float/2addr v0, p1
+
+    .line 366
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
+
+    sub-int/2addr p3, p1
+
+    int-to-float p1, p3
+
+    div-float/2addr v0, p1
+
+    .line 367
+    invoke-interface {p2, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->a(F)V
+
+    goto :goto_0
+
+    :cond_0
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    .line 369
+    invoke-interface {p2, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->a(F)V
+
+    :cond_1
+    :goto_0
+    return-void
+.end method
+
+.method private b(II)V
+    .locals 4
+
+    .line 375
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "startUpDampAnimator, start: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", end: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "DrawerLayout"
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 377
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    if-nez v0, :cond_0
+
+    .line 378
+    new-array v0, v3, [I
+
+    aput p1, v0, v2
+
+    aput p2, v0, v1
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    .line 379
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    const-wide/16 v0, 0x1c2
+
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    .line 380
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
+
+    const v0, 0x7f01007a
+
+    invoke-static {p2, v0}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 381
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    new-instance p2, Lcom/oppo/camera/ui/menu/setting/down/-$$Lambda$DrawerLayout$eQjQiRnJ6SUW2XBKOqYccIFKtqs;
+
+    invoke-direct {p2, p0}, Lcom/oppo/camera/ui/menu/setting/down/-$$Lambda$DrawerLayout$eQjQiRnJ6SUW2XBKOqYccIFKtqs;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;)V
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    goto :goto_0
+
+    .line 391
+    :cond_0
+    new-array v3, v3, [I
+
+    aput p1, v3, v2
+
+    aput p2, v3, v1
+
+    invoke-virtual {v0, v3}, Landroid/animation/ValueAnimator;->setIntValues([I)V
+
+    .line 394
+    :goto_0
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    if-nez p1, :cond_1
+
+    .line 395
+    new-instance p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;)V
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    .line 398
+    :cond_1
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 400
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
+
+    invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->c()V
+
+    .line 401
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->u:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
 .end method
 
-.method static synthetic b(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;FF)V
+.method static synthetic c(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;)Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
     .locals 0
 
-    .line 29
-    invoke-direct {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(FF)V
+    .line 31
+    iget-object p0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    return-object p0
+.end method
+
+.method private c(II)V
+    .locals 2
+
+    .line 405
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "startAnimator, start: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", end: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "DrawerLayout"
+
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 407
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+
+    if-eqz v0, :cond_0
+
+    .line 408
+    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->j()V
+
+    :cond_0
+    const/4 v0, 0x2
+
+    .line 411
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    aput p1, v0, v1
+
+    const/4 p1, 0x1
+
+    aput p2, v0, p1
+
+    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    .line 412
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    const-wide/16 v0, 0x190
+
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    .line 413
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a:Landroid/content/Context;
+
+    const v0, 0x7f010087
+
+    invoke-static {p2, v0}, Landroid/view/animation/AnimationUtils;->loadInterpolator(Landroid/content/Context;I)Landroid/view/animation/Interpolator;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+
+    .line 414
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    new-instance p2, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;
+
+    invoke-direct {p2, p0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;)V
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    .line 422
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    if-nez p1, :cond_1
+
+    .line 423
+    new-instance p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$1;)V
+
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    .line 426
+    :cond_1
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$a;
+
+    invoke-virtual {p1, p2}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    .line 427
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
+
+    return-void
+.end method
+
+.method public static synthetic lambda$eQjQiRnJ6SUW2XBKOqYccIFKtqs(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Landroid/animation/ValueAnimator;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(Landroid/animation/ValueAnimator;)V
 
     return-void
 .end method
@@ -602,13 +965,21 @@
 .method public a()V
     .locals 1
 
-    .line 395
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
+    .line 431
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 396
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/down/b;->a()V
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 432
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
     :cond_0
     return-void
@@ -617,12 +988,12 @@
 .method public a(I)V
     .locals 2
 
-    .line 408
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
+    .line 463
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 409
+    .line 464
     iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {v1}, Lcom/oppo/camera/ui/menu/setting/down/b;->getVisibility()I
@@ -650,29 +1021,29 @@
 
     const-string v1, "replaceView"
 
-    .line 104
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 116
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
+    .line 118
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
     const/4 v1, 0x1
 
-    .line 107
+    .line 119
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 109
+    .line 121
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     const/4 v4, 0x0
 
     if-eq v2, v3, :cond_0
 
-    .line 110
+    .line 122
     new-instance v5, Landroid/view/ViewGroup$LayoutParams;
 
     const/4 v6, -0x1
@@ -683,29 +1054,29 @@
 
     invoke-virtual {v3, v5}, Lcom/oppo/camera/ui/menu/setting/down/b;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 111
+    .line 123
     invoke-virtual {p0, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->removeView(Landroid/view/View;)V
 
-    .line 112
+    .line 124
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p0, v3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->addView(Landroid/view/View;)V
 
-    .line 113
+    .line 125
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {v3, v2, v4}, Lcom/oppo/camera/ui/menu/setting/down/b;->addView(Landroid/view/View;I)V
 
-    .line 114
+    .line 126
     iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
-    .line 117
+    .line 129
     :cond_0
     iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p0, v3, p1, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->measureChild(Landroid/view/View;II)V
 
-    .line 119
+    .line 131
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->getMeasuredHeight()I
@@ -720,9 +1091,9 @@
     move v1, v4
 
     :goto_0
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
 
-    .line 120
+    .line 132
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->getMaxScroll()I
@@ -731,7 +1102,7 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
-    .line 121
+    .line 133
     iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->getMinScroll()I
@@ -740,32 +1111,32 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
-    .line 123
+    .line 135
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p1
 
     check-cast p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
-    .line 124
+    .line 136
     iput v4, p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
-    .line 125
+    .line 137
     iget p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
     iput p2, p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->b:I
 
-    .line 126
+    .line 138
     iput v0, p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->c:I
 
-    .line 127
+    .line 139
     iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
     add-int/2addr p2, v0
 
     iput p2, p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->d:I
 
-    .line 128
+    .line 140
     iget-object p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {p2, p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
@@ -776,13 +1147,13 @@
 .method public b()V
     .locals 1
 
-    .line 401
+    .line 456
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     if-eqz v0, :cond_0
 
-    .line 402
-    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/down/b;->b()V
+    .line 457
+    invoke-virtual {v0}, Lcom/oppo/camera/ui/menu/setting/down/b;->a()V
 
     :cond_0
     return-void
@@ -795,21 +1166,21 @@
 
     const-string v1, "onArrowClick"
 
-    .line 415
-    invoke-static {v0, v1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 470
+    invoke-static {v0, v1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 417
+    .line 472
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
 
-    .line 419
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    .line 474
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     if-eqz v0, :cond_0
 
-    .line 420
-    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->c()V
+    .line 475
+    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->e()V
 
     :cond_0
     return-void
@@ -818,7 +1189,7 @@
 .method protected checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
     .locals 0
 
-    .line 441
+    .line 496
     instance-of p1, p1, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
     return p1
@@ -827,7 +1198,7 @@
 .method public d()Z
     .locals 1
 
-    .line 506
+    .line 580
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
     return v0
@@ -838,15 +1209,15 @@
 
     const/4 v0, 0x0
 
-    .line 510
+    .line 584
     iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
     const/4 v1, 0x1
 
-    .line 511
-    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    .line 585
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
 
-    .line 512
+    .line 586
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
 
     return-void
@@ -857,8 +1228,8 @@
 
     const/4 v0, 0x0
 
-    .line 516
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    .line 590
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
 
     return-void
 .end method
@@ -866,8 +1237,8 @@
 .method public g()Z
     .locals 1
 
-    .line 520
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    .line 594
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
 
     return v0
 .end method
@@ -875,7 +1246,7 @@
 .method protected generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
     .locals 2
 
-    .line 431
+    .line 486
     new-instance v0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
     const/4 v1, -0x2
@@ -888,7 +1259,7 @@
 .method public generateLayoutParams(Landroid/util/AttributeSet;)Landroid/view/ViewGroup$LayoutParams;
     .locals 2
 
-    .line 426
+    .line 481
     new-instance v0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getContext()Landroid/content/Context;
@@ -903,7 +1274,7 @@
 .method protected generateLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Landroid/view/ViewGroup$LayoutParams;
     .locals 1
 
-    .line 436
+    .line 491
     new-instance v0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
     invoke-direct {v0, p0, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;-><init>(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;Landroid/view/ViewGroup$LayoutParams;)V
@@ -914,16 +1285,34 @@
 .method public getDrawerScrollLayout()Lcom/oppo/camera/ui/menu/setting/down/b;
     .locals 1
 
-    .line 524
+    .line 602
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     return-object v0
 .end method
 
+.method public getEnableTouch()Z
+    .locals 1
+
+    .line 576
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
+
+    return v0
+.end method
+
+.method public h()Z
+    .locals 1
+
+    .line 598
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
+
+    return v0
+.end method
+
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .line 160
+    .line 172
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -932,7 +1321,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -950,138 +1339,126 @@
 
     const-string v1, "DrawerLayout"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
+    .line 175
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    .line 164
+    .line 176
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    move-result v2
+    .line 178
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
 
-    .line 166
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    const/4 v3, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
-    const/4 v5, 0x0
+    if-eqz v2, :cond_5
 
-    if-eqz v3, :cond_6
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
 
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
-
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
     goto :goto_1
 
-    .line 172
+    .line 184
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_4
+    if-eqz v2, :cond_4
 
-    if-eq v3, v4, :cond_3
+    if-eq v2, v3, :cond_3
 
-    const/4 v2, 0x2
+    const/4 v5, 0x2
 
-    if-eq v3, v2, :cond_1
+    if-eq v2, v5, :cond_1
 
     goto :goto_0
 
-    .line 184
+    .line 192
     :cond_1
     iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    iget v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
+    iget v5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
-    int-to-float v3, v3
+    int-to-float v5, v5
 
-    cmpl-float v3, v2, v3
+    cmpl-float v5, v2, v5
 
-    if-lez v3, :cond_2
+    if-lez v5, :cond_2
 
-    .line 185
+    .line 193
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    move-result p1
+    move-result v5
 
-    sub-float/2addr v2, p1
+    sub-float/2addr v2, v5
 
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
-    move-result p1
+    move-result v2
 
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getContext()Landroid/content/Context;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-static {v2}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+    invoke-static {v5}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
-    move-result-object v2
+    move-result-object v5
 
-    invoke-virtual {v2}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+    invoke-virtual {v5}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    cmpl-float v2, v2, v5
+
+    if-ltz v2, :cond_2
+
+    .line 194
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v2
 
-    int-to-float v2, v2
-
-    cmpl-float p1, p1, v2
-
-    if-ltz p1, :cond_2
-
-    .line 186
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
-
-    .line 188
-    invoke-virtual {p0, v4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
-
-    move v5, v4
-
-    goto :goto_0
-
-    .line 191
-    :cond_2
-    invoke-virtual {p0, v5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
-
-    goto :goto_0
-
-    .line 197
-    :cond_3
-    invoke-virtual {p0, v5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
-
-    goto :goto_0
-
-    .line 174
-    :cond_4
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
-
-    .line 177
-    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
-
-    if-nez p1, :cond_5
-
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
-
-    const/high16 v3, 0x438c0000    # 280.0f
-
-    sub-float/2addr v0, v3
-
-    invoke-virtual {p1, v2, v0}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(FF)Z
+    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result p1
 
-    if-eqz p1, :cond_5
+    if-nez p1, :cond_2
 
-    .line 178
+    .line 195
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+
+    .line 197
+    invoke-virtual {p0, v3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+
+    move v4, v3
+
+    goto :goto_0
+
+    .line 200
+    :cond_2
     invoke-virtual {p0, v4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
 
-    .line 204
-    :cond_5
+    goto :goto_0
+
+    .line 206
+    :cond_3
+    invoke-virtual {p0, v4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+
+    goto :goto_0
+
+    .line 186
+    :cond_4
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+
+    .line 213
     :goto_0
     new-instance p1, Ljava/lang/StringBuilder;
 
@@ -1091,28 +1468,28 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return v5
-
-    .line 167
-    :cond_6
-    :goto_1
-    invoke-virtual {p0, v5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+    invoke-static {v1, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return v4
+
+    .line 179
+    :cond_5
+    :goto_1
+    invoke-virtual {p0, v4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+
+    return v3
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 3
 
-    .line 133
+    .line 145
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getChildCount()I
 
     move-result p1
@@ -1122,34 +1499,34 @@
     :goto_0
     if-ge p2, p1, :cond_6
 
-    .line 136
+    .line 148
     invoke-virtual {p0, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object p3
 
-    .line 137
+    .line 149
     invoke-virtual {p3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object p4
 
     check-cast p4, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
-    .line 139
+    .line 151
     iget-object p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     if-ne p5, p3, :cond_0
 
-    iget-object p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    iget-object p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     if-eqz p5, :cond_1
 
-    invoke-interface {p5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->m()Z
+    invoke-interface {p5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->r()Z
 
     move-result p5
 
     if-nez p5, :cond_1
 
-    .line 140
+    .line 152
     :cond_0
     iget p5, p4, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
@@ -1161,28 +1538,28 @@
 
     invoke-virtual {p3, p5, v0, v1, v2}, Landroid/view/View;->layout(IIII)V
 
-    .line 143
+    .line 155
     :cond_1
     iget-object p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     if-ne p5, p3, :cond_2
 
-    iget-boolean p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    iget-boolean p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
 
     if-nez p5, :cond_3
 
-    iget-object p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    iget-object p5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     if-eqz p5, :cond_3
 
-    .line 144
-    invoke-interface {p5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->m()Z
+    .line 156
+    invoke-interface {p5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->r()Z
 
     move-result p5
 
     if-nez p5, :cond_3
 
-    .line 145
+    .line 157
     :cond_2
     iget p5, p4, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
@@ -1194,31 +1571,31 @@
 
     invoke-virtual {p3, p5, v0, v1, p4}, Landroid/view/View;->layout(IIII)V
 
-    .line 148
+    .line 160
     :cond_3
     iget-object p4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     if-ne p4, p3, :cond_5
 
-    .line 149
+    .line 161
     invoke-virtual {p0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getVisibility()I
 
     move-result p3
 
     if-nez p3, :cond_5
 
-    iget-object p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    iget-object p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     if-eqz p3, :cond_4
 
-    .line 150
-    invoke-interface {p3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->m()Z
+    .line 162
+    invoke-interface {p3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->r()Z
 
     move-result p3
 
     if-nez p3, :cond_5
 
-    .line 151
+    .line 163
     :cond_4
     new-instance p3, Ljava/lang/StringBuilder;
 
@@ -1238,16 +1615,18 @@
 
     const-string p4, "DrawerLayout"
 
-    invoke-static {p4, p3}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p4, p3}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
+    .line 165
     iget p3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
     int-to-float p3, p3
 
-    const/high16 p4, 0x447a0000    # 1000.0f
+    const/4 p4, 0x0
 
-    invoke-direct {p0, p3, p4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(FF)V
+    const/4 p5, 0x1
+
+    invoke-direct {p0, p3, p4, p5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(FFZ)V
 
     :cond_5
     add-int/lit8 p2, p2, 0x1
@@ -1261,7 +1640,24 @@
 .method protected onMeasure(II)V
     .locals 3
 
-    .line 83
+    .line 91
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 92
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->t:Landroid/animation/ValueAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->end()V
+
+    .line 95
+    :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1280,29 +1676,29 @@
 
     const-string v1, "DrawerLayout"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 85
+    .line 97
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    .line 86
+    .line 98
     invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
+    iput-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
-    .line 87
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
+    .line 99
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     invoke-virtual {p0, v2, p1, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->measureChild(Landroid/view/View;II)V
 
-    .line 88
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
+    .line 100
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
 
@@ -1310,8 +1706,8 @@
 
     iput v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
-    .line 89
-    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Landroid/view/View;
+    .line 101
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1319,33 +1715,33 @@
 
     check-cast v2, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;
 
-    .line 90
+    .line 102
     iput v1, v2, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->a:I
 
-    .line 91
+    .line 103
     iput v1, v2, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->b:I
 
-    .line 92
+    .line 104
     iput v0, v2, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->c:I
 
-    .line 93
+    .line 105
     iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
     iput v1, v2, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$c;->d:I
 
-    .line 95
+    .line 107
     invoke-virtual {p0, p1, p2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(II)V
 
-    .line 97
+    .line 109
     iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
     :goto_0
@@ -1353,14 +1749,14 @@
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
-    .line 98
+    .line 110
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->j:F
 
     float-to-int p1, p1
 
     iput p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    .line 100
+    .line 112
     iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
     iget p2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
@@ -1375,325 +1771,322 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 8
+    .locals 6
 
-    .line 211
+    .line 220
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-le v0, v1, :cond_0
+
+    return v1
+
+    .line 224
+    :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    .line 212
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
+    .line 226
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
 
-    move-result-wide v1
+    const/4 v3, 0x0
 
-    .line 214
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    const-string v4, "DrawerLayout"
 
-    const/4 v4, 0x0
+    if-nez v2, :cond_c
 
-    const-string v5, "DrawerLayout"
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
 
-    const/4 v6, 0x1
+    if-eqz v2, :cond_c
 
-    if-nez v3, :cond_b
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    if-nez v2, :cond_1
 
-    if-eqz v3, :cond_b
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+    if-eqz v2, :cond_c
 
-    if-nez v3, :cond_0
+    :cond_1
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
 
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+    if-eqz v2, :cond_c
 
-    if-eqz v3, :cond_b
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
-    :cond_0
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Z
+    if-eqz v2, :cond_2
 
-    if-eqz v3, :cond_b
+    .line 230
+    invoke-interface {v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->i()Z
 
-    iget-object v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    move-result v2
 
-    if-eqz v3, :cond_1
-
-    .line 218
-    invoke-interface {v3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->l()Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
+    if-nez v2, :cond_2
 
     goto/16 :goto_1
 
-    .line 231
-    :cond_1
-    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
+    .line 243
+    :cond_2
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->h:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v2, :cond_3
 
     const-string p1, "onTouchEvent, animation is running"
 
-    .line 232
-    invoke-static {v5, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 244
+    invoke-static {v4, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    return v6
+    return v1
 
-    .line 237
-    :cond_2
-    iget v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+    .line 249
+    :cond_3
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    iget v7, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
+    iget v5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
-    int-to-float v7, v7
+    int-to-float v5, v5
 
-    cmpg-float v3, v3, v7
+    cmpg-float v2, v2, v5
 
-    if-gez v3, :cond_4
+    if-gez v2, :cond_5
 
-    .line 238
+    .line 250
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onTouchEvent, mDownY: "
+    const-string v2, "onTouchEvent, mDownY: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mStartScroll: "
+    const-string v2, ", mStartScroll: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->i:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, ", return true"
+    const-string v2, ", return true"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 252
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result p1
 
-    if-ne v6, p1, :cond_3
+    if-ne v1, p1, :cond_4
 
-    .line 241
-    invoke-virtual {p0, v4}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+    .line 253
+    invoke-virtual {p0, v3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
 
-    :cond_3
-    return v6
-
-    .line 247
     :cond_4
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    if-eq v3, v6, :cond_8
-
-    const/4 v4, 0x2
-
-    if-eq v3, v4, :cond_5
-
-    const/4 v4, 0x3
-
-    if-eq v3, v4, :cond_8
-
-    goto :goto_0
-
-    .line 255
-    :cond_5
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:F
-
-    sub-float p1, v0, p1
-
-    iget-wide v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:J
-
-    sub-long v3, v1, v3
-
-    long-to-float v3, v3
-
-    div-float/2addr p1, v3
-
-    .line 256
-    iget v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
-
-    int-to-float v3, v3
-
-    add-float/2addr v3, v0
-
-    iget v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
-
-    sub-float/2addr v3, v4
-
-    .line 258
-    iget-boolean v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
-
-    if-nez v4, :cond_6
+    return v1
 
     .line 259
-    iput-boolean v6, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+    :cond_5
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    .line 261
-    iget-object v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    move-result v2
 
-    if-eqz v4, :cond_6
+    if-eqz v2, :cond_a
 
-    .line 262
-    iget-boolean v5, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+    if-eq v2, v1, :cond_9
 
-    invoke-interface {v4, v5}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->a(Z)V
+    const/4 v3, 0x2
 
-    .line 266
-    :cond_6
-    iget v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+    if-eq v2, v3, :cond_6
 
-    int-to-float v4, v4
+    const/4 v0, 0x3
 
-    cmpg-float v4, v3, v4
-
-    if-gez v4, :cond_7
-
-    iget v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
-
-    int-to-float v4, v4
-
-    cmpl-float v4, v3, v4
-
-    if-lez v4, :cond_7
-
-    .line 267
-    invoke-direct {p0, v3, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(FF)V
+    if-eq v2, v0, :cond_9
 
     goto :goto_0
 
     .line 268
-    :cond_7
-    iget v4, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+    :cond_6
+    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
-    int-to-float v4, v4
-
-    cmpl-float v4, v3, v4
-
-    if-lez v4, :cond_a
+    sub-float p1, v0, p1
 
     .line 269
-    invoke-direct {p0, v3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(F)F
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
-    move-result v3
+    .line 270
+    iget v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    invoke-direct {p0, v3, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(FF)V
+    int-to-float v2, v2
+
+    add-float/2addr v2, v0
+
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
+
+    sub-float/2addr v2, v0
+
+    .line 272
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+
+    if-nez v0, :cond_7
+
+    .line 273
+    iput-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+
+    .line 275
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+
+    if-eqz v0, :cond_7
+
+    .line 276
+    iget-boolean v3, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+
+    invoke-interface {v0, v3}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->a(Z)V
+
+    .line 280
+    :cond_7
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+
+    int-to-float v0, v0
+
+    cmpg-float v0, v2, v0
+
+    if-gez v0, :cond_8
+
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
+
+    int-to-float v0, v0
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_8
+
+    .line 281
+    invoke-direct {p0, v2, p1, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b(FFZ)V
 
     goto :goto_0
 
-    .line 277
+    .line 282
     :cond_8
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+
+    int-to-float v0, v0
+
+    cmpl-float v0, v2, v0
+
+    if-lez v0, :cond_b
+
+    .line 283
+    invoke-direct {p0, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(F)F
+
+    move-result v0
+
+    invoke-direct {p0, v0, p1, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(FFZ)V
+
+    goto :goto_0
+
+    .line 291
+    :cond_9
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
-    .line 249
-    :cond_9
-    invoke-virtual {p0, v6}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
+    .line 261
+    :cond_a
+    invoke-virtual {p0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
 
-    .line 250
+    .line 262
     iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->g:F
 
-    .line 285
-    :cond_a
-    :goto_0
-    iput-wide v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:J
+    .line 263
+    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->k:F
 
-    .line 286
-    iput v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->l:F
-
-    return v6
-
-    .line 219
     :cond_b
+    :goto_0
+    return v1
+
+    .line 231
+    :cond_c
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "onTouchEvent, mbEnabled: "
+    const-string v2, "onTouchEvent, mbEnabled: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mHeightNone: "
+    const-string v2, ", mHeightNone: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mbOpen: "
+    const-string v2, ", mbOpen: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mbTouch: "
+    const-string v2, ", mbTouch: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mbRollVisibility: "
+    const-string v2, ", mbRollVisibility: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Z
+    iget-boolean v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, ", canResponseDrawerTouch: "
+    const-string v2, ", canResponseDrawerTouch: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    iget-object v2, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
-    if-eqz v1, :cond_c
+    if-eqz v2, :cond_d
 
-    .line 221
-    invoke-interface {v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->l()Z
+    .line 233
+    invoke-interface {v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->i()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_c
+    if-nez v2, :cond_d
 
     goto :goto_2
 
-    :cond_c
-    move v6, v4
+    :cond_d
+    move v1, v3
 
     :goto_2
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v1, ", return false"
 
@@ -1703,29 +2096,29 @@
 
     move-result-object v0
 
-    .line 219
-    invoke-static {v5, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    .line 231
+    invoke-static {v4, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
+    .line 236
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_e
 
-    .line 225
+    .line 237
     invoke-direct {p0, p1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(Landroid/view/MotionEvent;)V
 
-    :cond_d
-    return v4
+    :cond_e
+    return v3
 .end method
 
 .method public setEnableTouch(Z)V
     .locals 2
 
-    .line 500
+    .line 570
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1734,7 +2127,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1750,10 +2143,10 @@
 
     const-string v1, "DrawerLayout"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 502
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+    .line 572
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
     return-void
 .end method
@@ -1761,7 +2154,7 @@
 .method public setEnabled(Z)V
     .locals 2
 
-    .line 320
+    .line 305
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1770,7 +2163,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1786,17 +2179,17 @@
 
     const-string v1, "DrawerLayout"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
-    .line 322
+    .line 307
     invoke-virtual {p0, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->setEnableTouch(Z)V
 
-    .line 323
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
+    .line 308
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->q:Z
 
-    .line 324
+    .line 309
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->setEnabled(Z)V
 
     return-void
@@ -1805,16 +2198,16 @@
 .method public setOnDrawerListener(Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;)V
     .locals 0
 
-    .line 489
-    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    .line 559
+    iput-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
 
     return-void
 .end method
 
 .method public setOpenAndClose(Z)V
-    .locals 3
+    .locals 2
 
-    .line 373
+    .line 437
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1829,7 +2222,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1837,7 +2230,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1855,81 +2248,81 @@
 
     const-string v1, "DrawerLayout"
 
-    invoke-static {v1, v0}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 376
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
+    .line 440
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
 
     if-nez v0, :cond_0
 
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Z
+
+    if-nez v0, :cond_4
+
+    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+
+    if-eq v0, p1, :cond_4
+
+    .line 441
+    :cond_0
+    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+
+    .line 443
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->o:Z
 
     if-nez v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
+    .line 444
+    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
 
-    if-eq v0, p1, :cond_3
+    iget-boolean v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
-    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    if-eqz v1, :cond_1
 
-    if-eqz v0, :cond_3
-
-    .line 377
-    invoke-interface {v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->m()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    .line 378
-    :cond_0
-    iput-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
-
-    .line 380
-    iget-boolean p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->p:Z
-
-    if-nez p1, :cond_2
-
-    .line 381
-    iget p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->d:I
-
-    iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->e:I
 
     goto :goto_0
 
     :cond_1
-    iget v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
+    iget v1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->f:I
 
     :goto_0
-    const/16 v1, 0x14d
+    invoke-direct {p0, v0, v1}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c(II)V
 
-    const/4 v2, 0x0
+    .line 445
+    iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->a(IIIZ)V
+    if-eqz p1, :cond_2
 
-    .line 384
+    const/16 p1, -0x7d0
+
+    goto :goto_1
+
     :cond_2
-    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->n:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+    const/16 p1, 0x7d0
 
-    if-eqz p1, :cond_3
+    :goto_1
+    invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->a(I)V
 
-    .line 385
+    .line 449
+    :cond_3
+    iget-object p1, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->m:Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;
+
+    if-eqz p1, :cond_4
+
+    .line 450
     iget-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->b:Z
 
     invoke-interface {p1, v0}, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout$b;->a(Z)V
 
-    :cond_3
+    :cond_4
     return-void
 .end method
 
 .method public setRollVisibility(I)V
     .locals 1
 
-    .line 493
+    .line 563
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     if-eqz v0, :cond_1
@@ -1943,11 +2336,11 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 494
+    .line 564
     :goto_0
-    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->s:Z
+    iput-boolean v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->r:Z
 
-    .line 495
+    .line 565
     iget-object v0, p0, Lcom/oppo/camera/ui/menu/setting/down/DrawerLayout;->c:Lcom/oppo/camera/ui/menu/setting/down/b;
 
     invoke-virtual {v0, p1}, Lcom/oppo/camera/ui/menu/setting/down/b;->setVisibility(I)V
@@ -1959,10 +2352,10 @@
 .method public setVisibility(I)V
     .locals 2
 
-    .line 77
+    .line 85
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 78
+    .line 86
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1979,7 +2372,7 @@
 
     const-string v0, "DrawerLayout"
 
-    invoke-static {v0, p1}, Lcom/oppo/camera/e;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/oppo/camera/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

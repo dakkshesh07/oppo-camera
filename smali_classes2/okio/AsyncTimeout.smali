@@ -11,6 +11,9 @@
     }
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # static fields
 .field public static final Companion:Lokio/AsyncTimeout$Companion;
@@ -40,11 +43,11 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lokio/AsyncTimeout$Companion;-><init>(Lc/d/b/f;)V
+    invoke-direct {v0, v1}, Lokio/AsyncTimeout$Companion;-><init>(Lkotlin/jvm/internal/o;)V
 
     sput-object v0, Lokio/AsyncTimeout;->Companion:Lokio/AsyncTimeout$Companion;
 
-    .line 256
+    .line 214
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v1, 0x3c
@@ -55,7 +58,7 @@
 
     sput-wide v0, Lokio/AsyncTimeout;->IDLE_TIMEOUT_MILLIS:J
 
-    .line 257
+    .line 215
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-wide v1, Lokio/AsyncTimeout;->IDLE_TIMEOUT_MILLIS:J
@@ -174,6 +177,17 @@
 
 
 # virtual methods
+.method public final access$newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
+    .locals 0
+
+    .line 162
+    invoke-virtual {p0, p1}, Lokio/AsyncTimeout;->newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
 .method public final enter()V
     .locals 6
 
@@ -260,66 +274,10 @@
     return v0
 .end method
 
-.method public final exit$okio(Ljava/io/IOException;)Ljava/io/IOException;
-    .locals 1
-
-    const-string v0, "cause"
-
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 203
-    invoke-virtual {p0}, Lokio/AsyncTimeout;->exit()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lokio/AsyncTimeout;->newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
-
-    move-result-object p1
-
-    :goto_0
-    return-object p1
-.end method
-
-.method public final exit$okio(Z)V
-    .locals 1
-
-    .line 193
-    invoke-virtual {p0}, Lokio/AsyncTimeout;->exit()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    .line 194
-    invoke-virtual {p0, p1}, Lokio/AsyncTimeout;->newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
 .method protected newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
     .locals 2
 
-    .line 212
+    .line 170
     new-instance v0, Ljava/io/InterruptedIOException;
 
     const-string v1, "timeout"
@@ -328,12 +286,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 214
+    .line 172
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-virtual {v0, p1}, Ljava/io/InterruptedIOException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 216
+    .line 174
     :cond_0
     check-cast v0, Ljava/io/IOException;
 
@@ -345,7 +303,7 @@
 
     const-string v0, "sink"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 83
     new-instance v0, Lokio/AsyncTimeout$sink$1;
@@ -362,9 +320,9 @@
 
     const-string v0, "source"
 
-    invoke-static {p1, v0}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 154
+    .line 127
     new-instance v0, Lokio/AsyncTimeout$source$1;
 
     invoke-direct {v0, p0, p1}, Lokio/AsyncTimeout$source$1;-><init>(Lokio/AsyncTimeout;Lokio/Source;)V
@@ -378,4 +336,108 @@
     .locals 0
 
     return-void
+.end method
+
+.method public final withTimeout(Lkotlin/jvm/a/a;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lkotlin/jvm/a/a<",
+            "+TT;>;)TT;"
+        }
+    .end annotation
+
+    const-string v0, "block"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 148
+    invoke-virtual {p0}, Lokio/AsyncTimeout;->enter()V
+
+    const/4 v0, 0x1
+
+    .line 150
+    :try_start_0
+    invoke-interface {p1}, Lkotlin/jvm/a/a;->invoke()Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 152
+    invoke-static {v0}, Lkotlin/jvm/internal/q;->a(I)V
+
+    .line 156
+    invoke-virtual {p0}, Lokio/AsyncTimeout;->exit()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 157
+    invoke-static {v0}, Lkotlin/jvm/internal/q;->b(I)V
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lokio/AsyncTimeout;->access$newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Throwable;
+
+    throw p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    .line 154
+    :try_start_1
+    invoke-virtual {p0}, Lokio/AsyncTimeout;->exit()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :goto_0
+    check-cast p1, Ljava/lang/Throwable;
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lokio/AsyncTimeout;->access$newTimeoutException(Ljava/io/IOException;)Ljava/io/IOException;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :goto_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 158
+    :goto_2
+    invoke-static {v0}, Lkotlin/jvm/internal/q;->a(I)V
+
+    .line 156
+    invoke-virtual {p0}, Lokio/AsyncTimeout;->exit()Z
+
+    move-result v1
+
+    .line 157
+    invoke-static {v0}, Lkotlin/jvm/internal/q;->b(I)V
+
+    throw p1
 .end method

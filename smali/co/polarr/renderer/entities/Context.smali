@@ -38,20 +38,20 @@
 # instance fields
 .field public assetManager:Landroid/content/res/AssetManager;
 
-.field public brushTextures:[La/a/a/b/d;
+.field public brushTextures:[La/a/b/b/d;
 
 .field public brushes:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "La/a/a/b/d;",
+            "La/a/b/b/d;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public cacheTexture:La/a/a/b/d;
+.field public cacheTexture:La/a/b/b/d;
 
 .field public compositeCoords:[F
 
@@ -65,35 +65,35 @@
 
 .field public cropScale:F
 
-.field public currentRender:La/a/a/b/g;
+.field public currentRender:La/a/b/b/g;
 
-.field public dehazeTexture:La/a/a/b/d;
+.field public dehazeTexture:La/a/b/b/d;
 
 .field public deltaVertices:[[F
 
-.field public denoiseTexture:La/a/a/b/d;
+.field public denoiseTexture:La/a/b/b/d;
 
-.field public distortion:La/a/a/e/d;
+.field public distortion:La/a/b/e/d;
 
 .field public distortionVertices:[[F
 
 .field public downsampleFactor:F
 
-.field public exportTexture:La/a/a/b/d;
+.field public exportTexture:La/a/b/b/d;
 
-.field public faceMasks:[La/a/a/b/f;
+.field public faceMasks:[La/a/b/b/f;
 
 .field public fov:F
 
-.field public glRenderView:La/a/a/b/b;
+.field public glRenderView:La/a/b/b/b;
 
-.field public grainTexture:La/a/a/b/d;
+.field public grainTexture:La/a/b/b/d;
 
 .field public grainTextureBinded:Z
 
-.field public imageTexture:La/a/a/b/d;
+.field public imageTexture:La/a/b/b/d;
 
-.field public intermediateTexture:La/a/a/b/d;
+.field public intermediateTexture:La/a/b/b/d;
 
 .field public invFov:F
 
@@ -103,7 +103,7 @@
 
 .field public isSDK:Z
 
-.field public lensBlurTexture:La/a/a/b/d;
+.field public lensBlurTexture:La/a/b/b/d;
 
 .field public margin:F
 
@@ -131,18 +131,18 @@
 
 .field public overlayMatrix:[F
 
-.field public overlayTexture:La/a/a/b/d;
+.field public overlayTexture:La/a/b/b/d;
 
 .field public overlayTextureBinded:Z
 
-.field public paintTexture:La/a/a/b/d;
+.field public paintTexture:La/a/b/b/d;
 
 .field public patterns:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "La/a/a/b/d;",
+            "La/a/b/b/d;",
             ">;"
         }
     .end annotation
@@ -156,7 +156,7 @@
 
 .field public projectionMatrixInv:[F
 
-.field public readableTexture:La/a/a/b/d;
+.field public readableTexture:La/a/b/b/d;
 
 .field public renderStates:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
@@ -171,7 +171,7 @@
 
 .field public resources:Landroid/content/res/Resources;
 
-.field public retouchTexture:La/a/a/b/d;
+.field public retouchTexture:La/a/b/b/d;
 
 .field public rotation:F
 
@@ -187,19 +187,19 @@
 
 .field public screenMatrix:[F
 
-.field public screenTexture:La/a/a/b/d;
+.field public screenTexture:La/a/b/b/d;
 
-.field public shaderUtil:La/a/a/e/t;
+.field public shaderUtil:La/a/b/e/t;
 
 .field public skinColor:[F
 
-.field public tempTexture:La/a/a/b/d;
+.field public tempTexture:La/a/b/b/d;
 
 .field public textLayers:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "La/a/a/b/d;",
+            "La/a/b/b/d;",
             ">;"
         }
     .end annotation
@@ -217,9 +217,9 @@
 
 .field public watermarkOptions:Lco/polarr/renderer/entities/Context$WatermarkOptions;
 
-.field public watermarkTexture:La/a/a/b/d;
+.field public watermarkTexture:La/a/b/b/d;
 
-.field public writableTexture:La/a/a/b/d;
+.field public writableTexture:La/a/b/b/d;
 
 .field public zoom:F
 
@@ -263,99 +263,99 @@
 
     const/4 v1, 0x4
 
-    new-array v2, v1, [La/a/a/b/d;
+    new-array v2, v1, [La/a/b/b/d;
 
-    iput-object v2, p0, Lco/polarr/renderer/entities/Context;->brushTextures:[La/a/a/b/d;
+    iput-object v2, p0, Lco/polarr/renderer/entities/Context;->brushTextures:[La/a/b/b/d;
 
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Context;->grainTextureBinded:Z
 
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Context;->overlayTextureBinded:Z
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->matrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->matrixInv:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->perspectiveMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->projectionMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->projectionMatrixInv:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->translationMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->rotationMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->rotation90Matrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->rotation90MatrixInv:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->scaleMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->cropMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->screenMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->viewMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->overlayMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
@@ -457,11 +457,11 @@
 
     iput-object v1, p0, Lco/polarr/renderer/entities/Context;->overlay:Lco/polarr/renderer/entities/Context$Overlay;
 
-    new-instance v1, La/a/a/e/d;
+    new-instance v1, La/a/b/e/d;
 
-    invoke-direct {v1}, La/a/a/e/d;-><init>()V
+    invoke-direct {v1}, La/a/b/e/d;-><init>()V
 
-    iput-object v1, p0, Lco/polarr/renderer/entities/Context;->distortion:La/a/a/e/d;
+    iput-object v1, p0, Lco/polarr/renderer/entities/Context;->distortion:La/a/b/e/d;
 
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Context;->photoLoaded:Z
 
@@ -541,99 +541,99 @@
 
     const/4 v1, 0x4
 
-    new-array v2, v1, [La/a/a/b/d;
+    new-array v2, v1, [La/a/b/b/d;
 
-    iput-object v2, p0, Lco/polarr/renderer/entities/Context;->brushTextures:[La/a/a/b/d;
+    iput-object v2, p0, Lco/polarr/renderer/entities/Context;->brushTextures:[La/a/b/b/d;
 
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Context;->grainTextureBinded:Z
 
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Context;->overlayTextureBinded:Z
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->matrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->matrixInv:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->perspectiveMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->projectionMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->projectionMatrixInv:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->translationMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->rotationMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->rotation90Matrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->rotation90MatrixInv:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->scaleMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->cropMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->screenMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->viewMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
     iput-object v2, p0, Lco/polarr/renderer/entities/Context;->overlayMatrix:[F
 
-    invoke-static {}, La/a/a/e/o;->a()[F
+    invoke-static {}, La/a/b/e/o;->a()[F
 
     move-result-object v2
 
@@ -735,11 +735,11 @@
 
     iput-object v1, p0, Lco/polarr/renderer/entities/Context;->overlay:Lco/polarr/renderer/entities/Context$Overlay;
 
-    new-instance v1, La/a/a/e/d;
+    new-instance v1, La/a/b/e/d;
 
-    invoke-direct {v1}, La/a/a/e/d;-><init>()V
+    invoke-direct {v1}, La/a/b/e/d;-><init>()V
 
-    iput-object v1, p0, Lco/polarr/renderer/entities/Context;->distortion:La/a/a/e/d;
+    iput-object v1, p0, Lco/polarr/renderer/entities/Context;->distortion:La/a/b/e/d;
 
     iput-boolean v0, p0, Lco/polarr/renderer/entities/Context;->photoLoaded:Z
 
@@ -758,7 +758,7 @@
     :cond_0
     iget-object p1, p0, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    invoke-static {p1}, La/a/a/f;->a(Ljava/util/Map;)V
+    invoke-static {p1}, La/a/b/f;->a(Ljava/util/Map;)V
 
     new-instance p1, Lco/polarr/renderer/entities/Mesh$Options;
 
@@ -833,7 +833,7 @@
 
     iget-object v0, p0, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    invoke-static {v0}, La/a/a/f;->a(Ljava/util/Map;)V
+    invoke-static {v0}, La/a/b/f;->a(Ljava/util/Map;)V
 
     new-instance v0, Lco/polarr/renderer/entities/Mesh$Options;
 
@@ -899,11 +899,11 @@
 
     const/16 v3, 0x1908
 
-    invoke-static {v2, v3, v1, v1}, La/a/a/e/s;->b(IIII)La/a/a/b/d;
+    invoke-static {v2, v3, v1, v1}, La/a/b/e/s;->b(IIII)La/a/b/b/d;
 
     move-result-object v1
 
-    iput-object v1, v0, Lco/polarr/renderer/entities/Context;->imageTexture:La/a/a/b/d;
+    iput-object v1, v0, Lco/polarr/renderer/entities/Context;->imageTexture:La/a/b/b/d;
 
     :cond_2
     iget-object v0, p0, Lco/polarr/renderer/entities/Context;->mesh:Lco/polarr/renderer/entities/Mesh;
@@ -945,7 +945,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v0}, La/a/a/f;->a(Ljava/util/Map;)V
+    invoke-static {v0}, La/a/b/f;->a(Ljava/util/Map;)V
 
     new-instance v1, Ljava/util/HashMap;
 
@@ -977,7 +977,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, La/a/a/e/t;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v4}, La/a/b/e/t;->a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1226,7 +1226,7 @@
 
     iget-object v0, p0, Lco/polarr/renderer/entities/Context;->renderStates:Ljava/util/Map;
 
-    invoke-static {v0}, La/a/a/f;->a(Ljava/util/Map;)V
+    invoke-static {v0}, La/a/b/f;->a(Ljava/util/Map;)V
 
     return-void
 .end method

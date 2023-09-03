@@ -3,6 +3,11 @@
 .source "TintAwareDrawable.java"
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # virtual methods
 .method public abstract setTint(I)V
 .end method

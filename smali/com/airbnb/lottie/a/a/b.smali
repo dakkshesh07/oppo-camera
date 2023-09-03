@@ -58,7 +58,7 @@
 
     check-cast v1, Lcom/airbnb/lottie/a/a/s;
 
-    invoke-static {p1, v1}, Lcom/airbnb/lottie/f/h;->a(Landroid/graphics/Path;Lcom/airbnb/lottie/a/a/s;)V
+    invoke-static {p1, v1}, Lcom/airbnb/lottie/c/h;->a(Landroid/graphics/Path;Lcom/airbnb/lottie/a/a/s;)V
 
     add-int/lit8 v0, v0, -0x1
 

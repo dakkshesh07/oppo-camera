@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.oppo.camera.ui.preview.NightTimeView android:gravity="bottom|center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0705f1"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f6" android:visibility="gone" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f8" android:visibility="gone" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f5" android:visibility="gone" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f7" android:visibility="gone" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f4" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f3" android:layout_width="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0705f2" android:text="@string/APKTOOL_DUPLICATE_string_0x7f10021a" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f2" style="@style/APKTOOL_DUPLICATE_style_0x7f11015b" />
+    <TextView android:textSize="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0705f8" android:textColor="@color/APKTOOL_DUPLICATE_color_0x7f060045" android:id="@id/APKTOOL_DUPLICATE_id_0x7f0901f1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/APKTOOL_DUPLICATE_string_0x7f10021b" android:layout_marginStart="@dimen/APKTOOL_DUPLICATE_dimen_0x7f0705f5" />
+</com.oppo.camera.ui.preview.NightTimeView>

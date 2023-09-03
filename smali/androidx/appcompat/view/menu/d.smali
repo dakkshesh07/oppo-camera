@@ -6,22 +6,22 @@
 # instance fields
 .field final a:Landroid/content/Context;
 
-.field private b:Landroidx/b/g;
+.field private b:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
-            "Landroidx/core/a/a/b;",
+            "Landroidx/collection/SimpleArrayMap<",
+            "Landroidx/core/b/a/b;",
             "Landroid/view/MenuItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Landroidx/b/g;
+.field private c:Landroidx/collection/SimpleArrayMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/b/g<",
-            "Landroidx/core/a/a/c;",
+            "Landroidx/collection/SimpleArrayMap<",
+            "Landroidx/core/b/a/c;",
             "Landroid/view/SubMenu;",
             ">;"
         }
@@ -48,32 +48,32 @@
     .locals 2
 
     .line 39
-    instance-of v0, p1, Landroidx/core/a/a/b;
+    instance-of v0, p1, Landroidx/core/b/a/b;
 
     if-eqz v0, :cond_1
 
     .line 40
     move-object v0, p1
 
-    check-cast v0, Landroidx/core/a/a/b;
+    check-cast v0, Landroidx/core/b/a/b;
 
     .line 43
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
     if-nez v1, :cond_0
 
     .line 44
-    new-instance v1, Landroidx/b/g;
+    new-instance v1, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v1}, Landroidx/b/g;-><init>()V
+    invoke-direct {v1}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iput-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
     .line 48
     :cond_0
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -86,12 +86,12 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/d;->a:Landroid/content/Context;
 
-    invoke-direct {p1, v1, v0}, Landroidx/appcompat/view/menu/k;-><init>(Landroid/content/Context;Landroidx/core/a/a/b;)V
+    invoke-direct {p1, v1, v0}, Landroidx/appcompat/view/menu/k;-><init>(Landroid/content/Context;Landroidx/core/b/a/b;)V
 
     .line 53
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, v0, p1}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, p1}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-object p1
@@ -101,30 +101,30 @@
     .locals 2
 
     .line 62
-    instance-of v0, p1, Landroidx/core/a/a/c;
+    instance-of v0, p1, Landroidx/core/b/a/c;
 
     if-eqz v0, :cond_2
 
     .line 63
-    check-cast p1, Landroidx/core/a/a/c;
+    check-cast p1, Landroidx/core/b/a/c;
 
     .line 66
-    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/collection/SimpleArrayMap;
 
     if-nez v0, :cond_0
 
     .line 67
-    new-instance v0, Landroidx/b/g;
+    new-instance v0, Landroidx/collection/SimpleArrayMap;
 
-    invoke-direct {v0}, Landroidx/b/g;-><init>()V
+    invoke-direct {v0}, Landroidx/collection/SimpleArrayMap;-><init>()V
 
-    iput-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/b/g;
+    iput-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/collection/SimpleArrayMap;
 
     .line 70
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v0, p1}, Landroidx/b/g;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Landroidx/collection/SimpleArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -137,12 +137,12 @@
 
     iget-object v1, p0, Landroidx/appcompat/view/menu/d;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1, p1}, Landroidx/appcompat/view/menu/t;-><init>(Landroid/content/Context;Landroidx/core/a/a/c;)V
+    invoke-direct {v0, v1, p1}, Landroidx/appcompat/view/menu/t;-><init>(Landroid/content/Context;Landroidx/core/b/a/c;)V
 
     .line 74
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, p1, v0}, Landroidx/b/g;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Landroidx/collection/SimpleArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-object v0
@@ -155,21 +155,21 @@
     .locals 1
 
     .line 83
-    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
     if-eqz v0, :cond_0
 
     .line 84
-    invoke-virtual {v0}, Landroidx/b/g;->clear()V
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->clear()V
 
     .line 86
     :cond_0
-    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->c:Landroidx/collection/SimpleArrayMap;
 
     if-eqz v0, :cond_1
 
     .line 87
-    invoke-virtual {v0}, Landroidx/b/g;->clear()V
+    invoke-virtual {v0}, Landroidx/collection/SimpleArrayMap;->clear()V
 
     :cond_1
     return-void
@@ -179,7 +179,7 @@
     .locals 2
 
     .line 92
-    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
     if-nez v0, :cond_0
 
@@ -190,33 +190,33 @@
 
     .line 95
     :goto_0
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1}, Landroidx/b/g;->size()I
+    invoke-virtual {v1}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v1
 
     if-ge v0, v1, :cond_2
 
     .line 96
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, v0}, Landroidx/b/g;->b(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/a/a/b;
+    check-cast v1, Landroidx/core/b/a/b;
 
-    invoke-interface {v1}, Landroidx/core/a/a/b;->getGroupId()I
+    invoke-interface {v1}, Landroidx/core/b/a/b;->getGroupId()I
 
     move-result v1
 
     if-ne v1, p1, :cond_1
 
     .line 97
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, v0}, Landroidx/b/g;->d(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/SimpleArrayMap;->removeAt(I)Ljava/lang/Object;
 
     add-int/lit8 v0, v0, -0x1
 
@@ -233,7 +233,7 @@
     .locals 2
 
     .line 104
-    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v0, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
     if-nez v0, :cond_0
 
@@ -244,33 +244,33 @@
 
     .line 107
     :goto_0
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1}, Landroidx/b/g;->size()I
+    invoke-virtual {v1}, Landroidx/collection/SimpleArrayMap;->size()I
 
     move-result v1
 
     if-ge v0, v1, :cond_2
 
     .line 108
-    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object v1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {v1, v0}, Landroidx/b/g;->b(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Landroidx/collection/SimpleArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroidx/core/a/a/b;
+    check-cast v1, Landroidx/core/b/a/b;
 
-    invoke-interface {v1}, Landroidx/core/a/a/b;->getItemId()I
+    invoke-interface {v1}, Landroidx/core/b/a/b;->getItemId()I
 
     move-result v1
 
     if-ne v1, p1, :cond_1
 
     .line 109
-    iget-object p1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/b/g;
+    iget-object p1, p0, Landroidx/appcompat/view/menu/d;->b:Landroidx/collection/SimpleArrayMap;
 
-    invoke-virtual {p1, v0}, Landroidx/b/g;->d(I)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Landroidx/collection/SimpleArrayMap;->removeAt(I)Ljava/lang/Object;
 
     goto :goto_1
 

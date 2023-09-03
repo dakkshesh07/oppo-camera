@@ -24,13 +24,13 @@
 .method constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
     .locals 0
 
-    .line 290
+    .line 291
     invoke-direct {p0}, Lokhttp3/internal/tls/CertificateChainCleaner;-><init>()V
 
-    .line 291
+    .line 292
     iput-object p1, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidCertificateChainCleaner;->x509TrustManagerExtensions:Ljava/lang/Object;
 
-    .line 292
+    .line 293
     iput-object p2, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidCertificateChainCleaner;->checkServerTrusted:Ljava/lang/reflect/Method;
 
     return-void
@@ -60,7 +60,7 @@
         }
     .end annotation
 
-    .line 299
+    .line 300
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -74,7 +74,7 @@
 
     check-cast p1, [Ljava/security/cert/X509Certificate;
 
-    .line 300
+    .line 301
     iget-object v0, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidCertificateChainCleaner;->checkServerTrusted:Ljava/lang/reflect/Method;
 
     iget-object v1, p0, Lokhttp3/internal/platform/AndroidPlatform$AndroidCertificateChainCleaner;->x509TrustManagerExtensions:Ljava/lang/Object;
@@ -111,7 +111,7 @@
     :catch_0
     move-exception p1
 
-    .line 307
+    .line 308
     new-instance p2, Ljava/lang/AssertionError;
 
     invoke-direct {p2, p1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -121,7 +121,7 @@
     :catch_1
     move-exception p1
 
-    .line 303
+    .line 304
     new-instance p2, Ljavax/net/ssl/SSLPeerUnverifiedException;
 
     invoke-virtual {p1}, Ljava/lang/reflect/InvocationTargetException;->getMessage()Ljava/lang/String;
@@ -130,17 +130,17 @@
 
     invoke-direct {p2, v0}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
 
-    .line 304
+    .line 305
     invoke-virtual {p2, p1}, Ljavax/net/ssl/SSLPeerUnverifiedException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 305
+    .line 306
     throw p2
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 0
 
-    .line 312
+    .line 313
     instance-of p1, p1, Lokhttp3/internal/platform/AndroidPlatform$AndroidCertificateChainCleaner;
 
     return p1

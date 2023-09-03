@@ -71,10 +71,10 @@
 
 .field private static final TAB_MIN_WIDTH_MARGIN:I = 0x38
 
-.field private static final tabPool:Landroidx/core/f/e$a;
+.field private static final tabPool:Landroidx/core/util/f$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/f/e$a<",
+            "Landroidx/core/util/f$a<",
             "Lcom/google/android/material/tabs/TabLayout$Tab;",
             ">;"
         }
@@ -163,10 +163,10 @@
 
 .field private final tabViewContentBounds:Landroid/graphics/RectF;
 
-.field private final tabViewPool:Landroidx/core/f/e$a;
+.field private final tabViewPool:Landroidx/core/util/f$a;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Landroidx/core/f/e$a<",
+            "Landroidx/core/util/f$a<",
             "Lcom/google/android/material/tabs/TabLayout$TabView;",
             ">;"
         }
@@ -198,13 +198,13 @@
     sput v0, Lcom/google/android/material/tabs/TabLayout;->DEF_STYLE_RES:I
 
     .line 204
-    new-instance v0, Landroidx/core/f/e$c;
+    new-instance v0, Landroidx/core/util/f$c;
 
     const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Landroidx/core/f/e$c;-><init>(I)V
+    invoke-direct {v0, v1}, Landroidx/core/util/f$c;-><init>(I)V
 
-    sput-object v0, Lcom/google/android/material/tabs/TabLayout;->tabPool:Landroidx/core/f/e$a;
+    sput-object v0, Lcom/google/android/material/tabs/TabLayout;->tabPool:Landroidx/core/util/f$a;
 
     return-void
 .end method
@@ -270,13 +270,13 @@
     iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->selectedListeners:Ljava/util/ArrayList;
 
     .line 447
-    new-instance p1, Landroidx/core/f/e$b;
+    new-instance p1, Landroidx/core/util/f$b;
 
     const/16 v0, 0xc
 
-    invoke-direct {p1, v0}, Landroidx/core/f/e$b;-><init>(I)V
+    invoke-direct {p1, v0}, Landroidx/core/util/f$b;-><init>(I)V
 
-    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->tabViewPool:Landroidx/core/f/e$a;
+    iput-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->tabViewPool:Landroidx/core/util/f$a;
 
     .line 460
     invoke-virtual {p0}, Lcom/google/android/material/tabs/TabLayout;->getContext()Landroid/content/Context;
@@ -368,14 +368,14 @@
     invoke-virtual {v1, p1}, Lcom/google/android/material/shape/MaterialShapeDrawable;->initializeElevationOverlay(Landroid/content/Context;)V
 
     .line 487
-    invoke-static {p0}, Landroidx/core/g/w;->o(Landroid/view/View;)F
+    invoke-static {p0}, Landroidx/core/f/w;->o(Landroid/view/View;)F
 
     move-result p3
 
     invoke-virtual {v1, p3}, Lcom/google/android/material/shape/MaterialShapeDrawable;->setElevation(F)V
 
     .line 488
-    invoke-static {p0, v1}, Landroidx/core/g/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, v1}, Landroidx/core/f/w;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     .line 491
     :cond_0
@@ -915,7 +915,7 @@
     if-eqz v0, :cond_3
 
     .line 1655
-    invoke-static {p0}, Landroidx/core/g/w;->B(Landroid/view/View;)Z
+    invoke-static {p0}, Landroidx/core/f/w;->B(Landroid/view/View;)Z
 
     move-result v0
 
@@ -1067,7 +1067,7 @@
     :goto_1
     iget-object v3, p0, Lcom/google/android/material/tabs/TabLayout;->slidingTabIndicator:Lcom/google/android/material/tabs/TabLayout$SlidingTabIndicator;
 
-    invoke-static {v3, v0, v2, v2, v2}, Landroidx/core/g/w;->b(Landroid/view/View;IIII)V
+    invoke-static {v3, v0, v2, v2, v2}, Landroidx/core/f/w;->b(Landroid/view/View;IIII)V
 
     .line 1813
     iget v0, p0, Lcom/google/android/material/tabs/TabLayout;->mode:I
@@ -1220,7 +1220,7 @@
     float-to-int p2, v0
 
     .line 1798
-    invoke-static {p0}, Landroidx/core/g/w;->g(Landroid/view/View;)I
+    invoke-static {p0}, Landroidx/core/f/w;->g(Landroid/view/View;)I
 
     move-result v0
 
@@ -1336,11 +1336,11 @@
     .locals 2
 
     .line 1461
-    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->tabViewPool:Landroidx/core/f/e$a;
+    iget-object v0, p0, Lcom/google/android/material/tabs/TabLayout;->tabViewPool:Landroidx/core/util/f$a;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Landroidx/core/f/e$a;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Landroidx/core/util/f$a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1730,9 +1730,9 @@
     invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout$TabView;->reset()V
 
     .line 1644
-    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->tabViewPool:Landroidx/core/f/e$a;
+    iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->tabViewPool:Landroidx/core/util/f$a;
 
-    invoke-interface {p1, v0}, Landroidx/core/f/e$a;->a(Ljava/lang/Object;)Z
+    invoke-interface {p1, v0}, Landroidx/core/util/f$a;->a(Ljava/lang/Object;)Z
 
     .line 1646
     :cond_0
@@ -2184,9 +2184,9 @@
     .locals 1
 
     .line 824
-    sget-object v0, Lcom/google/android/material/tabs/TabLayout;->tabPool:Landroidx/core/f/e$a;
+    sget-object v0, Lcom/google/android/material/tabs/TabLayout;->tabPool:Landroidx/core/util/f$a;
 
-    invoke-interface {v0}, Landroidx/core/f/e$a;->a()Ljava/lang/Object;
+    invoke-interface {v0}, Landroidx/core/util/f$a;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2523,7 +2523,7 @@
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     .line 1550
-    invoke-static {p1}, Landroidx/core/g/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/g/a/d;
+    invoke-static {p1}, Landroidx/core/f/a/d;->a(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroidx/core/f/a/d;
 
     move-result-object p1
 
@@ -2537,12 +2537,12 @@
     const/4 v2, 0x0
 
     .line 1552
-    invoke-static {v1, v0, v2, v1}, Landroidx/core/g/a/d$b;->a(IIZI)Landroidx/core/g/a/d$b;
+    invoke-static {v1, v0, v2, v1}, Landroidx/core/f/a/d$b;->a(IIZI)Landroidx/core/f/a/d$b;
 
     move-result-object v0
 
     .line 1551
-    invoke-virtual {p1, v0}, Landroidx/core/g/a/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroidx/core/f/a/d;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -2858,9 +2858,9 @@
     .locals 1
 
     .line 833
-    sget-object v0, Lcom/google/android/material/tabs/TabLayout;->tabPool:Landroidx/core/f/e$a;
+    sget-object v0, Lcom/google/android/material/tabs/TabLayout;->tabPool:Landroidx/core/util/f$a;
 
-    invoke-interface {v0, p1}, Landroidx/core/f/e$a;->a(Ljava/lang/Object;)Z
+    invoke-interface {v0, p1}, Landroidx/core/util/f$a;->a(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -3494,7 +3494,7 @@
     .line 1251
     iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->slidingTabIndicator:Lcom/google/android/material/tabs/TabLayout$SlidingTabIndicator;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_0
     return-void
@@ -3525,7 +3525,7 @@
     .line 989
     iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->slidingTabIndicator:Lcom/google/android/material/tabs/TabLayout$SlidingTabIndicator;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     :cond_0
     return-void
@@ -3606,7 +3606,7 @@
     .line 1022
     iget-object p1, p0, Lcom/google/android/material/tabs/TabLayout;->slidingTabIndicator:Lcom/google/android/material/tabs/TabLayout$SlidingTabIndicator;
 
-    invoke-static {p1}, Landroidx/core/g/w;->e(Landroid/view/View;)V
+    invoke-static {p1}, Landroidx/core/f/w;->e(Landroid/view/View;)V
 
     return-void
 .end method

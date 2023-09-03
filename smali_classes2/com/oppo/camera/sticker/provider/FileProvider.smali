@@ -41,14 +41,14 @@
 
     const-string v1, "_size"
 
-    .line 306
+    .line 308
     filled-new-array {v0, v1}, [Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/oppo/camera/sticker/provider/FileProvider;->a:[Ljava/lang/String;
 
-    .line 314
+    .line 317
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/oppo/camera/sticker/provider/FileProvider;->b:Ljava/io/File;
 
-    .line 317
+    .line 320
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -70,12 +70,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .line 304
+    .line 306
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     const/4 v0, 0x0
 
-    .line 319
+    .line 322
     iput-object v0, p0, Lcom/oppo/camera/sticker/provider/FileProvider;->d:Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     return-void
@@ -86,7 +86,7 @@
 
     const-string v0, "r"
 
-    .line 741
+    .line 748
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -100,7 +100,7 @@
     :cond_0
     const-string v0, "w"
 
-    .line 743
+    .line 750
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -120,7 +120,7 @@
     :cond_1
     const-string v0, "wa"
 
-    .line 747
+    .line 754
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -134,7 +134,7 @@
     :cond_2
     const-string v0, "rw"
 
-    .line 751
+    .line 758
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -148,7 +148,7 @@
     :cond_3
     const-string v0, "rwt"
 
-    .line 754
+    .line 761
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -159,7 +159,7 @@
 
     goto :goto_1
 
-    .line 759
+    .line 766
     :cond_4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -194,7 +194,7 @@
 
     const-string v0, "com.oppo.camera.providers.sticker.file.provider"
 
-    .line 374
+    .line 381
     invoke-static {p0, v0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p0
@@ -205,12 +205,12 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
     .locals 0
 
-    .line 369
+    .line 376
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     move-result-object p0
 
-    .line 370
+    .line 377
     invoke-interface {p0, p2}, Lcom/oppo/camera/sticker/provider/FileProvider$a;->a(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p0
@@ -221,12 +221,12 @@
 .method private static a(Landroid/content/Context;Ljava/lang/String;)Lcom/oppo/camera/sticker/provider/FileProvider$a;
     .locals 2
 
-    .line 534
+    .line 541
     sget-object v0, Lcom/oppo/camera/sticker/provider/FileProvider;->c:Ljava/util/HashMap;
 
     monitor-enter v0
 
-    .line 535
+    .line 542
     :try_start_0
     sget-object v1, Lcom/oppo/camera/sticker/provider/FileProvider;->c:Ljava/util/HashMap;
 
@@ -240,7 +240,7 @@
 
     if-nez v1, :cond_0
 
-    .line 539
+    .line 546
     :try_start_1
     invoke-static {p0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider;->b(Landroid/content/Context;Ljava/lang/String;)Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
@@ -250,7 +250,7 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 546
+    .line 553
     :try_start_2
     sget-object p0, Lcom/oppo/camera/sticker/provider/FileProvider;->c:Ljava/util/HashMap;
 
@@ -261,7 +261,7 @@
     :catch_0
     move-exception p0
 
-    .line 543
+    .line 550
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Failed to parse android.support.FILE_PROVIDER_PATHS meta-data"
@@ -273,7 +273,7 @@
     :catch_1
     move-exception p0
 
-    .line 541
+    .line 548
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Failed to parse android.support.FILE_PROVIDER_PATHS meta-data"
@@ -282,7 +282,7 @@
 
     throw p1
 
-    .line 548
+    .line 555
     :cond_0
     :goto_0
     monitor-exit v0
@@ -304,12 +304,12 @@
 
     const-string v0, "com.oppo.camera.providers.sticker.file.provider"
 
-    .line 378
+    .line 385
     invoke-static {p0, v0}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     move-result-object p0
 
-    .line 379
+    .line 386
     invoke-interface {p0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p0
@@ -320,7 +320,7 @@
 .method private static varargs a(Ljava/io/File;[Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .line 768
+    .line 775
     array-length v0, p1
 
     const/4 v1, 0x0
@@ -332,7 +332,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 770
+    .line 777
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
@@ -351,12 +351,12 @@
 .method private static a([Ljava/lang/Object;I)[Ljava/lang/Object;
     .locals 2
 
-    .line 784
+    .line 791
     new-array v0, p1, [Ljava/lang/Object;
 
     const/4 v1, 0x0
 
-    .line 785
+    .line 792
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
@@ -365,12 +365,12 @@
 .method private static a([Ljava/lang/String;I)[Ljava/lang/String;
     .locals 2
 
-    .line 778
+    .line 785
     new-array v0, p1, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    .line 779
+    .line 786
     invoke-static {p0, v1, v0, v1, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     return-object v0
@@ -385,38 +385,38 @@
         }
     .end annotation
 
-    .line 561
+    .line 568
     new-instance v0, Lcom/oppo/camera/sticker/provider/FileProvider$b;
 
     invoke-direct {v0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider$b;-><init>(Ljava/lang/String;)V
 
-    .line 563
+    .line 570
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     const/16 v2, 0x80
 
-    .line 564
+    .line 571
     invoke-virtual {v1, p1, v2}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
 
     move-result-object p1
 
-    .line 566
+    .line 573
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     const-string v2, "android.support.FILE_PROVIDER_PATHS"
 
-    .line 565
+    .line 572
     invoke-virtual {p1, v1, v2}, Landroid/content/pm/ProviderInfo;->loadXmlMetaData(Landroid/content/pm/PackageManager;Ljava/lang/String;)Landroid/content/res/XmlResourceParser;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    .line 574
+    .line 581
     :cond_0
     :goto_0
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->next()I
@@ -431,7 +431,7 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 576
+    .line 583
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -440,21 +440,21 @@
 
     const-string v4, "name"
 
-    .line 578
+    .line 585
     invoke-interface {p1, v3, v4}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "path"
 
-    .line 579
+    .line 586
     invoke-interface {p1, v3, v5}, Landroid/content/res/XmlResourceParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     const-string v6, "root-path"
 
-    .line 583
+    .line 590
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
@@ -463,7 +463,7 @@
 
     if-eqz v6, :cond_1
 
-    .line 584
+    .line 591
     sget-object v1, Lcom/oppo/camera/sticker/provider/FileProvider;->b:Ljava/io/File;
 
     new-array v2, v2, [Ljava/lang/String;
@@ -479,14 +479,14 @@
     :cond_1
     const-string v6, "files-path"
 
-    .line 585
+    .line 592
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 586
+    .line 593
     invoke-virtual {p0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v1
@@ -504,14 +504,14 @@
     :cond_2
     const-string v6, "cache-path"
 
-    .line 587
+    .line 594
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_3
 
-    .line 588
+    .line 595
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object v1
@@ -529,14 +529,14 @@
     :cond_3
     const-string v6, "external-path"
 
-    .line 589
+    .line 596
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 590
+    .line 597
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -553,18 +553,18 @@
     :goto_1
     if-eqz v3, :cond_0
 
-    .line 594
+    .line 601
     invoke-virtual {v0, v4, v3}, Lcom/oppo/camera/sticker/provider/FileProvider$b;->a(Ljava/lang/String;Ljava/io/File;)V
 
     goto :goto_0
 
-    .line 599
+    .line 606
     :cond_5
     invoke-interface {p1}, Landroid/content/res/XmlResourceParser;->close()V
 
     return-object v0
 
-    .line 569
+    .line 576
     :cond_6
     new-instance p0, Ljava/lang/IllegalArgumentException;
 
@@ -578,28 +578,58 @@
 
 # virtual methods
 .method public attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
-    .locals 1
+    .locals 2
 
-    .line 339
+    .line 342
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
 
-    .line 341
+    .line 344
     iget-boolean v0, p2, Landroid/content/pm/ProviderInfo;->grantUriPermissions:Z
 
     if-eqz v0, :cond_0
 
-    .line 345
-    iget-object p2, p2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+    .line 349
+    :try_start_0
+    iget-object v0, p2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    invoke-static {p1, p2}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/oppo/camera/sticker/provider/FileProvider$a;
+    invoke-static {p1, v0}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/oppo/camera/sticker/provider/FileProvider;->d:Lcom/oppo/camera/sticker/provider/FileProvider$a;
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    .line 351
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "attachInfo getPathStrategy error, authority: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p2, p2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    const-string v0, "FileProvider"
+
+    invoke-static {v0, p2, p1}, Lcom/oppo/camera/c;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
     return-void
 
-    .line 342
+    .line 345
     :cond_0
     new-instance p1, Ljava/lang/SecurityException;
 
@@ -613,14 +643,14 @@
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    .line 500
+    .line 507
     iget-object p2, p0, Lcom/oppo/camera/sticker/provider/FileProvider;->d:Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     invoke-interface {p2, p1}, Lcom/oppo/camera/sticker/provider/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 501
+    .line 508
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result p1
@@ -631,14 +661,14 @@
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 2
 
-    .line 452
+    .line 459
     iget-object v0, p0, Lcom/oppo/camera/sticker/provider/FileProvider;->d:Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     invoke-interface {v0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 454
+    .line 461
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -651,7 +681,7 @@
 
     if-ltz v0, :cond_0
 
-    .line 457
+    .line 464
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object p1
@@ -662,7 +692,7 @@
 
     move-result-object p1
 
-    .line 458
+    .line 465
     invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
 
     move-result-object v0
@@ -684,7 +714,7 @@
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 0
 
-    .line 474
+    .line 481
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "No external inserts"
@@ -710,19 +740,19 @@
         }
     .end annotation
 
-    .line 522
+    .line 529
     iget-object v0, p0, Lcom/oppo/camera/sticker/provider/FileProvider;->d:Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     invoke-interface {v0, p1}, Lcom/oppo/camera/sticker/provider/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object p1
 
-    .line 523
+    .line 530
     invoke-static {p2}, Lcom/oppo/camera/sticker/provider/FileProvider;->a(Ljava/lang/String;)I
 
     move-result p2
 
-    .line 524
+    .line 531
     invoke-static {p1, p2}, Landroid/os/ParcelFileDescriptor;->open(Ljava/io/File;I)Landroid/os/ParcelFileDescriptor;
 
     move-result-object p1
@@ -733,7 +763,7 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 5
 
-    .line 412
+    .line 419
     iget-object p3, p0, Lcom/oppo/camera/sticker/provider/FileProvider;->d:Lcom/oppo/camera/sticker/provider/FileProvider$a;
 
     invoke-interface {p3, p1}, Lcom/oppo/camera/sticker/provider/FileProvider$a;->a(Landroid/net/Uri;)Ljava/io/File;
@@ -742,21 +772,21 @@
 
     if-nez p2, :cond_0
 
-    .line 415
+    .line 422
     sget-object p2, Lcom/oppo/camera/sticker/provider/FileProvider;->a:[Ljava/lang/String;
 
-    .line 418
+    .line 425
     :cond_0
     array-length p3, p2
 
     new-array p3, p3, [Ljava/lang/String;
 
-    .line 419
+    .line 426
     array-length p4, p2
 
     new-array p4, p4, [Ljava/lang/Object;
 
-    .line 422
+    .line 429
     array-length p5, p2
 
     const/4 v0, 0x0
@@ -770,19 +800,19 @@
 
     const-string v3, "_display_name"
 
-    .line 423
+    .line 430
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 424
+    .line 431
     aput-object v3, p3, v1
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 425
+    .line 432
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -797,19 +827,19 @@
     :cond_1
     const-string v3, "_size"
 
-    .line 426
+    .line 433
     invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 427
+    .line 434
     aput-object v3, p3, v1
 
     add-int/lit8 v2, v1, 0x1
 
-    .line 428
+    .line 435
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v3
@@ -828,25 +858,25 @@
 
     goto :goto_0
 
-    .line 432
+    .line 439
     :cond_3
     invoke-static {p3, v1}, Lcom/oppo/camera/sticker/provider/FileProvider;->a([Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object p1
 
-    .line 433
+    .line 440
     invoke-static {p4, v1}, Lcom/oppo/camera/sticker/provider/FileProvider;->a([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 435
+    .line 442
     new-instance p3, Landroid/database/MatrixCursor;
 
     const/4 p4, 0x1
 
     invoke-direct {p3, p1, p4}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;I)V
 
-    .line 436
+    .line 443
     invoke-virtual {p3, p2}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
     return-object p3
@@ -855,7 +885,7 @@
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 0
 
-    .line 483
+    .line 490
     new-instance p1, Ljava/lang/UnsupportedOperationException;
 
     const-string p2, "No external updates"

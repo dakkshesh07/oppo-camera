@@ -1,0 +1,71 @@
+.class Lcom/oppo/camera/i/a$8;
+.super Ljava/lang/Object;
+.source "CommonBottomGuide.java"
+
+# interfaces
+.implements Lcom/coloros/anim/c;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/oppo/camera/i/a;->b(Landroid/app/Activity;I)Landroid/app/Dialog;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/coloros/anim/c<",
+        "Lcom/coloros/anim/a;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/coloros/anim/EffectiveAnimationView;
+
+.field final synthetic b:Lcom/oppo/camera/i/a;
+
+
+# direct methods
+.method constructor <init>(Lcom/oppo/camera/i/a;Lcom/coloros/anim/EffectiveAnimationView;)V
+    .locals 0
+
+    .line 912
+    iput-object p1, p0, Lcom/oppo/camera/i/a$8;->b:Lcom/oppo/camera/i/a;
+
+    iput-object p2, p0, Lcom/oppo/camera/i/a$8;->a:Lcom/coloros/anim/EffectiveAnimationView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcom/coloros/anim/a;)V
+    .locals 1
+
+    .line 915
+    iget-object v0, p0, Lcom/oppo/camera/i/a$8;->a:Lcom/coloros/anim/EffectiveAnimationView;
+
+    invoke-virtual {v0, p1}, Lcom/coloros/anim/EffectiveAnimationView;->setComposition(Lcom/coloros/anim/a;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic a(Ljava/lang/Object;)V
+    .locals 0
+
+    .line 912
+    check-cast p1, Lcom/coloros/anim/a;
+
+    invoke-virtual {p0, p1}, Lcom/oppo/camera/i/a$8;->a(Lcom/coloros/anim/a;)V
+
+    return-void
+.end method

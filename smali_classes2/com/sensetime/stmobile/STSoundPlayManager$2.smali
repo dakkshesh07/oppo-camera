@@ -61,7 +61,7 @@
 
     const-string p2, "STSoundPlayManager"
 
-    invoke-static {p2, p1}, Lcom/oppo/camera/e;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lcom/oppo/camera/c;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, 0x1
 

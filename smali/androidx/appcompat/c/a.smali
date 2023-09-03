@@ -6,6 +6,11 @@
 .implements Landroid/text/method/TransformationMethod;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private a:Ljava/util/Locale;
 

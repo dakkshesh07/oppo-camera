@@ -25,7 +25,7 @@
 .method constructor <init>(Lcom/oppo/camera/ui/beauty3d/d;)V
     .locals 0
 
-    .line 951
+    .line 986
     iput-object p1, p0, Lcom/oppo/camera/ui/beauty3d/d$4;->a:Lcom/oppo/camera/ui/beauty3d/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

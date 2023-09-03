@@ -4,4 +4,4 @@
 
 # interfaces
 .implements Lcom/coloros/anim/a/a/c;
-.implements Lcom/coloros/anim/c/g;
+.implements Lcom/coloros/anim/model/f;

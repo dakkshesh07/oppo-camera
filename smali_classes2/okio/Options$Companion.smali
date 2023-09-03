@@ -13,6 +13,9 @@
     name = "Companion"
 .end annotation
 
+.annotation runtime Lkotlin/i;
+.end annotation
+
 
 # direct methods
 .method private constructor <init>()V
@@ -24,7 +27,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lc/d/b/f;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/o;)V
     .locals 0
 
     .line 31
@@ -749,7 +752,7 @@
 
     const-string v1, "byteStrings"
 
-    invoke-static {v0, v1}, Lc/d/b/k;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/r;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
     array-length v1, v0
@@ -783,18 +786,18 @@
 
     fill-array-data v2, :array_0
 
-    invoke-direct {v0, v1, v2, v4}, Lokio/Options;-><init>([Lokio/ByteString;[ILc/d/b/f;)V
+    invoke-direct {v0, v1, v2, v4}, Lokio/Options;-><init>([Lokio/ByteString;[ILkotlin/jvm/internal/o;)V
 
     return-object v0
 
     .line 41
     :cond_1
-    invoke-static/range {p1 .. p1}, Lc/a/e;->b([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static/range {p1 .. p1}, Lkotlin/collections/g;->e([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     .line 42
-    invoke-static {v1}, Lc/a/k;->a(Ljava/util/List;)V
+    invoke-static {v1}, Lkotlin/collections/p;->c(Ljava/util/List;)V
 
     .line 234
     new-instance v5, Ljava/util/ArrayList;
@@ -854,7 +857,7 @@
     check-cast v5, [Ljava/lang/Integer;
 
     .line 43
-    invoke-static {v5}, Lc/a/k;->b([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v5}, Lkotlin/collections/p;->c([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v13
 
@@ -887,7 +890,7 @@
 
     move-object v5, v1
 
-    invoke-static/range {v5 .. v10}, Lc/a/k;->a(Ljava/util/List;Ljava/lang/Comparable;IIILjava/lang/Object;)I
+    invoke-static/range {v5 .. v10}, Lkotlin/collections/p;->a(Ljava/util/List;Ljava/lang/Comparable;IIILjava/lang/Object;)I
 
     move-result v5
 
@@ -1140,13 +1143,13 @@
 
     const-string v2, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {v0, v2}, Lc/d/b/k;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/r;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, [Lokio/ByteString;
 
     new-instance v2, Lokio/Options;
 
-    invoke-direct {v2, v0, v1, v4}, Lokio/Options;-><init>([Lokio/ByteString;[ILc/d/b/f;)V
+    invoke-direct {v2, v0, v1, v4}, Lokio/Options;-><init>([Lokio/ByteString;[ILkotlin/jvm/internal/o;)V
 
     return-object v2
 
@@ -1168,11 +1171,11 @@
 
     .line 239
     :cond_d
-    new-instance v0, Lc/e;
+    new-instance v0, Lkotlin/TypeCastException;
 
     const-string v1, "null cannot be cast to non-null type kotlin.Array<T>"
 
-    invoke-direct {v0, v1}, Lc/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lkotlin/TypeCastException;-><init>(Ljava/lang/String;)V
 
     throw v0
 

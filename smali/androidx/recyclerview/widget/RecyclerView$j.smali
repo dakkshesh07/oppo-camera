@@ -208,3 +208,16 @@
 
     return v0
 .end method
+
+.method public g()I
+    .locals 1
+
+    .line 11713
+    iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$j;->c:Landroidx/recyclerview/widget/RecyclerView$w;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$w;->getAdapterPosition()I
+
+    move-result v0
+
+    return v0
+.end method

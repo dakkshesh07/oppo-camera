@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <CheckBox android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902ee" android:background="?android:colorBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" android:buttonTint="@color/APKTOOL_DUPLICATE_color_0x7f06004b" />
+    <CheckBox android:id="@id/APKTOOL_DUPLICATE_id_0x7f0902ef" android:background="?android:colorBackground" android:layout_width="wrap_content" android:layout_height="wrap_content" app:APKTOOL_DUPLICATE_attr_0x7f04009f="@color/APKTOOL_DUPLICATE_color_0x7f06004b" />
+</LinearLayout>

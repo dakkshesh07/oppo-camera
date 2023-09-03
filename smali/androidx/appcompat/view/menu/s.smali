@@ -6,6 +6,11 @@
 .implements Landroid/view/SubMenu;
 
 
+# annotations
+.annotation build Landroidx/annotation/RestrictTo;
+.end annotation
+
+
 # instance fields
 .field private mItem:Landroidx/appcompat/view/menu/j;
 

@@ -30,7 +30,7 @@
 .method constructor <init>()V
     .locals 0
 
-    .line 22925
+    .line 28371
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +41,7 @@
 .method public findValueByNumber(I)Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
     .locals 0
 
-    .line 22927
+    .line 28373
     invoke-static {p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;->forNumber(I)Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
 
     move-result-object p1
@@ -52,7 +52,7 @@
 .method public bridge synthetic findValueByNumber(I)Lcom/google/protobuf/Internal$EnumLite;
     .locals 0
 
-    .line 22925
+    .line 28371
     invoke-virtual {p0, p1}, Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType$1;->findValueByNumber(I)Lcom/google/protobuf/DescriptorProtos$FieldOptions$CType;
 
     move-result-object p1
